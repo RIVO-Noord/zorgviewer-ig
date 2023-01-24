@@ -1,5 +1,5 @@
 # Zorgviewer-IG
-Zorgviewer FHIR Implementation Guide
+[Zorgviewer FHIR Implementation Guide](https://vdzel.home.xs4all.nl/zorgviewer-ig/)
 
 # Validate resources
 ```
@@ -18,3 +18,4 @@ N.B. IG tooling is R4! Dus ook ImplementationGuide.json
 * http://hl7.org/fhir/STU3/
 * http://build.fhir.org/ig/FHIR/ig-guidance/
 * PlantUML voor sequence diagrams
+* https://www.markdownguide.org/basic-syntax/

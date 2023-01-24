@@ -1,0 +1,25 @@
+@startuml
+hide footbox
+autonumber
+
+participant Zorgviewer
+participant PatientIndex
+participant Behandelplan
+
+participant Authenticatie
+participant ProviderRegistry
+participant "EPD (via EPD ontsluiting)" as EPD
+
+EPD->Zorgviewer: start met context (SMART-on-FHIR)
+
+activate Zorgviewer
+Zorgviewer->Authenticatie: * check Identity
+Authenticatie-->Zorgviewer: Raadpleger identity
+Zorgviewer->ProviderRegistry: Attributen raadpleger adhv identity
+ProviderRegistry-->Zorgviewer: Raadpleger+Bedrijfsrol(en)
+Zorgviewer->Zorgviewer: kies rol
+Zorgviewer->EPD: Bepalen patient (SMART-on-FHIR)
+EPD-->Zorgviewer: Patient (+BSN)
+deactivate Zorgviewer
+
+@enduml

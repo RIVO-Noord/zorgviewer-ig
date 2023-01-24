@@ -1,0 +1,15 @@
+@startuml
+hide footbox
+autonumber
+
+participant Zorgviewer
+participant Behandelplan
+
+activate Zorgviewer
+Zorgviewer->Behandelplan: Bepalen minimale dataset (adhv hoofdiagnose)
+Behandelplan-->Zorgviewer: Behandelplan
+Zorgviewer->Zorgviewer: voor iedere zorgaanbieder in de lijst
+Zorgviewer->Zorgviewer: Formuleren gegevensverzoeken adhv Behandelplan
+deactivate Zorgviewer
+
+@enduml

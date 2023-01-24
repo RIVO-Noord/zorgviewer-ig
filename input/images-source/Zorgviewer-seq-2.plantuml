@@ -1,0 +1,20 @@
+@startuml
+hide footbox
+autonumber
+
+participant Zorgviewer
+participant PatientIndex
+participant Toestemming
+participant Adresering
+
+activate Zorgviewer
+Zorgviewer->PatientIndex: Opvragen ontvankelijke zorgaanbieders (Open autorisatievraag)
+note over PatientIndex: Afhankelijk van toestemming van patient\nvoor delen met de zorgverlener.
+PatientIndex->Toestemming: Verifieren Toestemming
+Toestemming-->PatientIndex: Yes/no
+PatientIndex->Adresering: get Endpoint voor zorgaanbieder (bronsysteem)
+Adresering-->PatientIndex: Endpoint
+PatientIndex-->Zorgviewer: Lijst ontvankelijke zorgaanbieders (incl Endpoints)
+deactivate Zorgviewer
+
+@enduml
