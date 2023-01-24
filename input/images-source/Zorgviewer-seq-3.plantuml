@@ -4,12 +4,29 @@ autonumber
 
 participant Zorgviewer
 participant Behandelplan
+participant "EPD (via EPD ontsluiting)" as EPD
+participant Toetser
+participant Toestemming
 
 activate Zorgviewer
 Zorgviewer->Behandelplan: Bepalen minimale dataset (adhv hoofdiagnose)
 Behandelplan-->Zorgviewer: Behandelplan
 Zorgviewer->Zorgviewer: voor iedere zorgaanbieder in de lijst
+activate Zorgviewer
 Zorgviewer->Zorgviewer: Formuleren gegevensverzoeken adhv Behandelplan
+activate Zorgviewer
+Zorgviewer->Toetser:Gegevensverzoek
+activate Toetser
+Toetser->Toestemming: Verifieren Toestemming
+Toestemming-->Toetser: Yes/no
+Toetser->Toetser: Verifieren minimale dataset
+Toetser->EPD:Gegevensverzoek
+EPD-->Toetser: ZIBS
+Toetser-->Zorgviewer: ZIBS
+deactivate Toetser
+Zorgviewer->Zorgviewer: Aggregate
+deactivate Zorgviewer
+Zorgviewer->Zorgviewer: Toon relevante geaggregeerde gegevens
 deactivate Zorgviewer
 
 @enduml

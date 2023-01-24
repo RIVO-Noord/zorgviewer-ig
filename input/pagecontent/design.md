@@ -35,13 +35,6 @@ Bevragen bronsystemen\nontvangkelijke zorgaanbieders
 {%include Zorgviewer-seq-3.svg%}
 </div>
 
-#### Gegevensverzoek
-
-Gegevensverzoek = FHIR request + filters adhv Behandelplan
-<div>
-{%include Zorgviewer-seq-4.svg%}
-</div>
-
 ### Datasets
 
 #### BgZ+PDF/a

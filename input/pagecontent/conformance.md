@@ -10,10 +10,10 @@
 1. Informatie wordt benaderd vanuit het eigen informatiesysteem
 1. Informatie kan worden overgenomen in het eigen informatiesysteem wanneer daaraan behoefte is
 1. De informatie wordt gepresenteerd op basis van de specifieke informatiebehoefte, bijvoorbeeld
-1. * Actief zorgpad
-1. * Alle zorgepisodes van de afgelopen 2 jaar
-1. * Alle benodigde informatie voor een gedefinieerd specifiek zorgpad
-1. * Alle labuitslagen van de afgelopen 4 maanden
+    * Actief zorgpad
+    * Alle zorgepisodes van de afgelopen 2 jaar
+    * Alle benodigde informatie voor een gedefinieerd specifiek zorgpad
+    * Alle labuitslagen van de afgelopen 4 maanden
 1. De architectuur gaat uit van een haalbare transitie vanuit bestaande werkwijzen en technieken. Deze transitie wordt verder beschreven in paragraaf 6
 1. De architectuur voldoet aan wet- en regelgeving en maakt compliancy op het gebied van privacy en security mogelijk.
 1. De architectuur rust op de verleende toestemming door de patiënt. De patiënt bepaalt of gegevens worden gedeeld, en heeft inzicht in wie de gegevens raadpleegt of overneemt.
@@ -84,6 +84,21 @@
 * Intersystems Iris Healthshare 
 * XDS-NN 
 * Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan. Bij UMCG zit bijvoorbeeld Iris Healthshare er tussen voor Patient Context. 
+
+### EHR-S FM Requirements
+
+* Bronsysteem Ontsluiting 
+    * Alles onder [TI.5 Standards-Based Interoperability](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-TI.5.html)
+    * [TI.5.1.1 Application Interchange Standards](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-TI.5.1.1.html)
+* Logging [TI.2 Audit](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-TI.2.html)
+* Authenticatie
+    * [TI.1.1 Entity Authentication](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-TI.1.1.html)
+    * [TI.1.11 Trusted Information Exchange Environment](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-TI.1.11.html)
+* Autorisatie [TI.1.2 Entity Authorization](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-TI.1.2.html)
+* Terminology [TI.4.1 Standard Terminology and Terminology Models](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-TI.4.1.html)
+* Toestemming Privacy AVG [TI.1.8 Patient Privacy and Confidentiality](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-TI.1.8.html)
+* Behandelplan [CPS.3.3 Support for Standard Care Plans, Guidelines, Protocols](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-CPS.3.3.html)
+* Zorgviewer [CPS.3.4 Support for Context-Sensitive Care Plans, Guidelines, Protocols](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-CPS.3.4.html)
 
 ### Data Requirements
 
