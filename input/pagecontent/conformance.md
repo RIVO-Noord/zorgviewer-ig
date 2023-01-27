@@ -1,12 +1,9 @@
 ### Uitgangspunten
 
-1. Registratie aan de Bron - zorg voor juiste bron registratie, ontsluit wat er is
-1. Internet first - geen besloten netwerken
-1. Standards based - nationaal, internationaal (universal)
-
 1. De architectuur moet generiek zijn en voor verschillende zorgpaden en specialismen toepasbaar zijn.
 1. Alle actoren in het zorgpad hebben inzage in dezelfde informatie, op basis van de gegeven toestemming van de patiënt en de behandelrelatie met die patiënt.
 1. Informatie blijft primair bij de bron en wordt zo min mogelijk gerepliceerd
+    * Registratie aan de Bron - zorg voor juiste bron registratie, ontsluit wat er is
 1. Informatie wordt benaderd vanuit het eigen informatiesysteem
 1. Informatie kan worden overgenomen in het eigen informatiesysteem wanneer daaraan behoefte is
 1. De informatie wordt gepresenteerd op basis van de specifieke informatiebehoefte, bijvoorbeeld
@@ -14,10 +11,12 @@
     * Alle zorgepisodes van de afgelopen 2 jaar
     * Alle benodigde informatie voor een gedefinieerd specifiek zorgpad
     * Alle labuitslagen van de afgelopen 4 maanden
-1. De architectuur gaat uit van een haalbare transitie vanuit bestaande werkwijzen en technieken. Deze transitie wordt verder beschreven in paragraaf 6
+1. De architectuur gaat uit van een haalbare transitie vanuit bestaande werkwijzen en technieken.
 1. De architectuur voldoet aan wet- en regelgeving en maakt compliancy op het gebied van privacy en security mogelijk.
 1. De architectuur rust op de verleende toestemming door de patiënt. De patiënt bepaalt of gegevens worden gedeeld, en heeft inzicht in wie de gegevens raadpleegt of overneemt.
 1. De architectuur is gebaseerd op standaarden en vendor-neutraal, taal en transport zijn gescheiden zodat vendor-lock-in wordt voorkomen
+    * Standards based - nationaal, internationaal (universal)
+    * Internet first - geen besloten netwerken / network-lock-in
 
 ### Requirements
 
@@ -70,8 +69,8 @@
 
 **Requirements**:
 1. Ontsluit minimaal de volgende gegevens in MVP2: de 28 BGZ-Zibs + de correspondentie (radiologie brieven, specialisten brieven, notities, ontslag brief) 
-1. Zorginformatiebouwstenen conform NICTIZ publicatie 2017, https://zibs.nl/wiki/ZIB_Publicatie_2017(NL), alleen de 28 BGZ-Zibs,  
-1. [Zibs 2017](https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/) en [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017) obv [HL7 FHIR STU3](http://hl7.org/fhir/STU3/) 
+1. Zorginformatiebouwstenen conform NICTIZ [publicatie 2017](https://zibs.nl/wiki/ZIB_Publicatie_2017(NL)), de 28 BGZ-Zibs,
+[Zibs 2017 FHIR Profiles](https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/) en [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017) obv [HL7 FHIR STU3](http://hl7.org/fhir/STU3/) 
 1. Individuele ZIBS moeten kunnen worden aangeleverd 
 1. Vraag richting bronsysteem op basis van BSN, URA en Zorgverlener gegevens moet mee voor autorisatie en logging. 
 1. Bron systeem checkt ook bij Mitz of iets mag nadat hij call heeft gehad van de zorgviewer.
