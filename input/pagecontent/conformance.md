@@ -14,11 +14,19 @@
 1. De architectuur gaat uit van een haalbare transitie vanuit bestaande werkwijzen en technieken.
 1. De architectuur voldoet aan wet- en regelgeving en maakt compliancy op het gebied van privacy en security mogelijk.
 1. De architectuur rust op de verleende toestemming door de patiënt. De patiënt bepaalt of gegevens worden gedeeld, en heeft inzicht in wie de gegevens raadpleegt of overneemt.
-1. De architectuur is gebaseerd op standaarden en vendor-neutraal, taal en transport zijn gescheiden zodat vendor-lock-in wordt voorkomen
+1. De architectuur is gebaseerd op standaarden en vendor-neutraal, taal en transport zijn gescheiden, zodat vendor-lock-in wordt voorkomen
     * Standards based - nationaal, internationaal (universal)
-    * Internet first - geen besloten netwerken / network-lock-in
+    * Internet first - geen besloten netwerken, zodat network-lock-in wordt voorkomen
 
 ### Requirements
+
+#### Zorgviewer Host
+**Definitie**: Informatieomgeving (EPD, ECM, Portal) van de raadpleger waar de gebruiker de Zorgviewer opstart.
+
+**Requirements**:
+1. De zorgviewer host draagt zorg voor (lokale) authenticatie van de gebruiker.
+1. De zorgviewer host voorziet in patient selectie en toets behandelrelatie.
+1. De zorgviewer host kan de zorgviewer opstarten met context (gebruiker en huidige patient).
 
 #### Zorgviewer
 
@@ -28,12 +36,17 @@
 1. De zorgviewer bevat zelf geen patiëntgebonden data, en wijzigt geen data in de bronsystemen. 
 1. De zorgviewer attendeert de raadpleger op conflicten in het tonen van data van verschillende bronnen waar ze niet overeenkomen. 
 1. De zorgviewer attendeert de raadpleger op belangrijke lacunes in het eigen informatiesysteem: specificeren wat en welke dat zijn. Centraal vastleggen en dat alerten. 
-1. De zorgviewer integreert in de informatieomgeving van de raadpleger (SMART-in-FHIR)
+1. De zorgviewer integreert in de informatieomgeving van de raadpleger
 1. De zorgviewer biedt de mogelijkheid om informatie te tonen op basis van de plek van de patiënt in het zorgpad
 
 #### Toestemming
 
 **Definitie**: AVG: de expliciete specifieke, vrij gegeven toestemming tot het beschikbaar stellen van zorginformatie door de patiënt|
+
+#### Zorgverlener Registry (ProviderRegistry)
+
+**Definitie**: Register met BIG-Nummer specialisme en rollen van een zorgverlener. Het [BIG-Register](https://www.bigregister.nl/zoek-zorgverlener/zoeken-eigen-systeem). Nodig voor behandelplan en weergave van de rol van de gebruiker in de zorgviewer.
+>"F. Heuvel (Cardiologie (cardioloog))"
 
 #### Identiteit
 
@@ -45,9 +58,25 @@
 **Requirements**:
 1. Gebruik van reeds in organisatie in gebruik zijnde ID’s.
 1. ID Zorgaanbieder = URA 
-1. ID Zorgverlener = Epic user = AD user & BIG nummer (voor bepalen specialisme ~ rol) 
+1. ID Zorgverlener = Lokale AD user & BIG nummer (voor bepalen specialisme ~ rol) 
+    1. UMCG -> Epic user = AD user
+    1. Martini
+    1. Topicus
+1. Lokale AD MOET BIG-nummer als attribuut hebben, zodat we via de ProviderRegistry de specialismen en rollen kunnen opvragen
 
-#### Authorisatie
+#### Authenticatie
+
+**Definitie**: Het bouwblok authenticatie stelt de identiteit van de raadpleger onomstotelijk vast volgens de wettelijke kaders. Is onderdeel van de Zorgviewer Host.
+
+**Requirements**:
+1. Compliant met [SMART-on-FHIR 1.0.0](http://hl7.org/fhir/smart-app-launch/1.0.0/)
+    1. voor Epic::Zorgviewer [Epic OAuth2](https://appmarket.epic.com/Article/Index?docid=oauth2)
+    1. voor Epic::Ontsluiting bronsysteem [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
+1. Lokale AD (ADFS)
+1. SAML 2.0
+1. Check Mitz en TWINN, Claims
+
+#### Autorisatie
 
 **Definitie**: (NEN) Rechten die een identiteit (zorgverlener, client / patient) heeft voor toegang tot cliëntgegevens.
 
