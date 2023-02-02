@@ -107,7 +107,7 @@
 
 **Kandidaat solutions**:
 * [Epic Interconnect](https://fhir.epic.com)
-* [Chipsoft Zorgplatform](https://developer.zorgplatform.online/) 
+* [Chipsoft Zorgplatform](https://developer.zorgplatform.online) 
 * Nexus via Foundra
 * Topicus 
 * Intersystems Iris Healthshare 

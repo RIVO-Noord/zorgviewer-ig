@@ -5,8 +5,6 @@
 
 [RIVO NN](http://rivo-noord.nl)
 
-[Zorgviewer Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/)
-
 ### Architectuur
 
 ### History
@@ -14,6 +12,8 @@
 [Clinical Connectathon Netwerkzorg Track](https://wiki-dhealth.web.rug.nl/index.php/Clinical_Connectathon_Netwerkzorg_Track)
 
 ### Project Zorgviewer MVP2
+
+[Zorgviewer Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/)
 
 ### Bouwblokken
 

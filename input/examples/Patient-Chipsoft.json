@@ -1,0 +1,335 @@
+{
+    "resourceType": "Patient",
+    "id": "9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+    "meta": {
+        "profile": [
+            "http://fhir.nl/fhir/StructureDefinition/nl-core-patient"
+        ]
+    },
+    "identifier": [
+        {
+            "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+            "value": "999911120"
+        }
+    ],
+    "name": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                    "valueCode": "NL1"
+                }
+            ],
+            "family": "XXX_Helleman_Afblijven",
+            "_family": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                        "valueString": "XXX_Helleman_Afblijven"
+                    }
+                ]
+            },
+            "given": [
+                "Johan",
+                "Johan",
+                "J."
+            ],
+            "_given": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                            "valueCode": "BR"
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                            "valueCode": "CL"
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                            "valueCode": "IN"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/v3/AddressUse",
+                                "code": "MC",
+                                "display": "Mobile Phone"
+                            }
+                        ],
+                        "text": "Mobile Phone"
+                    }
+                }
+            ],
+            "system": "phone",
+            "value": "+31612345678",
+            "use": "mobile"
+        },
+        {
+            "system": "email",
+            "value": "XXX_Helleman@hotmail.com"
+        }
+    ],
+    "gender": "male",
+    "_gender": {
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                }
+            }
+        ]
+    },
+    "birthDate": "1964-07-25",
+    "deceasedBoolean": false,
+    "address": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/v3/AddressUse",
+                                "code": "HP",
+                                "display": "Primary Home"
+                            }
+                        ],
+                        "text": "Primary Home"
+                    }
+                }
+            ],
+            "use": "home",
+            "line": [
+                "Knolweg 1000"
+            ],
+            "_line": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                            "valueString": "Knolweg"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                            "valueString": "1000"
+                        }
+                    ]
+                }
+            ],
+            "city": "STITSWERD",
+            "district": "HET HOGELAND",
+            "postalCode": "9999XA",
+            "country": "NL",
+            "_country": {
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "urn:iso:std:iso:3166",
+                                    "code": "NL",
+                                    "display": "Netherlands (the)"
+                                }
+                            ],
+                            "text": "Netherlands (the)"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "maritalStatus": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                "code": "M",
+                "display": "Married"
+            }
+        ],
+        "text": "Married"
+    },
+    "multipleBirthBoolean": false,
+    "contact": [
+        {
+            "relationship": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/RoleCode",
+                            "code": "WIFE",
+                            "display": "Wife"
+                        }
+                    ],
+                    "text": "Echtgenote"
+                },
+                {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.22.472",
+                            "code": "1",
+                            "display": "Eerste relatie/contactpersoon"
+                        }
+                    ],
+                    "text": "Eerste relatie/contactpersoon"
+                }
+            ],
+            "name": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                        "valueCode": "NL4"
+                    }
+                ],
+                "family": "van Putten Helleman",
+                "_family": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                            "valueString": "van"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                            "valueString": "Putten"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                            "valueString": "Helleman"
+                        }
+                    ]
+                },
+                "given": [
+                    "Jannie",
+                    "J.P.M"
+                ],
+                "_given": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                "valueCode": "BR"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                "valueCode": "IN"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "telecom": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/v3/AddressUse",
+                                        "code": "MC",
+                                        "display": "Mobile Phone"
+                                    }
+                                ],
+                                "text": "Mobile Phone"
+                            }
+                        }
+                    ],
+                    "system": "phone",
+                    "value": "+31612345678",
+                    "use": "mobile"
+                },
+                {
+                    "system": "email",
+                    "value": "XXX_Helleman@hotmail.com",
+                    "use": "home"
+                }
+            ],
+            "address": {
+                "line": [
+                    "Knolweg 1000"
+                ],
+                "_line": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                "valueString": "Knolweg"
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                "valueString": "1000"
+                            }
+                        ]
+                    }
+                ],
+                "city": "STITSWERD",
+                "district": "HET HOGELAND",
+                "postalCode": "9999XA",
+                "country": "NL",
+                "_country": {
+                    "extension": [
+                        {
+                            "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "urn:iso:std:iso:3166",
+                                        "code": "NL",
+                                        "display": "Netherlands (the)"
+                                    }
+                                ],
+                                "text": "Netherlands (the)"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "generalPractitioner": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                    "valueReference": {
+                        "reference": "PractitionerRole/BBB541253D6EB35B0D3641B1D6797B988CDB2B5FAD52C1C8BAC39480D7E44274",
+                        "display": "Practitioner role with function: 'primary care physician'."
+                    }
+                }
+            ],
+            "reference": "Practitioner/efc2bedd-0501-48be-a487-8e133f3b7884",
+            "display": "Practitioner with name: 'Huisarts Onbekend'."
+        }
+    ]
+}

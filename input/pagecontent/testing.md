@@ -21,7 +21,8 @@ Get the latest FHIR Validator.
 > curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o validator_cli.jar
 ```
 
-Run the FHIR Validator on the example JFictief Patient.
+Run the FHIR Validator on the example Patients against the Zorgviewer profile and Dutch(nl) SNOMED CT.
 ```
-> java -jar validator_cli.jar -version 3.0.2 -ig input/resources/ input/examples/Patient-JFictief.json
+> java -jar validator_cli.jar -version 3.0.2 -ig input/resources -ig ~/.fhir/packages/nictiz.fhir.nl.stu3.zib2017#2.2.8/package/ -sct nl -profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient input/examples/Patient-JFictief.json
+> java -jar validator_cli.jar -version 3.0.2 -ig input/resources -ig ~/.fhir/packages/nictiz.fhir.nl.stu3.zib2017#2.2.8/package/ -sct nl -profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient input/examples/Patient-Chipsoft.json
 ```

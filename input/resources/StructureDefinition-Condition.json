@@ -16,6 +16,12 @@
     "differential": {
         "element": [
             {
+                "id": "Condition.clinicalStatus",
+                "path": "Condition.clinicalStatus",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
                 "id": "Condition.code",
                 "path": "Condition.code",
                 "min": 1,
@@ -35,7 +41,12 @@
                 "mustSupport": true
             },
             {
-                "id": "Condition.onset[x]]",
+                "id": "Condition.bodySite",
+                "path": "Condition.bodySite",
+                "mustSupport": true
+            },
+            {
+                "id": "Condition.onset[x]",
                 "path": "Condition.onset[x]",
                 "constraint": [
                     {
@@ -43,21 +54,10 @@
                         "severity": "error",
                         "human": "At least one of Condition.onsetDateTime or Condition.onsetPeriod SHALL be present",
                         "expression": "onsetDateTime.exists() or onsetPeriod.exists()",
-                        "xpath": "f:sysonsetDateTime or f:onsetPeriod"
+                        "xpath": "f:onsetDateTime or f:onsetPeriod"
                     }
                 ],
                 "min": 1,
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.clinicalStatus",
-                "path": "Condition.clinicalStatus",
-                "min": 1,
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.bodySite",
-                "path": "Condition.bodySite",
                 "mustSupport": true
             },
             {
