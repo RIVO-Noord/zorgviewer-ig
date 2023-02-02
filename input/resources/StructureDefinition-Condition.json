@@ -1,0 +1,75 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition",
+    "language": "en",
+    "version": "1.0",
+    "name": "Condition",
+    "title": "Condition",
+    "status": "draft",
+    "date": "2023-01-27",
+    "description": "The minimal Condition for the Zorgviewer",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Condition",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-Problem",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Condition.code",
+                "path": "Condition.code",
+                "min": 1,
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "description": "De DHD Thesaurus diagnose.",
+                    "valueSetReference": {
+                        "reference": "http://snomed.info/sct/?fhir_vs=refset/31000147101",
+                        "display": "SNOMED CT - Alle waarden binnen de SNOMED CT referentieset Diagnosethesaurus DHD (was: 2.16.840.1.113883.2.4.3.120.5.1)"
+                    }
+                }
+            },
+            {
+                "id": "Condition.code.text",
+                "path": "Condition.code.text",
+                "mustSupport": true
+            },
+            {
+                "id": "Condition.onset[x]]",
+                "path": "Condition.onset[x]",
+                "constraint": [
+                    {
+                        "key": "zv-con-1",
+                        "severity": "error",
+                        "human": "At least one of Condition.onsetDateTime or Condition.onsetPeriod SHALL be present",
+                        "expression": "onsetDateTime.exists() or onsetPeriod.exists()",
+                        "xpath": "f:sysonsetDateTime or f:onsetPeriod"
+                    }
+                ],
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Condition.clinicalStatus",
+                "path": "Condition.clinicalStatus",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Condition.bodySite",
+                "path": "Condition.bodySite",
+                "mustSupport": true
+            },
+            {
+                "id": "Condition.abatementDateTime",
+                "path": "Condition.abatementDateTime",
+                "mustSupport": true
+            },
+            {
+                "id": "Condition.note",
+                "path": "Condition.note",
+                "mustSupport": true
+            }
+        ]
+    }
+}

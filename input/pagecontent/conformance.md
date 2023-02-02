@@ -133,6 +133,8 @@
 
 ### Dependencies
 
-[zibs2017 Wiki](https://zibs.nl/wiki/HCIM_Release_2017(EN))
-
 {% include dependency-table.xhtml %}
+
+### Globals
+
+{% include globals-table.xhtml %}
