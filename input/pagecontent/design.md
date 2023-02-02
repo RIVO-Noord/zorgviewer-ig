@@ -49,16 +49,22 @@ Bevragen bronsystemen ontvangkelijke zorgaanbieders
 
 ### Datasets
 
+N.B. Datasets zijn relevante selectie van data elementen met eventueel filters voor een bepaald zorgpad.
+
 #### BgZ+PDF/a
 
 [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
 
 Dit is de basis gegevensset zorg, ook wel patient summary genoemd. We behandelen de BgZ als sub-set van zibs. In de BgZ worden de secties beperkt. Bijvoorbeeld de lab uitslagen worden beperkt op klinisch chemisch lab. Deze filters op de zibs beschouwen we als voorbeelden. Je mag ze weglaten, zodat je alle beschikbare lab uitslagen kan krijgen. 
 
+#### Acute Zorg - e-Spoed (#1)
+
+https://nictiz.nl/standaarden/informatiestandaarden/acute-zorg/
+https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Acute_Zorg
+https://amigo.nictiz.nl/acute-zorg/opvragingen-bij-huisarts/dataset
+
 #### HartNet - TAVI Proces
 
 #### Oncology
-
-#### SEH
 
 #### Terminology

@@ -38,6 +38,7 @@
 1. De zorgviewer attendeert de raadpleger op belangrijke lacunes in het eigen informatiesysteem: specificeren wat en welke dat zijn. Centraal vastleggen en dat alerten. 
 1. De zorgviewer integreert in de informatieomgeving van de raadpleger
 1. De zorgviewer biedt de mogelijkheid om informatie te tonen op basis van de plek van de patiënt in het zorgpad
+1. De zorgviewer dient zich te houden aan [Postel's law, Robustness principle](http://www.healthintersections.com.au/?p=2403)
 
 #### Toestemming
 

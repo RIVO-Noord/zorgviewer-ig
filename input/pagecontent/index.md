@@ -1,3 +1,6 @@
+
+{% include new-content-note.md %}
+
 ### Introduction
 
 [RIVO NN](http://rivo-noord.nl)
