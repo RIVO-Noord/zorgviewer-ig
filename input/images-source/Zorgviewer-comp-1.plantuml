@@ -1,0 +1,33 @@
+@startuml
+
+node "UMCG Epic" {
+ [Hyperspace] <<Zorgviewer Host>>
+ [Epic] <<Authenticatie>>
+ [IRIS] <<Bronsysteem ontsluiting>>
+}
+
+cloud "ZV" {
+ [Zorgviewer]
+ [Behandelplan]
+}
+
+cloud "MITZ" {
+ [Toestemming]
+}
+
+[Zorgviewer]-->[Toestemming] : 2. waar?
+
+node "Martini Chipsoft" {
+ [HiX] <<Zorgviewer Host>>
+ [Zorgplatform] <<Authenticatie>>
+ [Zorgplatform] <<Bronsysteem ontsluiting>>
+}
+
+[Hyperspace] --> [Zorgviewer] :  1a. opstart
+[HiX] --> [Zorgviewer] : 1b. opstart
+[Zorgviewer] --> [Zorgplatform] : 3. bevragen
+[Zorgviewer] --> [IRIS] : 3. bevragen
+
+[Zorgviewer]-->[Behandelplan] : 4. filters
+
+@enduml
