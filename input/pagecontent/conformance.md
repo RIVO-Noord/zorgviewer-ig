@@ -38,16 +38,10 @@
 1. De zorgviewer attendeert de raadpleger op belangrijke lacunes in het eigen informatiesysteem: specificeren wat en welke dat zijn. Centraal vastleggen en dat alerten. 
 1. De zorgviewer integreert in de informatieomgeving van de raadpleger
 1. De zorgviewer biedt de mogelijkheid om informatie te tonen op basis van de plek van de patiënt in het zorgpad
-1. De zorgviewer dient zich te houden aan [Postel's law, Robustness principle](http://www.healthintersections.com.au/?p=2403)
 
 #### Toestemming
 
 **Definitie**: AVG: de expliciete specifieke, vrij gegeven toestemming tot het beschikbaar stellen van zorginformatie door de patiënt|
-
-#### Zorgverlener Registry (ProviderRegistry)
-
-**Definitie**: Register met BIG-Nummer specialisme en rollen van een zorgverlener. Het [BIG-Register](https://www.bigregister.nl/zoek-zorgverlener/zoeken-eigen-systeem). Nodig voor behandelplan en weergave van de rol van de gebruiker in de zorgviewer.
->"F. Heuvel (Cardiologie (cardioloog))"
 
 #### Identiteit
 
@@ -58,12 +52,31 @@
 
 **Requirements**:
 1. Gebruik van reeds in organisatie in gebruik zijnde ID’s.
-1. ID Zorgaanbieder = URA 
-1. ID Zorgverlener = Lokale AD user & BIG nummer (voor bepalen specialisme ~ rol) 
+1. ID Zorgaanbieder = URA - Een URA-code is een uniek nummer dat een zorgaanbieder heeft voor elektronische communicatie van zorgdata. URA is een afkorting van UZI Registratie Abonneenummer. UZI staat voor Unieke Zorgaanbieder Identificatienummer.
+    1. UMCG : 
+    1. Martini : 
+1. ID Zorgverlener = Lokale AD user
     1. UMCG -> Epic user = AD user
     1. Martini
     1. Topicus
-1. Lokale AD MOET BIG-nummer als attribuut hebben, zodat we via de ProviderRegistry de specialismen en rollen kunnen opvragen
+1. Lokale AD MOET BIG-Nummer als attribuut hebben, zodat we via de Zorgverlener Registry de specialismen en rollen kunnen opvragen
+1. Vektis AGB-medische specialismen
+
+**Details**:
+1. BIG-Nummer OID: 2.16.528.1.1007.5.1)
+1. COD016-VEKT (Vektis AGB-medische specialismen) OID: 2.16.840.1.113883.2.4.6.7
+1. URA OID: http://fhir.nl/fhir/NamingSystem/ura (e.g 12345678) **TODO: Hoe kom ik aan de URA nummers??**
+
+#### Zorgverlener/Zorgaanbieder Registry / Adresering
+
+**Definitie**: Register met Identititeiten en attributen van zorgaanbieders en zorgverleners. Voorbeelden zijn volledige naam, maar ook technische endpoints.
+>"F. Heuvel (Cardiologie (cardioloog)) in het UMCG"
+
+**Kandidaat solutions:**
+1. ~~Het [BIG-Register](https://www.bigregister.nl/zoek-zorgverlener/zoeken-eigen-systeem). Nodig voor behandelplan en weergave van de rol van de gebruiker in de zorgviewer. [Handleiding webservice BIG-register](https://www.bigregister.nl/documenten/publicaties/2017/03/03/handleiding-webservice-big-register)~~ - deze biedt geen FHIR interface, maar content zit ook in het ZORG-AB
+1. Het ZORG-AB is een gemeenschappelijke adresinformatie voorziening die alle dienstverleners in de zorg kunnen gebruiken om (medische) gegevens met elkaar uit te wisselen.
+    1. [ZORG-AB Implementatiehandeleiding](https://www.google.com/search?q=zorg-ab+implementatiehandleiding)
+    1. [Simplifier Project](https://simplifier.net/ZORG-AB)
 
 #### Authenticatie
 
@@ -114,7 +127,19 @@
 * XDS-NN 
 * Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan. Bij UMCG zit bijvoorbeeld Iris Healthshare er tussen voor Patient Context. 
 
-### EHR-S FM Requirements
+### Technische Requirements
+
+1. Alle implementaties dienen zich te houden aan [Postel's law, Robustness principle](http://www.healthintersections.com.au/?p=2403)
+
+#### Dependencies
+
+{% include dependency-table.xhtml %}
+
+### Data Requirements
+
+### EHR-S FM Requirements Mapping
+
+Het EHR-S FM is ...
 
 * Bronsysteem Ontsluiting 
     * Alles onder [TI.5 Standards-Based Interoperability](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-TI.5.html)
@@ -129,12 +154,3 @@
 * Behandelplan [CPS.3.3 Support for Standard Care Plans, Guidelines, Protocols](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-CPS.3.3.html)
 * Zorgviewer [CPS.3.4 Support for Context-Sensitive Care Plans, Guidelines, Protocols](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-CPS.3.4.html)
 
-### Data Requirements
-
-### Dependencies
-
-{% include dependency-table.xhtml %}
-
-### Globals
-
-{% include globals-table.xhtml %}

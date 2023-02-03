@@ -3,10 +3,10 @@ hide footbox
 autonumber
 
 actor Zorgverlener
-participant "*Eigen EPD" as EPD
+participant "Zorgviewer Host" as EPD
 participant Zorgviewer
 participant Authenticatie
-participant "*ProviderRegistry" as ProviderRegistry
+participant "Zorgverlener Registry" as ZorgverlenerRegistry
 
 Zorgverlener->EPD: start EPD
 Zorgverlener->EPD: selecteer patient
@@ -16,8 +16,8 @@ EPD->Zorgviewer: start met context
 activate Zorgviewer
 Zorgviewer->Authenticatie: check Identity
 Authenticatie-->Zorgviewer: Raadpleger identity
-Zorgviewer->ProviderRegistry: Attributen raadpleger adhv identity
-ProviderRegistry-->Zorgviewer: Raadpleger+Bedrijfsrol(en)
+Zorgviewer->ZorgverlenerRegistry: Attributen raadpleger adhv identity
+ZorgverlenerRegistry-->Zorgviewer: Raadpleger+Bedrijfsrol(en)
 Zorgviewer->Zorgviewer: kies rol
 Zorgviewer->EPD: Bepalen patient
 EPD-->Zorgviewer: Patient (+BSN)
