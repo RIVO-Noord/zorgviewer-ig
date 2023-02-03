@@ -13,7 +13,7 @@
 
 ### Project Zorgviewer MVP2
 
-[Zorgviewer Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/)
+[RIVO-Noord Zorgviewer Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/)
 
 ### Bouwblokken
 
