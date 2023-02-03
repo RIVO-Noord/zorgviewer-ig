@@ -1,26 +1,32 @@
-@startuml
+@startuml Epic opstarten Zorgviewer
 hide footbox
 autonumber
 
 actor Zorgverlener
-participant "Zorgviewer Host" as EPD
-participant Zorgviewer
+participantgroup #lightgray "Epic EPD"
+participant "Zorgviewer Host" as Host
 participant Authenticatie
+end
+participant Zorgviewer
 participant "Zorgverlener Registry" as ZorgverlenerRegistry
 
-Zorgverlener->EPD: start EPD
-Zorgverlener->EPD: selecteer patient
-Zorgverlener->EPD: start Zorgviewer
-EPD->Zorgviewer: start met context
+Zorgverlener->Host: start EPD
+Zorgverlener->Host: inloggen via Lokaal AD
+Zorgverlener->Host: selecteer patient
+Zorgverlener->Host: start Zorgviewer
+Host->Zorgviewer: start met context (bronsysteem endpoint, gebruikerid, patientid)
+Zorgviewer->Host: haal Authenticatie endpoints op
 
 activate Zorgviewer
-Zorgviewer->Authenticatie: check Identity
-Authenticatie-->Zorgviewer: Raadpleger identity
-Zorgviewer->ZorgverlenerRegistry: Attributen raadpleger adhv identity
-ZorgverlenerRegistry-->Zorgviewer: Raadpleger+Bedrijfsrol(en)
-Zorgviewer->Zorgviewer: kies rol
-Zorgviewer->EPD: Bepalen patient
-EPD-->Zorgviewer: Patient (+BSN)
+Zorgviewer->Authenticatie: check Identity (OAuth2)
+Authenticatie-->Zorgviewer: raadpleger identity (external identifier gebruiker e.g. BIG-Nummer)
+Zorgviewer->Host: OPTIONEEL opvragen volledige (lokale) gebruiker gegevens adhv gebruikerid
+Zorgviewer->ZorgverlenerRegistry: details raadpleger (BIG-Nummer)
+ZorgverlenerRegistry-->Zorgviewer: volledige gebruiker gegevens (inclusief specialisme, rollen e.d.) zoals extern bekend
+Zorgviewer->Zorgviewer: LATER: kies rol (als meerdere, nodig voor de view)
+Zorgviewer->Host: opvragen patient gegevens (lokaal patientid)
+Host-->Zorgviewer: patient (onder andere BSN voor verdere raarplegingen)
+Zorgviewer->Zorgviewer: toon gebruiker en patient
 deactivate Zorgviewer
 
 @enduml

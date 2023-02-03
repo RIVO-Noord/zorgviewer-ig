@@ -27,6 +27,7 @@
 1. De zorgviewer host draagt zorg voor (lokale) authenticatie van de gebruiker.
 1. De zorgviewer host voorziet in patient selectie en toets behandelrelatie.
 1. De zorgviewer host kan de zorgviewer opstarten met context (gebruiker en huidige patient).
+1. Bij de zorgviewer host kan de zorgviewer minimaal volledige (via context doorgegeven id's) patient en gebruiker gegevens opvragen
 
 #### Zorgviewer
 
@@ -42,6 +43,10 @@
 #### Toestemming
 
 **Definitie**: AVG: de expliciete specifieke, vrij gegeven toestemming tot het beschikbaar stellen van zorginformatie door de patiënt|
+
+**Kandidaat solutions**:
+1. INITIEEL: "plain" FHIR server met vulling volgens FHIR IF van MITZ
+1. MITZ
 
 #### Identiteit
 
@@ -73,6 +78,7 @@
 >"F. Heuvel (Cardiologie (cardioloog)) in het UMCG"
 
 **Kandidaat solutions:**
+1. INITIEEL: "plain" FHIR server met vulling volgens FHIR IF van ZORG-AB (zie Simplifier Project)
 1. ~~Het [BIG-Register](https://www.bigregister.nl/zoek-zorgverlener/zoeken-eigen-systeem). Nodig voor behandelplan en weergave van de rol van de gebruiker in de zorgviewer. [Handleiding webservice BIG-register](https://www.bigregister.nl/documenten/publicaties/2017/03/03/handleiding-webservice-big-register)~~ - deze biedt geen FHIR interface, maar content zit ook in het ZORG-AB
 1. Het ZORG-AB is een gemeenschappelijke adresinformatie voorziening die alle dienstverleners in de zorg kunnen gebruiken om (medische) gegevens met elkaar uit te wisselen.
     1. [ZORG-AB Implementatiehandeleiding](https://www.google.com/search?q=zorg-ab+implementatiehandleiding)
@@ -85,7 +91,7 @@
 **Requirements**:
 1. Compliant met [SMART-on-FHIR 1.0.0](http://hl7.org/fhir/smart-app-launch/1.0.0/)
     1. voor Epic::Zorgviewer [Epic OAuth2](https://appmarket.epic.com/Article/Index?docid=oauth2)
-    1. voor Epic::Ontsluiting bronsysteem [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
+    1. voor Epic::Ontsluitening bronsysteem [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
 1. Lokale AD (ADFS)
 1. SAML 2.0
 1. Check Mitz en TWINN, Claims
@@ -111,21 +117,21 @@
 **Definitie**: Het bouwblok ‘Ontsluiting bronsystemen’ draagt zorg voor het aanleveren van de informatie uit de bronsystemen in een formaat dat door de zorgviewer kan worden verwerkt (Zibs/FHIR).
 
 **Requirements**:
-1. Ontsluit minimaal de volgende gegevens in MVP2: de 28 BGZ-Zibs + de correspondentie (radiologie brieven, specialisten brieven, notities, ontslag brief) 
+1. Ontsluit minimaal de volgende gegevens in MVP2: de 28 BGZ-Zibs + de correspondentie (radiologie brieven, specialisten brieven, notities, ontslag brief) en N.B. dan alleen waar in de bron workflow voor is.
 1. Zorginformatiebouwstenen conform NICTIZ [publicatie 2017](https://zibs.nl/wiki/ZIB_Publicatie_2017(NL)), de 28 BGZ-Zibs,
 [Zibs 2017 FHIR Profiles](https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/) en [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017) obv [HL7 FHIR STU3](http://hl7.org/fhir/STU3/) 
 1. Individuele ZIBS moeten kunnen worden aangeleverd 
-1. Vraag richting bronsysteem op basis van BSN, URA en Zorgverlener gegevens moet mee voor autorisatie en logging. 
+1. Vraag richting bronsysteem op basis van BSN, URA en Zorgverlener gegevens moet mee voor autorisatie en logging.
+1. Het moet mogelijk zijn om de door het Identiteit bouwblok gedefinieerde identities te accepteren naast de bronsysteem eigen identities. 
 1. Bron systeem checkt ook bij Mitz of iets mag nadat hij call heeft gehad van de zorgviewer.
 
 **Kandidaat solutions**:
-* [Epic Interconnect](https://fhir.epic.com)
+* [Epic Interconnect](https://fhir.epic.com) via Intersystems Iris Healthshare
 * [Chipsoft Zorgplatform](https://developer.zorgplatform.online) 
 * Nexus via Foundra
 * Topicus 
-* Intersystems Iris Healthshare 
-* XDS-NN 
-* Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan. Bij UMCG zit bijvoorbeeld Iris Healthshare er tussen voor Patient Context. 
+* ~~XDS-NN~~ 
+* Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan aanleveren
 
 ### Technische Requirements
 
@@ -136,6 +142,8 @@
 {% include dependency-table.xhtml %}
 
 ### Data Requirements
+
+1. Minimaal 28 BGZ-Zibs + de correspondentie (radiologie brieven, specialisten brieven, notities, ontslag brief)
 
 ### EHR-S FM Requirements Mapping
 
