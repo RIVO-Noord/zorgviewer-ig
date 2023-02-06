@@ -4,30 +4,40 @@ node "UMCG Epic" {
  [Hyperspace] <<Zorgviewer Host>>
  [Epic Auth] <<Authenticatie>>
  [IRIS] <<Bronsysteem ontsluiting>>
+ [Epic] <<Bronsysteem>>
+ [IRIS]-->[Epic]
+ [Epic Auth]-->[Epic]
 }
 
-cloud "ZV" {
+cloud "cloud" {
  [Zorgviewer]
  [Behandelplan]
+ [MITZ] <<Toestemming>>
+ [ZorgAB] <<Zorgverlener Registry>>
 }
 
-cloud "MITZ" {
- [Toestemming]
-}
-
-[Zorgviewer]-->[Toestemming] : 2. waar?
-
-node "Martini Chipsoft" {
+node "Chipsoft ziekenhuis" {
  [HiX] <<Zorgviewer Host>>
  [Zorgplatform Auth] <<Authenticatie>>
  [Zorgplatform] <<Bronsysteem ontsluiting>>
 }
 
-[Hyperspace] --> [Zorgviewer] :  1a. opstart
-[HiX] --> [Zorgviewer] : 1b. opstart
-[Zorgviewer] --> [Zorgplatform] : 3. bevragen
-[Zorgviewer] --> [IRIS] : 3. bevragen
+node "Zorgviewer Los" {
+ [ZV Los] <<Zorgviewer Host>>
+ [ZV Los Auth] <<Authenticatie>>
+ note bottom of [ZV Los Auth] : Plus basis bron only Patient, Zorgverlener\nZorgviewerHostCapabilityStatement
+}
 
-[Zorgviewer]-->[Behandelplan] : 4. filters
+[Hyperspace]-->[Zorgviewer] :  1. opstart
+[HiX]-->[Zorgviewer] : 1. opstart
+[ZV Los]-->[Zorgviewer] : 1. opstart
+[Zorgviewer]-->[Epic Auth] : 2a. wie?
+[Zorgviewer]-->[ZV Los Auth] : 2a. wie?
+[Zorgviewer]-->[Zorgplatform Auth] : 2a. wie?
+[Zorgviewer]-->[ZorgAB] : 2b. wie en waar details?
+[Zorgviewer]-u->[MITZ] : 3. waar?
+[Zorgviewer]-u->[Zorgplatform] : 4. bevragen
+[Zorgviewer]-->[IRIS] : 4. bevragen
+[Zorgviewer]-l->[Behandelplan] : 5. filters
 
 @enduml

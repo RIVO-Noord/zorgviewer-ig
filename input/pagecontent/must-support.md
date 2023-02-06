@@ -20,3 +20,4 @@ Het laatst genoemde nivo is buiten scope. Met name omdat er bijna oneindig veel 
 
 In tegenstelling tot wat het zib2017 profiel zegt is het wel degelijk toegestaan om Condition.onsetPeriod te gebruiken als ProbleemBeginDatum. Dit wordt o.a. door Epic gebruikt als een begin datum een "vage" datum is, zoals ergens in het jaar 2020. Dan is het begin 20200101 en eind 20201231.
 Dit is afgestemd met Nictiz zie [BITS ticket MM-4077](https://bits.nictiz.nl/browse/MM-4077).
+Vanaf de volgende versie (zibs2020) is Nictiz zowiezo open-world bezig.

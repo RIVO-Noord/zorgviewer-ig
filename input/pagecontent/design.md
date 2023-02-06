@@ -16,7 +16,7 @@ Note: (?) Probeer definities te hergebruiken uit [IHE Actors](https://gazelle.ih
 
 ### Sequence Diagrams
 
-#### Opstarten/Inloggen
+#### Opstarten zorgviewer
 
 Initiatie Zorgviewer, opstarten vanuit EPD.
 
@@ -48,6 +48,11 @@ Bevragen bronsystemen ontvangkelijke zorgaanbieders
 <div>
 {%include Zorgviewer-seq-3.svg%}
 </div>
+
+#### Zorgviewer Host 
+
+Initiatie Zorgviewer Host, inloggen en patient selectie.
+Daarna start sequence "Opstarten".
 
 ### Datasets
 

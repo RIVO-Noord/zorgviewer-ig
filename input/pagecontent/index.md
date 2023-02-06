@@ -21,6 +21,10 @@
 {%include Zorgviewer-comp-1.svg%}
 </div>
 
+<div>
+{%include Functionaliteiten.svg%}
+</div>
+
 {% include img.html img="bouwblokken.png" caption="Figure 1: Bouwblokken" width="70%" %}
 
 | | |

@@ -20,6 +20,8 @@
   * N.B. Basis van de IG tooling is R4. Dus ImplementationGuide gebruikt die. IG Tooling ondersteund STU3, R4, R5 voor content. 
 * PlantUML.com voor sequence diagrams
   * https://plantuml.com/sequence-diagram
+  * Documantatie: https://crashedmind.github.io/PlantUMLHitchhikersGuide/
+  * https://www.plantuml.com/plantuml/uml/
   * heel veel reclame dus beter editen via https://sequencediagram.org/
     * N.B. seq diagram ondersteund box niet, daar heet het participantgroup
 * Markdown

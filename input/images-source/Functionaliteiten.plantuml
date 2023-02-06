@@ -1,0 +1,32 @@
+@startuml
+
+title "Functionaliteiten per component"
+
+cloud {
+ package [Behandelplan] {
+  (Behandelplannen adhv diagnose)
+  (Relevant adhv zorgpad)
+  (Relevant adhv rol)
+ }
+ package [MITZ] <<Toestemming>> {
+  (Toegestane bronnen patient)
+ }
+ package [ZorgAB] <<Zorgverlener Registry>> {
+  (Rollen bij zorgverlener)
+ }
+}
+
+package "Zorgviewer Host" <<Zorgviewer Host>> {
+ package "Zorgviewer" <<Zorgviewer>> {
+  (Filtering obv Zorgpad, sorteren)
+  (Conflicten attenderen)
+  (Zorgpad weergave)
+  (Patient banner)
+  (Weergave gegevens)
+ }
+ (Inlog zorgverlener)
+ (Patient selectie)
+ (Controle behandelrelatie)
+}
+
+@enduml

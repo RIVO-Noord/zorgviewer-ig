@@ -7,7 +7,9 @@
 
 #### Test Tooling
 
-* [Crudible](https://projectcrucible.org​) - API testen obv Implementatie Gids 
+* [Crucible](https://projectcrucible.org​) - API testen obv Implementatie Gids 
+* [Inferno](https://inferno-framework.github.io/inferno-core/)
+* Touchstone
 
 #### Test Data
 
