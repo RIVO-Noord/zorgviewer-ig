@@ -24,13 +24,16 @@ Zorgviewer->Host: **SMART-on-FHIR handshake**
 
 activate Zorgviewer
 Zorgviewer->Authenticatie: check Identity **OAuth2**
-Authenticatie-->Zorgviewer: raadpleger identity (external identifier gebruiker e.g. BIG-Nummer)
-Zorgviewer->Host: Opvragen volledige (lokale) gebruiker gegevens adhv gebruikerid (incl BIG-Nummer)
-Zorgviewer->Zorgviewer++: CHECK Autorisatie/whitelist om Zorgviewer te starten; if not autorized
+Authenticatie-->Zorgviewer: gebruiker identity external identifier verkrijgen (e.g. AGB-Z of BIG-Nummer)
+Zorgviewer->Host: Opvragen (lokale) gebruiker gegevens adhv gebruikerid
+Zorgviewer->Zorgviewer++: CHECK Autorisatie/whitelist om Zorgviewer te starten
+note over Zorgviewer
+    obv AGB-Z of ziekenhuis van de gebruiker via signing van token
+end note
 destroy Zorgviewer
 
-Zorgviewer->ZorgverlenerRegistry: LATER: details raadpleger (BIG-Nummer)
-ZorgverlenerRegistry-->Zorgviewer: volledige gebruiker gegevens 
+Zorgviewer->ZorgverlenerRegistry: LATER: Opvragen (landelijke) gebruiker gegevens adhv external identifier
+ZorgverlenerRegistry-->Zorgviewer: volledige gebruiker gegevens
 note over ZorgverlenerRegistry,Zorgviewer
   Inclusief specialisme, rollen e.d. zoals extern bekend met externe codering AGB/VEKTIZ
 end note
@@ -43,7 +46,7 @@ Zorgviewer->Host: opvragen patient gegevens (lokaal patientid)
 Host-->Zorgviewer: patient (onder andere BSN voor verdere raarplegingen)
 Zorgviewer->Zorgviewer: Toon patient
 
-Zorgviewer->Zorgviewer: **ga naar de ophalen zorgaanbieders sequence**
+Zorgviewer->Zorgviewer: **ga naar de Bepalen zorgaanbieders sequence**
 
 deactivate Zorgviewer
 

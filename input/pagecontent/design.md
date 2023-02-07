@@ -27,7 +27,7 @@ Initiatie Zorgviewer, opstarten vanuit EPD.
 * [Chipsoft Web Browser Single-Sign-On](https://developer.zorgplatform.online/digital-care/authenticatie)
 
 <div>
-{%include Zorgviewer-seq-1.svg%}
+{%include Zorgviewer-seq-1-fhir.svg%}
 </div>
 
 #### Bepalen zorgaanbieders
@@ -43,6 +43,7 @@ Bevragen bronsystemen ontvangkelijke zorgaanbieders
 
 **Van toepassing zijnde standaarden**:
 * [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
+* [Epic Galaxy: Backend System Integrations](https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&PrefDocID=97042)
 * [Chipsoft BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
 
 <div>

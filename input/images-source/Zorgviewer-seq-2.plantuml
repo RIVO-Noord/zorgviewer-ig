@@ -2,18 +2,20 @@
 hide footbox
 autonumber
 
+actor Zorgverlener
 participant Zorgviewer
 participant PatientIndex
 participant Toestemming
 participant Adresering
 
 activate Zorgviewer
-Zorgviewer->PatientIndex: Opvragen ontvankelijke zorgaanbieders (Open autorisatievraag)
+Zorgverlener->Zorgviewer: ...
+Zorgviewer->PatientIndex: Opvragen ontvankelijke zorgaanbieders (Open autorisatievraag adhv BSN)
 note over PatientIndex: Afhankelijk van toestemming van patient\nvoor delen met de zorgverlener.
 PatientIndex->Toestemming: Verifieren Toestemming
 Toestemming-->PatientIndex: Yes/no
-PatientIndex->Adresering: get Endpoint voor zorgaanbieder (bronsysteem)
-Adresering-->PatientIndex: Endpoint
+PatientIndex->Adresering: OPTIONEEL: get Endpoints voor zorgaanbieders (bronsysteem)
+Adresering-->PatientIndex: Endpoints
 PatientIndex-->Zorgviewer: Lijst ontvankelijke zorgaanbieders (incl Endpoints)
 deactivate Zorgviewer
 

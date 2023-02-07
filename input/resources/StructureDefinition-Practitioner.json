@@ -16,29 +16,19 @@
     "differential": {
         "element": [
             {
-                "id": "Practitioner.identifier",
+                "id": "Practitioner.identifier:AGB",
                 "path": "Practitioner.identifier",
+                "sliceName": "AGB",
                 "min": 1,
                 "constraint": [
                     {
                         "key": "zv-pra-3",
                         "severity": "error",
-                        "human": "Either Practitioner BIG or AGB identifier SHALL be present.",
+                        "human": "Practitioner AGB-Z identifier SHALL be present.",
                         "expression": "(identifier.exists())",
-                        "xpath": "/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z' or /f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/big'"
+                        "xpath": "/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z'"
                     }
-                ]
-            },
-            {
-                "id": "Practitioner.identifier:AGB",
-                "path": "Practitioner.identifier",
-                "sliceName": "AGB",
-                "mustSupport": true
-            },
-            {
-                "id": "Practitioner.identifier:BIG",
-                "path": "Practitioner.identifier",
-                "sliceName": "BIG",
+                ],
                 "mustSupport": true
             },
             {

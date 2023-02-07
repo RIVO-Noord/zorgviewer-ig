@@ -58,31 +58,34 @@
 **Requirements**:
 1. Gebruik van reeds in organisatie in gebruik zijnde ID’s.
 1. ID Zorgaanbieder = URA - Een URA-code is een uniek nummer dat een zorgaanbieder heeft voor elektronische communicatie van zorgdata. URA is een afkorting van UZI Registratie Abonneenummer. UZI staat voor Unieke Zorgaanbieder Identificatienummer.
-    1. UMCG : 
+    1. UMCG : via managingOrganization bij Patient/Practitioner
     1. Martini : 
-1. ID Zorgverlener = Lokale AD user
-    1. UMCG -> Epic user = AD user
-    1. Martini
+    1. ...
+1. ID Zorgverlener = Lokale identiteit user
+    1. UMCG -> Epic user = AD user + AGB-Z
+    1. Chipsoft -> AGZ-Z
     1. Topicus
-1. Lokale AD MOET BIG-Nummer als attribuut hebben, zodat we via de Zorgverlener Registry de specialismen en rollen kunnen opvragen
+1. Lokale identitie MOET AGB-Z als attribuut hebben, zodat we via de Zorgverlener Registry de specialismen en rollen kunnen opvragen
 1. Vektis AGB-medische specialismen
 
 **Details**:
-1. BIG-Nummer OID: 2.16.528.1.1007.5.1)
+1. AGB-Z URI: http://fhir.nl/fhir/NamingSystem/agb-z
+1. ~~BIG-Nummer OID: 2.16.528.1.1007.5.1~~ niet in Epic en niet in Chipsoft
 1. COD016-VEKT (Vektis AGB-medische specialismen) OID: 2.16.840.1.113883.2.4.6.7
 1. URA OID: http://fhir.nl/fhir/NamingSystem/ura (e.g 12345678) **TODO: Hoe kom ik aan de URA nummers??**
 
 #### Zorgverlener/Zorgaanbieder Registry / Adresering
 
 **Definitie**: Register met Identititeiten en attributen van zorgaanbieders en zorgverleners. Voorbeelden zijn volledige naam, maar ook technische endpoints.
->"F. Heuvel (Cardiologie (cardioloog)) in het UMCG"
+>Volledige naam: "F. Heuvel (Cardiologie (cardioloog)) in het UMCG"
+>FHIR Base voor UMCG: https://prd.epic.umcg.nl/fhir/STU3 
 
 **Kandidaat solutions:**
-1. INITIEEL: "plain" FHIR server met vulling volgens FHIR IF van ZORG-AB (zie Simplifier Project)
-1. ~~Het [BIG-Register](https://www.bigregister.nl/zoek-zorgverlener/zoeken-eigen-systeem). Nodig voor behandelplan en weergave van de rol van de gebruiker in de zorgviewer. [Handleiding webservice BIG-register](https://www.bigregister.nl/documenten/publicaties/2017/03/03/handleiding-webservice-big-register)~~ - deze biedt geen FHIR interface, maar content zit ook in het ZORG-AB
+1. INITIEEL: "plain" FHIR server met vulling volgens FHIR IF van ZORG-AB
+1. ~~Het [BIG-Register](https://www.bigregister.nl/zoek-zorgverlener/zoeken-eigen-systeem). Nodig voor behandelplan en weergave van de rol van de gebruiker in de zorgviewer. [Handleiding webservice BIG-register](https://www.bigregister.nl/documenten/publicaties/2017/03/03/handleiding-webservice-big-register)~~ - deze biedt geen FHIR interface, content zit ook in het ZORG-AB
 1. Het ZORG-AB is een gemeenschappelijke adresinformatie voorziening die alle dienstverleners in de zorg kunnen gebruiken om (medische) gegevens met elkaar uit te wisselen.
     1. [ZORG-AB Implementatiehandeleiding](https://www.google.com/search?q=zorg-ab+implementatiehandleiding)
-    1. [Simplifier Project](https://simplifier.net/ZORG-AB)
+    1. FHIR Interface definitie ZORG-AB: [Simplifier Project](https://simplifier.net/ZORG-AB)
 
 #### Authenticatie
 
