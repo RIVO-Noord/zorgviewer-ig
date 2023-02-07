@@ -46,6 +46,10 @@ Bevragen bronsystemen ontvangkelijke zorgaanbieders
 * [Chipsoft BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
 
 <div>
+{%include Zorgviewer-seq-3b.svg%}
+</div>
+
+<div>
 {%include Zorgviewer-seq-3.svg%}
 </div>
 

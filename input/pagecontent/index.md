@@ -7,6 +7,8 @@
 
 ### Architectuur
 
+TODO: Linkje naar Netwerkzorg Architectuur document.
+
 ### History
 
 [Clinical Connectathon Netwerkzorg Track](https://wiki-dhealth.web.rug.nl/index.php/Clinical_Connectathon_Netwerkzorg_Track)
@@ -17,9 +19,13 @@
 
 ### Bouwblokken
 
+In onderstaande schema zie je de globale verdeling en interactie (nummertjes) tussen de verschillende bouwblokken.
+
 <div>
 {%include Zorgviewer-comp-1.svg%}
 </div>
+
+Hierna volgt een schema met functionaliteiten per bouwblok.
 
 <div>
 {%include Functionaliteiten.svg%}

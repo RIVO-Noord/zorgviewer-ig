@@ -1,0 +1,74 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner",
+    "language": "en",
+    "version": "1.0",
+    "name": "Practitioner",
+    "title": "Practitioner",
+    "status": "draft",
+    "date": "2023-01-27",
+    "description": "The minimal Practitioner for the Zorgviewer",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Practitioner",
+    "baseDefinition" : "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Practitioner.identifier",
+                "path": "Practitioner.identifier",
+                "min": 1,
+                "constraint": [
+                    {
+                        "key": "zv-pra-3",
+                        "severity": "error",
+                        "human": "Either Practitioner BIG or AGB identifier SHALL be present.",
+                        "expression": "(identifier.exists())",
+                        "xpath": "/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z' or /f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/big'"
+                    }
+                ]
+            },
+            {
+                "id": "Practitioner.identifier:AGB",
+                "path": "Practitioner.identifier",
+                "sliceName": "AGB",
+                "mustSupport": true
+            },
+            {
+                "id": "Practitioner.identifier:BIG",
+                "path": "Practitioner.identifier",
+                "sliceName": "BIG",
+                "mustSupport": true
+            },
+            {
+                "id": "Practitioner.name",
+                "path": "Practitioner.name",
+                "min": 1,
+                "constraint": [
+                    {
+                        "key": "zv-pra-1",
+                        "severity": "error",
+                        "human": "Either Practitioner.name.given and/or Practitioner.name.family and/or Practitioner.name.text SHALL be present.",
+                        "expression": "(family.exists() or given.exists() or text.exists())",
+                        "xpath": "/f:name/f:family or /f:name/f:given or /f:name/f:text"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "key": "zv-pra-2",
+                        "severity": "warning",
+                        "human": "To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present.",
+                        "expression": "text.exists()",
+                        "xpath": "/f:name/f:text"
+                    }
+                ],
+                "mustSupport": true
+            }
+        ]
+    }
+}

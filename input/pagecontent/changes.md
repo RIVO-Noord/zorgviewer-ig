@@ -17,6 +17,6 @@ Voorbeelden:
 En verder:
 
 1. (tag) noemen zoals we de sprint noemen in DevOps.
-1. Achter titels van paragrafen "(draft)" of "(sprint1)".
+1. Onder de titels van paragrafen "(draft)" of "(sprint1)".
 1. In changelog, deze pagina van de IG, per sprint een overzichtje van paragrafen waar iets is gewijzigd en zichtbaar als (new-content / ligt groen gearceerd waar mogelijk).
 1. (FHIR) Artifacts hebben eigen status.
