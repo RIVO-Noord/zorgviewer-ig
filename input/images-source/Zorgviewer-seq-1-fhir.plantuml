@@ -17,7 +17,7 @@ Zorgverlener->Host: inloggen met lokale identiteit
 Zorgverlener->Host: selecteer patient
 Zorgverlener->Host: start Zorgviewer
 Host->Zorgviewer: start met context\n""https://zorgviewer.nl""
-note over Host,Zorgviewer
+note left Zorgviewer
  Context is iig zorgviewer-host-base, access token, gebruiker_fhir_id, patient_fhir_id
 end note
 Zorgviewer->Host: //SMART-on-FHIR handshake//
@@ -36,7 +36,7 @@ destroy Zorgviewer
 ' ZORB-AB Implementatiehandleiding 2.8 paragraaf 4.7
 Zorgviewer->ZorgverlenerRegistry: LATER: Opvragen (landelijke) gebruiker gegevens adhv external identifier\n""<zorg-ab-base>/Practitioner/?identifier=<agb-z>""\n""<zorg-ab-base>/PractitionerRole?practitioner.identifier=http://fhir.nl/fhir/NamingSystem/agb-z|<agb-z>""
 ZorgverlenerRegistry-->Zorgviewer: ""[[StructureDefinition-Practitioner.html Practitioner]]"" volledige zorgverlener gegevens
-note over ZorgverlenerRegistry,Zorgviewer
+note right Zorgviewer
   Inclusief specialisme, rollen e.d. zoals extern bekend met externe codering AGB/VEKTIZ
 end note
 
