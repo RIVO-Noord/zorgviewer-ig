@@ -29,6 +29,12 @@
 1. De zorgviewer host kan de zorgviewer opstarten met context (gebruiker en huidige patient).
 1. Bij de zorgviewer host kan de zorgviewer minimaal volledige (via context doorgegeven id's) patient en gebruiker gegevens opvragen
 
+**Solutions**:
+1. Epic
+1. Chipsoft
+1. Topicus
+1. Zorgviewer Launcher - Los voor gebruikers zonder EPD
+
 #### Zorgviewer
 
 **Definitie**: De Zorgviewer toont data uit de aangesloten bronsystemen, ordent deze, en biedt de raadpleger de mogelijkheid van filtering van de data op basis van het zorgpad of persoonlijke instellingen.
@@ -65,12 +71,13 @@
     1. UMCG -> Epic user = AD user + AGB-Z
     1. Chipsoft -> AGZ-Z
     1. Topicus
-1. Lokale identitie MOET AGB-Z als attribuut hebben, zodat we via de Zorgverlener Registry de specialismen en rollen kunnen opvragen
+    1. Losse Zorgviewer Launcher -> BIG-Nummer
+1. Lokale identitie MOET AGB-Z of BIG-Nummer als attribuut hebben, zodat we via de Zorgverlener Registry de specialismen en rollen kunnen opvragen
 1. Vektis AGB-medische specialismen
 
 **Details**:
 1. AGB-Z URI: http://fhir.nl/fhir/NamingSystem/agb-z
-1. ~~BIG-Nummer OID: 2.16.528.1.1007.5.1~~ niet in Epic en niet in Chipsoft
+1. BIG-Nummer URI: http://fhir.nl/fhir/NamingSystem/big - niet in Epic en in Chipsoft, wel voor fysiotherapeuten en verloskundigen
 1. COD016-VEKT (Vektis AGB-medische specialismen) OID: 2.16.840.1.113883.2.4.6.7
 1. URA OID: http://fhir.nl/fhir/NamingSystem/ura (e.g 12345678) **TODO: Hoe kom ik aan de URA nummers??**
 
@@ -97,7 +104,10 @@
     1. voor Epic::Ontsluitening bronsysteem [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
 1. Lokale AD (ADFS)
 1. SAML 2.0
-1. Check Mitz en TWINN, Claims
+1. Check MITZ *OTV 
+1. Check [TWIIN](https://www.twiin.nl/twiin-afsprakenstelsel/wat-het-twiin-afsprakenstelsel)
+    * [Twiin Afsprakenstelsel release 1.1 beta](https://public.vzvz.nl/display/TA11beta)
+    * [Open toestemmingsvraag](https://public.vzvz.nl/display/TA11beta/Mitz+Transacties) - *waar is de FHIR versie??*
 
 #### Autorisatie
 

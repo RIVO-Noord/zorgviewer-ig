@@ -3,33 +3,44 @@
 
 ### Introduction
 
-[RIVO NN](http://rivo-noord.nl)
+Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/).
 
-### Architectuur
+### Events
 
-TODO: Linkje naar Netwerkzorg Architectuur document.
+| | |
+| --- | --- |
+| 2020​ | Netwerkzorg Architectuur​ vastgesteld. *TODO: Linkje naar Netwerkzorg Architectuur document.* |
+| 2021-nov​ | Zorgviewer Prototype​ middels [Clinical Connectathon Netwerkzorg](https://wiki-dhealth.web.rug.nl/index.php/Clinical_Connectathon_Netwerkzorg_Track) |
+| 2022 | [Supernova Zorgviewer MVP1]​(https://www.salesforce.com/nl/blog/2022/05/supernova.html) |
+| 2023 | [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/) |
+| 2023-apr | ? *Connectathon Behandelplan (HL7 NL en dHealthLab)*​ |
 
-### History
+### Milestones
 
-[Clinical Connectathon Netwerkzorg Track](https://wiki-dhealth.web.rug.nl/index.php/Clinical_Connectathon_Netwerkzorg_Track)
+1. **(dec-2023) MVP2 Zorgviewer opstarten vanuit Epic, Chipsoft en Topicus en ontsluiten van de BgZ en PDF/a (voor zover ingericht in de bronnen adhv VIPP5 module 1 en 2)**
+1. ? *Uitbreiden vulling BgZ en PDF/a. Hiervoor zijn doorgaans de EPD teams nodig.*
+1. ? *Uitbreiden bronnen, uitbreiden opstarters en daarmee gebruikersgroepen.*
+1. ? *Uitbreiding zibs buiten BgZ - gegevenssets breder ondersteunen (Acute Zorg, HartNet, Oncologie, PalZorg)*
+1. ? *Behandelplan (initieel als relevantie filter) functionaliteit uitbreiden*
+1. ? *Patient als gebruiker*
 
-### Project Zorgviewer MVP2
-
-[RIVO-Noord Zorgviewer Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/)
-
-### Bouwblokken
+### Bouwblokken samenwerking
 
 In onderstaande schema zie je de globale verdeling en interactie (nummertjes) tussen de verschillende bouwblokken.
 
 <div>
-{%include Zorgviewer-comp-1.svg%}
+{% include Zorgviewer-comp-1.svg %}
 </div>
+
+### Functionaliteiten
 
 Hierna volgt een schema met functionaliteiten per bouwblok.
 
 <div>
-{%include Functionaliteiten.svg%}
+{% include Functionaliteiten.svg %}
 </div>
+
+### Bouwblokken
 
 {% include img.html img="bouwblokken.png" caption="Figure 1: Bouwblokken" width="70%" %}
 
@@ -47,3 +58,5 @@ Hierna volgt een schema met functionaliteiten per bouwblok.
 | Multi-inzetbaar | De bouwblokken zijn niet alleen bruikbaar voor de regionale zorgviewer, maar zijn ook bruikbaar en essentieel voor het delen van diagnostiek, multidisciplinair overleg, monitoring en E-health en de Persoonlijke Gezondheidsomgeving (PGO). |
 
 ### Leeswijzer
+
+TODO

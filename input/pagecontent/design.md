@@ -8,11 +8,12 @@ Scope is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, 
 
 Note: (?) Probeer definities te hergebruiken uit [IHE Actors](https://gazelle.ihe.net/GMM/tf/actor/listActors.seam), b.v. de [IHE Mobile Profiles IHE_PCC_Suppl_QEDm](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_QEDm.pdf)
 
-#### Clinical Data Consumer "Raadpleger" - Zorgviewer bouwblok
+* Clinical Data Consumer "Raadpleger" - Zorgviewer bouwblok
+* Clinical Data Source "Beschikbaar steller" - Ontsluiten Bronsysteem bouwblok
+* Authorization Client, Result Aggregator - Zorgviewer bouwblok
+* Authorization Server - Authenticatie bouwblok
+* Provider Information Directory - Zorgverlener Registry bouwblok
 
-#### Clinical Data Source "Beschikbaar steller" - Ontsluiten Bronsysteem bouwblok
-
-#### ...
 
 ### Sequence Diagrams
 
@@ -27,14 +28,14 @@ Initiatie Zorgviewer, opstarten vanuit EPD.
 * [Chipsoft Web Browser Single-Sign-On](https://developer.zorgplatform.online/digital-care/authenticatie)
 
 <div>
-{%include Zorgviewer-seq-1-fhir.svg%}
+{% include Zorgviewer-seq-1-fhir.svg %}
 </div>
 
 #### Bepalen zorgaanbieders
 
 Bepalen zorgaanbieders waarvoor toestemming is gegeven mogelijk nog extra stap om van zorgaanbieder naar endpoint(s) te komen.
 <div>
-{%include Zorgviewer-seq-2.svg%}
+{% include Zorgviewer-seq-2.svg %}
 </div>
 
 #### Bevragen bronsystemen zorgaanbieders
@@ -47,11 +48,11 @@ Bevragen bronsystemen ontvangkelijke zorgaanbieders
 * [Chipsoft BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
 
 <div>
-{%include Zorgviewer-seq-3b.svg%}
+{% include Zorgviewer-seq-3b.svg %}
 </div>
 
 <div>
-{%include Zorgviewer-seq-3.svg%}
+{% include Zorgviewer-seq-3.svg %}
 </div>
 
 #### Zorgviewer Host 

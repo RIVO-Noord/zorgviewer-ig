@@ -1,0 +1,35 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole",
+    "language": "en",
+    "version": "1.0",
+    "name": "PractitionerRole",
+    "title": "PractitionerRole",
+    "status": "draft",
+    "date": "2023-01-27",
+    "description": "The minimal PractitionerRole for the Zorgviewer",
+    "kind": "resource",
+    "abstract": false,
+    "type": "PractitionerRole",
+    "baseDefinition" : "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "PractitionerRole.specialty.coding:SpecialtyAGB",
+                "path": "PractitionerRole.specialty.coding",
+                "sliceName": "SpecialtyAGB",
+                "constraint": [
+                    {
+                        "key": "zv-prr-1",
+                        "severity": "error",
+                        "human": "PractitionerRole Specialty AGB code SHOULD be present.",
+                        "expression": "(identifier.exists())",
+                        "xpath": "/f:identifier/f:system='urn:oid:2.16.840.1.113883.2.4.6.7'"
+                    }
+                ],
+                "mustSupport": true
+            }
+        ]
+    }
+}

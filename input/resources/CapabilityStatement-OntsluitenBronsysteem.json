@@ -1,8 +1,8 @@
 {
     "resourceType": "CapabilityStatement",
-    "url": "http://hl7.nl/fhir/zorgviewer/CapabilityStatement/ZorgviewerHost",
+    "url": "http://hl7.nl/fhir/zorgviewer/CapabilityStatement/OntsluitenBronsysteem",
     "version": "0.1.0",
-    "name": "ZorgviewerHost",
+    "name": "OntsluitenBronsysteem",
     "status": "active",
     "date": "2022-09-27",
     "publisher": "RIVO-Noord",
@@ -18,7 +18,7 @@
             ]
         }
     ],
-    "description": "This CapabilityStatement describes the minimal requirements for the Zorgviewer Host.",
+    "description": "This CapabilityStatement describes the minimal requirements for the Zorgviewer Ontsluiten Bronsysteem.",
     "purpose": "This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide of the corresponding information standard should be consulted.",
     "copyright": "CC0",
     "kind": "requirements",
@@ -32,18 +32,6 @@
         {
             "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
             "display": "nl-core-patient"
-        },
-        {
-            "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-organization",
-            "display": "nl-core-organization"
-        },
-        {
-            "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner",
-            "display": "nl-core-practitioner"
-        },
-        {
-            "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole",
-            "display": "nl-core-practitionerrole"
         }
     ],
     "rest": [
@@ -82,37 +70,14 @@
                                 }
                               ],
                             "code": "read"
-                        }
-                    ]
-                },
-                {
-                    "type": "Practitioner",
-                    "profile": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner",
-                    "supportedProfile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner" ],
-                    "interaction": [
+                        },
                         {
                             "extension": [
                                 {
-                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                    "valueCode": "SHALL"
+                                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                  "valueCode": "SHALL"
                                 }
-                            ],
-                            "code": "read"
-                        }
-                    ]
-                },
-                {
-                    "type": "PractitionerRole",
-                    "profile": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole",
-                    "supportedProfile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole" ],
-                    "interaction": [
-                        {
-                            "extension": [
-                                {
-                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                    "valueCode": "SHALL"
-                                }
-                            ],
+                              ],
                             "code": "search-type"
                         }
                     ],
@@ -125,9 +90,9 @@
                             }
                           ],
                           "name": "identifier",
-                          "definition": "http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner",
+                          "definition": "http://hl7.org/fhir/SearchParameter/Patient-identifier",
                           "type": "token",
-                          "documentation": "For getting the AGB roles/specialty (urn:oid:2.16.840.1.113883.2.4.6.7) for a Practitioner, e.g. 0305 Medisch specialisten, orthopedie."
+                          "documentation": "The server **SHALL** support search based on BSN, system=http://fhir.nl/fhir/NamingSystem/bsn"
                         }
                     ]
                 }
