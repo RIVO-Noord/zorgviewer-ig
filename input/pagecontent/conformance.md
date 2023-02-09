@@ -48,11 +48,12 @@
 
 #### Toestemming
 
-**Definitie**: AVG: de expliciete specifieke, vrij gegeven toestemming tot het beschikbaar stellen van zorginformatie door de patiënt|
+**Definitie**: AVG: de expliciete specifieke, vrij gegeven toestemming tot het beschikbaar stellen van zorginformatie door de patiënt
+{% include img.html img="mitz-toestemming.png" caption="Figure 2: uit MITZ Toestemming Documentatie" %}
 
 **Kandidaat solutions**:
-1. INITIEEL: "plain" FHIR server met vulling volgens FHIR IF van MITZ
-1. MITZ
+1. INITIEEL: "plain" FHIR server met vulling volgens FHIR IF van [MITZ "Open autorisatievraag"](https://drive.google.com/file/d/1cHgsz-OORw5QMoGj5Lh_475Bu_TpDHvj/view)
+1. MITZ 
 
 #### Identiteit
 

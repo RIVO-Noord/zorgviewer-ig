@@ -1,43 +1,45 @@
 @startuml
 
+cloud "cloud" {
+ [Zorgviewer]
+ [Behandelplan]
+ [MITZ] <<Toestemming\n& Patientindex>>
+ [ZorgAB] <<Zorgverlener\nRegistry>>
+}
+
 node "UMCG Epic" {
- [Hyperspace] <<Zorgviewer Host>>
+ [Hyperspace] <<Zorgviewer\nHost>>
  [Epic Auth] <<Authenticatie>>
- [IRIS] <<Bronsysteem ontsluiting>>
- [Epic] <<Bronsysteem>>
+ [IRIS] <<Bronsysteem\nontsluiting>>
+ [Epic] <<Bronsysteem\n& Logging>>
+ [Hyperspace]-->[Epic]
  [IRIS]-->[Epic]
  [Epic Auth]-->[Epic]
 }
 
-cloud "cloud" {
- [Zorgviewer]
- [Behandelplan]
- [MITZ] <<Toestemming>>
- [ZorgAB] <<Zorgverlener Registry>>
-}
-
 node "Chipsoft ziekenhuis" {
- [HiX] <<Zorgviewer Host>>
- [Zorgplatform Auth] <<Authenticatie>>
- [Zorgplatform] <<Bronsysteem ontsluiting>>
+ [HiX] <<Zorgviewer Host\n& Logging\n& Bronsysteem>>
+ [Zorgplatform\nAuth] <<Authenticatie>>
+ [Zorgplatform] <<Bronsysteem\nontsluiting>>
+ [Zorgplatform]->[HiX]
 }
 
 node "Zorgviewer Los" {
- [ZV Los] <<Zorgviewer Host>>
+ [ZV Los] <<Zorgviewer\nHost>>
  [ZV Los Auth] <<Authenticatie>>
  note bottom of [ZV Los Auth] : Plus basis bron only Patient, Zorgverlener\nZorgviewerHostCapabilityStatement
 }
 
-[Hyperspace]-->[Zorgviewer] :  1. opstart
-[HiX]-->[Zorgviewer] : 1. opstart
-[ZV Los]-->[Zorgviewer] : 1. opstart
-[Zorgviewer]-->[Epic Auth] : 2a. wie?
-[Zorgviewer]-->[ZV Los Auth] : 2a. wie?
-[Zorgviewer]-->[Zorgplatform Auth] : 2a. wie?
-[Zorgviewer]-->[ZorgAB] : 2b. wie en waar details?
+[Hyperspace]-u->[Zorgviewer] :  1. opstart
+[HiX]-u->[Zorgviewer] : 1. opstart
+[ZV Los]-u->[Zorgviewer] : 1. opstart
+[Zorgviewer]-d->[Epic Auth] : 2a. wie?
+[Zorgviewer]-d->[ZV Los Auth] : 2a. wie?
+[Zorgviewer]-d->[Zorgplatform\nAuth] : 2a. wie?
+[Zorgviewer]-u->[ZorgAB] : 2b. wie en waar details?
 [Zorgviewer]-u->[MITZ] : 3. waar?
-[Zorgviewer]-u->[Zorgplatform] : 4. bevragen
-[Zorgviewer]-->[IRIS] : 4. bevragen
-[Zorgviewer]-l->[Behandelplan] : 5. filters
+[Zorgviewer]->[Zorgplatform] : 4. bevragen
+[Zorgviewer]->[IRIS] : 4. bevragen
+[Zorgviewer]-u->[Behandelplan] : 5. filters
 
 @enduml

@@ -2,32 +2,40 @@
 
 title "Functionaliteiten per bouwblok"
 
-cloud {
- package [Behandelplan] {
-  (Behandelplannen adhv diagnose)
-  (Relevant adhv zorgpad)
-  (Relevant adhv rol)
- }
- package [MITZ] <<Toestemming>> {
-  (Toegestane bronnen patient)
- }
- package [ZorgAB] <<Zorgverlener Registry>> {
-  (Rollen bij zorgverlener)
- }
+'left to right direction
+
+
+package "Zorgviewer" {
+ (Filtering obv Zorgpad, sorteren)
+ (Conflicten attenderen)
+ (Zorgpad weergave)
+ (Patient banner)
+ (Weergave gegevens)
 }
 
-package "Zorgviewer Host" <<Zorgviewer Host>> {
- package "Zorgviewer" <<Zorgviewer>> {
-  (Filtering obv Zorgpad, sorteren)
-  (Conflicten attenderen)
-  (Zorgpad weergave)
-  (Patient banner)
-  (Weergave gegevens)
- }
- (Inlog zorgverlener)
+package "Epic, Chipsoft, Zorgviewer Los" <<Zorgviewer Host>> {
+ (Stelt identity vast)
  (Patient selectie)
  (Controle behandelrelatie)
  (Opstart Zorgviewer)
 }
+
+cloud {
+ package [Behandelplan] {
+  (Behandelplannen adhv diagnose)
+  (Relevante gegevens adhv zorgpad)
+  (Relevante gegevens adhv rol)
+ }
+ package [MITZ] <<Toestemming & Patientindex>> {
+  (Toegestane bronnen patient)
+ }
+ package [ZorgAB] <<Zorgverlener Registry>> {
+  (Zorgverlener rollen)
+  (Zorgverlener gegevens)
+  (Bronnen endpoints)
+ }
+}
+
+
 
 @enduml
