@@ -55,7 +55,7 @@
 1. INITIEEL: "plain" FHIR server met vulling volgens FHIR IF van [MITZ "Open autorisatievraag"](https://drive.google.com/file/d/1cHgsz-OORw5QMoGj5Lh_475Bu_TpDHvj/view)
 1. MITZ 
 
-#### Identiteit
+#### Identiteit (virtueel bouwblok)
 
 **Definitie**: Identiteit wordt gebruikt voor: 
 * Vastleggen van logging 
@@ -155,7 +155,7 @@
 
 {% include dependency-table.xhtml %}
 
-### Data Requirements
+### Data Requirements (aka "Gegevenssets" virtueel bouwblok)
 
 1. Minimaal 28 BGZ-Zibs + de correspondentie (radiologie brieven, specialisten brieven, notities, ontslag brief)
 

@@ -11,7 +11,7 @@
 
 1. Vind nog plekje voor ### Globals {% include globals-table.xhtml %}
 
-# Opstart sequence
+### Opstart sequence
 
 1. LATER: Break-the-glass
 1. Rollen en Specialismen volgens AGB in ZIB Zorgverlener, dan hoeft de call naar Zorgverlener Registry niet.
@@ -19,7 +19,6 @@
     * Practitioner in Epic heeft qualification, je kan los de PractitionerRoles opvragen, dat zijn de rollen, maar dat ondersteund Chipsoft niet zo te zien, dus we moeten dit in de "nep" ZORG-AB doen
 1. Bouwblok: welke organisaties zijn aangesloten voor Zorgviewer om te checken
     * Trust relatie adhv PKI
-    * Ook aansluit-checklist maken
 
 ### Capability Statements
 
