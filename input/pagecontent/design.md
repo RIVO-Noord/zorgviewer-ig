@@ -66,7 +66,18 @@ N.B. Datasets zijn relevante selectie van data elementen met eventueel filters v
 
 #### BgZ+PDF/a
 
-[BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
+1. Wat wordt geeist: [VIPP5 Staatscourant stcrt-2020-7935](https://zoek.officielebekendmakingen.nl/stcrt-2020-7935.html)
+1. Wat kan Epic nu:
+    1. SMoR - VIPP 5 Module 1 - PDFA Correspondence via FHIR - Design - February 2021 revision.pdf
+    1. SMoR - VIPP 5 Module 1 - BGZ on FHIR - Design - July 2020 revision.pdf
+    1. Wij doen de zibs uit de BgZ (dus niet alleen laatste bloeddruk, maar alle b.v.) we doen meer dan de BgZ en minder dan de zibs.
+    1. Epic FHIR **STU3** *Provider-Facing* https://fhir.epic.com/Specifications
+1. Wat kan Chipsoft nu:
+    1. [Digitale Zorg Zorgplatform](https://developer.zorgplatform.online/digital-care)
+1. MedMij specs (basic): 
+    1. [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpBGZ_2017)
+    1. [BgZ 2017 FHIR](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
+    1. [PDF/a](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpPDFA)
 
 Dit is de basis gegevensset zorg, ook wel patient summary genoemd. We behandelen de BgZ als sub-set van zibs. In de BgZ worden de secties beperkt. Bijvoorbeeld de lab uitslagen worden beperkt op klinisch chemisch lab. Deze filters op de zibs beschouwen we als voorbeelden. Je mag ze weglaten, zodat je alle beschikbare lab uitslagen kan krijgen. 
 
@@ -80,4 +91,4 @@ https://amigo.nictiz.nl/acute-zorg/opvragingen-bij-huisarts/dataset
 
 #### Oncology
 
-#### Terminology
+##### ACP
