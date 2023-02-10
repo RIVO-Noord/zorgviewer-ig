@@ -27,12 +27,12 @@ node "Chipsoft ziekenhuis" {
 node "Zorgviewer Los" {
  [ZV Los] <<Zorgviewer\nHost>>
  [ZV Los Auth] <<Authenticatie>>
- note bottom of [ZV Los Auth] : Plus basis bron only Patient, Zorgverlener\nZorgviewerHostCapabilityStatement
+ note bottom of [ZV Los Auth] : Plus basis bron only Patient, Zorgverlener\nZorgviewerHost CapabilityStatement
 }
 
-[Hyperspace]-u->[Zorgviewer] :  1. opstart
-[HiX]-u->[Zorgviewer] : 1. opstart
-[ZV Los]-u->[Zorgviewer] : 1. opstart
+[Hyperspace]-u->[Zorgviewer] :  1. opstart(context)
+[HiX]-u->[Zorgviewer] : 1. opstart(context)
+[ZV Los]-u->[Zorgviewer] : 1. opstart(context)
 [Zorgviewer]-d->[Epic Auth] : 2a. wie?
 [Zorgviewer]-d->[ZV Los Auth] : 2a. wie?
 [Zorgviewer]-d->[Zorgplatform\nAuth] : 2a. wie?

@@ -2,31 +2,44 @@
 hide footbox
 autonumber
 
+actor Zorgverlener
 participant Zorgviewer
+box "ander bronsysteem"
+participant Authenticatie
+participant "Bronsysteem ontsluiting" as Bron
+participant Bronsysteem
+end box
 participant Behandelplan
-participant "EPD (via EPD ontsluiting)" as EPD
-participant Toetser
-participant Toestemming
+
 
 activate Zorgviewer
-Zorgviewer->Behandelplan: Bepalen minimale dataset (adhv hoofdiagnose)
-Behandelplan-->Zorgviewer: Behandelplan
-Zorgviewer->Zorgviewer: LOOP: voor iedere zorgaanbieder in de lijst
+Zorgverlener->Zorgviewer: ...
+Zorgviewer->Zorgviewer: omzetten lokaal-access-token naar extern-access-token
+Zorgviewer->Behandelplan: Bepalen minimale dataset\n""<behandelplan-base>/PlanDefinition?name=BgZ2017""
+note left Behandelplan
+  Eerst fixed "BgZ 2017" behandelplan. Later obv (hoofd)diagnose of rol/specialisme gebruiker
+end note
+activate Behandelplan
+Behandelplan-->Zorgviewer: Behandelplan\n""PlanDefinition""
+deactivate Behandelplan
+Zorgviewer->Zorgviewer: LOOP: voor iedere zorgaanbieder (Bronsysteem ontsluiting endpoint)
 activate Zorgviewer
-Zorgviewer->Zorgviewer: Formuleren gegevensverzoeken adhv Behandelplan
-activate Zorgviewer
-Zorgviewer->Toetser:Gegevensverzoek
-activate Toetser
-Toetser->Toestemming: Verifieren Toestemming
-Toestemming-->Toetser: Yes/no
-Toetser->Toetser: Verifieren minimale dataset
-Toetser->EPD:Gegevensverzoek
-EPD-->Toetser: ZIBS
-Toetser-->Zorgviewer: ZIBS
-deactivate Toetser
-Zorgviewer->Zorgviewer: Aggregate
+Zorgviewer->Zorgviewer: Formuleren gegevensverzoek (filters) adhv Behandelplan
+
+Zorgviewer->Bron: Gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/<resources bij zib>?<filter>""
+activate Bron
+Bron->Bron : check extern-access-token
+Bron->Logging : log access
+Bron->Bronsysteem : query met generiek zorgviewer back-end account
+activate Bronsysteem
+Bronsysteem->Logging : Log gebruiker naam
+Bronsysteem->Bron: zib
+deactivate Bronsysteem
+Bron-->Zorgviewer: zib
+deactivate Bron
 deactivate Zorgviewer
-Zorgviewer->Zorgviewer: Toon relevante geaggregeerde gegevens
-deactivate Zorgviewer
+
+Zorgviewer->Zorgviewer: Aggregate en ontdubbelen en conflicten detectie
+Zorgviewer->Zorgviewer: Toon gegevens
 
 @enduml

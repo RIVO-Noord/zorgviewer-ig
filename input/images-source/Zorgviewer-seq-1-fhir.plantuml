@@ -25,8 +25,8 @@ Zorgviewer->Host: //SMART-on-FHIR handshake//
 activate Zorgviewer
 Zorgviewer->Authenticatie: check Identity //OAuth2//
 Authenticatie-->Zorgviewer: gebruiker identity external identifier verkrijgen (e.g. AGB-Z of BIG-Nummer)
-Zorgviewer->Host: Opvragen (lokale) gebruiker gegevens adhv gebruikerid\n""<zorgviewer-host-base>/Practitioner/<gebruiker_fhir_id>""
-Host-->Zorgviewer: ""[[StructureDefinition-Practitioner.html Practitioner]]""
+Zorgviewer->Host: Opvragen (lokale) gebruiker gegevens adhv gebruikerid\n""<zorgviewer-host-base>/Practitioner/<gebruiker_fhir_id>""\n""<zorg-ab-base>/PractitionerRole?practitioner=<gebruiker_fhir_id>""
+Host-->Zorgviewer: ""[[StructureDefinition-Practitioner.html Practitioner]]""\n""[[StructureDefinition-PractitionerRole.html PractitionerRole]]""
 note right Zorgviewer
     obv AGB-Z of ziekenhuis van de gebruiker via signing van token
 end note

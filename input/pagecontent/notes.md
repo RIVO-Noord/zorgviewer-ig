@@ -1,16 +1,14 @@
-### Examples
 
-1. De BgZ test-patient uit Epic opvragen *Provider Facing* en diff op de volledige BgZ test-patient?
-1. TODO: Provider Facing middels PostMan opvragen uit Epic
-1. TODO: Provider Facing middels PostMan opvragen uit Chipsoft, nu van zorgplatform.developer gepakt
+### Van alles
 
-### Openstaande punten
-
-1. Vind nog plekje voor ### Globals {% include globals-table.xhtml %}
-1. Kunnen we Practitioner(practitionernaam en AGB-Z/BIG-Nummer) meesturen (prefetchen) zoals CDS Hooks?
+1. Open World Modeling toelichten – toelichten. 
+    1. Alle stakeholders van het zorgproces. 
+    1. Consequenties voor nu en toekomst. Identiteit nu BIG en AGB-Z maar later ook thuiszorg. Open houden. 
+1. Er zijn bouwblokken die eigenlijk Functions zijn. Overname is functionaliteit van de Zorgviewer naar de Zorgverlener Host (Eigen EPD)
 
 ### Opstart sequence
 
+1. Kunnen we Practitioner(practitionernaam en AGB-Z/BIG-Nummer) meesturen (prefetchen) zoals CDS Hooks?
 1. LATER: Break-the-glass
 1. Rollen en Specialismen volgens AGB in ZIB Zorgverlener, dan hoeft de call naar Zorgverlener Registry niet.
     * Deze zitten in PractitionerRole
@@ -27,40 +25,19 @@ Per bouwblok/functie.
 1. Ontsluiting bronsysteem = capability statement van bgz server + pdfa
 1. Toestemming = MITZ Open Vraag
 1. Zorgverlener Registry/Directory = ZORG-AB
-
-* !! Grofweg BgZ2017 en PDFa overnemen en bijstellen/iets generieker maken en check IPA voor extra's!
-* Ook ZV Versie voor eerste vragen!
 * Per Actor / Bouwblok??
     * e.g. VitalSignsServer https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.8/files/803365
     * Behandelplan Server - CarePlan resource search obv Condition code of specialisme / rol?
     * Behandelplan Client is dan Functie van Zorgviewer
-* Er zijn bouwblokken die eigenlijk Functions zijn.
-    * Overname is functionaliteit van de Zorgviewer naar de Zorgverlener Host (Eigen EPD)
 * Example CapabilityStatement items for SMART-on-FHIR: http://hl7.org/fhir/smart-app-launch/1.0.0/conformance/index.html
-
 
 ### Bouwblokken
 
-* Vertrouwensmodel bouwblokken TWIIN
+* Check vertrouwensmodel bouwblokken TWIIN
 * Tabel toevoegen met vergelijking bouwblokken ZV, TWIIN, BabyConnect, (er was nog zoiets ter referentie)
 * Adressering bouwblok toevoegen? is dat Zorg-AB?
 * Localisatie bouwblok toevoegen?
 * Patient Index... is dat Localicatie?
-
---------
-* Zorgviewer Host - Eigen EPD (EHR Session)
-* Zorgviewer
-* Identiteit
-    * Zorgverleners - ProviderRegistry
-* Authenticatie
-* Autorisatie
-    * Behandelrelatie
-        * Bepalen of er een openstaande relatie is tussen zorgverlener en patient in een zorgpad.
-* Toestemming
-    * Adressering
-    * Localisatie - PatientIndex - Mitz
-    * Mitz geeft welke rollen bij de gegevens mogen.
-* Ontsluiting bronsysteem
 * Logging
 * Behandelplan
 * Overname
@@ -68,6 +45,11 @@ Per bouwblok/functie.
 * Workflow
 
 ---------
+DevOps indeling 10-feb-2023 met Geertje
+
+!! Toevoegen meer dan 1 bron -> Bepalen zorgaanbieders / MITZ (Toestemming, Localisatie, Adressering) 
+!! Toevoegen us per sequence diagram?
+
 E Ontsluiten bronsysteem
 - F FHIR Interface op het bronsysteem
  - US FHIR endpoint beschibaar voor Zorgviewer
@@ -100,3 +82,4 @@ E Toestemming / PatientIndex (Localisatie) (incl Adresering (FHIR endpoints))
 
 E Behandelplan
  - ErasmusMC heeft iets
+------------

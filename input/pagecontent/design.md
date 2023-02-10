@@ -48,10 +48,6 @@ Bevragen bronsystemen ontvangkelijke zorgaanbieders
 * [Chipsoft BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
 
 <div>
-{% include Zorgviewer-seq-3b.svg %}
-</div>
-
-<div>
 {% include Zorgviewer-seq-3.svg %}
 </div>
 
@@ -83,9 +79,9 @@ Dit is de basis gegevensset zorg, ook wel patient summary genoemd. We behandelen
 
 #### Acute Zorg - e-Spoed (#1)
 
-https://nictiz.nl/standaarden/informatiestandaarden/acute-zorg/
-https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Acute_Zorg
-https://amigo.nictiz.nl/acute-zorg/opvragingen-bij-huisarts/dataset
+* https://nictiz.nl/standaarden/informatiestandaarden/acute-zorg/
+* https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Acute_Zorg
+* https://amigo.nictiz.nl/acute-zorg/opvragingen-bij-huisarts/dataset
 
 #### HartNet - TAVI Proces
 

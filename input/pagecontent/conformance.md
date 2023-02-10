@@ -33,7 +33,7 @@
 1. Epic
 1. Chipsoft
 1. Topicus
-1. Zorgviewer Launcher - Los voor gebruikers zonder EPD
+1. Zorgviewer Launcher - Los voor gebruikers zonder EPD/ECM
 
 #### Zorgviewer
 
@@ -41,10 +41,14 @@
 
 **Requirements**:
 1. De zorgviewer bevat zelf geen patiëntgebonden data, en wijzigt geen data in de bronsystemen. 
+1. De zorgviewer integreert in de informatieomgeving van de raadpleger.
+1. Het moet mogelijk zijn om aan te geven dat het een spoedsituatie betreft. In spoedsituatie is altijd toegang toegestaan.
+    1. Als er geen toegang toestemming is, dan spoedoptie "knop" weergeven.
 1. De zorgviewer attendeert de raadpleger op conflicten in het tonen van data van verschillende bronnen waar ze niet overeenkomen. 
 1. De zorgviewer attendeert de raadpleger op belangrijke lacunes in het eigen informatiesysteem: specificeren wat en welke dat zijn. Centraal vastleggen en dat alerten. 
-1. De zorgviewer integreert in de informatieomgeving van de raadpleger
 1. De zorgviewer biedt de mogelijkheid om informatie te tonen op basis van de plek van de patiënt in het zorgpad
+1. De zorgviewer fasciliteerd in ontdubbelen
+    1. Zie voor details paragraven 3.2.9.1 Ontdubbelen en 3.2.9.2 Duplicaatdetectie van de [BgZ MSZ Informatistandaard](https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard)
 
 #### Toestemming
 
@@ -147,6 +151,15 @@
 * ~~XDS-NN~~ 
 * Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan aanleveren
 
+#### Behandelplan
+
+**Definitie**: ...
+
+**Requirements**:
+
+**Kandidaat solutions**:
+* INITIEEL: plain FHIR server met PlanDefinitions, focus op filters
+
 ### Data Requirements 
 
 *Aka "Gegevenssets" virtueel bouwblok.*
@@ -166,6 +179,10 @@ Zie ook [Datasets](design.html#datasets)
 #### Dependencies
 
 {% include dependency-table.xhtml %}
+
+### Globals
+
+{% include globals-table.xhtml %}
 
 ### EHR-S FM Requirements Mapping
 
