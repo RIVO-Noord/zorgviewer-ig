@@ -147,6 +147,18 @@
 * ~~XDS-NN~~ 
 * Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan aanleveren
 
+### Data Requirements 
+
+*Aka "Gegevenssets" virtueel bouwblok.*
+
+1. Basis zijn de 28 zibs uit de BgZ aangevuld met de correspondentie (radiologie brieven, specialisten brieven, notities, ontslag brief)
+1. De Data Requirements zijn een gemeenschappelijk profiel op wat leveranciers nu kunnen en zorginstellingen hebben ingericht in hun workflows (VIPP5).
+    1. Leidend zijn de zibs
+    1. Vervolgens wordt getest wat de leveranciers ondersteunen van de zibs via FHIR
+    * In sommige gevallen kan het zijn dat de workflow niet is ingericht of anders is ingericht (dat mag). Voor mantatory (min=1) en must-support elementen zou die workflow MOETEN worden aangepast om goed te functioneren in de Zorgviewer. Bijvoorbeeld bij zorgverleners MOET een externe identifier geregistreerd zijn, zodat deze ook via FHIR Practitioner wordt ontsloten.
+
+Zie ook [Datasets](design.html#datasets)
+
 ### Technische Requirements
 
 1. Alle implementaties dienen zich te houden aan [Postel's law, Robustness principle](http://www.healthintersections.com.au/?p=2403)
@@ -154,10 +166,6 @@
 #### Dependencies
 
 {% include dependency-table.xhtml %}
-
-### Data Requirements (aka "Gegevenssets" virtueel bouwblok)
-
-1. Minimaal 28 BGZ-Zibs + de correspondentie (radiologie brieven, specialisten brieven, notities, ontslag brief)
 
 ### EHR-S FM Requirements Mapping
 
