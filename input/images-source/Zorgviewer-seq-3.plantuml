@@ -4,7 +4,7 @@ autonumber
 
 actor Zorgverlener
 participant Zorgviewer
-box "ander bronsysteem"
+box "Andere zorgaanbieder"
 participant Authenticatie
 participant "Bronsysteem ontsluiting" as Bron
 participant Bronsysteem
@@ -22,7 +22,7 @@ end note
 activate Behandelplan
 Behandelplan-->Zorgviewer: Behandelplan\n""PlanDefinition""
 deactivate Behandelplan
-Zorgviewer->Zorgviewer: LOOP: voor iedere zorgaanbieder (Bronsysteem ontsluiting endpoint)
+Zorgviewer->Zorgviewer: LOOP: voor iedere zorgaanbieder ([[Endpoint-UMCG.html Bronsysteem ontsluiting endpoint]])
 activate Zorgviewer
 Zorgviewer->Zorgviewer: Formuleren gegevensverzoek (filters) adhv Behandelplan
 
