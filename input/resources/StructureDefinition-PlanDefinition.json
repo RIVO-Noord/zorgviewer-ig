@@ -1,0 +1,32 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/PlanDefinition",
+    "language": "en",
+    "name": "PlanDefinition",
+    "title": "PlanDefinition",
+    "status": "draft",
+    "description": "The minimal PlanDefinition for the Zorgviewer to support filtering based on DataRequirements",
+    "kind": "resource",
+    "abstract": false,
+    "type": "PlanDefinition",
+    "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/PlanDefinition",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "PlanDefinition.relatedArtifact",
+                "path": "PlanDefinition.relatedArtifact",
+                "comment": "Zet hier een link naar de 'officiele' specificaties van het Behandelplan.",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "PlanDefinition.action.output",
+                "path": "PlanDefinition.action.output",
+                "comment": "Specificeer hier de zib FHIR resource en hun filters.",
+                "min": 1,
+                "mustSupport": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "resourceType": "PlanDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/PlanDefinition/BgZ2017",
+    "version": "1.0.0",
+    "name": "BgZ2017",
+    "title": "BgZ 2017",
+    "status": "draft",
+    "publisher": "RIVO-Noord",
+    "usage": "Deze PlanDefinition bevat de definitie van de BgZ 2017 voor de Zorgviewer. Dit is de basis view voor alle zorgverleners.",
+    "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "NL"
+        }]
+      }],
+    "relatedArtifact": [
+        {
+            "type": "documentation",
+            "url": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017"
+        }
+    ],
+    "action": [
+        {
+            "output": [
+                {
+                    "type": "Patient",
+                    "profile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient",
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-patient" ]
+                },
+                {
+                    "type": "Condition",
+                    "profile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition",
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-Problem" ]
+                },
+                {
+                    "type": "Observation",
+                    "profile": [ "http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse" ],
+                    "codeFilter": [
+                        {
+                            "path": "code",
+                            "valueCoding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "228366006"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]          
+        }
+    ]
+}
