@@ -83,3 +83,21 @@ E Toestemming / PatientIndex (Localisatie) (incl Adresering (FHIR endpoints))
 E Behandelplan
  - ErasmusMC heeft iets
 ------------
+
+14-feb-2023
+* zorgviewer applicatie gaat inloggen, gebruiker id wordt meegestuurd en gelogd
+    * zorgviewer client id en een "ontsluiten bronsysteem" back-end client id
+    * Er zijn 2 back-end accounts eentje in het "zorgviewer-netwerk" en een tussen "ontsluiten bronsysteem" en "bronsysteem"!
+    * 2 plaatjes maken, ook eentje met alleen OAuth+SSL+JWT enzo
+    * Bouw plaatje mist nu "Ontsluiten bronsysteem"
+* Ook uitleggen dat "Zorgviewer Host" eventuele aanpassingen isoleert van EPD mogelijkheden naar SMART-on-FHIR zoals in de Zorgviewer IG! Net zoals de "Ontsluiten bronsysteem" dat doet voor de FHIR data IF op het Bronsysteem.
+* IG
+    * auto-ig-build filmpje Josh -> @Frank https://www.youtube.com/watch?v=VVbF1O4pgQA
+    * implementatiegids.zorgviewer.nl
+    * "knopje" voor deployen versie
+    * Werk met Heleen Vreugenhil aan dummy uitleg -> neem ChatGTP voorbeeld en voeg "standaarden" toe!
+        * DataSet nu mogelijk: https://vdzel.home.xs4all.nl/zorgviewer-ig/design.html#bgzpdfa
+
+ChatGPT: "Wat is de longitudinal patient record viewer "zorgviewer" fhir implementation guide?", "The Longitudinal Patient Record Viewer "Zorgviewer" FHIR Implementation Guide is a specific implementation guide for the development of a patient record viewer that can display longitudinal patient data using the FHIR (Fast Healthcare Interoperability Resources) standard. A longitudinal display shows a patient's health history over a longer period, including diagnoses, treatments, medications, laboratory results, and other relevant information.
+
+The implementation guide provides guidelines and best practices for designing, building, and testing a patient record viewer that can display longitudinal patient data using the FHIR standard. It also includes recommendations for integration with other systems and standards for data exchange. The goal of the implementation guide is to promote interoperability and exchange of patient data between different healthcare providers and systems, thereby improving the quality of care."

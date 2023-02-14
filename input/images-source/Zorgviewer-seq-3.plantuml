@@ -13,11 +13,12 @@ participant Behandelplan
 
 activate Zorgviewer
 Zorgverlener->Zorgviewer: ..vervolg opstarten zorgviewer..
-Zorgviewer-[#red]>Zorgviewer++: verkrijgen extern-access-token middels lokaal-access-token
+Zorgviewer->Zorgviewer++: **TODO** extern-access-token middels lokaal-access-token
 deactivate Zorgviewer
 Zorgviewer->Behandelplan: Bepalen minimale dataset\n""<behandelplan-base>/PlanDefinition?name=BgZ2017""
 note right Zorgviewer
-  Eerst hard-coded "BgZ2017" behandelplan. Later obv (hoofd)diagnose(zorgpad) of rol/specialisme gebruiker.
+  Eerst hard-coded "BgZ2017" behandelplan.
+  Later obv (hoofd)diagnose(zorgpad) of rol/specialisme gebruiker.
 end note
 activate Behandelplan
 Behandelplan-->Zorgviewer: Behandelplan\n""[[StructureDefinition-PlanDefinition.html PlanDefinition]]""
@@ -28,8 +29,8 @@ Zorgviewer->Zorgviewer: formuleren gegevensverzoek(request) adhv Behandelplan Da
 
 Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/<resources bij zib>?<filter>""
 activate Bron
-Bron-[#red]>Bron++ : check extern-access-token
-deactivate Bron
+Bron->Bron++ : **TODO** check extern-access-token\njwt attributen compleet\nen ondertekening door geaccepteerde zorgaanbieder?
+destroy Bron
 Bron->Logging : log access
 Bron->Bronsysteem : gegevensverzoek (per zib) met generiek back-end account
 activate Bronsysteem
@@ -42,7 +43,8 @@ deactivate Zorgviewer
 
 Zorgviewer-[#red]>Zorgviewer: ontdubbelen en conflicten detectie
 note right of Zorgviewer
-  Zorgviewer invulling van [[https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard BgZ]] paragrafen 3.2.9.1 Ontdubbelen en 3.2.9.2 Duplicaatdetectie
+  Zorgviewer invulling van [[https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard BgZ]] 
+  paragrafen 3.2.9.1 Ontdubbelen en 3.2.9.2 Duplicaatdetectie
 end note
 Zorgviewer->Zorgviewer: toon gegevens
 Zorgviewer-->Zorgverlener
