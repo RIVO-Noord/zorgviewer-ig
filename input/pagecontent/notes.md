@@ -45,27 +45,16 @@ Per bouwblok/functie.
 * Workflow
 
 ---------
-DevOps indeling 10-feb-2023 met Geertje
+DevOps indeling
 
 !! Toevoegen meer dan 1 bron -> Bepalen zorgaanbieders / MITZ (Toestemming, Localisatie, Adressering) 
-!! Toevoegen us per sequence diagram?
+!! Eerst meerdere bronnen naast elkaar, dan pas samenvoegen,ontdubbelen,conflicten als losse US per zib
 
 E Ontsluiten bronsysteem
 - F FHIR Interface op het bronsysteem
  - US FHIR endpoint beschibaar voor Zorgviewer
  - US Identity van Zorgviewer geaccepteerd (NIET lokale gebruiker)
  - US Logging logt Zorgviewer Identity bij elke request
-- F BgZ
- - US zib Patient
-  - T bijbehorende zib FHIR profielen verder beperken (Patient, Practitioner(HA))
-  - T capabilitystatement bijwerken
-  - T client ID scope bijstellen Patient.read/Patient.search
- - US zib Probleem
-  - T FHIR profielen voor Condition, Practitioner(Artsen), Organization
-  - T capabilitystatement bijwerken
- - US zib ...
-- F PDF/a Correspondentie
- - US VIPP5 Epic: specialist, progress, and discharge letters en radiology reports (conclusies)
 
 E Opstarten Zorgviewer (https://appmarket.epic.com/Article/Index?docid=appbuilding101)
 - F ?
@@ -74,6 +63,15 @@ E Opstarten Zorgviewer (https://appmarket.epic.com/Article/Index?docid=appbuildi
  - US Logging
  - US Uitbouwen knop maken in EPD
 
+E Zorgviewer
+    1. Hello world
+    1. SMART-on-FHIR start met context
+    1. Gebruiker en Patient
+    1. zib Problemen
+    1. Meerdere bronnen naast elkaar
+    1. Conflicten en duplicaten
+    1. Uitbreiden zibs
+
 E Toestemming / PatientIndex (Localisatie) (incl Adresering (FHIR endpoints))
  - F Initiele Toestemming
   - US Vulling
@@ -81,23 +79,28 @@ E Toestemming / PatientIndex (Localisatie) (incl Adresering (FHIR endpoints))
   - US FHIR profielen obv zibs (Patient, Practitioner, Organization) + Endpoint
 
 E Behandelplan
- - ErasmusMC heeft iets
+ - ..ErasmusMC heeft iets..
 ------------
 
 14-feb-2023
 * zorgviewer applicatie gaat inloggen, gebruiker id wordt meegestuurd en gelogd
     * zorgviewer client id en een "ontsluiten bronsysteem" back-end client id
     * Er zijn 2 back-end accounts eentje in het "zorgviewer-netwerk" en een tussen "ontsluiten bronsysteem" en "bronsysteem"!
-    * 2 plaatjes maken, ook eentje met alleen OAuth+SSL+JWT enzo
+    * 2 views van sequence plaatjes maken, ook eentje met alleen OAuth+SSL+JWT enzo netwerk en een met FHIR requests
+        * Scope openid zorgt voor identity token met "preferred_user". Nu is dat AD bij UMCG, maar kan dat ook AGB-Z zijn? Gevraagd bij Sam. 14-feb-2023 https://jwt.io/
     * Bouw plaatje mist nu "Ontsluiten bronsysteem"
 * Ook uitleggen dat "Zorgviewer Host" eventuele aanpassingen isoleert van EPD mogelijkheden naar SMART-on-FHIR zoals in de Zorgviewer IG! Net zoals de "Ontsluiten bronsysteem" dat doet voor de FHIR data IF op het Bronsysteem.
+* Zorgverlener Registry -> Provider Directory?
 * IG
     * auto-ig-build filmpje Josh -> @Frank https://www.youtube.com/watch?v=VVbF1O4pgQA
     * implementatiegids.zorgviewer.nl
     * "knopje" voor deployen versie
+        * SWA CLI? Zie Lammert Team chat
     * Werk met Heleen Vreugenhil aan dummy uitleg -> neem ChatGTP voorbeeld en voeg "standaarden" toe!
         * DataSet nu mogelijk: https://vdzel.home.xs4all.nl/zorgviewer-ig/design.html#bgzpdfa
 
-ChatGPT: "Wat is de longitudinal patient record viewer "zorgviewer" fhir implementation guide?", "The Longitudinal Patient Record Viewer "Zorgviewer" FHIR Implementation Guide is a specific implementation guide for the development of a patient record viewer that can display longitudinal patient data using the FHIR (Fast Healthcare Interoperability Resources) standard. A longitudinal display shows a patient's health history over a longer period, including diagnoses, treatments, medications, laboratory results, and other relevant information.
+ChatGPT: "Wat is de longitudinal patient record viewer "zorgviewer" fhir implementatiegids?", "De Longitudinal Patient Record Viewer "Zorgviewer" FHIR-implementatiegids is een specifieke implementatiegids voor de ontwikkeling van een patiëntendossier-viewer die longitudinale patiëntgegevens kan weergeven met behulp van de FHIR (Fast Healthcare Interoperability Resources) standaard. Een longitudinale weergave toont de gezondheidsgeschiedenis van een patiënt over een langere periode, inclusief diagnoses, behandelingen, medicijnen, laboratoriumresultaten en andere relevante informatie.
+De implementatiegids biedt richtlijnen en best practices voor het ontwerpen, bouwen en testen van een patiëntendossier-viewer die longitudinale patiëntgegevens kan weergeven met behulp van de FHIR-standaard. Het omvat ook aanbevelingen voor integratie met andere systemen en normen voor gegevensuitwisseling. Het doel van de implementatiegids is om de interoperabiliteit en uitwisseling van patiëntgegevens tussen verschillende zorgverleners en zorgsystemen te bevorderen, waardoor de kwaliteit van de zorg kan worden verbeterd"
 
-The implementation guide provides guidelines and best practices for designing, building, and testing a patient record viewer that can display longitudinal patient data using the FHIR standard. It also includes recommendations for integration with other systems and standards for data exchange. The goal of the implementation guide is to promote interoperability and exchange of patient data between different healthcare providers and systems, thereby improving the quality of care."
+De Zorgviewer FHIR-implementatiegids is een specifieke implementatiegids voor de ontwikkeling van een patiëntendossier-viewer die regionaal patiëntgegevens kan weergeven met behulp van de FHIR (Fast Healthcare Interoperability Resources) standaard. Een regionale weergave toont de gezondheidsgeschiedenis van een patiënt ontsloten in de regio, inclusief diagnoses, behandelingen, medicijnen, laboratoriumresultaten en andere relevante informatie.
+De implementatiegids biedt richtlijnen voor het bouwen en testen van een patiëntendossier-viewer die regionale patiëntgegevens kan weergeven met behulp van de FHIR-standaard. Het omvat ook aanbevelingen voor integratie met andere systemen en normen voor gegevensuitwisseling. Het doel van de implementatiegids is om de interoperabiliteit en uitwisseling van patiëntgegevens tussen verschillende zorgverleners en zorgsystemen te bevorderen, waardoor de kwaliteit van de zorg kan worden verbeterd.
