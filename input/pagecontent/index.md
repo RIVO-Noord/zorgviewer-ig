@@ -40,12 +40,13 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
 | **Ontsluiting bronsysteem** | Elk informatiesysteem communiceert in een eigen taal. Dit technische bouwblok is een koppeling, die ervoor zorgt, dat alle zorginformatie uit de verschillende bronsystemen in de zorgviewer in dezelfde taal beschikbaar is. |
 | **Overname** | Is de zorginformatie -beschikbaar in de zorgviewer, afkomstig van een ander bronsysteem- voor jou als zorgverlener relevant, dan kan je deze selecteren en overnemen in het informatiesysteem van jouw zorgorganisatie. |
 | **Zorgviewer** | Alle bouwblokken samen vormen de zorgviewer. De zorgviewer combineert, ontdubbelt en filtert de informatie op basis van jouw behoefte als zorgverlener. De zorgviewer biedt zorgverleners een 360° beeld van de patiënt of cliënt. Opgebouwd uit alle beschikbare zorginformatie, waarvoor de patiënt of cliënt toestemming heeft gegeven. |
-| *Multi-inzetbaar* | *De bouwblokken zijn niet alleen bruikbaar voor de regionale zorgviewer, maar zijn ook bruikbaar en essentieel voor het delen van diagnostiek, multidisciplinair overleg, monitoring en E-health en de Persoonlijke Gezondheidsomgeving (PGO).* |
+
+**Multi-inzetbaar**: *De bouwblokken zijn niet alleen bruikbaar voor de regionale zorgviewer, maar zijn ook bruikbaar en essentieel voor het delen van diagnostiek, multidisciplinair overleg, monitoring en E-health en de Persoonlijke Gezondheidsomgeving (PGO).* |
 
 
 ### Bouwblokken samenwerking
 
-In onderstaande schema zie je de globale verdeling en interactie (nummertjes) tussen de verschillende bouwblokken.
+In onderstaande schema zie je de groepering en interacties (in globale volgorde) tussen de verschillende bouwblokken.
 
 <div>
 {% include Zorgviewer-comp-1.svg %}

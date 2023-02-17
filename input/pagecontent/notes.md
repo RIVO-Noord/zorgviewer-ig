@@ -104,3 +104,6 @@ De implementatiegids biedt richtlijnen en best practices voor het ontwerpen, bou
 
 De Zorgviewer FHIR-implementatiegids is een specifieke implementatiegids voor de ontwikkeling van een patiëntendossier-viewer die regionaal patiëntgegevens kan weergeven met behulp van de FHIR (Fast Healthcare Interoperability Resources) standaard. Een regionale weergave toont de gezondheidsgeschiedenis van een patiënt ontsloten in de regio, inclusief diagnoses, behandelingen, medicijnen, laboratoriumresultaten en andere relevante informatie.
 De implementatiegids biedt richtlijnen voor het bouwen en testen van een patiëntendossier-viewer die regionale patiëntgegevens kan weergeven met behulp van de FHIR-standaard. Het omvat ook aanbevelingen voor integratie met andere systemen en normen voor gegevensuitwisseling. Het doel van de implementatiegids is om de interoperabiliteit en uitwisseling van patiëntgegevens tussen verschillende zorgverleners en zorgsystemen te bevorderen, waardoor de kwaliteit van de zorg kan worden verbeterd.
+---------------------
+Functionaliteit "patient banner": ivm patient safety moet het altijd duidelijk zijn over welke patient gegevens zichtbaar zijn.
+Als een Zorgviewer Host niet embedded de Zorgviewer kan tonen MOET de huidige patient in het scherm staan (of in de titel balk).

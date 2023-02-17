@@ -8,7 +8,7 @@ participant "Zorgviewer Host" as Host
 participant Authenticatie
 end box
 participant Zorgviewer
-participant "Zorgverlener Registry" as ZorgverlenerRegistry
+participant "Zorgverlener Directory" as ZorgverlenerDirectory
 
 Zorgverlener->Host: start EPD
 Zorgverlener->Host: inloggen met lokale identiteit
@@ -32,8 +32,8 @@ Zorgviewer->Zorgviewer++: CHECK Autorisatie/whitelist om Zorgviewer te starten
 destroy Zorgviewer
 
 ' ZORB-AB Implementatiehandleiding 2.8 paragraaf 4.7
-Zorgviewer->ZorgverlenerRegistry: LATER: Opvragen (landelijke) gebruiker gegevens adhv external identifier\n""<zorg-ab-base>/Practitioner/?identifier=<agb-z>""\n""<zorg-ab-base>/PractitionerRole?practitioner.identifier=http://fhir.nl/fhir/NamingSystem/agb-z|<agb-z>""
-ZorgverlenerRegistry-->Zorgviewer: ""[[StructureDefinition-Practitioner.html Practitioner]]"" volledige zorgverlener gegevens
+Zorgviewer->ZorgverlenerDirectory: LATER: Opvragen (landelijke) gebruiker gegevens adhv external identifier\n""<zorg-ab-base>/Practitioner/?identifier=<agb-z>""\n""<zorg-ab-base>/PractitionerRole?practitioner.identifier=http://fhir.nl/fhir/NamingSystem/agb-z|<agb-z>""
+ZorgverlenerDirectory-->Zorgviewer: ""[[StructureDefinition-Practitioner.html Practitioner]]"" volledige zorgverlener gegevens
 note right Zorgviewer
   Inclusief specialisme, rollen e.d. zoals extern bekend met externe codering AGB/VEKTIZ
 end note

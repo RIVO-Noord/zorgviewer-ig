@@ -21,13 +21,14 @@
 ### Requirements
 
 #### Zorgviewer Host
-**Definitie**: Informatieomgeving (EPD, ECM, Portal) van de raadpleger waar de gebruiker de Zorgviewer opstart.
+**Definitie**: Informatieomgeving (EPD, ECM, Portal) van de gebruiker van waaruit de Zorgviewer opstart wordt.
 
 **Requirements**:
 1. De zorgviewer host draagt zorg voor (lokale) authenticatie van de gebruiker.
 1. De zorgviewer host voorziet in patient selectie en toets behandelrelatie.
 1. De zorgviewer host kan de zorgviewer opstarten met context (gebruiker en huidige patient).
 1. Bij de zorgviewer host kan de zorgviewer minimaal volledige (via context doorgegeven id's) patient en gebruiker gegevens opvragen
+    1. Conform [SMART-on-FHIR 1.0.0 EHR launch](http://hl7.org/fhir/smart-app-launch/1.0.0/index.html#ehr-launch-sequence)
 
 **Solutions**:
 1. Epic
@@ -37,17 +38,18 @@
 
 #### Zorgviewer
 
-**Definitie**: De Zorgviewer toont data uit de aangesloten bronsystemen, ordent deze, en biedt de raadpleger de mogelijkheid van filtering van de data op basis van het zorgpad of persoonlijke instellingen.
+**Definitie**: De Zorgviewer toont data uit de aangesloten bronsystemen, ordent deze, en biedt de gebruiker de mogelijkheid van filtering van de data op basis van het zorgpad of persoonlijke instellingen.
 
 **Requirements**:
 1. De zorgviewer bevat zelf geen patiëntgebonden data, en wijzigt geen data in de bronsystemen. 
-1. De zorgviewer integreert in de informatieomgeving van de raadpleger.
+1. De zorgviewer integreert in de informatieomgeving van de gebruiker.
+    1. Conform [SMART-on-FHIR 1.0.0 EHR launch](http://hl7.org/fhir/smart-app-launch/1.0.0/index.html#ehr-launch-sequence)
 1. Het moet mogelijk zijn om aan te geven dat het een spoedsituatie betreft. In spoedsituatie is altijd toegang toegestaan.
     1. Als er geen toegang toestemming is, dan spoedoptie "knop" weergeven.
-1. De zorgviewer attendeert de raadpleger op conflicten in het tonen van data van verschillende bronnen waar ze niet overeenkomen. 
-1. De zorgviewer attendeert de raadpleger op belangrijke lacunes in het eigen informatiesysteem: specificeren wat en welke dat zijn. Centraal vastleggen en dat alerten. 
+1. De zorgviewer attendeert de gebruiker op conflicten in het tonen van data van verschillende bronnen waar ze niet overeenkomen. 
+1. De zorgviewer attendeert de gebruiker op belangrijke lacunes in het eigen informatiesysteem: specificeren wat en welke dat zijn. Centraal vastleggen en dat alerten. 
 1. De zorgviewer biedt de mogelijkheid om informatie te tonen op basis van de plek van de patiënt in het zorgpad
-1. De zorgviewer fasciliteerd in ontdubbelen
+1. De zorgviewer fasciliteert in ontdubbelen
     1. Zie voor details paragrafen 3.2.9.1 Ontdubbelen en 3.2.9.2 Duplicaatdetectie van de [BgZ MSZ Informatistandaard](https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard)
 
 #### Toestemming
@@ -59,7 +61,7 @@
 1. INITIEEL: "plain" FHIR server met vulling volgens FHIR IF van [MITZ "Open autorisatievraag"](https://drive.google.com/file/d/1cHgsz-OORw5QMoGj5Lh_475Bu_TpDHvj/view)
 1. MITZ 
 
-#### Identiteit (virtueel bouwblok)
+#### Identiteit
 
 **Definitie**: Identiteit wordt gebruikt voor: 
 * Vastleggen van logging 
@@ -86,14 +88,20 @@
 1. COD016-VEKT (Vektis AGB-medische specialismen) OID: 2.16.840.1.113883.2.4.6.7
 1. URA OID: http://fhir.nl/fhir/NamingSystem/ura (e.g 12345678) **TODO: Hoe kom ik aan de URA nummers??**
 
-#### Zorgverlener/Zorgaanbieder Registry / Adresering
+#### Zorgverlener Directory
+
+**A.k.a.**
+1. Zorgverlener Registry/Directory
+1. Zorgaanbieder Registry/Directory
+1. Provider Directory (IHE)
+1. Adresering
 
 **Definitie**: Register met Identititeiten en attributen van zorgaanbieders en zorgverleners. Voorbeelden zijn volledige naam, maar ook technische endpoints.
 >Volledige naam: "F. Heuvel (Cardiologie (cardioloog)) in het UMCG"
 >FHIR Base voor UMCG: https://prd.epic.umcg.nl/fhir/STU3 
 
 **Kandidaat solutions:**
-1. INITIEEL: "plain" FHIR server met vulling volgens FHIR IF van ZORG-AB
+1. INITIEEL: "plain" FHIR server met vulling volgens FHIR API van ZORG-AB
 1. ~~Het [BIG-Register](https://www.bigregister.nl/zoek-zorgverlener/zoeken-eigen-systeem). Nodig voor behandelplan en weergave van de rol van de gebruiker in de zorgviewer. [Handleiding webservice BIG-register](https://www.bigregister.nl/documenten/publicaties/2017/03/03/handleiding-webservice-big-register)~~ - deze biedt geen FHIR interface, content zit ook in het ZORG-AB
 1. Het ZORG-AB is een gemeenschappelijke adresinformatie voorziening die alle dienstverleners in de zorg kunnen gebruiken om (medische) gegevens met elkaar uit te wisselen.
     1. [ZORG-AB Implementatiehandeleiding](https://www.google.com/search?q=zorg-ab+implementatiehandleiding)
@@ -101,7 +109,7 @@
 
 #### Authenticatie
 
-**Definitie**: Het bouwblok authenticatie stelt de identiteit van de raadpleger onomstotelijk vast volgens de wettelijke kaders. Is onderdeel van de Zorgviewer Host.
+**Definitie**: Het bouwblok authenticatie stelt de identiteit van de gebruiker onomstotelijk vast volgens de wettelijke kaders. Is onderdeel van de Zorgviewer Host.
 
 **Requirements**:
 1. Compliant met [SMART-on-FHIR 1.0.0](http://hl7.org/fhir/smart-app-launch/1.0.0/)
@@ -116,7 +124,14 @@
 
 #### Autorisatie
 
-**Definitie**: (NEN) Rechten die een identiteit (zorgverlener, client / patient) heeft voor toegang tot cliëntgegevens.
+**Definitie**: Rechten die een identiteit (zorgverlener, client / patient) heeft voor toegang tot cliëntgegevens (bron: NEN).
+
+<div class="new-content" markdown="1">
+Er zijn meerdere nivo's van autorisatie, namelijk:
+1. De zorgviewer moet geautoriseerd zijn om bronsysteem ontsluitingen te bevragen (technisch: welke FHIR resources in scope en clientID)
+1. De gebruiker moet geautoriseerd zijn om de zorgviewer te gebruiken
+1. De gebruiker moet geautoriseerd zijn om specifieke gegevens op te vragen adhv toestemming en rol
+</div>
 
 #### Logging
 
