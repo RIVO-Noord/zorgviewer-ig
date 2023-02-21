@@ -1,0 +1,22 @@
+@startuml 
+
+state "Concept" as concept
+state "(1) WG review" as WGreview
+state "(2) PO review" as POreview
+state "(3) Breed review" as BRreview
+
+concept : werken in master branch [[https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/ CI Build]]
+WGreview : werkgroepen IG en Bouw review [[https://vdzel.home.xs4all.nl/zorgviewer-ig/branches/ laatste tag]]
+POreview : product owner review [[https://vdzel.home.xs4all.nl/zorgviewer-ig/ release]]
+BRreview : breed review o.a. RIVO Architecten
+
+[*] --> concept : new minor\n0.m.0
+concept -> WGreview : tag release
+WGreview --> concept : [comments]\nnew revision\n0.m.r+1 
+WGreview --> POreview : [no comments]\npublish
+POreview --> concept : [comments]\nnew revision\n0.m.r+1 
+POreview --> BRreview : [no comments]
+BRreview --> concept : [comments]\nnew revision\n0.m.r+1
+BRreview --> [*] : [no comments]\nrelease\n0.m.r 
+
+@enduml
