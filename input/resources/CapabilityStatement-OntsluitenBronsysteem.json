@@ -1,101 +1,164 @@
 {
-    "resourceType": "CapabilityStatement",
-    "url": "http://hl7.nl/fhir/zorgviewer/CapabilityStatement/OntsluitenBronsysteem",
-    "name": "OntsluitenBronsysteem",
-    "title": "Ontsluiten Bronsysteem",
-    "status": "active",
-    "publisher": "RIVO-Noord",
-    "contact": [
+  "resourceType": "CapabilityStatement",
+  "url": "http://hl7.nl/fhir/zorgviewer/CapabilityStatement/OntsluitenBronsysteem",
+  "name": "OntsluitenBronsysteem",
+  "title": "Ontsluiten Bronsysteem",
+  "status": "active",
+  "publisher": "RIVO-Noord",
+  "contact": [
+    {
+      "name": "RIVO-Noord",
+      "telecom": [
         {
-            "name": "RIVO-Noord",
-            "telecom": [
+          "system": "url",
+          "value": "https://www.rivo-noord.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "This CapabilityStatement describes the minimal requirements for the Zorgviewer Ontsluiten Bronsysteem.",
+  "purpose": "This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide of the corresponding information standard should be consulted.",
+  "copyright": "CC0",
+  "kind": "requirements",
+  "fhirVersion": "3.0.2",
+  "acceptUnknown": "both",
+  "format": [
+    "xml",
+    "json"
+  ],
+  "profile": [
+    {
+      "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
+      "display": "nl-core-patient"
+    },
+    {
+      "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-organization",
+      "display": "nl-core-organization"
+    },
+    {
+      "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner",
+      "display": "nl-core-practitioner"
+    },
+    {
+      "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole",
+      "display": "nl-core-practitionerrole"
+    },
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Problem",
+      "display": "zib-Probleem"
+    }
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "security": {
+        "service": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/restful-security-service",
+                "code": "SMART-on-FHIR"
+              }
+            ],
+            "text": "OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org)"
+          }
+        ]
+      },
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Patient",
+          "profile": "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
+          "supportedProfile": [
+            "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient"
+          ],
+          "interaction": [
+            {
+              "extension": [
                 {
-                    "system": "url",
-                    "value": "https://www.rivo-noord.nl",
-                    "use": "work"
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
                 }
-            ]
-        }
-    ],
-    "description": "This CapabilityStatement describes the minimal requirements for the Zorgviewer Ontsluiten Bronsysteem.",
-    "purpose": "This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide of the corresponding information standard should be consulted.",
-    "copyright": "CC0",
-    "kind": "requirements",
-    "fhirVersion": "3.0.2",
-    "acceptUnknown": "both",
-    "format": [
-        "xml",
-        "json"
-    ],
-    "profile": [
-        {
-            "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
-            "display": "nl-core-patient"
-        }
-    ],
-    "rest": [
-        {
-            "mode": "server",
-            "security": {
-                "service": [
-                  {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/restful-security-service",
-                        "code": "SMART-on-FHIR"
-                      }
-                    ],
-                    "text": "OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org)"
-                  }
-                ]
+              ],
+              "code": "read"
             },
-            "resource": [
+            {
+              "extension": [
                 {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "SHALL"
-                        }
-                    ],
-                    "type": "Patient",
-                    "profile": "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
-                    "supportedProfile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient" ],
-                    "interaction": [
-                        {
-                            "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                  "valueCode": "SHALL"
-                                }
-                              ],
-                            "code": "read"
-                        },
-                        {
-                            "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                  "valueCode": "SHALL"
-                                }
-                              ],
-                            "code": "search-type"
-                        }
-                    ],
-                    "searchParam": [
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                              "valueCode": "SHALL"
-                            }
-                          ],
-                          "name": "identifier",
-                          "definition": "http://hl7.org/fhir/SearchParameter/Patient-identifier",
-                          "type": "token",
-                          "documentation": "The server **SHALL** support search based on BSN, system=http://fhir.nl/fhir/NamingSystem/bsn"
-                        }
-                    ]
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
                 }
-            ]
+              ],
+              "code": "search-type"
+            }
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/Patient-identifier",
+              "type": "token",
+              "documentation": "The server **SHALL** support search based on BSN, system=http://fhir.nl/fhir/NamingSystem/bsn"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Condition",
+          "profile": "http://nictiz.nl/fhir/StructureDefinition/zib-Problem",
+          "supportedProfile": [
+            "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition"
+          ],
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Condition",
+          "profile": "http://nictiz.nl/fhir/StructureDefinition/IHE.MHD.Minimal.DocumentReference",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

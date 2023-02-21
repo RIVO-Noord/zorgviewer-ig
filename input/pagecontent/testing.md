@@ -3,6 +3,7 @@
 #### Sandboxes
 
 * [Official HL7 Logica Sandbox](https://www.logicahealth.org/)
+* [SMART Launcher](https://launch.smarthealthit.org/?fhir_version=r3)
 * [Epic Hyperspace Simulator](https://appmarket.epic.com/HyperspaceSimulator)
 
 #### Test Tooling

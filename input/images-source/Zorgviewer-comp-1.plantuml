@@ -4,10 +4,10 @@ cloud "cloud" {
  [Zorgviewer]
  [Behandelplan]
  [MITZ] <<Toestemming\n& Patientindex>>
- [ZorgAB] <<Zorgverlener\nRegistry>>
+ [ZorgAB] <<Zorgverlener\nDirectory>>
 }
 
-node "Epic" {
+node "Epic huis" {
  [Hyperspace] <<Zorgviewer\nHost>>
  [Epic Auth] <<Authenticatie>>
  [IRIS] <<Bronsysteem\nontsluiting>>
@@ -17,11 +17,11 @@ node "Epic" {
  [Epic Auth]-->[Epic]
 }
 
-node "Chipsoft / Topicus" {
- [HiX / Topicus] <<Zorgviewer Host\n& Logging\n& Bronsysteem>>
+node "Chipsoft of Topicus huis" {
+ [HiX of Topicus] <<Zorgviewer Host\n& Logging\n& Bronsysteem>>
  [Zorgplatform\nAuth] <<Authenticatie>>
  [Zorgplatform] <<Bronsysteem\nontsluiting>>
- [Zorgplatform]->[HiX / Topicus]
+ [Zorgplatform]->[HiX of Topicus]
 }
 
 node "Zorgviewer Los" {
@@ -31,7 +31,7 @@ node "Zorgviewer Los" {
 }
 
 [Hyperspace]-u->[Zorgviewer] :  1. opstart(context)
-[HiX]-u->[Zorgviewer] : 1. opstart(context)
+[HiX of Topicus]-u->[Zorgviewer] : 1. opstart(context)
 [ZV Los]-u->[Zorgviewer] : 1. opstart(context)
 [Zorgviewer]-d->[Epic Auth] : 2a. wie?
 [Zorgviewer]-d->[ZV Los Auth] : 2a. wie?

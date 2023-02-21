@@ -50,16 +50,16 @@
             "mode": "server",
             "security": {
                 "service": [
-                  {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/restful-security-service",
-                        "code": "SMART-on-FHIR",
-                        "display": "SMART-on-FHIR"
-                      }
-                    ],
-                    "text": "OAuth2 using SMART-on-FHIR profile (see http://hl7.org/fhir/smart-app-launch/1.0.0/)"
-                  }
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/restful-security-service",
+                                "code": "SMART-on-FHIR",
+                                "display": "SMART-on-FHIR"
+                            }
+                        ],
+                        "text": "OAuth2 using SMART-on-FHIR profile (see http://hl7.org/fhir/smart-app-launch/1.0.0/)"
+                    }
                 ]
             },
             "resource": [
@@ -72,15 +72,17 @@
                     ],
                     "type": "Patient",
                     "profile": "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
-                    "supportedProfile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient" ],
+                    "supportedProfile": [
+                        "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient"
+                    ],
                     "interaction": [
                         {
                             "extension": [
                                 {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                  "valueCode": "SHALL"
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHALL"
                                 }
-                              ],
+                            ],
                             "code": "read"
                         }
                     ]
@@ -88,7 +90,9 @@
                 {
                     "type": "Practitioner",
                     "profile": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner",
-                    "supportedProfile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner" ],
+                    "supportedProfile": [
+                        "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner"
+                    ],
                     "interaction": [
                         {
                             "extension": [
@@ -104,7 +108,9 @@
                 {
                     "type": "PractitionerRole",
                     "profile": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole",
-                    "supportedProfile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole" ],
+                    "supportedProfile": [
+                        "http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole"
+                    ],
                     "interaction": [
                         {
                             "extension": [
@@ -118,16 +124,16 @@
                     ],
                     "searchParam": [
                         {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                              "valueCode": "SHALL"
-                            }
-                          ],
-                          "name": "practitioner",
-                          "definition": "http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner",
-                          "type": "token",
-                          "documentation": "For getting the AGB roles/specialty (urn:oid:2.16.840.1.113883.2.4.6.7) for a Practitioner, e.g. 0305 Medisch specialisten, orthopedie."
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHALL"
+                                }
+                            ],
+                            "name": "practitioner",
+                            "definition": "http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner",
+                            "type": "token",
+                            "documentation": "For getting the AGB roles/specialty (urn:oid:2.16.840.1.113883.2.4.6.7) for a Practitioner, e.g. 0305 Medisch specialisten, orthopedie."
                         }
                     ]
                 }
