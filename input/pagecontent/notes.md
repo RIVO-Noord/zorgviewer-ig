@@ -6,16 +6,6 @@
     1. Consequenties voor nu en toekomst. Identiteit nu BIG en AGB-Z maar later ook thuiszorg. Open houden. 
 1. Er zijn bouwblokken die eigenlijk Functions zijn. Overname is functionaliteit van de Zorgviewer naar de Zorgverlener Host (Eigen EPD)
 
-### Opstart sequence
-
-1. Kunnen we Practitioner(practitionernaam en AGB-Z/BIG-Nummer) meesturen (prefetchen) zoals CDS Hooks?
-1. LATER: Break-the-glass
-1. Rollen en Specialismen volgens AGB in ZIB Zorgverlener, dan hoeft de call naar Zorgverlener Registry niet.
-    * Deze zitten in PractitionerRole
-    * Practitioner in Epic heeft qualification, je kan los de PractitionerRoles opvragen, dat zijn de rollen, maar dat ondersteund Chipsoft niet zo te zien, dus we moeten dit in de "nep" ZORG-AB doen
-1. Bouwblok: welke organisaties zijn aangesloten voor Zorgviewer om te checken
-    * Trust relatie adhv PKI
-
 ### Capability Statements
 
 Per bouwblok/functie.
@@ -33,16 +23,31 @@ Per bouwblok/functie.
 
 ### Bouwblokken
 
-* Check vertrouwensmodel bouwblokken TWIIN
-* Tabel toevoegen met vergelijking bouwblokken ZV, TWIIN, BabyConnect, (er was nog zoiets ter referentie)
-* Adressering bouwblok toevoegen? is dat Zorg-AB?
-* Localisatie bouwblok toevoegen?
-* Patient Index... is dat Localicatie?
+* Checken
+    * Check vertrouwensmodel bouwblokken TWIIN
+    * Tabel toevoegen met vergelijking bouwblokken ZV, TWIIN, BabyConnect, (er was nog zoiets ter referentie)
+        * HealthRI - P2.1 en P2.2 zitten daar bij Toepassingen op data, bij ons zitten die Data geschik maken voor meervoudig gebruik, sterker nog wij streven de bron direct meervoudig geschikt te krijgen.
+* Adressering bouwblok toevoegen? is dat Zorg-AB? YES
+* Lokalisatie bouwblok toevoegen? Patient Index... is dat Lokalisatie? YES
+    * NEN normen? Lokalisatie, Identificatie en Authenticatie...
 * Logging
 * Behandelplan
-* Overname
+    * https://www.youtube.com/watch?v=DelUpoyoSxw CPG presentatie Bryn DevDays 2022-jun!
+    * Brynn CPG: "Why? Reduce the development effort required for clinical systems to support evolving standards of care."
+    * and "How: Enable precise and unambiguous shareing of clinical knowledge."
+    * Workflow
 * Terminologie
-* Workflow
+    * Nictiz NTS!
+* Zorgviewer
+    1. Kunnen we Practitioner(practitionernaam en AGB-Z/BIG-Nummer) meesturen (prefetchen) zoals CDS Hooks?
+    1. LATER: Break-the-glass; wel nodig voor Spoed
+    1. Rollen en Specialismen volgens AGB in ZIB Zorgverlener, dan hoeft de call naar Zorgverlener Registry niet.
+        * Deze zitten in PractitionerRole
+        * Practitioner in Epic heeft qualification, je kan los de PractitionerRoles opvragen, dat zijn de rollen, maar dat ondersteund Chipsoft niet zo te zien, dus we moeten dit in de "nep" ZORG-AB doen
+    1. Bouwblok: welke organisaties zijn aangesloten voor Zorgviewer om te checken
+        * Trust relatie adhv PKI
+    * Overname
+    * Functionaliteit "patient banner": ivm patient safety moet het altijd duidelijk zijn over welke patient gegevens zichtbaar zijn. Als een Zorgviewer Host niet embedded de Zorgviewer kan tonen MOET de huidige patient in het scherm staan (of in de titel balk).
 
 ---------
 DevOps indeling
@@ -90,7 +95,6 @@ E Behandelplan
         * Scope openid zorgt voor identity token met "preferred_user". Nu is dat AD bij UMCG, maar kan dat ook AGB-Z zijn? Gevraagd bij Sam. 14-feb-2023 https://jwt.io/
     * Bouw plaatje mist nu "Ontsluiten bronsysteem"
 * Ook uitleggen dat "Zorgviewer Host" eventuele aanpassingen isoleert van EPD mogelijkheden naar SMART-on-FHIR zoals in de Zorgviewer IG! Net zoals de "Ontsluiten bronsysteem" dat doet voor de FHIR data IF op het Bronsysteem.
-* Zorgverlener Registry -> Provider Directory?
 * IG
     * auto-ig-build filmpje Josh -> @Frank https://www.youtube.com/watch?v=VVbF1O4pgQA
     * implementatiegids.zorgviewer.nl
@@ -104,6 +108,3 @@ De implementatiegids biedt richtlijnen en best practices voor het ontwerpen, bou
 
 De Zorgviewer FHIR-implementatiegids is een specifieke implementatiegids voor de ontwikkeling van een patiëntendossier-viewer die regionaal patiëntgegevens kan weergeven met behulp van de FHIR (Fast Healthcare Interoperability Resources) standaard. Een regionale weergave toont de gezondheidsgeschiedenis van een patiënt ontsloten in de regio, inclusief diagnoses, behandelingen, medicijnen, laboratoriumresultaten en andere relevante informatie.
 De implementatiegids biedt richtlijnen voor het bouwen en testen van een patiëntendossier-viewer die regionale patiëntgegevens kan weergeven met behulp van de FHIR-standaard. Het omvat ook aanbevelingen voor integratie met andere systemen en normen voor gegevensuitwisseling. Het doel van de implementatiegids is om de interoperabiliteit en uitwisseling van patiëntgegevens tussen verschillende zorgverleners en zorgsystemen te bevorderen, waardoor de kwaliteit van de zorg kan worden verbeterd.
----------------------
-Functionaliteit "patient banner": ivm patient safety moet het altijd duidelijk zijn over welke patient gegevens zichtbaar zijn.
-Als een Zorgviewer Host niet embedded de Zorgviewer kan tonen MOET de huidige patient in het scherm staan (of in de titel balk).

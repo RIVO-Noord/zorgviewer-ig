@@ -1,9 +1,17 @@
 
-| versie | tag | datum | opmerking |
-| --- | --- | -- | -- |
-| 0.1.1 | CI Build | vanaf 17-feb-2023 | work in progress |
-| 0.1.0 | sprint1 | 17-feb-2023 | voorgelegd ter review aan de productowner : index page en requirements pages van [publicatie](https://vdzel.home.xs4all.nl/zorgviewer-ig/) |
-| 0.1.0 | CI Build | up to 17-feb-2023 | initieel |
+### 0.1
+
+**0.1.1-CI Build** - 17-feb-2023
+
+* work-in-progress
+
+**0.1.0-sprint1** - 17-feb-2023
+
+* Voorgelegd ter review aan de productowner : index page en requirements pages van [publicatie](https://vdzel.home.xs4all.nl/zorgviewer-ig/)
+
+**0.1.0-CI Build** - up to 17-feb-2023
+
+* initieel
 
 ### Versienummering
 

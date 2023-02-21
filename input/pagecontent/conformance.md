@@ -4,6 +4,7 @@
 1. Alle actoren in het zorgpad hebben inzage in dezelfde informatie, op basis van de gegeven toestemming van de patiënt en de behandelrelatie met die patiënt.
 1. Informatie blijft primair bij de bron en wordt zo min mogelijk gerepliceerd
     * Registratie aan de Bron - zorg voor juiste bron registratie, ontsluit wat er is
+    * <span class= "bg-success" markdown= "1">Aanpassen aan de bron, mappings in de bron en bron corrigeren als mogelijk</span>
 1. Informatie wordt benaderd vanuit het eigen informatiesysteem
 1. Informatie kan worden overgenomen in het eigen informatiesysteem wanneer daaraan behoefte is
 1. De informatie wordt gepresenteerd op basis van de specifieke informatiebehoefte, bijvoorbeeld
