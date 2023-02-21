@@ -21,7 +21,7 @@
 
 ### Requirements
 
-#### Zorgviewer Host
+#### Zorgviewer Host / Hostsysteem
 **Definitie**: Informatieomgeving (EPD, ECM, Portal) van de gebruiker van waaruit de Zorgviewer opstart wordt.
 
 **Requirements**:
@@ -52,6 +52,7 @@
 1. De zorgviewer biedt de mogelijkheid om informatie te tonen op basis van de plek van de patiënt in het zorgpad
 1. De zorgviewer fasciliteert in ontdubbelen
     1. Zie voor details paragrafen 3.2.9.1 Ontdubbelen en 3.2.9.2 Duplicaatdetectie van de [BgZ MSZ Informatistandaard](https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard)
+1. Registratie/logging van gebruikersacties (clicks). Dit ten behoeve van latere optimalisatie gebruikersinterface en trents van gebruik.
 
 #### Toestemming
 
