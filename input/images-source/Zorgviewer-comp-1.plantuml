@@ -7,7 +7,7 @@ cloud "cloud" {
  [ZorgAB] <<Zorgverlener\nRegistry>>
 }
 
-node "UMCG Epic" {
+node "Epic" {
  [Hyperspace] <<Zorgviewer\nHost>>
  [Epic Auth] <<Authenticatie>>
  [IRIS] <<Bronsysteem\nontsluiting>>
@@ -17,11 +17,11 @@ node "UMCG Epic" {
  [Epic Auth]-->[Epic]
 }
 
-node "Chipsoft ziekenhuis" {
- [HiX] <<Zorgviewer Host\n& Logging\n& Bronsysteem>>
+node "Chipsoft / Topicus" {
+ [HiX / Topicus] <<Zorgviewer Host\n& Logging\n& Bronsysteem>>
  [Zorgplatform\nAuth] <<Authenticatie>>
  [Zorgplatform] <<Bronsysteem\nontsluiting>>
- [Zorgplatform]->[HiX]
+ [Zorgplatform]->[HiX / Topicus]
 }
 
 node "Zorgviewer Los" {
