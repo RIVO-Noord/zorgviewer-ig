@@ -15,8 +15,8 @@
 1. De architectuur gaat uit van een haalbare transitie vanuit bestaande werkwijzen en technieken.
 1. De architectuur voldoet aan wet- en regelgeving en maakt compliancy op het gebied van privacy en security mogelijk.
 1. De architectuur rust op de verleende toestemming door de patiënt. De patiënt bepaalt of gegevens worden gedeeld, en heeft inzicht in wie de gegevens raadpleegt of overneemt.
-1. De architectuur is gebaseerd op standaarden en vendor-neutraal, taal en transport zijn gescheiden, zodat vendor-lock-in wordt voorkomen
-    * Standards based - nationaal, internationaal (universal)
+1. De architectuur is gebaseerd op open standaarden en vendor-neutraal, taal en transport zijn gescheiden, zodat vendor-lock-in wordt voorkomen
+    * (Open Standards based)[https://en.wikipedia.org/wiki/Open_standard] - nationaal, internationaal (universal)
     * Internet first - geen besloten netwerken, zodat network-lock-in wordt voorkomen
 
 ### Requirements
@@ -92,7 +92,7 @@
 
 #### Zorgverlener Directory
 
-**A.k.a.**
+**Ook bekend als**:
 1. Zorgverlener Registry/Directory
 1. Zorgaanbieder Registry/Directory
 1. Provider Directory (IHE)
@@ -164,18 +164,19 @@ Er zijn meerdere nivo's van autorisatie, namelijk:
 * [Epic Interconnect](https://fhir.epic.com) via Intersystems Iris Healthshare
 * [Chipsoft Zorgplatform](https://developer.zorgplatform.online) 
 * Nexus via Foundra
-* Topicus 
-* ~~XDS-NN~~ 
-* Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan aanleveren
+* Topicus
+* XDS-NN eventueel met een FHIR API
+* Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan ontsluiten
 
 #### Behandelplan
 
-**Definitie**: ...
+**Definitie**: De stappen die je als patiënt of cliënt kan doorlopen in het zorgpad. In de zorgviewer zie je een digitale weergave van het -regionaal of per specialisme overeengekomen- zorgpad. Aan de gestructureerde stappen 'hangen' informatiecomponenten (de zibs of codes) vast, waarmee de relevante gegevens hoger getoond kunnen worden.
 
 **Requirements**:
 
 **Kandidaat solutions**:
-* INITIEEL: plain FHIR server met PlanDefinitions, focus op filters
+* INITIEEL: plain FHIR server met PlanDefinitions, focus op data-requirements tbv filters 
+* (FHIR Clinical Guidelines)[https://hl7.org/fhir/uv/cpg/]
 
 ### Technische Requirements
 
