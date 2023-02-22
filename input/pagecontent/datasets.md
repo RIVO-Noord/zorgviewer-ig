@@ -50,29 +50,25 @@ De Basisgegevensset Zorg (BgZ), ook wel patient summary (PS) genoemd, behandelen
 Het TAVI zorgpad is eerst uitgeschreven door de afdelingen van de verschillende huizen en vervolgens over elkaar gelegd.  
 
 Het idee van de regionale zorgpaden is om de zorg op de juiste plek bij de juiste professional uit te voeren:
--	De diagnostiek vindt plaats in de 2e lijn;
--	De Hart Bespreking (MDO) vindt plaats in de 3e lijn voor het bepalen van het zorgplan;
--	De ingreep wordt uitgevoerd in de 3e lijn;
--	De follow-up wordt uitgevoerd in de 2e lijn.
+* De diagnostiek vindt plaats in de 2e lijn;
+* De Hart Bespreking (MDO) vindt plaats in de 3e lijn voor het bepalen van het zorgplan;
+* De ingreep wordt uitgevoerd in de 3e lijn;
+* De follow-up wordt uitgevoerd in de 2e lijn.
 
 #### Advanced Care Planning
 ACP wordt ook wel het proactieve zorgplan genoemd. Een plan waarin de wensen en behoeften van de patiënt worden beschreven. In de leidraad ACP Leidraad proactieve zorgplanning (advance care planning) - Palliaweb wordt het proces van het verkrijgen van informatie rondom ACP uitgelegd. In het ACP staan zaken rondom de wilsbekwaamheid, wettelijke vertegenwoordiging, doelen van behandeling en behandelgrenzen. Behandelgrenzen beschrijven onder andere reanimatiebeleid.
 
 Het ACP beschrijft ook meer informatie over de patiëntencontext in de Gegevensset Passende Zorg. Deze gegevensset legt de gegevensset oncologie algemeen en de mensgeboden set. De set komt ook overeen met de basisgegevensset zorg (BgZ) met een aantal aanvullingen:
--	Sociale context
-o	Gezinssamenstelling
-o	Beroep
-o	Hobbies
-o	Sociaal netwerk
-o	Onafhankelijkheid
-o	Sociale observaties
-
--	Zingeving
-
--	Communicatie
-
--	Organisatie van zorg
-o	Plaats van zorg
-o	Plaats van overlijden
-
--	Functioneel en somatisch (specifieke vragenlijsten / metingen)
+* Sociale context
+    * Gezinssamenstelling
+    * Beroep
+    * Hobbies
+    * Sociaal netwerk
+    * Onafhankelijkheid
+    * Sociale observaties
+* Zingeving
+* Communicatie
+* Organisatie van zorg
+    * Plaats van zorg
+    * Plaats van overlijden
+* Functioneel en somatisch (specifieke vragenlijsten / metingen)

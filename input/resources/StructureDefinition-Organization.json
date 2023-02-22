@@ -1,0 +1,24 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization",
+    "language": "en",
+    "name": "Organization",
+    "title": "Organization",
+    "status": "draft",
+    "description": "The minimal Organization for the Zorgviewer",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Organization",
+    "baseDefinition" : "http://fhir.nl/fhir/StructureDefinition/nl-core-organization",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Organization.identifier:AGB",
+                "path": "Organization.identifier",
+                "sliceName": "AGB",
+                "mustSupport": true
+            }
+        ]
+    }
+}

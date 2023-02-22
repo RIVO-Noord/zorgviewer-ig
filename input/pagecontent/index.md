@@ -60,6 +60,6 @@ Hierna volgt een schema met functionaliteiten per bouwblok.
 {% include Functionaliteiten.svg %}
 </div>
 
-### Leeswijzer
+### Acknowledgements
 
-TODO
+* ...
