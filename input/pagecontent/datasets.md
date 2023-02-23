@@ -26,15 +26,18 @@ Onderstaande lijst sommeert nogmaals wat de verschillende bronnen zijn van de de
     1. SMoR - VIPP 5 Module 1 - PDFA Correspondence via FHIR - Design - February 2021 revision.pdf
     1. SMoR - VIPP 5 Module 1 - BGZ on FHIR - Design - July 2020 revision.pdf
     1. Wij doen de zibs uit de BgZ (dus niet alleen laatste bloeddruk, maar alle b.v.) we doen meer dan de BgZ en minder dan de zibs.
-    1. Epic FHIR **STU3** *Provider-Facing* https://fhir.epic.com/Specifications
+    1. [Epic FHIR](https://fhir.epic.com/Specifications) **STU3** *Provider-Facing*
 1. Wat kan Chipsoft nu:
     1. [Digitale Zorg Zorgplatform](https://developer.zorgplatform.online/digital-care)
+    1. [FHIR BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
+    1. [FHIR Document API](https://developer.zorgplatform.online/digital-care/api/document)
 1. MedMij specs (basic): 
     1. [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpBGZ_2017)
     1. [BgZ 2017 FHIR](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
     1. [PDF/a](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpPDFA)
 
 ##### Voorbeeld BgZ
+
 De Basisgegevensset Zorg (BgZ), ook wel patient summary (PS) genoemd, behandelen wij als een sub-set van zibs. In de BgZ worden de BgZ-secties beperkt. Bijvoorbeeld de BgZ-sectie Uitslagen beperkt zich op klinisch chemisch lab, laatste uitslag. Dit zou betekenen dat de zorgverlener geen inzage heeft in trends (eerdere klinische chemie uitslagen) of andere typen laboratorium uitslagen. De andere laboratorium uitslagen zijn bijvoorbeeld hematologie, serologie/immunologie, virologie, toxicologie, microbiologie of moleculaire genetica (zie zib LaboratoriumUitslag - ResultaatType - ResultaatTypeCodelijst). Deze filters op de zibs beschouwen we als voorbeelden. Vanuit project zorgviewer laten wij deze filters achterwegen, zodat alle labuitslagen ingezien kunnen worden. 
 
 #### Acute Zorg - e-Spoed (#1)

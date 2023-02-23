@@ -17,6 +17,15 @@
                 "id": "Organization.identifier:AGB",
                 "path": "Organization.identifier",
                 "sliceName": "AGB",
+                "constraint": [
+                    {
+                        "key": "zv-org-1",
+                        "severity": "error",
+                        "human": "Organization AGB SHALL be present.",
+                        "expression": "(identifier.exists())",
+                        "xpath": "/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z' or /f:identifier/f:system='urn:oid:2.16.840.1.113883.2.4.6.1'"
+                    }
+                ],
                 "mustSupport": true
             }
         ]

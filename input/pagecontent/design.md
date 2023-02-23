@@ -19,7 +19,7 @@ Note: (?) Probeer definities te hergebruiken uit [IHE Actors](https://gazelle.ih
 
 #### Opstarten zorgviewer
 
-Initiatie Zorgviewer, opstarten vanuit EPD.
+Eerst opstarten Zorgviewer Host, inloggen en patient selectie en vervolgens opstarten van de Zorgviewer.
 
 **Van toepassing zijnde standaarden en documentatie**:
 * [SMART-on-FHIR 1.0.0](http://hl7.org/fhir/smart-app-launch/1.0.0/)
@@ -50,9 +50,4 @@ Bevragen bronsystemen ontvangkelijke zorgaanbieders
 <div>
 {% include Zorgviewer-seq-3.svg %}
 </div>
-
-#### Zorgviewer Host 
-
-Initiatie Zorgviewer Host, inloggen en patient selectie.
-Daarna start sequence "Opstarten".
 
