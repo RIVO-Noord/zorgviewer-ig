@@ -61,14 +61,14 @@
 
 **Kandidaat solutions**:
 1. INITIEEL: "plain" FHIR server met vulling volgens FHIR IF van [MITZ "Open autorisatievraag"](https://drive.google.com/file/d/1cHgsz-OORw5QMoGj5Lh_475Bu_TpDHvj/view)
-1. MITZ 
+1. MITZ OTV
 
 #### Identiteit
 
 **Definitie**: Identiteit wordt gebruikt voor: 
 * Vastleggen van logging 
 * Bepalen van gerechtigde dataset 
-* Basis voor authenticatie  
+* Basis voor authenticatie
 
 **Requirements**:
 1. Gebruik van reeds in organisatie in gebruik zijnde ID’s.
@@ -119,10 +119,6 @@
     1. voor Epic::Ontsluitening bronsysteem [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
 1. Lokale AD (ADFS)
 1. SAML 2.0
-1. Check MITZ *OTV 
-1. Check [TWIIN](https://www.twiin.nl/twiin-afsprakenstelsel/wat-het-twiin-afsprakenstelsel)
-    * [Twiin Afsprakenstelsel release 1.1 beta](https://public.vzvz.nl/display/TA11beta)
-    * [Open toestemmingsvraag](https://public.vzvz.nl/display/TA11beta/Mitz+Transacties) - *waar is de FHIR versie??*
 
 #### Autorisatie
 
@@ -143,9 +139,8 @@ Er zijn meerdere nivo's van autorisatie, namelijk:
 1. Bij opvragen van gegevens dient een naam/user/id mee gestuurd te worden door het aanroepende instelling zodat dit bij bron systeem kan worden gelogd. 
 1. Logging dient te gebeuren in het bronsysteem (dat is al actief) 
 1. Logging dient te gebeuren op inzage van de gegevens, maar ook op overname. Bij overname dient dus een extra logregel te worden toegevoegd 
-1. De Zorgviewer logt voor audit log naar een generieke log service.. (zie vragen) 
-1. Logging volgens NEN 7513 en ATNA  
-1. De Zorgviewer biedt zelf technische logging. 
+1. De Zorgviewer logt voor audit log naar een generieke log service. 
+1. Logging volgens NEN 7513 en IHE ATNA  
 
 #### Ontsluiting bronsysteem
 
