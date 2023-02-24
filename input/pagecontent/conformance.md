@@ -1,11 +1,11 @@
 ### Uitgangspunten
 
 1. De architectuur moet generiek zijn en voor verschillende zorgpaden en specialismen toepasbaar zijn.
-1. Alle actoren in het zorgpad hebben inzage in dezelfde informatie, op basis van de gegeven toestemming van de patiënt en de behandelrelatie met die patiënt.
+1. Alle actoren in het zorgpad hebben inzage in dezelfde informatie, op basis van de gegeven toestemming van de patiënt.
 1. Informatie blijft primair bij de bron en wordt zo min mogelijk gerepliceerd
     * Registratie aan de Bron - zorg voor juiste bron registratie, ontsluit wat er is
     * <span class= "bg-success" markdown= "1">Aanpassen aan de bron, mappings in de bron en bron corrigeren als mogelijk</span>
-1. Informatie wordt benaderd vanuit het eigen informatiesysteem
+1. Informatie wordt benaderd vanuit het eigen informatieomgeving
 1. Informatie kan worden overgenomen in het eigen informatiesysteem wanneer daaraan behoefte is
 1. De informatie wordt gepresenteerd op basis van de specifieke informatiebehoefte, bijvoorbeeld
     * Actief zorgpad
@@ -15,13 +15,17 @@
 1. De architectuur gaat uit van een haalbare transitie vanuit bestaande werkwijzen en technieken.
 1. De architectuur voldoet aan wet- en regelgeving en maakt compliancy op het gebied van privacy en security mogelijk.
 1. De architectuur rust op de verleende toestemming door de patiënt. De patiënt bepaalt of gegevens worden gedeeld, en heeft inzicht in wie de gegevens raadpleegt of overneemt.
-1. De architectuur is gebaseerd op open standaarden en vendor-neutraal, taal en transport zijn gescheiden, zodat vendor-lock-in wordt voorkomen
-    * (Open Standards based)[https://en.wikipedia.org/wiki/Open_standard] - nationaal, internationaal (universal)
-    * Internet first - geen besloten netwerken, zodat network-lock-in wordt voorkomen
+1. De architectuur is gebaseerd op [open standaarden](https://en.wikipedia.org/wiki/Open_standard)
+1. Taal en transport zijn gescheiden, zodat vendor-lock-in wordt voorkomen
+    * Internet-first transport - geen besloten netwerken
 
 ### Requirements
 
-#### Zorgviewer Host / Hostsysteem
+#### Zorgviewer Host
+
+**Ook bekend als**:
+1. Hostsysteem
+
 **Definitie**: Informatieomgeving (EPD, ECM, Portal) van de gebruiker van waaruit de Zorgviewer opstart wordt.
 
 **Requirements**:
@@ -45,14 +49,13 @@
 1. De zorgviewer bevat zelf geen patiëntgebonden data, en wijzigt geen data in de bronsystemen. 
 1. De zorgviewer integreert in de informatieomgeving van de gebruiker.
     1. Conform [SMART-on-FHIR 1.0.0 EHR launch](http://hl7.org/fhir/smart-app-launch/1.0.0/index.html#ehr-launch-sequence)
-1. Het moet mogelijk zijn om aan te geven dat het een spoedsituatie betreft. In spoedsituatie is altijd toegang toegestaan.
-    1. Als er geen toegang toestemming is, dan spoedoptie "knop" weergeven.
-1. De zorgviewer attendeert de gebruiker op conflicten in het tonen van data van verschillende bronnen waar ze niet overeenkomen. 
-1. De zorgviewer attendeert de gebruiker op belangrijke lacunes in het eigen informatiesysteem: specificeren wat en welke dat zijn. Centraal vastleggen en dat alerten. 
+1. Het moet mogelijk zijn om aan te geven dat het een spoedsituatie betreft.
+1. Conflicten, ontdubbelen en duplicaatdetectie volgens [BgZ MSZ Informatistandaard](https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard)
+    1. De zorgviewer attendeert de gebruiker op belangrijke lacunes in het eigen informatiesysteem: specificeren wat en welke dat zijn. Centraal vastleggen en dat alerten. 
+    1. De zorgviewer attendeert de gebruiker op conflicten in het tonen van data van verschillende bronnen waar ze niet overeenkomen. 
+    1. De zorgviewer fasciliteert in ontdubbelen
+1. De zorgviewer logt gebruikersacties (clicks). Dit ten behoeve van latere optimalisatie gebruikersinterface en trents van gebruik.
 1. De zorgviewer biedt de mogelijkheid om informatie te tonen op basis van de plek van de patiënt in het zorgpad
-1. De zorgviewer fasciliteert in ontdubbelen
-    1. Zie voor details paragrafen 3.2.9.1 Ontdubbelen en 3.2.9.2 Duplicaatdetectie van de [BgZ MSZ Informatistandaard](https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard)
-1. Registratie/logging van gebruikersacties (clicks). Dit ten behoeve van latere optimalisatie gebruikersinterface en trents van gebruik.
 
 #### Toestemming
 
@@ -152,15 +155,14 @@ Er zijn meerdere nivo's van autorisatie, namelijk:
 [Zibs 2017 FHIR Profiles](https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/) en [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017) obv [HL7 FHIR STU3](http://hl7.org/fhir/STU3/) 
 1. Individuele ZIBS moeten kunnen worden aangeleverd 
 1. Vraag richting bronsysteem op basis van BSN, URA en Zorgverlener gegevens moet mee voor autorisatie en logging.
-1. Het moet mogelijk zijn om de door het Identiteit bouwblok gedefinieerde identities te accepteren naast de bronsysteem eigen identities. 
-1. Bron systeem checkt ook bij Mitz of iets mag nadat hij call heeft gehad van de zorgviewer.
+1. Alleen identiteiten zoals gedefinieerd door het Identiteit bouwblok mogen geaccepteerd worden.
 
 **Kandidaat solutions**:
 * [Epic Interconnect](https://fhir.epic.com) via Intersystems Iris Healthshare
 * [Chipsoft Zorgplatform](https://developer.zorgplatform.online) 
 * Nexus via Foundra
 * Topicus
-* XDS-NN eventueel met een FHIR API
+* XDS-NN met een FHIR API volgens de IG (e.g. Documenten)
 * Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan ontsluiten
 
 #### Behandelplan
@@ -171,7 +173,7 @@ Er zijn meerdere nivo's van autorisatie, namelijk:
 
 **Kandidaat solutions**:
 * INITIEEL: plain FHIR server met PlanDefinitions, focus op data-requirements tbv filters 
-* (FHIR Clinical Guidelines)[https://hl7.org/fhir/uv/cpg/]
+* [FHIR Clinical Guidelines](https://hl7.org/fhir/uv/cpg/)
 
 ### Technische Requirements
 
