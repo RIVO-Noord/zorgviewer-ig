@@ -141,7 +141,7 @@ Er zijn meerdere nivo's van autorisatie, namelijk:
 **Requirements**:
 1. Bij opvragen van gegevens dient een naam/user/id mee gestuurd te worden door het aanroepende instelling zodat dit bij bron systeem kan worden gelogd. 
 1. Logging dient te gebeuren in het bronsysteem (dat is al actief) 
-1. Logging dient te gebeuren op inzage van de gegevens, maar ook op overname. Bij overname dient dus een extra logregel te worden toegevoegd 
+1. Logging dient te gebeuren op inzage van de gegevens 
 1. De Zorgviewer logt voor audit log naar een generieke log service. 
 1. Logging volgens NEN 7513 en IHE ATNA  
 
