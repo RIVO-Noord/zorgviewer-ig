@@ -5,14 +5,14 @@
 1. Informatie blijft primair bij de bron en wordt zo min mogelijk gerepliceerd
     * Registratie aan de Bron - zorg voor juiste bron registratie, ontsluit wat er is
     * <span class= "bg-success" markdown= "1">Aanpassen aan de bron, mappings in de bron en bron corrigeren als mogelijk</span>
-1. Informatie wordt benaderd vanuit het eigen informatieomgeving
-1. Informatie kan worden overgenomen in het eigen informatiesysteem wanneer daaraan behoefte is
-1. De informatie wordt gepresenteerd op basis van de specifieke informatiebehoefte, bijvoorbeeld
-    * Actief zorgpad
-    * Alle zorgepisodes van de afgelopen 2 jaar
-    * Alle benodigde informatie voor een gedefinieerd specifiek zorgpad
-    * Alle labuitslagen van de afgelopen 4 maanden
-1. De architectuur gaat uit van een haalbare transitie vanuit bestaande werkwijzen en technieken.
+1. De Zorgviewer wordt opgestart vanuit de eigen informatieomgeving
+1. Informatie kan worden overgenomen in het eigen informatiesysteem wanneer daaraan behoefte is *TOEKOMST*
+1. De informatie wordt gefilterd op basis van de specifieke informatiebehoefte, bijvoorbeeld:
+    * actief zorgpad
+    * alle zorgepisodes van de afgelopen 2 jaar
+    * alle benodigde informatie voor een gedefinieerd specifiek zorgpad
+    * alle labuitslagen van de afgelopen 4 maanden
+1. De architectuur gaat uit van een haalbare eerste versie vanuit bestaande werkwijzen en technische mogelijkheden.
 1. De architectuur voldoet aan wet- en regelgeving en maakt compliancy op het gebied van privacy en security mogelijk.
 1. De architectuur rust op de verleende toestemming door de patiënt. De patiënt bepaalt of gegevens worden gedeeld, en heeft inzicht in wie de gegevens raadpleegt of overneemt.
 1. De architectuur is gebaseerd op [open standaarden](https://en.wikipedia.org/wiki/Open_standard)
@@ -23,23 +23,28 @@
 
 #### Zorgviewer Host
 
-**Ook bekend als**:
+**Synoniemen**:
 1. Hostsysteem
+1. Informatieomgeving
 
-**Definitie**: Informatieomgeving (EPD, ECM, Portal) van de gebruiker van waaruit de Zorgviewer opstart wordt.
+**Definitie**: Informatieomgeving (EPD, ECD, Portal) van de gebruiker van waaruit de Zorgviewer opstart wordt.
 
 **Requirements**:
 1. De zorgviewer host draagt zorg voor (lokale) authenticatie van de gebruiker.
 1. De zorgviewer host voorziet in patient selectie en toets behandelrelatie.
-1. De zorgviewer host kan de zorgviewer opstarten met context (gebruiker en huidige patient).
-1. Bij de zorgviewer host kan de zorgviewer minimaal volledige (via context doorgegeven id's) patient en gebruiker gegevens opvragen
-    1. Conform [SMART-on-FHIR 1.0.0 EHR launch](http://hl7.org/fhir/smart-app-launch/1.0.0/index.html#ehr-launch-sequence)
+1. De zorgviewer host kan de zorgviewer opstarten met context (huidige gebruiker en patient).
+1. De zorgviewer host ondersteund patient context wissels.
+1. De zorgviewer host ondersteund gebruiker context wissels.
+1. De zorgviewer host biedt mogelijkeid aan de zorgviewer om volledige huidige gebruiker en patient gegevens op te vragen.
+
+**Keuze**:
+1. Conform [SMART-on-FHIR 1.0.0 EHR launch](http://hl7.org/fhir/smart-app-launch/1.0.0/index.html#ehr-launch-sequence)
 
 **Solutions**:
 1. Epic
 1. Chipsoft
 1. Topicus
-1. Zorgviewer Launcher - Los voor gebruikers zonder EPD/ECM
+1. Zorgviewer Launcher - Los voor gebruikers zonder EPD/ECD
 
 #### Zorgviewer
 
@@ -48,23 +53,25 @@
 **Requirements**:
 1. De zorgviewer bevat zelf geen patiëntgebonden data, en wijzigt geen data in de bronsystemen. 
 1. De zorgviewer integreert in de informatieomgeving van de gebruiker.
-    1. Conform [SMART-on-FHIR 1.0.0 EHR launch](http://hl7.org/fhir/smart-app-launch/1.0.0/index.html#ehr-launch-sequence)
+    1. **Keuze**: Conform [SMART-on-FHIR 1.0.0 EHR launch](http://hl7.org/fhir/smart-app-launch/1.0.0/index.html#ehr-launch-sequence)
 1. Het moet mogelijk zijn om aan te geven dat het een spoedsituatie betreft.
 1. Conflicten, ontdubbelen en duplicaatdetectie volgens [BgZ MSZ Informatistandaard](https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard)
     1. De zorgviewer attendeert de gebruiker op belangrijke lacunes in het eigen informatiesysteem: specificeren wat en welke dat zijn. Centraal vastleggen en dat alerten. 
     1. De zorgviewer attendeert de gebruiker op conflicten in het tonen van data van verschillende bronnen waar ze niet overeenkomen. 
-    1. De zorgviewer fasciliteert in ontdubbelen
-1. De zorgviewer logt gebruikersacties (clicks). Dit ten behoeve van latere optimalisatie gebruikersinterface en trents van gebruik.
-1. De zorgviewer biedt de mogelijkheid om informatie te tonen op basis van de plek van de patiënt in het zorgpad
+    1. De zorgviewer faciliteert in ontdubbelen
+1. De zorgviewer logt gebruikersacties (clicks). Dit ten behoeve van optimalisatie gebruikersinterface en trends van gebruik.
+1. De zorgviewer biedt de mogelijkheid om informatie te tonen op basis van de plek van de patiënt in het zorgpad.
+1. De zorgviewer biedt de mogelijkheid om persoonlijke filters toe te passen.
 
 #### Toestemming
 
-**Definitie**: AVG: de expliciete specifieke, vrij gegeven toestemming tot het beschikbaar stellen van zorginformatie door de patiënt
+**Definitie**: De expliciete specifieke, vrijgegeven toestemming tot het beschikbaar stellen van zorginformatie door de patiënt (bron: AVG)
 {% include img.html img="mitz-toestemming.png" caption="Figure 2: uit MITZ Toestemming Documentatie" %}
 
 **Kandidaat solutions**:
-1. INITIEEL: "plain" FHIR server met vulling volgens FHIR IF van [MITZ "Open autorisatievraag"](https://drive.google.com/file/d/1cHgsz-OORw5QMoGj5Lh_475Bu_TpDHvj/view)
-1. MITZ OTV
+1. MITZ OTV *TOEKOMST*
+1. *INITIEEL*: Regionale service
+    1. Invulling: FHIR server met vulling volgens FHIR API van [MITZ "Open autorisatievraag"](https://drive.google.com/file/d/1cHgsz-OORw5QMoGj5Lh_475Bu_TpDHvj/view)
 
 #### Identiteit
 
@@ -74,58 +81,48 @@
 * Basis voor authenticatie
 
 **Requirements**:
-1. Gebruik van reeds in organisatie in gebruik zijnde ID’s.
-1. ID Zorgaanbieder = URA - Een URA-code is een uniek nummer dat een zorgaanbieder heeft voor elektronische communicatie van zorgdata. URA is een afkorting van UZI Registratie Abonneenummer. UZI staat voor Unieke Zorgaanbieder Identificatienummer.
-    1. UMCG : via managingOrganization bij Patient/Practitioner
-    1. Martini : 
-    1. ...
-1. ID Zorgverlener = Lokale identiteit user
-    1. UMCG -> Epic user = AD user + AGB-Z
-    1. Chipsoft -> AGZ-Z
-    1. Topicus
-    1. Losse Zorgviewer Launcher -> BIG-Nummer
-1. Lokale identitie MOET AGB-Z of BIG-Nummer als attribuut hebben, zodat we via de Zorgverlener Registry de specialismen en rollen kunnen opvragen
+1. Gebruik van reeds in organisatie in gebruik zijnde ID’s gekoppeld aan een extern erkende identiteit, zoals AGB of BIG voor zorgveleners en zorgaanbieders.
+    1. Lokale identitie MOET AGB-Z of BIG-Nummer als attribuut hebben, zodat we via de Zorgverlener Directory de specialismen en rollen kunnen opvragen
 1. Vektis AGB-medische specialismen
-
-**Details**:
-1. AGB-Z URI: http://fhir.nl/fhir/NamingSystem/agb-z
-1. BIG-Nummer URI: http://fhir.nl/fhir/NamingSystem/big - niet in Epic en in Chipsoft, wel voor fysiotherapeuten en verloskundigen
-1. COD016-VEKT (Vektis AGB-medische specialismen) OID: 2.16.840.1.113883.2.4.6.7
-1. URA OID: http://fhir.nl/fhir/NamingSystem/ura (e.g 12345678) **TODO: Hoe kom ik aan de URA nummers??**
 
 #### Zorgverlener Directory
 
-**Ook bekend als**:
-1. Zorgverlener Registry/Directory
-1. Zorgaanbieder Registry/Directory
+**Synoniemem**:
+1. Zorgverlener Registry
+1. Zorgaanbieder Registry of Directory
 1. Provider Directory (IHE)
-1. Adresering
+1. Adressering
+1. White pages
 
-**Definitie**: Register met Identititeiten en attributen van zorgaanbieders en zorgverleners. Voorbeelden zijn volledige naam, maar ook technische endpoints.
+**Definitie**: Register met Identiteiten en attributen van zorgaanbieders en zorgverleners. Voorbeelden zijn volledige naam, maar ook technische endpoints.
 >Volledige naam: "F. Heuvel (Cardiologie (cardioloog)) in het UMCG"
 >FHIR Base voor UMCG: https://prd.epic.umcg.nl/fhir/STU3 
 
 **Kandidaat solutions:**
-1. INITIEEL: "plain" FHIR server met vulling volgens FHIR API van ZORG-AB
-1. ~~Het [BIG-Register](https://www.bigregister.nl/zoek-zorgverlener/zoeken-eigen-systeem). Nodig voor behandelplan en weergave van de rol van de gebruiker in de zorgviewer. [Handleiding webservice BIG-register](https://www.bigregister.nl/documenten/publicaties/2017/03/03/handleiding-webservice-big-register)~~ - deze biedt geen FHIR interface, content zit ook in het ZORG-AB
-1. Het ZORG-AB is een gemeenschappelijke adresinformatie voorziening die alle dienstverleners in de zorg kunnen gebruiken om (medische) gegevens met elkaar uit te wisselen.
+1. *TOEKOMST* Het ZORG-AB is een gemeenschappelijke adresinformatie voorziening die alle dienstverleners in de zorg kunnen gebruiken om (medische) gegevens met elkaar uit te wisselen.
     1. [ZORG-AB Implementatiehandeleiding](https://www.google.com/search?q=zorg-ab+implementatiehandleiding)
     1. FHIR Interface definitie ZORG-AB: [Simplifier Project](https://simplifier.net/ZORG-AB)
+1. *INITIEEL*: Regionale service
+    1. Invulling: FHIR server met vulling volgens FHIR API van ZORG-AB
+1. *ONDERZOCHT*: Het [BIG-Register](https://www.bigregister.nl/zoek-zorgverlener/zoeken-eigen-systeem) - [Handleiding webservice BIG-register](https://www.bigregister.nl/documenten/publicaties/2017/03/03/handleiding-webservice-big-register) - deze biedt geen FHIR interface, bovendien zit de content ook in het ZORG-AB.
 
 #### Authenticatie
 
 **Definitie**: Het bouwblok authenticatie stelt de identiteit van de gebruiker onomstotelijk vast volgens de wettelijke kaders. Is onderdeel van de Zorgviewer Host.
 
 **Requirements**:
+1. ..
+
+**Keuze**:
 1. Compliant met [SMART-on-FHIR 1.0.0](http://hl7.org/fhir/smart-app-launch/1.0.0/)
-    1. voor Epic::Zorgviewer [Epic OAuth2](https://appmarket.epic.com/Article/Index?docid=oauth2)
-    1. voor Epic::Ontsluitening bronsysteem [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
-1. Lokale AD (ADFS)
-1. SAML 2.0
+
+**Invulling Epic**:
+1. Zorgviewer [Epic OAuth2](https://appmarket.epic.com/Article/Index?docid=oauth2)
+1. Ontsluiting bronsysteem [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
 
 #### Autorisatie
 
-**Definitie**: Rechten die een identiteit (zorgverlener, client / patient) heeft voor toegang tot cliëntgegevens (bron: NEN).
+**Definitie**: Rechten die een identiteit (zorgverlener, client / patient) heeft voor toegang tot cliëntgegevens (bron: NEN 7510).
 
 <div class="new-content" markdown="1">
 Er zijn meerdere nivo's van autorisatie, namelijk:
@@ -139,10 +136,10 @@ Er zijn meerdere nivo's van autorisatie, namelijk:
 **Definitie**: Stelselmatige geautomatiseerde registratie van gegevens rond de toegang tot het patiëntdossier, die controle van de rechtmatigheid ervan mogelijk maakt (NEN 7513).
 
 **Requirements**:
-1. Bij opvragen van gegevens dient een naam/user/id mee gestuurd te worden door het aanroepende instelling zodat dit bij bron systeem kan worden gelogd. 
-1. Logging dient te gebeuren in het bronsysteem (dat is al actief) 
-1. Logging dient te gebeuren op inzage van de gegevens 
-1. De Zorgviewer logt voor audit log naar een generieke log service. 
+1. Bij opvragen van gegevens dient een gebruikersnaam en extern id mee gestuurd te worden door de aanroepende instelling zodat dit bij het bronsysteem kan worden gelogd.
+1. Logging dient te gebeuren in het bronsysteem.
+1. Logging dient te gebeuren op inzage van de gegevens. 
+1. De Zorgviewer logt voor audit log naar een regionale log service. 
 1. Logging volgens NEN 7513 en IHE ATNA  
 
 #### Ontsluiting bronsysteem
@@ -150,26 +147,30 @@ Er zijn meerdere nivo's van autorisatie, namelijk:
 **Definitie**: Het bouwblok ‘Ontsluiting bronsystemen’ draagt zorg voor het aanleveren van de informatie uit de bronsystemen in een formaat dat door de zorgviewer kan worden verwerkt (Zibs/FHIR).
 
 **Requirements**:
-1. Ontsluit minimaal de volgende gegevens in MVP2: de 28 BGZ-Zibs + de correspondentie (radiologie brieven, specialisten brieven, notities, ontslag brief) en N.B. dan alleen waar in de bron workflow voor is.
+1. Ontsluit minimaal de volgende gegevens: 
+    1. de 28 BGZ-Zibs
+    1. de correspondentie (radiologie brieven, specialisten brieven, notities, ontslag brief)
+    * N.B. de zibs kunnen heel veel gegevens ondersteunen, maar als er geen schermen voor zijn om de gegevens in te voeren of geen workflow is waar die schermen zichtbaar worden, zullen die gegevens nooit beschikbaar zijn.
 1. Zorginformatiebouwstenen conform NICTIZ [publicatie 2017](https://zibs.nl/wiki/ZIB_Publicatie_2017(NL)), de 28 BGZ-Zibs,
 [Zibs 2017 FHIR Profiles](https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/) en [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017) obv [HL7 FHIR STU3](http://hl7.org/fhir/STU3/) 
 1. Individuele ZIBS moeten kunnen worden aangeleverd 
-1. Vraag richting bronsysteem op basis van BSN, URA en Zorgverlener gegevens moet mee voor autorisatie en logging.
 1. Alleen identiteiten zoals gedefinieerd door het Identiteit bouwblok mogen geaccepteerd worden.
+1. *TOEKOMST* Bronsysteem ZOU MOETEN checken bij Mitz
 
 **Kandidaat solutions**:
 * [Epic Interconnect](https://fhir.epic.com) via Intersystems Iris Healthshare
 * [Chipsoft Zorgplatform](https://developer.zorgplatform.online) 
-* Nexus via Foundra
 * Topicus
 * XDS-NN met een FHIR API volgens de IG (e.g. Documenten)
 * Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan ontsluiten
+* Nexus via Founda
 
 #### Behandelplan
 
 **Definitie**: De stappen die je als patiënt of cliënt kan doorlopen in het zorgpad. In de zorgviewer zie je een digitale weergave van het -regionaal of per specialisme overeengekomen- zorgpad. Aan de gestructureerde stappen 'hangen' informatiecomponenten (de zibs of codes) vast, waarmee de relevante gegevens hoger getoond kunnen worden.
 
 **Requirements**:
+1. ..
 
 **Kandidaat solutions**:
 * INITIEEL: plain FHIR server met PlanDefinitions, focus op data-requirements tbv filters 
