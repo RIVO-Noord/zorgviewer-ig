@@ -1,7 +1,7 @@
 
 # Zorgviewer-IG
 
-* [Snapshot laatste release](https://vdzel.home.xs4all.nl/zorgviewer-ig/)
+* [Snapshot laatste release](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/snapshot/)
 * [CI Build](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/)
 * [Releases](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/)
 * [Web-based editor](https://github.dev/RIVO-Noord/zorgviewer-ig/)
