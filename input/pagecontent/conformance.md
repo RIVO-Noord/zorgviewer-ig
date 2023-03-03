@@ -6,7 +6,7 @@
     * Registratie aan de Bron - zorg voor juiste bron registratie, ontsluit wat er is
     * <span class= "bg-success" markdown= "1">Aanpassen aan de bron, mappings in de bron en bron corrigeren als mogelijk</span>
 1. De Zorgviewer wordt opgestart vanuit de eigen informatieomgeving
-1. Informatie kan worden overgenomen in het eigen informatiesysteem wanneer daaraan behoefte is *TOEKOMST*
+1. *TOEKOMST* Informatie kan worden overgenomen in het eigen informatiesysteem wanneer daaraan behoefte is
 1. De informatie wordt gefilterd op basis van de specifieke informatiebehoefte, bijvoorbeeld:
     * actief zorgpad
     * alle zorgepisodes van de afgelopen 2 jaar
@@ -44,7 +44,7 @@
 1. Epic
 1. Chipsoft
 1. Topicus
-1. Zorgviewer Launcher - Los voor gebruikers zonder EPD/ECD
+1. *TOEKOMST* Zorgviewer Launcher - Los voor gebruikers zonder EPD/ECD
 
 #### Zorgviewer
 
