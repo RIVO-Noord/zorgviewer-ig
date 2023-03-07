@@ -42,16 +42,23 @@ Bepalen zorgaanbieders waarvoor toestemming is gegeven mogelijk nog extra stap o
 
 Bevragen bronsystemen ontvangkelijke zorgaanbieders
 
-**Van toepassing zijnde standaarden**:
+**Van toepassing zijnde standaarden en documentatie**:
+* [MedMij BgZ 2017 FHIR](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
 * [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
 * [Epic Galaxy: Backend System Integrations](https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&PrefDocID=97042)
+* [Epic FHIR](https://appmarket.epic.com/Sandbox/)
 * [Chipsoft BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
+* [Chipsoft Service Authenticatie](https://developer.zorgplatform.online/digital-care/authenticatie)
 
 <div>
 {% include Zorgviewer-seq-3.svg %}
 </div>
 
-#### Bevragen bronsysteem documenten
+#### Bevragen bronsystemen zorgaanbieders / documenten
+
+**Van toepassing zijnde standaarden en documentatie**:
+* [MedMij PDF/a](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpPDFA)
+* [Chipsoft Documenten API](https://developer.zorgplatform.online/digital-care/api/document)
 
 1. DocumentReference
     1. request: DocumentReference?subject=<fhir_patient_id>
