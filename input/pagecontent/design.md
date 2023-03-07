@@ -56,7 +56,7 @@ Bevragen bronsystemen ontvangkelijke zorgaanbieders
 1. DocumentReference
     1. request: DocumentReference?subject=<fhir_patient_id>
     1. response:
-        1. author -> Practitioner
+        1. author reference naar Practitioner
         1. class = Correspondence
         1. type = Patientbrief = Epic eigen ~ description
         1. created

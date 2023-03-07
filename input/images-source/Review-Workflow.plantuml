@@ -4,23 +4,19 @@ state "Concept" as concept
 state "(1) WG review" as WGreview
 state "(2) PO review" as POreview
 
-concept : werken in master branch [[https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/ CI Build]]
-WGreview : werkgroepen IG en Bouw review [[https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/ laatste tag]]
-POreview : product owner review [[https://vdzel.home.xs4all.nl/zorgviewer-ig/ release]]
+concept : werken in master branch\n[[https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/ CI Build]]
+WGreview : werkgroepen IG en Bouw review\n[[https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/ laatste tag]]
+POreview : product owner review\n[[https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/ laatste tag]]
 
 [*] --> concept : new minor\n0.m.0
 concept -[bold]-> WGreview : tag release
 WGreview -[dashed]-> concept : [comments]\nnew revision\n0.m.r+1 
-WGreview -[bold]-> POreview : [no comments]\npublish
+WGreview -[bold]-> POreview : [no comments]
 POreview -[dashed]-> concept : [comments]\nnew revision\n0.m.r+1 
-POreview -[bold]-> publicatie : [no comments]\nrelease\n0.m.r
+POreview -[bold]-> publicatie : [no comments]\nsnapshot release\n0.m.r
+state "(3) Publicatie" as publicatie
 publicatie --> [*] : volgende iteratie\n0.m+1.0
 publicatie -[dotted]-> concept : [comments]\nop laatste revision
-
-state publicatie {
-   state "(3) Breed review" as BRreview
-   BRreview : breed review o.a. RIVO Architecten
-   state release
-  }
+publicatie : breed review o.a. RIVO Architecten\n[[https://implementatiegids.zorgviewer.nl snapshot release]]
 
 @enduml
