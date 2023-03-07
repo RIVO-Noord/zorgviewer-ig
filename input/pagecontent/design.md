@@ -51,3 +51,15 @@ Bevragen bronsystemen ontvangkelijke zorgaanbieders
 {% include Zorgviewer-seq-3.svg %}
 </div>
 
+#### Bevragen bronsysteem documenten
+
+1. DocumentReference
+    1. request: DocumentReference?subject=<fhir_patient_id>
+    1. response:
+        1. author -> Practitioner
+        1. class = Correspondence
+        1. type = Patientbrief = Epic eigen ~ description
+        1. created
+        1. content/attachement/url (contentType = in principe application/pdf. Verwacht ook in Epic text/html)
+1. Presenteren/ordenen lijst
+1. Binary per document -> pdf (of html) uit de Binary.content BASE64
