@@ -14,16 +14,15 @@ Zorgverlener->Host: start EPD
 Zorgverlener->Host: inloggen met lokale identiteit
 Zorgverlener->Host: selecteer patient
 Zorgverlener->Host: start Zorgviewer
-Host->Zorgviewer: start met context\n""https://zorgviewer.nl""
+Host->Host: Configureer opstart parameters als context (patientid, practisionerid) (Epic FDI)
+Host->Zorgviewer: start met context dmv smart-on-fhir \n""https://tst.zorgviewer.nl/application/launch""
 note left Zorgviewer
- Context is iig zorgviewer-host-base, access token, gebruiker_fhir_id, patient_fhir_id
+ Oud Context is iig zorgviewer-host-base, access token, gebruiker_fhir_id, patient_fhir_id \n
+ Context is gebruiker_fhir_id (id_token) en patient_fhir_id (patient)
 end note
-Zorgviewer->Host: //SMART-on-FHIR handshake//
 
 activate Zorgviewer
-Zorgviewer->Authenticatie: check Identity //OAuth2//
-Authenticatie-->Zorgviewer: gebruiker identity external identifier verkrijgen (e.g. AGB-Z of BIG-Nummer)
-Zorgviewer->Host: Opvragen (lokale) gebruiker gegevens adhv gebruikerid\n""<zorgviewer-host-base>/Practitioner/<gebruiker_fhir_id>""\n""<zorg-ab-base>/PractitionerRole?practitioner=<gebruiker_fhir_id>""
+Zorgviewer->Host: Opvragen (lokale) gebruiker gegevens adhv gebruikerid\n""<zorgviewer-host-base>/Practitioner/<gebruiker_fhir_id>""\n""<zorgviewer-host-base>/PractitionerRole?practitioner=<gebruiker_fhir_id>""
 Host-->Zorgviewer: ""[[StructureDefinition-Practitioner.html Practitioner]]""\n""[[StructureDefinition-PractitionerRole.html PractitionerRole]]""
 note right Zorgviewer
     obv AGB-Z of ziekenhuis van de gebruiker via signing van token
