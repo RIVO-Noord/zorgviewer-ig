@@ -99,11 +99,9 @@
 >FHIR Base voor UMCG: https://prd.epic.umcg.nl/fhir/STU3 
 
 **Kandidaat solutions:**
-1. *TOEKOMST* Het ZORG-AB is een gemeenschappelijke adresinformatie voorziening die alle dienstverleners in de zorg kunnen gebruiken om (medische) gegevens met elkaar uit te wisselen.
+1. Regionale FHIR server met vulling volgens FHIR API van ZORG-AB
     1. [ZORG-AB Implementatiehandeleiding](https://www.google.com/search?q=zorg-ab+implementatiehandleiding)
     1. FHIR Interface definitie ZORG-AB: [Simplifier Project](https://simplifier.net/ZORG-AB)
-1. *INITIEEL*: Regionale service
-    1. Invulling: FHIR server met vulling volgens FHIR API van ZORG-AB
 1. *ONDERZOCHT*: Het [BIG-Register](https://www.bigregister.nl/zoek-zorgverlener/zoeken-eigen-systeem) - [Handleiding webservice BIG-register](https://www.bigregister.nl/documenten/publicaties/2017/03/03/handleiding-webservice-big-register) - deze biedt geen FHIR interface, bovendien zit de content ook in het ZORG-AB.
 
 #### Authenticatie
@@ -142,6 +140,9 @@ Er zijn meerdere nivo's van autorisatie, namelijk:
 1. De Zorgviewer logt voor audit log naar een regionale log service. 
 1. Logging volgens NEN 7513 en IHE ATNA  
 
+**Solutions**:
+1. Regionale FHIR Server met AuditEvents conform NEN 7513 gevuld.
+
 #### Ontsluiting bronsysteem
 
 **Definitie**: Het bouwblok ‘Ontsluiting bronsystemen’ draagt zorg voor het aanleveren van de informatie uit de bronsystemen in een formaat dat door de zorgviewer kan worden verwerkt (Zibs/FHIR).
@@ -172,13 +173,15 @@ Er zijn meerdere nivo's van autorisatie, namelijk:
 **Requirements**:
 1. ..
 
-**Kandidaat solutions**:
-* INITIEEL: plain FHIR server met PlanDefinitions, focus op data-requirements tbv filters 
-* [FHIR Clinical Guidelines](https://hl7.org/fhir/uv/cpg/)
+**Solutions**:
+* FHIR server met PlanDefinitions, focus op data-requirements tbv queries en filters 
+    * in lijn met [FHIR Clinical Guidelines](https://hl7.org/fhir/uv/cpg/)
+    * in lijn met [Problem List Maps](https://problemlist.org/)
 
 ### Technische Requirements
 
 1. Alle implementaties dienen zich te houden aan [Postel's law, Robustness principle](http://www.healthintersections.com.au/?p=2403)
+1. Niet valideren tegen de profiles at-runtime, alleen bij aansluit (zelf) certificeren aan de hand van de [CapabilityStatements](artifacts.html#1) in deze IG.
 
 #### Dependencies
 

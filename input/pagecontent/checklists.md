@@ -20,8 +20,11 @@ Op deze pagina volgen de checklists die als handvat kunnen worden gebruikt als j
         1. Meld deze Zorgviewer aan bij RIVO-Noord(?) whitelist
         1. ...
 1. Chipsoft huizen
-    1. Regel Zorgplatform contract, specifiek voor [Digital-Care API](https://developer.zorgplatform.online/digital-care)
-    1. Placeholder: OID (Test, Acc en Prod). aanvraag via [HL7 Nederland](https://www.hl7.nl/oid-formulier.html)
+    1. Regel Zorgplatform contract, specifiek voor de BgZ en Documenten Services van de [Digital-Care API](https://developer.zorgplatform.online/digital-care)
+    1. OID's voor Zorgplatform ontsluiting en HiX Webintegratie activiteitendefinities
+        * 2.16.840.1.113883.2.4.3.213.1.3 = Test Zorgviewer
+        * 2.16.840.1.113883.2.4.3.213.1.2 = Acceptatie Zorgviewer
+        * 2.16.840.1.113883.2.4.3.213.1.1 = Productie Zorgviewer
     1. Webintegratie configureren in HiX
 1. Behandelplan / zorgpad / zorgproces
     1. Maak uitwerking volgend RadB analysesheet / ZiRA...
