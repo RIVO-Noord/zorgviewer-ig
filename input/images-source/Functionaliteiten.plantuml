@@ -8,29 +8,27 @@ package "Zorgviewer" {
  (Sorteren)
  (Conflicten attenderen)
  (Ontdubbelen gegevens)
- (Filtering obv Zorgpad)
+ (Filtering obv Behandelplan)
 }
 
-package "Epic, Chipsoft, Zorgviewer Los" <<Zorgviewer Host>> {
- (Stelt identity vast)
- (Patient selectie)
- (Controle behandelrelatie)
+package "Epic, Chipsoft, Topicus, Zorgviewer Los" <<Zorgviewer Host>> {
  (Opstart Zorgviewer)
+ (Stelt identity vast)
+ (Controle behandelrelatie)
+ (Patient selectie)
+ (Zorgverlener gegevens)
+ (Zorgverlener rollen)
 }
 
 cloud {
- package [Behandelplan] {
+ package "Behandelplan" {
   (Behandelplannen adhv diagnose)
   (Relevante gegevens adhv zorgpad)
   (Relevante gegevens adhv rol)
  }
- package [MITZ] <<Toestemming & Patientindex>> {
-  (Toegestane bronnen patient)
- }
- package [ZorgAB] <<Zorgverlener Registry>> {
-  (Zorgverlener rollen)
-  (Zorgverlener gegevens)
-  (Bronnen endpoints)
+ package "Toestemming & Patientindex" {
+  (Toegestane bronsystemen patient)
+  (Bronsystemen endpoints)
  }
 }
 
