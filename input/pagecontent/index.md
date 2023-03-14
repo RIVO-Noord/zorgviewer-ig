@@ -29,7 +29,12 @@ Design = startpagina bouwteam
 1. ? *Behandelplan (initieel als relevantie filter) functionaliteit uitbreiden*
 1. ? *Patient als gebruiker*
 
-(Toevoegen van de priolijst Myrthe)
+#### Prioritering werkzaamheden
+1. Correspondentie
+1. (Radiologie)verslagen
+1. Notities
+1. zib Probleem
+1. zib Verrichting
 
 ### Bouwblokken
 
