@@ -1,3 +1,6 @@
+Deze pagina beschrijft de interacties tussen de systemen. 
+Dit is de startpagina van het bouwteam.
+
 ### Use Cases
 
 ### Actors
