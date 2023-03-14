@@ -34,8 +34,10 @@ Onderstaande lijst sommeert nogmaals wat de verschillende bronnen zijn van de de
 1. Wat kan Epic nu:
     1. De Epic huizen doen de zibs uit de BgZ, dus niet alleen laatste bloeddruk, maar alle b.v. Ofwel, we doen meer dan de BgZ en minder dan de zibs.
     1. [Epic FHIR](https://fhir.epic.com/Specifications) **STU3** *Provider-Facing*
-    1. SMoR - VIPP 5 Module 1 - PDFA Correspondence via FHIR - Design - February 2021 revision.pdf - link naar pdf toevoegen
-    1. SMoR - VIPP 5 Module 1 - BGZ on FHIR - Design - July 2020 revision.pdf - link naar pdf toevoegen
+    1. [SMoR - VIPP 5 Module 1 - PDFA Correspondence via FHIR - Design - February 2021 revision.pdf](https://umcgonline.sharepoint.com/:b:/r/sites/RIVO-Noord-RealisatieZorgviewer/Shared%20Documents/Werkgroep%20Implementatie%20gids/Achtergrond%20materiaal/SMoR%20-%20VIPP%205%20Module%201%20-%20PDFA%20Correspondence%20via%20FHIR%20-%20Design%20-%20February%202021%20revision.pdf?csf=1&web=1&e=o7DDKG)
+    1. [SMoR - VIPP 5 Module 1 - Updates to BgZ on FHIR to Support Hospital MedMij Kwalificatie - Medications and Problems](https://umcgonline.sharepoint.com/:b:/r/sites/RIVO-Noord-RealisatieZorgviewer/Shared%20Documents/Werkgroep%20Implementatie%20gids/Achtergrond%20materiaal/VIPP%205%20Module%201%20-%20Updates%20to%20BgZ%20on%20FHIR%20to%20Support%20Hospital%20MedMij%20Kwalificatie%20-%20Medications%20and%20Problems.pdf?csf=1&web=1&e=bTTAUJ)
+    1. [SMoR - VIPP 5 Module 1 - BGZ on FHIR - Design - July 2020 revision.pdf](https://umcgonline.sharepoint.com/:b:/r/sites/
+    RIVO-Noord-RealisatieZorgviewer/Shared%20Documents/Werkgroep%20Implementatie%20gids/Achtergrond%20materiaal/SMoR%20-%20VIPP%205%20Module%201%20-%20BGZ%20on%20FHIR%20-%20Design%20-%20July%202020%20revision.pdf?csf=1&web=1&e=fEd69C)
 1. Wat kan Chipsoft nu:
     1. [Digitale Zorg Zorgplatform](https://developer.zorgplatform.online/digital-care)
     1. [FHIR BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
