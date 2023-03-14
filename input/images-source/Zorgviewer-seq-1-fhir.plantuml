@@ -16,13 +16,16 @@ Zorgverlener->Host: start Zorgviewer
 Host->Zorgviewer: start met context dmv SMART-on-FHIR \n""https://tst.zorgviewer.nl/application/launch""
 note left Zorgviewer
  zorgviewer-host-base from URL
- context: {
-  access_token: "secret-xyz",
-  id_token: "secret-xyz",
-  patient: "<patient_fhir_id>",
+ 
+ token: {
+  "access_token": "...",
+  "id_token": "<JWT>",
+  "patient": "<patient_fhir_id>",
+  ?"practitioner": "<practitioner_fhir_id>"
   ... }
+
  access_token decoded: {
-  sub: "<practitioner_fhir_id>",
+  "sub": "<practitioner_fhir_id>"
   ... }
 end note
 

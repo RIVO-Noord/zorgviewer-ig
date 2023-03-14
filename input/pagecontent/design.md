@@ -1,3 +1,6 @@
+Deze pagina beschrijft de interacties tussen de systemen. 
+Dit is de startpagina van het bouwteam.
+
 ### Use Cases
 
 ### Actors
@@ -61,12 +64,16 @@ Bevragen bronsystemen ontvangkelijke zorgaanbieders
 * [Chipsoft Documenten API](https://developer.zorgplatform.online/digital-care/api/document)
 
 1. DocumentReference
-    1. request: DocumentReference?subject=<fhir_patient_id>
+    1. request:
+        ``DocumentReference?subject=<fhir_patient_id>``
     1. response:
         1. author reference naar Practitioner
+        1. status = "current", docStatus = fixed "final"
         1. class = Correspondence
         1. type = Patientbrief = Epic eigen ~ description
         1. created
-        1. content/attachement/url (contentType = in principe application/pdf. Verwacht ook in Epic text/html)
+        1. DocumentReference.content.attachment.url (contentType = in principe application/pdf. Verwacht ook in Epic text/html)
 1. Presenteren/ordenen lijst
-1. Binary per document -> pdf (of html) uit de Binary.content BASE64
+1. Binary per document -> pdf (of html) uit de Binary.content BASE64 of application/pdf
+    https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_PDFA#Find_and_retrieve_existing_PDF.2FA_document.28s.29
+    4.3.2.2 Response Message

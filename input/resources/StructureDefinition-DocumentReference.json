@@ -13,6 +13,34 @@
     "derivation": "constraint",
     "differential": {
         "element": [
+            {
+                "id": "DocumentReference.status",
+                "path": "DocumentReference.status",
+                "constraint": [
+                    {
+                        "key": "zv-dr-1",
+                        "severity": "error",
+                        "human": "Only status is curreent documents are expected.",
+                        "expression": "status=='current'",
+                        "xpath": "f:status='current'"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.docStatus",
+                "path": "DocumentReference.docStatus",
+                "constraint": [
+                    {
+                        "key": "zv-dr-2",
+                        "severity": "error",
+                        "human": "Only docStatus is final documents are expected.",
+                        "expression": "docStatus=='final'",
+                        "xpath": "f:docStatus='final'"
+                    }
+                ],
+                "mustSupport": true
+            }
         ]
     }
 }
