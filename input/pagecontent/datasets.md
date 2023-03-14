@@ -1,3 +1,5 @@
+Deze pagina beschrijft de content van de datasets.
+
 ### Data Requirements 
 
 *Aka "Gegevenssets" virtueel bouwblok.*
@@ -21,27 +23,39 @@ Vanuit verschillende projecten en programma's wordt er gewerkt aan de de Basisge
 In het midden van bovenstaande venn-diagram staat de zorgviewer (ZV). Het project maakt gebruik van de eisen van verschillende programma's, de mogelijkheden die de verschillende XISen aanbieden (ChipSoft, Epic, Topicus, etc.) en wat de verschillende organisaties al kunnen op het gebied van data-ontsluiting (Martini, MCL, Tjongerschans, UMCG, etc.). 
 
 Onderstaande lijst sommeert nogmaals wat de verschillende bronnen zijn van de desbetreffende programma's, leveranciers en organisaties:
-1. Wat wordt geeist: [VIPP5 Staatscourant stcrt-2020-7935](https://zoek.officielebekendmakingen.nl/stcrt-2020-7935.html)
-1. Wat kan Epic nu:
-    1. SMoR - VIPP 5 Module 1 - PDFA Correspondence via FHIR - Design - February 2021 revision.pdf
-    1. SMoR - VIPP 5 Module 1 - BGZ on FHIR - Design - July 2020 revision.pdf
-    1. Wij doen de zibs uit de BgZ (dus niet alleen laatste bloeddruk, maar alle b.v.) we doen meer dan de BgZ en minder dan de zibs.
-    1. [Epic FHIR](https://fhir.epic.com/Specifications) **STU3** *Provider-Facing*
-1. Wat kan Chipsoft nu:
-    1. [Digitale Zorg Zorgplatform](https://developer.zorgplatform.online/digital-care)
-    1. [FHIR BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
-    1. [FHIR Document API](https://developer.zorgplatform.online/digital-care/api/document)
+1. Wat wordt geeist Wat wordt geeist vanuit de wet en moet dus door de leveranciers worden ondersteund: 
+     1. [IZA](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjr49Tvntv9AhWK2aQKHdAaDooQFnoECAwQAQ&url=https%3A%2F%2Fwww.rijksoverheid.nl%2Fbinaries%2Frijksoverheid%2Fdocumenten%2Frapporten%2F2022%2F09%2F16%2Fintegraal-zorgakkoord-samen-werken-aan-gezonde-zorg%2Fintegraal-zorg-akkoord.pdf&usg=AOvVaw3KopPSCxT2VkhnPKQlehkb&cshid=1678790821565394)
+     1. Vanuit de ziekenhuizen: [VIPP5 Staatscourant stcrt-2020-7935](https://zoek.officielebekendmakingen.nl/stcrt-2020-7935.html)
+     1. Vanuit de huisartsen: [VIPPOPEN Staatscourant 2022 3373260-1029631-CZ](https://zoek.officielebekendmakingen.nl/stcrt-2022-18226.html)
 1. MedMij specs (basic): 
     1. [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpBGZ_2017)
     1. [BgZ 2017 FHIR](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
     1. [PDF/a](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpPDFA)
+1. Wat kan Epic nu:
+    1. De Epic huizen doen de zibs uit de BgZ, dus niet alleen laatste bloeddruk, maar alle b.v. Ofwel, we doen meer dan de BgZ en minder dan de zibs.
+    1. [Epic FHIR](https://fhir.epic.com/Specifications) **STU3** *Provider-Facing*
+    1. SMoR - VIPP 5 Module 1 - PDFA Correspondence via FHIR - Design - February 2021 revision.pdf - link naar pdf toevoegen
+    1. SMoR - VIPP 5 Module 1 - BGZ on FHIR - Design - July 2020 revision.pdf - link naar pdf toevoegen
+1. Wat kan Chipsoft nu:
+    1. [Digitale Zorg Zorgplatform](https://developer.zorgplatform.online/digital-care)
+    1. [FHIR BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
+    1. [FHIR Document API](https://developer.zorgplatform.online/digital-care/api/document)
+
 
 ##### Voorbeeld BgZ
 
 De Basisgegevensset Zorg (BgZ), ook wel patient summary (PS) genoemd, behandelen wij als een sub-set van zibs. In de BgZ worden de BgZ-secties beperkt. Bijvoorbeeld de BgZ-sectie Uitslagen beperkt zich op klinisch chemisch lab, laatste uitslag. Dit zou betekenen dat de zorgverlener geen inzage heeft in trends (eerdere klinische chemie uitslagen) of andere typen laboratorium uitslagen. De andere laboratorium uitslagen zijn bijvoorbeeld hematologie, serologie/immunologie, virologie, toxicologie, microbiologie of moleculaire genetica (zie zib LaboratoriumUitslag - ResultaatType - ResultaatTypeCodelijst). Deze filters op de zibs beschouwen we als voorbeelden. Vanuit project zorgviewer laten wij deze filters achterwegen, zodat alle labuitslagen ingezien kunnen worden. 
 
-#### Acute Zorg - e-Spoed (#1)
+#### Acute Zorg
 
+Binnen de acute zorg lopen een aantal trajecten om gegevensuitwisseling voor elkaar te krijgen. Binnen de acute zorg is het noodzakelijk om op snelle wijze informatie over de patiënt te ontvangen. Denk bijvoorbeeld aan het reanimatiebeleid en -wensen van de patiënt. Middels project e-Spoed is getracht om afspraken rondom verschillende scenario's in kaart te brengen. Per scenario's worden verschillende technische en functionele eisen gesteld; denk aan het berichttype en naar wie het bericht verstuurd moet worden. Deze informatiestandaard staat onder beheer van Nictiz. 
+
+Verder heeft de acute zorg meerdere andere informatiestandaarden per uitwisseling uitgeschreven, onder andere:
+* Ambulanceoverdracht naar SEH en retourbericht 2.4.0
+* (Triage)verwijzingen; spoedmelding; bevestiging en voorwaarschuwing 1.5.0
+* Professionele samenvatting en rapportages verleende zorg 2.1.0
+
+Hieronder nog een aantal links:
 * https://nictiz.nl/standaarden/informatiestandaarden/acute-zorg/
 * https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Acute_Zorg
 * https://amigo.nictiz.nl/acute-zorg/opvragingen-bij-huisarts/dataset

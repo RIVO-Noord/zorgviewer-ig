@@ -5,6 +5,10 @@
 
 Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/).
 
+#### Leeswijzer implementatiegids
+Dataset = content van praktijkvoorbeelden
+Design = startpagina bouwteam
+
 ### Events
 
 | | |
@@ -24,6 +28,13 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
 1. ? *Uitbreiding zibs buiten BgZ - gegevenssets breder ondersteunen (Acute Zorg, HartNet, Oncologie, PalZorg)*
 1. ? *Behandelplan (initieel als relevantie filter) functionaliteit uitbreiden*
 1. ? *Patient als gebruiker*
+
+#### Prioritering werkzaamheden
+1. Correspondentie
+1. (Radiologie)verslagen
+1. Notities
+1. zib Probleem
+1. zib Verrichting
 
 ### Bouwblokken
 
