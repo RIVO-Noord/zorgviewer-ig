@@ -20,24 +20,50 @@
                     {
                         "key": "zv-dr-1",
                         "severity": "error",
-                        "human": "Only status is curreent documents are expected.",
-                        "expression": "status=='current'",
+                        "human": "Only status is curreent final documents are expected.",
+                        "expression": "status='current'",
                         "xpath": "f:status='current'"
                     }
                 ],
                 "mustSupport": true
             },
             {
-                "id": "DocumentReference.docStatus",
-                "path": "DocumentReference.docStatus",
+                "id": "DocumentReference.type",
+                "path": "DocumentReference.type",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.class",
+                "path": "DocumentReference.class",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.indexed",
+                "path": "DocumentReference.indexed",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.author",
+                "path": "DocumentReference.author",
+                "comments": "Expect the references Practitioner to have his Organization",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.description",
+                "path": "DocumentReference.description",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.content.attachement",
+                "path": "DocumentReference.content.attachement",
                 "constraint": [
                     {
                         "key": "zv-dr-2",
-                        "severity": "error",
-                        "human": "Only docStatus is final documents are expected.",
-                        "expression": "docStatus=='final'",
-                        "xpath": "f:docStatus='final'"
-                    }
+                        "severity": "warning",
+                        "human": "Only pdf documents are expected.",
+                        "expression": "content.attachement.contentType='application/pdf'",
+                        "xpath": "f:content.attachement.contentType='application/pdf'"
+                    } 
                 ],
                 "mustSupport": true
             }

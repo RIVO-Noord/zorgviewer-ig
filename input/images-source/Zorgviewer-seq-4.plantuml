@@ -1,0 +1,55 @@
+@startuml
+hide footbox
+autonumber
+
+actor Zorgverlener
+participant Zorgviewer
+box "Andere zorgaanbieder"
+participant "Bronsysteem ontsluiting" as Bron
+participant Bronsysteem
+end box
+
+activate Zorgviewer
+Zorgverlener->Zorgviewer: ..vervolg bepalen zorgaanbieders..
+Zorgviewer->Zorgviewer: LOOP: voor iedere zorgaanbieder ([[Endpoint-UMCG.html Bronsysteem ontsluiting endpoint]])
+activate Zorgviewer
+Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base/Patient?identifier=<BSN>""
+activate Bron
+Bron->Bron++ : check extern-access-token\njwt attributen compleet\nen ondertekening door geaccepteerde zorgaanbieder?
+destroy Bron
+Bron->Logging : Log actie
+Bron-->Zorgviewer : ""[[StructureDefinition-Patient.html Patient]]""
+deactivate Bron
+Zorgviewer->Zorgviewer: LOOP: formuleren documenten gegevensverzoek(request)
+activate Zorgviewer
+Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/DocumentReference?subject=<patient_fhir_id>&<filter>""
+activate Bron
+Bron->Bronsysteem : gegevensverzoek met generiek back-end account
+activate Bronsysteem
+Bronsysteem->Logging : Log actie
+Bronsysteem->Bron: fhir resources (Bundle) bij de zib
+deactivate Bronsysteem
+Bron-->Zorgviewer: fhir resources (Bundle) bij de zib
+deactivate Bron
+deactivate Zorgviewer
+Zorgviewer->Zorgviewer: toon documenten lijst
+Zorgviewer-->Zorgverlener
+deactivate Zorgviewer
+
+Zorgverlener-->Zorgviewer: selecteer document
+activate Zorgviewer
+Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/Binary/<binary-id>""\nurl komt uit DocumentReference.content.attachement.url
+activate Bron
+Bron->Bronsysteem : gegevensverzoek met generiek back-end account
+activate Bronsysteem
+Bronsysteem->Logging : Log actie
+Bronsysteem->Bron: Binary
+deactivate Bronsysteem
+Bron-->Zorgviewer: Binary
+deactivate Bron
+deactivate Zorgviewer
+Zorgviewer->Zorgviewer: toon document
+Zorgviewer-->Zorgverlener
+deactivate Zorgviewer
+
+@enduml

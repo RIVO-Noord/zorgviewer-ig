@@ -11,7 +11,7 @@ end box
 participant Behandelplan
 
 activate Zorgviewer
-Zorgverlener->Zorgviewer: ..vervolg opstarten zorgviewer..
+Zorgverlener->Zorgviewer: ..vervolg bepalen zorgaanbieders..
 Zorgviewer->Zorgviewer++: extern-access-token middels lokaal-access-token
 deactivate Zorgviewer
 Zorgviewer->Behandelplan: Bepalen minimale dataset\n""<behandelplan-base>/PlanDefinition?name=BgZ2017""
