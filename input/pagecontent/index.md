@@ -6,8 +6,10 @@
 Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/).
 
 #### Leeswijzer implementatiegids
-Dataset = content van praktijkvoorbeelden
-Design = startpagina bouwteam
+
+- [Dataset](datasets.html) = content van praktijkvoorbeelden
+- [Design](design.html) = startpagina bouwteam
+- [Checklist](checklist.html) = startpagina met checklists voor aansluiten van nieuwe zorgaanbieders
 
 ### Events
 
@@ -22,14 +24,15 @@ Design = startpagina bouwteam
 ### Milestones
 
 1. **(dec-2023) MVP2 Zorgviewer opstarten vanuit Epic (MCL, UMCG), Chipsoft (Martini ziekenhuis, Tjongerschans) en Topicus (Dokter Drenthe) en ontsluiten van de BgZ en PDF/a (voor zover ingericht in de bronnen adhv VIPP5 module 1 en 2 en VIPP OPEN)**
-    1. Focus ligt eerst op BIG of AGB-Z geregistreerde gebruikers.
-1. ? *Uitbreiden vulling BgZ en PDF/a. Hiervoor zijn doorgaans de EPD teams nodig.*
-1. ? *Uitbreiden bronnen, uitbreiden opstarters en daarmee gebruikersgroepen.*
-1. ? *Uitbreiding zibs buiten BgZ - gegevenssets breder ondersteunen (Acute Zorg, HartNet, Oncologie, PalZorg)*
-1. ? *Behandelplan (initieel als relevantie filter) functionaliteit uitbreiden*
-1. ? *Patient als gebruiker*
+    1. Focus ligt eerst op BIG of AGB-Z geregistreerde gebruikers
+    1. Parallel: Uitbreiden vulling BgZ en PDF/a. Hiervoor zijn de EPD teams nodig
+1. Uitbreiden bronnen, uitbreiden "opstarten vanuit" en daarmee gebruikersgroepen
+1. Uitbreiding zibs buiten BgZ - gegevenssets breder ondersteunen (Acute Zorg, HartNet, Oncologie, PalZorg)
+1. Behandelplan functionaliteit uitbreiden, keuze behandelplan en later workflow
+1. Patient als gebruiker
 
 #### Prioritering werkzaamheden
+
 1. Correspondentie
 1. (Radiologie)verslagen
 1. Notities
