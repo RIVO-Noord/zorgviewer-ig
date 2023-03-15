@@ -3,14 +3,13 @@
 cloud "cloud" {
  [Zorgviewer]
  [Behandelplan]
- [MITZ] <<Toestemming\n& Patientindex>>
- [ZorgAB] <<Zorgverlener\nDirectory>>
+ [Toestemming]
 }
 
 node "Epic huis" {
  [Hyperspace] <<Zorgviewer\nHost>>
  [Epic Auth] <<Authenticatie>>
- [IRIS] <<Bronsysteem\nontsluiting>>
+ [b.v. IRIS] <<Bronsysteem\nontsluiting>> as IRIS
  [Epic] <<Bronsysteem\n& Logging>>
  [Hyperspace]-->[Epic]
  [IRIS]-->[Epic]
@@ -24,20 +23,27 @@ node "Chipsoft of Topicus huis" {
  [Zorgplatform]->[HiX of Topicus]
 }
 
-node "Zorgviewer Los" {
- [ZV Los] <<Zorgviewer\nHost>>
- [ZV Los Auth] <<Authenticatie>>
- note bottom of [ZV Los Auth] : Plus basis bron only Patient, Zorgverlener\nZorgviewerHost CapabilityStatement
+skinparam node {
+  fontColor<<future>> LightGray
+  borderColor<<future>> LightGray
+}
+skinparam component {
+  fontColor<<future>> LightGray
+  borderColor<<future>> LightGray
 }
 
-[Hyperspace]-u->[Zorgviewer] :  1. opstart(context)
-[HiX of Topicus]-u->[Zorgviewer] : 1. opstart(context)
-[ZV Los]-u->[Zorgviewer] : 1. opstart(context)
-[Zorgviewer]-d->[Epic Auth] : 2a. wie?
-[Zorgviewer]-d->[ZV Los Auth] : 2a. wie?
-[Zorgviewer]-d->[Zorgplatform\nAuth] : 2a. wie?
-[Zorgviewer]-u->[ZorgAB] : 2b. wie en waar details?
-[Zorgviewer]-u->[MITZ] : 3. waar?
+node "Zorgviewer Host Los" <<future>> {
+ [ZV Los] <<Zorgviewer Host>> <<future>>
+ [ZV Los Auth] <<Authenticatie>> <<future>>
+}
+
+[Hyperspace]-u->[Zorgviewer] :  1. opstart
+[HiX of Topicus]-u->[Zorgviewer] : 1. opstart
+[ZV Los]..>[Zorgviewer] : 1. opstart
+[Zorgviewer]-d->[Epic Auth] : 2. wie?
+[Zorgviewer]..>[ZV Los Auth] : 2. wie?
+[Zorgviewer]-d->[Zorgplatform\nAuth] : 2. wie?
+[Zorgviewer]-u->[Toestemming] : 3. waar?
 [Zorgviewer]->[Zorgplatform] : 4. bevragen
 [Zorgviewer]->[IRIS] : 4. bevragen
 [Zorgviewer]-u->[Behandelplan] : 5. filters
