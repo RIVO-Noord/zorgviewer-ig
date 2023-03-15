@@ -22,15 +22,16 @@ Bron-->Zorgviewer : ""[[StructureDefinition-Patient.html Patient]]""
 deactivate Bron
 Zorgviewer->Zorgviewer: LOOP: formuleren documenten gegevensverzoek(request)
 activate Zorgviewer
-Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/DocumentReference?subject=<patient_fhir_id>&<filter>""
+Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/DocumentReference?subject=<patient_fhir_id>""
 activate Bron
 Bron->Bronsysteem : gegevensverzoek met generiek back-end account
 activate Bronsysteem
 Bronsysteem->Logging : Log actie
-Bronsysteem->Bron: fhir resources (Bundle) bij de zib
+Bronsysteem->Bron: fhir resources (DocumentReference Bundle)
 deactivate Bronsysteem
-Bron-->Zorgviewer: fhir resources (Bundle) bij de zib
+Bron-->Zorgviewer: fhir resources (DocumentReference Bundle)
 deactivate Bron
+Zorgviewer->Zorgviewer: samenvoegen
 deactivate Zorgviewer
 Zorgviewer->Zorgviewer: toon documenten lijst
 Zorgviewer-->Zorgverlener
