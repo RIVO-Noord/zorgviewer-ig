@@ -14,6 +14,8 @@ Zorgverlener->Host: inloggen met lokale identiteit
 Zorgverlener->Host: selecteer patient
 Zorgverlener->Host: start Zorgviewer
 Host->Zorgviewer: start met context dmv SMART-on-FHIR \n""https://tst.zorgviewer.nl/application/launch""
+activate Zorgviewer
+Zorgviewer<->Authenticatie: SMART-on-FHIR handshake
 note left Zorgviewer
  zorgviewer-host-base from URL
  
@@ -28,8 +30,6 @@ note left Zorgviewer
   "sub": "<practitioner_fhir_id>"
   ... }
 end note
-
-activate Zorgviewer
 Zorgviewer->Host: opvragen gebruiker gegevens\n""<zorgviewer-host-base>/Practitioner/<practitioner_fhir_id>""
 activate Host
 Host-->Zorgviewer: ""[[StructureDefinition-Practitioner.html Practitioner]]""

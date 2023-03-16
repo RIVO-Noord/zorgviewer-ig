@@ -15,11 +15,11 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
 
 | | |
 | --- | --- |
-| 2020​ | Netwerkzorg Architectuur​ vastgesteld. *TODO: Linkje naar Netwerkzorg Architectuur document.* |
+| 2020​ | [Netwerkzorg Architectuur​ vastgesteld]()
 | 2021-nov​ | Zorgviewer Prototype​ middels [Clinical Connectathon Netwerkzorg](https://wiki-dhealth.web.rug.nl/index.php/Clinical_Connectathon_Netwerkzorg_Track) |
 | 2022 | [Supernova Zorgviewer MVP1](https://www.salesforce.com/nl/blog/2022/05/supernova.html) |
 | 2023 | [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/) |
-| 2023-apr | ? *Connectathon Behandelplan (HL7 NL en dHealthLab)*​ |
+| 2023-nov | tbd *Connectathon Behandelplan (HL7 NL en dHealthLab)*​ |
 
 ### Milestones
 

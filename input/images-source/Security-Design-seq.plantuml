@@ -1,0 +1,73 @@
+@startuml
+hide footbox
+autonumber
+
+actor Zorgverlener
+box "Eigen systeem"
+  participant "Zorgviewer\nHost" as Host
+  participant Authenticatie
+  participant "Eigen\nbronsysteem" as EBron
+end box
+box "Zorgviewer"
+  participant "Zorgviewer\nFrontend" as ZVFE
+  participant "Zorgviewer\nBackend" as ZVBE
+end box
+participant "Toestemming\nPatientIndex\nLocalisatie" as Toestemming
+box "Ander bronsysteem (meerdere)"
+  participant "Ontsluiten\nbronsysteem" as AOBron
+  participant "Bronsysteem" as ABron
+end box
+
+Zorgverlener->Host: start EPD
+Zorgverlener->Host: inloggen met lokale identiteit
+Host->Authenticatie
+note left Authenticatie
+  CHECK: authenticatie
+end note
+destroy Authenticatie
+Zorgverlener->Host: selecteer patient
+note left Host
+  CHECK: behandelrelatie
+end note
+destroy Host
+Zorgverlener->Host: start Zorgviewer
+destroy Host
+note left Host
+  CHECK: wel of niet "knop" tonen
+end note
+
+Host->ZVFE: start met context dmv SMART-on-FHIR
+ZVFE<->Authenticatie: SMART-on-FHIR handshake
+note left ZVFE
+  CHECK: URL check
+  CHECK: token signing
+end note
+destroy ZVFE
+ZVFE->ZVBE: verzamel gegevens
+ZVBE->EBron: opvragen gebruiker en patient identiteit details
+note left EBron
+  CHECK: access token
+end note
+destroy EBron
+ZVBE->ZVFE: toon gebruiker en patient identiteit details
+
+ZVBE->Toestemming: vraag endpoints op basis van toestemming
+note left Toestemming
+  CHECK: TLS
+end note
+destroy Toestemming
+
+ZVBE->AOBron: opvragen gegevens
+note left AOBron
+  CHECK: TLS
+end note
+destroy AOBron
+AOBron->ABron: opvragen gegevens
+note left ABron
+  CHECK: backend token
+end note
+destroy ABron
+
+ZVBE->ZVFE: toon geaggregeerde gegevens
+
+@enduml

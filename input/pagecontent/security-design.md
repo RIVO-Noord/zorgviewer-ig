@@ -1,3 +1,8 @@
+<div>
+{% include Security-Design-seq.svg %}
+</div>
+
+...
 
 {% include img.html img="security-design-lagen-epic.png" caption="Figure 2: Security Design Lagen - Epic" width="90%" %}
 
