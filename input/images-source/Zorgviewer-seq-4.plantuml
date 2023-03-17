@@ -40,6 +40,9 @@ deactivate Zorgviewer
 Zorgverlener-->Zorgviewer: selecteer document
 activate Zorgviewer
 Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/Binary/<binary-id>""\nurl komt uit DocumentReference.content.attachement.url
+note right Zorgviewer
+    LET OP: [[http://hl7.org/fhir/STU3/binary.html#rest Accept Header]]
+end note
 activate Bron
 Bron->Bronsysteem : gegevensverzoek met generiek back-end account
 activate Bronsysteem

@@ -60,11 +60,22 @@
                     {
                         "key": "zv-dr-2",
                         "severity": "warning",
-                        "human": "Only pdf documents are expected.",
+                        "human": "Only pdf documents are expected through the url",
                         "expression": "content.attachement.contentType='application/pdf'",
                         "xpath": "f:content.attachement.contentType='application/pdf'"
                     } 
                 ],
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.content.attachment.contentType",
+                "path": "DocumentReference.content.attachment.contentType",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.content.attachment.url",
+                "path": "DocumentReference.content.attachment.url",
+                "min": 1,
                 "mustSupport": true
             }
         ]
