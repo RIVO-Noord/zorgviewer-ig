@@ -33,16 +33,16 @@
             "display": "nl-core-patient"
         },
         {
-            "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-organization",
-            "display": "nl-core-organization"
-        },
-        {
             "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner",
             "display": "nl-core-practitioner"
         },
         {
             "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole",
             "display": "nl-core-practitionerrole"
+        },
+        {
+            "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-organization",
+            "display": "nl-core-organization"
         }
     ],
     "rest": [
@@ -71,10 +71,9 @@
                         }
                     ],
                     "type": "Patient",
-                    "profile": "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
-                    "supportedProfile": [
-                        "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient"
-                    ],
+                    "profile": {
+                        "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient"
+                    },
                     "interaction": [
                         {
                             "extension": [
@@ -89,10 +88,9 @@
                 },
                 {
                     "type": "Practitioner",
-                    "profile": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner",
-                    "supportedProfile": [
-                        "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner"
-                    ],
+                    "profile": {
+                        "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner"
+                    },
                     "interaction": [
                         {
                             "extension": [
@@ -107,10 +105,9 @@
                 },
                 {
                     "type": "PractitionerRole",
-                    "profile": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole",
-                    "supportedProfile": [
-                        "http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole"
-                    ],
+                    "profile": {
+                        "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole"
+                    },
                     "interaction": [
                         {
                             "extension": [
@@ -134,6 +131,23 @@
                             "definition": "http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner",
                             "type": "token",
                             "documentation": "For getting the AGB roles/specialty (urn:oid:2.16.840.1.113883.2.4.6.7) for a Practitioner, e.g. 0305 Medisch specialisten, orthopedie."
+                        }
+                    ]
+                },
+                {
+                    "type": "Organization",
+                    "profile": {
+                        "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-organization"
+                    },
+                    "interaction": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHALL"
+                                }
+                            ],
+                            "code": "read"
                         }
                     ]
                 }
