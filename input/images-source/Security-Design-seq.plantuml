@@ -39,7 +39,7 @@ end note
 Host->ZVFE: start met context dmv SMART-on-FHIR
 ZVFE<->Authenticatie: SMART-on-FHIR handshake
 note left ZVFE
-  CHECK: URL check
+  CHECK: URL check (iss)
   CHECK: token signing
 end note
 destroy ZVFE
@@ -53,18 +53,22 @@ ZVBE->ZVFE: toon gebruiker en patient identiteit details
 
 ZVBE->Toestemming: vraag endpoints op basis van toestemming
 note left Toestemming
+  CHECK: ip/ACL
   CHECK: TLS
 end note
 destroy Toestemming
 
 ZVBE->AOBron: opvragen gegevens
 note left AOBron
+  CHECK: ip/ACL
   CHECK: TLS
 end note
 destroy AOBron
 AOBron->ABron: opvragen gegevens
 note left ABron
+  CHECK: ip/ACL
   CHECK: backend token
+  CHECK: TLS + client cert
 end note
 destroy ABron
 

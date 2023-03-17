@@ -6,9 +6,10 @@ Op deze pagina volgen de checklists die als handvat kunnen worden gebruikt als j
     1. ?? Waar kan/moet je deze aanvragen?
     1. ...
 1. Epic huizen
-    1. Ontsluiten bronsysteem 
+    1. Ontsluiten bronsysteem
         1. Betrek je integratie (Bridges) team om het FHIR endpoint in te richten volgens de [OntsluitenBronsysteem CapabilityStatement](CapabilityStatement-OntsluitenBronsysteem.html)
             1. Back-end Integration voor trusted gebruikers, externe identity wordt gelogd
+        1. Client Certificate (UMCG) aanvragen
         1. Voer de Ontsluiten Bronsysteem tests uit op dit FHIR endpoint
         1. Meld dit FHIR endpoint aan bij RIVO-Noord(?)
         1. ...

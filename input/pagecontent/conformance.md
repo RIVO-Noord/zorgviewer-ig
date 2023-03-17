@@ -69,9 +69,10 @@
 {% include img.html img="mitz-toestemming.png" caption="Figure 2: uit MITZ Toestemming Documentatie" %}
 
 **Kandidaat solutions**:
-1. MITZ OTV *TOEKOMST*
 1. *INITIEEL*: Regionale service
     1. Invulling: FHIR server met vulling volgens FHIR API van [MITZ "Open autorisatievraag"](https://drive.google.com/file/d/1cHgsz-OORw5QMoGj5Lh_475Bu_TpDHvj/view)
+1. Connect4Care Topicus
+1. MITZ OTV *TOEKOMST*
 
 #### Identiteit
 
