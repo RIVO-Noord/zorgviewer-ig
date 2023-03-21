@@ -9,7 +9,7 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
 
 - [Datasets](datasets.html) = content van praktijkvoorbeelden
 - [Design](design.html) = startpagina bouwteam
-- [Checklist](checklist.html) = startpagina voor aansluiten van nieuwe zorgaanbieders
+- [Checklists](checklists.html) = startpagina voor aansluiten van nieuwe zorgaanbieders
 
 ### Events
 
