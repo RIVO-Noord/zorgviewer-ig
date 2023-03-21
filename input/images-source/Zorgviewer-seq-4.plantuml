@@ -15,7 +15,7 @@ Zorgviewer->Zorgviewer: LOOP: voor iedere zorgaanbieder ([[Endpoint-UMCG.html Br
 activate Zorgviewer
 Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base/Patient?identifier=<BSN>""
 activate Bron
-Bron->Bron++ : check extern-access-token\njwt attributen compleet\nen ondertekening door geaccepteerde zorgaanbieder?
+Bron->Bron++ : verkrijgen extern-access-token
 destroy Bron
 Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
 activate Bronsysteem
