@@ -1,5 +1,7 @@
 {% include profile-note.md %}
 
+### Document soorten herkennen
+
 |class (higher level grouping)|type (http://loinc.org)|descriptions|
 |--|--|--|
 |Correspondentie|56444-3 Healthcare communication Document|Correspondentie, Patiëntenbrief, Verwijsbrief, Poliklinische brief, Artsenbrief|
