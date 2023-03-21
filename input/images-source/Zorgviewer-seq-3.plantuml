@@ -22,33 +22,37 @@ end note
 activate Behandelplan
 Behandelplan-->Zorgviewer: Behandelplan\n""[[StructureDefinition-PlanDefinition.html PlanDefinition]]""
 deactivate Behandelplan
-Zorgviewer->Zorgviewer: LOOP: voor iedere zorgaanbieder ([[Endpoint-UMCG.html Bronsysteem ontsluiting endpoint]])
-activate Zorgviewer
-Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base/Patient?identifier=<BSN>""
-activate Bron
-Bron->Bron++ : check extern-access-token\njwt attributen compleet\nen ondertekening door geaccepteerde zorgaanbieder?
-destroy Bron
-Bron->Logging : log access
-Bron-->Zorgviewer : ""[[StructureDefinition-Patient.html Patient]]""
-deactivate Bron
-Zorgviewer->Zorgviewer: LOOP: formuleren gegevensverzoek(request) adhv Behandelplan Data Requirements\n""PlanDefinition.action[0].output[].type""\nen ""PlanDefinition.action[0].output[].codeFilter""
-activate Zorgviewer
-Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/<resource>?subject=<patient_fhir_id>&<filter>""
-activate Bron
-Bron->Bronsysteem : gegevensverzoek (per zib) met generiek back-end account
-activate Bronsysteem
-Bronsysteem->Logging : Log zorgviewer gebruiker naam
-Bronsysteem->Bron: fhir resources (Bundle) bij de zib
-deactivate Bronsysteem
-Bron-->Zorgviewer: fhir resources (Bundle) bij de zib
-deactivate Bron
-deactivate Zorgviewer
-Zorgviewer->Zorgviewer: ontdubbelen en conflicten detectie
-note right of Zorgviewer
-  Zorgviewer invulling van [[https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard BgZ]] 
-  paragrafen 3.2.9.1 Ontdubbelen en 3.2.9.2 Duplicaatdetectie
-end note
-deactivate Zorgviewer
+loop voor iedere zorgaanbieder
+  Zorgviewer->Zorgviewer: [[Endpoint-UMCG.html Bronsysteem ontsluiting endpoint]]
+  activate Zorgviewer
+  Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base/Patient?identifier=<BSN>""
+  activate Bron
+  Bron->Bron++ : check extern-access-token\njwt attributen compleet\nen ondertekening door geaccepteerde zorgaanbieder?
+  destroy Bron
+  Bron->Logging : log access
+  Bron-->Zorgviewer : ""[[StructureDefinition-Patient.html Patient]]""
+  deactivate Bron
+  loop gegevensverzoeken
+    Zorgviewer->Zorgviewer: formuleren gegevensverzoek(request) adhv Behandelplan Data Requirements\n""PlanDefinition.action[0].output[].type""\nen ""PlanDefinition.action[0].output[].codeFilter""
+    activate Zorgviewer
+    Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/<resource>?subject=<patient_fhir_id>&<filter>""
+    activate Bron
+    Bron->Bronsysteem : gegevensverzoek (per zib) met generiek back-end account
+    activate Bronsysteem
+    Bronsysteem->Logging : Log zorgviewer gebruiker naam
+    Bronsysteem->Bron: fhir resources (Bundle) bij de zib
+    deactivate Bronsysteem
+    Bron-->Zorgviewer: fhir resources (Bundle) bij de zib
+    deactivate Bron
+    deactivate Zorgviewer
+    Zorgviewer->Zorgviewer: ontdubbelen en conflicten detectie
+    note right of Zorgviewer
+      Zorgviewer invulling van [[https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard BgZ]] 
+      paragrafen 3.2.9.1 Ontdubbelen en 3.2.9.2 Duplicaatdetectie
+    end note
+  end
+  deactivate Zorgviewer
+end
 
 Zorgviewer->Zorgviewer: toon gegevens
 Zorgviewer-->Zorgverlener
