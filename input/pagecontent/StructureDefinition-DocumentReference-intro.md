@@ -10,4 +10,4 @@ Zie het Excelbestand tab "classCode+decusion tree" voor LOINC codes:
 [Nationale XDS metadataset](https://nictiz.nl/standaarden/overzicht-van-standaarden/xds-metadata/)
 
 Request:
-``<ontsluiten-bronsysteem-base>/DocumentReference?subject=<fhir_patient_id>``
+``<ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>``

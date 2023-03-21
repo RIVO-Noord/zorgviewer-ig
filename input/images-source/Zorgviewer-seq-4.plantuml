@@ -17,18 +17,21 @@ Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontslui
 activate Bron
 Bron->Bron++ : check extern-access-token\njwt attributen compleet\nen ondertekening door geaccepteerde zorgaanbieder?
 destroy Bron
+Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
+activate Bronsysteem
+Bronsysteem->Bron: Patient fhir resources
+deactivate Bronsysteem
 Bron->Logging : Log actie
 Bron-->Zorgviewer : ""[[StructureDefinition-Patient.html Patient]]""
 deactivate Bron
-Zorgviewer->Zorgviewer: LOOP: formuleren documenten gegevensverzoek(request)
-activate Zorgviewer
-Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/DocumentReference?subject=<patient_fhir_id>""
+Zorgviewer->Zorgviewer: formuleren documenten gegevensverzoek(request)
+Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/DocumentReference?patient=<patient_fhir_id>""
 activate Bron
-Bron->Bronsysteem : gegevensverzoek met generiek back-end account
+Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
 activate Bronsysteem
-Bronsysteem->Logging : Log actie
 Bronsysteem->Bron: fhir resources (DocumentReference Bundle)
 deactivate Bronsysteem
+Bron->Logging : Log actie
 Bron-->Zorgviewer: Bundle met ""[[StructureDefinition-DocumentReference.html DocumentReference]]""
 deactivate Bron
 Zorgviewer->Zorgviewer: samenvoegen
@@ -36,19 +39,20 @@ deactivate Zorgviewer
 Zorgviewer->Zorgviewer: toon documenten lijst
 Zorgviewer-->Zorgverlener
 deactivate Zorgviewer
-
+...
 Zorgverlener-->Zorgviewer: selecteer document
 activate Zorgviewer
 Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/Binary/<binary-id>""\nurl komt uit DocumentReference.content.attachement.url
 note right Zorgviewer
-    LET OP: [[http://hl7.org/fhir/STU3/binary.html#rest Accept Header]]
+    Stuur [[http://hl7.org/fhir/STU3/binary.html#rest Accept Header]]
+    application/fhir+xml of application/fhir+json   
 end note
 activate Bron
-Bron->Bronsysteem : gegevensverzoek met generiek back-end account
+Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
 activate Bronsysteem
-Bronsysteem->Logging : Log actie
 Bronsysteem->Bron: Binary
 deactivate Bronsysteem
+Bron->Logging : Log actie
 Bron-->Zorgviewer: Binary
 deactivate Bron
 deactivate Zorgviewer

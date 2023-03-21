@@ -66,7 +66,3 @@ Bevragen bronsystemen ontvangkelijke zorgaanbieders
 <div>
 {% include Zorgviewer-seq-4.svg %}
 </div>
-
-Op direct de PDF (application.pdf) te krijgen moet je in de request Accept Headers NIET om application/fhir+xml of "application/fhir+json" vragen. Zie http://hl7.org/fhir/STU3/binary.html#rest anders moet je zelf de PDF (of HTML) decoden obv de Binary.content BASE64.
-Zie ook MedMij 4.3.2.2 Response Message https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_PDFA#Find_and_retrieve_existing_PDF.2FA_document.28s.29.
-    
