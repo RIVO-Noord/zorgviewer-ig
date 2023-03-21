@@ -16,8 +16,7 @@ loop
     activate Zorgviewer
     Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base/Patient?identifier=<BSN>""
     activate Bron
-    Bron->Bron++ : verkrijgen extern-access-token
-    destroy Bron
+    Bron->Bron : verkrijgen extern-access-token
     Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
     activate Bronsysteem
     Bronsysteem->Bron: Patient fhir resources
@@ -25,8 +24,9 @@ loop
     Bron-->Zorgviewer : ""[[StructureDefinition-Patient.html Patient]]""
     deactivate Bron
     Zorgviewer->Zorgviewer: formuleren documenten gegevensverzoek(request)
-    Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/DocumentReference?patient=<patient_fhir_id>""
+    Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/DocumentReference?patient=<patient_fhir_id>""
     activate Bron
+    Bron->Bron : verkrijgen extern-access-token
     Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
     activate Bronsysteem
     Bronsysteem->Bron: fhir resources (DocumentReference Bundle)
@@ -44,19 +44,19 @@ group wacht op gebruikers actie
 end
 Zorgverlener-->Zorgviewer: selecteer document
 activate Zorgviewer
-Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/Binary/<binary-id>""\nurl komt uit DocumentReference.content.attachement.url
+Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/Binary/<binary-id>""\nurl komt uit DocumentReference.content.attachement.url
 note right Zorgviewer
     Stuur [[http://hl7.org/fhir/STU3/binary.html#rest Accept Header]]
     application/fhir+xml of application/fhir+json   
 end note
 activate Bron
+Bron->Bron : verkrijgen extern-access-token
 Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
 activate Bronsysteem
 Bronsysteem->Bron: Binary
 deactivate Bronsysteem
 Bron-->Zorgviewer: Binary
 deactivate Bron
-deactivate Zorgviewer
 Zorgviewer->Zorgviewer: toon document
 Zorgviewer-->Zorgverlener
 deactivate Zorgviewer
