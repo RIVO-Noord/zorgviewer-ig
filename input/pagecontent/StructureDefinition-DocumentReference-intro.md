@@ -6,7 +6,7 @@
 |Imaging result|28570-0 Procedure note|Radiologie verslag|
 |Notitie|?|?|
 
-Zie het Excelbestand tab "classCode+decusion tree" voor LOINC codes:
+Zie het Excelbestand tab "classCode+decision tree" voor LOINC codes:
 [Nationale XDS metadataset](https://nictiz.nl/standaarden/overzicht-van-standaarden/xds-metadata/)
 
 Request:
