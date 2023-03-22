@@ -51,3 +51,6 @@ I worked around this Exception by replacing use="?" with use="official" in the l
 1. hl7.terminology.r3#5.0.0/package/CodeSystem-appropriateness-score.json
 2. hl7.terminology.r3#5.0.0/package/ValueSet-clinical-discharge-disposition.json
 3. hl7.terminology.r3#5.0.0/package/ValueSet-appropriateness-score.json
+
+Changing the dependency from 5.0.0 to 4.0.0 also seems to work.
+https://simplifier.net/packages/hl7.terminology.r3/4.0.0
