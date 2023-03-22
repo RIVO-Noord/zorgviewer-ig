@@ -42,3 +42,12 @@ Add to zorgviewer-ig.json, dependeson smart not working now??? See issue in FHIR
         "packageId": "hl7.fhir.uv.smart-app-launch",
         "version": "1.0.0"
       }
+
+------------------
+Exception generating resource /home/michael/eclipse-workspace/zorgviewer-ig/input/resources/ValueSet-ACPTreatmentCodelist::ValueSet/ACPTreatmentCodelist: Error loading /home/michael/.fhir/packages/hl7.terminology.r3#5.0.0/package/CodeSystem-appropriateness-score.json: Unknown IdentifierUse code '?' (01:19.152)
+org.hl7.fhir.exceptions.FHIRException: Error loading /home/michael/.fhir/packages/hl7.terminology.r3#5.0.0/package/CodeSystem-appropriateness-score.json: Unknown IdentifierUse code '?'
+
+I worked around this Exception by replacing use="?" with use="official" in the local cache:
+1. hl7.terminology.r3#5.0.0/package/CodeSystem-appropriateness-score.json
+2. hl7.terminology.r3#5.0.0/package/ValueSet-clinical-discharge-disposition.json
+3. hl7.terminology.r3#5.0.0/package/ValueSet-appropriateness-score.json
