@@ -1,24 +1,24 @@
 
-# Zorgviewer-IG
+## Zorgviewer-IG output
 
 * [Snapshot laatste release](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/snapshot/)
 * [CI Build](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/)
 * [Releases](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/)
 * [Web-based editor](https://github.dev/RIVO-Noord/zorgviewer-ig/)
 
-# Validate resources
+## Validate resources
 ```
 (optional) > curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o validator_cli.jar
 > java -jar validator_cli.jar -version current input/resources -ig input/resources
 ```
 
-# To build the IG (need minimal version 1.2.31 dd 1-feb-2023 ivm zib2017 package fix)
+## To build the IG (need minimal version 1.2.31 dd 1-feb-2023 ivm zib2017 package fix)
 ```
 (optional)> curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
 > java -jar publisher.jar -ig ig.ini
 ```
+## Some usefull resources
 
------------------
 * Base standards
   * http://hl7.org/fhir/STU3/
   * http://hl7.org/fhir/smart-app-launch/1.0.0/
@@ -35,22 +35,28 @@
   * input/*/*.md
     * https://www.markdownguide.org/basic-syntax/
     * https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax 
------------------
-Add to zorgviewer-ig.json, dependeson smart not working now??? See issue in FHIR chat: https://chat.fhir.org/#narrow/stream/179166-implementers/topic/SMART-on-FHIR.20package.201.2E0.2E0.20is.20STU3.20or.20R4.3F
+
+## Known issues
+
+### dependsOn smart-on-fhir issue
+
+Add to zorgviewer-ig.json, dependesOn smart not working now??? See issue in FHIR chat: https://chat.fhir.org/#narrow/stream/179166-implementers/topic/SMART-on-FHIR.20package.201.2E0.2E0.20is.20STU3.20or.20R4.3F
       {
         "uri": "https://simplifier.net/packages/hl7.fhir.uv.smart-app-launch/1.0.0",
         "packageId": "hl7.fhir.uv.smart-app-launch",
         "version": "1.0.0"
       }
 
-------------------
+### dependsOn hl7.terminology.r3#5.0.0 issue
+
+See issue in FHIR chat: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/ValueSet-appropriateness-score.2Ejson.3A.20Unknown.20IdentifierUse.20c
+
 Exception generating resource /home/michael/eclipse-workspace/zorgviewer-ig/input/resources/ValueSet-ACPTreatmentCodelist::ValueSet/ACPTreatmentCodelist: Error loading /home/michael/.fhir/packages/hl7.terminology.r3#5.0.0/package/CodeSystem-appropriateness-score.json: Unknown IdentifierUse code '?' (01:19.152)
 org.hl7.fhir.exceptions.FHIRException: Error loading /home/michael/.fhir/packages/hl7.terminology.r3#5.0.0/package/CodeSystem-appropriateness-score.json: Unknown IdentifierUse code '?'
 
-I worked around this Exception by replacing use="?" with use="official" in the local cache:
+I worked around this Exception by replacing use="?" with use="official" in the local cache (hl7.terminology.r3#5.0.0):
 1. hl7.terminology.r3#5.0.0/package/CodeSystem-appropriateness-score.json
 2. hl7.terminology.r3#5.0.0/package/ValueSet-clinical-discharge-disposition.json
 3. hl7.terminology.r3#5.0.0/package/ValueSet-appropriateness-score.json
 
-Changing the dependency from 5.0.0 to 4.0.0 also seems to work.
-https://simplifier.net/packages/hl7.terminology.r3/4.0.0
+Changing the dependsOn from (auto) hl7.terminology.r3#5.0.0 to hl7.terminology.r3#4.0.0 also seems to work also.
