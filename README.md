@@ -59,4 +59,4 @@ I worked around this Exception by replacing use="?" with use="official" in the l
 2. hl7.terminology.r3#5.0.0/package/ValueSet-clinical-discharge-disposition.json
 3. hl7.terminology.r3#5.0.0/package/ValueSet-appropriateness-score.json
 
-Changing the dependsOn from (auto) hl7.terminology.r3#5.0.0 to hl7.terminology#5.1.0 also does the job.
+Changing the dependsOn from (auto) hl7.terminology.r3#5.0.0 to hl7.terminology.r3#4.0.0 also seems to do the job.
