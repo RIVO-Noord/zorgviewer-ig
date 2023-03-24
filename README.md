@@ -17,6 +17,31 @@
 (optional)> curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
 > java -jar publisher.jar -ig ig.ini
 ```
+
+## Werkwijze met git
+
+1. Werken in master
+1. Tag als versie klaar voor review (0.M.m-sprintX)
+1. Na review publish via snapshot branch
+```
+git clone https://github.com/RIVO-Noord/zorgviewer-ig.git
+git checkout snapshot
+git merge 0.2.0-sprint3
+```
+1. Zet release label in zorgviewer-ig.json op "sprintX".
+```
+vi input/zorgviewer-ig.json
+git commit -a
+git push
+```
+
+### Trigger FHIR auto-ig builder
+```
+curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger" \
+  -H "Content-type: application/json" \
+  --data '{"ref": "refs/heads/snapshot", "repository": {"full_name": "RIVO-Noord/zorgviewer-ig"}}'
+```
+
 ## Some usefull resources
 
 * Base standards
