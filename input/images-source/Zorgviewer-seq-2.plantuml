@@ -3,20 +3,27 @@ hide footbox
 autonumber
 
 actor Zorgverlener
-participant Zorgviewer
-participant PatientIndex
-participant Toestemming
+participant "Zorgviewer\n~MITZ Uitwisselsysteem" as Zorgviewer
+participant "Toestemming\n~MITZ" as Toestemming
 participant Adressering
 
 activate Zorgviewer
 Zorgverlener->Zorgviewer: ..vervolg opstarten zorgviewer..
-Zorgviewer->PatientIndex: Opvragen ontvankelijke zorgaanbieders (Open autorisatievraag adhv BSN)
-note over PatientIndex: Afhankelijk van toestemming van patient\nvoor delen met de zorgverlener.
-PatientIndex->Toestemming: Verifieren Toestemming
-Toestemming-->PatientIndex: Yes/no
-PatientIndex->Adressering: OPTIONEEL: get Endpoints voor zorgaanbieders (bronsysteem)
-Adressering-->PatientIndex: Endpoints
-PatientIndex-->Zorgviewer: Lijst ontvankelijke zorgaanbieders (incl Endpoints)
+Zorgviewer->Toestemming: Opvragen ontvankelijke zorgaanbieders (Open autorisatievraag adhv BSN)\n""<bronsysteem-toestemming-base>/Consent?identifier=<BSN>&role=<rol>""
+note over Toestemming: Afhankelijk van toestemming van patient\nvoor "delen met de zorgverlener".
+activate Toestemming
+Toestemming-->Zorgviewer: Lijst ontvankelijke zorgaanbieders (Organization)\nBundle met ""[[StructureDefinition-Consent.html Consent]]""
+deactivate Toestemming
+
+Zorgviewer->Adressering: Endpoints opvragen adhv Organization\n""<bronsysteem-adressering-base>/Endpoint?organization=""
+note over Toestemming
+  Consent.organization: e.g. UMCG
+  Endpoint opvragen bij Organization
+end note
+activate Adressering
+Adressering-->Zorgviewer: Bundle met ""[[StructureDefinition-Endpoint.html Endpoint]]""
+deactivate Adressering
+
 deactivate Zorgviewer
 
 @enduml
