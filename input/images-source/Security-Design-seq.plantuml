@@ -12,68 +12,80 @@ box "Zorgviewer"
   participant "Zorgviewer\nFrontend" as ZVFE
   participant "Zorgviewer\nBackend" as ZVBE
 end box
-participant "Toestemming\nPatientIndex\nLocalisatie" as Toestemming
+participant "Toestemming\n~ MITZ" as Toestemming
 box "Ander bronsysteem (meerdere)"
   participant "Ontsluiten\nbronsysteem" as AOBron
   participant "Bronsysteem" as ABron
 end box
 
-Zorgverlener->Host: start EPD
-Zorgverlener->Host: inloggen met lokale identiteit
-Host->Authenticatie
-note left Authenticatie
-  CHECK: authenticatie
-end note
-destroy Authenticatie
-Zorgverlener->Host: selecteer patient
-note left Host
-  CHECK: behandelrelatie
-end note
-destroy Host
-Zorgverlener->Host: start Zorgviewer
-destroy Host
-note left Host
-  CHECK: wel of niet "knop" tonen
-end note
+group Start
+  Zorgverlener->Host: start EPD
+  Zorgverlener->Host: inloggen met lokale identiteit
+  Host->Authenticatie
+  note left Authenticatie
+    CHECK: authenticatie
+    Welke eise stellen we aan zorgaanbieder?
+  end note
+  destroy Authenticatie
+  Zorgverlener->Host: selecteer patient
+  note left Host
+    CHECK: behandelrelatie
+  end note
+  destroy Host
+end
 
-Host->ZVFE: start met context dmv SMART-on-FHIR
-ZVFE<->Authenticatie: SMART-on-FHIR handshake
-note left ZVFE
-  CHECK: URL check (iss)
-  CHECK: token signing
-end note
-destroy ZVFE
-ZVFE->ZVBE: verzamel gegevens
-ZVBE->EBron: opvragen gebruiker en patient identiteit details
-note left EBron
-  CHECK: access token
-  CHECK: ip/ACL
-  CHECK: TLS (+client cert?)
-end note
-destroy EBron
-ZVBE->ZVFE: toon gebruiker en patient identiteit details
+group Start Zorgviewer
+  Zorgverlener->Host: start Zorgviewer
+  destroy Host
+  note left Host
+    CHECK: wel of niet "knop" tonen
+  end note
+  Host->ZVFE: start met context dmv SMART-on-FHIR
+  ZVFE<->Authenticatie: SMART-on-FHIR handshake
+  note left ZVFE
+    CHECK: URL check (iss)
+    CHECK: token signing
+  end note
+  destroy ZVFE
+end
 
-ZVBE->Toestemming: vraag endpoints op basis van toestemming
-note left Toestemming
-  CHECK: ip/ACL
-  CHECK: TLS
-end note
-destroy Toestemming
+group Huidige patient en gebruiker
+  ZVFE->ZVBE: opvragen huidige context (gebruiker en patient) details
+  ZVBE->EBron: opvragen gebruiker en patient identiteit details
+  note left EBron
+    CHECK: access token
+    CHECK: ip/ACL
+    CHECK: TLS (+client cert?)
+  end note
+  destroy EBron
+  ZVBE-->ZVFE: toon gebruiker en patient identiteit details
+end
 
-ZVBE->AOBron: opvragen gegevens
-note left AOBron
-  CHECK: ip/ACL
-  CHECK: TLS
-end note
-destroy AOBron
-AOBron->ABron: opvragen gegevens
-note left ABron
-  CHECK: ip/ACL
-  CHECK: backend token
-  CHECK: TLS +client cert
-end note
-destroy ABron
-
-ZVBE->ZVFE: toon geaggregeerde gegevens
+group Patient dossier
+  ZVBE->Toestemming: vraag toestemmingen en endpoints op basis van rol
+  note left Toestemming
+    Eerst vaste rol "arts AGB geregistreerd"
+    CHECK: ip/ACL
+    CHECK: TLS
+  end note
+  destroy Toestemming
+  ZVBE->AOBron: opvragen (BgZ + correspondentie) gegevens
+  note left AOBron
+    CHECK: ip/ACL
+    CHECK: TLS
+  end note
+  destroy AOBron
+  AOBron->ABron: opvragen (BgZ + correspondentie) gegevens
+  note left ABron
+    CHECK: ip/ACL
+    CHECK: backend token
+    CHECK: TLS +client cert
+  end note
+  destroy ABron
+  ABron->Toestemming: gesloten vraag
+  destroy ABron
+  ABron-->ZVBE: gegevens
+  ZVBE-->ZVFE: toon geaggregeerde gegevens
+end
 
 @enduml
