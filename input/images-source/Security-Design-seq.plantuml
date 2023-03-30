@@ -47,6 +47,8 @@ ZVFE->ZVBE: verzamel gegevens
 ZVBE->EBron: opvragen gebruiker en patient identiteit details
 note left EBron
   CHECK: access token
+  CHECK: ip/ACL
+  CHECK: TLS (+client cert?)
 end note
 destroy EBron
 ZVBE->ZVFE: toon gebruiker en patient identiteit details
@@ -68,7 +70,7 @@ AOBron->ABron: opvragen gegevens
 note left ABron
   CHECK: ip/ACL
   CHECK: backend token
-  CHECK: TLS + client cert
+  CHECK: TLS +client cert
 end note
 destroy ABron
 
