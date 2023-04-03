@@ -6,7 +6,7 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.
 
 ### Bronsysteem herkennen
 
-De Zorgviewer-backend **ZOU** na bevragen van het bronsysteem aan elk resultaat resource een meta-tag **MOETEN** toevoegen met de VEKTIZ code van de zorgaanbieder, zodat dit kan worden gebruikt in de presentatie in de Zorgviewer-frontend.
+De Zorgviewer-backend **ZOU** na bevragen van het bronsysteem aan elk resultaat resource een meta-tag **MOETEN** toevoegen met de VEKTIS code van de zorgaanbieder, zodat dit kan worden gebruikt in de presentatie in de Zorgviewer-frontend.
 
 Toevoegen aan elke response, dus per resource (bij een read) of per Bundle (bij een search):
 ```
