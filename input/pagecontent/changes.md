@@ -3,7 +3,8 @@
 
 |Versie|Datum|Changes|
 |---|---|---|
-|0.3.0-CI build|vanaf 24-mar-2023|Resultaat sprint 4<br/>* Behandelaanwijzing (Consent) obv ACP - draft|
+|0.4.0-CI build|current|Resultaat sprint 5|
+|0.3.0-sprint4|3-apr-2023|Resultaat sprint 4<br/>* Behandelaanwijzing (Consent) obv ACP - draft<br>* Sequence diagrammen bijgewerkt<br>* Bron zorgaanbieder meta tag<br>* Correspondentie - draft|
 |0.2.0-sprint3|24-mar-2023|Resultaat sprint 3<br/>* Opstarten Zorgviewer - afgestemd<br/>* Correspondentie onderdelen, o.a. DocumentReference - draft<br/>* Security Design - draft|
 |0.1.0-sprint1|tot 17-feb-2023|Resultaat sprint 1 en 2<br/>* Initiele vulling<br/>* Opstarten Zorgviewer draft<br/>* Requirements review door productowner|
 
