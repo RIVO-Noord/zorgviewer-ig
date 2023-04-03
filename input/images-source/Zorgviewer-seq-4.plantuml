@@ -11,47 +11,52 @@ end box
 
 activate Zorgviewer
 Zorgverlener->Zorgviewer: ..vervolg bepalen zorgaanbieders..
-Zorgviewer->Zorgviewer: LOOP: voor iedere zorgaanbieder ([[Endpoint-UMCG.html Bronsysteem ontsluiting endpoint]])
-activate Zorgviewer
-Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base/Patient?identifier=<BSN>""
-activate Bron
-Bron->Bron++ : check extern-access-token\njwt attributen compleet\nen ondertekening door geaccepteerde zorgaanbieder?
-destroy Bron
-Bron->Logging : Log actie
-Bron-->Zorgviewer : ""[[StructureDefinition-Patient.html Patient]]""
-deactivate Bron
-Zorgviewer->Zorgviewer: LOOP: formuleren documenten gegevensverzoek(request)
-activate Zorgviewer
-Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/DocumentReference?subject=<patient_fhir_id>""
-activate Bron
-Bron->Bronsysteem : gegevensverzoek met generiek back-end account
-activate Bronsysteem
-Bronsysteem->Logging : Log actie
-Bronsysteem->Bron: fhir resources (DocumentReference Bundle)
-deactivate Bronsysteem
-Bron-->Zorgviewer: Bundle met ""[[StructureDefinition-DocumentReference.html DocumentReference]]""
-deactivate Bron
-Zorgviewer->Zorgviewer: samenvoegen
-deactivate Zorgviewer
+loop
+    Zorgviewer->Zorgviewer: voor iedere zorgaanbieder ([[Endpoint-UMCG.html Bronsysteem ontsluiting endpoint]])
+    activate Zorgviewer
+    Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base/Patient?identifier=<BSN>""
+    activate Bron
+    Bron->Bron : verkrijgen extern-access-token
+    Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
+    activate Bronsysteem
+    Bronsysteem->Bron: Patient fhir resources
+    deactivate Bronsysteem
+    Bron-->Zorgviewer : ""[[StructureDefinition-Patient.html Patient]]""
+    deactivate Bron
+    Zorgviewer->Zorgviewer: formuleren documenten gegevensverzoek(request)
+    Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/DocumentReference?patient=<patient_fhir_id>""
+    activate Bron
+    Bron->Bron : verkrijgen extern-access-token
+    Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
+    activate Bronsysteem
+    Bronsysteem->Bron: fhir resources (DocumentReference Bundle)
+    deactivate Bronsysteem
+    Bron-->Zorgviewer: Bundle met ""[[StructureDefinition-DocumentReference.html DocumentReference]]""
+    deactivate Bron
+    Zorgviewer->Zorgviewer: samenvoegen
+    deactivate Zorgviewer
+end
 Zorgviewer->Zorgviewer: toon documenten lijst
 Zorgviewer-->Zorgverlener
 deactivate Zorgviewer
-
+group wacht op gebruikers actie
+...
+end
 Zorgverlener-->Zorgviewer: selecteer document
 activate Zorgviewer
-Zorgviewer->Bron: gegevensverzoek met extern-access-token\n""<bronsysteem-ontsluiting-base>/Binary/<binary-id>""\nurl komt uit DocumentReference.content.attachement.url
+Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/Binary/<binary-id>""\nurl komt uit DocumentReference.content.attachement.url
 note right Zorgviewer
-    LET OP: [[http://hl7.org/fhir/STU3/binary.html#rest Accept Header]]
+    Stuur [[http://hl7.org/fhir/STU3/binary.html#rest Accept Header]]
+    application/fhir+xml of application/fhir+json   
 end note
 activate Bron
-Bron->Bronsysteem : gegevensverzoek met generiek back-end account
+Bron->Bron : verkrijgen extern-access-token
+Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
 activate Bronsysteem
-Bronsysteem->Logging : Log actie
 Bronsysteem->Bron: Binary
 deactivate Bronsysteem
 Bron-->Zorgviewer: Binary
 deactivate Bron
-deactivate Zorgviewer
 Zorgviewer->Zorgviewer: toon document
 Zorgviewer-->Zorgverlener
 deactivate Zorgviewer

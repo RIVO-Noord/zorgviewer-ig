@@ -75,9 +75,9 @@ Het idee van de regionale zorgpaden is om de zorg op de juiste plek bij de juist
 * De follow-up wordt uitgevoerd in de 2e lijn.
 
 #### Advanced Care Planning
-ACP wordt ook wel het proactieve zorgplan genoemd. Een plan waarin de wensen en behoeften van de patiënt worden beschreven. In de leidraad ACP Leidraad proactieve zorgplanning (advance care planning) - Palliaweb wordt het proces van het verkrijgen van informatie rondom ACP uitgelegd. In het ACP staan zaken rondom de wilsbekwaamheid, wettelijke vertegenwoordiging, doelen van behandeling en behandelgrenzen. Behandelgrenzen beschrijven onder andere reanimatiebeleid.
+Advanced Care Planning (ACP) wordt ook wel het proactieve zorgplan genoemd. Een plan waarin de wensen en behoeften van de patiënt worden beschreven. In de ACP Leidraad proactieve zorgplanning (advance care planning) van Palliaweb wordt het proces van het verkrijgen van informatie rondom ACP uitgelegd. In het ACP staan zaken rondom de wilsbekwaamheid, wettelijke vertegenwoordiging, doelen van behandeling en behandelgrenzen. Behandelgrenzen beschrijven onder andere het reanimatiebeleid.
 
-Het ACP beschrijft ook meer informatie over de patiëntencontext in de Gegevensset Passende Zorg. Deze gegevensset legt de gegevensset oncologie algemeen en de mensgeboden set. De set komt ook overeen met de basisgegevensset zorg (BgZ) met een aantal aanvullingen:
+Het ACP beschrijft ook informatie over de patiëntencontext in de Gegevensset Passende Zorg. Deze gegevensset heeft overeenkomsten met de gegevensset oncologie algemeen (GOA) en de mensgeboden set (MGS). De set komt ook overeen met de basisgegevensset zorg (BgZ) met een aantal aanvullingen:
 * Sociale context
     * Gezinssamenstelling
     * Beroep
@@ -91,3 +91,5 @@ Het ACP beschrijft ook meer informatie over de patiëntencontext in de Gegevenss
     * Plaats van zorg
     * Plaats van overlijden
 * Functioneel en somatisch (specifieke vragenlijsten / metingen)
+
+Vanuit project Zorgviewer is de ACP deels in scope, namelijk de BehandelAanwijzing met een aanvulling in de codelijst. [De BehandelingCodelijst bestaat uit vijf waarden](https://zibs.nl/wiki/BehandelAanwijzing-v3.1(2017NL)#BehandelingToegestaanCodelijst). Deze is nu uitgebreid met drie andere waarden, zoals landelijk afgesproken door de palliatieve zorg. 

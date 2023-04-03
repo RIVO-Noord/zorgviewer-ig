@@ -1,17 +1,12 @@
 
-### 0.1
+### Versies
 
-**0.1.1-CI Build** - 17-feb-2023
-
-* work-in-progress
-
-**0.1.0-sprint1** - 17-feb-2023
-
-* Voorgelegd ter review aan de productowner : index page en requirements pages van [publicatie](https://vdzel.home.xs4all.nl/zorgviewer-ig/)
-
-**0.1.0-CI Build** - up to 17-feb-2023
-
-* initieel
+|Versie|Datum|Changes|
+|---|---|---|
+|0.4.0-CI build|current|Resultaat sprint 5|
+|0.3.0-sprint4|3-apr-2023|Resultaat sprint 4<br/>* Behandelaanwijzing (Consent) obv ACP - draft<br>* Sequence diagrammen bijgewerkt<br>* Bron zorgaanbieder meta tag<br>* Correspondentie - draft|
+|0.2.0-sprint3|24-mar-2023|Resultaat sprint 3<br/>* Opstarten Zorgviewer - afgestemd<br/>* Correspondentie onderdelen, o.a. DocumentReference - draft<br/>* Security Design - draft|
+|0.1.0-sprint1|tot 17-feb-2023|Resultaat sprint 1 en 2<br/>* Initiele vulling<br/>* Opstarten Zorgviewer draft<br/>* Requirements review door productowner|
 
 ### Versienummering
 
@@ -24,13 +19,13 @@ Voorbeelden:
 * 0.x.x-CIbuild - De "nightly" build
 * 0.1.0-sprint1 - De versie (sprint snapshot) ten behoeve van sprint #1
 * 0.2.0-sprint2 - De versie (sprint snapshot) ten behoeve van sprint #2
-* 0.2.20-sprint2 - sprint2 met verdere verduidelijking of foutjes adhv vragen
+* 0.2.20-sprint2 - sprint #2 met verdere verduidelijking of foutjes adhv vragen
 * ...
 * 1.0.0-mvp2 - De finale versie
 
 En verder:
 
-1. (tag) noemen zoals we de sprint noemen in DevOps.
+1. Git tag noemen zoals we de sprint noemen in DevOps.
 1. Onder de titels van paragrafen "(draft)" of "(sprint1)".
 1. In changelog, deze pagina van de IG, per sprint een overzichtje van paragrafen waar iets is gewijzigd en zichtbaar als (new-content / ligt groen gearceerd waar mogelijk).
 1. (FHIR) Artifacts hebben eigen status.

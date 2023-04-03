@@ -2,7 +2,7 @@
     "resourceType": "ImplementationGuide",
     "id": "hl7.fhir.nl.zorgviewer-ig",
     "url": "http://hl7.nl/fhir/zorgviewer/ImplementationGuide/zorgviewer-ig",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "name": "zorgviewer-ig",
     "title": "RIVO Noord Zorgviewer MVP2 Implementation Guide",
     "status": "draft",
@@ -32,6 +32,11 @@
     "packageId": "hl7.fhir.nl.zorgviewer",
     "fhirVersion": [ "3.0.2" ],
     "dependsOn": [
+      {
+        "uri": "https://simplifier.net/packages/hl7.terminology.r3/4.0.0",
+        "packageId": "hl7.terminology.r3",
+        "version": "4.0.0"
+      },
       {
         "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.8",
         "packageId": "nictiz.fhir.nl.stu3.zib2017",
@@ -189,7 +194,7 @@
       "parameter": [
         {
           "code" : "releaselabel",
-          "value": "sprint3"
+          "value": "sprint4"
         },
         {
           "code" : "copyrightyear",

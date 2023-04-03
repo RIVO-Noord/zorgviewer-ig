@@ -9,10 +9,10 @@ cloud "cloud" {
 node "Epic huis" {
  [Hyperspace] <<Zorgviewer\nHost>>
  [Epic Auth] <<Authenticatie>>
- [b.v. IRIS] <<Bronsysteem\nontsluiting>> as IRIS
+ [IRIS of Rhapsody] <<Bronsysteem\nontsluiting>> as Broker
  [Epic] <<Bronsysteem\n& Logging>>
  [Hyperspace]-->[Epic]
- [IRIS]-->[Epic]
+ [Broker]-->[Epic]
  [Epic Auth]-->[Epic]
 }
 
@@ -45,7 +45,7 @@ node "Zorgviewer Host Los" <<future>> {
 [Zorgviewer]-d->[Zorgplatform\nAuth] : 2. wie?
 [Zorgviewer]-u->[Toestemming] : 3. waar?
 [Zorgviewer]->[Zorgplatform] : 4. bevragen
-[Zorgviewer]->[IRIS] : 4. bevragen
+[Zorgviewer]->[Broker] : 4. bevragen
 [Zorgviewer]-u->[Behandelplan] : 5. filters
 
 @enduml

@@ -1,0 +1,50 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/TreatmentDirective",
+    "language": "en",
+    "name": "TreatmentDirective",
+    "title": "TreatmentDirective",
+    "status": "draft",
+    "description": "The minimal ACP TreatmentDirective (Consent) for the Zorgviewer",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Consent",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Consent.extension:treatment",
+                "path": "Consent.extension",
+                "sliceName": "treatment",
+                "mustSupport": true
+            },
+            {
+                "id": "Consent.extension:treatment.valueCodeableConcept:valueCodeableConcept",
+                "path": "Consent.extension.valueCodeableConcept",
+                "sliceName": "valueCodeableConcept",
+                "binding": {
+                    "strength": "extensible",
+                    "description": "The medical treatment to which the treatment instruction applies.",
+                    "valueSetReference": {
+                        "reference": "http://hl7.nl/fhir/zorgviewer/ValueSet/ACPTreatmentCodelist",
+                        "display": "ACPTreatmentCodelist"
+                    }
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Consent.extension:comments",
+                "path": "Consent.extension",
+                "sliceName": "comments",
+                "mustSupport": true
+            },
+            {
+                "id": "Consent.modifierExtension:treatmentPermitted",
+                "path": "Consent.modifierExtension",
+                "sliceName": "treatmentPermitted",
+                "mustSupport": true
+            }
+        ]
+    }
+}

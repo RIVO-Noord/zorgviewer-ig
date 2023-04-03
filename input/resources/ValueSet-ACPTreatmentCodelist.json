@@ -1,0 +1,73 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ACPTreatmentCodelist",
+    "meta": {
+        "profile":  [
+            "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+        ]
+    },
+    "url": "http://hl7.nl/fhir/zorgviewer/ValueSet/ACPTreatmentCodelist",
+    "name": "ACPTreatmentCodelist",
+    "title": "ACP TreatmentCodelist",
+    "status": "active",
+    "experimental": false,
+    "description": "ACP Treatment Codelist",
+    "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "concept":  [
+                    {
+                        "code": "32485007",
+                        "display": "Hospital admission (procedure)",
+                        "designation":  [
+                            {
+                                "language": "nl-NL",
+                                "use": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "900000000000013009",
+                                    "display": "Synonym"
+                                },
+                                "value": "opname in ziekenhuis"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "281789004",
+                        "display": "Antibiotic therapy (procedure)",
+                        "designation":  [
+                            {
+                                "language": "nl-NL",
+                                "use": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "900000000000013009",
+                                    "display": "Synonym"
+                                },
+                                "value": "antibiotische therapie"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "431415002",
+                        "display": "Management of internal defibrillation (procedure)",
+                        "designation":  [
+                            {
+                                "language": "nl-NL",
+                                "use": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "900000000000013009",
+                                    "display": "Synonym"
+                                },
+                                "value": "management van interne defibrillatie"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "valueSet": [ "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.1.1--20171231000000" ]
+            }
+        ]
+    }
+}
