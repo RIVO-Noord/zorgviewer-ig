@@ -1,6 +1,7 @@
 {% include profile-note.md %}
 
 ### Document soorten herkennen
+Alle beschikbare documenten worden getoond op het scherm met daarbij een omschrijving en LOINC-code. Dit is in eerste instantie een 1 op 1 weergave uit het betreffende EPD en is niet gegroepeerd. 
 
 |class (higher level grouping)|type (http://loinc.org)|descriptions|
 |--|--|--|
