@@ -18,6 +18,8 @@
 * Nurse Note (34746-8)
 * Discharge Instructions (74213-0)
 * Risk assessment and screening note (75492-9)
+* OR Note (11504-8)
+* Miscellaneous Notes (34109-9)
 
 Zie het Excelbestand tab "classCode+decision tree" voor LOINC codes:
 [Nationale XDS metadataset](https://nictiz.nl/standaarden/overzicht-van-standaarden/xds-metadata/)

@@ -9,6 +9,9 @@ Op deze pagina volgen de checklists die als handvat kunnen worden gebruikt als j
 1. Client Certificate (UMCG) aanvragen
 1. Voer de Ontsluiten Bronsysteem tests uit op dit FHIR endpoint
 1. Meld dit FHIR endpoint aan bij RIVO-Noord(?)
+1. [DocumentReference.type](StructureDefinition-DocumentReference.html)
+    * *from I HNO 34033 – Category List INP 5010 en mappings in FHIR AIP via CDA_NOTE_TYPE_TBL*
+    * *You can map additional LOINCs via the EXM activity. EPT 20208 (hospital-built list) - LOINC code.*
 1. ...
 
 #### Opstarten van de Zorgviewer vanuit eigen EPD
