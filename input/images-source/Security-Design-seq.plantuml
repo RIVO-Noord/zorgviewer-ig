@@ -12,42 +12,56 @@ box "Zorgviewer"
   participant "Zorgviewer\nFrontend" as ZVFE
   participant "Zorgviewer\nBackend" as ZVBE
 end box
-participant "Toestemming\n~ MITZ" as Toestemming
+participant "Toestemming\n~MITZ" as Toestemming
+participant Adressering
 box "Ander bronsysteem (meerdere)"
   participant "Ontsluiten\nbronsysteem" as AOBron
   participant "Bronsysteem" as ABron
 end box
 
+note left Host
+  CHECK: Kwalificatie organisatie
+end note
+
 group Start
   Zorgverlener->Host: start EPD
+  activate Zorgverlener
+  activate Host
   Zorgverlener->Host: inloggen met lokale identiteit
   Host->Authenticatie
-  note left Authenticatie
+  Authenticatie->Authenticatie
+  note left
     CHECK: authenticatie
     Welke eise stellen we aan zorgaanbieder?
   end note
   destroy Authenticatie
   Zorgverlener->Host: selecteer patient
-  note left Host
+  Host->Host++
+  note left
     CHECK: behandelrelatie
   end note
   destroy Host
 end
 
+...
+
 group Start Zorgviewer
   Zorgverlener->Host: start Zorgviewer
+  Host->Host++
   destroy Host
-  note left Host
+  note left
     CHECK: wel of niet "knop" tonen
   end note
   Host->ZVFE: start met context dmv SMART-on-FHIR
-  note left ZVFE
+  activate ZVFE
+  ZVFE->ZVFE++
+  note left
     CHECK: URL check (iss)
     CHECK: token signing
   end note
   destroy ZVFE
   ZVFE<->Authenticatie: SMART-on-FHIR handshake
-  note left ZVFE
+  note left
     CHECK: client ID?
   end note
   destroy Authenticatie
@@ -55,6 +69,7 @@ end
 
 group Huidige patient en gebruiker
   ZVFE->ZVBE: opvragen huidige context (gebruiker en patient) details
+  activate ZVBE
   ZVBE->EBron: opvragen gebruiker en patient identiteit details
   note left EBron
     CHECK: access token
@@ -66,33 +81,46 @@ group Huidige patient en gebruiker
 end
 
 group Patient dossier
-  ZVBE->Toestemming: vraag toestemmingen en endpoints op basis van rol
+  ZVBE->Toestemming: vraag patient toestemmingen op
   note left Toestemming
-    MITZ Open autorisatievraag
+    ~MITZ Open autorisatievraag
     Eerst vaste rol "arts AGB geregistreerd"
     CHECK: ip/ACL
     CHECK: TLS
   end note
   destroy Toestemming
+  ZVBE->Adressering: vraag endpoints van organizaties obv de toestemmingen
   loop Voor ieder endpoint
     ZVBE->AOBron: opvragen (BgZ + correspondentie) gegevens
-    note left AOBron
+    activate AOBron
+    AOBron->AOBron++
+    note left
       CHECK: ip/ACL
       CHECK: TLS
     end note
     destroy AOBron
     AOBron->ABron: opvragen (BgZ + correspondentie) gegevens
-    note left ABron
+    activate ABron
+    ABron->ABron++
+    note left
       CHECK: ip/ACL
       CHECK: backend token
       CHECK: TLS +client cert
     end note
     destroy ABron
-    ABron->Toestemming: MITZ Gesloten autorisatie vraag
+    ABron->Toestemming: ~MITZ Gesloten autorisatie vraag
+    ABron->ABron++
+    note left
+      CHECK: Vraag gesteld zonder MITZ toestemming
+    end note
     destroy ABron
-    ABron-->ZVBE: gegevens
+    ABron-->AOBron: gegevens
+    deactivate ABron
+    AOBron-->ZVBE: gegevens
+    deactivate AOBron
   end
   ZVBE-->ZVFE: toon geaggregeerde gegevens
+  deactivate ZVBE
+  deactivate ZVFE
 end
-
 @enduml
