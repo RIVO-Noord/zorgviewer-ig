@@ -1,0 +1,75 @@
+{
+    "resourceType": "Consent",
+    "id": "81eacbcf-6d60-436a-a78f-e2962839a42f",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"
+        ]
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Consent resource for treatment directive:</h3><ul><li><p><strong>Patient:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Treatment permitted:</strong> &#x27;Ja, maar met beperkingen&#x27;</p></li><li><p><strong>Verified With:</strong> &#x27;Toelichting: Eerst overleg met echtgenote&#x27;</p></li><li><p><strong>Treatment:</strong> &#x27;Artificial respiration (procedure)&#x27;</p></li><li><p><strong>Start:</strong> &#x27;30-9-2022 10:33&#x2B;0200&#x27;</p></li></ul></div>"
+    },
+    "extension": [
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "40617009",
+                        "display": "Artificial respiration (procedure)"
+                    }
+                ],
+                "text": "Kunstmatige beademing"
+            }
+        }
+    ],
+    "modifierExtension": [
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4",
+                        "code": "JA_MAAR",
+                        "display": "Ja, maar met beperkingen"
+                    }
+                ],
+                "text": "Behandeling toegestaan en/of wenselijk maar met beperkingen die dan ook vermeld moeten worden."
+            }
+        }
+    ],
+    "status": "active",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "11291000146105",
+                    "display": "Treatment instructions"
+                }
+            ],
+            "text": "Treatment instructions"
+        }
+    ],
+    "patient": {
+        "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+        "display": "Johan XXX_Helleman_Afblijven"
+    },
+    "period": {
+        "start": "2022-09-30T10:33:00+02:00"
+    },
+    "policyRule": "http://wetten.overheid.nl/",
+    "except": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions",
+                    "valueString": "Toelichting: Eerst overleg met echtgenote"
+                }
+            ],
+            "type": "deny"
+        }
+    ]
+}
