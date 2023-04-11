@@ -3,124 +3,132 @@ hide footbox
 autonumber
 
 actor Zorgverlener
-box "Eigen systeem"
+box "Zorgaanbieder eigen systeem"
   participant "Zorgviewer\nHost" as Host
   participant Authenticatie
   participant "Eigen\nbronsysteem" as EBron
 end box
-box "Zorgviewer"
-  participant "Zorgviewer\nFrontend" as ZVFE
-  participant "Zorgviewer\nBackend" as ZVBE
+
+!pragma teoz true
+box "Zorgviewer Netwerk" #LightGreen
+  box "Zorgviewer" #SpringGreen
+    participant "Zorgviewer\nFrontend" as ZVFE
+    participant "Zorgviewer\nBackend" as ZVBE
+  end box
+  participant "Toestemming\n~MITZ" as Toestemming
+  participant Adressering
 end box
-participant "Toestemming\n~MITZ" as Toestemming
-participant Adressering
-box "Ander bronsysteem (meerdere)"
+
+box "Andere zorgaanbieder bronsysteem\n(meerdere)"
   participant "Ontsluiten\nbronsysteem" as AOBron
   participant "Bronsysteem" as ABron
 end box
 
-note left Host
-  CHECK: Kwalificatie organisatie
+note over Host
+  CHECK: Zorgaanbieder is deelnermer RIVO-Noord
+  CHECK: Zorgaanbieder staat in [[https://www.nen.nl/certificatie-en-keurmerken-nen-7510 NEN 7510 register]]
 end note
 
-group Start
-  Zorgverlener->Host: start EPD
-  activate Zorgverlener
-  activate Host
-  Zorgverlener->Host: inloggen met lokale identiteit
-  Host->Authenticatie
-  Authenticatie->Authenticatie
-  note left
-    CHECK: authenticatie
-    Welke eise stellen we aan zorgaanbieder?
-  end note
-  destroy Authenticatie
-  Zorgverlener->Host: selecteer patient
-  Host->Host++
-  note left
-    CHECK: behandelrelatie
-  end note
-  destroy Host
-end
+== Start Zorgviewer Host ==
+
+Zorgverlener->Host: start EPD
+activate Zorgverlener
+activate Host
+Zorgverlener->Host: inloggen met lokale identiteit
+Host->Authenticatie
+Authenticatie->Authenticatie
+note left
+  CHECK: authenticatie
+end note
+destroy Authenticatie
+Zorgverlener->Host: selecteer patient
+Host->Host++
+note left
+  CHECK: behandelrelatie
+end note
+destroy Host
 
 ...
 
-group Start Zorgviewer
-  Zorgverlener->Host: start Zorgviewer
-  Host->Host++
-  destroy Host
-  note left
-    CHECK: wel of niet "knop" tonen
-  end note
-  Host->ZVFE: start met context dmv SMART-on-FHIR
-  activate ZVFE
-  ZVFE->ZVFE++
-  note left
-    CHECK: URL check (iss)
-    CHECK: token signing
-  end note
-  destroy ZVFE
-  ZVFE<->Authenticatie: SMART-on-FHIR handshake
-  note left
-    CHECK: client ID?
-  end note
-  destroy Authenticatie
-end
+== Start Zorgviewer ==
 
-group Huidige patient en gebruiker
-  ZVFE->ZVBE: opvragen huidige context (gebruiker en patient) details
+Zorgverlener->Host: start Zorgviewer
+Host->Host++
+destroy Host
+note left
+  CHECK: wel of niet "knop" tonen
+end note
+Host->ZVFE: start met context
+activate ZVFE
+ZVFE->ZVFE++
+note left
+  CHECK: whitelist
+  CHECK: token validatie
+end note
+destroy ZVFE
+ZVFE<->Authenticatie: authenticatie handshake
+note left
+  CHECK: applicatie
+end note
+destroy Authenticatie
+
+== Huidige patient en gebruiker ==
+
+group (OPT) als niet al in context
+  ZVFE-->ZVBE: opvragen huidige gebruiker\nen patient details
   activate ZVBE
-  ZVBE->EBron: opvragen gebruiker en patient identiteit details
-  note left EBron
+  ZVBE-->EBron: (OPT) opvragen gebruiker\nen patient details
+  note left
     CHECK: access token
-    CHECK: ip/ACL
-    CHECK: TLS (+client cert?)
+    CHECK: client certificate
   end note
   destroy EBron
-  ZVBE-->ZVFE: toon gebruiker en patient identiteit details
 end
+ZVFE->ZVFE: toon gebruiker en patient\nidentiteit details
 
-group Patient dossier
-  ZVBE->Toestemming: vraag patient toestemmingen op
-  note left Toestemming
-    ~MITZ Open autorisatievraag
-    Eerst vaste rol "arts AGB geregistreerd"
+== Patient dossier ==
+
+ZVBE->Toestemming: vraag patient toestemmingen op
+note right
+  ~MITZ Open autorisatievraag
+  binnen besloten Zorgviewer netwerk
+end note
+destroy Toestemming
+ZVBE->Adressering: vraag endpoints op van organizaties\nobv de toestemmingen
+note right
+  binnen besloten Zorgviewer netwerk
+end note
+destroy Adressering
+loop Voor ieder endpoint
+  ZVBE->AOBron: opvragen gegevens
+  activate AOBron
+  AOBron->AOBron++
+  note left
     CHECK: ip/ACL
-    CHECK: TLS
   end note
-  destroy Toestemming
-  ZVBE->Adressering: vraag endpoints van organizaties obv de toestemmingen
-  loop Voor ieder endpoint
-    ZVBE->AOBron: opvragen (BgZ + correspondentie) gegevens
-    activate AOBron
-    AOBron->AOBron++
-    note left
-      CHECK: ip/ACL
-      CHECK: TLS
-    end note
-    destroy AOBron
-    AOBron->ABron: opvragen (BgZ + correspondentie) gegevens
-    activate ABron
-    ABron->ABron++
-    note left
-      CHECK: ip/ACL
-      CHECK: backend token
-      CHECK: TLS +client cert
-    end note
-    destroy ABron
-    ABron->Toestemming: ~MITZ Gesloten autorisatie vraag
-    ABron->ABron++
-    note left
-      CHECK: Vraag gesteld zonder MITZ toestemming
-    end note
-    destroy ABron
-    ABron-->AOBron: gegevens
-    deactivate ABron
-    AOBron-->ZVBE: gegevens
-    deactivate AOBron
-  end
-  ZVBE-->ZVFE: toon geaggregeerde gegevens
-  deactivate ZVBE
-  deactivate ZVFE
+  destroy AOBron
+  AOBron->ABron: opvragen gegevens
+  activate ABron
+  ABron->ABron++
+  note left
+    CHECK: ip/ACL
+    CHECK: backend token
+    CHECK: client certificate
+  end note
+  destroy ABron
+  ABron->Toestemming: ~MITZ Gesloten autorisatie vraag
+  ABron->ABron++
+  note left
+    CHECK: vraag gesteld zonder MITZ toestemming
+  end note
+  destroy ABron
+  ABron-->AOBron: gegevens
+  deactivate ABron
+  AOBron-->ZVBE: gegevens
+  deactivate AOBron
 end
+ZVBE-->ZVFE: toon geaggregeerde gegevens
+deactivate ZVBE
+deactivate ZVFE
+
 @enduml
