@@ -2,7 +2,16 @@
 
 ### FMS Adequate Registratie
 
-Als bron voor de must-support flags is gebruikt: [Fit-gap analyse probleem](https://amigo.nictiz.nl/uploads/e4a96295-3715-439b-804a-024ca1d7fadf/fit_gap_analyse_Probleeem.pdf)
+Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap analyse probleem](https://amigo.nictiz.nl/uploads/e4a96295-3715-439b-804a-024ca1d7fadf/fit_gap_analyse_Probleeem.pdf)
+
+### User-Interface guidance
+
+Dit figuur is opgebouwd uit grofweg 3 onderdelen:
+1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
+1. een schets van de tabel met labels en sortering informatie
+1. in geeltjes eventuele extra toelichting of regels
+
+{% include img.html img="ui-condition.png" caption="User-Interface-Condition Guidance" width="100%" %}
 
 ### Zoeken naar codes
 

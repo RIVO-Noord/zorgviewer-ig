@@ -66,7 +66,7 @@
 #### Toestemming
 
 **Definitie**: De expliciete specifieke, vrijgegeven toestemming tot het beschikbaar stellen van zorginformatie door de patiënt (bron: AVG)
-{% include img.html img="mitz-toestemming.png" caption="Figure 2: uit MITZ Toestemming Documentatie" %}
+{% include img.html img="mitz-toestemming.png" caption="Bron: MITZ Toestemming Documentatie" %}
 
 **Kandidaat solutions**:
 1. *INITIEEL*: Regionale service

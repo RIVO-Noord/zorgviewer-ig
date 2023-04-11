@@ -8,7 +8,7 @@ Functionaliteiten:
 * Als deze bij de zorgaanbieder wordt geplaatst zal hier ook iets van firewall functionaliteit in zitten om de FHIR IF veilig op het internet te ontsluiten.
 * Als de Bron (EPD/ECM) geen FHIR kan of niet helemaal standaard, kunnen hier transformaties gebeuren.
 
-{% include img.html img="ontsluiten-bronsysteem-opties.png" caption="Figure 3: Opties Ontsluiten Bronsysteem" width="70%" %}
+{% include img.html img="ontsluiten-bronsysteem-opties.png" caption="Opties Ontsluiten Bronsysteem" width="70%" %}
 
 #### Optie 1 (groen)
 * Inrichten en beheer ligt bij de zorgaanbieder.
