@@ -36,36 +36,34 @@ activate Zorgverlener
 activate Host
 Zorgverlener->Host: inloggen met lokale identiteit
 Host->Authenticatie
-Authenticatie->Authenticatie
+activate Authenticatie
+Authenticatie ->x Authenticatie
 note left
   CHECK: authenticatie
 end note
-destroy Authenticatie
+deactivate Authenticatie
 Zorgverlener->Host: selecteer patient
-Host->Host++
+Host ->x Host
 note left
   CHECK: behandelrelatie
 end note
-destroy Host
 
 ...
 
 == Start Zorgviewer ==
 
 Zorgverlener->Host: start Zorgviewer
-Host->Host++
-destroy Host
+Host ->x Host
 note left
   CHECK: wel of niet "knop" tonen
 end note
 Host->ZVFE: start met context
 activate ZVFE
-ZVFE->ZVFE++
+ZVFE ->x ZVFE
 note left
   CHECK: whitelist
   CHECK: token validatie
 end note
-destroy ZVFE
 ZVFE<->Authenticatie: authenticatie handshake
 note left
   CHECK: applicatie
@@ -102,26 +100,23 @@ destroy Adressering
 loop Voor ieder endpoint
   ZVBE->AOBron: opvragen gegevens
   activate AOBron
-  AOBron->AOBron++
+  AOBron ->x AOBron
   note left
     CHECK: ip/ACL
   end note
-  destroy AOBron
   AOBron->ABron: opvragen gegevens
   activate ABron
-  ABron->ABron++
+  ABron ->x ABron
   note left
     CHECK: ip/ACL
     CHECK: backend token
     CHECK: client certificate
   end note
-  destroy ABron
   ABron->Toestemming: ~MITZ Gesloten autorisatie vraag
-  ABron->ABron++
+  ABron ->x ABron
   note left
     CHECK: vraag gesteld zonder MITZ toestemming
   end note
-  destroy ABron
   ABron-->AOBron: gegevens
   deactivate ABron
   AOBron-->ZVBE: gegevens
