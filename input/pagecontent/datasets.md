@@ -62,6 +62,20 @@ Om problemen rondom toestemming en gegevensuitwisseling tegen te gaan is er land
 
 Als een zorgaanbieder de toestemming van een patiënt wil raadplegen, dan wordt er een vraag gesteld aan het US. Het US vraagt dan de toestemming op bij Mitz. Eerst wordt er gevraagd of er toestemming is voor het delen van gegevens: [de gesloten autorisatievraag](https://www.mitz-toestemming.nl/over-mitz/hoe-werkt-mitz).
 
+#### Huidige MITZ toestemmingen (v3.8.1)
+
+Algemene vraag aan patient:
+> "Geeft u <gevelnaam zorgaanbieder> toestemming om uw noodzakelijke <gegevenssoort> beschikbaar te stellen aan andere zorgaanbieders, zoals huisartsen, ziekenhuizen en andere medisch specialistische instellingen en apotheken, als dat voor uw behandeling nodig is?"
+
+Zorgaanbieder soorten:
+* Huisartsen (SIT001)
+* Ziekenhuizen (SIT002)
+* GGZ (SIT003)
+* Apotheken (SIT004)
+
+Gegevens soorten:
+* medische gegevens
+* medicatiegegevens
 
 ### Acute Zorg
 
