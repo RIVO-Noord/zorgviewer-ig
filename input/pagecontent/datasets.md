@@ -65,17 +65,21 @@ Als een zorgaanbieder de toestemming van een patiënt wil raadplegen, dan wordt 
 #### Huidige MITZ toestemmingen (v3.8.1)
 
 Algemene vraag aan patient:
-> "Geeft u <gevelnaam zorgaanbieder> toestemming om uw noodzakelijke <gegevenssoort> beschikbaar te stellen aan andere zorgaanbieders, zoals huisartsen, ziekenhuizen en andere medisch specialistische instellingen en apotheken, als dat voor uw behandeling nodig is?"
+> "Geeft u {gevelnaam zorgaanbieder} toestemming om uw noodzakelijke {gegevenscategorie} beschikbaar te stellen aan andere zorgaanbieders, zoals huisartsen, ziekenhuizen en andere medisch specialistische instellingen en apotheken, als dat voor uw behandeling nodig is?"
 
-Zorgaanbieder soorten:
-* Huisartsen (SIT001)
-* Ziekenhuizen (SIT002)
-* GGZ (SIT003)
-* Apotheken (SIT004)
+Zorgaanbiedercategorien (raadeplegende):
+* Huisartsen en huisartsenposten
+* Ziekenhuizen, medische centra en klinieken
+* Geestelijke gezondheidszorg (GGZ)
+* Verpleging en verzorging
+* Apotheken
+* Laboratoria en diagnostische centra
 
-Gegevens soorten:
-* medische gegevens
-* medicatiegegevens
+Gegevenscategorien:
+# Behandelgegevens (medische gegevens)
+# Uitslagen (zit ook in #1)
+# Medicatiegegevens (zit ook in #1)
+# Alle gegevens
 
 ### Acute Zorg
 
