@@ -1,3 +1,20 @@
+### Reviews
+
+####Review proces
+Ronde 1. Als de schrijvers van de IG een gedeelte klaar hebben dan volgt er eerst een interne review.
+Ronde 2. Daarna wordt het gedeelte aangeboden aan het bouwteam voor review.
+Ronde 3. Vervolgens kan de product owner een review uitvoeren.
+Ronde 4. Als daarmee de interne zorgviewer review is geweest kan het gedeelte nog worden aangeboden ter review aan de RIVO-Noord architecten.
+
+Weergave van alle reviews die tot nu toe zijn uitgevoerd.
+
+| Versie        | Onderdeel te reviewen                          | Link                                                                | Ronde 1 | Ronde 2       | Ronde 3 | Ronde 4       |
+|---------------|------------------------------------------------|---------------------------------------------------------------------|---------|---------------|---------|---------------|
+| 0.1.0-sprint1 | Requirements en uitgangspunten alle paragrafen | https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/conformance.html | Gereed  | Niet gevraagd | Gereed  | Niet gevraagd |
+|               |                                                |                                                                     |         |               |         |               |
+|               |                                                |                                                                     |         |               |         |               |
+|               |                                                |                                                                     |         |               |         |               |
+
 
 ### Versies
 
