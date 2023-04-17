@@ -1,6 +1,6 @@
-
 ### Versies
 
+<style>table, td, th { border: 1px solid black; padding:10px; }</style>
 |Versie|Datum|Changes|
 |---|---|---|
 |0.5.0-CI build|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.4.0-sprint5...master)<br/>* Resultaten sprint 6|
