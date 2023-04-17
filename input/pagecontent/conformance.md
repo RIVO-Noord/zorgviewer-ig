@@ -33,9 +33,9 @@
 1. De zorgviewer host draagt zorg voor (lokale) authenticatie van de gebruiker.
 1. De zorgviewer host voorziet in patient selectie en toets behandelrelatie.
 1. De zorgviewer host kan de zorgviewer opstarten met context (huidige gebruiker en patient).
-1. De zorgviewer host ondersteund patient context wissels.
-1. De zorgviewer host ondersteund gebruiker context wissels.
-1. De zorgviewer host biedt mogelijkeid aan de zorgviewer om volledige huidige gebruiker en patient gegevens op te vragen.
+1. De zorgviewer host ondersteunt patient context wissels.
+1. De zorgviewer host ondersteunt gebruiker context wissels.
+1. De zorgviewer host biedt mogelijkeid aan de zorgviewer om huidige gebruiker en patient details (zoals naam) op te vragen als dit mist in de context.
 
 **Keuze**:
 1. Conform [SMART-on-FHIR 1.0.0 EHR launch](http://hl7.org/fhir/smart-app-launch/1.0.0/index.html#ehr-launch-sequence)
@@ -55,7 +55,7 @@
 1. De zorgviewer integreert in de informatieomgeving van de gebruiker.
     1. **Keuze**: Conform [SMART-on-FHIR 1.0.0 EHR launch](http://hl7.org/fhir/smart-app-launch/1.0.0/index.html#ehr-launch-sequence)
 1. Het moet mogelijk zijn om aan te geven dat het een spoedsituatie betreft.
-1. Conflicten, ontdubbelen en duplicaatdetectie volgens [BgZ MSZ Informatistandaard](https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard)
+1. Conflicten, ontdubbelen en duplicaatdetectie volgens [BgZ MSZ Informatiestandaard](https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard)
     1. De zorgviewer attendeert de gebruiker op belangrijke lacunes in het eigen informatiesysteem: specificeren wat en welke dat zijn. Centraal vastleggen en dat alerten. 
     1. De zorgviewer attendeert de gebruiker op conflicten in het tonen van data van verschillende bronnen waar ze niet overeenkomen. 
     1. De zorgviewer faciliteert in ontdubbelen
@@ -66,7 +66,7 @@
 #### Toestemming
 
 **Definitie**: De expliciete specifieke, vrijgegeven toestemming tot het beschikbaar stellen van zorginformatie door de patiënt (bron: AVG)
-{% include img.html img="mitz-toestemming.png" caption="Figure 2: uit MITZ Toestemming Documentatie" %}
+{% include img.html img="mitz-toestemming.png" caption="Bron: MITZ Toestemming Documentatie" %}
 
 **Kandidaat solutions**:
 1. *INITIEEL*: Regionale service
@@ -83,7 +83,7 @@
 
 **Requirements**:
 1. Gebruik van reeds in organisatie in gebruik zijnde ID’s gekoppeld aan een extern erkende identiteit, zoals AGB of BIG voor zorgveleners en zorgaanbieders.
-    1. Lokale identitie MOET AGB-Z of BIG-Nummer als attribuut hebben, zodat we via de Zorgverlener Directory de specialismen en rollen kunnen opvragen
+    1. Lokale identiteit MOET AGB-Z of BIG-Nummer als attribuut hebben, zodat we via de Zorgverlener Directory de specialismen en rollen kunnen opvragen
 1. Vektis AGB-medische specialismen
 
 #### Zorgverlener Directory

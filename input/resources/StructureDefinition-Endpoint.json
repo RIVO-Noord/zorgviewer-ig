@@ -1,0 +1,28 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Endpoint",
+    "language": "en",
+    "name": "Endpoint",
+    "title": "Endpoint",
+    "status": "draft",
+    "description": "The minimal Endpoint for the Zorgviewer",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Endpoint",
+    "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Endpoint",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Endpoint.managingOrganization",
+                "path": "Endpoint.managingOrganization",
+                "mustSupport": true
+            },
+            {
+                "id": "Endpoint.address",
+                "path": "Endpoint.address",
+                "mustSupport": true
+            }
+        ]
+    }
+}

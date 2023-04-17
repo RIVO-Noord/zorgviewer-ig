@@ -41,7 +41,7 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
 
 ### Bouwblokken
 
-{% include img.html img="bouwblokken.png" caption="Figure 1: Bouwblokken" width="70%" %}
+{% include img.html img="bouwblokken.png" caption="Bouwblokken" width="70%" %}
 
 | | |
 | --- | --- |

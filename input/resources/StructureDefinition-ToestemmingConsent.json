@@ -1,0 +1,43 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/ToestemmingConsent",
+    "language": "en",
+    "name": "ToestemmingConsent",
+    "title": "ToestemmingConsent",
+    "status": "draft",
+    "description": "The minimal Toestemming Consent for the Zorgviewer",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Consent",
+    "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Consent",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Consent.patient",
+                "path": "Consent.patient",
+                "mustSupport": true
+            },
+            {
+                "id": "Consent.organization",
+                "path": "Consent.organization",
+                "type": [ {
+                    "code": "Reference",
+                    "targetProfile": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization"
+                } ],
+                "mustSupport": true
+            },
+            {
+                "id": "Consent.policy",
+                "path": "Consent.policy",
+                "mustSupport": true
+            },
+            {
+                "id": "Consent.policy.uri",
+                "path": "Consent.policy.uri",
+                "fixedUri": "https://rivo-noord.nl/toestemming",
+                "mustSupport": true
+            }
+        ]
+    }
+}
