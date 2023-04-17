@@ -21,7 +21,7 @@
 ## Werkwijze met git
 
 1. Werken in master
-1. Tag als versie klaar voor review (0.M.m-sprintX)
+1. Tag als versie klaar voor review (0.M.m-sprintX) - Op github web-UI: klik op tags->Releases->Draft new release
 1. Na review publish via snapshot branch
 ```
 git clone https://github.com/RIVO-Noord/zorgviewer-ig.git
