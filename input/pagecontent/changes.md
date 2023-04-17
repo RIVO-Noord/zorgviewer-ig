@@ -3,7 +3,7 @@
 
 |Versie|Datum|Changes|
 |---|---|---|
-|0.4.0-sprint5|17-apr-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.4.0-sprint5...0.3.0-sprint4)<br/>* Design Background - new<br/>* Probleem en Correspondentie UI Guidance - new<br/>* Toestemming CapabilityStatement, Toestemming Consent, Endpoint - new<br/>* Security Design update sequence diagram<br/>* Dataset Toestemmingen - updates|
+|0.4.0-sprint5|17-apr-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.3.0-sprint4...0.4.0-sprint5)<br/>* Design Background - new<br/>* Probleem en Correspondentie UI Guidance - new<br/>* Toestemming CapabilityStatement, Toestemming Consent, Endpoint - new<br/>* Security Design update sequence diagram<br/>* Dataset Toestemmingen - updates|
 |0.3.0-sprint4|3-apr-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.2.0-sprint3...0.3.0-sprint4)<br/>* Behandelaanwijzing (Consent) obv ACP - draft<br/>* Sequence diagrammen bijgewerkt<br/>* Bron zorgaanbieder meta tag<br/>* Correspondentie - draft|
 |0.2.0-sprint3|24-mar-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.1.0-sprint2...0.2.0-sprint3)<br/>* Opstarten Zorgviewer - afgestemd<br/>* Correspondentie onderdelen, o.a. DocumentReference - draft<br/>* Security Design - draft|
 |0.1.0-sprint1|tot 17-feb-2023|Wijzigingen sprint 1 en 2<br/>* Initiele vulling<br/>* Opstarten Zorgviewer draft<br/>* Requirements review door productowner|
