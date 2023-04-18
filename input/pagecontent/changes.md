@@ -40,9 +40,9 @@ En verder:
 
 **Weergave van alle reviews die tot nu toe zijn uitgevoerd:**
 
-| Versie        | Onderdeel te reviewen                          | Ronde 1 | Ronde 2       | Ronde 3 | Ronde 4       |
+| Versie        | Onderdeel te reviewen                          | Ronde 1 (IG) | Ronde 2 (Bouw) | Ronde 3 (PO) | Ronde 4 (Extern) |
 |---------------|------------------------------------------------|---------|---------------|---------|---------------|
-| 0.1.0-sprint1 | [Requirements en uitgangspunten alle paragrafen](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/0.1.0-sprint1/conformance.html) | Gereed  | Niet gevraagd | Gereed  | Niet gevraagd |
+| 0.1.0-sprint1 | Requirements en uitgangspunten alle paragrafen | Gereed  | Niet gevraagd | Gereed  | Niet gevraagd |
 | | | | | | |
 
 <div>

@@ -1,0 +1,124 @@
+{
+    "resourceType": "Procedure",
+    "id": "flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"
+        ]
+    },
+    "identifier": [
+        {
+            "use": "usual",
+            "type": {
+                "text": "ORL"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.425.1.7.2.798276",
+            "value": "1016"
+        },
+        {
+            "use": "usual",
+            "type": {
+                "text": "EAP"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.425.1.7.2.696580",
+            "value": "220352"
+        },
+        {
+            "use": "usual",
+            "type": {
+                "text": "OPE"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.425.1.7.2.798069",
+            "value": "51"
+        }
+    ],
+    "status": "completed",
+    "notDone": false,
+    "category": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "387713003",
+                "display": "Surgical procedure"
+            }
+        ],
+        "text": "Surgical Procedures"
+    },
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "46866001",
+                "display": "Gesloten repositie supra- of transcondylaire femur fractuur."
+            }
+        ],
+        "text": "Gesloten repositie supra- of transcondylaire femur fractuur."
+    },
+    "subject": {
+        "reference": "https://connectathon.epic.com/Interconnect-nlsandbox/api/FHIR/STU3/Patient/eCyZ.JMxPOjgW6dUlD6yicw3",
+        "display": "XXX_Helleman, JOHAN"
+    },
+    "context": {
+        "reference": "https://connectathon.epic.com/Interconnect-nlsandbox/api/FHIR/STU3/Encounter/e9shSyMqVHucWYdmDqUsVSw3",
+        "identifier": {
+            "use": "usual",
+            "system": "urn:oid:1.2.840.114350.1.13.425.1.7.3.698084.8",
+            "value": "16066"
+        },
+        "display": "Chirurgie"
+    },
+    "performedPeriod": {
+        "start": "2021-11-07T20:02:00Z",
+        "end": "2021-11-07T20:34:00Z"
+    },
+    "performer": [
+        {
+            "actor": {
+                "reference": "https://connectathon.epic.com/Interconnect-nlsandbox/api/FHIR/STU3/Practitioner/enWGnXwy3HowPfNBXikhNMA3",
+                "display": "MedMij Orthopedie, MD"
+            }
+        }
+    ],
+    "location": {
+        "reference": "https://connectathon.epic.com/Interconnect-nlsandbox/api/FHIR/STU3/Location/eLOcA14iuQlB54UsL6eMacA3",
+        "display": "UMCG"
+    },
+    "reasonReference": [
+        {
+            "reference": "https://connectathon.epic.com/Interconnect-nlsandbox/api/FHIR/STU3/Condition/e-ZZJzEApAU6z8DStznS9pQ3",
+            "display": "fractuur van onderste extremiteit"
+        }
+    ],
+    "bodySite": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.425.1.7.4.798276.2010",
+                                "code": "2",
+                                "display": "Rechts"
+                            }
+                        ],
+                        "text": "Rechts"
+                    }
+                }
+            ],
+            "coding": [
+                {
+                    "system": "urn:oid:2.16.840.1.113883.6.96",
+                    "code": "287579007",
+                    "display": "structuur van regio van rechter heup (lichaamsstructuur)"
+                },
+                {
+                    "system": "urn:oid:1.2.840.114350.1.13.425.1.7.4.798276.2015",
+                    "code": "270",
+                    "display": "Hip"
+                }
+            ],
+            "text": "structuur van regio van rechter heup (lichaamsstructuur)"
+        }
+    ]
+}
