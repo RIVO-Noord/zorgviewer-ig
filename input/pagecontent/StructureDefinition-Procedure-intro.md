@@ -11,5 +11,5 @@ Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 
 ### Zoeken naar codes
 
-* DHD VT
-* CBV
+* [DHD Verrichtingenthesaurus, CBV en Zorgactiviteiten](https://trex.dhd.nl/)
+* [NHG Ingrepenviewer tabel 49](https://viewers.nhg.org/ingrepenviewer/)
