@@ -18,5 +18,5 @@ Voor het ontsluiten van het bronsysteem is een resource server, waar de informat
 #### Optie 2 (paars)
 Voor het ontsluiten van het bronsysteem is een resource server, waar de informatie opgehaald kan worden, en is er een authenticatie server nodig, waar de authenticatie wordt afgehandeld. Bij optie 2, zijn de inrichting en het beheer met name aan de Zorgviewer kant benodigd en kan de Zorgviewer op basis van de iets afwijkende standaard uit deze IG connecteren. 
 
-* Conclusie: Zorgviewer team neemt ontwikkeling en beheer op zich.
+* Conclusie: Zorgviewer Bouw team neemt ontwikkeling en beheer op zich.
 
