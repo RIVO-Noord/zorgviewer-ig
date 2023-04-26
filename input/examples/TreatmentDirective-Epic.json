@@ -1,0 +1,125 @@
+{
+    "resourceType": "Consent",
+    "id": "ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"
+        ]
+    },
+    "extension": [
+        {
+            "extension": [
+                {
+                    "valueBoolean": true,
+                    "url": "Verified"
+                },
+                {
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.6.96",
+                                "code": "116154003",
+                                "display": "patiënt (persoon)"
+                            },
+                            {
+                                "system": "urn:oid:1.2.840.114350.1.13.485.3.7.4.696784.72007",
+                                "code": "1",
+                                "display": "Patiënt"
+                            }
+                        ],
+                        "text": "patiënt (persoon)"
+                    },
+                    "url": "VerifiedWith"
+                }
+            ],
+            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification"
+        },
+        {
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.6.96",
+                        "code": "40617009",
+                        "display": "kunstmatige beademing (verrichting)"
+                    },
+                    {
+                        "system": "urn:oid:1.2.840.114350.1.13.485.3.7.4.696784.72009",
+                        "code": "3",
+                        "display": "Kunstmatige beademing"
+                    }
+                ],
+                "text": "kunstmatige beademing (verrichting)"
+            },
+            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment"
+        }
+    ],
+    "modifierExtension": [
+        {
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4",
+                        "code": "JA_MAAR",
+                        "display": "Ja, maar met beperkingen"
+                    }
+                ]
+            },
+            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted"
+        }
+    ],
+    "identifier": {
+        "use": "usual",
+        "system": "urn:oid:1.2.840.114350.1.13.485.3.7.2.798268",
+        "value": "20381675"
+    },
+    "status": "active",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/consentcategorycodes",
+                    "code": "acd",
+                    "display": "Advance Directive"
+                },
+                {
+                    "system": "urn:oid:1.2.840.114350.1.13.485.3.7.4.796783.100",
+                    "code": "3042102",
+                    "display": "Vastgelegd"
+                },
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "11291000146105"
+                }
+            ]
+        }
+    ],
+    "patient": {
+        "reference": "https://icf.tst.epd.umcg.intra/TST-OAUTH2/api/FHIR/STU3/Patient/eXxP1o8ZlOz21F6HXS9puLA3",
+        "display": "XXX-Helleman, Johan"
+    },
+    "period": {
+        "start": "2022-03-22T12:45:21Z"
+    },
+    "dateTime": "2022-03-22T12:45:21Z",
+    "policy": [
+        {
+            "extension": [
+                {
+                    "valueCode": "unknown",
+                    "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+                }
+            ]
+        }
+    ],
+    "except": [
+        {
+            "extension": [
+                {
+                    "valueString": "Eerst overleg met echtgenote",
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions"
+                }
+            ],
+            "type": "deny"
+        }
+    ]
+}
