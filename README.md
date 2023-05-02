@@ -22,7 +22,7 @@
 
 1. Werken in master
 1. Werk de Changelog bij
-1. Tag als versie klaar voor review (0.M.R-sprintX) - Op github web-UI klik op: tags->Releases->Draft new release->Create a new tag->Set as pre-release->Publish
+1. Tag als versie klaar voor review (0.M.R-sprintX) - Op github web-UI klik op: tags->Releases->Draft new release->Choose a tag->Create a new tag->Set as pre-release->Publish, devops link als beschrijving
 1. Publish via snapshot branch tbv review
 ```
 cd <tijdelijst-folder>
