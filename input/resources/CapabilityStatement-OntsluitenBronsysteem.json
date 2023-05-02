@@ -47,6 +47,10 @@
     {
       "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Problem",
       "display": "zib-Probleem"
+    },
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Procedure",
+      "display": "zib-Verrichting"
     }
   ],
   "rest": [
@@ -244,6 +248,29 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
                   "valueCode": "SHOULD"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Procedure",
+          "profile": {
+            "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
                 }
               ],
               "code": "search-type"

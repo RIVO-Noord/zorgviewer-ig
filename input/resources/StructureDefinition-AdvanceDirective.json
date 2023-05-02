@@ -1,0 +1,35 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AdvanceDirective",
+    "language": "en",
+    "name": "AdvanceDirective",
+    "title": "AdvanceDirective",
+    "status": "draft",
+    "description": "Wilsverklaring (Consent)",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Consent",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Consent.extension:comments",
+                "path": "Consent.extension",
+                "sliceName": "comments",
+                "mustSupport": true
+            },
+            {
+                "id": "Consent.category:typeOfLivingWill",
+                "path": "Consent.category",
+                "sliceName": "typeOfLivingWill",
+                "mustSupport": true
+            },
+            {
+                "id": "Consent.dateTime",
+                "path": "Consent.dateTime",
+                "mustSupport": true
+            }
+        ]
+    }
+}

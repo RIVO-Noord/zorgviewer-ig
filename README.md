@@ -21,9 +21,11 @@
 ## Werkwijze met git
 
 1. Werken in master
-1. Tag als versie klaar voor review (0.M.m-sprintX) - Op github web-UI: klik op tags->Releases->Draft new release
-1. Na review publish via snapshot branch
+1. Werk de Changelog bij
+1. Tag als versie klaar voor review (0.M.R-sprintX) - Op github web-UI klik op: tags->Releases->Draft new release->Create a new tag->Set as pre-release->Publish
+1. Publish via snapshot branch tbv review
 ```
+cd <tijdelijst-folder>
 git clone https://github.com/RIVO-Noord/zorgviewer-ig.git
 git checkout snapshot
 git merge 0.2.0-sprint3
@@ -34,6 +36,8 @@ vi input/zorgviewer-ig.json
 git commit -a
 git push
 ```
+1. En werk verder in de master branch
+1. Update input/zorgviewer-ig.json/version naar volgende minor
 
 ### Trigger FHIR auto-ig builder
 ```

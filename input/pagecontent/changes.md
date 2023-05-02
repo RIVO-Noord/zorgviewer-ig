@@ -1,8 +1,10 @@
-
 ### Versies
 
+<style>table, td, th { border: 1px solid black; padding:10px; }</style>
 |Versie|Datum|Changes|
 |---|---|---|
+|0.6.0-CI-build|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.5.0-sprint6...master)<br/>* Resultaten sprint 7|
+|0.5.0-sprint6|2-may-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.4.0-sprint5...0.5.0-sprint6)<br/>* Verrichtingen UI Guidance en Profiel - new<br/>* Patient naam algorithme<br/>* Ontsluiten bronsysteem - update<br/>* Behandelaanwijzing en Wilsverklaring UI Guidance en Profielen - concept|
 |0.4.0-sprint5|17-apr-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.3.0-sprint4...0.4.0-sprint5)<br/>* Design Background - new<br/>* Probleem en Correspondentie UI Guidance - new<br/>* Toestemming CapabilityStatement, Toestemming Consent, Endpoint - new<br/>* Security Design update sequence diagram<br/>* Dataset Toestemmingen - updates|
 |0.3.0-sprint4|3-apr-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.2.0-sprint3...0.3.0-sprint4)<br/>* Behandelaanwijzing (Consent) obv ACP - draft<br/>* Sequence diagrammen bijgewerkt<br/>* Bron zorgaanbieder meta tag<br/>* Correspondentie - draft|
 |0.2.0-sprint3|24-mar-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.1.0-sprint2...0.2.0-sprint3)<br/>* Opstarten Zorgviewer - afgestemd<br/>* Correspondentie onderdelen, o.a. DocumentReference - draft<br/>* Security Design - draft|
@@ -31,6 +33,18 @@ En verder:
 1. (FHIR) Artifacts hebben eigen status.
 
 ### Review Workflow
+
+* Ronde 1. Als de schrijvers van de IG een gedeelte klaar hebben dan volgt er eerst een interne review.
+* Ronde 2. Daarna wordt het gedeelte aangeboden aan het bouwteam voor review.
+* Ronde 3. Vervolgens kan de product owner een review uitvoeren.
+* Ronde 4. Als daarmee de interne zorgviewer review is geweest kan het gedeelte nog worden aangeboden ter review aan de RIVO-Noord architecten.
+
+**Weergave van alle reviews die tot nu toe zijn uitgevoerd:**
+
+| Versie        | Onderdeel te reviewen                          | Ronde 1 (IG) | Ronde 2 (Bouw) | Ronde 3 (PO) | Ronde 4 (Extern) |
+|---------------|------------------------------------------------|---------|---------------|---------|---------------|
+| 0.1.0-sprint1 | Requirements en uitgangspunten alle paragrafen | Gereed  | Niet gevraagd | Gereed  | Niet gevraagd |
+| | | | | | |
 
 <div>
 {% include Review-Workflow.svg %}

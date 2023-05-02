@@ -1,0 +1,104 @@
+{
+    "resourceType": "Procedure",
+    "id": "2.16.840.1.113883.2.4.3.124.7.47519.41230000001716",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"
+        ]
+    },
+    "identifier": [
+        {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.124.7.47519.4",
+            "value": "1230000001716"
+        }
+    ],
+    "status": "unknown",
+    "category": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "387713003",
+                "display": "Surgical procedure"
+            }
+        ]
+    },
+    "code": {
+        "coding": [
+            {
+                "system": "urn:oid:2.16.840.1.113883.2.4.3.120.5.3",
+                "code": "00090991",
+                "display": "implantatie van totale knieprothese"
+            }
+        ],
+        "text": "implantatie van totale knieprothese"
+    },
+    "subject": {
+        "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+        "display": "Johan XXX_Helleman_Afblijven"
+    },
+    "performedPeriod": {
+        "start": "2012-06-05",
+        "end": "2012-06-05"
+    },
+    "performer": [
+        {
+            "actor": {
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                        "valueReference": {
+                            "reference": "PractitionerRole/A5F5EBBAA991DCD91820C4392F9C21F478703FEFC0AFB9CFF5DFF60CC05FDE70",
+                            "display": "Onbekende functiecode."
+                        }
+                    }
+                ],
+                "reference": "Practitioner/571250c2-7121-479a-827d-59f6d7b55532",
+                "display": "Lisette van Cruijningen de Winter"
+            }
+        }
+    ],
+    "location": {
+        "reference": "Location/2.16.528.1.1007.3.300002729",
+        "display": "Drachten"
+    },
+    "bodySite": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "7771000",
+                                "display": "Left"
+                            }
+                        ],
+                        "text": "Links"
+                    }
+                }
+            ],
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "72696002",
+                    "display": "Knee region structure (body structure)"
+                }
+            ],
+            "text": "Knee region structure (body structure)"
+        }
+    ],
+    "note": [
+        {
+            "text": "Implantant, Gen 2 Tibia Insert 5/6-9mm"
+        }
+    ],
+    "focalDevice": [
+        {
+            "manipulated": {
+                "reference": "Device/14acb649-b79e-4568-b31f-629eada91c9e",
+                "display": "1101010000000505047453079901"
+            }
+        }
+    ]
+}

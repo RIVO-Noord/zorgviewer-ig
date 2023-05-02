@@ -1,0 +1,38 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure",
+    "language": "en",
+    "name": "Procedure",
+    "title": "Procedure",
+    "status": "draft",
+    "description": "Verrichtingen",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Procedure",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-Procedure",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Procedure.code.text",
+                "path": "Procedure.code.text",
+                "mustSupport": true
+            },
+            {
+                "id": "Procedure.performedPeriod",
+                "path": "Procedure.performedPeriod",
+                "mustSupport": true
+            },
+            {
+                "id": "Procedure.performer.actor.display",
+                "path": "Procedure.performer.actor.display",
+                "mustSupport": true
+            },
+            {
+                "id": "Procedure.location.display",
+                "path": "Procedure.location.display",
+                "mustSupport": true
+            }
+        ]
+    }
+}
