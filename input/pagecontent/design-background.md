@@ -22,12 +22,14 @@ Voor het ontsluiten van het bronsysteem is een resource server, waar de informat
 
 ### Ontsluiten ACP vanuit Dokter Drenthe / VIPLive
 
+In onderstaade plaat is globaal weergegeven hoe de systemen van de huisarts integreren richting de Zorgviewer.
+
 {% include img.html img="ontsluiten-dokterdrenthe.png" caption="Ontsluiten dokter Drenthe" width="50%" %}
 
 #### Definities
-Topicus = Leverancier van VIPLive
-VIPLive = producten suite / platform, VIPLive is geen HIS
-VIPLive Spoed EPD = module van VIPlive en wordt gebruikt in de huisartsenpost
+* Topicus = Leverancier van VIPLive
+* VIPLive = producten suite / platform, VIPLive is geen HIS
+* VIPLive Spoed EPD = module van VIPlive en wordt gebruikt in de huisartsenpost
 
 #### Omschrijving proces
 VIPLive SPOED EPD is het systeem waarmee de Zorgviewer gekoppeld moet worden. Het VIPlive SPOED EPD wordt in de avond, nacht en weekend gebruikt. De telefoniste voert de triage uit en documenteert hierin de gegevens van de patiënt + BSN. Basale dossier informatie is hier al bekend via LSP als patiënt toestemming heeft gegeven.
