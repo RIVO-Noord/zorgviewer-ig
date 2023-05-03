@@ -24,7 +24,7 @@ Voor het ontsluiten van het bronsysteem is een resource server, waar de informat
 
 In onderstaade plaat is globaal weergegeven hoe de systemen van de huisarts integreren richting de Zorgviewer.
 
-{% include img.html img="ontsluiten-dokterdrenthe.png" caption="Ontsluiten dokter Drenthe" width="50%" %}
+{% include img.html img="ontsluiten-dokterdrenthe.png" caption="Ontsluiten dokter Drenthe" width="70%" %}
 
 #### Definities
 * Topicus = Leverancier van VIPLive
