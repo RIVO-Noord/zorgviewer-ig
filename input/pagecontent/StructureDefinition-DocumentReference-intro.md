@@ -10,6 +10,7 @@ Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 {% include img.html img="ui-documentref.png" caption="User-Interface DocumentReference guidance" width="100%" %}
 
 ### Document soorten herkennen
+
 Alle beschikbare documenten worden getoond op het scherm met daarbij een omschrijving en LOINC-code. Dit is in eerste instantie een 1 op 1 weergave uit het betreffende EPD en is niet gegroepeerd. 
 
 <style>table, td, th { border: 1px solid black; padding:10px; }</style>
@@ -34,3 +35,13 @@ Alle beschikbare documenten worden getoond op het scherm met daarbij een omschri
 
 Zie het Excelbestand tab "classCode+decision tree" voor LOINC codes:
 [Nationale XDS metadataset](https://nictiz.nl/standaarden/overzicht-van-standaarden/xds-metadata/)
+
+### Request
+
+1. Opvragen (search) alle documenten
+
+    `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>`
+
+1. Opvragen (search) documenten van een specifiele zorgaanbieder
+
+    `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>[custodian=<orgid>]`
