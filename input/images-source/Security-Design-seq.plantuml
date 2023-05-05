@@ -5,14 +5,14 @@ autonumber
 actor Zorgverlener
 box "Zorgaanbieder eigen systeem"
   participant "Zorgviewer\nHost" as Host
-  participant Authenticatie
   participant "Eigen\nbronsysteem" as EBron
+  participant Authenticatie
 end box
 
 !pragma teoz true
 box "Zorgviewer Netwerk" #LightGreen
   box "Zorgviewer" #SpringGreen
-    participant "Zorgviewer\nFrontend" as ZVFE
+    participant "Zorgviewer\nFrontend\n(in Browser)" as ZVFE
     participant "Zorgviewer\nBackend" as ZVBE
   end box
   participant "Toestemming\n~MITZ" as Toestemming
@@ -31,7 +31,7 @@ end note
 
 == Start Zorgviewer Host ==
 
-Zorgverlener->Host: start EPD
+Zorgverlener->Host ** : start EPD
 activate Zorgverlener
 activate Host
 Zorgverlener->Host: inloggen met lokale identiteit
@@ -58,10 +58,10 @@ note left
   CHECK: op basis van security context
     "knop" wel of niet tonen
 end note
-Host->ZVFE: start met context
+Host->ZVFE ** : start met context
 activate ZVFE
 ZVFE ->x ZVFE
-note left
+note right
   CHECK: whitelist
   CHECK: token validatie
 end note
@@ -73,13 +73,10 @@ destroy Authenticatie
 
 == Huidige patient en gebruiker ==
 
-group (OPT) als niet al in context
-  ZVFE-->ZVBE: opvragen huidige gebruiker\nen patient details
-  activate ZVBE
-  ZVBE-->EBron: (OPT) opvragen gebruiker\nen patient details
+group (OPTIONEEL) als niet al in context
+  ZVFE-->EBron: (OPTIONEEL) opvragen huidige gebruiker\nen patient details
   note left
     CHECK: access token
-    CHECK: client certificate
   end note
   destroy EBron
 end
@@ -87,6 +84,8 @@ ZVFE->ZVFE: toon gebruiker en patient\nidentiteit details
 
 == Patient dossier ==
 
+ZVFE->ZVBE: opvragen gegevens
+activate ZVBE
 ZVBE->Toestemming: vraag patient toestemmingen op
 note right
   ~MITZ Open autorisatievraag
