@@ -4,7 +4,7 @@
 1. Alle actoren in het zorgpad hebben inzage in dezelfde informatie, op basis van de gegeven toestemming van de patiënt.
 1. Informatie blijft primair bij de bron en wordt zo min mogelijk gerepliceerd
     * Registratie aan de Bron - zorg voor juiste bron registratie, ontsluit wat er is
-    * <span class= "bg-success" markdown= "1">Aanpassen aan de bron, mappings in de bron en bron corrigeren als mogelijk</span>
+    * Aanpassen aan de bron, mappings in de bron en bron corrigeren als mogelijk
 1. De Zorgviewer wordt opgestart vanuit de eigen informatieomgeving
 1. *TOEKOMST* Informatie kan worden overgenomen in het eigen informatiesysteem wanneer daaraan behoefte is
 1. De informatie wordt gefilterd op basis van de specifieke informatiebehoefte, bijvoorbeeld:
@@ -41,9 +41,9 @@
 1. Conform [SMART-on-FHIR 1.0.0 EHR launch](http://hl7.org/fhir/smart-app-launch/1.0.0/index.html#ehr-launch-sequence)
 
 **Solutions**:
-1. Epic
-1. Chipsoft
-1. Topicus
+1. Epic Hyperspace
+1. Chipsoft HiX
+1. Topicus VIPlive
 1. *TOEKOMST* Zorgviewer Launcher - Los voor gebruikers zonder EPD/ECD
 
 #### Zorgviewer
@@ -123,12 +123,10 @@
 
 **Definitie**: Rechten die een identiteit (zorgverlener, client / patient) heeft voor toegang tot cliëntgegevens (bron: NEN 7510).
 
-<div class="new-content" markdown="1">
 Er zijn meerdere nivo's van autorisatie, namelijk:
 1. De zorgviewer moet geautoriseerd zijn om bronsysteem ontsluitingen te bevragen (technisch: welke FHIR resources in scope en clientID)
 1. De gebruiker moet geautoriseerd zijn om de zorgviewer te gebruiken
 1. De gebruiker moet geautoriseerd zijn om specifieke gegevens op te vragen adhv toestemming en rol
-</div>
 
 #### Logging
 
@@ -162,7 +160,7 @@ Er zijn meerdere nivo's van autorisatie, namelijk:
 **Kandidaat solutions**:
 * [Epic Interconnect](https://fhir.epic.com) via Intersystems Iris Healthshare
 * [Chipsoft Zorgplatform](https://developer.zorgplatform.online) 
-* Topicus
+* [Topicus VIPlive](https://viplive.nl/over-ons/viplive-koppelen-met-systemen)
 * XDS-NN met een FHIR API volgens de IG (e.g. Documenten)
 * Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan ontsluiten
 * Nexus via Founda
