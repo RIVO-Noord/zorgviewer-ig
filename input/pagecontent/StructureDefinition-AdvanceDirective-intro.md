@@ -11,4 +11,4 @@ Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 
 1. Opvragen (search) wilsbeschikkingen
 
-    `GET <ontsluiten-bronsysteem-base>/Consent?subject=<fhir_patient_id>&category=http://snomed.info/sct|11341000146107`
+    `GET <ontsluiten-bronsysteem-base>/Consent?patient=<fhir_patient_id>&category=http://snomed.info/sct|11341000146107`
