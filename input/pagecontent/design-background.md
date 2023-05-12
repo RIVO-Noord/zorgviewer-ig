@@ -28,17 +28,16 @@ In onderstaade plaat is globaal weergegeven hoe de systemen van de huisarts inte
 
 #### Definities
 * Topicus = Leverancier van VIPLive
-* VIPLive = producten suite / platform, VIPLive is geen HIS
+* VIPLive = producten suite / platform, VIPLive is geen HIS, in VIPLive wordt de ACP ingevoerd door de huisarts
 * VIPLive Spoed EPD = module van VIPLive en wordt gebruikt in de huisartsenpost
 
 #### Omschrijving proces
-VIPLive SPOED EPD is het systeem waarmee de Zorgviewer gekoppeld moet worden. Het VIPLive SPOED EPD wordt in de avond, nacht en weekend gebruikt. De telefoniste voert de triage uit en documenteert hierin de gegevens van de patiënt + BSN. Basale dossier informatie is hier al bekend via LSP als patiënt toestemming heeft gegeven.
-Indien het noodzakelijk is om de huisartsenpost te bezoeken wordt de afspraak, behandeling etc. allemaal in VIPLive SPOED EPD vastgelegd. Vervolgens krijgt de eigen huisarts de informatie doorgestuurd vanuit VIPLive in het eigen HIS. VIPlive SPOED EPD slaat in principe geen informatie op (slechts 72 uur), behalve voor de ACP, daarbij is VIPLive het bronsysteem.
+VIPLive (SPOED EPD) is het systeem waarmee de Zorgviewer gekoppeld moet worden. Het VIPLive platform , met daarin SPOED EPD wordt in de avond, nacht en weekend gebruikt. De telefoniste voert de triage uit en documenteert hierin de gegevens van de patiënt + BSN. Basale dossier informatie is hier al bekend via LSP als patiënt toestemming heeft gegeven.
  
-Niet elke praktijk in Groningen/Friesland/Drenthe heeft VIPLive maar in Drenthe is regionaal afgesproken om VIPLive Spoed EPD te gebruiken bij de huisartsenposten. Daarbij wordt de ACP informatie áltijd in de VIPlive Spoed EPD wordt vastgelegd. Voor alle huisartsen (niet HAP) is het relevant om de correspondentie vanuit het ziekenhuis te kunnen inzien vanuit VIPLive in de Zorgviewer. 
+Niet elke praktijk in Groningen/Friesland/Drenthe heeft VIPLive maar in Drenthe is regionaal afgesproken om VIPLive (Spoed EPD) te gebruiken bij de huisartsenposten. Daarbij wordt de ACP informatie áltijd in de VIPlive wordt vastgelegd. Voor alle huisartsen (niet HAP) is het relevant om de correspondentie vanuit het ziekenhuis te kunnen inzien vanuit VIPLive in de Zorgviewer. 
 
 De integratie is als volgt met de Zorgviewer
-* Ophalen van de ACP uit VIPLive Spoed EPD
+* Ophalen van de ACP uit VIPLive platform met daarin VIPLive Spoed EPD
 * opstarten Zorgviewer vanuit VIPLive
 
  
