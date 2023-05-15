@@ -4,7 +4,7 @@
 |Versie|Datum|Changes|
 |---|---|---|
 |0.7.0-CI-build|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.6.0-sprint7...master)<br/>* Resultaten sprint 8|
-|0.6.0-CI-build|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.5.0-sprint6...0.6.0-sprint7)<br/>* Verrichtingen, Behandelaanwijzing - UI en voorbeeld updates<br/>* Achtergrond Dokter Dokter - update|
+|0.6.0-sprint7|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.5.0-sprint6...0.6.0-sprint7)<br/>* Verrichtingen, Behandelaanwijzing - UI en voorbeeld updates<br/>* Achtergrond Dokter Dokter - update|
 |0.5.0-sprint6|2-may-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.4.0-sprint5...0.5.0-sprint6)<br/>* Verrichtingen UI Guidance en Profiel - new<br/>* Patient naam algorithme<br/>* Ontsluiten bronsysteem - update<br/>* Behandelaanwijzing en Wilsverklaring UI Guidance en Profielen - concept|
 |0.4.0-sprint5|17-apr-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.3.0-sprint4...0.4.0-sprint5)<br/>* Design Background - new<br/>* Probleem en Correspondentie UI Guidance - new<br/>* Toestemming CapabilityStatement, Toestemming Consent, Endpoint - new<br/>* Security Design update sequence diagram<br/>* Dataset Toestemmingen - updates|
 |0.3.0-sprint4|3-apr-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.2.0-sprint3...0.3.0-sprint4)<br/>* Behandelaanwijzing (Consent) obv ACP - draft<br/>* Sequence diagrammen bijgewerkt<br/>* Bron zorgaanbieder meta tag<br/>* Correspondentie - draft|
