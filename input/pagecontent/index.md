@@ -57,7 +57,7 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
 In onderstaande schema zie je de groepering en interacties (in globale volgorde) tussen de verschillende bouwblokken.
 
 <div>
-{% include Zorgviewer-comp-1.svg width="70%" %}
+{% include Zorgviewer-comp-1.svg width="60%" %}
 </div>
 
 ### Functionaliteiten
@@ -65,7 +65,7 @@ In onderstaande schema zie je de groepering en interacties (in globale volgorde)
 Hierna volgt een schema met functionaliteiten per bouwblok.
 
 <div>
-{% include Functionaliteiten.svg width="70%" %}
+{% include Functionaliteiten.svg width="60%" %}
 </div>
 
 #### Leeswijzer implementatiegids
