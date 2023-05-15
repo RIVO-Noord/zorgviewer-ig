@@ -75,7 +75,7 @@ Zorgaanbiedercategorien (raadeplegende):
 * Apotheken
 * Laboratoria en diagnostische centra
 
-Gegevenscategorien:
+Gegevenscategorieën:
 # Behandelgegevens (medische gegevens)
 # Uitslagen (zit ook in #1)
 # Medicatiegegevens (zit ook in #1)
@@ -91,9 +91,9 @@ Verder heeft de acute zorg meerdere andere informatiestandaarden per uitwisselin
 * Professionele samenvatting en rapportages verleende zorg 2.1.0
 
 Hieronder nog een aantal links:
-* https://nictiz.nl/standaarden/informatiestandaarden/acute-zorg/
-* https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Acute_Zorg
-* https://amigo.nictiz.nl/acute-zorg/opvragingen-bij-huisarts/dataset
+* [https://nictiz.nl/standaarden/informatiestandaarden/acute-zorg/](https://nictiz.nl/standaarden/informatiestandaarden/acute-zorg/)
+* [https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Acute_Zorg](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Acute_Zorg)
+* [https://amigo.nictiz.nl/acute-zorg/opvragingen-bij-huisarts/dataset](https://amigo.nictiz.nl/acute-zorg/opvragingen-bij-huisarts/dataset)
 
 ### HartNet - TAVI Proces
 

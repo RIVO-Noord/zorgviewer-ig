@@ -24,3 +24,9 @@ Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 <blockquote class="stu-note" markdown="1">
 N.B. In tegenstelling tot het officiele zib profiel wordt in de praktijk voor de onset zowel een exacte datum (dateTime) geaccepteerd als een vage of range (period, b.v. ergens in 2011) datum.
 </blockquote>
+
+### Request
+
+1. Opvragen (search) actieve en gesloten problemen
+
+    `GET <ontsluiten-bronsysteem-base>/Condition?patient=<fhir_patient_id>&clinical-status=active,resolved`

@@ -2,7 +2,7 @@
     "resourceType": "ImplementationGuide",
     "id": "hl7.fhir.nl.zorgviewer-ig",
     "url": "http://hl7.nl/fhir/zorgviewer/ImplementationGuide/zorgviewer-ig",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "name": "zorgviewer-ig",
     "title": "RIVO Noord Zorgviewer MVP2 Implementation Guide",
     "status": "draft",
@@ -111,6 +111,14 @@
         },
         {
           "reference": {
+            "reference": "Consent/eCSfaTk2.C2TeVxgQk.zOgw3"
+          },
+          "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Epic.",
+          "name": "Epic AdvanceDirective Example",
+          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AdvanceDirective"
+        },
+        {
+          "reference": {
             "reference": "Consent/eGuoY.m8DiRaUvsn.5w5Etg3"
           },
           "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Epic.",
@@ -166,6 +174,14 @@
         },
         {
           "reference": {
+            "reference": "Procedure/2.16.840.1.113883.2.4.3.124.7.47519.41230000001716"
+          },
+          "description": "Dit is een Verrichting voorbeeld uit Chipsoft.",
+          "name": "Chipsoft Procedure Example",
+          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure"
+        },
+        {
+          "reference": {
             "reference": "Procedure/flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4"
           },
           "description": "Dit is een Verrichting voorbeeld uit Epic.",
@@ -182,11 +198,19 @@
         },
         {
           "reference": {
-            "reference": "Procedure/2.16.840.1.113883.2.4.3.124.7.47519.41230000001716"
+            "reference": "Flag/ac907bbc-89bd-45db-ab23-fdb11dd01a78"
           },
-          "description": "Dit is een Verrichting voorbeeld uit Chipsoft.",
-          "name": "Chipsoft Procedure Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure"
+          "description": "Dit is een Alert voorbeeld uit Chipsoft.",
+          "name": "Chipsoft Alert Example",
+          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Flag"
+        },
+        {
+          "reference": {
+            "reference": "Flag/fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4"
+          },
+          "description": "Dit is een Alert voorbeeld uit Epic.",
+          "name": "Epic Alert Example",
+          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Flag"
         }
       ],
       "page": {
@@ -259,6 +283,10 @@
         {
           "code" : "copyrightyear",
           "value": "2023"
+        },
+        {
+          "code" : "excludettl",
+          "value" : "true"
         }
       ]
     }

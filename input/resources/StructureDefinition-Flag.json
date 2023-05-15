@@ -1,0 +1,28 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Flag",
+    "language": "en",
+    "name": "Alert",
+    "title": "Alert",
+    "status": "draft",
+    "description": "Alert",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Flag",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-Alert",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Flag.code.text",
+                "path": "Flag.code.text",
+                "mustSupport": true
+            },
+            {
+                "id": "Flag.period.start",
+                "path": "Flag.period.start",
+                "mustSupport": true
+            }
+        ]
+    }
+}

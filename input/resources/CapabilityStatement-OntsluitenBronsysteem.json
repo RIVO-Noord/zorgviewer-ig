@@ -51,6 +51,20 @@
     {
       "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Procedure",
       "display": "zib-Verrichting"
+    },
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective",
+      "display": "zib-AdvanceDirective"
+    }
+    ,
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective",
+      "display": "zib-TreatmentDirective"
+    }
+    ,
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Alert",
+      "display": "zib-Alert"
     }
   ],
   "rest": [
@@ -275,6 +289,75 @@
               ],
               "code": "search-type"
             }
+          ]
+        },
+        {
+          "extension": [
+              {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+              }
+          ],
+          "type": "Consent",
+          "profile": {
+              "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/TreatmentDirective"
+          },
+          "interaction": [
+              {
+                  "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                        "valueCode": "SHALL"
+                      }
+                    ],
+                  "code": "search-type"
+              }
+          ]
+        },
+        {
+          "extension": [
+              {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+              }
+          ],
+          "type": "Consent",
+          "profile": {
+              "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AdvanceDirective"
+          },
+          "interaction": [
+              {
+                  "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                        "valueCode": "SHALL"
+                      }
+                    ],
+                  "code": "search-type"
+              }
+          ]
+        },
+        {
+          "extension": [
+              {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+              }
+          ],
+          "type": "Flag",
+          "profile": {
+              "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Flag"
+          },
+          "interaction": [
+              {
+                  "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                        "valueCode": "SHALL"
+                      }
+                    ],
+                  "code": "search-type"
+              }
           ]
         }
       ]

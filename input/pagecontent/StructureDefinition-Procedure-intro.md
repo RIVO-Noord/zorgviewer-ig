@@ -13,3 +13,11 @@ Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 
 * [DHD Verrichtingenthesaurus, CBV en Zorgactiviteiten](https://trex.dhd.nl/)
 * [NHG Ingrepenviewer tabel 49](https://viewers.nhg.org/ingrepenviewer/)
+
+### Request
+
+1. Opvragen (search) verrichtingen
+
+    `GET <ontsluiten-bronsysteem-base>/Procedure?patient=<fhir_patient_id>`
+
+    *N.B. Deze request is breder dan de BgZ request, waar alleen de chirugische verrichtingen worden opgevraagd.*

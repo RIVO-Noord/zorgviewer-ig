@@ -12,7 +12,7 @@ Zorgverlener->Zorgviewer: ..vervolg opstarten zorgviewer..
 Zorgviewer->Toestemming: Opvragen ontvankelijke zorgaanbieders (Open autorisatievraag adhv BSN)\n""<toestemming-base>/Consent?patient:Patient.identifier=<BSN>&role=<rol>""
 note over Toestemming: Afhankelijk van toestemming van patient\nvoor "delen met de zorgverlener".
 activate Toestemming
-Toestemming-->Zorgviewer: Lijst ontvankelijke zorgaanbieders (Organization)\nBundle met ""[[StructureDefinition-Consent.html Consent]]""
+Toestemming-->Zorgviewer: Lijst ontvankelijke zorgaanbieders (Organization)\nBundle met ""[[StructureDefinition-ToestemmingConsent.html ToestemmingConsent]]""
 deactivate Toestemming
 
 Zorgviewer->Adressering: Endpoints opvragen adhv Organization\n""<adressering-base>/Endpoint?organization=<Consent.organization.reference>""
