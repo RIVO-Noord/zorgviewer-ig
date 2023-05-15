@@ -5,23 +5,6 @@
 
 Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/).
 
-#### Leeswijzer implementatiegids
-
-- [Datasets](datasets.html) = content van praktijkvoorbeelden
-- [Design](design.html) = startpagina bouwteam
-- [Artifact index](artifacts.html) = beschrijving van onder andere de FHIR resources
-- [Checklists](checklists.html) = startpagina voor aansluiten van nieuwe zorgaanbieders
-
-##### Bijbehorende Zibs zoeken van een FHIR resource 
-
-* In onderstaande voorbeeld staat "This structure is derived from Zib Problem", deze link brengt gaat naar de volledige zib op Simplifier.net. Op deze site staat onder het tabblad ‘Mappings’ bovenaan in de tabel de directe link naar de zib op zibs.nl.
-* Ook in de link onder het kopje ‘Type’, in dit geval ‘Zib Prolem’ gaat de link naar Simplifier.net. Het ‘Overview’ tabblad is de FHIR-representatie van de Zib. Daarin zitten de Mappings terug naar de Zib. 
-*  In de kolom "Description" staat de naam van het element in de Zib. Via bovenstaande links naar Simplifier.net staat in de kolom ‘Mappings’ de uitgebreide beschrijving.
-<div>
-{% include img.html img="leeswijzer-fhir-resources-en-zibs.png" width="70%" %}
-</div>
-
-
 ### Events
 
 | | |
@@ -83,6 +66,22 @@ Hierna volgt een schema met functionaliteiten per bouwblok.
 
 <div>
 {% include Functionaliteiten.svg %}
+</div>
+
+#### Leeswijzer implementatiegids
+
+- [Datasets](datasets.html) = content van praktijkvoorbeelden
+- [Design](design.html) = startpagina bouwteam
+- [Artifact index](artifacts.html) = beschrijving van onder andere de FHIR resources
+- [Checklists](checklists.html) = startpagina voor aansluiten van nieuwe zorgaanbieders
+
+##### Bijbehorende Zibs zoeken van een FHIR resource 
+
+* In onderstaande voorbeeld staat "This structure is derived from Zib Problem", deze link gaat naar de volledige zib op Simplifier.net. Op deze site staat onder het tabblad ‘Mappings’ bovenaan in de tabel de directe link naar de zib op zibs.nl.
+* Ook in de link onder het kopje ‘Type’, in dit geval ‘Zib Prolem’ gaat de link naar Simplifier.net. Het ‘Overview’ tabblad is de FHIR-representatie van de Zib. Daarin zitten de Mappings terug naar de Zib. 
+*  In de kolom "Description" staat de naam van het element in de Zib. Via bovenstaande links naar Simplifier.net staat in de kolom ‘Mappings’ de uitgebreide beschrijving.
+<div>
+{% include img.html img="leeswijzer-fhir-resources-en-zibs.png" width="70%" %}
 </div>
 
 ### Acknowledgements
