@@ -18,7 +18,7 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
 * Ook in de link onder het kopje ‘Type’, in dit geval ‘Zib Prolem’ gaat de link naar Simplifier.net. Het ‘Overview’ tabblad is de FHIR-representatie van de Zib. Daarin zitten de Mappings terug naar de Zib. 
 *  In de kolom "Description" staat de naam van het element in de Zib. Via bovenstaande links naar Simplifier.net staat in de kolom ‘Mappings’ de uitgebreide beschrijving.
 <div>
-{% include img.html img="leeswijzer-fhir-resources-en-zibs.png"width="70%" %}
+{% include img.html img="leeswijzer-fhir-resources-en-zibs.png" width="70%" %}
 </div>
 
 
