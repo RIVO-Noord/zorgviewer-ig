@@ -47,6 +47,10 @@ git push
 1. En werk verder in de master branch
 1. Update input/zorgviewer-ig.json/version naar volgende minor
 
+## Sorting Artifacts edit
+
+In file template/scripts/createArtifactSumarry.xslt insert @ line 65: ``<xsl:sort select="f:name/@value"/>``
+
 ## Some usefull resources
 
 * Base standards
