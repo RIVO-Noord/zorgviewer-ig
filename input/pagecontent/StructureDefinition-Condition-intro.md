@@ -29,4 +29,4 @@ N.B. In tegenstelling tot het officiele zib profiel wordt in de praktijk voor de
 
 1. Opvragen (search) actieve en gesloten problemen
 
-    `GET <ontsluiten-bronsysteem-base>/Condition?patient=<fhir_patient_id>&clinical-status=active,resolved`
+    `GET <ontsluiten-bronsysteem-base>/Condition?patient=<fhir_patient_id>[&clinical-status=active,resolved]`
