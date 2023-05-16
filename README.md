@@ -19,6 +19,13 @@
 > java -jar publisher.jar -ig ig.ini
 ```
 
+### Trigger FHIR auto-ig builder
+```
+curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger" \
+  -H "Content-type: application/json" \
+  --data '{"ref": "refs/heads/snapshot", "repository": {"full_name": "RIVO-Noord/zorgviewer-ig"}}'
+```
+
 ## Werkwijze met git
 
 1. Werken in master
@@ -40,12 +47,9 @@ git push
 1. En werk verder in de master branch
 1. Update input/zorgviewer-ig.json/version naar volgende minor
 
-### Trigger FHIR auto-ig builder
-```
-curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger" \
-  -H "Content-type: application/json" \
-  --data '{"ref": "refs/heads/snapshot", "repository": {"full_name": "RIVO-Noord/zorgviewer-ig"}}'
-```
+## Sorting Artifacts edit
+
+In file template/scripts/createArtifactSumarry.xslt insert @ line 65: ``<xsl:sort select="f:name/@value"/>``
 
 ## Some usefull resources
 
