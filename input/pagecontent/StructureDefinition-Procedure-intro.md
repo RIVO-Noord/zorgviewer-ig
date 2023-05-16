@@ -18,6 +18,6 @@ Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 
 1. Opvragen (search) verrichtingen
 
-    `GET <ontsluiten-bronsysteem-base>/Procedure?patient=<fhir_patient_id>`
+    `GET <ontsluiten-bronsysteem-base>/Procedure?patient=<fhir_patient_id>[&clinical-status=active,resolved]`
 
     *N.B. Deze request is breder dan de BgZ request, waar alleen de chirugische verrichtingen worden opgevraagd.*
