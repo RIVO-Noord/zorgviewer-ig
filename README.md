@@ -5,6 +5,7 @@
 * [CI Build](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/)
 * [Releases](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/)
 * [Web-based editor](https://github.dev/RIVO-Noord/zorgviewer-ig/)
+* [Auto-IG build dashboard](https://fhir.github.io/auto-ig-builder/)
 
 ## Validate resources
 ```
