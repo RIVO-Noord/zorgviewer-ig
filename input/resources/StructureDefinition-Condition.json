@@ -1,7 +1,6 @@
 {
     "resourceType": "StructureDefinition",
     "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition",
-    "language": "en",
     "name": "Condition",
     "title": "Condition",
     "status": "draft",
@@ -54,8 +53,17 @@
                 "mustSupport": true
             },
             {
-                "id": "Condition.abatementDateTime",
-                "path": "Condition.abatementDateTime",
+                "id": "Condition.abatement[x]",
+                "path": "Condition.abatement[x]",
+                "constraint": [
+                    {
+                        "key": "zv-con-2",
+                        "severity": "warning",
+                        "human": "Use either Condition.abatementDateTime or Condition.abatementPeriod for the resolved timestamp",
+                        "expression": "abatementDateTime.exists() or abatementPeriod.exists()",
+                        "xpath": "f:abatementDateTime or f:abatementPeriod"
+                    }
+                ],
                 "mustSupport": true
             },
             {

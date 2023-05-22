@@ -19,7 +19,7 @@ Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 * [ICD-10-NL](https://terminologie.nictiz.nl/art-decor/claml?collection=icd10-nl-data) - `system=http://hl7.org/fhir/sid/icd-10-nl`
 * [ICPC-1 NL](https://viewers.nhg.org/icpcviewer/) - `system=http://hl7.org/fhir/sid/icpc-1-nl`
 
-### Uitzondering onsetDateTime en onsetPeriod
+### Uitzondering onsetDateTime, onsetPeriod, abatementDateTime en abatementPeriod
 
 <blockquote class="stu-note" markdown="1">
 N.B. In tegenstelling tot het officiele zib profiel wordt in de praktijk voor de onset zowel een exacte datum (dateTime) geaccepteerd als een vage of range (period, b.v. ergens in 2011) datum.
