@@ -15,7 +15,7 @@ N.B. Datasets zijn relevante selectie van data elementen met eventueel filters v
 
 Vanuit verschillende projecten en programma's wordt er gewerkt aan de de Basisgegevensset Zorg (BgZ) bestaande uit 28 zorginformatiebouwstenen (zibs). Vanuit de verschillende projecten en programma's worden bepaalde regels gehanteerd. Vanuit project Zorgviewer fase 1 richten wij ons op de overlap van al deze afspraken. Om hier een duidelijker beeld over te schetsen is het volgende venn-diagram opgesteld om de overeenkomsten van de verschillende projecten en programma's zichtbaar te maken.
 
-{% include img.html img="vennDiagram.svg" caption="BgZ+PDF/a Venn-Diagram" width="70%" %}
+{% include img.html img="FlowerVenndiagram.png" caption="BgZ+PDF/a Flower Venn-Diagram" width="70%" %}
 
 In het midden van bovenstaande venn-diagram staat de zorgviewer (ZV). Het project maakt gebruik van de eisen van verschillende programma's, de mogelijkheden die de verschillende XISen aanbieden (ChipSoft, Epic, Topicus, etc.) en wat de verschillende organisaties al kunnen op het gebied van data-ontsluiting (Martini, MCL, Tjongerschans, UMCG, etc.). 
 
