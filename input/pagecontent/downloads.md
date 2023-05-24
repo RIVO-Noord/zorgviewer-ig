@@ -1,8 +1,8 @@
-## Full IG
+### Full IG
 
 Download the entire implementation guide [here](full-ig.zip).
 
-## NPM Package and Definitions
+### NPM Package and Definitions
 
 The following file contains all the value sets, profiles, extensions, list of pages and urls in the IG, etc. defined as part of this Implementation Guide:
 
@@ -18,7 +18,7 @@ These files should be the first choice whenever generating any implementation ar
 
 There are also specific packages for the R4 and R4B FHIR specifications:
 
-## Examples
+### Examples
 
 All of the examples that are used in this Implementation Guide are available for download:
 
