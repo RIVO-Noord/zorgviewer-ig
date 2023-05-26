@@ -30,3 +30,7 @@ N.B. In tegenstelling tot het officiele zib profiel wordt in de praktijk voor de
 1. Opvragen (search) actieve en gesloten problemen
 
     `GET <ontsluiten-bronsysteem-base>/Condition?patient=<fhir_patient_id>[&clinical-status=active,resolved]`
+
+    <blockquote class="stu-note" markdown="1">
+    N.B. De clinical-status parameter is niet meer nodig als de Epic Feb '23 is geinstalleerd.
+    </blockquote>
