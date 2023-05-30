@@ -8,10 +8,10 @@ Bovenop constraint **zv-pat-1**:
 
 ### Requests
 
-1. Opvragen (search) naar fhir_patient_id op basis van de BSN
+1. Opvragen (search) naar patient op basis van de BSN
 
     `GET <bronsysteem-ontsluiting-base/Patient?identifier=<BSN>`
 
-1. Opvragen (read) op basis van de fhir_patient_id
+1. Opvragen (read) patient op basis van de fhir_patient_id
 
     `GET <ontsluiten-bronsysteem-base>/Patient/<fhir_patient_id>`

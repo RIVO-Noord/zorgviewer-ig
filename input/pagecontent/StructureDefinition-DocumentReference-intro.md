@@ -42,6 +42,6 @@ Zie het Excelbestand tab "classCode+decision tree" voor LOINC codes:
 
     `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>`
 
-1. Opvragen (search) documenten van een specifiele zorgaanbieder
+1. Opvragen (search) documenten van een specifieke zorgaanbieder
 
-    `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>[custodian=<orgid>]`
+    `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>[&_tag=http://hl7.nl/fhir/zorgviewer-ig/bronsysteem-zorgaanbieder|<AGB>]`

@@ -5,6 +5,7 @@
 * [CI Build](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/)
 * [Releases](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/)
 * [Web-based editor](https://github.dev/RIVO-Noord/zorgviewer-ig/)
+* [Auto-IG build dashboard](https://fhir.github.io/auto-ig-builder/)
 
 ## Validate resources
 ```
@@ -18,11 +19,26 @@
 > java -jar publisher.jar -ig ig.ini
 ```
 
+### Trigger FHIR auto-ig builder
+```
+curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger" \
+  -H "Content-type: application/json" \
+  --data '{"ref": "refs/heads/snapshot", "repository": {"full_name": "RIVO-Noord/zorgviewer-ig"}}'
+```
+
 ## Werkwijze met git
 
 1. Werken in master
-1. Werk de Changelog bij
-1. Tag als versie klaar voor review (0.M.R-sprintX) - Op github web-UI klik op: tags->Releases->Draft new release->Choose a tag->Create a new tag->Set as pre-release->Publish, devops link als beschrijving
+1. Werk de ``changes.md`` bij
+1. git commit
+1. Create tag "0.M.R-sprintX" - op github web-UI klik op: 
+  1. tags
+  1. Releases
+  1. Draft new release
+  1. Choose a tag
+  1. Create a new tag
+  1. Set as pre-release
+  1. Publish met devops link als description
 1. Publish via snapshot branch tbv review
 ```
 cd <temp-folder>
@@ -37,14 +53,11 @@ git commit -a
 git push
 ```
 1. En werk verder in de master branch
-1. Update input/zorgviewer-ig.json/version naar volgende minor
+1. Update input/zorgviewer-ig.json version naar volgende minor "0.M+1.0"
 
-### Trigger FHIR auto-ig builder
-```
-curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger" \
-  -H "Content-type: application/json" \
-  --data '{"ref": "refs/heads/snapshot", "repository": {"full_name": "RIVO-Noord/zorgviewer-ig"}}'
-```
+## Sorting Artifacts edit
+
+In file template/scripts/createArtifactSumarry.xslt insert @ line 65: ``<xsl:sort select="f:name/@value"/>``
 
 ## Some usefull resources
 

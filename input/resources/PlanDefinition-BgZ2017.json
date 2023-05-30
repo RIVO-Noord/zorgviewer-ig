@@ -33,9 +33,25 @@
                         "http://fhir.nl/fhir/StructureDefinition/nl-core-patient" ]
                 },
                 {
+                    "type": "DocumentReference",
+                    "profile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/DocumentReference",
+                        "http://nictiz.nl/fhir/StructureDefinition/IHE.MHD.Minimal.DocumentReference" ]
+                },
+                {
                     "type": "Condition",
                     "profile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition",
-                        "http://nictiz.nl/fhir/StructureDefinition/zib-Problem" ]
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-Problem" ],
+                        "codeFilter": [
+                            {
+                                "path": "clinical-status",
+                                "valueCode": [ "active", "resolved" ]
+                            }
+                        ]
+                },
+                {
+                    "type": "Procedure",
+                    "profile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure",
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-Verrichting" ]
                 },
                 {
                     "type": "Observation",
