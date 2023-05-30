@@ -76,10 +76,10 @@ Zorgaanbiedercategorien (raadeplegende):
 * Laboratoria en diagnostische centra
 
 Gegevenscategorieën:
-# Behandelgegevens (medische gegevens)
-# Uitslagen (zit ook in #1)
-# Medicatiegegevens (zit ook in #1)
-# Alle gegevens
+* Behandelgegevens (medische gegevens)
+* Uitslagen (zit ook in #1)
+* Medicatiegegevens (zit ook in #1)
+* Alle gegevens
 
 ### Acute Zorg
 
@@ -128,4 +128,4 @@ Het ACP beschrijft ook informatie over de patiëntencontext in de Gegevensset Pa
 
 Vanuit project Zorgviewer is de ACP deels in scope, namelijk de BehandelAanwijzing met een aanvulling in de codelijst. [De BehandelingCodelijst bestaat uit vijf waarden](https://zibs.nl/wiki/BehandelAanwijzing-v3.1(2017NL)#BehandelingToegestaanCodelijst). Deze is nu uitgebreid met drie andere waarden, zoals landelijk afgesproken door de palliatieve zorg.
 
-Voor de volledige dataset, kijk op [ARTDECOR](https://decor.nictiz.nl/art-decor/decor-project--pall-izppz-)
+Voor de volledige dataset, kijk op [Nictiz ART-DECOR](https://decor.nictiz.nl/art-decor/decor-project--pall-izppz-)
