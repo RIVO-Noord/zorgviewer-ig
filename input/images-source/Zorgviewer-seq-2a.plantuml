@@ -1,0 +1,32 @@
+@startuml
+hide footbox
+autonumber
+
+actor Zorgverlener
+participant "Zorgviewer" as Zorgviewer
+participant "ZorgviewerServices\n(Adressering)" as Adressering
+
+activate Zorgviewer
+Zorgverlener->Zorgviewer: ..vervolg opstarten zorgviewer..
+
+Zorgviewer->Adressering: Organizations opvragen\n""<adressering-base>/Organization""
+note over Adressering
+  Alle geregistreerde Organizations
+end note
+activate Adressering
+Adressering-->Zorgviewer: Bundle met ""[[StructureDefinition-Organization.html Organization]]""
+deactivate Adressering
+
+loop voor iedere organisatie
+    Zorgviewer->Adressering: Endpoints opvragen adhv Organization\n""<adressering-base>/Endpoint?organization=Organization/<Organization.name>""
+    note over Adressering
+    Endpoint opvragen bij Organization
+    end note
+    activate Adressering
+    Adressering-->Zorgviewer: Bundle met ""[[StructureDefinition-Endpoint.html Endpoint]]""
+    deactivate Adressering
+end loop
+
+deactivate Zorgviewer
+
+@enduml

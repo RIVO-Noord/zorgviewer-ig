@@ -34,9 +34,16 @@ Eerst opstarten Zorgviewer Host, inloggen en patient selectie en vervolgens opst
 {% include Zorgviewer-seq-1-fhir.svg %}
 </div>
 
-#### Bepalen zorgaanbieders
+#### Bepalen zorgaanbieders (zonder toestemming check)
 
-Bepalen zorgaanbieders waarvoor toestemming is gegeven mogelijk nog extra stap om van zorgaanbieder naar endpoint(s) te komen.
+Bepalen zorgaanbieders en endpoints.
+<div>
+{% include Zorgviewer-seq-2a.svg %}
+</div>
+
+#### Bepalen zorgaanbieders (met toestemming check)
+
+Bepalen zorgaanbieders en endpoints waarvoor toestemming is gegeven door de patient.
 <div>
 {% include Zorgviewer-seq-2.svg %}
 </div>

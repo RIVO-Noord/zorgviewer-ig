@@ -15,14 +15,16 @@ activate Toestemming
 Toestemming-->Zorgviewer: Lijst ontvankelijke zorgaanbieders (Organization)\nBundle met ""[[StructureDefinition-ToestemmingConsent.html ToestemmingConsent]]""
 deactivate Toestemming
 
-Zorgviewer->Adressering: Endpoints opvragen adhv Organization\n""<adressering-base>/Endpoint?organization=<Consent.organization.reference>""
-note over Toestemming
-  Consent.organization: e.g. UMCG
-  Endpoint opvragen bij Organization
-end note
-activate Adressering
-Adressering-->Zorgviewer: Bundle met ""[[StructureDefinition-Endpoint.html Endpoint]]""
-deactivate Adressering
+loop voor iedere zorgaanbieder
+  Zorgviewer->Adressering: Endpoints opvragen adhv Organization\n""<adressering-base>/Endpoint?organization=<Consent.organization.reference>""
+  note over Toestemming
+    Consent.organization: e.g. UMCG
+    Endpoint opvragen bij Organization
+  end note
+  activate Adressering
+  Adressering-->Zorgviewer: Bundle met ""[[StructureDefinition-Endpoint.html Endpoint]]""
+  deactivate Adressering
+end loop
 
 deactivate Zorgviewer
 
