@@ -3,7 +3,7 @@ Dit is de startpagina voor het bouwteam.
 
 ### Actors
 
-Scope is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge, en Topicus
+Scope is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge), en Topicus VIPlive (bij DokterDokter aangesloten partijen).
 
 ### System Actors
 
