@@ -1,0 +1,29 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ProbleemNaamCodelist",
+    "meta": {
+        "profile":  [
+            "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+        ]
+    },
+    "url": "http://hl7.nl/fhir/zorgviewer/ValueSet/ProbleemNaamCodelist",
+    "name": "ProbleemNaamCodelist",
+    "title": "Zorgviewer probleem naam waardelijst",
+    "status": "active",
+    "experimental": false,
+    "description": "De Zorgviewer probleem naam waardelijst o.b.v. de DHD Diagnose Thesaurus (SNOMED CT en ICD-10-nl codes) en de ICPC-1 NL coderingen vanuit de huisartsen",
+    "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct"
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-nl"
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icpc-1-nl"
+            }
+        ]
+    }
+}
