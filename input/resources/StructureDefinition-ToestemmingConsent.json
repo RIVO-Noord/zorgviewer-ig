@@ -4,7 +4,7 @@
     "name": "ToestemmingConsent",
     "title": "ToestemmingConsent",
     "status": "draft",
-    "description": "Toestemmingen (Consent)",
+    "description": "De registatie (Consent) dat de patient de RIVO-Noord policy voor toestemming van gegevensuitwisseling heeft geaccepteerd",
     "kind": "resource",
     "abstract": false,
     "type": "Consent",
@@ -15,6 +15,10 @@
             {
                 "id": "Consent.patient",
                 "path": "Consent.patient",
+                "type": [ {
+                    "code": "Reference",
+                    "targetProfile": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient"
+                } ],
                 "mustSupport": true
             },
             {
@@ -34,7 +38,7 @@
             {
                 "id": "Consent.policy.uri",
                 "path": "Consent.policy.uri",
-                "fixedUri": "https://rivo-noord.nl/toestemming",
+                "fixedUri": "https://rivo-noord.nl/zorgviewer/toestemming",
                 "mustSupport": true
             }
         ]

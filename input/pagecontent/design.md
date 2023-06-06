@@ -41,6 +41,12 @@ Bepalen zorgaanbieders en endpoints zonder toestemming check
 ### Bepalen zorgaanbieders adhv toestemming
 
 Bepalen zorgaanbieders en endpoints waarvoor toestemming is gegeven door de patient.
+
+In MVP2 zullen we een toestemming realiseren volgens de afspraken tussen de RIVO-Noord instellingen. Zie de policy [hier](https://rivo-noord.nl/zorgviewer/toestemming).
+
+**Van toepassing zijnde standaarden en documentatie**:
+* MITZ Open autorisatie vraag gebruikt als lokalisatie vraag
+
 <div>
 {% include Zorgviewer-seq-2.svg %}
 </div>
