@@ -32,8 +32,9 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
     1. Binary.Read (Radiology Results) (STU3)
     1. Condition.Search (Encounter Diagnosis, Problems) (STU3)
     1. Procedure.Search (Orders, Surgeries) (STU3)
-    1. Consent.Search (Code Status) (STU3)    
-    1. Consent.Search (Document) (STU3)    
+    1. Consent.Search (Code Status) (STU3)
+    1. Consent.Search (Document) (STU3)
+    1. Observation.Search (Labs) (STU3)
 1. Voer de Ontsluiten Bronsysteem tests uit op dit FHIR endpoint
 1. Meld dit FHIR endpoint aan bij RIVO-Noord (?)
 1. [DocumentReference.type](StructureDefinition-DocumentReference.html)

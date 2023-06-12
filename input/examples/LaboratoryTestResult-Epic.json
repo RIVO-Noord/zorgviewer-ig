@@ -1,0 +1,126 @@
+{
+    "resourceType": "Observation",
+    "id": "f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"
+        ]
+    },
+    "basedOn": [
+        {
+            "reference": "https://example.org/api/fhir/ProcedureRequest/eDBQUwNWgKzRvK1wg5cH8eYqSpQDsWfa7HwluNFBV4aM3",
+            "display": "CHLORIDE"
+        }
+    ],
+    "status": "final",
+    "_status": {
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.16.1",
+                            "code": "final",
+                            "display": "Final"
+                        }
+                    ],
+                    "text": "Final"
+                }
+            }
+        ]
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "275711006",
+                    "display": "serumtest (verrichting)"
+                }
+            ],
+            "text": "serumtest (verrichting)"
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/observation-category",
+                    "code": "laboratory",
+                    "display": "Laboratory"
+                },
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "49581000146104",
+                    "display": "Laboratory test finding (finding)"
+                }
+            ],
+            "text": "Laboratory"
+        },
+        {
+            "coding": [
+                {
+                    "system": "urn:oid:1.2.840.114350.1.13.485.3.7.10.798268.30",
+                    "code": "Lab",
+                    "display": "Lab"
+                }
+            ],
+            "text": "Lab"
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "2069-3",
+                "display": "Chloride [Moles/volume] in Blood"
+            },
+            {
+                "system": "urn:oid:1.2.840.114350.1.13.485.3.7.5.737384.604002",
+                "code": "LAC_CL_BLO"
+            },
+            {
+                "system": "urn:oid:1.2.840.114350.1.13.485.3.7.2.768282",
+                "code": "1739",
+                "display": "Chloride"
+            }
+        ],
+        "text": "Chloride"
+    },
+    "subject": {
+        "reference": "https://example.org/api/fhir/Patient/eXxP1o8ZlOz21F6HXS9puLA3",
+        "display": "XXX-Helleman, Johan"
+    },
+    "context": {
+        "reference": "https://example.org/api/fhir/Encounter/efIsG44ZOvm1y8h.1irrHxw3",
+        "display": "Ziekenhuiscontact"
+    },
+    "effectiveDateTime": "2022-03-31T09:57:00Z",
+    "issued": "2022-03-31T10:19:07Z",
+    "valueQuantity": {
+        "value": 109,
+        "unit": "mmol/L",
+        "system": "http://unitsofmeasure.org",
+        "code": "mmol/L"
+    },
+    "specimen": {
+        "reference": "https://example.org/api/fhir/Specimen/eorbci3KnfzqDf5n1sZsBe0sPN4sA3TGKF48sqy-RIc83",
+        "display": "Specimen 112793350"
+    },
+    "referenceRange": [
+        {
+            "low": {
+                "value": 99,
+                "unit": "mmol/L",
+                "system": "http://unitsofmeasure.org",
+                "code": "mmol/L"
+            },
+            "high": {
+                "value": 108,
+                "unit": "mmol/L",
+                "system": "http://unitsofmeasure.org",
+                "code": "mmol/L"
+            },
+            "text": "99 - 108 mmol/L"
+        }
+    ]
+}
