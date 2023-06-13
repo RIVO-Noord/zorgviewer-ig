@@ -15,9 +15,9 @@ Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 
 ### Request
 
-1. Opvragen (search) labuitslagen voor een patient
+1. Opvragen (search) labuitslagen (inclusief materiaalsoort) voor een patient
 
-    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&category=http://snomed.info/sct|275711006`
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&category=http://snomed.info/sct|275711006&_include=Observation:specimen`
 
     <blockquote class="stu-note" markdown="1">
     N.B. Alleen klinische chemie resultaten zijn op dit moment beschikbaar.
