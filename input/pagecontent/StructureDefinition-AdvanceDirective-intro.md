@@ -1,4 +1,5 @@
 ### User-Interface guidance
+! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.
 
 Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels

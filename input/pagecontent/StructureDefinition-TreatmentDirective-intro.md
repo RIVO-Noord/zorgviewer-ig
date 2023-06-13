@@ -17,6 +17,7 @@ Eerder in datasets onder het kopje [Advanced Care Planning (ACP)](datasets.html#
 Vanuit de landelijke organisatie rondom palliatieve zorg is er een aanvulling nodig van de BehandelingCodelijst, komende uit de zib BehandelAanwijzing. Toegevoegd zijn drie nieuwe categorieen met SNOMED CT codering. Deze lijst kun je vinden op [ACP TreatmentCodelist](ValueSet-ACPTreatmentCodelist.html) pagina. 
 
 ### User-Interface guidance
+! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.
 
 Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
