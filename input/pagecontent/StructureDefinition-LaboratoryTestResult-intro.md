@@ -7,7 +7,7 @@ Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 1. een schets van de tabel met labels en sortering informatie
 1. in geeltjes eventuele extra toelichting of regels
 
-{% include img.html img="UI Schets LaboratoriumUitslag.png" caption="User-Interface Laboratorium Uitslagen guidance" width="100%" %}
+{% include img.html img="UI-Schets-LaboratoriumUitslag.png" caption="User-Interface Laboratorium Uitslagen guidance" width="100%" %}
 
 ### Zoeken naar codes
 
