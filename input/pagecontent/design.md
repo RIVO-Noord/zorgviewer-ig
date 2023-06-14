@@ -1,11 +1,9 @@
 Deze pagina beschrijft de interacties tussen de systemen. 
-Dit is de startpagina van het bouwteam.
-
-### Use Cases
+Dit is de startpagina voor het bouwteam.
 
 ### Actors
 
-Scope is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge, en Topicus
+Scope is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge), en Topicus VIPlive (bij DokterDokter aangesloten partijen).
 
 ### System Actors
 
@@ -17,10 +15,9 @@ Note: (?) Probeer definities te hergebruiken uit [IHE Actors](https://gazelle.ih
 * Authorization Server - Authenticatie bouwblok
 * Provider Information Directory - Zorgverlener Registry bouwblok
 
-
 ### Sequence Diagrams
 
-#### Opstarten zorgviewer
+### Opstarten zorgviewer
 
 Eerst opstarten Zorgviewer Host, inloggen en patient selectie en vervolgens opstarten van de Zorgviewer.
 
@@ -34,16 +31,35 @@ Eerst opstarten Zorgviewer Host, inloggen en patient selectie en vervolgens opst
 {% include Zorgviewer-seq-1-fhir.svg %}
 </div>
 
-#### Bepalen zorgaanbieders
+### Bepalen zorgaanbieders
 
-Bepalen zorgaanbieders waarvoor toestemming is gegeven mogelijk nog extra stap om van zorgaanbieder naar endpoint(s) te komen.
+Bepalen zorgaanbieders en endpoints zonder toestemming check
+<div>
+{% include Zorgviewer-seq-2a.svg %}
+</div>
+
+### Bepalen zorgaanbieders adhv toestemming
+
+Bepalen zorgaanbieders en endpoints waarvoor toestemming is gegeven door de patient.
+
+Met de Zorgviewer MVP2 zullen we een toestemming realiseren volgens de afspraken tussen de RIVO-Noord instellingen. Zie de policy [hier](https://rivo-noord.nl/zorgviewer/toestemming). Deze zal zoveel mogelijk volgens de MITZ specificatie zijn. MITZ zal zich laten inspireren door de Zorgviewer specificaties.
+
+**Van toepassing zijnde standaarden en documentatie**:
+* MITZ Open autorisatie vraag gebruikt als lokalisatie vraag
+
 <div>
 {% include Zorgviewer-seq-2.svg %}
 </div>
 
-#### Bevragen bronsystemen zorgaanbieders
+### Bevragen terminologie
 
-Bevragen bronsystemen ontvangkelijke zorgaanbieders
+*TODO*
+Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
+
+**Van toepassing zijnde standaarden en documentatie**:
+* [FHIR Terminology Service](https://hl7.org/fhir/STU3/terminology-service.html)
+
+### Bevragen bronsystemen zorgaanbieders
 
 **Van toepassing zijnde standaarden en documentatie**:
 * [MedMij BgZ 2017 FHIR](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
@@ -57,7 +73,7 @@ Bevragen bronsystemen ontvangkelijke zorgaanbieders
 {% include Zorgviewer-seq-3.svg %}
 </div>
 
-#### Bevragen bronsystemen zorgaanbieders / documenten
+### Bevragen bronsystemen zorgaanbieders documenten
 
 **Van toepassing zijnde standaarden en documentatie**:
 * [MedMij PDF/a](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpPDFA)

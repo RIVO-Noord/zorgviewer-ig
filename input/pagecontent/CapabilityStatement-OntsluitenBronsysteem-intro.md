@@ -7,3 +7,5 @@ Benodigde SMART-on-FHIR [scopes](http://hl7.org/fhir/smart-app-launch/1.0.0/scop
 1. user/Practitioner.read
 1. user/PractitionerRole.search
 1. user/Procedure.search
+1. user/Observation.search
+1. user/Specimen.read

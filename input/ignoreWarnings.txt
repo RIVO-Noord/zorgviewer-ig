@@ -1,3 +1,22 @@
 == Suppressed Messages ==
-# Not caused by zorgviewer-ig, mostly in hl7.fhir.r3.core#3.0.2
-if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)
+# Not caused by zorgviewer-ig
+
+# Terminology server issue?
+Error performing tx3 operation 'validate-code: Cannot invoke "java.util.List.iterator()" because "headers" is null' (parameters = "")
+The code provided (nl-NL) could not be validated against the maximum value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|3.0.2), (error = Error performing tx3 operation 'validate-code: Cannot invoke "java.util.List.iterator()" because "headers" is null' (parameters = ""))
+%error message = Error performing tx3 operation 'validate-code: Cannot invoke "java.util.List.iterator()" because "headers" is null' (parameters = "")%
+
+# FHIR core example issue
+if identifier.system is 'urn:ietf:rfc:3986', then the identifier.value must be a full URI (e.g. start with a scheme), not 'Local eCMS identifier'
+
+# ICD-10-NL; not loaded in international terminology server
+Unknown Code (http://hl7.org/fhir/sid/icd-10-nl#%
+
+# Epic internal Code Systems; not loaded in international terminology server
+Code System URI 'urn:oid:1.2.840.114350.1.13.%
+
+# Zib Code Systems; not loaded in international terminology server
+%urn:oid:2.16.840.1.113883.2.4.3.11.60.40.%
+
+# Tooling replaces DataRequirement.valueCode with .valueCoding in PlanDefinition. Why??
+A code with no system has no defined meaning. A system should be provided

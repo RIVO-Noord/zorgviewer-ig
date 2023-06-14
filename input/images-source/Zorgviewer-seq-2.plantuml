@@ -9,20 +9,22 @@ participant Adressering
 
 activate Zorgviewer
 Zorgverlener->Zorgviewer: ..vervolg opstarten zorgviewer..
-Zorgviewer->Toestemming: Opvragen ontvankelijke zorgaanbieders (Open autorisatievraag adhv BSN)\n""<toestemming-base>/Consent?patient:Patient.identifier=<BSN>&role=<rol>""
+Zorgviewer->Toestemming: Opvragen ontvankelijke zorgaanbieders (Open autorisatievraag adhv BSN)\n""<toestemming-base>/Consent?patient:Patient.identifier=<BSN>""
 note over Toestemming: Afhankelijk van toestemming van patient\nvoor "delen met de zorgverlener".
 activate Toestemming
 Toestemming-->Zorgviewer: Lijst ontvankelijke zorgaanbieders (Organization)\nBundle met ""[[StructureDefinition-ToestemmingConsent.html ToestemmingConsent]]""
 deactivate Toestemming
 
-Zorgviewer->Adressering: Endpoints opvragen adhv Organization\n""<adressering-base>/Endpoint?organization=<Consent.organization.reference>""
-note over Toestemming
-  Consent.organization: e.g. UMCG
-  Endpoint opvragen bij Organization
-end note
-activate Adressering
-Adressering-->Zorgviewer: Bundle met ""[[StructureDefinition-Endpoint.html Endpoint]]""
-deactivate Adressering
+loop voor iedere zorgaanbieder
+  Zorgviewer->Adressering: Endpoints opvragen adhv Organization\n""<adressering-base>/Endpoint?organization=<Consent.organization.reference>""
+  note over Toestemming
+    Consent.organization: e.g. UMCG
+    Endpoint opvragen bij Organization
+  end note
+  activate Adressering
+  Adressering-->Zorgviewer: Bundle met ""[[StructureDefinition-Endpoint.html Endpoint]]""
+  deactivate Adressering
+end loop
 
 deactivate Zorgviewer
 

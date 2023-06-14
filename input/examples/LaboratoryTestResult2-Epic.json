@@ -1,0 +1,126 @@
+{
+    "resourceType": "Observation",
+    "id": "eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"
+        ]
+    },
+    "basedOn": [
+        {
+            "reference": "https://example.org/TST-OAUTH2/api/FHIR/STU3/ProcedureRequest/e4AvrkXamOjmlO06mNVEChnNmGsYJY4DVK1axMB8FzAk3",
+            "display": "Kalium"
+        }
+    ],
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/observation-category",
+                    "code": "laboratory",
+                    "display": "Laboratory"
+                },
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "49581000146104",
+                    "display": "Laboratory test finding (finding)"
+                }
+            ],
+            "text": "Laboratory"
+        },
+        {
+            "coding": [
+                {
+                    "system": "urn:oid:1.2.840.114350.1.13.485.3.7.10.798268.30",
+                    "code": "Lab",
+                    "display": "Lab"
+                }
+            ],
+            "text": "Lab"
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "urn:oid:1.2.840.114350.1.13.485.3.7.5.737384.604002",
+                "code": "LAC_K_BLO"
+            },
+            {
+                "system": "urn:oid:1.2.840.114350.1.13.485.3.7.2.768282",
+                "code": "1782",
+                "display": "Kalium"
+            }
+        ],
+        "text": "Kalium"
+    },
+    "subject": {
+        "reference": "https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eSGar8w78ryJi3BCYMGOK5w3",
+        "display": "Fictief, J."
+    },
+    "context": {
+        "reference": "https://example.org/TST-OAUTH2/api/FHIR/STU3/Encounter/e2bhUy8ZBt6tc2PxTMIp9yw3",
+        "identifier": {
+            "use": "usual",
+            "system": "urn:oid:1.2.840.114350.1.13.485.3.7.3.698084.8",
+            "value": "1100102159"
+        },
+        "display": "Resultaat"
+    },
+    "effectiveDateTime": "2021-07-01T08:46:00Z",
+    "issued": "2021-07-01T08:49:11Z",
+    "valueQuantity": {
+        "value": 8.0,
+        "unit": "mmol/L",
+        "system": "http://unitsofmeasure.org",
+        "code": "mmol/L"
+    },
+    "interpretation": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/v2/0078",
+                "code": "AA",
+                "display": "Kritiek"
+            }
+        ],
+        "text": "Kritiek"
+    },
+    "specimen": {
+        "reference": "https://example.org/TST-OAUTH2/api/FHIR/STU3/Specimen/exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3",
+        "display": "Specimen 92069404"
+    },
+    "referenceRange": [
+        {
+            "low": {
+                "value": 3.5,
+                "unit": "mmol/L",
+                "system": "http://unitsofmeasure.org",
+                "code": "mmol/L"
+            },
+            "high": {
+                "value": 5,
+                "unit": "mmol/L",
+                "system": "http://unitsofmeasure.org",
+                "code": "mmol/L"
+            },
+            "text": "3,5 - 5,0 mmol/L"
+        }
+    ],
+    "_status": {
+        "extension": [
+            {
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.16.1",
+                            "code": "final",
+                            "display": "Final"
+                        }
+                    ],
+                    "text": "Final"
+                },
+                "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification"
+            }
+        ]
+    }
+}

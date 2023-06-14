@@ -30,15 +30,17 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
 
 1. Werken in master
 1. Werk de ``changes.md`` bij
-1. git commit
+1. > git push; git commit -a
 1. Create tag "0.M.R-sprintX" - op github web-UI klik op: 
   1. tags
   1. Releases
   1. Draft new release
-  1. Choose a tag
+  1. Choose a tag: "0.M.R-sprintX"
   1. Create a new tag
-  1. Set as pre-release
-  1. Publish met devops link als description
+  1. Release title: "0.M.R-sprintX"
+  1. Description: <devops link naar sprint>
+  1. Vink aan: Set as pre-release
+  1. Publish release
 1. Publish via snapshot branch tbv review
 ```
 cd <temp-folder>

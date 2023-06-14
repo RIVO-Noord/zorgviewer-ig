@@ -3,6 +3,8 @@
 <style>table, td, th { border: 1px solid black; padding:10px; }</style>
 |Versie|Datum|Changes|
 |---|---|---|
+|0.9.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.8.0-sprint9...master)|
+|0.8.0-sprint9|14-jun-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.7.0-sprint8...0.8.0-sprint9)<br/>* Alle UI Guidance updates<br/>* Labuitslagen eerste draft<br/>* Toestemming updates<br/>* Technische QA fixes|
 |0.7.0-sprint8|30-mei-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.6.0-sprint7...0.7.0-sprint8)<br/>* Algemene UI Design aanpassingen kolom volgorde<br/>* Leeswijzer update<br/>* FHIR requests bijgesteld, DataTime vs Period<br/>* Terminologie resources toegevoegd<br/>* Kleine documentatie issues, plaatjes, missende links en wat vertalingen|
 |0.6.0-sprint7|15-mei-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.5.0-sprint6...0.6.0-sprint7)<br/>* Verrichtingen, Behandelaanwijzing - UI en voorbeeld updates<br/>* Achtergrond Dokter Dokter - update|
 |0.5.0-sprint6|2-mei-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.4.0-sprint5...0.5.0-sprint6)<br/>* Verrichtingen UI Guidance en Profiel - new<br/>* Patient naam algorithme<br/>* Ontsluiten bronsysteem - update<br/>* Behandelaanwijzing en Wilsverklaring UI Guidance en Profielen - concept|

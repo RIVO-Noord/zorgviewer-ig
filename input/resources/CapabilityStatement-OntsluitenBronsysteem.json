@@ -63,6 +63,14 @@
     {
       "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Alert",
       "display": "zib-Alert"
+    },
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation",
+      "display": "zib-LaboratoryTestResult-Observation"
+    },
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen",
+      "display": "zib-LaboratoryTestResult-Specimen"
     }
   ],
   "rest": [
@@ -306,6 +314,52 @@
                       }
                     ],
                   "code": "search-type"
+              }
+          ]
+        },
+        {
+          "extension": [
+              {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+              }
+          ],
+          "type": "Observation",
+          "profile": {
+              "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/LaboratoryTestResult"
+          },
+          "interaction": [
+              {
+                  "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                        "valueCode": "SHALL"
+                      }
+                    ],
+                  "code": "search-type"
+              }
+          ]
+        },
+        {
+          "extension": [
+              {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+              }
+          ],
+          "type": "Specimen",
+          "profile": {
+              "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Specimen"
+          },
+          "interaction": [
+              {
+                  "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                        "valueCode": "SHALL"
+                      }
+                    ],
+                  "code": "read"
               }
           ]
         }

@@ -1,0 +1,72 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/LaboratoryTestResult",
+    "name": "LaboratoryTestResult",
+    "title": "LaboratoryTestResult",
+    "status": "draft",
+    "description": "Laboratorium Test Uitslagen",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Observation.status",
+                "path": "Observation.status",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.code.text",
+                "path": "Observation.code.text",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.effectiveDateTime",
+                "path": "Observation.effectiveDateTime",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.valueQuantity",
+                "path": "Observation.valueQuantity",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.valueQuantity.value",
+                "path": "Observation.valueQuantity.value",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.valueQuantity.unit",
+                "path": "Observation.valueQuantity.unit",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.interpretation.text",
+                "path": "Observation.interpretation.text",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.referenceRange.low.value",
+                "path": "Observation.referenceRange.low.value",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.referenceRange.low.unit",
+                "path": "Observation.referenceRange.low.unit",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.referenceRange.high.value",
+                "path": "Observation.referenceRange.high.value",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.referenceRange.high.unit",
+                "path": "Observation.referenceRange.high.unit",
+                "mustSupport": true
+            }
+        ]
+    }
+}
