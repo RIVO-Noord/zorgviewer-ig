@@ -1,0 +1,27 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Specimen",
+    "name": "Specimen",
+    "title": "Specimen",
+    "status": "draft",
+    "description": "Monster Materiaal",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Specimen",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Specimen.type.text",
+                "path": "Specimen.type.text",
+                "mustSupport": true
+            },
+            {
+                "id": "Specimen.note.text",
+                "path": "Specimen.note.text",
+                "mustSupport": true
+            }
+        ]
+    }
+}
