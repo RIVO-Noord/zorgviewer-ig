@@ -26,14 +26,7 @@ Voorbeelden:
 * 0.2.0-sprint2 - De versie (sprint snapshot) ten behoeve van sprint #2
 * 0.2.20-sprint2 - sprint #2 met verdere verduidelijking of foutjes adhv vragen
 * ...
-* 1.0.0-mvp2 - De finale versie
-
-En verder:
-
-1. Git tag noemen zoals we de sprint noemen in DevOps.
-1. Onder de titels van paragrafen "(draft)" of "(sprint1)".
-1. In changelog, deze pagina van de IG, per sprint een overzichtje van paragrafen waar iets is gewijzigd en zichtbaar als (new-content / ligt groen gearceerd waar mogelijk).
-1. (FHIR) Artifacts hebben eigen status.
+* 1.0.x-mvp2 - De eerste productie versie 1.0
 
 ### Review Workflow
 
