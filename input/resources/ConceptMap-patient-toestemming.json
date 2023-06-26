@@ -3,7 +3,8 @@
     "id": "patient-toestemming",
     "url": "http://hl7.nl/fhir/zorgviewer/ConceptMap/patient-toestemming",
     "version": "0.1.0",
-    "name": "PatientToestemming",
+    "name": "PatientToestemmingMapping",
+    "title": "Patient Toestemming Mapping",
     "status": "active",
     "description": "Deze ConceptMap representeerd de mapping van een patient-toestemming HL7 v2 bericht (PID en CON segmenten) naar FHIR Concent Resource.",
     "jurisdiction" : [{
@@ -12,14 +13,14 @@
         "code" : "NL"
       }]
     }],
-    "sourceUri": "CON",
+    "sourceUri": "HL7v2",
     "targetUri": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/ToestemmingConsent",
     "group": [
       {
         "element": [
           {
             "code": "PID-2",
-            "display": "Patient BSN (NLMINBIZA)",
+            "display": "Patient BSN (NLMINBIZA^NNNLD)",
             "target": [
               {
                 "code": "patient.identifier",
