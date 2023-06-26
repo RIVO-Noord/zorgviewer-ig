@@ -13,12 +13,28 @@
     "differential": {
         "element": [
             {
+                "id": "Consent.status",
+                "path": "Consent.status",
+                "mustSupport": true
+            },
+            {
+                "id": "Consent.category.coding.code",
+                "path": "Consent.category.coding.code",
+                "fixedCode": "Doss. delen?",
+                "mustSupport": true
+            },
+            {
                 "id": "Consent.patient",
                 "path": "Consent.patient",
                 "type": [ {
                     "code": "Reference",
                     "targetProfile": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient"
                 } ],
+                "mustSupport": true
+            },
+            {
+                "id": "Consent.period",
+                "path": "Consent.period",
                 "mustSupport": true
             },
             {
