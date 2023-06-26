@@ -1,3 +1,6 @@
+### Mappings
+
+* [HL7 v2 ADT^A08 en ADT^A31 mapping van PID en CON segmenten](ConceptMap-patient-toestemming.html)
 
 ### Request
 
