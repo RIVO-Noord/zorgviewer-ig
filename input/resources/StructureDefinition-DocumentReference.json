@@ -13,17 +13,21 @@
     "differential": {
         "element": [
             {
-                "id": "DocumentReference.status",
-                "path": "DocumentReference.status",
+                "id": "DocumentReference",
+                "path": "DocumentReference",
                 "constraint": [
                     {
                         "key": "zv-dr-1",
                         "severity": "error",
                         "human": "Only status is current final documents are expected.",
                         "expression": "status='current'",
-                        "xpath": "f:status='current'"
+                        "xpath": "/f:status='current'"
                     }
-                ],
+                ]
+            },
+            {
+                "id": "DocumentReference.status",
+                "path": "DocumentReference.status",
                 "mustSupport": true
             },
             {
@@ -64,8 +68,8 @@
                         "key": "zv-dr-2",
                         "severity": "warning",
                         "human": "Only pdf documents are expected through the url",
-                        "expression": "content.attachement.contentType='application/pdf'",
-                        "xpath": "f:content.attachement.contentType='application/pdf'"
+                        "expression": "contentType='application/pdf'",
+                        "xpath": "/f:content/f:attachement/f:contentType='application/pdf'"
                     } 
                 ],
                 "mustSupport": true
