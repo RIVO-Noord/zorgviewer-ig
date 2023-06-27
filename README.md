@@ -30,7 +30,7 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
 
 1. Werken in master
 1. Werk de ``changes.md`` bij
-1. > git push; git commit -a
+1. > git commit -a; git push 
 1. Create tag "0.M.R-sprintX" - op github web-UI klik op: 
   1. tags
   1. Releases
@@ -44,7 +44,7 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
 1. Publish via snapshot branch tbv review
 ```
 cd <temp-folder>
-git clone https://github.com/RIVO-Noord/zorgviewer-ig.git
+git pull of git clone https://github.com/RIVO-Noord/zorgviewer-ig.git
 git checkout snapshot
 git merge 0.2.0-sprint3
 ```

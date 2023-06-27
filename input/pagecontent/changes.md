@@ -3,7 +3,8 @@
 <style>table, td, th { border: 1px solid black; padding:10px; }</style>
 |Versie|Datum|Changes|
 |---|---|---|
-|0.9.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.8.0-sprint9...master)|
+|0.10.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.9.0-sprint10...master)<br/>* Labuitslagen tweede draft<br/>* Toestemming mappings van HL7 v2 CON|
+|0.9.0-sprint10|27-jun-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.8.0-sprint9...0.9.0-sprint10)<br/>* Labuitslagen tweede draft<br/>* Toestemming mappings van HL7 v2 CON|
 |0.8.0-sprint9|14-jun-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.7.0-sprint8...0.8.0-sprint9)<br/>* Alle UI Guidance updates<br/>* Labuitslagen eerste draft<br/>* Toestemming updates<br/>* Technische QA fixes|
 |0.7.0-sprint8|30-mei-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.6.0-sprint7...0.7.0-sprint8)<br/>* Algemene UI Design aanpassingen kolom volgorde<br/>* Leeswijzer update<br/>* FHIR requests bijgesteld, DataTime vs Period<br/>* Terminologie resources toegevoegd<br/>* Kleine documentatie issues, plaatjes, missende links en wat vertalingen|
 |0.6.0-sprint7|15-mei-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.5.0-sprint6...0.6.0-sprint7)<br/>* Verrichtingen, Behandelaanwijzing - UI en voorbeeld updates<br/>* Achtergrond Dokter Dokter - update|
@@ -26,14 +27,7 @@ Voorbeelden:
 * 0.2.0-sprint2 - De versie (sprint snapshot) ten behoeve van sprint #2
 * 0.2.20-sprint2 - sprint #2 met verdere verduidelijking of foutjes adhv vragen
 * ...
-* 1.0.0-mvp2 - De finale versie
-
-En verder:
-
-1. Git tag noemen zoals we de sprint noemen in DevOps.
-1. Onder de titels van paragrafen "(draft)" of "(sprint1)".
-1. In changelog, deze pagina van de IG, per sprint een overzichtje van paragrafen waar iets is gewijzigd en zichtbaar als (new-content / ligt groen gearceerd waar mogelijk).
-1. (FHIR) Artifacts hebben eigen status.
+* 1.0.x-mvp2 - De eerste productie versie 1.0
 
 ### Review Workflow
 
