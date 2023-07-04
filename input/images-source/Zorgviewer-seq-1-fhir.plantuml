@@ -34,14 +34,6 @@ Zorgviewer->Host: opvragen gebruiker gegevens\n""<zorgviewer-host-base>/Practiti
 activate Host
 Host-->Zorgviewer: ""[[StructureDefinition-Practitioner.html Practitioner]]""
 deactivate Host
-
-note right Zorgviewer
-    obv AGB-Z of ziekenhuis van de gebruiker
-    via signing van token
-end note
-Zorgviewer->Zorgviewer++: CHECK Autorisatie/whitelist om Zorgviewer te starten
-destroy Zorgviewer
-
 Zorgviewer->Zorgviewer: toon gebruiker gegevens
 
 Zorgviewer->Host: opvragen patient gegevens\n""<zorgviewer-host-base>/Patient/<patient_fhir_id>""
