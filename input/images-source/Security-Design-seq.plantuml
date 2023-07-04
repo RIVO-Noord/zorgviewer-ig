@@ -111,7 +111,14 @@ loop Voor ieder endpoint
     CHECK: backend token
     CHECK: client certificate
   end note
-  ABron->Toestemming: Check toestemming (Wordt MITZ Gesloten autorisatie vraag als in de regio in productie)
+  group Check toestemming OPTIES
+    note over AOBron
+      Als MITZ in productie is in de regio wordt dit de Gesloten autorisatie vraag 
+      vanuit bron (b) of vanuit ontsluiten bronsysteem (b) als de bron dit niet zelf kan.
+    end note
+    AOBron->ABron: (a) Check locale toestemming
+    ABron->Toestemming: (b) Check toestemming
+  end
   ABron ->x ABron
   note left
     CHECK: vraag gesteld zonder MITZ toestemming
