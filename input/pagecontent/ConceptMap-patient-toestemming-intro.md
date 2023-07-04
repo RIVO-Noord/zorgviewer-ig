@@ -1,3 +1,7 @@
+<div style="margin: 5px; padding: 10px; color: #3c763d; background-color: #dff0d8; border: 4px solid black;">
+TOEKOMST
+</div>
+
 Akkoord voorbeeld HL7 v2 relevante bericht segmenten:
 ```
 PID|1||7765853^^^UMCG^PI~012345678^^^NLMINBIZA^NNNLD||...
