@@ -35,7 +35,7 @@
 1. De zorgviewer host kan de zorgviewer opstarten met context (huidige gebruiker en patient).
 1. De zorgviewer host ondersteunt patient context wissels.
 1. De zorgviewer host ondersteunt gebruiker context wissels.
-1. De zorgviewer host biedt mogelijkeid aan de zorgviewer om huidige gebruiker en patient details (zoals naam) op te vragen als dit mist in de context.
+1. De zorgviewer host biedt mogelijkheid aan de zorgviewer om huidige gebruiker en patiënt details (zoals naam) op te vragen als dit mist in de context.
 
 **Keuze**:
 1. Conform [SMART-on-FHIR 1.0.0 EHR launch](http://hl7.org/fhir/smart-app-launch/1.0.0/index.html#ehr-launch-sequence)
@@ -82,7 +82,7 @@
 * Basis voor authenticatie
 
 **Requirements**:
-1. Gebruik van reeds in organisatie in gebruik zijnde ID’s gekoppeld aan een extern erkende identiteit, zoals AGB of BIG voor zorgveleners en zorgaanbieders.
+1. Gebruik van reeds in organisatie in gebruik zijnde ID’s gekoppeld aan een extern erkende identiteit, zoals AGB of BIG voor zorgverleners en zorgaanbieders.
     1. Lokale identiteit MOET AGB-Z of BIG-Nummer als attribuut hebben, zodat we via de Zorgverlener Directory de specialismen en rollen kunnen opvragen
 1. Vektis AGB-medische specialismen
 
@@ -121,12 +121,12 @@
 
 #### Autorisatie
 
-**Definitie**: Rechten die een identiteit (zorgverlener, client / patient) heeft voor toegang tot cliëntgegevens (bron: NEN 7510).
+**Definitie**: Rechten die een identiteit (zorgverlener, cliënt / patiënt) heeft voor toegang tot cliëntgegevens (bron: NEN 7510).
 
-Er zijn meerdere nivo's van autorisatie, namelijk:
+Er zijn meerdere niveau's van autorisatie, namelijk:
 1. De zorgviewer moet geautoriseerd zijn om bronsysteem ontsluitingen te bevragen (technisch: welke FHIR resources in scope en clientID)
 1. De gebruiker moet geautoriseerd zijn om de zorgviewer te gebruiken
-1. De gebruiker moet geautoriseerd zijn om specifieke gegevens op te vragen adhv toestemming en rol
+1. De gebruiker moet geautoriseerd zijn om specifieke gegevens op te vragen aan de hand van toestemming en rol
 
 #### Logging
 
@@ -148,12 +148,12 @@ Er zijn meerdere nivo's van autorisatie, namelijk:
 
 **Requirements**:
 1. Ontsluit minimaal de volgende gegevens: 
-    1. de 28 BGZ-Zibs
+    1. de 28 BgZ-Zibs
     1. de correspondentie (radiologie brieven, specialisten brieven, notities, ontslag brief)
     * N.B. de zibs kunnen heel veel gegevens ondersteunen, maar als er geen schermen voor zijn om de gegevens in te voeren of geen workflow is waar die schermen zichtbaar worden, zullen die gegevens nooit beschikbaar zijn.
-1. Zorginformatiebouwstenen conform NICTIZ [publicatie 2017](https://zibs.nl/wiki/ZIB_Publicatie_2017(NL)), de 28 BGZ-Zibs,
+1. Zorginformatiebouwstenen conform NICTIZ [publicatie 2017](https://zibs.nl/wiki/ZIB_Publicatie_2017(NL)), de 28 BgZ-Zibs,
 [Zibs 2017 FHIR Profiles](https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/) en [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017) obv [HL7 FHIR STU3](http://hl7.org/fhir/STU3/) 
-1. Individuele ZIBS moeten kunnen worden aangeleverd 
+1. Individuele zibs moeten kunnen worden aangeleverd 
 1. Alleen identiteiten zoals gedefinieerd door het Identiteit bouwblok mogen geaccepteerd worden.
 1. *TOEKOMST* Bronsysteem ZOU MOETEN checken bij Mitz
 
@@ -180,7 +180,7 @@ Er zijn meerdere nivo's van autorisatie, namelijk:
 ### Technische Requirements
 
 1. Alle implementaties dienen zich te houden aan [Postel's law, Robustness principle](http://www.healthintersections.com.au/?p=2403)
-1. Niet valideren tegen de profiles at-runtime, alleen bij aansluit (zelf) certificeren aan de hand van de [CapabilityStatements](artifacts.html#1) in deze IG.
+1. Niet valideren tegen de profiles at-runtime, alleen bij aansluit (zelf) certificeren aan de hand van de [CapabilityStatements](artifacts.html#1) in deze implementatiegids.
 
 ### Dependencies
 
