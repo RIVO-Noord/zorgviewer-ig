@@ -4,11 +4,11 @@ autonumber
 
 actor Zorgverlener
 participant Zorgviewer
+participant Behandelplan
 box "Andere zorgaanbieder"
 participant "Bronsysteem ontsluiting" as Bron
 participant Bronsysteem
 end box
-participant Behandelplan
 
 activate Zorgviewer
 Zorgverlener->Zorgviewer: ..vervolg bepalen zorgaanbieders..
@@ -23,7 +23,7 @@ deactivate Behandelplan
 loop voor iedere zorgaanbieder
   Zorgviewer->Zorgviewer: [[Endpoint-UMCG.html Bronsysteem ontsluiting endpoint]]
   activate Zorgviewer
-  Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base/Patient?identifier=<BSN>""
+  Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base>/Patient?identifier=<BSN>""
   activate Bron
   Bron->Bron : verkrijgen extern-access-token
   Bron->Bronsysteem : Patient request
