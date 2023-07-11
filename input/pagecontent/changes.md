@@ -4,7 +4,7 @@
 |Versie|Datum|Changes|
 |---|---|---|
 |0.11.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.10.0-sprint11...master)|
-|0.10.0-sprint11|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.9.0-sprint10...0.10.0-sprint11)<br/>* Kleine detail updates en QA<br/>* AuditEvent draft|
+|0.10.0-sprint11|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.9.0-sprint10...0.10.0-sprint11)<br/>* Kleine detail updates en QA<br/>* AuditEvent draft<br/>* UI guidance updates|
 |0.9.0-sprint10|27-jun-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.8.0-sprint9...0.9.0-sprint10)<br/>* Labuitslagen tweede draft<br/>* Toestemming mappings van HL7 v2 CON|
 |0.8.0-sprint9|14-jun-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.7.0-sprint8...0.8.0-sprint9)<br/>* Alle UI Guidance updates<br/>* Labuitslagen eerste draft<br/>* Toestemming updates<br/>* Technische QA fixes|
 |0.7.0-sprint8|30-mei-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.6.0-sprint7...0.7.0-sprint8)<br/>* Algemene UI Design aanpassingen kolom volgorde<br/>* Leeswijzer update<br/>* FHIR requests bijgesteld, DataTime vs Period<br/>* Terminologie resources toegevoegd<br/>* Kleine documentatie issues, plaatjes, missende links en wat vertalingen|
