@@ -3,7 +3,7 @@ Dit is de startpagina voor het bouwteam.
 
 ### Actors
 
-Scope is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge), en Topicus VIPlive (bij DokterDokter aangesloten partijen).
+Scope is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge), en Topicus VIPlive (bij Dokter Drenthe aangesloten partijen).
 
 ### System Actors
 
@@ -19,7 +19,7 @@ Note: (?) Probeer definities te hergebruiken uit [IHE Actors](https://gazelle.ih
 
 ### Opstarten zorgviewer
 
-Eerst opstarten Zorgviewer Host, inloggen en patient selectie en vervolgens opstarten van de Zorgviewer.
+Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens opstarten van de Zorgviewer.
 
 **Van toepassing zijnde standaarden en documentatie**:
 * [SMART-on-FHIR 1.0.0](http://hl7.org/fhir/smart-app-launch/1.0.0/)
@@ -40,9 +40,9 @@ Bepalen zorgaanbieders en endpoints zonder toestemming check
 
 ### Bepalen zorgaanbieders adhv toestemming
 
-Bepalen zorgaanbieders en endpoints waarvoor toestemming is gegeven door de patient.
+Bepalen zorgaanbieders en endpoints waarvoor toestemming is gegeven door de patiënt.
 
-Met de Zorgviewer MVP2 zullen we een toestemming realiseren volgens de afspraken tussen de RIVO-Noord instellingen. Zie de policy [hier](https://rivo-noord.nl/zorgviewer/toestemming). Deze zal zoveel mogelijk volgens de MITZ specificatie zijn. MITZ zal zich laten inspireren door de Zorgviewer specificaties.
+Met de Zorgviewer MVP2 zullen we een toestemming realiseren volgens de afspraken tussen de RIVO-Noord instellingen. Zie het beleid [hier](https://rivo-noord.nl/zorgviewer/toestemming). Deze zal zoveel mogelijk volgens de MITZ specificatie zijn. MITZ zal zich laten inspireren door de Zorgviewer specificaties.
 
 **Van toepassing zijnde standaarden en documentatie**:
 * MITZ Open autorisatie vraag gebruikt als lokalisatie vraag

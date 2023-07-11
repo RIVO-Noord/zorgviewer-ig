@@ -19,9 +19,9 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
     1. Focus ligt eerst op BIG of AGB-Z geregistreerde gebruikers
     1. Parallel: Uitbreiden vulling BgZ en PDF/a. Hiervoor zijn de EPD teams nodig
 1. Uitbreiden bronnen, uitbreiden "opstarten vanuit" en daarmee gebruikersgroepen
-1. Uitbreiding zibs buiten BgZ - gegevenssets breder ondersteunen (Acute Zorg, HartNet, Oncologie, PalZorg)
+1. Uitbreiding zibs buiten BgZ - gegevenssets breder ondersteunen (Acute Zorg, HartNet, Oncologie, Palliatieve Zorg)
 1. Behandelplan functionaliteit uitbreiden, keuze behandelplan en later workflow
-1. Patient als gebruiker
+1. Patiënt als gebruiker
 
 #### Prioritering werkzaamheden
 
@@ -47,7 +47,7 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
 | **Overname** *TOEKOMST* | Is de zorginformatie -beschikbaar in de zorgviewer, afkomstig van een ander bronsysteem- voor jou als zorgverlener relevant, dan kan je deze selecteren en overnemen in de informatieomgeving van jouw zorgorganisatie. |
 | **Zorgviewer** | Alle bouwblokken samen vormen de zorgviewer. De zorgviewer combineert, ontdubbelt en filtert de informatie op basis van jouw behoefte als zorgverlener. De zorgviewer biedt zorgverleners een 360° beeld van de patiënt of cliënt. Opgebouwd uit alle beschikbare zorginformatie, waarvoor de patiënt of cliënt toestemming heeft gegeven. |
 
-**Multi-inzetbaar**: *De bouwblokken zijn niet alleen bruikbaar voor de regionale zorgviewer, maar zijn ook bruikbaar en essentieel voor het delen van diagnostiek, multidisciplinair overleg, monitoring en E-health en de Persoonlijke Gezondheidsomgeving (PGO).* |
+**Multi-inzetbaar**: *De bouwblokken zijn niet alleen bruikbaar voor de regionale zorgviewer, maar zijn ook bruikbaar en essentieel voor het delen van diagnostiek, multidisciplinair overleg, monitoring en e-Health en de Persoonlijke Gezondheidsomgeving (PGO).* |
 
 
 ### Bouwblokken samenwerking

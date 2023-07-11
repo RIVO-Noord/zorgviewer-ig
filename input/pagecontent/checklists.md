@@ -12,7 +12,7 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 1. *Identiteit/Security*: Zorgaanbieder accepteert identiteit van de andere aangesloten Zorgaanbieders en mag ervanuit gaan dat er wordt gezorgd voor een juiste gebruikersrechten administratie.
 1. *Security*: Zorgaanbieder staat in het NEN 7510 register
 1. *Logging*: Zorgaanbieder moet voor de NEN 7513 conforme logging zorgen
-1. *Governance*: Zorgaanbieder is deelnermer RIVO-Noord
+1. *Governance*: Zorgaanbieder is deelnemer RIVO-Noord
 
 ### Epic huizen
 

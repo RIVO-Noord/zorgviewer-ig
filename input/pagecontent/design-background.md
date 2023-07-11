@@ -1,6 +1,6 @@
 ### Opties Ontsluiten Bronsysteem
 
-In onderstaande plaat zijn een 2-tal opties geschets voor het positioneren van de bouwblok Ontsluiten Bronsysteem.
+In onderstaande plaat zijn een 2-tal opties geschetst voor het positioneren van de bouwblok Ontsluiten Bronsysteem.
 Let op: dit is niet een solution layer plaat. Het kan nog steeds dat de functionaliteit van het bouwblok Ontsluiten Bronsysteem gesplitst is.
 
 Functionaliteiten:
@@ -22,7 +22,7 @@ Voor het ontsluiten van het bronsysteem is een resource server, waar de informat
 
 ### Ontsluiten ACP vanuit Dokter Drenthe / VIPLive
 
-In onderstaade plaat is globaal weergegeven hoe de systemen van de huisarts integreren richting de Zorgviewer.
+In onderstaande plaat is globaal weergegeven hoe de systemen van de huisarts integreren richting de Zorgviewer.
 
 {% include img.html img="ontsluiten-dokterdrenthe.png" caption="Ontsluiten dokter Drenthe" width="70%" %}
 
@@ -32,9 +32,11 @@ In onderstaade plaat is globaal weergegeven hoe de systemen van de huisarts inte
 * VIPLive Spoed EPD = module van VIPLive en wordt gebruikt in de huisartsenpost
 
 #### Omschrijving proces
-VIPLive (SPOED EPD) is het systeem waarmee de Zorgviewer gekoppeld moet worden. Het VIPLive platform , met daarin SPOED EPD wordt in de avond, nacht en weekend gebruikt. De telefoniste voert de triage uit en documenteert hierin de gegevens van de patiënt + BSN. Basale dossier informatie is hier al bekend via LSP als patiënt toestemming heeft gegeven.
+VIPLive (SPOED EPD) is het systeem waarmee de Zorgviewer gekoppeld moet worden. Het VIPLive platform, met daarin SPOED EPD wordt in de avond, nacht en weekend gebruikt door de huisartsenpost (HAP). De triagist aan de telefoon voert de triage uit wanneer een patiënt belt. De gegevens van de patiënt en BSN wordt gedocumenteerd in het VIPLive Spoed EPD. Basale dossier informatie is hier al bekend via Landelijk SchakelPunt (LSP) indien patiënt toestemming heeft gegeven.
  
-Niet elke praktijk in Groningen/Friesland/Drenthe heeft VIPLive maar in Drenthe is regionaal afgesproken om VIPLive (Spoed EPD) te gebruiken bij de huisartsenposten. Daarbij wordt de ACP informatie áltijd in de VIPlive wordt vastgelegd. Voor alle huisartsen (niet HAP) is het relevant om de correspondentie vanuit het ziekenhuis te kunnen inzien vanuit VIPLive in de Zorgviewer. 
+Niet elk huisartspraktijk in Noord-Nederland (Groningen/Friesland/Drenthe) heeft VIPLive. Echter, in Drenthe is regionaal afgesproken om VIPLive (Spoed EPD) te gebruiken bij de HAPPEN. Daarbij wordt de ACP informatie áltijd in VIPLive vastgelegd. Nogmaals, deze afspraak is regionaal gemaakt binnen Drenthe. Dit is niet het geval in Friesland en in Groningen.
+
+Voor alle huisartsen (niet HAP) is het relevant om de correspondentie vanuit het ziekenhuis te kunnen inzien vanuit VIPLive in de Zorgviewer. 
 
 De integratie is als volgt met de Zorgviewer
 * Ophalen van de ACP uit VIPLive platform met daarin VIPLive Spoed EPD
