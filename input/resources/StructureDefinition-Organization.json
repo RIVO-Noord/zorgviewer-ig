@@ -13,18 +13,22 @@
     "differential": {
         "element": [
             {
-                "id": "Organization.identifier:AGB",
-                "path": "Organization.identifier",
-                "sliceName": "AGB",
+                "id": "Organization",
+                "path": "Organization",
                 "constraint": [
                     {
                         "key": "zv-org-1",
                         "severity": "error",
                         "human": "Organization AGB SHALL be present.",
-                        "expression": "(identifier.exists())",
+                        "expression": "identifier.where(system='http://fhir.nl/fhir/NamingSystem/agb-z') or identifier.where(system='urn:oid:2.16.840.1.113883.2.4.6.1')",
                         "xpath": "/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z' or /f:identifier/f:system='urn:oid:2.16.840.1.113883.2.4.6.1'"
                     }
-                ],
+                ]
+            },
+            {
+                "id": "Organization.identifier:AGB",
+                "path": "Organization.identifier",
+                "sliceName": "AGB",
                 "mustSupport": true
             }
         ]

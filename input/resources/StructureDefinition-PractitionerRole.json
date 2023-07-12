@@ -13,18 +13,22 @@
     "differential": {
         "element": [
             {
-                "id": "PractitionerRole.specialty.coding:SpecialtyAGB",
-                "path": "PractitionerRole.specialty.coding",
-                "sliceName": "SpecialtyAGB",
+                "id": "PractitionerRole",
+                "path": "PractitionerRole",
                 "constraint": [
                     {
                         "key": "zv-prr-1",
                         "severity": "error",
                         "human": "PractitionerRole Specialty COD016 Vektiz AGB medische specialismen code SHOULD be present.",
-                        "expression": "(identifier.exists())",
+                        "expression": "identifier.where(system='urn:oid:2.16.840.1.113883.2.4.6.7')",
                         "xpath": "/f:identifier/f:system='urn:oid:2.16.840.1.113883.2.4.6.7'"
                     }
-                ],
+                ]
+            },
+            {
+                "id": "PractitionerRole.specialty.coding:SpecialtyAGB",
+                "path": "PractitionerRole.specialty.coding",
+                "sliceName": "SpecialtyAGB",
                 "mustSupport": true
             }
         ]

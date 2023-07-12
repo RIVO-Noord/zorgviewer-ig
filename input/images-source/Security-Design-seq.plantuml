@@ -55,8 +55,8 @@ end note
 Zorgverlener->Host: start Zorgviewer
 Host ->x Host
 note left
-  CHECK: op basis van security context
-    "knop" wel of niet tonen
+  PRE-CONDITIE: op basis van security context
+    "knop" wel of niet beschikbaar
 end note
 Host->ZVFE ** : start met context
 activate ZVFE
@@ -88,11 +88,10 @@ ZVFE->ZVBE: opvragen gegevens
 activate ZVBE
 ZVBE->Toestemming: vraag patient toestemmingen op
 note right
-  ~MITZ Open autorisatievraag
-  binnen besloten Zorgviewer netwerk
+  Wordt MITZ Open autorisatievraag\nals dit in de regio in productie is
 end note
 destroy Toestemming
-ZVBE->Adressering: vraag endpoints op van organizaties\nobv de toestemmingen
+ZVBE->Adressering: vraag endpoints (lokaties) op van organizaties\nobv de toestemmingen
 note right
   binnen besloten Zorgviewer netwerk
 end note
@@ -112,7 +111,14 @@ loop Voor ieder endpoint
     CHECK: backend token
     CHECK: client certificate
   end note
-  ABron->Toestemming: ~MITZ Gesloten autorisatie vraag
+  group Check toestemming OPTIES
+    note over AOBron
+      Als MITZ in productie is in de regio wordt dit de Gesloten autorisatie vraag 
+      vanuit bron (b) of vanuit ontsluiten bronsysteem (b) als de bron dit niet zelf kan.
+    end note
+    AOBron->ABron: (a) Check locale toestemming
+    ABron->Toestemming: (b) Check toestemming
+  end
   ABron ->x ABron
   note left
     CHECK: vraag gesteld zonder MITZ toestemming

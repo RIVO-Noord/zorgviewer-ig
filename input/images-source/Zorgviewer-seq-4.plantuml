@@ -17,7 +17,7 @@ loop
     Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base/Patient?identifier=<BSN>""
     activate Bron
     Bron->Bron : verkrijgen extern-access-token
-    Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
+    Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user organisatie tbv logging
     activate Bronsysteem
     Bronsysteem->Bron: Patient fhir resources
     deactivate Bronsysteem
@@ -27,7 +27,7 @@ loop
     Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/DocumentReference?patient=<patient_fhir_id>""
     activate Bron
     Bron->Bron : verkrijgen extern-access-token
-    Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
+    Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user organisatie tbv logging
     activate Bronsysteem
     Bronsysteem->Bron: fhir resources (DocumentReference Bundle)
     deactivate Bronsysteem

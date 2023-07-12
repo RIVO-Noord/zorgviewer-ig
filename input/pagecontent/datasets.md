@@ -20,7 +20,7 @@ Vanuit verschillende projecten en programma's wordt er gewerkt aan de de Basisge
 In het midden van bovenstaande flower venn-diagram staat de zorgviewer (ZV). Het project maakt gebruik van de eisen van verschillende programma's, de mogelijkheden die de verschillende systemen aanbieden (ChipSoft, Epic, Topicus, etc.) en wat de verschillende organisaties al kunnen op het gebied van data-ontsluiting (Martini, MCL, Tjongerschans, UMCG, etc.). 
 
 Onderstaande lijst sommeert nogmaals wat de verschillende bronnen zijn van de desbetreffende programma's, leveranciers en organisaties:
-1. Wat wordt geeist Wat wordt geeist vanuit de wet en moet dus door de leveranciers worden ondersteund: 
+1. Wat wordt geëist vanuit de wet en moet dus door de leveranciers worden ondersteund: 
      1. [IZA](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjr49Tvntv9AhWK2aQKHdAaDooQFnoECAwQAQ&url=https%3A%2F%2Fwww.rijksoverheid.nl%2Fbinaries%2Frijksoverheid%2Fdocumenten%2Frapporten%2F2022%2F09%2F16%2Fintegraal-zorgakkoord-samen-werken-aan-gezonde-zorg%2Fintegraal-zorg-akkoord.pdf&usg=AOvVaw3KopPSCxT2VkhnPKQlehkb&cshid=1678790821565394)
      1. Vanuit de ziekenhuizen: [VIPP5 Staatscourant stcrt-2020-7935](https://zoek.officielebekendmakingen.nl/stcrt-2020-7935.html)
      1. Vanuit de huisartsen: [VIPPOPEN Staatscourant 2022 3373260-1029631-CZ](https://zoek.officielebekendmakingen.nl/stcrt-2022-18226.html)
@@ -29,7 +29,7 @@ Onderstaande lijst sommeert nogmaals wat de verschillende bronnen zijn van de de
     1. [BgZ 2017 FHIR](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
     1. [PDF/a](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpPDFA)
 1. Wat kan Epic nu:
-    1. De Epic huizen doen de zibs uit de BgZ, dus niet alleen laatste bloeddruk, maar alle b.v. Ofwel, we doen meer dan de BgZ en minder dan de zibs.
+    1. De Epic huizen implementeren de zibs uit de BgZ, dus niet alleen laatste bloeddruk, maar alle b.v. Ofwel, we doen meer dan de BgZ en minder dan de zibs.
     1. [Epic FHIR](https://fhir.epic.com/Specifications) **STU3** *Provider-Facing*
     1. [SMoR - VIPP 5 Module 1 - PDFA Correspondence via FHIR - Design - February 2021 revision.pdf](https://umcgonline.sharepoint.com/:b:/r/sites/RIVO-Noord-RealisatieZorgviewer/Shared%20Documents/Werkgroep%20Implementatie%20gids/Achtergrond%20materiaal/SMoR%20-%20VIPP%205%20Module%201%20-%20PDFA%20Correspondence%20via%20FHIR%20-%20Design%20-%20February%202021%20revision.pdf?csf=1&web=1&e=o7DDKG)
     1. [SMoR - VIPP 5 Module 1 - Updates to BgZ on FHIR to Support Hospital MedMij Kwalificatie - Medications and Problems](https://umcgonline.sharepoint.com/:b:/r/sites/RIVO-Noord-RealisatieZorgviewer/Shared%20Documents/Werkgroep%20Implementatie%20gids/Achtergrond%20materiaal/VIPP%205%20Module%201%20-%20Updates%20to%20BgZ%20on%20FHIR%20to%20Support%20Hospital%20MedMij%20Kwalificatie%20-%20Medications%20and%20Problems.pdf?csf=1&web=1&e=bTTAUJ)
@@ -43,7 +43,7 @@ Onderstaande lijst sommeert nogmaals wat de verschillende bronnen zijn van de de
 
 #### Voorbeeld BgZ
 
-De Basisgegevensset Zorg (BgZ), ook wel patient summary (PS) genoemd, behandelen wij als een sub-set van zibs. In de BgZ worden de BgZ-secties beperkt. Bijvoorbeeld de BgZ-sectie Uitslagen beperkt zich op klinisch chemisch lab, laatste uitslag. Dit zou betekenen dat de zorgverlener geen inzage heeft in trends (eerdere klinische chemie uitslagen) of andere typen laboratorium uitslagen. De andere laboratorium uitslagen zijn bijvoorbeeld hematologie, serologie/immunologie, virologie, toxicologie, microbiologie of moleculaire genetica (zie zib LaboratoriumUitslag - ResultaatType - ResultaatTypeCodelijst). Deze filters op de zibs beschouwen we als voorbeelden. Vanuit project zorgviewer laten wij deze filters achterwegen, zodat alle labuitslagen ingezien kunnen worden. 
+De Basisgegevensset Zorg (BgZ), ook wel patient summary (PS) genoemd, behandelen wij als een sub-set van zibs. In de BgZ worden de BgZ-secties beperkt. Bijvoorbeeld de BgZ-sectie Uitslagen beperkt zich op klinisch chemisch lab, laatste uitslag. Dit zou betekenen dat de zorgverlener geen inzage heeft in trends (eerdere klinische chemie uitslagen) of andere typen laboratorium uitslagen. De andere laboratorium uitslagen zijn bijvoorbeeld hematologie, serologie/immunologie, virologie, toxicologie, microbiologie of moleculaire genetica (zie zib LaboratoriumUitslag - ResultaatType - ResultaatTypeCodelijst). Deze filters op de zibs beschouwen we als voorbeelden. Vanuit project zorgviewer laten wij deze filters achterwegen, zodat alle lab-uitslagen ingezien kunnen worden. 
 
 ### Typen consent
 
@@ -111,7 +111,7 @@ Het idee van de regionale zorgpaden is om de zorg op de juiste plek bij de juist
 
 Advanced Care Planning (ACP) wordt ook wel het proactieve zorgplan genoemd. Een plan waarin de wensen en behoeften van de patiënt worden beschreven. In de ACP Leidraad proactieve zorgplanning (advance care planning) van Palliaweb wordt het proces van het verkrijgen van informatie rondom ACP uitgelegd. In het ACP staan zaken rondom de wilsbekwaamheid, wettelijke vertegenwoordiging, doelen van behandeling en behandelgrenzen. Behandelgrenzen beschrijven onder andere het reanimatiebeleid.
 
-Het ACP beschrijft ook informatie over de patiëntencontext in de Gegevensset Passende Zorg. Deze gegevensset heeft overeenkomsten met de gegevensset oncologie algemeen (GOA) en de mensgeboden set (MGS). De set komt ook overeen met de basisgegevensset zorg (BgZ) met een aantal aanvullingen:
+Het ACP beschrijft ook informatie over de patiëntencontext in de Gegevensset Passende Zorg (GPZ). Deze gegevensset heeft overeenkomsten met de Gegevensset Oncologie Algemeen (GOA) en de MensGebonden Set (MGS). De set komt ook overeen met de basisgegevensset zorg (BgZ) met een aantal aanvullingen:
 * Sociale context
     * Gezinssamenstelling
     * Beroep
@@ -126,6 +126,6 @@ Het ACP beschrijft ook informatie over de patiëntencontext in de Gegevensset Pa
     * Plaats van overlijden
 * Functioneel en somatisch (specifieke vragenlijsten / metingen)
 
-Vanuit project Zorgviewer is de ACP deels in scope, namelijk de BehandelAanwijzing met een aanvulling in de codelijst. [De BehandelingCodelijst bestaat uit vijf waarden](https://zibs.nl/wiki/BehandelAanwijzing-v3.1(2017NL)#BehandelingToegestaanCodelijst). Deze is nu uitgebreid met drie andere waarden, zoals landelijk afgesproken door de palliatieve zorg.
+Vanuit project Zorgviewer is de ACP deels in scope, namelijk de BehandelAanwijzing (TreatmentDirective) met een aanvulling in de codelijst. Codelijst die gebruikt gaat worden voor de zorgviewer is een lijst met 8 items, zie [TreatmentDirective](artifacts.StructureDefinition-TreatmentDirective-intro)
 
 Voor de volledige dataset, kijk op [Nictiz ART-DECOR](https://decor.nictiz.nl/art-decor/decor-project--pall-izppz-)

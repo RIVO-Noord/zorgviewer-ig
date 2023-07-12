@@ -11,7 +11,7 @@ Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 
 ### Document soorten herkennen
 
-Alle beschikbare documenten worden getoond op het scherm met daarbij een omschrijving en LOINC-code. Dit is in eerste instantie een 1 op 1 weergave uit het betreffende EPD en is niet gegroepeerd. 
+Alle beschikbare documenten worden getoond op het scherm met daarbij een omschrijving. Dit is in eerste instantie een 1 op 1 weergave uit het betreffende EPD en is niet gegroepeerd. 
 
 <style>table, td, th { border: 1px solid black; padding:10px; }</style>
 |class (higher level grouping)|type (http://loinc.org)|descriptions|
