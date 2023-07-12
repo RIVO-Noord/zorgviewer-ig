@@ -4,7 +4,7 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 
 ### Basis afspraken
 
-1. *Vulling*: Zorgaanbieder is verantwoordelijk om zoveel mogelijk van de Zorgviewer IG zib vulling te regelen
+1. *Vulling*: Zorgaanbieder is verantwoordelijk om zoveel mogelijk van de Zorgviewer implementatiegids zib vulling te regelen
 1. *Vulling*: Zorgaanbieder is er bewust van dat niet alle gegevens beschikbaar zijn in de Zorgviewer, of doordat het technisch (nog) niet mogelijk is (FHIR), of omdat de workflow niet is ingericht (Bronsysteem), of omdat configuratie niet volledig is (Bronsysteem of Bronsysteem ontsluiting), of omdat de Zorgviewer het betreffende veld (nog) niet toont.
 1. *Vulling*: Zorgaanbieder accepteert dat vulling vanuit andere Zorgaanbieders minder kan zijn dan verwacht. We ontsluiten eerst wat we (technisch) kunnen. Bijvoorbeeld:
     1. codering mist, omdat coderingen niet (volledig) zijn ingelezen 
@@ -12,7 +12,7 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 1. *Identiteit/Security*: Zorgaanbieder accepteert identiteit van de andere aangesloten Zorgaanbieders en mag ervanuit gaan dat er wordt gezorgd voor een juiste gebruikersrechten administratie.
 1. *Security*: Zorgaanbieder staat in het NEN 7510 register
 1. *Logging*: Zorgaanbieder moet voor de NEN 7513 conforme logging zorgen
-1. *Governance*: Zorgaanbieder is deelnermer RIVO-Noord
+1. *Governance*: Zorgaanbieder is deelnemer RIVO-Noord
 
 ### Epic huizen
 
