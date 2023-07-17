@@ -1,0 +1,57 @@
+{
+    "resourceType": "ConceptMap",
+    "id": "behandeling-toegestaan-besluit",
+    "url": "http://hl7.nl/fhir/zorgviewer/ConceptMap/behandeling-toegestaan-besluit",
+    "version": "0.1.0",
+    "name": "BehandelingToegestaanBesluit",
+    "title": "BehandelingToegestaan 2017 BehandelingBesluit 2020 ValueSet Mapping",
+    "status": "active",
+    "description": "Deze ConceptMap representeert de mapping tussen de BehandelingToegestaan 2017 en de BehandelingBesluit 2020.",
+    "jurisdiction" : [{
+      "coding" : [{
+        "system" : "urn:iso:std:iso:3166",
+        "code" : "NL"
+      }]
+    }],
+    "sourceUri": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.1.2--20171231000000",
+    "targetUri": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.2.2--20200901000000",
+    "group": [
+      {
+        "element": [
+          {
+            "code": "JA",
+            "display": "Ja",
+            "target": [
+              {
+                "code": "0",
+                "display": "Wel uitvoeren",
+                "equivalence": "equal"
+              }
+            ]
+          },
+          {
+            "code": "NEE",
+            "display": "Nee",
+            "target": [
+              {
+                "code": "2",
+                "display": "Niet uitvoeren",
+                "equivalence": "equal"
+              }
+            ]
+          },
+          {
+            "code": "JA_MAAR",
+            "display": "Ja, maar met beperkingen",
+            "target": [
+              {
+                "code": "1",
+                "display": "Anders",
+                "equivalence": "equivalent"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

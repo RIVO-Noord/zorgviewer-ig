@@ -31,3 +31,11 @@ Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 1. Opvragen (search) behandelaanwijzingen
 
     `GET <ontsluiten-bronsysteem-base>/Consent?patient=<fhir_patient_id>&category=http://snomed.info/sct|11291000146105`
+
+### Gerelateerde Mappings
+
+* equal betekent 100% gelijk
+* equivalent betekent ongeveer gelijk
+
+* [ConceptMap Behandelaanwijzing 2017 en Behandelaanwijzing 2020](ConceptMap-behandelaanwijzing-2017-2020.html)
+* [ConceptMap BehandelingToegestaan 2017 en BeandelingBesluit 2020](ConceptMap-behandeling-toegestaan-besluit.html)

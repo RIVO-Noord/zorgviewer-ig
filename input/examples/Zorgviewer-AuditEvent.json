@@ -1,0 +1,50 @@
+{
+  "resourceType": "AuditEvent",
+  "id": "example-1",
+  "type": {
+    "system": "http://dicom.nema.org/resources/ontology/DCM",
+    "code": "110110",
+    "display": "Patient Record"
+  },
+  "subtype": [
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle",
+      "code": "access",
+      "display": "Access/View Record Lifecycle Event"
+    }
+  ],
+  "action": "R",
+  "recorded": "2023-04-25T22:04:27+11:00",
+  "agent": [
+    {
+      "reference": {
+        "display": "Schroder, CP, Arts"
+      },
+      "userId": {
+        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+        "value": "03103161"
+      },
+      "requestor": false,
+      "network": {
+        "address": "w3zkh3348.intra.umcg.nl"
+      }
+    }
+  ],
+  "source": {
+    "identifier": {
+      "value": "Grahame's Laptop"
+    }
+  },
+  "entity": [
+    {
+      "type": {
+        "system": "http://hl7.org/fhir/resource-types",
+        "code": "Patient"
+      },
+      "identifier": {
+        "value": "eXxP1o8ZlOz21F6HXS9puLA3"
+      },
+      "description": "J. XXX-Helleman"
+    }
+  ]
+}
