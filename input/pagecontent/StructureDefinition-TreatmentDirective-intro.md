@@ -32,14 +32,13 @@ Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 
     `GET <ontsluiten-bronsysteem-base>/Consent?patient=<fhir_patient_id>&category=http://snomed.info/sct|11291000146105`
 
-### Gerelateerde Mappings
+### Gerelateerde Mapping
 
 <blockquote class="stu-note" markdown="1">
 Voor implementatie in VIPLive, die zib 2020 gebasseerd is, zijn mappings gedefinieerd tussen de 2017 zib versie en de 2020 zib versie. Deze mappings zijn voorgelegd aan het Nictiz zib-centrum en zij hebben deze voorlopig geaccepteerd terwijl zij verder werken aan de officiele transformaties.
-</blockquote>
 
 * equal betekent 100% gelijk
 * equivalent betekent ongeveer gelijk
+</blockquote>
 
-* [ConceptMap Behandelaanwijzing 2017 en Behandelaanwijzing 2020](ConceptMap-behandelaanwijzing-2017-2020.html)
-* [ConceptMap BehandelingToegestaan 2017 en BehandelingBesluit 2020](ConceptMap-behandeling-toegestaan-besluit.html)
+* [ConceptMap Behandelaanwijzing 2017 en Behandelaanwijzing2 2020](ConceptMap-behandelaanwijzing-2017-2020.html)
