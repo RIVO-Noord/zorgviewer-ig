@@ -12,9 +12,12 @@ N.B. "Geverifieerd" en "Geverifieerd bij" wel gewenst, maar niet beschikbaar in 
 
 *Synoniem = Proactieve zorgplanning*
 
-Eerder in datasets onder het kopje [Advanced Care Planning (ACP)](datasets.html#advanced-care-planning) is uitgelegd waar het formulier en de dataset uit bestaat. Een belangrijke toevoeging is dat het project op dit moment de BehandelAanwijzing zorginformatiebouwsteen (zib) in scope heeft. Deze specificering van de zib BehandelAanwijzing is te vinden in dit [resource profile](#profile).
+Eerder in datasets onder het kopje [Advanced Care Planning (ACP)](datasets.html#advanced-care-planning) is uitgelegd waar het formulier en de dataset uit bestaat. 
+Vanuit de landelijke organisatie rondom palliatieve zorg is er een aanvulling nodig van de BehandelingCodelijst, komende uit de zib BehandelAanwijzing. Toegevoegd zijn drie nieuwe categorieen met SNOMED CT codering. Deze lijst kun je vinden op [ACP TreatmentCodelist](ValueSet-ACPTreatmentCodelist.html) pagina.
 
-Vanuit de landelijke organisatie rondom palliatieve zorg is er een aanvulling nodig van de BehandelingCodelijst, komende uit de zib BehandelAanwijzing. Toegevoegd zijn drie nieuwe categorieen met SNOMED CT codering. Deze lijst kun je vinden op [ACP TreatmentCodelist](ValueSet-ACPTreatmentCodelist.html) pagina. 
+<blockquote class="stu-note" markdown="1">
+Op dit moment zijn alleen de Behandelwensen deel (de BehandelAanwijzing zib) in scope. Deze specificering van de zib BehandelAanwijzing is te vinden in dit [resource profile](#profile).
+</blockquote>
 
 ### User-Interface guidance
 ! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.
@@ -22,7 +25,6 @@ Vanuit de landelijke organisatie rondom palliatieve zorg is er een aanvulling no
 Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
 1. een schets van de tabel met labels en sortering informatie
-1. in geeltjes eventuele extra toelichting of regels
 
 {% include img.html img="UI-Schets-BehandelAanwijzingenWilsverklaring1.png" caption="User-Interface Consent guidance" width="100%" %}
 

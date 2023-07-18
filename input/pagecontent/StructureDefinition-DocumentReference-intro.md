@@ -5,13 +5,10 @@
 Dit figuur is opgebouwd uit grofweg 3 onderdelen:
 1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
 1. een schets van de tabel met labels en sortering informatie
-1. in geeltjes eventuele extra toelichting of regels
 
 {% include img.html img="ui-documentref.png" caption="User-Interface DocumentReference guidance" width="100%" %}
 
 ### Document soorten herkennen
-
-Alle beschikbare documenten worden getoond op het scherm met daarbij een omschrijving. Dit is in eerste instantie een 1 op 1 weergave uit het betreffende EPD en is niet gegroepeerd. 
 
 <style>table, td, th { border: 1px solid black; padding:10px; }</style>
 |class (higher level grouping)|type (http://loinc.org)|descriptions|
@@ -41,7 +38,3 @@ Zie het Excelbestand tab "classCode+decision tree" voor LOINC codes:
 1. Opvragen (search) alle documenten
 
     `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>`
-
-1. Opvragen (search) documenten van een specifieke zorgaanbieder
-
-    `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>[&_tag=http://hl7.nl/fhir/zorgviewer-ig/bronsysteem-zorgaanbieder|<AGB>]`

@@ -1,6 +1,4 @@
-<div style="margin: 5px; padding: 10px; color: #3c763d; background-color: #dff0d8; border: 4px solid black;">
-TOEKOMST
-</div>
+{% include future-note.md %}
 
 Akkoord voorbeeld HL7 v2 relevante bericht segmenten:
 ```
