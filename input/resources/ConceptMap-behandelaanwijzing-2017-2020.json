@@ -1,0 +1,98 @@
+{
+    "resourceType": "ConceptMap",
+    "id": "behandelaanwijzing-2017-2020",
+    "url": "http://hl7.nl/fhir/zorgviewer/ConceptMap/behandelaanwijzing-2017-2020",
+    "version": "0.1.0",
+    "name": "behandelaanwijzing2017to2020",
+    "title": "Behandelaanwijzing 2017 BehandelingAanwijzing2 2020 Mapping",
+    "status": "active",
+    "experimental": true,
+    "description": "Deze ConceptMap representeert de mapping tussen de BehandelingAanwijzing 2017 en de BehandelAanwijzing2 2020.",
+    "jurisdiction" : [{
+      "coding" : [{
+        "system" : "urn:iso:std:iso:3166",
+        "code" : "NL"
+      }]
+    }],
+    "sourceUri": "https://zibs.nl/wiki/TreatmentDirective-v3.1(2017EN)",
+    "targetUri": "https://zibs.nl/wiki/TreatmentDirective2-v1.0(2020EN)",
+    "group": [
+      {
+        "element": [
+          {
+            "code": "Beperkingen",
+            "target": [
+              {
+                "code": "SpecificatieAnders",
+                "equivalence": "equivalent"
+              }
+            ]
+          },
+          {
+            "code": "BeginDatum",
+            "target": [
+              {
+                "code": "MeestRecenteBespreekdatum",
+                "equivalence": "equal"
+              }
+            ]
+          },
+          {
+            "code": "EindDatum",
+            "target": [
+              {
+                "code": "DatumBeeindigd",
+                "equivalence": "equivalent"
+              }
+            ]
+          },
+          {
+            "code": "Toelichting",
+            "target": [
+              {
+                "code": "Toelichting",
+                "equivalence": "equal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "element": [
+          {
+            "code": "JA",
+            "display": "Ja",
+            "target": [
+              {
+                "code": "0",
+                "display": "Wel uitvoeren",
+                "equivalence": "equal"
+              }
+            ]
+          },
+          {
+            "code": "NEE",
+            "display": "Nee",
+            "target": [
+              {
+                "code": "2",
+                "display": "Niet uitvoeren",
+                "equivalence": "equal"
+              }
+            ]
+          },
+          {
+            "code": "JA_MAAR",
+            "display": "Ja, maar met beperkingen",
+            "target": [
+              {
+                "code": "1",
+                "display": "Anders",
+                "equivalence": "equivalent"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
