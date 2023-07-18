@@ -8,7 +8,7 @@ Als bron voor de must-support flags is gebruikt: [Fit-gap analyse behandelaanwij
 N.B. "Geverifieerd" en "Geverifieerd bij" wel gewenst, maar niet beschikbaar in de huidige configuraties en "echte" voorbeeld data.
 </blockquote>
 
-### Advance Care Planning (ACP)
+### Behandelgrenzen van de Advance Care Planning (ACP)
 
 *Synoniem = Proactieve zorgplanning*
 
