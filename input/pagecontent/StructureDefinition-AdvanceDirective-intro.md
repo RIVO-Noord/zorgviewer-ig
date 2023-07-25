@@ -10,11 +10,11 @@
 Dit figuur is opgebouwd uit grofweg 2 onderdelen:
 1. een schets van het scherm met labels en sortering informatie
 
-{% include img.html img="UI-Schets-BehandelAanwijzingenWilsverklaring2.png" caption="User-Interface Consent guidance" width="100%" %}
+{% include img.html img="UI-Schets-BehandelAanwijzingenWilsverklaring2.png" width="100%" %}
 
-1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
+2. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
 
-{% include img.html img="tabel-UI-Schets-BehandelAanwijzingenWilsverklaring2.png" caption="User-Interface Consent guidance" width="100%" %}
+{% include img.html img="tabel-UI-Schets-BehandelAanwijzingenWilsverklaring2.png" width="100%" %}
 
 ### Request
 
