@@ -1,6 +1,6 @@
 ### Bronsysteem herkennen
 
-De *Zorgviewer-backend* of *Ontsluiten bronsysteem* **MOET** na bevragen van het bronsysteem aan elk resultaat resource een meta-tag toevoegen met de VEKTIS AGB-Z code of de HL7 NL OID van de zorgaanbieder, zodat dit kan worden gebruikt in de presentatie in de Zorgviewer-frontend.
+De *Zorgviewer-backend* of *Ontsluiten bronsysteem* **MOET** na bevragen van het bronsysteem aan elk resultaat resource een meta-tag toevoegen met de VEKTIS AGB-Z code of de HL7 NL OID van de zorgaanbieder. Dit wordt vervolgens gebruikt in de "Bron" kolom in de Zorgviewer-frontend.
 
 Toevoegen aan elke response, dus per resource (bij een read) of per Bundle (bij een search):
 ```
