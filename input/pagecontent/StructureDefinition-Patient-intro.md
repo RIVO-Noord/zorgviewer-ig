@@ -1,5 +1,9 @@
 {% include profile-note.md %}
 
+### Zorginformatiebouwsteen
+
+[ZIB Patient](https://zibs.nl/wiki/Patient-v3.1(2017NL))
+
 ### Patient.name algoritme
 
 Bovenop constraint **zv-pat-1**:
@@ -15,3 +19,5 @@ Bovenop constraint **zv-pat-1**:
 1. Opvragen (read) patient op basis van de fhir_patient_id
 
     `GET <ontsluiten-bronsysteem-base>/Patient/<fhir_patient_id>`
+
+{% include profile-note.md %}

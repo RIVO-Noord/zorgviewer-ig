@@ -1,5 +1,9 @@
 {% include profile-note.md %}
 
+### Zorginformatiebouwsteen
+
+[ZIB BehandelAanwijzing](https://zibs.nl/wiki/BehandelAanwijzing-v3.1(2017NL))
+
 ### FMS Adequate Registratie
 
 Als bron voor de must-support flags is gebruikt: [Fit-gap analyse behandelaanwijzing](https://amigo.nictiz.nl/uploads/7d857f79-4b79-4732-a1dd-2756bf4cdd24/fit_gap_analyse_Behandelaanwijzing.pdf)
@@ -31,12 +35,6 @@ Dit figuur is opgebouwd uit grofweg 2 onderdelen:
 
 {% include img.html img="tabel-UI-Schets-BehandelAanwijzingenWilsverklaring1.png" caption="User-Interface Consent guidance" width="100%" %}
 
-### Request
-
-1. Opvragen (search) behandelaanwijzingen
-
-    `GET <ontsluiten-bronsysteem-base>/Consent?patient=<fhir_patient_id>&category=http://snomed.info/sct|11291000146105`
-
 ### Gerelateerde Mapping
 
 <blockquote class="stu-note" markdown="1">
@@ -47,3 +45,11 @@ Voor implementatie in VIPLive, die zib 2020 gebasseerd is, zijn mappings gedefin
 </blockquote>
 
 * [ConceptMap Behandelaanwijzing 2017 en Behandelaanwijzing2 2020](ConceptMap-behandelaanwijzing-2017-2020.html)
+
+### Request
+
+1. Opvragen (search) behandelaanwijzingen
+
+    `GET <ontsluiten-bronsysteem-base>/Consent?patient=<fhir_patient_id>&category=http://snomed.info/sct|11291000146105`
+
+{% include bronsysteem-herkennen.md %}

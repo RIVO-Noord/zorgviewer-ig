@@ -1,5 +1,9 @@
 {% include profile-note.md %}
 
+### Zorginformatiebouwsteen
+
+[ZIB Verrichting](https://zibs.nl/wiki/Verrichting-v4.1(2017NL))
+
 ### User-Interface guidance
 
 Dit figuur is opgebouwd uit grofweg 2 onderdelen:
@@ -23,3 +27,5 @@ Dit figuur is opgebouwd uit grofweg 2 onderdelen:
     `GET <ontsluiten-bronsysteem-base>/Procedure?patient=<fhir_patient_id>`
 
     *N.B. Deze request is breder dan de BgZ request, waar alleen de chirugische verrichtingen worden opgevraagd.*
+
+{% include bronsysteem-herkennen.md %}

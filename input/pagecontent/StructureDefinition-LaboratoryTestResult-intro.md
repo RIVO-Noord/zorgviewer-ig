@@ -1,5 +1,9 @@
 {% include profile-note.md %}
 
+### Zorginformatiebouwsteen
+
+[ZIB Laboratorium uitslag](https://zibs.nl/wiki/LaboratoriumUitslag-v4.1(2017NL))
+
 ### User-Interface guidance
 
 Dit figuur is opgebouwd uit grofweg 2 onderdelen:
@@ -11,7 +15,6 @@ Dit figuur is opgebouwd uit grofweg 2 onderdelen:
     N.B. in de paths zit een `specimen.resolve()` functie aanroep, omdat het daar een Reference naar een andere resource instance betreft
 
 {% include img.html img="tabel-UI-Schets-LaboratoriumUitslag.png" caption="User-Interface Laboratorium Uitslagen guidance" width="100%" %}
-
 
 ### Zoeken naar codes
 
@@ -26,3 +29,5 @@ Dit figuur is opgebouwd uit grofweg 2 onderdelen:
     <blockquote class="stu-note" markdown="1">
     N.B. Alleen klinische chemie resultaten zijn op dit moment beschikbaar.
     </blockquote>
+
+{% include bronsysteem-herkennen.md %}
