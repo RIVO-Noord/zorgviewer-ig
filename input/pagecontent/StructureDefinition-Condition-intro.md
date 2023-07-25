@@ -12,12 +12,9 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 
 Dit figuur is opgebouwd uit grofweg 2 onderdelen:
 1. een schets van het scherm met labels en sortering informatie
-
-{% include img.html img="UI-Schets-Problemen.png" caption="User-Interface Condition guidance" width="100%" %}
-
+    <div style="clear:both;"><img src="UI-Schets-Problemen.png" class="figure-img img-responsive img-rounded center-block"></div>
 1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
-
-{% include img.html img="tabel-UI-Schets-Problemen.png" caption="User-Interface Condition guidance" width="100%" %}
+    <div style="clear:both;"><img src="tabel-UI-Schets-Problemen.png" class="figure-img img-responsive img-rounded center-block"></div>
 
 ### Zoeken naar codes
 
