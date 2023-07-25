@@ -20,11 +20,11 @@ Op dit moment zijn alleen de Behandelwensen deel (de BehandelAanwijzing zib) in 
 </blockquote>
 
 ### User-Interface guidance
-! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.
+**! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.**
 
-Dit figuur is opgebouwd uit grofweg 3 onderdelen:
-1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
+Dit figuur is opgebouwd uit grofweg 2 onderdelen:
 1. een schets van de tabel met labels en sortering informatie
+1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
 
 {% include img.html img="UI-Schets-BehandelAanwijzingenWilsverklaring1.png" caption="User-Interface Consent guidance" width="100%" %}
 
