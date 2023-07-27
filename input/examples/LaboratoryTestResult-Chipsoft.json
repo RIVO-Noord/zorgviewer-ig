@@ -1,0 +1,109 @@
+{
+    "resourceType": "Observation",
+    "id": "39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C",
+    "meta": {
+      "profile": [
+        "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"
+      ]
+    },
+    "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Observation resource for laboratory test result:</h3><ul><li><p><strong>Resource ID:</strong> &#x27;39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C&#x27;</p></li><li><p><strong>Profile:</strong> &#x27;http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation&#x27;</p></li><li><p>Identifier:</p><table><thead><tr><th>Use</th><th>System</th><th>Value</th></tr></thead><tbody><tr><td></td><td>urn:oid:2.16.840.1.113883.2.4.3.124.7.26436.6</td><td>6580E40AF9B642F5B6910110EE6284CA</td></tr></tbody></table></li><li><p><strong>Status:</strong> &#x27;Definitief&#x27;</p></li><li><p><strong>Category:</strong></p><table><thead><tr><th>Text</th><th>Display:</th><th>Code:</th><th>Code system:</th></tr></thead><tbody><tr><td>Laboratory test finding(finding)</td><td>Laboratory test finding(finding)</td><td>49581000146104</td><td>http://snomed.info/sct</td></tr><tr><td>Klinische chemie</td><td>Chemistry</td><td>275711006</td><td>http://snomed.info/sct</td></tr></tbody></table></li><li><p><strong>Code:</strong> &#x27;Chloride&#x27;</p></li><li><p><strong>Subject:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Effective:</strong> &#x27;2022-09-30T13:48:00&#x2B;02:00&#x27;</p></li><li><p><strong>Value:</strong> &#x27;109 &#x27;</p></li><li><p>Interpretation:</p><table><thead><tr><th>Code</th><th>Code system</th><th>Display</th></tr></thead><tbody><tr><td>281302008</td><td>http://snomed.info/sct</td><td>Above reference range</td></tr></tbody></table></li><li><p><strong>Specimen:</strong> &#x27;Serum&#x27;</p></li><li><p><strong>Reference range:</strong></p><ul><li>Lower bound &#x27;99 &#x27;, upper bound &#x27;108 &#x27;</li></ul></li></ul></div>"
+    },
+    "identifier": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.124.7.26436.6",
+        "value": "6580E40AF9B642F5B6910110EE6284CA"
+      }
+    ],
+    "status": "final",
+    "_status": {
+      "extension": [
+        {
+          "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.16.1",
+                "code": "final",
+                "display": "Final"
+              }
+            ],
+            "text": "Definitief"
+          }
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "49581000146104",
+            "display": "Laboratory test finding(finding)"
+          }
+        ],
+        "text": "Laboratory test finding(finding)"
+      },
+      {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "275711006",
+            "display": "Chemistry"
+          }
+        ],
+        "text": "Klinische chemie"
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "2069-3",
+          "display": "Chloride"
+        }
+      ],
+      "text": "Chloride"
+    },
+    "subject": {
+      "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+      "display": "Johan XXX_Helleman_Afblijven"
+    },
+    "effectiveDateTime": "2022-09-30T13:48:00+02:00",
+    "valueQuantity": {
+      "value": 109,
+      "system": "http://unitsofmeasure.org"
+    },
+    "interpretation": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "281302008",
+          "display": "Above reference range"
+        },
+        {
+          "system": "http://hl7.org/fhir/v2/0078",
+          "code": "H",
+          "display": "High"
+        }
+      ],
+      "text": "Boven referentiewaarde"
+    },
+    "specimen": {
+      "reference": "Specimen/35648ae9-a74d-4800-9f15-4e436ebd12c8",
+      "display": "Serum"
+    },
+    "referenceRange": [
+      {
+        "low": {
+          "value": 99,
+          "system": "http://unitsofmeasure.org"
+        },
+        "high": {
+          "value": 108,
+          "system": "http://unitsofmeasure.org"
+        }
+      }
+    ]
+  }

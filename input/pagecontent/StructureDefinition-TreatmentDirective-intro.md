@@ -1,5 +1,9 @@
 {% include profile-note.md %}
 
+### Zorginformatiebouwsteen
+
+[ZIB BehandelAanwijzing](https://zibs.nl/wiki/BehandelAanwijzing-v3.1(2017NL))
+
 ### FMS Adequate Registratie
 
 Als bron voor de must-support flags is gebruikt: [Fit-gap analyse behandelaanwijzing](https://amigo.nictiz.nl/uploads/7d857f79-4b79-4732-a1dd-2756bf4cdd24/fit_gap_analyse_Behandelaanwijzing.pdf)
@@ -20,19 +24,13 @@ Op dit moment zijn alleen de Behandelwensen deel (de BehandelAanwijzing zib) in 
 </blockquote>
 
 ### User-Interface guidance
-! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.
+**! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.**
 
-Dit figuur is opgebouwd uit grofweg 3 onderdelen:
+Dit figuur is opgebouwd uit grofweg 2 onderdelen:
+1. een schets van het scherm met labels en sortering informatie
+    <div style="clear:both;"><img src="UI-Schets-BehandelAanwijzingenWilsverklaring1.png" class="figure-img img-responsive img-rounded center-block"></div>
 1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
-1. een schets van de tabel met labels en sortering informatie
-
-{% include img.html img="UI-Schets-BehandelAanwijzingenWilsverklaring1.png" caption="User-Interface Consent guidance" width="100%" %}
-
-### Request
-
-1. Opvragen (search) behandelaanwijzingen
-
-    `GET <ontsluiten-bronsysteem-base>/Consent?patient=<fhir_patient_id>&category=http://snomed.info/sct|11291000146105`
+    <div style="clear:both;"><img src="tabel-UI-Schets-BehandelAanwijzingenWilsverklaring1.png" class="figure-img img-responsive img-rounded center-block"></div>
 
 ### Gerelateerde Mapping
 
@@ -44,3 +42,11 @@ Voor implementatie in VIPLive, die zib 2020 gebasseerd is, zijn mappings gedefin
 </blockquote>
 
 * [ConceptMap Behandelaanwijzing 2017 en Behandelaanwijzing2 2020](ConceptMap-behandelaanwijzing-2017-2020.html)
+
+### Request
+
+1. Opvragen (search) behandelaanwijzingen
+
+    `GET <ontsluiten-bronsysteem-base>/Consent?patient=<fhir_patient_id>&category=http://snomed.info/sct|11291000146105`
+
+{% include bronsysteem-herkennen.md %}

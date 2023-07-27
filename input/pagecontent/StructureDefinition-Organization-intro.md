@@ -1,5 +1,9 @@
 {% include profile-note.md %}
 
+### Zorginformatiebouwsteen
+
+[ZIB Zorgaanbieder](https://zibs.nl/wiki/Zorgaanbieder-v3.1.1(2017NL))
+
 ### Zoeken naar codes
 
 * [Vektiz AGB Register zoeken](https://www.vektis.nl/agb-register/zoeken)
@@ -11,3 +15,5 @@
 1. Opvragen (search) naar organisatie op basis van de organisatie AGB of OID
 
     `GET <bronsysteem-ontsluiting-base/Organization?identifier=<AGB|OID>`
+
+{% include bronsysteem-herkennen.md %}

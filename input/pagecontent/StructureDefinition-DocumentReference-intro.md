@@ -2,11 +2,11 @@
 
 ### User-Interface guidance
 
-Dit figuur is opgebouwd uit grofweg 3 onderdelen:
+Dit figuur is opgebouwd uit grofweg 2 onderdelen:
+1. een schets van het scherm met labels en sortering informatie
+    <div style="clear:both;"><img src="ui-documentref.png" class="figure-img img-responsive img-rounded center-block"></div>
 1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
-1. een schets van de tabel met labels en sortering informatie
-
-{% include img.html img="ui-documentref.png" caption="User-Interface DocumentReference guidance" width="100%" %}
+    <div style="clear:both;"><img src="tabel-ui-documentref.png" class="figure-img img-responsive img-rounded center-block"></div>
 
 ### Document soorten herkennen
 
@@ -38,3 +38,5 @@ Zie het Excelbestand tab "classCode+decision tree" voor LOINC codes:
 1. Opvragen (search) alle documenten
 
     `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>`
+
+{% include bronsysteem-herkennen.md %}
