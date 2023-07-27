@@ -3,7 +3,8 @@
 <style>table, td, th { border: 1px solid black; padding:10px; }</style>
 |Versie|Datum|Changes|
 |---|---|---|
-|0.11.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.10.0-sprint11...master)<br/>* Nog een lab voorbeeld toegevoegd<br/>* UI Guidances gelijkgetrokken<br/>* Structuur artifact pagina's gelijkgetrokken|
+|0.12.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.11.0-sprint12...master)|
+|0.11.0-sprint12|27-jul-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.10.1-sprint11...0.11.0-sprint12)<br/>* Nog een lab voorbeeld toegevoegd<br/>* UI Guidances gelijkgetrokken<br/>* Structuur artifact pagina's gelijkgetrokken|
 |0.10.1-sprint11|18-jul-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.10.0-sprint11...0.10.1-sprint11)<br/>* Behandelaanwijzing mapping ivm VIPLive aansluiting<br/>* Review en QA fixes|
 |0.10.0-sprint11|12-jul-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.9.0-sprint10...0.10.0-sprint11)<br/>* Kleine detail updates en QA<br/>* AuditEvent draft<br/>* UI guidance updates|
 |0.9.0-sprint10|27-jun-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.8.0-sprint9...0.9.0-sprint10)<br/>* Labuitslagen tweede draft<br/>* Toestemming mappings van HL7 v2 CON|
