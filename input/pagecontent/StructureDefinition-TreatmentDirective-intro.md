@@ -26,11 +26,70 @@ Op dit moment zijn alleen de Behandelwensen deel (de BehandelAanwijzing zib) in 
 ### User-Interface guidance
 **! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.**
 
-Dit figuur is opgebouwd uit grofweg 2 onderdelen:
-1. een schets van het scherm met labels en sortering informatie
-    <div style="clear:both;"><img src="UI-Schets-BehandelAanwijzingenWilsverklaring1.png" class="figure-img img-responsive img-rounded center-block"></div>
-1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
-    <div style="clear:both;"><img src="tabel-UI-Schets-BehandelAanwijzingenWilsverklaring1.png" class="figure-img img-responsive img-rounded center-block"></div>
+Een schets van het scherm met labels en sortering informatie:
+<div style="clear:both;"><img src="UI-Schets-BehandelAanwijzingenWilsverklaring1.png" class="figure-img img-responsive img-rounded center-block"></div>
+
+Kolom definities:
+<table class="grid">
+  <thead>
+    <th>Kolom label</th>
+    <th width="25%">FHIR Path</th>
+    <th>FHIR Type</th>
+    <th>Zib element</th>
+    <th>Toelichting of regels</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bron</td>
+      <td><samp>.meta.tag[http://hl7.nl/fhir/zorgviewer-ig/bronsysteem-zorgaanbieder].display​</samp></td>
+      <td><code>string</code></td>
+      <td><i>nvt</i></td>
+      <td>of lookup adhv <code>.code</code> (AGB-Z of OID)</td>
+    </tr>
+    <tr style="background-color:#d6dce5">
+      <td>? !</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>MARKERING: Dikgedrukt + !</td>
+    </tr>    
+    <tr>
+      <td>Verificatiedatum</td>
+      <td><samp>.period.start​</samp></td>
+      <td><code>dateTime</code></td>
+      <td></td>
+      <td>Kunnen vage datums zijn.</td>
+    </tr>
+    <tr>
+      <td>Behandeling</td>
+      <td><samp>.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.text</samp></td>
+      <td><code>string</code></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Behandeling Toegestaan</td>
+      <td><samp>.modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.display</samp></td>
+      <td><code></code></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Beperkingen</td>
+      <td><samp>.except.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions').value</samp></td>
+      <td><code>string</code></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Geverifieerd bij</td>
+      <td><samp>.extension.extension.where(url='VerifiedWith').valueCodeableConcept.text</samp></td>
+      <td><code>string</code></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Gerelateerde Mapping
 

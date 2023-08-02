@@ -10,11 +10,70 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 
 ### User-Interface guidance
 
-Dit figuur is opgebouwd uit grofweg 2 onderdelen:
-1. een schets van het scherm met labels en sortering informatie
-    <div style="clear:both;"><img src="UI-Schets-Problemen.png" class="figure-img img-responsive img-rounded center-block"></div>
-1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
-    <div style="clear:both;"><img src="tabel-UI-Schets-Problemen.png" class="figure-img img-responsive img-rounded center-block"></div>
+Een schets van het scherm met labels en sortering informatie
+<div style="clear:both;"><img src="UI-Schets-Problemen.png" class="figure-img img-responsive img-rounded center-block"></div>
+
+Kolom definities:
+<table class="grid">
+  <thead>
+    <th>Kolom label</th>
+    <th width="25%">FHIR Path</th>
+    <th>FHIR Type</th>
+    <th>Zib element</th>
+    <th>Toelichting of regels</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bron</td>
+      <td><samp>.meta.tag[http://hl7.nl/fhir/zorgviewer-ig/bronsysteem-zorgaanbieder].display​</samp></td>
+      <td><code>string</code></td>
+      <td><i>nvt</i></td>
+      <td>of lookup adhv code (AGB-Z of OID)</td>
+    </tr>
+    <tr>
+      <td>Datum</td>
+      <td><samp>.onsetDateTime</samp> of <samp>.onsetPeriod​</samp> (Epic)</td>
+      <td><code>dateTime</code> of <code>Period</code></td>
+      <td>ProbleemBeginDatum</td>
+      <td>Laat één datum zien als de <code>.onsetDateTime</code> of <code>.onsetPeriod</code> hetzelfde is​</td>
+    </tr>
+    <tr>
+      <td>Diagnose​</td>
+      <td><samp>.code.text</samp></td>
+      <td><code>string​</code></td>
+      <td>ProbleemNaam</td>
+      <td></td>
+    </tr>
+    <tr style="background-color:#8faadc; color:white">
+      <th colspan="5">(1) UITKLAPVELD</tH>
+    </tr>
+    <tr style="background-color:#b4c7e7">
+      <td>Diagnose</td>
+      <td><samp>.code.coding[].code en .code.coding[].display​</samp></td>
+      <td><code>string</code></td>
+      <td>ProbleemNaam</td>
+      <td>Meerdere codes mogelijk. Ignore NullFlavor.​</td>
+    </tr>
+    <tr style="background-color:#b4c7e7">
+      <td>Toelichting</td>
+      <td><samp>.note.text</samp></td>
+      <td><code>string</code></td>
+      <td>Toelichting</td>
+      <td></td>
+    </tr>
+    <tr style="background-color:#adb9ca; color:white">
+      <th colspan="5">MARKERING</tH>
+    </tr>
+    <tr style="background-color:#d6dce5">
+      <td></td>
+      <td><samp>.clinicalStatus</samp></td>
+      <td><code>code</code></td>
+      <td>ProbleemStatus</td>
+      <td>Actueel (active) = groene rijen, dikgedrukt​<br/>
+Niet actueel (inactive) = grijze rijen​</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Zoeken naar codes
 

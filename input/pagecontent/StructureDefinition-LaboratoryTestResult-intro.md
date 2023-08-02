@@ -6,12 +6,94 @@
 
 ### User-Interface guidance
 
-Dit figuur is opgebouwd uit grofweg 2 onderdelen:
-1. Een schets van het scherm met labels en sortering informatie
-    <div style="clear:both;"><img src="UI-Schets-LaboratoriumUitslag.png" class="figure-img img-responsive img-rounded center-block"></div>
-1. Tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
-    N.B. in de paths zit een `specimen.resolve()` functie aanroep, omdat het daar een Reference naar een andere resource instance betreft
-    <div style="clear:both;"><img src="tabel-UI-Schets-LaboratoriumUitslag.png" class="figure-img img-responsive img-rounded center-block"></div>
+Een schets van het scherm met labels en sortering informatie
+<div style="clear:both;"><img src="UI-Schets-LaboratoriumUitslag.png" class="figure-img img-responsive img-rounded center-block"></div>
+
+Kolom definities:
+<table class="grid">
+  <thead>
+    <th>Kolom label</th>
+    <th width="25%">FHIR Path</th>
+    <th>FHIR Type</th>
+    <th>Zib element</th>
+    <th>Toelichting of regels</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bron</td>
+      <td><samp>.meta.tag[http://hl7.nl/fhir/zorgviewer-ig/bronsysteem-zorgaanbieder].display​</samp></td>
+      <td><code>string</code></td>
+      <td><i>nvt</i></td>
+      <td> of lookup adhv code (AGB-Z of OID)</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td><samp>.status</samp></td>
+      <td><code>code</code></td>
+      <td>ResultaatStatus</td>
+      <td>​</td>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td><samp>.code.text</samp></td>
+      <td><code>string​</code></td>
+      <td>TestCode</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Afnamedatum</td>
+      <td><samp>.specimen.resolve().collection.collectedDateTime</samp></td>
+      <td><code>dateTime</code></td>
+      <td>(Specimen) AfnameDatumTijd</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Materiaal</td>
+      <td><samp>.specimen.resolve().type.text</samp></td>
+      <td><code>string​</code></td>
+      <td>(Specimen) Monste</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TestUitslag</td>
+      <td><samp>.valueQuantity.value</samp> en <samp>.valueQuantity.unit</samp></td>
+      <td><code>decimal + string​</code></td>
+      <td>TestUitslag</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Onder- en Bovengrens</td>
+      <td><samp>.referenceRange.low.value:decimal</samp> + <samp>.referenceRange.low.unit</samp> – <samp>.referenceRange.high.value</samp> + <samp>.referenceRange.high.unit</samp></td>
+      <td><code>decimal + string​</code></td>
+      <td>ReferentieOndergrens + ReferentieBovengrens</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Interpretatie</td>
+      <td><samp>.interpretation.text</samp></td>
+      <td><code>string​</code></td>
+      <td>UitslagInterpretatie</td>
+      <td></td>
+    </tr>
+    <tr style="background-color:#8faadc; color:white">
+      <th colspan="5">(1) UITKLAPVELD</tH>
+    </tr>
+    <tr style="background-color:#b4c7e7">
+      <td>Toelichting</td>
+      <td><samp>.comment</samp></td>
+      <td><code>string</code></td>
+      <td>Toelichting</td>
+      <td>​</td>
+    </tr>
+    <tr style="background-color:#b4c7e7">
+      <td>Toelichting Materiaal</td>
+      <td><samp>.specimen.revolve().note.text</samp></td>
+      <td><code>string</code></td>
+      <td>(Monster) Toelichting</td>
+      <td>​</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Zoeken naar codes
 
