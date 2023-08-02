@@ -48,10 +48,10 @@ Kolom definities:
     </tr>
     <tr style="background-color:#d6dce5">
       <td>? !</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>MARKERING: Dikgedrukt + !</td>
+      <td>.modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.code</td>
+      <td>code</td>
+      <td>BehandelingToegestaan</td>
+      <td>IF != JA dan MARKERING: Dikgedrukt + "!"</td>
     </tr>    
     <tr>
       <td>Verificatiedatum</td>
@@ -70,8 +70,8 @@ Kolom definities:
     <tr>
       <td>Behandeling Toegestaan</td>
       <td><samp>.modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.display</samp></td>
-      <td><code></code></td>
-      <td></td>
+      <td><code>string</code></td>
+      <td>BehandelingToegestaan</td>
       <td></td>
     </tr>
     <tr>
