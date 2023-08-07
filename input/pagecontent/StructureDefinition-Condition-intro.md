@@ -25,10 +25,10 @@ Kolom definities:
   <tbody>
     <tr>
       <td>Bron</td>
-      <td><samp>.meta.tag[http://hl7.nl/fhir/zorgviewer-ig/bronsysteem-zorgaanbieder].display​</samp></td>
+      <td><samp>.meta.tag[system="http://hl7.nl/fhir/zorgviewer-ig/bronsysteem-zorgaanbieder"].display​</samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
-      <td>of lookup adhv code (AGB-Z of OID)</td>
+      <td>Lookup adhv code (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
     </tr>
     <tr>
       <td>Datum</td>
@@ -49,10 +49,10 @@ Kolom definities:
     </tr>
     <tr style="background-color:#b4c7e7">
       <td>Diagnose</td>
-      <td><samp>.code.coding[].code en .code.coding[].display​</samp></td>
+      <td><samp>.code.coding[]</samp> en dan <samp>.system</samp>, <samp>.code</samp> en <samp>.display​</samp></td>
       <td><code>string</code></td>
       <td>ProbleemNaam</td>
-      <td>Meerdere codes mogelijk. Ignore NullFlavor.​</td>
+      <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.​<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code></td>
     </tr>
     <tr style="background-color:#b4c7e7">
       <td>Toelichting</td>
