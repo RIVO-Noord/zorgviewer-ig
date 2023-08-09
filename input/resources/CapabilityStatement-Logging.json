@@ -1,8 +1,8 @@
 {
     "resourceType": "CapabilityStatement",
-    "url": "http://hl7.nl/fhir/zorgviewer/CapabilityStatement/Terminologie",
-    "name": "Terminologie",
-    "title": "Terminologie",
+    "url": "http://hl7.nl/fhir/zorgviewer/CapabilityStatement/Logging",
+    "name": "Logging",
+    "title": "Logging",
     "status": "active",
     "publisher": "RIVO-Noord",
     "contact": [
@@ -17,7 +17,7 @@
             ]
         }
     ],
-    "description": "Deze CapabilityStatement beschrijft de minimale requirements voor het Terminologie Bouwblok.",
+    "description": "Deze CapabilityStatement beschrijft de minimale requirements voor het Logging Bouwblok.",
     "copyright": "CC0",
     "kind": "requirements",
     "fhirVersion": "3.0.2",
@@ -25,6 +25,12 @@
     "format": [
         "xml",
         "json"
+    ],
+    "profile": [
+        {
+            "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AuditEvent",
+            "display": "AuditEvent"
+        }
     ],
     "rest": [
         {
@@ -37,28 +43,20 @@
                             "valueCode": "SHALL"
                         }
                     ],
-                    "type": "CodeSystem",
+                    "type": "AuditEvent",
+                    "profile": {
+                        "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AuditEvent"
+                    },
                     "interaction": [
                         {
                             "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                  "valueCode": "SHALL"
-                                }
-                              ],
-                            "code": "search-type"
-                        }
-                    ]
-                },
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                            "valueCode": "SHALL"
-                        }
-                    ],
-                    "type": "ValueSet",
-                    "interaction": [
+                              {
+                                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                "valueCode": "SHALL"
+                              }
+                            ],
+                            "code": "create"
+                        },
                         {
                             "extension": [
                                 {

@@ -3,7 +3,7 @@
 
 Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/).
 
-### Events
+### Historie
 
 | | |
 | --- | --- |
@@ -26,10 +26,11 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
 #### Prioritering werkzaamheden
 
 1. Correspondentie
-1. (Radiologie)verslagen
-1. Notities
-1. zib Probleem
-1. zib Verrichting
+1. (Radiologie) verslagen
+1. Problemen
+1. Verrichtingen
+1. Behandelaanwijzingingen
+1. Laboratorium uitslagen
 
 ### Bouwblokken
 

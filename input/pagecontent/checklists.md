@@ -16,46 +16,109 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 
 ### Epic huizen
 
-#### Ontsluiten bronsysteem
+<div>
+{% include Checklist-Epic.svg %}
+</div>
 
-1. Betrek je integratie (Bridges) team om het FHIR endpoint in te richten volgens de [OntsluitenBronsysteem CapabilityStatement](CapabilityStatement-OntsluitenBronsysteem.html)
-    1. Back-end Integration voor trusted gebruikers, externe identity wordt gelogd
-1. Client Certificate (UMCG) aanvragen
-1. Client ID en Epic API's:
-    1. Patient.Search (STU3)
-    1. Patient.Read (STU3)
-    1. Practitioner.Read (STU3)
-    1. Organization.Read (STU3)
-    1. DocumentReference.Search (Correspondences) (STU3)
-    1. DocumentReference.Search (Radiology Results) (STU3)
-    1. Binary.Read (Correspondences) (STU3)
-    1. Binary.Read (Radiology Results) (STU3)
-    1. Condition.Search (Encounter Diagnosis, Problems) (STU3)
-    1. Procedure.Search (Orders, Surgeries) (STU3)
-    1. Consent.Search (Code Status) (STU3)
-    1. Consent.Search (Document) (STU3)
-    1. Observation.$lastn (Labs) (STU3)
-    1. Observation.Search (Labs) (STU3)
-    1. Specimen.Read (Labs) (STU3)
-1. Voer de Ontsluiten Bronsysteem tests uit op dit FHIR endpoint
-1. Meld dit FHIR endpoint aan bij RIVO-Noord (?)
-1. [DocumentReference.type](StructureDefinition-DocumentReference.html)
-    * *from I HNO 34033 – Category List INP 5010 en mappings in FHIR AIP via CDA_NOTE_TYPE_TBL*
-    * *You can map additional LOINCs via the EXM activity. EPT 20208 (hospital-built list) - LOINC code.*
-1. ...
+<style>table, td, th { border: 1px solid black; padding:5px; }</style>
 
-#### Opstarten van de Zorgviewer vanuit eigen EPD
+**Stap 1 Aanmaken Apps in Epic: Zorgviewer FrontEnd en Zorgviewer Backend**
+* 1.1 Front-end App: Interconnect (Foreground) verbinding kan maken naar https://auth-np.zorgviewer.nl/.well-known/jwks
+* 1.2 Front-end App: Ga naar [My Apps / Vendor Services (epic.com)](https://vendorservices.epic.com/Developer/Apps) en maak de volgende App registratie:
 
-1. Betrek je integratie (Bridges) team om het FHIR endpoint in te richten volgens de [ZorgviewerHost CapabilityStatement](CapabilityStatement-ZorgviewerHost.html)
-    1. Provider Facing FHIR voor lokale gebruikers
-1. Accepteer het Zorgviewer client ID
-1. [Epic Configure the Integration Record for SMART on FHIR](https://galaxy.epic.com/Redirect.aspx?DocumentID=100015309&PrefDocID=98566) n.b. SMART-on-FHIR
-    1. Configureer opstart parameters als context (patient_id, practitioner_id) (Epic FDI)
-1. Voer de Zorgviewer Host tests uit op dit FHIR endpoint
-1. Betrek je EPD team (Hyperspace) om het opstarten van de Zorgviewer (de SMART-on-FHIR knop) in te richten
-1. Draag zorg voor AGB-Z of BIG-Nummer registratie bij lokale gebruikers
-1. Meld deze Zorgviewer aan bij RIVO-Noord(?) whitelist
-1. ...
+| Veld | Vulling |
+|--|--|
+| Application Name:| `Zorgviewer-Frontend`|
+| Who will primarily be using this app? | Clinicians, Staff, or Administrative Users|
+| Features:| Incoming API|
+| Selecteer de volgende Scopes:|* Patient.Read (STU3)<br/>* Practitioner.Read (STU3)|
+| Does your app use OAuth 2.0? |Use Oauth 2.0|
+| App FHIR Version: |STU3|
+| FHIR ID Generation Scheme: |Use Unconstrained FIHR ID's|
+| Endpoint URI:|* `dev.zorgviewer.nl/api/application/redirect`<br/>* `app-dev.zorgviewer.nl/api/application/redirect`<br/>* `app-tst.zorgviewer.nl/api/application/redirect`<br/>* `app-acc.zorgviewer.nl/api/application/redirect`<br/>* `app.zorgviewer.nl/api/application/redirect`|
+| Is this a confidential Client? | Disable|
+| Advanced: | * Enable on Sandbox: Disable |
+| Non-Production Client ID: | Activate for Non-Production (production volgt in een later stadium)|
+
+* 1.3 Back-end App: Ga naar [My Apps / Vendor Services (epic.com)](https://vendorservices.epic.com/Developer/Apps) en maak de volgende App registratie:
+
+| Veld | Vulling |
+|--|--|
+| Application Name: |`Zorgviewer-Backend`|
+| Who will primarily be using this app? | Backend Systems|
+| Features:| Incoming API|
+| Selecteer de volgende Scopes:|* Binary.Read (Correspondences) (STU3)<br/>* Binary.Read (Radiology Results) (STU3)<br/>* Condition.Search (Encounter Diagnosis, Problems) (STU3)<br/>* Consent.Search (Code Status) (STU3)<br/>* Consent.Search (Document) (STU3)<br/>* DocumentReference.Search (Correspondences) (STU3)<br/>* DocumentReference.Search (Radiology Results) (STU3)<br/>* Observation.$lastn (Labs) (STU3)<br/>* Observation.Search (Labs) (STU3)<br/>* Patient.Search (STU3)<br/>* Procedure.Search (Orders, Surgeries) (STU3)<br/>* Specimen.Read (Labs) (STU3)|
+| Does your app use OAuth 2.0? |Use Oauth 2.0|
+| App FHIR Version:| STU3|
+| FHIR ID Generation Scheme: |Use Unconstrained FIHR ID's|
+| Non-Production JWK Set URL: | `https://auth-np.zorgviewer.nl/.well-known/jwks`|
+| Production JWK Set URL: | voorlopig leeg laten|
+| Advanced: |* Enable on Sandbox: Disable<br/>* Non-Production Client ID: Activate for Non-Production (production volgt in een later stadium)<br/>* Ter info: deze waarschuwing kan genegeerd worden "Add Non-Production Credentials"|
+
+**Stap 2 Client Certificate van de Zorgviewer back-end**
+* 2.1 Team Zorgviewer: Het Zorgviewer team genereert een Zorgviewer-Bronsysteem specifiek Certificate Request (Client Certificaat) en leveren dit aan het aan te sluiten organisatie.
+* 2.2 Op basis van het door Zorgviewer gegenereerde CSR, vraag een Client Certificaat aan. Dit mag een Publieke CA zijn, maar mag ook uitgegeven zijn door een Interne CA. 
+	* Deel het Certificaat met team Zorgviewer.
+* 2.3 Team Zorgviewer: PFX genereren op basis van Private Key + Gegenereerde Certificaat en opnemen in de Zorgviewer KeyVault
+
+**Stap 3 Parallel kan het volgende worden geregeld**
+* 3.1 Maak een backend User (EMP) aan met de volgende security points:<br/>
+	**! Let op: wanneer meer informatie (zibs) worden gedeeld, kan het zijn dat er aanvullende security points nodig zijn.**
+	* EpicCare Ambulatory security point 1-Patient Search/Select
+	* EpicCare Ambulatory security point 16-Chart Review
+	* EpicCare Ambulatory security point 54-Demographics
+	* EpicCare Ambulatory security point 94-Chart Review – Order Tabs
+	* EpicCare Ambulatory security point 111-Problem List
+	* EpicCare Ambulatory security point 176-Review Procedure Reports
+	* EpicCare Ambulatory security point 262-View Only Demographics
+	* EpicCare Ambulatory security point 311-Order Review
+	* EpicCare Ambulatory security point 333-Results Review
+	* EpicCare Inpatient security point 4-Results Review
+	* EpicCare Inpatient security point 5-Patient Summary
+	* EpicCare Inpatient security point 6-Demographics
+	* EpicCare Inpatient security point 7-Chart Review
+	* EpicCare Inpatient security point 8-View Only Demographics
+	* EpicCare Inpatient security point 12-Order Review
+	* EpicCare Inpatient security point 13-Problem List
+	* EpicCare Inpatient security point 184-View Procedure Reports
+	* Nurse Triage/Call Management security point 902-Chart Review
+	* Nurse Triage/Call Management security point 903-Demographics
+	* MyChart - Hyperspace User security point 47 – Third Party View Questionnaires
+	* Care Everywhere security point 4-View Documents
+	* Cadence security point 5105-Edit Patient Record
+	* Cadence security point 5201-Open Patient Record
+	* EpicCare security point 35-Create New Patient
+	* Identity security point 1-Create Record
+
+**Stap 4: Configureren EndPoints**
+* 4.1 (OPTIONEEL) Patiënttoestemmingscheck bouwen in broker
+* 4.1.1 In Epic: Ga naar Documenttype administratie: mapping van het Toestemmingsformulier onder de DocType Group van Patiënttoestemming
+* 4.2 *Moet nog aangevuld worden...* - Interconnect config + url's
+* 4.3 *Moet nog aangevuld worden...* - FHIR endpoint (interconnect) > client id koppelen aan emp (epic manual)
+* 4.4 Ontsluiten van Frontend en Backend end-points via broker naar internet en vervolgens de Zorgviewer IP-reeks 20.160.37.56/31 in de ACL van de Firewall (etc) opnemen zodat de Zorgviewer kan communiceren (HTTPS) met de endpoints.
+* 4.5 Endpoint ontsluiten
+	* Client Certificaat controle op BackendEndpoint
+* 4.6 Aanleveren aan Zorgviewer volgende gegevens:
+	* Client ID's
+	* Backend (base en token) Endpoints URL's backend
+	* ISS URL frontend
+
+**Stap 5: Hyperspace configuratie Opstarten Zorgviewer**
+* 5.1 Uitvoeren van de Epic Checklist BgZ VIPP5 voor de zorginformatiebouwstenen in scope
+* 5.2 FDI record maken voor de Zorgviewer. Gebruik Naming Convention van eigen organisatie.
+
+| Veld | Vulling |
+|--|--|
+| Type: |PACS[1]|
+| Model Record: | SMART ON FHIR|
+| Patient ID Type: | MDN|
+| Installation Mnemonic Values: |1 URL: `https://dev.zorgviewer.nl/api/application/launch`<br/>2 Protected: 1<br/>3 ClientID: eigen clientID<br/>4 Launchtype: 6<br/>5 Context: `mrn=%PATID%&provid=%USERPROVID%&userid=%EPICUSERID%&userfhirid=%EPICUSERFHIRID%`<br/>7 Use edge browser: 1|
+
+* 5.3 Knop (E2U) maken voor het kunnen opstarten van de Zorgviewer
+	* 5.3.1 Plaats de knop in de patiëntencontext en respecteer hierbij eigen Break-the-Glass regels
+	* 5.3.2 Knop is dan alleen beschikbaar wanneer iemand in een (poli)klinisch contact van een patiënt kan
+
+**Stap 6: Testen van de volledige bouw**
 
 ### Chipsoft huizen
 

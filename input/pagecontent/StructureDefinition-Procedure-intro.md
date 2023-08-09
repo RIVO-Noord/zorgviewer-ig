@@ -6,11 +6,66 @@
 
 ### User-Interface guidance
 
-Dit figuur is opgebouwd uit grofweg 2 onderdelen:
-1. een schets van het scherm met labels en sortering informatie
-    <div style="clear:both;"><img src="UI-Schets-Verrichtingen.png" class="figure-img img-responsive img-rounded center-block"></div>
-1. tabel met veld beschrijving, FHIR Path naar de waarde, Zib element naam en extra toelichting of regels
-    <div style="clear:both;"><img src="tabel-UI-Schets-Verrichtingen.png" class="figure-img img-responsive img-rounded center-block"></div>
+Een schets van het scherm met labels en sortering informatie
+<div style="clear:both;"><img src="UI-Schets-Verrichtingen.png" class="figure-img img-responsive img-rounded center-block"></div>
+
+Kolom definities:
+<table class="grid">
+  <thead>
+    <th>Kolom label</th>
+    <th width="25%">FHIR Path</th>
+    <th>FHIR Type</th>
+    <th>Zib element</th>
+    <th>Toelichting of regels</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bron</td>
+      <td><samp>.meta.tag[system="http://hl7.nl/fhir/zorgviewer-ig/bronsysteem-zorgaanbieder"].display​</samp></td>
+      <td><code>string</code></td>
+      <td><i>nvt</i></td>
+      <td> of lookup adhv code (AGB-Z of OID)</td>
+    </tr>
+    <tr>
+      <td>Startdatum</td>
+      <td><samp>.performedPeriod.start​</samp></td>
+      <td><code>dateTime</code></td>
+      <td>VerrichtingBeginDatum</td>
+      <td>​Kunnen vage datums zijn.​</td>
+    </tr>
+    <tr>
+      <td>Verrichting</td>
+      <td><samp>.code.text</samp></td>
+      <td><code>string​</code></td>
+      <td>VerrichtingType</td>
+      <td></td>
+    </tr>
+    <tr style="background-color:#8faadc; color:white">
+      <th colspan="5">(1) UITKLAPVELD</tH>
+    </tr>
+    <tr style="background-color:#b4c7e7">
+      <td>Verrichtingcode</td>
+      <td><samp>.code.coding[]</samp> en dan <samp>.system</samp>, <samp>.code</samp> en <samp>.display​</samp></td>
+      <td><code>string</code></td>
+      <td>VerrichtingType</td>
+      <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.​<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>​</td>
+    </tr>
+    <tr style="background-color:#b4c7e7">
+      <td>Uitgevoerd door</td>
+      <td><samp>.performer.actor.display​</samp></td>
+      <td><code>string</code></td>
+      <td>Uitvoerder</td>
+      <td>Meestal alleen specialisme</td>
+    </tr>
+    <tr style="background-color:#b4c7e7">
+      <td>Lateraliteit</td>
+      <td><samp>.bodySite.extension[url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier"].valueCodeableConcept.text</samp></td>
+      <td><code>string</code></td>
+      <td>ProbleemLateraliteit</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Zoeken naar codes
 
