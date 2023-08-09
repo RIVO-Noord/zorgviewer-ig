@@ -20,6 +20,7 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 {% include Checklist-Epic.svg %}
 </div>
 
+<style>table, td, th { border: 1px solid black; padding:10px; }</style>
 **Stap 1 Aanmaken Apps in Epic: Zorgviewer FrontEnd en Zorgviewer Backend**
 * Stap 1.1 Front-end App
 	* 1.1.1 Zorg ervoor dat Interconnect (Foreground) verbinding kan maken naar https://auth-np.zorgviewer.nl/.well-known/jwks
