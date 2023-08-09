@@ -20,12 +20,11 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 {% include Checklist-Epic.svg %}
 </div>
 
-**Stap 1 Aanmaken Apps in Epic: Zorgviewer FrontEnd en Zorgviewer Backend**
-* Stap 1.1 Front-end App
-	* 1.1.1 Zorg ervoor dat Interconnect (Foreground) verbinding kan maken naar https://auth-np.zorgviewer.nl/.well-known/jwks
-	* 1.1.2 Ga naar [My Apps / Vendor Services (epic.com)](https://vendorservices.epic.com/Developer/Apps) en maak de volgende App registraties:
-
 <style>table, td, th { border: 1px solid black; padding:5px; }</style>
+
+**Stap 1 Aanmaken Apps in Epic: Zorgviewer FrontEnd en Zorgviewer Backend**
+* 1.1 Front-end App: Interconnect (Foreground) verbinding kan maken naar https://auth-np.zorgviewer.nl/.well-known/jwks
+* 1.2 Front-end App: Ga naar [My Apps / Vendor Services (epic.com)](https://vendorservices.epic.com/Developer/Apps) en maak de volgende App registratie:
 
 | Veld | Vulling |
 |--|--|
@@ -41,7 +40,7 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 | Advanced: | * Enable on Sandbox: Disable |
 | Non-Production Client ID: | Activate for Non-Production (production volgt in een later stadium)|
 
-* Stap 1.2 Back-end App: Ontsluiten bronsysteem
+* 1.3 Back-end App: Ga naar [My Apps / Vendor Services (epic.com)](https://vendorservices.epic.com/Developer/Apps) en maak de volgende App registratie:
 
 | Veld | Vulling |
 |--|--|
@@ -57,9 +56,9 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 | Advanced: |* Enable on Sandbox: Disable<br/>* Non-Production Client ID: Activate for Non-Production (production volgt in een later stadium)<br/>* Ter info: deze waarschuwing kan genegeerd worden "Add Non-Production Credentials"|
 
 **Stap 2 Client Certificate van de Zorgviewer back-end**
-* 2.1 Team Zorgviewer: Het Zorgviewer team genereert een Zorgviewer-Bronsysteem specifiek Certificate Request (Client Certificaat) en leveren dit aan het aan te sluiten Huis [ details nog invoegen ]
-* 2.2 Op basis van het door Zorgviewer gegenereerde CSR, vraag een Client Certificaat aan. Dit mag een Publieke CA zijn, maar mag ook uitgegeven zijn door een Interne CA. Het genereerde 
-	* Deel het Certificaat met team Zorgviewer via ???.
+* 2.1 Team Zorgviewer: Het Zorgviewer team genereert een Zorgviewer-Bronsysteem specifiek Certificate Request (Client Certificaat) en leveren dit aan het aan te sluiten organisatie.
+* 2.2 Op basis van het door Zorgviewer gegenereerde CSR, vraag een Client Certificaat aan. Dit mag een Publieke CA zijn, maar mag ook uitgegeven zijn door een Interne CA. 
+	* Deel het Certificaat met team Zorgviewer.
 * 2.3 Team Zorgviewer: PFX genereren op basis van Private Key + Gegenereerde Certificaat en opnemen in de Zorgviewer KeyVault
 
 **Stap 3 Parallel kan het volgende worden geregeld**
@@ -84,7 +83,7 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 	* EpicCare Inpatient security point 184-View Procedure Reports
 	* Nurse Triage/Call Management security point 902-Chart Review
 	* Nurse Triage/Call Management security point 903-Demographics
-	* MyChart * Hyperspace User security point 47 – Third Party View Questionnaires
+	* MyChart - Hyperspace User security point 47 – Third Party View Questionnaires
 	* Care Everywhere security point 4-View Documents
 	* Cadence security point 5105-Edit Patient Record
 	* Cadence security point 5201-Open Patient Record
@@ -92,15 +91,13 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 	* Identity security point 1-Create Record
 
 **Stap 4: Configureren EndPoints**
-* 4.1 (OPTIONEEL) Patiënttoestemmingscheck bouwen in broker (note: in stap 12 van sequence diagram)
-	* In Epic: Ga naar Documenttype administratie: mapping van het Toestemmingsformulier onder de DocType Group van Patiënttoestemming
-* 4.2 Moet nog aangevuld worden 
-	* Interconnect config + url's
-* 4.3 Moet nog aangevuld worden 
-	* FHIR endpoint (interconnect) > client id koppelen aan emp (epic manual)
-* 4.4 Huis: Ontsluiten van Frontend en Backend end-points via broker naar internet en vervolgens de Zorgviewer IP-reeks 20.160.37.56/31 in de ACL van de Firewall (etc) opnemen zodat de Zorgviewer kan communiceren (HTTPS) met de endpoints.
+* 4.1 (OPTIONEEL) Patiënttoestemmingscheck bouwen in broker
+* 4.1.1 In Epic: Ga naar Documenttype administratie: mapping van het Toestemmingsformulier onder de DocType Group van Patiënttoestemming
+* 4.2 *Moet nog aangevuld worden...* - Interconnect config + url's
+* 4.3 *Moet nog aangevuld worden...* - FHIR endpoint (interconnect) > client id koppelen aan emp (epic manual)
+* 4.4 Ontsluiten van Frontend en Backend end-points via broker naar internet en vervolgens de Zorgviewer IP-reeks 20.160.37.56/31 in de ACL van de Firewall (etc) opnemen zodat de Zorgviewer kan communiceren (HTTPS) met de endpoints.
 * 4.5 Endpoint ontsluiten
-	* Client Certificaat controle op BackendEndpoint - zie stap 2?
+	* Client Certificaat controle op BackendEndpoint
 * 4.6 Aanleveren aan Zorgviewer volgende gegevens:
 	* Client ID's
 	* Backend (base en token) Endpoints URL's backend
@@ -109,16 +106,17 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 **Stap 5: Hyperspace configuratie Opstarten Zorgviewer**
 * 5.1 Uitvoeren van de Epic Checklist BgZ VIPP5 voor de zorginformatiebouwstenen in scope
 * 5.2 FDI record maken voor de Zorgviewer. Gebruik Naming Convention van eigen organisatie.
-| | |
+
+| Veld | Vulling |
 |--|--|
 | Type: |PACS[1]|
 | Model Record: | SMART ON FHIR|
 | Patient ID Type: | MDN|
-| | |
-| Intellation Mnemonic Values: |1 URL: `https://dev.zorgviewer.nl/api/application/launch`<br/>2 Protected: 1<br/>3 ClientID: eigen clientID<br/>4 Launchtype: 6<br/>5 Context: `mrn=%PATID%&provid=%USERPROVID%&userid=%EPICUSERID%&userfhirid=%EPICUSERFHIRID%`<br/>6 Use edge browser: 1|
-    * 5.3 Knop (E2U) maken voor het kunnen opstarten van de Zorgviewer
-        * 5.3.1 Plaats de knop in de patiëntencontext en respecteer hierbij eigen Break-the-Glass regels
-        * 5.3.2 Knop is dan alleen beschikbaar wanneer iemand in een (poli)klinisch contact van een patiënt kan
+| Installation Mnemonic Values: |1 URL: `https://dev.zorgviewer.nl/api/application/launch`<br/>2 Protected: 1<br/>3 ClientID: eigen clientID<br/>4 Launchtype: 6<br/>5 Context: `mrn=%PATID%&provid=%USERPROVID%&userid=%EPICUSERID%&userfhirid=%EPICUSERFHIRID%`<br/>7 Use edge browser: 1|
+
+* 5.3 Knop (E2U) maken voor het kunnen opstarten van de Zorgviewer
+	* 5.3.1 Plaats de knop in de patiëntencontext en respecteer hierbij eigen Break-the-Glass regels
+	* 5.3.2 Knop is dan alleen beschikbaar wanneer iemand in een (poli)klinisch contact van een patiënt kan
 
 **Stap 6: Testen van de volledige bouw**
 
