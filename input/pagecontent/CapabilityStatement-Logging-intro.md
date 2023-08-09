@@ -4,6 +4,8 @@
         * Als een beheerder loggegevens inziet: "loggegevens lezen"
 * Zie [AuditEvent-example-1](AuditEvent-example-1.html)
 
+<style>table, td, th { border: 1px solid black; padding:10px; }</style>
+
 | key | value | FHIR Path |
 |--|--|--|
 | **Gebeurtenis** | | `AuditEvent` |
