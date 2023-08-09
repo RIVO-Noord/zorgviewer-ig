@@ -1,6 +1,7 @@
 ### Versies
 
-<style>table, td, th { border: 1px solid black; padding:10px; }</style>
+<style>table, td, th { border: 1px solid black; padding:5px; }</style>
+
 |Versie|Datum|Changes|
 |---|---|---|
 |0.13.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.12.0-sprint13...master)<br/>* Logging AuditEvent uitwerking|

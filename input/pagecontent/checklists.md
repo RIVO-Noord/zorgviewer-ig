@@ -25,7 +25,7 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 	* 1.1.1 Zorg ervoor dat Interconnect (Foreground) verbinding kan maken naar https://auth-np.zorgviewer.nl/.well-known/jwks
 	* 1.1.2 Ga naar [My Apps / Vendor Services (epic.com)](https://vendorservices.epic.com/Developer/Apps) en maak de volgende App registraties:
 
-<style>table, td, th { border: 1px solid black; padding:10px; }</style>
+<style>table, td, th { border: 1px solid black; padding:5px; }</style>
 
 | Veld | Vulling |
 |--|--|
