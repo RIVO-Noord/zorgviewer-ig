@@ -1,0 +1,38 @@
+@startuml
+!pragma teoz true
+hide footbox
+
+participant "Zorgviewer-Back-end" as zvbe
+box "Ontsluiten bronsysteem"
+participant "Broker / Interconnect" as broker
+end box
+box "Bronsysteem"
+participant "Epic / Hyperspace" as epic
+end box
+participant "Zorgviewer-Front-end" as zvfe
+
+zvbe <--> broker
+note right zvbe
+* 1.2
+* 2.1
+* 2.2
+* 2.3
+end note
+broker <--> epic
+note right broker
+* 4.1
+* 4.2
+* 4.4
+* 4.5
+* 4.6
+end note
+note left zvfe
+* 1.1
+end note
+note right epic
+* 3.1
+* 4.3
+end note
+epic <--> zvfe
+
+@enduml
