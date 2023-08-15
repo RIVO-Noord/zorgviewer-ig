@@ -83,6 +83,10 @@ Hierna volgt een schema met functionaliteiten per bouwblok.
 {% include img.html img="leeswijzer-fhir-resources-en-zibs.png" width="70%" %}
 </div>
 
-### Acknowledgements
+### Dependencies
 
-* ...
+{% include dependency-table.xhtml %}
+
+### Globals
+
+{% include globals-table.xhtml %}

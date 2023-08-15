@@ -182,14 +182,6 @@ Er zijn meerdere niveau's van autorisatie, namelijk:
 1. Alle implementaties dienen zich te houden aan [Postel's law, Robustness principle](http://www.healthintersections.com.au/?p=2403)
 1. Niet valideren tegen de profiles at-runtime, alleen bij aansluit (zelf) certificeren aan de hand van de [CapabilityStatements](artifacts.html#1) in deze implementatiegids.
 
-### Dependencies
-
-{% include dependency-table.xhtml %}
-
-### Globals
-
-{% include globals-table.xhtml %}
-
 ### EHR-S FM Requirements Mapping
 
 Het EHR-S FM is ...

@@ -25,7 +25,17 @@ loop voor iedere zorgaanbieder
   activate Zorgviewer
   Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base>/Patient?identifier=<BSN>""
   activate Bron
-  Bron->Bron : verkrijgen extern-access-token
+  Bron->Bronsysteem : verkrijgen extern-access-token
+  note left Bron
+    auth_token bij access token request:
+    { "iss": "...",
+      "sub": "...",
+      "exp": "...",
+      ...
+      (optioneel) "subject_organization": "UMCG",
+      "subject_organization_id": "urn:oid:2.16.840.1.113883.2.4.3.8",
+      ... }
+  end note
   Bron->Bronsysteem : Patient request
   activate Bronsysteem
   Bronsysteem-->Bron : Patient resource

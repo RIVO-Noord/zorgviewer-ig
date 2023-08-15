@@ -69,6 +69,21 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
 * [Chipsoft BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
 * [Chipsoft Service Authenticatie](https://developer.zorgplatform.online/digital-care/authenticatie)
 
+#### Verkrijgen extern token
+Ivm NEN 7513 logging requirement moet het bronsysteem de vragende organisatie weten. De vragende organisatie is de organisatie van de geauthenticeerde gebruiker. De IHE IUA standaard beschrijft de attribuut naam die hiervoor gebruikt dient te worden in de authentication JWT die mee gaat naar de access token request. Dit is ook zoals LSP/VZVZ dit doet.
+```
+{ "iss": "...",
+      "sub": "...",
+      "exp": "...",
+      ...
+      (optioneel) "subject_organization": "UMCG",
+      "subject_organization_id": "urn:oid:2.16.840.1.113883.2.4.3.8" }
+```
+
+**Van toepassing zijnde standaarden en documentatie**:
+* [SMART-on-FHIR Backend Authentication](http://hl7.org/fhir/uv/bulkdata/authorization/index.html#obtaining-an-access-token)
+* [IHE Internet User Authorization (IUA)](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_IUA.pdf)
+
 <div>
 {% include Zorgviewer-seq-3.svg %}
 </div>
