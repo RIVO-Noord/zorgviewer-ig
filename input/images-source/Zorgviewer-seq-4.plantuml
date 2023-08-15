@@ -18,7 +18,7 @@ loop
     Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/DocumentReference?patient=<patient_fhir_id>""
     activate Bron
     opt als token verlopen
-        Bron->Bronsysteem : verkrijgen extern-access-token
+        Bron->Bronsysteem : verkrijgen access token
     end opt
     Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user organisatie tbv logging
     activate Bronsysteem
@@ -45,7 +45,7 @@ note right Zorgviewer
 end note
 activate Bron
 opt als token verlopen
-    Bron->Bronsysteem : verkrijgen extern-access-token
+    Bron->Bronsysteem : verkrijgen access token
 end opt
 Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
 activate Bronsysteem

@@ -71,7 +71,11 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
 * [Chipsoft BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
 * [Chipsoft Service Authenticatie](https://developer.zorgplatform.online/digital-care/authenticatie)
 
-#### Verkrijgen extern token
+#### Verkrijgen bronsysteem access token
+
+<blockquote class="stu-note" markdown="1">
+N.B. Deze IG bouwt op SMART-on-FHIR 1.0.0 ivm FHIR STU3 en Scopes notatie. De bijbehorende backend authenticatie is gespecificeerd in Bulk Data Access FHIR specificaties. SMART-on-FHIR 2.0 brengt eea weer samen, maar upgrade ook de Scopes en de FHIR versie naar R4. Daarom blijven wij voor MVP2 bij de 1.0.0 versie.
+</blockquote>
 
 Hier passen we de request access token flow toe van de Bulk Data Access Backend authenticatie specificaties.
 Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende organisatie weten. De vragende organisatie is de organisatie van de geauthenticeerde gebruiker van de Zorgviewer. De IHE IUA standaard beschrijft de attribuut naam die hiervoor gebruikt dient te worden in de authentication JWT die mee gaat naar de access token request. Dit is ook zoals LSP/VZVZ dit doet.
@@ -83,10 +87,6 @@ Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende orga
       (optioneel) "subject_organization": "UMCG",
       "subject_organization_id": "urn:oid:2.16.840.1.113883.2.4.3.8" }
 ```
-
-<blockquote class="stu-note" markdown="1">
-N.B. Deze IG bouwt op SMART-on-FHIR 1.0.0 ivm FHIR STU3 en Scopes notatie. De bijbehorende backend authenticatie is gespecificeerd in Bulk Data Access FHIR specificaties. SMART-on-FHIR 2.0 brengt eea weer samen, maar upgrade ook de Scopes en de FHIR versie naar R4. Daarom blijven wij voor MVP2 bij de 1.0.0 versie.
-</blockquote>
 
 <div>
 {% include Zorgviewer-seq-3.svg %}

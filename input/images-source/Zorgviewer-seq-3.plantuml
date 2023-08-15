@@ -25,7 +25,7 @@ loop voor iedere zorgaanbieder
   activate Zorgviewer
   Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base>/Patient?identifier=<BSN>""
   activate Bron
-  Bron->Bronsysteem : verkrijgen extern-access-token (na discovery)\ninclusief zorgviewer user organisatie tbv logging
+  Bron->Bronsysteem : verkrijgen access token (na discovery)\ninclusief zorgviewer user organisatie tbv logging
   note left Bron
     auth_token bij access token request:
     { "iss": "...",
@@ -49,7 +49,7 @@ loop voor iedere zorgaanbieder
     Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/<resource>?subject=<patient_fhir_id>&<filter>""
     activate Bron
     opt als token verlopen
-      Bron->Bronsysteem : verkrijgen extern-access-token
+      Bron->Bronsysteem : verkrijgen access token
     end opt
     Bron->Bronsysteem : gegevensverzoek (per zib) met generiek back-end account
     activate Bronsysteem
