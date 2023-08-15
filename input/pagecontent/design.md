@@ -65,11 +65,13 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
 * [Bulk Data Access Backend Authentication](http://hl7.org/fhir/uv/bulkdata/authorization/index.html#obtaining-an-access-token)
 * [IHE Internet User Authorization (IUA)](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_IUA.pdf)
 * [MedMij BgZ 2017 FHIR](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
-* [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
-* [Epic Galaxy: Backend System Integrations](https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&PrefDocID=97042)
-* [Epic FHIR](https://appmarket.epic.com/Sandbox/)
-* [Chipsoft BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
-* [Chipsoft Service Authenticatie](https://developer.zorgplatform.online/digital-care/authenticatie)
+* Epic
+      * [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
+      * [Epic Galaxy: Backend System Integrations](https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&PrefDocID=97042)
+      * [Epic FHIR](https://appmarket.epic.com/Sandbox/)
+* Chipsoft
+      * [Chipsoft BgZ API](https://developer.zorgplatform.online/digital-care/api/bgz)
+      * [Chipsoft Service Authenticatie](https://developer.zorgplatform.online/digital-care/authenticatie)
 
 #### Verkrijgen bronsysteem access token
 
@@ -81,12 +83,16 @@ Hier passen we de request access token flow toe van de Bulk Data Access Backend 
 Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende organisatie weten. De vragende organisatie is de organisatie van de geauthenticeerde gebruiker van de Zorgviewer. De IHE IUA standaard beschrijft de attribuut naam die hiervoor gebruikt dient te worden in de authentication JWT die mee gaat naar de access token request. Dit is ook zoals LSP/VZVZ dit doet.
 ```
 { "iss": "...",
-      "sub": "...",
-      "exp": "...",
-      ...
-      (optioneel) "subject_organization": "UMCG",
-      "subject_organization_id": "urn:oid:2.16.840.1.113883.2.4.3.8" }
+  "sub": "...",
+  "exp": "...",
+  (optioneel) "subject_organization": "UMCG",
+  "subject_organization_id": "urn:oid:2.16.840.1.113883.2.4.3.8" 
+}
 ```
+
+#### Toevoegen X-Request-Id HTTP HEader
+
+Tbv het correleren van de Zorgviewer logging met de logging van een Bronsysteem dient een `X-Request-Id` HTTP Header (zie [Custom Headers to support logs/audit](https://hl7.org/fhir/R4/http.html#custom)) te worden toegevoegd aan ieder request aan het Bronsysteem. Deze kan dan door het Bronsysteem gelogd worden.
 
 <div>
 {% include Zorgviewer-seq-3.svg %}
