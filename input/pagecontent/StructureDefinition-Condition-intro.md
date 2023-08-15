@@ -25,10 +25,10 @@ Kolom definities:
   <tbody>
     <tr>
       <td>Bron</td>
-      <td><samp>.meta.tag[system="http://hl7.nl/fhir/zorgviewer-ig/bronsysteem-zorgaanbieder"].display​</samp></td>
+      <td><samp>.meta.extension[system="http://hl7.org/fhir/R4/StructureDefinition/extension-Meta.source"].valueUri</samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
-      <td>Lookup adhv code (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
+      <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
     </tr>
     <tr>
       <td>Datum</td>
