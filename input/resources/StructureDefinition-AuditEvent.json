@@ -1,0 +1,22 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AuditEvent",
+    "name": "AuditEvent",
+    "title": "AuditEvent",
+    "status": "draft",
+    "description": "AuditEvent",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Flag",
+    "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/AuditEvent",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "AuditEvent.code",
+                "path": "AuditEvent.code",
+                "mustSupport": true
+            }
+        ]
+    }
+}
