@@ -1,0 +1,1 @@
+Zie voor details van het log bericht: [StructureDefinition-AuditEvent](StructureDefinition-AuditEvent.html).
