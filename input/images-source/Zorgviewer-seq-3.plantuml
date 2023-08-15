@@ -25,7 +25,7 @@ loop voor iedere zorgaanbieder
   activate Zorgviewer
   Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base>/Patient?identifier=<BSN>""
   activate Bron
-  Bron->Bronsysteem : verkrijgen extern-access-token
+  Bron->Bronsysteem : verkrijgen extern-access-token (na discovery)\ninclusief zorgviewer user organisatie tbv logging
   note left Bron
     auth_token bij access token request:
     { "iss": "...",
@@ -38,6 +38,7 @@ loop voor iedere zorgaanbieder
   end note
   Bron->Bronsysteem : Patient request
   activate Bronsysteem
+  Bronsysteem-->Bronsysteem: log request
   Bronsysteem-->Bron : Patient resource
   deactivate Bronsysteem
   Bron-->Zorgviewer : ""[[StructureDefinition-Patient.html Patient]]""
@@ -47,13 +48,12 @@ loop voor iedere zorgaanbieder
     activate Zorgviewer
     Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/<resource>?subject=<patient_fhir_id>&<filter>""
     activate Bron
-    Bron->Bron : verkrijgen extern-access-token
-    Bron->Bronsysteem : gegevensverzoek (per zib) met generiek back-end account\ninclusief zorgviewer user organisatie tbv logging
-    note right Bron
-Organisatie adhv de AGB-Z of HL7 NL OID 
-van de organisatie van de zorgviewer user.
-    end note
+    opt als token verlopen
+      Bron->Bronsysteem : verkrijgen extern-access-token
+    end opt
+    Bron->Bronsysteem : gegevensverzoek (per zib) met generiek back-end account
     activate Bronsysteem
+    Bronsysteem-->Bronsysteem: log request
     Bronsysteem->Bron: fhir resources (Bundle) bij de zib
     deactivate Bronsysteem
     Bron->Bron: Toevoegen meta-tag voor deze bron\nadhv Patient.managingOrganization.display (en eventueel VEKTIS identifier)

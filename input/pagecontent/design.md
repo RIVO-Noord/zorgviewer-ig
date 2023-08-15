@@ -62,6 +62,8 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
 ### Bevragen bronsystemen zorgaanbieders
 
 **Van toepassing zijnde standaarden en documentatie**:
+* [Bulk Data Access Backend Authentication](http://hl7.org/fhir/uv/bulkdata/authorization/index.html#obtaining-an-access-token)
+* [IHE Internet User Authorization (IUA)](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_IUA.pdf)
 * [MedMij BgZ 2017 FHIR](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
 * [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
 * [Epic Galaxy: Backend System Integrations](https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&PrefDocID=97042)
@@ -70,7 +72,9 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
 * [Chipsoft Service Authenticatie](https://developer.zorgplatform.online/digital-care/authenticatie)
 
 #### Verkrijgen extern token
-Ivm NEN 7513 logging requirement moet het bronsysteem de vragende organisatie weten. De vragende organisatie is de organisatie van de geauthenticeerde gebruiker. De IHE IUA standaard beschrijft de attribuut naam die hiervoor gebruikt dient te worden in de authentication JWT die mee gaat naar de access token request. Dit is ook zoals LSP/VZVZ dit doet.
+
+Hier passen we de request access token flow toe van de Bulk Data Access Backend authenticatie specificaties.
+Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende organisatie weten. De vragende organisatie is de organisatie van de geauthenticeerde gebruiker van de Zorgviewer. De IHE IUA standaard beschrijft de attribuut naam die hiervoor gebruikt dient te worden in de authentication JWT die mee gaat naar de access token request. Dit is ook zoals LSP/VZVZ dit doet.
 ```
 { "iss": "...",
       "sub": "...",
@@ -80,9 +84,9 @@ Ivm NEN 7513 logging requirement moet het bronsysteem de vragende organisatie we
       "subject_organization_id": "urn:oid:2.16.840.1.113883.2.4.3.8" }
 ```
 
-**Van toepassing zijnde standaarden en documentatie**:
-* [SMART-on-FHIR Backend Authentication](http://hl7.org/fhir/uv/bulkdata/authorization/index.html#obtaining-an-access-token)
-* [IHE Internet User Authorization (IUA)](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_IUA.pdf)
+<blockquote class="stu-note" markdown="1">
+N.B. Deze IG bouwt op SMART-on-FHIR 1.0.0 ivm FHIR STU3 en Scopes notatie. De bijbehorende backend authenticatie is gespecificeerd in Bulk Data Access FHIR specificaties. SMART-on-FHIR 2.0 brengt eea weer samen, maar upgrade ook de Scopes en de FHIR versie naar R4. Daarom blijven wij voor MVP2 bij de 1.0.0 versie.
+</blockquote>
 
 <div>
 {% include Zorgviewer-seq-3.svg %}
