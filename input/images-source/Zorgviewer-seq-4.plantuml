@@ -10,7 +10,7 @@ participant Bronsysteem
 end box
 
 activate Zorgviewer
-Zorgverlener->Zorgviewer: ..vervolg bepalen zorgaanbieders..
+Zorgverlener->Zorgviewer: ..vervolg bevragen bronsystemen zorgaanbieders..
 loop
     Zorgviewer->Zorgviewer: voor iedere zorgaanbieder ([[Endpoint-UMCG.html Bronsysteem ontsluiting endpoint]])
     activate Zorgviewer
@@ -18,9 +18,9 @@ loop
     Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/DocumentReference?patient=<patient_fhir_id>""
     activate Bron
     opt als token verlopen
-        Bron->Bronsysteem : verkrijgen access token
+        Bron->Bronsysteem : verkrijgen access token (dmv backend account)
     end opt
-    Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user organisatie tbv logging
+    Bron->Bronsysteem : gegevensverzoek met access token
     activate Bronsysteem
     Bronsysteem-->Bronsysteem: log request
     Bronsysteem->Bron: fhir resources (DocumentReference Bundle)
@@ -45,9 +45,9 @@ note right Zorgviewer
 end note
 activate Bron
 opt als token verlopen
-    Bron->Bronsysteem : verkrijgen access token
+    Bron->Bronsysteem : verkrijgen access token (dmv backend account)
 end opt
-Bron->Bronsysteem : gegevensverzoek met generiek back-end account\ninclusief zorgviewer user tbv logging
+Bron->Bronsysteem : gegevensverzoek met access token
 activate Bronsysteem
 Bronsysteem-->Bronsysteem: log request
 Bronsysteem->Bron: Binary
