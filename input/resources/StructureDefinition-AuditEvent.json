@@ -72,6 +72,19 @@
                 "id": "AuditEvent.entity.type",
                 "path": "AuditEvent.entity.type",
                 "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.entity.detail",
+                "path": "AuditEvent.entity.detail",
+                "constraint": [
+                    {
+                        "key": "zv-ae-1",
+                        "severity": "error",
+                        "human": "At least 1 detail with name 'X-Request-Id' containing the associated HTTP Header value must exist.",
+                        "expression": "type='X-Request-Id'",
+                        "xpath": "/f:entity/f:detail[f:type='X-Request-Id']"
+                    } ],
+                "mustSupport": true
             }
         ]
     }

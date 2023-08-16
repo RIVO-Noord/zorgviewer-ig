@@ -2,7 +2,7 @@
     * gebeurtenissen in scope van de Zorgviewer
         * Als de Zorgviewer een patient opent: "gegevens lezen"
         * Als een beheerder loggegevens inziet: "loggegevens lezen"
-* Zie [AuditEvent-example-1](AuditEvent-example-1.html)
+* Zie [AuditEvent-example-1](AuditEvent-example-auditevent-zorgviewer.html)
 
 <style>table, td, th { border: 1px solid black; padding:5px; }</style>
 
