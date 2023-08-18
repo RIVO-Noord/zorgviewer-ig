@@ -22,7 +22,7 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 
 <style>table, td, th { border: 1px solid black; padding:5px; }</style>
 
-**Stap 1 Aanmaken Apps in Epic: Zorgviewer FrontEnd en Zorgviewer Backend**
+**Stap 1 Aanmaken Apps in Epic: Zorgviewer FrontEnd en Zorgviewer Backend**<br/>
 De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence er zo uit ziet](https://galaxy.epic.com/?#Browse/page=1!68!50!3404409,100001067,100001075,100001077&from=Galaxy-Redirect).
 * 1.1 Front-end App: Interconnect (Foreground) verbinding kan maken naar https://auth-np.zorgviewer.nl/.well-known/jwks
 * 1.2 Front-end App: Ga naar [My Apps / Vendor Services (epic.com)](https://vendorservices.epic.com/Developer/Apps) en maak de volgende App registratie:
