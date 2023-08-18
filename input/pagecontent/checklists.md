@@ -23,6 +23,7 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 <style>table, td, th { border: 1px solid black; padding:5px; }</style>
 
 **Stap 1 Aanmaken Apps in Epic: Zorgviewer FrontEnd en Zorgviewer Backend**
+De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence er zo uit ziet](https://galaxy.epic.com/?#Browse/page=1!68!50!3404409,100001067,100001075,100001077&from=Galaxy-Redirect).
 * 1.1 Front-end App: Interconnect (Foreground) verbinding kan maken naar https://auth-np.zorgviewer.nl/.well-known/jwks
 * 1.2 Front-end App: Ga naar [My Apps / Vendor Services (epic.com)](https://vendorservices.epic.com/Developer/Apps) en maak de volgende App registratie:
 
@@ -91,16 +92,20 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 	* Identity security point 1-Create Record
 
 **Stap 4: Configureren EndPoints**
-* 4.1 (OPTIONEEL) Patiënttoestemmingscheck bouwen in broker
-* 4.1.1 In Epic: Ga naar Documenttype administratie: mapping van het Toestemmingsformulier onder de DocType Group van Patiënttoestemming
-* 4.2 *Moet nog aangevuld worden...* - Interconnect config + url's
+* 4.1 (OPTIONEEL) Patiënttoestemmingscheck bouwen in broker. De gekozen oplossing is afhankelijk van het eigen organisatie. In het UMCG is dit als volgt geimplementeerd:
+{% include img.html img="Checklist-Consent-EpicUMCG.png" caption="Implementatie UMCG patient consent" width="70%" %}
+
+* 4.1.1 In Epic: Ga naar Documenttype administratie: mapping van het Toestemmingsformulier onder de DocType Group van Patiënttoestemming. Dit is ook afhankelijk van de specifieke inrichting en beleid van de eigen organisatie.
+* 4.2 *Moet nog aangevuld worden...* - Interconnect config + interne url's
 * 4.3 *Moet nog aangevuld worden...* - FHIR endpoint (interconnect) > client id koppelen aan emp (epic manual)
-* 4.4 Ontsluiten van Frontend en Backend end-points via broker naar internet en vervolgens de Zorgviewer IP-reeks 20.160.37.56/31 in de ACL van de Firewall (etc) opnemen zodat de Zorgviewer kan communiceren (HTTPS) met de endpoints.
+Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documentatie Backend System Integration](https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&PrefDocID=97042)
+
+* 4.4 Ontsluiten van Frontend en Backend end-points via broker naar internet en vervolgens de Zorgviewer IP-reeks 20.160.37.56/31 in de ACL van de Firewall (etc) opnemen zodat de Zorgviewer kan communiceren (HTTPS) met de endpoints. Dit is ook afhankelijk van de eigen organisatie hoe de beveiliging ingeregeld dient te worden. Indien de organisatie met een IP filter wilt werken is bovenstaande nodig.
 * 4.5 Endpoint ontsluiten
 	* Client Certificaat controle op BackendEndpoint
 * 4.6 Aanleveren aan Zorgviewer volgende gegevens:
 	* Client ID's
-	* Backend (base en token) Endpoints URL's backend
+	* Backend (base en token) Endpoints externe URL's backend
 	* ISS URL frontend
 
 **Stap 5: Hyperspace configuratie Opstarten Zorgviewer**
@@ -112,7 +117,7 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 | Type: |PACS[1]|
 | Model Record: | SMART ON FHIR|
 | Patient ID Type: | MDN|
-| Installation Mnemonic Values: |1 URL: `https://dev.zorgviewer.nl/api/application/launch`<br/>2 Protected: 1<br/>3 ClientID: eigen clientID<br/>4 Launchtype: 6<br/>5 Context: `mrn=%PATID%&provid=%USERPROVID%&userid=%EPICUSERID%&userfhirid=%EPICUSERFHIRID%`<br/>7 Use edge browser: 1|
+| Installation Mnemonic Values: |1 URL: `https://dev.zorgviewer.nl/api/application/launch`<br/>2 Protected: 1<br/>3 ClientID: eigen clientID<br/>4 Launchtype: 7<br/>5 Context: `mrn=%PATID%&provid=%USERPROVID%&userid=%EPICUSERID%&userfhirid=%EPICUSERFHIRID%`<br/>7 Use edge browser: 1|
 
 * 5.3 Knop (E2U) maken voor het kunnen opstarten van de Zorgviewer
 	* 5.3.1 Plaats de knop in de patiëntencontext en respecteer hierbij eigen Break-the-Glass regels
