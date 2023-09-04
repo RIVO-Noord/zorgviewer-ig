@@ -1,28 +1,28 @@
 {
   "resourceType": "AuditEvent",
-  "id": "example-1",
+  "id": "example-auditevent-zorgviewer",
   "type": {
     "system": "http://dicom.nema.org/resources/ontology/DCM",
     "code": "110110",
     "display": "Patient Record"
   },
-  "subtype": [
-    {
-      "system": "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle",
-      "code": "access",
-      "display": "Access/View Record Lifecycle Event"
-    }
-  ],
   "action": "R",
   "recorded": "2023-04-25T22:04:27+11:00",
   "agent": [
     {
+      "role": [ {
+        "coding": [ {
+          "code": "05",
+          "display": "Directly involved healthcare professional"
+        } ]
+      } ],
       "userId": {
         "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
-        "value": "03103161"
+        "value": "06020101"
       },
       "name": "Schroder, CP, Arts",
       "requestor": false,
+      "policy": [ "https://rivo-noord.nl/zorgviewer/toestemming" ],
       "network": {
         "address": "w3zkh3348.intra.umcg.nl"
       }
@@ -30,19 +30,26 @@
   ],
   "source": {
     "identifier": {
-      "value": "Grahame's Laptop"
+      "value": "Zorgviewer RIVO-Noord"
     }
   },
   "entity": [
     {
       "type": {
-        "system": "http://hl7.org/fhir/resource-types",
-        "code": "Patient"
+        "system": "http://hl7.org/fhir/audit-entity-type",
+        "code": "1"
       },
       "identifier": {
-        "value": "eXxP1o8ZlOz21F6HXS9puLA3"
+        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+        "value": "999911120"
       },
-      "description": "J. XXX-Helleman"
+      "name": "J. XXX-Helleman",
+      "detail": [
+        {
+          "type": "X-Request-Id",
+          "value": "MDFkZWFhOWMtMzU5Ny00NmU2LTk2MTItNTAwMzgwOTdmMjg0Cg=="
+        }
+      ]
     }
   ]
 }

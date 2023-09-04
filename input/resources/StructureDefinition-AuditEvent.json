@@ -1,0 +1,91 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AuditEvent",
+    "name": "AuditEvent",
+    "title": "AuditEvent",
+    "status": "draft",
+    "description": "AuditEvent",
+    "kind": "resource",
+    "abstract": false,
+    "type": "AuditEvent",
+    "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/AuditEvent",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "AuditEvent.type",
+                "path": "AuditEvent.type",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.action",
+                "path": "AuditEvent.action",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.recorded",
+                "path": "AuditEvent.recorded",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.agent",
+                "path": "AuditEvent.agent",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.agent.role",
+                "path": "AuditEvent.agent.role",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.agent.userId",
+                "path": "AuditEvent.agent.userId",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.agent.name",
+                "path": "AuditEvent.agent.name",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.agent.policy",
+                "path": "AuditEvent.agent.policy",
+                "fixedUri": "https://rivo-noord.nl/zorgviewer/toestemming",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.source.identifier",
+                "path": "AuditEvent.source.identifier",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.entity",
+                "path": "AuditEvent.entity",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.entity.identifier",
+                "path": "AuditEvent.entity.identifier",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.entity.type",
+                "path": "AuditEvent.entity.type",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.entity.detail",
+                "path": "AuditEvent.entity.detail",
+                "constraint": [
+                    {
+                        "key": "zv-ae-1",
+                        "severity": "error",
+                        "human": "At least 1 detail with name 'X-Request-Id' containing the associated HTTP Header value must exist.",
+                        "expression": "type='X-Request-Id'",
+                        "xpath": "/f:entity/f:detail[f:type='X-Request-Id']"
+                    } ],
+                "mustSupport": true
+            }
+        ]
+    }
+}
