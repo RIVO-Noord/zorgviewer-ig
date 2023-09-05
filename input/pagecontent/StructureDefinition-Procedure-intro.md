@@ -27,7 +27,7 @@ Kolom definities:
       <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
     </tr>
     <tr>
-      <td>Startdatum</td>
+      <td>Datum</td>
       <td><samp>.performedPeriod.start​</samp></td>
       <td><code>dateTime</code></td>
       <td>VerrichtingBeginDatum</td>
