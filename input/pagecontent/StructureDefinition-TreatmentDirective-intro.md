@@ -40,7 +40,6 @@ Kolom definities:
   </thead>
   <tbody>
     <tr>
-    <tr>
       <td>Bron</td>
       <td><samp>.meta.extension[system="http://hl7.org/fhir/R4/StructureDefinition/extension-Meta.source"].valueUri</samp></td>
       <td><code>string</code></td>
