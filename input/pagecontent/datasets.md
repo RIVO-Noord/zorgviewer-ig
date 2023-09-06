@@ -126,6 +126,6 @@ Het ACP beschrijft ook informatie over de patiëntencontext in de Gegevensset Pa
     * Plaats van overlijden
 * Functioneel en somatisch (specifieke vragenlijsten / metingen)
 
-Vanuit project Zorgviewer is de ACP deels in scope, namelijk de BehandelAanwijzing (TreatmentDirective) met een aanvulling in de codelijst. Codelijst die gebruikt gaat worden voor de zorgviewer is een lijst met 8 items, zie [TreatmentDirective](artifacts.StructureDefinition-TreatmentDirective-intro)
+Vanuit project Zorgviewer is de ACP deels in scope, namelijk de BehandelAanwijzing (TreatmentDirective) met een aanvulling in de codelijst. Codelijst die gebruikt gaat worden voor de zorgviewer is een lijst met 8 items, zie [TreatmentDirective ACP behandelingen waardelijst](ValueSet-ACPTreatmentCodelist.html)
 
 Voor de volledige dataset, kijk op [Nictiz ART-DECOR](https://decor.nictiz.nl/art-decor/decor-project--pall-izppz-)
