@@ -79,7 +79,7 @@ Kolom definities:
       <th colspan="5">(1) UITKLAPVELD</tH>
     </tr>
     <tr style="background-color:#b4c7e7">
-      <td>Toelichting</td>
+      <td>Commentaar</td>
       <td><samp>.comment</samp></td>
       <td><code>string</code></td>
       <td>Toelichting</td>
