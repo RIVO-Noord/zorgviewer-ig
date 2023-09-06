@@ -54,7 +54,7 @@ Kolom definities:
       <td>IF != JA dan MARKERING: Dikgedrukt + "!"</td>
     </tr>    
     <tr>
-      <td>Verificatiedatum</td>
+      <td>Datum</td>
       <td><samp>.period.start​</samp></td>
       <td><code>dateTime</code></td>
       <td></td>
@@ -68,7 +68,7 @@ Kolom definities:
       <td></td>
     </tr>
     <tr>
-      <td>Behandeling Toegestaan</td>
+      <td>Behandeling toegestaan</td>
       <td><samp>.modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.display</samp></td>
       <td><code>string</code></td>
       <td>BehandelingToegestaan</td>
