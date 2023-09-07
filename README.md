@@ -57,6 +57,13 @@ git push
 1. En werk verder in de master branch
 1. Update input/zorgviewer-ig.json version naar volgende minor "0.M+1.0"
 
+## Upload to implementatiegids.zorgviewer.nl
+
+```
+> docker run --name azure-cli -it -v "$(pwd)":/app  mcr.microsoft.com/azure-cli
+@> az storage blob upload-batch --overwrite -s /app/output -d '$web' --connection-string "..."
+```
+
 ## Sorting Artifacts edit
 
 In file template/scripts/createArtifactSumarry.xslt insert @ line 65: ``<xsl:sort select="f:name/@value"/>``
