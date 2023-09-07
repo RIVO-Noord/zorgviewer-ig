@@ -95,7 +95,7 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 * 3.3 Uitvoeren van de Epic Sherlock Checklist BgZ VIPP5 voor de zorginformatiebouwstenen in scope
 
 **Stap 4: Configureren EndPoints**
-* 4.1 (UMCG VERSIE) Patiënttoestemmingscheck bouwen in broker. De gekozen oplossing is afhankelijk van het eigen organisatie. In het UMCG is dit als volgt geimplementeerd:
+* 4.1 (UMCG OPLOSSING) Patiënttoestemmingscheck bouwen in broker. De gekozen oplossing is afhankelijk van het eigen organisatie. In het UMCG is dit als volgt geimplementeerd:
 {% include img.html img="Checklist-Consent-EpicUMCG.png" caption="Implementatie UMCG patient consent" width="70%" %}
 
 * 4.1.1 In Epic: Ga naar Documenttype administratie: mapping van het Toestemmingsformulier onder de DocType Group van Patiënttoestemming. Dit is ook afhankelijk van de specifieke inrichting en beleid van de eigen organisatie.
@@ -113,10 +113,10 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 
 | Veld | Vulling |
 |--|--|
-| Type: |PACS[1]|
-| Model Record: | `SMART ON FHIR` |
-| Patient ID Type: | `MDN` |
-| Installation Mnemonic Values: | 1 URL: `https://dev.zorgviewer.nl/api/application/launch`<br/>2 Protected: `1`<br/>3 ClientID: `eigen clientID`<br/>4 Launchtype: `7` (of `6`)<br/>5 Context: `mrn=%PATID%&provid=%USERPROVID%&userid=%EPICUSERID%&userfhirid=%EPICUSERFHIRID%`<br/>7 Use edge browser: `1`|
+| Type: | PACS[1] |
+| Model Record: | SMART ON FHIR |
+| Patient ID Type: | MDN |
+| Installation Mnemonic Values: | 1 URL: `https://dev.zorgviewer.nl/api/application/launch`<br/>2 Protected: `1`<br/>3 ClientID: eigen clientID<br/>4 Launchtype: 7 (of 6)<br/>5 Context: `mrn=%PATID%&provid=%USERPROVID%&userid=%EPICUSERID%&userfhirid=%EPICUSERFHIRID%`<br/>7 Use edge browser: 1|
 
 * 5.2 Knop (E2U) maken voor het kunnen opstarten van de Zorgviewer
 	* 5.2.1 Plaats de knop in de patiëntencontext en respecteer hierbij eigen Break-the-Glass regels
