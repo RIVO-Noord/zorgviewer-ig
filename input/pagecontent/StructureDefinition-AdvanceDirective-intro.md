@@ -41,13 +41,6 @@ Kolom definities:
       <td>WilsverklaringType</td>
       <td></td>
     </tr>
-    <tr>
-      <td>Source</td>
-      <td><samp>.sourceAttachement.data</samp></td>
-      <td><code>base64Binary</code> encoded PDF</td>
-      <td>WilsverklaringDocument</td>
-      <td>Indien beschikbaar.</td>
-    </tr>
   </tbody>
 </table>
 
