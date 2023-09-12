@@ -45,14 +45,7 @@ Kolom definities:
       <td><code>string</code></td>
       <td><i>nvt</i></td>
       <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
-    </tr>
-    <tr style="background-color:#d6dce5">
-      <td>? !</td>
-      <td>.modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.code</td>
-      <td>code</td>
-      <td>BehandelingToegestaan</td>
-      <td>IF != JA dan MARKERING: Dikgedrukt + "!"</td>
-    </tr>    
+    </tr>  
     <tr>
       <td>Datum</td>
       <td><samp>.period.start​</samp></td>
