@@ -63,7 +63,7 @@ Kolom definities:
     </tr>
     <tr>
       <td>Onder- en bovengrens</td>
-      <td><samp>.referenceRange.low.value:decimal</samp> + <samp>.referenceRange.low.unit</samp> – <samp>.referenceRange.high.value</samp> + <samp>.referenceRange.high.unit</samp></td>
+      <td><samp>.referenceRange.low.value:decimal</samp> – <samp>.referenceRange.high.value</samp> + <samp>.referenceRange.high.unit</samp> indien low.unit en high.unit niet gelijk zijn aan elkaar: <samp>.referenceRange.low.value:decimal</samp> + <samp>.referenceRange.low.unit</samp> – <samp>.referenceRange.high.value</samp> + <samp>.referenceRange.high.unit</samp></td>
       <td><code>decimal + string​</code></td>
       <td>ReferentieOndergrens + ReferentieBovengrens</td>
       <td></td>
