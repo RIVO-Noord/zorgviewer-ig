@@ -64,10 +64,6 @@ git push
 @> az storage blob upload-batch --overwrite -s /app/output -d '$web' --connection-string "..."
 ```
 
-## Sorting Artifacts edit
-
-In file template/scripts/createArtifactSumarry.xslt insert @ line 65: ``<xsl:sort select="f:name/@value"/>``
-
 ## Some usefull resources
 
 * Base standards
@@ -89,7 +85,15 @@ In file template/scripts/createArtifactSumarry.xslt insert @ line 65: ``<xsl:sor
 
 ## Known issues
 
-### dependsOn smart-on-fhir issue
+### Sorting Artifacts edit; FIXED
+
+In file template/scripts/createArtifactSumarry.xslt insert @ line 65: ``<xsl:sort select="f:name/@value"/>``
+
+See https://github.com/HL7/ig-template-base/issues/227
+
+FIXED: in official template now!
+
+### dependsOn smart-on-fhir issue; STILL OPEN
 
 Add to zorgviewer-ig.json, dependesOn smart not working now??? See issue in FHIR chat: https://chat.fhir.org/#narrow/stream/179166-implementers/topic/SMART-on-FHIR.20package.201.2E0.2E0.20is.20STU3.20or.20R4.3F
       {
@@ -112,4 +116,4 @@ I worked around this Exception by replacing use="?" with use="official" in the l
 
 WORKAROUND: Changing the dependsOn from (auto) hl7.terminology.r3#5.0.0 to hl7.terminology.r3#4.0.0 also seems to do the job.
 
-UPDATE: fixed with 5.2.0 now!
+UPDATE: fixed with hl7.terminology.r3#5.2.0 now!
