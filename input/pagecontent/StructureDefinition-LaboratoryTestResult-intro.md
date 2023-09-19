@@ -27,11 +27,11 @@ Kolom definities:
       <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
     </tr>
     <tr>
-      <td>Status</td>
-      <td><samp>.status</samp></td>
-      <td><code>code</code></td>
-      <td>ResultaatStatus</td>
-      <td>​</td>
+      <td>Afnamedatum</td>
+      <td><samp>.specimen.resolve().collection.collectedDateTime</samp></td>
+      <td><code>dateTime</code></td>
+      <td>(Specimen) AfnameDatumTijd</td>
+      <td></td>
     </tr>
     <tr>
       <td>Test</td>
@@ -41,52 +41,45 @@ Kolom definities:
       <td></td>
     </tr>
     <tr>
-      <td>Afnamedatum</td>
-      <td><samp>.specimen.resolve().collection.collectedDateTime</samp></td>
-      <td><code>dateTime</code></td>
-      <td>(Specimen) AfnameDatumTijd</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Materiaal</td>
-      <td><samp>.specimen.resolve().type.text</samp></td>
-      <td><code>string​</code></td>
-      <td>(Specimen) Monste</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>TestUitslag</td>
+      <td>Testuitslag</td>
       <td><samp>.valueQuantity.value</samp> en <samp>.valueQuantity.unit</samp></td>
       <td><code>decimal + string​</code></td>
       <td>TestUitslag</td>
       <td></td>
     </tr>
     <tr>
-      <td>Onder- en Bovengrens</td>
-      <td><samp>.referenceRange.low.value:decimal</samp> + <samp>.referenceRange.low.unit</samp> – <samp>.referenceRange.high.value</samp> + <samp>.referenceRange.high.unit</samp></td>
+      <td>Onder- en bovengrens</td>
+      <td><samp>.referenceRange.low.value:decimal</samp> – <samp>.referenceRange.high.value</samp> + <samp>.referenceRange.high.unit</samp> indien low.unit en high.unit niet gelijk zijn aan elkaar: <samp>.referenceRange.low.value:decimal</samp> + <samp>.referenceRange.low.unit</samp> – <samp>.referenceRange.high.value</samp> + <samp>.referenceRange.high.unit</samp></td>
       <td><code>decimal + string​</code></td>
       <td>ReferentieOndergrens + ReferentieBovengrens</td>
       <td></td>
     </tr>
     <tr>
-      <td>Interpretatie</td>
-      <td><samp>.interpretation.text</samp></td>
+      <td>Materiaal</td>
+      <td><samp>.specimen.resolve().type.text</samp></td>
       <td><code>string​</code></td>
-      <td>UitslagInterpretatie</td>
+      <td>(Specimen) Monster</td>
       <td></td>
+    </tr> 
+    <tr>
+      <td>Status</td>
+      <td><samp>.status</samp></td>
+      <td><code>code</code></td>
+      <td>ResultaatStatus</td>
+      <td>​</td>
     </tr>
     <tr style="background-color:#8faadc; color:white">
       <th colspan="5">(1) UITKLAPVELD</tH>
     </tr>
     <tr style="background-color:#b4c7e7">
-      <td>Toelichting</td>
+      <td>Commentaar</td>
       <td><samp>.comment</samp></td>
       <td><code>string</code></td>
       <td>Toelichting</td>
       <td>​</td>
     </tr>
     <tr style="background-color:#b4c7e7">
-      <td>Toelichting Materiaal</td>
+      <td>Toelichting materiaal</td>
       <td><samp>.specimen.revolve().note.text</samp></td>
       <td><code>string</code></td>
       <td>(Monster) Toelichting</td>

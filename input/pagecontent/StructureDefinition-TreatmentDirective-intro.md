@@ -45,16 +45,9 @@ Kolom definities:
       <td><code>string</code></td>
       <td><i>nvt</i></td>
       <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
-    </tr>
-    <tr style="background-color:#d6dce5">
-      <td>? !</td>
-      <td>.modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.code</td>
-      <td>code</td>
-      <td>BehandelingToegestaan</td>
-      <td>IF != JA dan MARKERING: Dikgedrukt + "!"</td>
-    </tr>    
+    </tr>  
     <tr>
-      <td>Verificatiedatum</td>
+      <td>Datum</td>
       <td><samp>.period.start​</samp></td>
       <td><code>dateTime</code></td>
       <td></td>
@@ -68,11 +61,11 @@ Kolom definities:
       <td></td>
     </tr>
     <tr>
-      <td>Behandeling Toegestaan</td>
+      <td>Behandeling toegestaan</td>
       <td><samp>.modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.display</samp></td>
       <td><code>string</code></td>
       <td>BehandelingToegestaan</td>
-      <td></td>
+      <td>Zie UI schets voor icon mappings</td>
     </tr>
     <tr>
       <td>Beperkingen</td>

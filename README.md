@@ -10,7 +10,7 @@
 ## Validate resources
 ```
 (optional) > curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o validator_cli.jar
-> java -jar validator_cli.jar -version 3.0.2 input/resources -ig input/resources -ig nictiz.fhir.nl.stu3.zib2017#2.2.13
+> java -jar validator_cli.jar -version 3.0.2 input/resources -ig input/resources -ig nictiz.fhir.nl.stu3.zib2017#2.2.14
 ```
 
 ## To build the IG (need minimal version 1.2.31 dd 1-feb-2023 ivm zib2017 package fix)
@@ -57,6 +57,13 @@ git push
 1. En werk verder in de master branch
 1. Update input/zorgviewer-ig.json version naar volgende minor "0.M+1.0"
 
+## Upload to implementatiegids.zorgviewer.nl
+
+```
+> docker run --name azure-cli -it -v "$(pwd)":/app  mcr.microsoft.com/azure-cli
+@> az storage blob upload-batch --overwrite -s /app/output -d '$web' --connection-string "..."
+```
+
 ## Sorting Artifacts edit
 
 In file template/scripts/createArtifactSumarry.xslt insert @ line 65: ``<xsl:sort select="f:name/@value"/>``
@@ -91,7 +98,7 @@ Add to zorgviewer-ig.json, dependesOn smart not working now??? See issue in FHIR
         "version": "1.0.0"
       }
 
-### dependsOn hl7.terminology.r3#5.0.0 issue
+### dependsOn hl7.terminology.r3#5.0.0 issue; FIXED
 
 See issue in FHIR chat: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/ValueSet-appropriateness-score.2Ejson.3A.20Unknown.20IdentifierUse.20c
 
@@ -103,4 +110,6 @@ I worked around this Exception by replacing use="?" with use="official" in the l
 2. hl7.terminology.r3#5.0.0/package/ValueSet-clinical-discharge-disposition.json
 3. hl7.terminology.r3#5.0.0/package/ValueSet-appropriateness-score.json
 
-Changing the dependsOn from (auto) hl7.terminology.r3#5.0.0 to hl7.terminology.r3#4.0.0 also seems to do the job.
+WORKAROUND: Changing the dependsOn from (auto) hl7.terminology.r3#5.0.0 to hl7.terminology.r3#4.0.0 also seems to do the job.
+
+UPDATE: fixed with 5.2.0 now!

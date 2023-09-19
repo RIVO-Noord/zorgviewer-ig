@@ -35,18 +35,11 @@ Kolom definities:
       <td>Kunnen vage datums zijn</td>
     </tr>
     <tr>
-      <td>Wilsverklaring Type​</td>
+      <td>Type​</td>
       <td><samp>.category[1].text</samp></td>
       <td><code>string</code></td>
       <td>WilsverklaringType</td>
       <td></td>
-    </tr>
-    <tr>
-      <td>Source</td>
-      <td><samp>.sourceAttachement.data</samp></td>
-      <td><code>base64Binary</code> encoded PDF</td>
-      <td>WilsverklaringDocument</td>
-      <td>Indien beschikbaar.</td>
     </tr>
   </tbody>
 </table>

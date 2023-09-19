@@ -90,9 +90,12 @@ Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende orga
 }
 ```
 
-#### Toevoegen X-Request-Id HTTP HEader
+#### Toevoegen X-Request-Id HTTP Header
 
 Tbv het correleren van de Zorgviewer logging met de logging van een Bronsysteem dient een `X-Request-Id` HTTP Header (zie [Custom Headers to support logs/audit](https://hl7.org/fhir/R4/http.html#custom)) te worden toegevoegd aan ieder request aan het Bronsysteem. Deze kan dan door het Bronsysteem gelogd worden.
+<div style="margin: 5px; padding: 10px; color: #3c763d; background-color: #dff0d8; border: 4px solid black;">
+<b>In de toekomst kijken we naar de <a href="https://www.w3.org/TR/trace-context/">W3C Recommendation Trace Context</a>. Niet in scope MVP2.</b>
+</div>
 
 <div>
 {% include Zorgviewer-seq-3.svg %}

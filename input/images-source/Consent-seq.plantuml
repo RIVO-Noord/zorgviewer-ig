@@ -1,0 +1,26 @@
+@startuml
+hide footbox
+
+participant "Zorgviewer-Back-end" as zv
+participant "<<Ontsluiten bronsysteem>>\nIRIS" as obron
+participant "<<Bronsysteem>>\nEPIC" as bron
+
+zv->obron: gegevensverzoek (FHIR request)
+activate zv
+activate obron
+obron->obron: Check of er in de afgelopen\nx seconden/minuten al consent is opgevraagd
+obron->bron: [NEE] Consent call uitvoeren voor de gewenste patient\n""HL7 v2?""
+
+alt geen active consent
+  obron-->zv: ""403 forbidden""
+else active consent
+  obron->obron: [active consent] Tijdelijk bewaren in IRIS DB\n(FHIR ID van patient + geldigheid)
+  obron->bron: doorsturen gegevensverzoek (FHIR request)
+bron-->obron: results Bundle
+  obron-->zv: results Bundle
+end
+
+deactivate obron
+deactivate zv
+
+@enduml

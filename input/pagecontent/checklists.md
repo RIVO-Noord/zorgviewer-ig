@@ -35,7 +35,7 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence
 | Selecteer de volgende Scopes:|* Patient.Read (STU3)<br/>* Practitioner.Read (STU3)|
 | Does your app use OAuth 2.0? |Use Oauth 2.0|
 | App FHIR Version: |STU3|
-| FHIR ID Generation Scheme: |Use Unconstrained FIHR ID's|
+| FHIR ID Generation Scheme: |Use Unconstrained FHIR ID's|
 | Endpoint URI:|* `dev.zorgviewer.nl/api/application/redirect`<br/>* `app-dev.zorgviewer.nl/api/application/redirect`<br/>* `app-tst.zorgviewer.nl/api/application/redirect`<br/>* `app-acc.zorgviewer.nl/api/application/redirect`<br/>* `app.zorgviewer.nl/api/application/redirect`|
 | Is this a confidential Client? | Disable|
 | Advanced: | * Enable on Sandbox: Disable |
@@ -90,38 +90,55 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence
 	* Cadence security point 5201-Open Patient Record
 	* EpicCare security point 35-Create New Patient
 	* Identity security point 1-Create Record
+* 3.2 *Moet nog aangevuld worden...* - FHIR endpoint (interconnect) > client id koppelen aan emp (epic manual)
+Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documentatie Backend System Integration](https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&PrefDocID=97042)
+* 3.3 Uitvoeren van de Epic Sherlock Checklist BgZ VIPP5 voor de zorginformatiebouwstenen in scope
 
 **Stap 4: Configureren EndPoints**
-* 4.1 (OPTIONEEL) Patiënttoestemmingscheck bouwen in broker. De gekozen oplossing is afhankelijk van het eigen organisatie. In het UMCG is dit als volgt geimplementeerd:
-{% include img.html img="Checklist-Consent-EpicUMCG.png" caption="Implementatie UMCG patient consent" width="70%" %}
+* 4.1 (UMCG OPLOSSING) Patiënttoestemmingscheck bouwen in broker. De gekozen oplossing is afhankelijk van het eigen organisatie. In het UMCG is dit als volgt geimplementeerd:
+<div>
+{% include Consent-seq.svg %}
+</div>
 
 * 4.1.1 In Epic: Ga naar Documenttype administratie: mapping van het Toestemmingsformulier onder de DocType Group van Patiënttoestemming. Dit is ook afhankelijk van de specifieke inrichting en beleid van de eigen organisatie.
 * 4.2 *Moet nog aangevuld worden...* - Interconnect config + interne url's
-* 4.3 *Moet nog aangevuld worden...* - FHIR endpoint (interconnect) > client id koppelen aan emp (epic manual)
-Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documentatie Backend System Integration](https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&PrefDocID=97042)
-
-* 4.4 Ontsluiten van Frontend en Backend end-points via broker naar internet en vervolgens de Zorgviewer IP-reeks 20.160.37.56/31 in de ACL van de Firewall (etc) opnemen zodat de Zorgviewer kan communiceren (HTTPS) met de endpoints. Dit is ook afhankelijk van de eigen organisatie hoe de beveiliging ingeregeld dient te worden. Indien de organisatie met een IP filter wilt werken is bovenstaande nodig.
-* 4.5 Endpoint ontsluiten
+* 4.3 Ontsluiten van Frontend en Backend end-points via broker naar internet en vervolgens de Zorgviewer IP-reeks 20.160.37.56/31 in de ACL van de Firewall (etc) opnemen zodat de Zorgviewer kan communiceren (HTTPS) met de endpoints. Dit is ook afhankelijk van de eigen organisatie hoe de beveiliging ingeregeld dient te worden. Indien de organisatie met een IP filter wilt werken is bovenstaande nodig.
+* 4.4 Endpoint ontsluiten
 	* Client Certificaat controle op BackendEndpoint
-* 4.6 Aanleveren aan Zorgviewer volgende gegevens:
+* 4.5 Aanleveren aan Zorgviewer volgende gegevens:
 	* Client ID's
 	* Backend (base en token) Endpoints externe URL's backend
 	* ISS URL frontend
+* 4.6 Toevoegen meta.source (HL7 NL OID van de zorgaanbieder) bij iedere FHIR resource in de FHIR response Bundle
+```json
+{
+"entry": [ {
+  "resource": {
+    "resourceType": "...",
+	  "id": "...",
+      "meta": {
+        "extension": [ {
+            "url": "http://hl7.org/fhir/R4/StructureDefinition/extension-Meta.source",
+            "valueUri": "uri:oid:2.16.840.1.113883.2.4.3.8"
+        } ]
+    } }
+  } ]
+}
+```
 
 **Stap 5: Hyperspace configuratie Opstarten Zorgviewer**
-* 5.1 Uitvoeren van de Epic Checklist BgZ VIPP5 voor de zorginformatiebouwstenen in scope
-* 5.2 FDI record maken voor de Zorgviewer. Gebruik Naming Convention van eigen organisatie.
+* 5.1 FDI record maken voor de Zorgviewer. Gebruik Naming Convention van eigen organisatie.
 
 | Veld | Vulling |
 |--|--|
-| Type: |PACS[1]|
-| Model Record: | SMART ON FHIR|
-| Patient ID Type: | MDN|
-| Installation Mnemonic Values: |1 URL: `https://dev.zorgviewer.nl/api/application/launch`<br/>2 Protected: 1<br/>3 ClientID: eigen clientID<br/>4 Launchtype: 7<br/>5 Context: `mrn=%PATID%&provid=%USERPROVID%&userid=%EPICUSERID%&userfhirid=%EPICUSERFHIRID%`<br/>7 Use edge browser: 1|
+| Type: | PACS[1] |
+| Model Record: | SMART ON FHIR |
+| Patient ID Type: | MDN |
+| Installation Mnemonic Values: | 1 URL: `https://dev.zorgviewer.nl/api/application/launch`<br/>2 Protected: `1`<br/>3 ClientID: eigen clientID<br/>4 Launchtype: 7 (of 6)<br/>5 Context: `mrn=%PATID%&provid=%USERPROVID%&userid=%EPICUSERID%&userfhirid=%EPICUSERFHIRID%`<br/>7 Use edge browser: 1|
 
-* 5.3 Knop (E2U) maken voor het kunnen opstarten van de Zorgviewer
-	* 5.3.1 Plaats de knop in de patiëntencontext en respecteer hierbij eigen Break-the-Glass regels
-	* 5.3.2 Knop is dan alleen beschikbaar wanneer iemand in een (poli)klinisch contact van een patiënt kan
+* 5.2 Knop (E2U) maken voor het kunnen opstarten van de Zorgviewer
+	* 5.2.1 Plaats de knop in de patiëntencontext en respecteer hierbij eigen Break-the-Glass regels
+	* 5.2.2 Knop is dan alleen beschikbaar wanneer iemand in een (poli)klinisch contact van een patiënt kan
 
 **Stap 6: Testen van de volledige bouw**
 
