@@ -53,7 +53,6 @@ Kolom definities:
       <td>Uitvoerder</td>
       <td>Meestal alleen specialisme</td>
     </tr>
-    </tr>
     <tr style="background-color:#8faadc; color:white">
       <th colspan="5">(1) UITKLAPVELD</tH>
     </tr>
