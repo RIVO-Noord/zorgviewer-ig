@@ -27,20 +27,6 @@ Kolom definities:
       <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
     </tr>
     <tr>
-      <td>Status</td>
-      <td><samp>.status</samp></td>
-      <td><code>code</code></td>
-      <td>ResultaatStatus</td>
-      <td>​</td>
-    </tr>
-    <tr>
-      <td>Test</td>
-      <td><samp>.code.text</samp></td>
-      <td><code>string​</code></td>
-      <td>TestCode</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>Afnamedatum</td>
       <td><samp>.specimen.resolve().collection.collectedDateTime</samp></td>
       <td><code>dateTime</code></td>
@@ -48,10 +34,10 @@ Kolom definities:
       <td></td>
     </tr>
     <tr>
-      <td>Materiaal</td>
-      <td><samp>.specimen.resolve().type.text</samp></td>
+      <td>Test</td>
+      <td><samp>.code.text</samp></td>
       <td><code>string​</code></td>
-      <td>(Specimen) Monster</td>
+      <td>TestCode</td>
       <td></td>
     </tr>
     <tr>
@@ -69,11 +55,18 @@ Kolom definities:
       <td></td>
     </tr>
     <tr>
-      <td>Interpretatie</td>
-      <td><samp>.interpretation.text</samp></td>
+      <td>Materiaal</td>
+      <td><samp>.specimen.resolve().type.text</samp></td>
       <td><code>string​</code></td>
-      <td>UitslagInterpretatie</td>
+      <td>(Specimen) Monster</td>
       <td></td>
+    </tr> 
+    <tr>
+      <td>Status</td>
+      <td><samp>.status</samp></td>
+      <td><code>code</code></td>
+      <td>ResultaatStatus</td>
+      <td>​</td>
     </tr>
     <tr style="background-color:#8faadc; color:white">
       <th colspan="5">(1) UITKLAPVELD</tH>
