@@ -96,7 +96,9 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 
 **Stap 4: Configureren EndPoints**
 * 4.1 (UMCG OPLOSSING) Patiënttoestemmingscheck bouwen in broker. De gekozen oplossing is afhankelijk van het eigen organisatie. In het UMCG is dit als volgt geimplementeerd:
-{% include img.html img="Checklist-Consent-EpicUMCG.png" caption="Implementatie UMCG patient consent" width="70%" %}
+<div>
+{% include Consent-seq.svg %}
+</div>
 
 * 4.1.1 In Epic: Ga naar Documenttype administratie: mapping van het Toestemmingsformulier onder de DocType Group van Patiënttoestemming. Dit is ook afhankelijk van de specifieke inrichting en beleid van de eigen organisatie.
 * 4.2 *Moet nog aangevuld worden...* - Interconnect config + interne url's
@@ -107,6 +109,22 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 	* Client ID's
 	* Backend (base en token) Endpoints externe URL's backend
 	* ISS URL frontend
+* 4.6 Toevoegen meta.source (HL7 NL OID van de zorgaanbieder) bij iedere FHIR resource in de FHIR response Bundle
+```json
+{
+"entry": [ {
+  "resource": {
+    "resourceType": "...",
+	  "id": "...",
+      "meta": {
+        "extension": [ {
+            "url": "http://hl7.org/fhir/R4/StructureDefinition/extension-Meta.source",
+            "valueUri": "uri:oid:2.16.840.1.113883.2.4.3.8"
+        } ]
+    } }
+  } ]
+}
+```
 
 **Stap 5: Hyperspace configuratie Opstarten Zorgviewer**
 * 5.1 FDI record maken voor de Zorgviewer. Gebruik Naming Convention van eigen organisatie.
