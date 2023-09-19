@@ -98,7 +98,7 @@ Add to zorgviewer-ig.json, dependesOn smart not working now??? See issue in FHIR
         "version": "1.0.0"
       }
 
-### dependsOn hl7.terminology.r3#5.0.0 issue
+### dependsOn hl7.terminology.r3#5.0.0 issue; FIXED
 
 See issue in FHIR chat: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/ValueSet-appropriateness-score.2Ejson.3A.20Unknown.20IdentifierUse.20c
 
@@ -110,4 +110,6 @@ I worked around this Exception by replacing use="?" with use="official" in the l
 2. hl7.terminology.r3#5.0.0/package/ValueSet-clinical-discharge-disposition.json
 3. hl7.terminology.r3#5.0.0/package/ValueSet-appropriateness-score.json
 
-Changing the dependsOn from (auto) hl7.terminology.r3#5.0.0 to hl7.terminology.r3#4.0.0 also seems to do the job.
+WORKAROUND: Changing the dependsOn from (auto) hl7.terminology.r3#5.0.0 to hl7.terminology.r3#4.0.0 also seems to do the job.
+
+UPDATE: fixed with 5.2.0 now!
