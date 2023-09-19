@@ -4,7 +4,8 @@
 
 |Versie|Datum|Changes|
 |---|---|---|
-|0.14.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.13.0-sprint15...master)<br/>* Logging AuditEvent uitwerking|
+|0.15.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.14.0-sprint16...master)|
+|0.14.0-sprint16|19-sep-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.13.0-sprint15...0.14.0-sprint16)<br/>* Voornamelijk updates en fixes|
 |0.13.0-sprint15|4-sep-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.12.0-sprint13...0.13.0-sprint15)<br/>* Logging AuditEvent uitwerking|
 |*sprint14*||*Overgeslagen ivm vakanties*|
 |0.12.0-sprint13|9-aug-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.11.0-sprint12...0.12.0-sprint13)<br/>* UI Guidances detail updates/fixes<br/>* Epic checklist uitgewerkt|
