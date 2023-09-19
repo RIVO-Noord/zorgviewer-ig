@@ -40,6 +40,20 @@ Kolom definities:
       <td>VerrichtingType</td>
       <td></td>
     </tr>
+    <tr>
+      <td>Locatie</td>
+      <td><samp>.location.display​</samp></td>
+      <td><code>string</code></td>
+      <td>Locatie::Zorgaanbieder</td>
+    </tr></tr>
+    <tr>
+      <td>Uitgevoerd door</td>
+      <td><samp>.performer.actor.display​</samp></td>
+      <td><code>string</code></td>
+      <td>Uitvoerder</td>
+      <td>Meestal alleen specialisme</td>
+    </tr>
+    </tr>
     <tr style="background-color:#8faadc; color:white">
       <th colspan="5">(1) UITKLAPVELD</tH>
     </tr>
@@ -49,20 +63,6 @@ Kolom definities:
       <td><code>string</code></td>
       <td>VerrichtingType</td>
       <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.​<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>​</td>
-    </tr>
-    <tr style="background-color:#b4c7e7">
-      <td>Locatie</td>
-      <td><samp>.location.display​</samp></td>
-      <td><code>string</code></td>
-      <td>Locatie::Zorgaanbieder</td>
-    </tr></tr>
-    <tr style="background-color:#b4c7e7">
-      <td>Uitgevoerd door</td>
-      <td><samp>.performer.actor.display​</samp></td>
-      <td><code>string</code></td>
-      <td>Uitvoerder</td>
-      <td>Meestal alleen specialisme</td>
-    </tr>
     <tr style="background-color:#b4c7e7">
       <td>Lateraliteit</td>
       <td><samp>.bodySite.extension[url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier"].valueCodeableConcept.text</samp></td>
