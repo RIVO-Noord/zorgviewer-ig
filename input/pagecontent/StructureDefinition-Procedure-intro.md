@@ -45,7 +45,8 @@ Kolom definities:
       <td><samp>.location.display​</samp></td>
       <td><code>string</code></td>
       <td>Locatie::Zorgaanbieder</td>
-    </tr></tr>
+      <td>Zie discussie hier: <a href="https://bits.nictiz.nl/browse/MM-5002">BITS ticket MM-5002</a></td>
+    </tr>
     <tr>
       <td>Uitgevoerd door</td>
       <td><samp>.performer.actor.display​</samp></td>
@@ -62,6 +63,7 @@ Kolom definities:
       <td><code>string</code></td>
       <td>VerrichtingType</td>
       <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.​<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>​</td>
+    </tr>
     <tr style="background-color:#b4c7e7">
       <td>Lateraliteit</td>
       <td><samp>.bodySite.extension[url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier"].valueCodeableConcept.text</samp></td>

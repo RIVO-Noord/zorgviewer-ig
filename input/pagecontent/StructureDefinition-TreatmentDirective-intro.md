@@ -65,7 +65,7 @@ Kolom definities:
       <td><samp>.modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.display</samp></td>
       <td><code>string</code></td>
       <td>BehandelingToegestaan</td>
-      <td></td>
+      <td>Zie UI schets voor icon mappings</td>
     </tr>
     <tr>
       <td>Beperkingen</td>
