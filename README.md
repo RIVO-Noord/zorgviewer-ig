@@ -26,9 +26,9 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
   --data '{"ref": "refs/heads/snapshot", "repository": {"full_name": "RIVO-Noord/zorgviewer-ig"}}'
 ```
 
-## Werkwijze met git
+## Werkwijze Publiceren vanuit git
 
-1. Werken in master
+1. Nieuwe release in master
 1. Werk de ``changes.md`` bij
 1. > git commit -a; git push 
 1. Create tag "0.M.R-sprintX" - op github web-UI klik op: 
