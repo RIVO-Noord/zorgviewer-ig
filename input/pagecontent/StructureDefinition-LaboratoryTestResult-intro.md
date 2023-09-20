@@ -41,11 +41,11 @@ Kolom definities:
       <td></td>
     </tr>
     <tr>
-      <td>Testuitslag</td>
-      <td><samp>.valueQuantity.value</samp> en <samp>.valueQuantity.unit</samp></td>
-      <td><code>decimal + string​</code></td>
+      <td>Testuitslag (interpretatie)</td>
+      <td><samp>.valueQuantity.value</samp> en <samp>.valueQuantity.unit (.interpretation.code)</samp></td>
+      <td><code>decimal and string + string (icon)​</code></td>
       <td>TestUitslag</td>
-      <td></td>
+      <td>Kritieke labresultaten worden aangegeven door een uitroepteken icon (zie UI schets). Labresultaten boven de bovengrens worden aangegeven met een pijl omhoog en onder de ondergrens met een pijl naar beneden. Resistent, Intermediar en Sensitief vanuit de standaard zijn niet van toepassing op de klinische chemie.</td>
     </tr>
     <tr>
       <td>Onder- en bovengrens</td>
