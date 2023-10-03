@@ -50,6 +50,7 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
 
 **Multi-inzetbaar**: *De bouwblokken zijn niet alleen bruikbaar voor de regionale zorgviewer, maar zijn ook bruikbaar en essentieel voor het delen van diagnostiek, multidisciplinair overleg, monitoring en e-Health en de Persoonlijke Gezondheidsomgeving (PGO).* |
 
+**[Zorgviewer Services](zorgviewer-services.html)**
 
 ### Bouwblokken samenwerking
 
