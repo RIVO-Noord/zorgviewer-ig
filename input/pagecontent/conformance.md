@@ -96,7 +96,7 @@
 1. White pages
 
 **Definitie**: Register met Identiteiten en attributen van zorgaanbieders en zorgverleners. Voorbeelden zijn volledige naam, maar ook technische endpoints.
->Volledige naam: "F. Heuvel (Cardiologie (cardioloog)) in het UMCG"
+>Volledige naam: "F. Heuvel (Cardiologie (cardioloog)) in het UMCG"<br/>
 >FHIR Base voor UMCG: https://prd.epic.umcg.nl/fhir/STU3 
 
 **Kandidaat solutions:**
