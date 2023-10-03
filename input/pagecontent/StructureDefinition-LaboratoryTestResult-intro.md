@@ -30,7 +30,7 @@ Kolom definities:
       <td>Afnamedatum</td>
       <td><samp>.specimen.resolve().collection.collectedDateTime</samp></td>
       <td><code>dateTime</code></td>
-      <td>(Specimen) AfnameDatumTijd</td>
+      <td>Monster/ AfnameDatumTijd</td>
       <td></td>
     </tr>
     <tr>
@@ -41,24 +41,27 @@ Kolom definities:
       <td></td>
     </tr>
     <tr>
-      <td>Testuitslag</td>
-      <td><samp>.valueQuantity.value</samp> en <samp>.valueQuantity.unit</samp></td>
-      <td><code>decimal + string​</code></td>
-      <td>TestUitslag</td>
-      <td></td>
+      <td>Testuitslag (interpretatie)</td>
+      <td><samp>.valueString</samp> of <samp>.valueQuantity.value</samp> + <samp>.valueQuantity.unit</samp> + (<samp>.interpretation.code</samp> zie toelichting)</td>
+      <td><code>decimal + string (+ icon​)</code></td>
+      <td>TestUitslag, InterpretatieVlaggen</td>
+      <td><code>.interpretation.code</code><br/><code>"AA"</code>: uitroepteken icon, kritiek<br/>
+      <code>"281302008" of "H"</code>: pijl omhoog, boven de bovengrens<br/>
+      <code>"281300000" of "L"</code>: pijl naar beneden, onder de ondergrens<br/>
+      N.B. Resistent, Intermediar en Sensitief vanuit de standaard zijn niet van toepassing op de klinische chemie.</td>
     </tr>
     <tr>
       <td>Onder- en bovengrens</td>
-      <td><samp>.referenceRange.low.value:decimal</samp> – <samp>.referenceRange.high.value</samp> + <samp>.referenceRange.high.unit</samp> indien low.unit en high.unit niet gelijk zijn aan elkaar: <samp>.referenceRange.low.value:decimal</samp> + <samp>.referenceRange.low.unit</samp> – <samp>.referenceRange.high.value</samp> + <samp>.referenceRange.high.unit</samp></td>
+      <td><samp>.referenceRange.low.value</samp> '–' <samp>.referenceRange.high.value</samp> + <samp>.referenceRange.high.unit</samp><br/>indien low.unit en high.unit niet gelijk zijn aan elkaar:<br/><samp>.referenceRange.low.value</samp> + <samp>.referenceRange.low.unit</samp> '–' <samp>.referenceRange.high.value</samp> + <samp>.referenceRange.high.unit</samp></td>
       <td><code>decimal + string​</code></td>
-      <td>ReferentieOndergrens + ReferentieBovengrens</td>
+      <td>ReferentieOndergrens, ReferentieBovengrens</td>
       <td></td>
     </tr>
     <tr>
       <td>Materiaal</td>
       <td><samp>.specimen.resolve().type.text</samp></td>
       <td><code>string​</code></td>
-      <td>(Specimen) Monster</td>
+      <td>Monster/ Monstermateriaal</td>
       <td></td>
     </tr> 
     <tr>
@@ -82,7 +85,7 @@ Kolom definities:
       <td>Toelichting materiaal</td>
       <td><samp>.specimen.revolve().note.text</samp></td>
       <td><code>string</code></td>
-      <td>(Monster) Toelichting</td>
+      <td>Monster/ Toelichting</td>
       <td>​</td>
     </tr>
   </tbody>

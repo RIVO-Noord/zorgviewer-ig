@@ -4,7 +4,8 @@
 
 |Versie|Datum|Changes|
 |---|---|---|
-|0.15.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.14.0-sprint16...master)|
+|0.16.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.15.0-sprint17...master)|
+|0.15.0-sprint17|3-okt-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.14.0-sprint16...0.15.0-sprint17)<br/>* Lab updates<br/>* Patient.deceased added|
 |0.14.0-sprint16|19-sep-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.13.0-sprint15...0.14.0-sprint16)<br/>* Voornamelijk updates en fixes|
 |0.13.0-sprint15|4-sep-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.12.0-sprint13...0.13.0-sprint15)<br/>* Logging AuditEvent uitwerking|
 |*sprint14*||*Overgeslagen ivm vakanties*|
