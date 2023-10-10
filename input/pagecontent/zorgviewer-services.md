@@ -4,11 +4,13 @@ De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal w
 
 * Doel: Nederlandse Terminology Service (NTS) Nictiz
 * Inhoud: Vertalingen (ValueSet, Codesystem, ConceptMap)
+* Tijdelijk: CodeSystem en ValueSets in deze IG in de Zorgviewer Services opslaan.
 
 ### Toestemming & PatientIndex
 
 * Doel: landelijke MITZ
 * Inhoud: Toestemmingen van een patient (Consents)
+* Tijdelijk: Vullen [Toestemming Consent](StructureDefinition-ToestemmingConsent) dmv afvangen HL7 v2 toestemming berichten.
 
 ### Zorgverlener Directory
 
@@ -16,6 +18,7 @@ De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal w
 * Inhoud
     * Zorgverlener en metadata zoals specialisme (kwalificaties) ([Practitioner](StructureDefinition-Practitioner.html))
     * Zorgverlener Rol en metadata zoals specialisme (kwalificaties) adhv AGB code ([PractitionerRole](StructureDefinition-PractitionerRole.html))
+* Tijdelijk: Verkrijgen AGB codes met bijbehorende Specialismen en deze als PractitionerRole in de Zorgviewer Services opslaan.
  
 ### Adressering
 
@@ -23,6 +26,7 @@ De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal w
 * Inhoud
     * Bronsystemen endpoints ([Endpoints](StructureDefinition-Endpoint.html))
     * Organisatie metadata ([Organization](StructureDefinition-Organization.html))
+* Tijdelijk: Maken Endpoints en Organizations adhv Zorgviewer aangesloten organisaties.
 
 ### [Logging](CapabilityStatement-Logging.html)
 
