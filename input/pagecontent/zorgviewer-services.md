@@ -15,7 +15,7 @@ De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal w
 * Doel: landelijke ZORG-AB of AGB Registry
 * Inhoud
     * Zorgverlener en metadata zoals specialisme (kwalificaties) ([Practitioner](StructureDefinition-Practitioner.html))
-    * Zorgverlener Rol en metadata zoals specialisme (kwalificaties) ([PractitionerRole](StructureDefinition-PractitionerRole.html))
+    * Zorgverlener Rol en metadata zoals specialisme (kwalificaties) adhv AGB code ([PractitionerRole](StructureDefinition-PractitionerRole.html))
  
 ### Adressering
 
