@@ -28,6 +28,6 @@ De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal w
 
 * Opstart Zorgviewer ([AuditEvent](StructureDefinition-AuditEvent.html))
 
-### [Behandelplan](CapabilityStatement-Behandelplan.html))
+### [Behandelplan](CapabilityStatement-Behandelplan.html)
 
-* Behandelplan details, workflow, beginnend met filters ([PlanDefinition](StructureDefinition-PlanDefinition.html), DataRequirements)
+* Behandelplan details, workflow, beginnent met filters ([PlanDefinition](StructureDefinition-PlanDefinition.html), DataRequirements)
