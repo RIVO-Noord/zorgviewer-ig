@@ -19,10 +19,10 @@ De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal w
     * Zorgverlener en metadata zoals specialisme (kwalificaties) ([Practitioner](StructureDefinition-Practitioner.html))
     * Zorgverlener Rol en metadata zoals specialisme (kwalificaties) adhv AGB code ([PractitionerRole](StructureDefinition-PractitionerRole.html))
 * Tijdelijk: Verkrijgen AGB codes met bijbehorende Specialismen en deze als PractitionerRole in de Zorgviewer Services opslaan.
- 
+
 ### Adressering
 
-* Doel: landelijke ZORG-AB
+* Doel: landelijke [ZORG-AB](https://www.vzvz.nl/diensten/gemeenschappelijke-diensten/zorg-ab/releases)
 * Inhoud
     * Bronsystemen endpoints ([Endpoints](StructureDefinition-Endpoint.html))
     * Organisatie metadata ([Organization](StructureDefinition-Organization.html))
