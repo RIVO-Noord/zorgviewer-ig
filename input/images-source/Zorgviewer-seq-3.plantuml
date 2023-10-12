@@ -48,7 +48,7 @@ loop voor iedere zorgaanbieder
   loop gegevensverzoeken
     Zorgviewer->Zorgviewer: formuleren gegevensverzoek(request) adhv Behandelplan Data Requirements\n""PlanDefinition.action[0].output[].type""\nen ""PlanDefinition.action[0].output[].codeFilter""
     activate Zorgviewer
-    Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/<resource>?subject=<patient_fhir_id>&<filter>""
+    Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/<resource>?patient=<patient_fhir_id>&<filter>""
     activate Bron
     opt als token verlopen
       Bron->Bronsysteem : verkrijgen access token (dmv backend account)
