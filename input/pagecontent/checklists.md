@@ -93,6 +93,7 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence
 * 3.2 *Moet nog aangevuld worden...* - FHIR endpoint (interconnect) > client id koppelen aan emp (epic manual)
 Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documentatie Backend System Integration](https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&PrefDocID=97042)
 * 3.3 Uitvoeren van de Epic Sherlock Checklist BgZ VIPP5 voor de zorginformatiebouwstenen in scope
+* 3.4 Om te voorkomen dat onterecht een werkdiagnose (die wel in problemlijst mee komen) op "confirmed" worden gezet, moet de FHIR Profile Variabele (AIP) FHIR_NL_PROBLEM_SHOW_VERIFY_STATUS ingesteld worden op 0 (Nee)
 
 **Stap 4: Configureren EndPoints**
 * 4.1 (UMCG OPLOSSING) Patiënttoestemmingscheck bouwen in broker. De gekozen oplossing is afhankelijk van het eigen organisatie. In het UMCG is dit als volgt geimplementeerd:
@@ -134,7 +135,7 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 | Type: | PACS[1] |
 | Model Record: | SMART ON FHIR |
 | Patient ID Type: | MDN |
-| Installation Mnemonic Values: | 1 URL: `https://dev.zorgviewer.nl/api/application/launch`<br/>2 Protected: `1`<br/>3 ClientID: eigen clientID<br/>4 Launchtype: 7 (of 6)<br/>5 Context: `mrn=%PATID%&provid=%USERPROVID%&userid=%EPICUSERID%&userfhirid=%EPICUSERFHIRID%`<br/>7 Use edge browser: 1|
+| Installation Mnemonic Values: | 1 URL: `https://dev.zorgviewer.nl/api/application/launch`<br/>2 Protected: `1`<br/>3 ClientID: eigen clientID<br/>4 Launchtype: 7 (of 6)<br/>7 Use edge browser: 1|
 
 * 5.2 Knop (E2U) maken voor het kunnen opstarten van de Zorgviewer
 	* 5.2.1 Plaats de knop in de patiëntencontext en respecteer hierbij eigen Break-the-Glass regels

@@ -96,12 +96,12 @@
 1. White pages
 
 **Definitie**: Register met Identiteiten en attributen van zorgaanbieders en zorgverleners. Voorbeelden zijn volledige naam, maar ook technische endpoints.
->Volledige naam: "F. Heuvel (Cardiologie (cardioloog)) in het UMCG"
+>Volledige naam: "F. Heuvel (Cardiologie (cardioloog)) in het UMCG"<br/>
 >FHIR Base voor UMCG: https://prd.epic.umcg.nl/fhir/STU3 
 
 **Kandidaat solutions:**
 1. Regionale FHIR server met vulling volgens FHIR API van ZORG-AB
-    1. [ZORG-AB Implementatiehandeleiding](https://www.google.com/search?q=zorg-ab+implementatiehandleiding)
+    1. [ZORG-AB Implementatiehandeleiding](https://www.vzvz.nl/diensten/gemeenschappelijke-diensten/zorg-ab/releases)
     1. FHIR Interface definitie ZORG-AB: [Simplifier Project](https://simplifier.net/ZORG-AB)
 1. *ONDERZOCHT*: Het [BIG-Register](https://www.bigregister.nl/zoek-zorgverlener/zoeken-eigen-systeem) - [Handleiding webservice BIG-register](https://www.bigregister.nl/documenten/publicaties/2017/03/03/handleiding-webservice-big-register) - deze biedt geen FHIR interface, bovendien zit de content ook in het ZORG-AB.
 

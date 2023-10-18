@@ -8,6 +8,7 @@ box "Andere zorgaanbieder"
 participant "Bronsysteem ontsluiting" as Bron
 participant Bronsysteem
 end box
+participant "Zorgviewer\nDirectory" as zvdir
 
 activate Zorgviewer
 Zorgverlener->Zorgviewer: ..vervolg bevragen bronsystemen zorgaanbieders..
@@ -27,6 +28,12 @@ loop
     deactivate Bronsysteem
     Bron-->Zorgviewer: Bundle met ""[[StructureDefinition-DocumentReference.html DocumentReference]]""
     deactivate Bron
+    group **TOEKOMST**: specialisme bij documenten loop
+        Zorgviewer->Bron: ""GET <bronsysteem-ontsluiting-base>/Practitioner/<practitioner_fhir_id>""
+        Bron-->Zorgviewer: ""[[StructureDefinition-Practitioner.html Practitioner]]""
+        Zorgviewer->zvdir: ""GET <zorgverlener-directory-base>/PractitionerRole/?identifier=<AGB/BIG>""
+        zvdir-->Zorgviewer: Bundle met ""[[StructureDefinition-PractitionerRole.html PractitionerRole]]""
+    end
     Zorgviewer->Zorgviewer: samenvoegen
     deactivate Zorgviewer
 end

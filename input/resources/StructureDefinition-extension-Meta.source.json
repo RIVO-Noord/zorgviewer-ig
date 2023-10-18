@@ -1,0 +1,39 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "extension-Meta.source",
+    "url": "http://hl7.org/fhir/R4/StructureDefinition/extension-Meta.source",
+    "name": "extension-Meta.source",
+    "title": "extension-Meta.source",
+    "status": "active",
+    "publisher": "HL7",
+    "description": "An extension to bring in Meta.source from R4.",
+    "fhirVersion": "3.0.2",
+    "kind": "complex-type",
+    "abstract": false,
+    "contextType": "datatype",
+    "context":  [
+        "Meta"
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element":  [
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://hl7.org/fhir/R4/StructureDefinition/extension-Meta.source"
+            },
+            {
+                "id": "Extension.value[x]:valueUri",
+                "path": "Extension.valueUri",
+                "sliceName": "valueUri",
+                "type":  [
+                    {
+                        "code": "uri"
+                    }
+                ]
+            }
+        ]
+    }
+}

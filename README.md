@@ -9,13 +9,13 @@
 
 ## Validate resources
 ```
-(optional) > curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o validator_cli.jar
+(initial) > curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o validator_cli.jar
 > java -jar validator_cli.jar -version 3.0.2 input/resources -ig input/resources -ig nictiz.fhir.nl.stu3.zib2017#2.2.14
 ```
 
 ## To build the IG (need minimal version 1.2.31 dd 1-feb-2023 ivm zib2017 package fix)
 ```
-(optional)> curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
+(initial) > curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
 > java -jar publisher.jar -ig ig.ini
 ```
 

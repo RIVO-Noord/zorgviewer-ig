@@ -1,9 +1,20 @@
 @startuml
 
+skinparam node {
+  fontColor<<future>> Gray
+  borderColor<<future>> LightGray
+}
+skinparam component {
+  fontColor<<future>> Gray
+  borderColor<<future>> LightGray
+}
+
 cloud "cloud" {
  [Zorgviewer]
- [Behandelplan]
- [Toestemming]
+ [Behandelplan] <<future>>
+ [Toestemming] <<future>>
+ [Adressering] <<future>>
+ [Zorgverlener\nDirectory] <<future>>
 }
 
 node "Epic huis" {
@@ -18,18 +29,9 @@ node "Epic huis" {
 
 node "Chipsoft of Topicus huis" {
  [HiX of VIPLive] <<Zorgviewer Host\n& Logging\n& Bronsysteem>>
- [Zorgplatform\nAuth] <<Authenticatie>>
+ [Zorgplatform of\nVIPLive Auth] <<Authenticatie>>
  [Zorgplatform\nof VIPLive] <<Bronsysteem\nontsluiting>>
  [Zorgplatform\nof VIPLive]->[HiX of VIPLive]
-}
-
-skinparam node {
-  fontColor<<future>> LightGray
-  borderColor<<future>> LightGray
-}
-skinparam component {
-  fontColor<<future>> LightGray
-  borderColor<<future>> LightGray
 }
 
 node "Zorgviewer Host Los" <<future>> {
@@ -42,10 +44,11 @@ node "Zorgviewer Host Los" <<future>> {
 [ZV Los]..>[Zorgviewer] : 1. opstart
 [Zorgviewer]-d->[Epic Auth] : 2. wie?
 [Zorgviewer]..>[ZV Los Auth] : 2. wie?
-[Zorgviewer]-d->[Zorgplatform\nAuth] : 2. wie?
-[Zorgviewer]-u->[Toestemming] : 3. waar?
+[Zorgviewer]-d->[Zorgplatform of\nVIPLive Auth] : 2. wie?
+[Zorgviewer]-u->[Toestemming] : 3a. waar?
+[Zorgviewer]-u->[Adressering] : 3b. waar?
 [Zorgviewer]-u->[Behandelplan] : 4. filters
 [Zorgviewer]->[Zorgplatform\nof VIPLive] : 5. bevragen
 [Zorgviewer]->[Broker] : 5. bevragen
-
+[Zorgviewer]->[Zorgverlener\nDirectory] : (opt)5b. bevragen
 @enduml
