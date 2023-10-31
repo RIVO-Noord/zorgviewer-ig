@@ -63,7 +63,7 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
 
 **Van toepassing zijnde standaarden en documentatie**:
 * [Bulk Data Access Backend Authentication](http://hl7.org/fhir/uv/bulkdata/authorization/index.html#obtaining-an-access-token)
-* [IHE Internet User Authorization (IUA)](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_IUA.pdf)
+* [IHE Internet User Authorization (IUA)](https://profiles.ihe.net/ITI/IUA/)
 * [MedMij BgZ 2017 FHIR](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
 * Epic
       * [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
@@ -80,7 +80,7 @@ N.B. Deze IG bouwt op SMART-on-FHIR 1.0.0 ivm FHIR STU3 en Scopes notatie. De bi
 </blockquote>
 
 Hier passen we de request access token flow toe van de Bulk Data Access Backend authenticatie specificaties.
-Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende organisatie weten. De vragende organisatie is de organisatie van de geauthenticeerde gebruiker van de Zorgviewer. De IHE IUA standaard beschrijft de attribuut naam die hiervoor gebruikt dient te worden in de authentication JWT die mee gaat naar de access token request. Dit is ook zoals LSP/VZVZ dit doet.
+Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende organisatie weten. De vragende organisatie is de organisatie van de geauthenticeerde gebruiker van de Zorgviewer. De [IHE IUA standaard](https://profiles.ihe.net/ITI/IUA/) beschrijft de attribuut naam die hiervoor gebruikt dient te worden in de authentication JWT die mee gaat naar de access token request. Dit is ook zoals LSP/VZVZ dit doet.
 ```
 { "iss": "...",
   "sub": "...",
