@@ -3,12 +3,12 @@ De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal w
 ### Terminology
 
 * Doel: Nederlandse Terminology Service (NTS) Nictiz
-* Inhoud: Vertalingen (ValueSet, Codesystem, ConceptMap)
-* Tijdelijk: CodeSystem en ValueSets in deze IG in de Zorgviewer Services opslaan.
+* Inhoud: Vertalingen (ValueSet, CodeSystem, ConceptMap)
+* Tijdelijk: CodeSystem en ValueSets in deze IG.
 
 ### Toestemming & PatientIndex
 
-* Doel: landelijke MITZ
+* Doel: landelijke MITZ open vraag
 * Inhoud: Toestemmingen van een patient (Consents)
 * Tijdelijk: Vullen [Toestemming Consent](StructureDefinition-ToestemmingConsent) dmv afvangen HL7 v2 toestemming berichten.
 
