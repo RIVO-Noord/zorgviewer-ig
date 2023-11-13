@@ -5,7 +5,7 @@
 |Versie|Datum|Changes|
 |---|---|---|
 |0.18.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.17.0-sprint20...master)|
-|0.17.0-sprint20|13-nov-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.16.0-sprint18...0.17.0-sprint20)|
+|0.17.0-sprint20|13-nov-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.16.0-sprint18...0.17.0-sprint20)<br/>* RIVO kleur toegepast<br/>* Topicus behandelaanwijzing wijzigingen|
 |*sprint19*||*Overgeslagen ivm vakanties*|
 |0.16.0-sprint18|18-okt-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.15.0-sprint17...0.16.0-sprint18)<br/>* Epic Checklist update<br/>* Topicus feedback<br/>* new: Zorgviewer Services|
 |0.15.0-sprint17|3-okt-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.14.0-sprint16...0.15.0-sprint17)<br/>* Lab updates<br/>* Patient.deceased added|
