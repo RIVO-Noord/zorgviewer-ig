@@ -47,7 +47,7 @@
         {
           "id": "group-zs",
           "name": "Zorgviewer Services",
-          "description": "Zie Zorgviewer Services pagina voor details"
+          "description": "Zie [Zorgviewer Services pagina](zorgviewer-services.html) voor details."
         }
       ],
       "resource": [
@@ -77,6 +77,14 @@
             "reference": "Organization/VIPLive"
           },
           "name": "Organization VIPLive",
+          "groupingId": "group-zs"
+        },
+        {
+          "reference": {
+            "reference": "Endpoint/UMCG"
+          },
+          "description": "Dit is een voorbeeld Epic Endpoint voor UMCG.",
+          "name": "Epic UMCG Endpoint Example",
           "groupingId": "group-zs"
         },
         {
@@ -189,14 +197,6 @@
           },
           "description": "Deze PlanDefinition bevat de (data) definitie van de BgZ 2017. Dit is de basis view voor alle zorgverleners.",
           "name": "PlanDefinition BgZ 2017"
-        },
-        {
-          "reference": {
-            "reference": "Endpoint/UMCG"
-          },
-          "description": "Dit is een voorbeeld Epic Endpoint.",
-          "name": "Epic UMCG Endpoint Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Endpoint"
         },
         {
           "reference": {
