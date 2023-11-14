@@ -81,6 +81,16 @@ Kolom definities:
       <td></td>
       <td></td>
     </tr>
+    <tr style="background-color:#8faadc; color:white">
+      <th colspan="5">(1) UITKLAPVELD</tH>
+    </tr>
+    <tr style="background-color:#b4c7e7">
+      <td>Toelichting</td>
+      <td><samp>.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/Comment').valueString</samp></td>
+      <td><code>string</code></td>
+      <td>Toelichting</td>
+      <td></td>
+    </tr>
   </tbody>
 </table>
 

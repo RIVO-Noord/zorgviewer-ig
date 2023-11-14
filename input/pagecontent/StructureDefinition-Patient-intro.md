@@ -16,6 +16,14 @@ Bovenop constraint **zv-pat-1**:
 
     `GET <bronsysteem-ontsluiting-base/Patient?identifier=<BSN>`
 
+1. Of opvragen (search) middels POST, zie: [FHIR STU3 http search](https://hl7.org/fhir/STU3/http.html#search)
+
+    `POST <bronsysteem-ontsluiting-base/Patient/_search`
+
+    `Content-Type: application/x-www-form-urlencoded`
+
+    `identifier=<BSN>`
+
 1. Opvragen (read) patient op basis van de fhir_patient_id
 
     `GET <ontsluiten-bronsysteem-base>/Patient/<fhir_patient_id>`

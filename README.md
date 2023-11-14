@@ -30,7 +30,7 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
 
 1. Nieuwe release in master
 1. Werk de ``changes.md`` bij
-1. > git commit -a; git push 
+1. ``> git commit -a; git push``
 1. Create tag "0.M.R-sprintX" - op github web-UI klik op: 
   1. tags
   1. Releases
@@ -38,27 +38,34 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
   1. Choose a tag: "0.M.R-sprintX"
   1. Create a new tag
   1. Release title: "0.M.R-sprintX"
-  1. Description: <devops link naar sprint>
+  1. Description: "{devops link naar sprint}"
   1. Vink aan: Set as pre-release
   1. Publish release
 1. Publish via snapshot branch tbv review
 ```
-cd <temp-folder>
-git pull of git clone https://github.com/RIVO-Noord/zorgviewer-ig.git
-git checkout snapshot
-git merge 0.2.0-sprint3
+> cd <temp-folder>
+> git pull of git clone https://github.com/RIVO-Noord/zorgviewer-ig.git
+> git checkout snapshot
+> git merge 0.2.0-sprint3
 ```
 1. Zet release label in zorgviewer-ig.json op "sprintX".
 ```
-vi input/zorgviewer-ig.json
-git commit -a
-git push
+> vi input/zorgviewer-ig.json
+> git commit -a
+> git push
 ```
 1. En werk verder in de master branch
 1. Update input/zorgviewer-ig.json version naar volgende minor "0.M+1.0"
 
-## Upload to implementatiegids.zorgviewer.nl
+## Update implementatiegids.zorgviewer.nl
 
+1. Maak nieuwe publicatie
+```
+> cd <temp-folder>
+> curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
+> java -jar publisher.jar -ig ig.ini
+```
+1. Upload
 ```
 > docker run --name azure-cli -it -v "$(pwd)":/app  mcr.microsoft.com/azure-cli
 @> az storage blob upload-batch --overwrite -s /app/output -d '$web' --connection-string "..."
