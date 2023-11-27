@@ -34,14 +34,32 @@ loop voor iedere zorgaanbieder
       "sub": "...",
       "exp": "...",
       ...
+      "subject_name": "Int Arts",
+      "subject_role": [ 
+          { 
+            "system": "2.16.840.1.113883.6.96", 
+            "code": "309343006", 
+            "display": "Arts" 
+          } 
+        ],
       (optioneel) "subject_organization": "UMCG",
       "subject_organization_id": "urn:oid:2.16.840.1.113883.2.4.3.8",
-      ... }
+      ... }    
   end note
   Bron->Bronsysteem : Patient request
   activate Bronsysteem
   Bronsysteem-->Bronsysteem: log request
   Bronsysteem-->Bron : Patient resource
+  note right Bron
+"meta": {
+    "extension": [ {
+        "url": "http://hl7.org/fhir/R4/StructureDefinition/extension-Meta.source",
+        "valueUri": "uri:oid:2.16.840.1.113883.2.4.3.8"
+    } ]
+}
+- of -
+via Patient.managingOrganization.identifier
+  end note
   deactivate Bronsysteem
   Bron-->Zorgviewer : ""[[StructureDefinition-Patient.html Patient]]""
   deactivate Bron
@@ -54,6 +72,10 @@ loop voor iedere zorgaanbieder
       Bron->Bronsysteem : verkrijgen access token (dmv backend account)
     end opt
     Bron->Bronsysteem : gegevensverzoek (per zib) met access token
+    note right Bron
+        header "X-Request-ID/AORTA-ID" meesturen
+        zie [[https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072 Epic Nova]]
+    end note
     activate Bronsysteem
     Bronsysteem-->Bronsysteem: log request
     Bronsysteem->Bron: fhir resources (Bundle) bij de zib

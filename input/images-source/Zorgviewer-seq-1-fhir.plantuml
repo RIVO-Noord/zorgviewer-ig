@@ -17,13 +17,13 @@ Host->Zorgviewer: start met context dmv SMART-on-FHIR \n""https://app-tst.zorgvi
 activate Zorgviewer
 Zorgviewer<->Authenticatie: SMART-on-FHIR handshake
 note left Zorgviewer
- zorgviewer-host-base from URL
- 
+ Uit request: zorgviewer-host-base from URL
+
  token: {
   "access_token": "...",
   "id_token": "<JWT>",
   "patient": "<patient_fhir_id>",
-  ?"practitioner": "<practitioner_fhir_id>"
+  "practitioner": "<practitioner_fhir_id>"
   ... }
 
  access_token decoded: {
@@ -33,6 +33,10 @@ end note
 Zorgviewer->Host: opvragen gebruiker gegevens\n""<zorgviewer-host-base>/Practitioner/<practitioner_fhir_id>""
 activate Host
 Host-->Zorgviewer: ""[[StructureDefinition-Practitioner.html Practitioner]]""
+note left Zorgviewer
+ subject_role zit in Practitioner.qualification(system=SNOMED CT)
+ subject_organization_id zit in Practitioner.meta.source
+end note
 deactivate Host
 Zorgviewer->Zorgviewer: toon gebruiker gegevens
 
