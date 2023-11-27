@@ -28,4 +28,18 @@ Bovenop constraint **zv-pat-1**:
 
     `GET <ontsluiten-bronsysteem-base>/Patient/<fhir_patient_id>`
 
-{% include profile-note.md %}
+### Response
+
+1. Bundle met 1 Patient
+
+    Dit is de gewenste situatie.
+
+1. Bundle met meer dan 1 Patient
+
+    Dit kan gebeuren na een SEH opname als de patient nog niet samengevoegd is.
+
+1. Bundle zonder patienten of een HTTP Response 401/404
+
+    Dit gebeurt als de patient GEEN toestemming heeft gegeven of de patient simpelweg niet bestaat bij de bevraagde organisatie.
+
+{% include bronsysteem-herkennen.md %}
