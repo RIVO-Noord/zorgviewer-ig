@@ -12,7 +12,7 @@ obron->bron: Consent call uitvoeren voor de gewenste patient\n""<epic-fhir-base>
 note right obron
   "Toestemming uitwisselen dossier" consent is active als:
   ""Consent.coding[0] = urn:oid:1.2.840.114350.1.13.3.7.4.686783.100#201047""
-  en datum van vandaag valt in ""Consent.period"" en ""Consent.active = #active""
+  en datum van vandaag valt in ""Consent.period"" en ""Consent.status = #active""
 end note
 alt geen active consent
   obron-->zv: lege Bundle
