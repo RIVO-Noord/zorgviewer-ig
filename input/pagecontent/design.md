@@ -86,7 +86,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 | Workflow | SAML workflow-id | nvt | nvt | ``?`` | nvt |
 | Organization | SAML organization-id | SAML organization-id | ? | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Organization.identifier |
 | Practitioner | SAML Subject/NameID | SAML Subject/NameID | Practitioner read adhv token.practitioner | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
-| Practitioner | SAML role | SAML role | ^^ | ``SNOMED CT 62247001 huisarts`` | Practitioner.qualification[system=sct] |
+| Practitioner | SAML role | SAML role | ^^ | ``code=62247001 display=huisarts system=SNOMED CT`` | Practitioner.qualification[system=sct] |
 | Practitioner | ? | professional.initials | ^^ | `L.` | Practitioner.name.given[extension=IN] |
 | Practitioner | ? | professional.family_name | ^^ | `Arts` | Practitioner.name.family |
 | Patient | SAML resource-id | SAML client.bsn | Patient read adhv token.patient | ``999911120`` | Patient.identifier[system=bsn] |
