@@ -1,3 +1,5 @@
+<style>table, td, th { border: 1px solid black; padding:5px; }</style>
+
 Deze pagina beschrijft de interacties tussen de systemen. 
 Dit is de startpagina voor het bouwteam.
 
@@ -17,11 +19,7 @@ Note: (?) Probeer definities te hergebruiken uit [IHE Actors](https://gazelle.ih
 
 ### Sequence Diagrams
 
-### Opstarten zorgviewer
-
-Logisch en vervolgens Implementeerbaar per oplossing.
-
-#### Opstarten zorgviewer: Epic
+### Opstarten zorgviewer: Epic
 
 Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens opstarten van de Zorgviewer.
 
@@ -34,7 +32,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 {% include Zorgviewer-seq-1-fhir.svg %}
 </div>
 
-#### Opstarten zorgviewer: Chipsoft HiX/Zorgplatform
+### Opstarten zorgviewer: Chipsoft HiX/Zorgplatform
 
 Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens opstarten van de Zorgviewer.
 
@@ -55,7 +53,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 | Practitioner | role | ``SNOMED CT 62247001 huisarts`` | Practitioner.qualification[system=sct] |
 | Patient | resource-id | ``999911120`` | Patient.identifier[system=bsn] |
 
-#### Opstarten zorgviewer: VIPlive
+### Opstarten zorgviewer: VIPlive
 
 **Van toepassing zijnde standaarden en documentatie**:
 * [XACML SAML Profile Version 2.0](https://docs.oasis-open.org/xacml/xacml-saml-profile/v2.0/xacml-saml-profile-v2.0.html)
@@ -79,7 +77,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 | Patient | client.birthdate | `19700101` | Patient.birthDate |
 | Patient | client.bsn | ``999911120`` | Patient.identifier[system=bsn] |
 
-#### Summary Table
+### Opstarten zorgviewer: Summary Table
 
 In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (SAML, SMART, FHIR).
 
