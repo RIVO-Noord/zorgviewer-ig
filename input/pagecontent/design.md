@@ -19,16 +19,54 @@ Note: (?) Probeer definities te hergebruiken uit [IHE Actors](https://gazelle.ih
 
 ### Opstarten zorgviewer
 
+Logisch en vervolgens Implementeerbaar per oplossing.
+
+#### Opstarten zorgviewer: Epic
+
 Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens opstarten van de Zorgviewer.
 
 **Van toepassing zijnde standaarden en documentatie**:
 * [SMART-on-FHIR 1.0.0](http://hl7.org/fhir/smart-app-launch/1.0.0/)
 * [EHR Launch](http://hl7.org/fhir/smart-app-launch/1.0.0/#ehr-launch-sequence)
 * [Epic SSO Launching](https://appmarket.epic.com/Article/Index?docid=launching)
-* [Chipsoft Web Browser Single-Sign-On](https://developer.zorgplatform.online/digital-care/authenticatie)
 
 <div>
 {% include Zorgviewer-seq-1-fhir.svg %}
+</div>
+
+#### Opstarten zorgviewer: Chipsoft Zorgplatform
+
+Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens opstarten van de Zorgviewer.
+
+**Van toepassing zijnde standaarden en documentatie**:
+* [XACML SAML Profile Version 2.0](https://docs.oasis-open.org/xacml/xacml-saml-profile/v2.0/xacml-saml-profile-v2.0.html)
+* [Chipsoft Web Browser Single-Sign-On](https://developer.zorgplatform.online/digital-care/authenticatie)
+
+<div>
+TODO plantuml; zonder Practitioner/Patient calls!
+</div>
+
+#### Opstarten zorgviewer: VIPlive
+
+**Van toepassing zijnde standaarden en documentatie**:
+* [XACML SAML Profile Version 2.0](https://docs.oasis-open.org/xacml/xacml-saml-profile/v2.0/xacml-saml-profile-v2.0.html)
+* VIPLive Interconnect - IdP initiated SAML 2023-11-09 17:01:43 Versie 1.1
+
+SAML Attributen mapping tabelletje
+
+| Scope | SAML Name | SAML Value | FHIR Path |
+|--|--|--|--|
+| Organization | urn:oasis:names:tc:xspa:1.0:subject:organization-id | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Organization.identifier |
+| Practitioner | urn:oasis:names:tc:xacml:2.0:subject:role | ``<Role code="62247001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT" displayName="huisarts" xmlns="urn:hl7-org:v3"/>`` | Practitioner.qualification[system=sct] |
+| Practitioner | professional.initials | `L.` | Practitioner.name.given[extension=IN] |
+| Practitioner | professional.family_name | `Arts` | Practitioner.name.family |
+| Patient | client.initials | `J.` | Patient.name.given[extension=IN] |
+| Patient | client.family_name | ``Fictief`` | Patient.name.family |
+| Patient | client.birthdate | `19700101` | Patient.birthDate |
+| Patient | client.bsn | ``999911120`` | Patient.identifier[system=bsn] |
+
+<div>
+{% include Zorgviewer-seq-1-viplive.svg %}
 </div>
 
 ### Bepalen zorgaanbieders

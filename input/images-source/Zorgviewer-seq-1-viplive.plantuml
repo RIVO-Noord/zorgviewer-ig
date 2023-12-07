@@ -1,0 +1,32 @@
+@startuml
+hide footbox
+autonumber
+
+actor Zorgverlener
+box "Eigen zorgaanbieder"
+participant "Zorgviewer Host" as Host
+participant Authenticatie
+end box
+participant Zorgviewer
+
+Zorgverlener->Host: start EPD
+Zorgverlener->Host: inloggen met lokale identiteit
+Zorgverlener->Host: selecteer patient
+Zorgverlener->Host: start Zorgviewer
+Host->Zorgviewer: start met context
+activate Zorgviewer
+Zorgviewer<->Authenticatie: SAML handshake
+note left Zorgviewer
+ Attributen
+ # subject:role
+ # subject:organization-id
+ # ... zie tabel
+end note
+Zorgviewer->Zorgviewer: toon gebruiker gegevens
+Zorgviewer->Zorgviewer: toon patient gegevens
+
+Zorgviewer->Zorgviewer: **ga naar de Bepalen zorgaanbieders sequence**
+
+deactivate Zorgviewer
+
+@enduml
