@@ -79,14 +79,20 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 {% include Zorgviewer-seq-1-viplive.svg %}
 </div>
 
-#### Summary Tabel
+#### Summary Table
 
-| Scope | Name/Path | Value | FHIR Path |
-|--|--|--|--|
-| Workflow | workflow-id | ``?`` | nvt |
-| Practitioner | Subject/NameID | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
-| Practitioner | role | ``SNOMED CT 62247001 huisarts`` | Practitioner.qualification[system=sct] |
-| Patient | resource-id | ``999911120`` | Patient.identifier[system=bsn] |
+| Scope | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
+|--|--|--|--|--|--|
+| Workflow | SAML workflow-id | nvt | nvt | ``?`` | nvt |
+| Organization | SAML organization-id | SAML organization-id | ? | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Organization.identifier |
+| Practitioner | SAML Subject/NameID | SAML Subject/NameID | Practitioner read adhv token.practitioner | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
+| Practitioner | SAML role | SAML role | ^^ | ``SNOMED CT 62247001 huisarts`` | Practitioner.qualification[system=sct] |
+| Practitioner | ? | professional.initials | ^^ | `L.` | Practitioner.name.given[extension=IN] |
+| Practitioner | ? | professional.family_name | ^^ | `Arts` | Practitioner.name.family |
+| Patient | SAML resource-id | SAML client.bsn | Patient read adhv token.patient | ``999911120`` | Patient.identifier[system=bsn] |
+| Patient | ? | client.initials | ^^| `J.` | Patient.name.given[extension=IN] |
+| Patient | ? | client.family_name | ^^| ``Fictief`` | Patient.name.family |
+| Patient | ? | client.birthdate | ^^| `19700101` | Patient.birthDate |
 
 ### Bepalen zorgaanbieders
 
