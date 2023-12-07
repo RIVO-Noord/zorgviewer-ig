@@ -34,8 +34,8 @@ Zorgviewer->Host: opvragen gebruiker gegevens\n""<zorgviewer-host-base>/Practiti
 activate Host
 Host-->Zorgviewer: ""[[StructureDefinition-Practitioner.html Practitioner]]""
 note left Zorgviewer
- subject_role zit in Practitioner.qualification(system=SNOMED CT)
- subject_organization_id zit in Practitioner.meta.source
+ subject_role zit in Practitioner.qualification[system=SNOMED CT]
+ subject_organization_id zit in Practitioner.meta[extension=source]
 end note
 deactivate Host
 Zorgviewer->Zorgviewer: toon gebruiker gegevens
