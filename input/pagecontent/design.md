@@ -81,6 +81,8 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 
 #### Summary Table
 
+In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (SAML, SMART, FHIR).
+
 | Scope | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
 |--|--|--|--|--|--|
 | Workflow | SAML workflow-id | nvt | nvt | ``?`` | nvt |
