@@ -3,48 +3,30 @@ hide footbox
 autonumber
 
 actor Zorgverlener
-box "Eigen zorgaanbieder"
+box "Eigen zorgaanbieder\nHiX / Zorgplatform"
 participant "Zorgviewer Host" as Host
 participant Authenticatie
 end box
 participant Zorgviewer
 
-box "Zorgplatform"
-participant "<<Ontsluiten bronsysteem>>" as Bron
-participant "<<Authenticatie>>\nZorgplatform STS" as STS
-participant "<<Bronsysteem>>\nZorgplatform Resource server" as ZP
-end box
-
 Zorgverlener->Host: start EPD
 Zorgverlener->Host: inloggen met lokale identiteit
 Zorgverlener->Host: selecteer patient
 Zorgverlener->Host: start Zorgviewer
-
-activate Zorgviewer
 Host->Zorgviewer: start met context
+activate Zorgviewer
+Zorgviewer<->Authenticatie: SAML handshake
 note left Zorgviewer
- Context is iig zorgviewer-host-base, access token,
- gebruiker_fhir_id, patient_fhir_id
+ Attributen
+ # BSN -> resource-id
+ # Role -> role
+ # ... zie tabel
 end note
-Zorgviewer-->Authenticatie: check token
+Zorgviewer->Zorgviewer: toon gebruiker gegevens
+Zorgviewer->Zorgviewer: toon patient gegevens
 
-activate Bron
-Zorgviewer->Bron: FHIR query
-Bron->Bron++: create HCP token request (BSN, Zorgviewer HL7 NL OID, gebruiker)
-Bron-->Authenticatie: check token?
-deactivate Bron
-activate STS
-Bron->STS: Issue[T1] issue HCP token (bij patient)
-STS-->Bron: Response[T3] HCP token
-deactivate STS
+Zorgviewer->Zorgviewer: **ga naar de Bepalen zorgaanbieders sequence**
 
-Bron->Bron: Processing token [T4]
-Bron->ZP: FHIR query met HCP token
-ZP-->Bron: FHIR response
-Bron-> Zorgviewer: FHIR response
-deactivate Bron
-
-Zorgviewer->Zorgverlener: Presenteer gegevens
 deactivate Zorgviewer
 
 @enduml

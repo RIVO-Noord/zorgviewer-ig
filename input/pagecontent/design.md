@@ -34,7 +34,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 {% include Zorgviewer-seq-1-fhir.svg %}
 </div>
 
-#### Opstarten zorgviewer: Chipsoft Zorgplatform
+#### Opstarten zorgviewer: Chipsoft HiX/Zorgplatform
 
 Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens opstarten van de Zorgviewer.
 
@@ -42,8 +42,17 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 * [XACML SAML Profile Version 2.0](https://docs.oasis-open.org/xacml/xacml-saml-profile/v2.0/xacml-saml-profile-v2.0.html)
 * [Chipsoft Web Browser Single-Sign-On](https://developer.zorgplatform.online/digital-care/authenticatie)
 
+**SAML Attributes Assertions mapping op FHIR tabel**:
+
+| Scope | Name/Path | Value | FHIR Path |
+|--|--|--|--|
+| Workflow | workflow-id | ``?`` | nvt |
+| Practitioner | Subject/NameID | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
+| Practitioner | role | ``SNOMED CT 62247001 huisarts`` | Practitioner.qualification[system=sct] |
+| Patient | resource-id | ``999911120`` | Patient.identifier[system=bsn] |
+
 <div>
-TODO plantuml; zonder Practitioner/Patient calls!
+{% include Zorgviewer-seq-1-zp.svg %}
 </div>
 
 #### Opstarten zorgviewer: VIPlive
@@ -52,11 +61,12 @@ TODO plantuml; zonder Practitioner/Patient calls!
 * [XACML SAML Profile Version 2.0](https://docs.oasis-open.org/xacml/xacml-saml-profile/v2.0/xacml-saml-profile-v2.0.html)
 * VIPLive Interconnect - IdP initiated SAML 2023-11-09 17:01:43 Versie 1.1
 
-SAML Attributen mapping tabelletje
+**SAML Attributes Assertions op FHIR mapping tabel**:
 
-| Scope | SAML Name | SAML Value | FHIR Path |
+| Scope | Name/Path | Value | FHIR Path |
 |--|--|--|--|
 | Organization | urn:oasis:names:tc:xspa:1.0:subject:organization-id | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Organization.identifier |
+| Practitioner | Subject/NameID | ``?`` | Practitioner.identifier |
 | Practitioner | urn:oasis:names:tc:xacml:2.0:subject:role | ``<Role code="62247001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT" displayName="huisarts" xmlns="urn:hl7-org:v3"/>`` | Practitioner.qualification[system=sct] |
 | Practitioner | professional.initials | `L.` | Practitioner.name.given[extension=IN] |
 | Practitioner | professional.family_name | `Arts` | Practitioner.name.family |
@@ -68,6 +78,15 @@ SAML Attributen mapping tabelletje
 <div>
 {% include Zorgviewer-seq-1-viplive.svg %}
 </div>
+
+#### Summary Tabel
+
+| Scope | Name/Path | Value | FHIR Path |
+|--|--|--|--|
+| Workflow | workflow-id | ``?`` | nvt |
+| Practitioner | Subject/NameID | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
+| Practitioner | role | ``SNOMED CT 62247001 huisarts`` | Practitioner.qualification[system=sct] |
+| Patient | resource-id | ``999911120`` | Patient.identifier[system=bsn] |
 
 ### Bepalen zorgaanbieders
 
