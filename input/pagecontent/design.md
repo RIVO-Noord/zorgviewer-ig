@@ -1,3 +1,5 @@
+<style>table, td, th { border: 1px solid black; padding:5px; }</style>
+
 Deze pagina beschrijft de interacties tussen de systemen. 
 Dit is de startpagina voor het bouwteam.
 
@@ -17,7 +19,7 @@ Note: (?) Probeer definities te hergebruiken uit [IHE Actors](https://gazelle.ih
 
 ### Sequence Diagrams
 
-### Opstarten zorgviewer
+### Opstarten zorgviewer: Epic
 
 Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens opstarten van de Zorgviewer.
 
@@ -25,11 +27,72 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 * [SMART-on-FHIR 1.0.0](http://hl7.org/fhir/smart-app-launch/1.0.0/)
 * [EHR Launch](http://hl7.org/fhir/smart-app-launch/1.0.0/#ehr-launch-sequence)
 * [Epic SSO Launching](https://appmarket.epic.com/Article/Index?docid=launching)
-* [Chipsoft Web Browser Single-Sign-On](https://developer.zorgplatform.online/digital-care/authenticatie)
 
 <div>
 {% include Zorgviewer-seq-1-fhir.svg %}
 </div>
+
+### Opstarten zorgviewer: Chipsoft HiX/Zorgplatform
+
+Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens opstarten van de Zorgviewer.
+
+**Van toepassing zijnde standaarden en documentatie**:
+* [XACML SAML Profile Version 2.0](https://docs.oasis-open.org/xacml/xacml-saml-profile/v2.0/xacml-saml-profile-v2.0.html)
+* [Chipsoft Web Browser Single-Sign-On](https://developer.zorgplatform.online/digital-care/authenticatie)
+
+<div>
+{% include Zorgviewer-seq-1-zp.svg %}
+</div>
+
+**SAML Attributes Assertions mapping op FHIR tabel**:
+
+| Scope | Name/Path | Value | FHIR Path |
+|--|--|--|--|
+| Workflow | workflow-id | ``?`` | nvt |
+| Practitioner | Subject/NameID | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
+| Practitioner | role | ``SNOMED CT 62247001 huisarts`` | Practitioner.qualification[system=sct] |
+| Patient | resource-id | ``999911120`` | Patient.identifier[system=bsn] |
+
+### Opstarten zorgviewer: VIPlive
+
+**Van toepassing zijnde standaarden en documentatie**:
+* [XACML SAML Profile Version 2.0](https://docs.oasis-open.org/xacml/xacml-saml-profile/v2.0/xacml-saml-profile-v2.0.html)
+* VIPLive Interconnect - IdP initiated SAML 2023-11-09 17:01:43 Versie 1.1
+
+<div>
+{% include Zorgviewer-seq-1-viplive.svg %}
+</div>
+
+**SAML Attributes Assertions op FHIR mapping tabel**:
+
+| Scope | Name/Path | Value | FHIR Path |
+|--|--|--|--|
+| Organization | urn:oasis:names:tc:xspa:1.0:subject:organization-id | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Organization.identifier |
+| Practitioner | Subject/NameID | ``?`` | Practitioner.identifier |
+| Practitioner | urn:oasis:names:tc:xacml:2.0:subject:role | ``<Role code="62247001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT" displayName="huisarts" xmlns="urn:hl7-org:v3"/>`` | Practitioner.qualification[system=sct] |
+| Practitioner | professional.initials | `L.` | Practitioner.name.given[extension=IN] |
+| Practitioner | professional.family_name | `Arts` | Practitioner.name.family |
+| Patient | client.initials | `J.` | Patient.name.given[extension=IN] |
+| Patient | client.family_name | ``Fictief`` | Patient.name.family |
+| Patient | client.birthdate | `19700101` | Patient.birthDate |
+| Patient | client.bsn | ``999911120`` | Patient.identifier[system=bsn] |
+
+### Opstarten zorgviewer: Summary Table
+
+In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (SAML, SMART, FHIR).
+
+| Scope | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
+|--|--|--|--|--|--|
+| Workflow | SAML workflow-id | nvt | nvt | ``?`` | nvt |
+| Practitioner | SAML Subject/NameID | SAML Subject/NameID | Practitioner read adhv token.practitioner | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
+| Practitioner | SAML role | SAML role | ^^ | ``code=62247001 display=huisarts system=SNOMED CT`` | Practitioner.qualification[system=sct] |
+| Practitioner | ? | professional.initials | ^^ | `L.` | Practitioner.name.given[extension=IN] |
+| Practitioner | ? | professional.family_name | ^^ | `Arts` | Practitioner.name.family |
+| Organization | SAML organization-id | SAML organization-id | ^^ | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Practitioner.meta[extension=source] |
+| Patient | SAML resource-id | SAML client.bsn | Patient read adhv token.patient | ``999911120`` | Patient.identifier[system=bsn] |
+| Patient | ? | client.initials | ^^| `J.` | Patient.name.given[extension=IN] |
+| Patient | ? | client.family_name | ^^| ``Fictief`` | Patient.name.family |
+| Patient | ? | client.birthdate | ^^| `19700101` | Patient.birthDate |
 
 ### Bepalen zorgaanbieders
 

@@ -46,7 +46,7 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
 > cd <temp-folder>
 > git pull of git clone https://github.com/RIVO-Noord/zorgviewer-ig.git
 > git checkout snapshot
-> git merge 0.2.0-sprint3
+> git merge 0.M.R-sprintX
 ```
 1. Zet release label in zorgviewer-ig.json op "sprintX".
 ```

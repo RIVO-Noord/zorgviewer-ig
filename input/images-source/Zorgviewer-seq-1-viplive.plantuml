@@ -3,7 +3,7 @@ hide footbox
 autonumber
 
 actor Zorgverlener
-box "Eigen zorgaanbieder\nHiX / Zorgplatform"
+box "Eigen zorgaanbieder\nVIPLive"
 participant "Zorgviewer Host" as Host
 participant Authenticatie
 end box
@@ -17,9 +17,9 @@ Host->Zorgviewer: start met context
 activate Zorgviewer
 Zorgviewer<->Authenticatie: SAML handshake
 note left Zorgviewer
- Attributen
- # BSN -> resource-id
- # Role -> role
+ SAML Attributes
+ # subject:role
+ # subject:organization-id
  ... zie tabel
 end note
 Zorgviewer->Zorgviewer: toon gebruiker gegevens

@@ -2,7 +2,7 @@
     "resourceType": "ImplementationGuide",
     "id": "hl7.fhir.nl.zorgviewer-ig",
     "url": "http://hl7.nl/fhir/zorgviewer/ImplementationGuide/zorgviewer-ig",
-    "version": "0.17.0",
+    "version": "0.18.0",
     "name": "zorgviewer-ig",
     "title": "RIVO-Noord Zorgviewer MVP2 Implementation Guide",
     "status": "draft",
@@ -37,13 +37,56 @@
         "version": "5.2.0"
       },
       {
-        "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.14",
+        "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.16",
         "packageId": "nictiz.fhir.nl.stu3.zib2017",
-        "version": "2.2.14"
+        "version": "2.2.16"
       }
     ],
     "definition": {
+      "grouping": [
+        {
+          "id": "group-zs",
+          "name": "Zorgviewer Services",
+          "description": "Zie [Zorgviewer Services pagina](zorgviewer-services.html) voor details."
+        }
+      ],
       "resource": [
+        {
+          "reference": {
+            "reference": "Organization/UMCG"
+          },
+          "name": "Organization UMCG",
+          "groupingId": "group-zs"
+        },
+        {
+          "reference": {
+            "reference": "Organization/Tjongerschans"
+          },
+          "name": "Organization Tjongerschans",
+          "groupingId": "group-zs"
+        },
+        {
+          "reference": {
+            "reference": "Organization/MCL"
+          },
+          "name": "Organization MCL",
+          "groupingId": "group-zs"
+        },
+        {
+          "reference": {
+            "reference": "Organization/VIPLive"
+          },
+          "name": "Organization VIPLive",
+          "groupingId": "group-zs"
+        },
+        {
+          "reference": {
+            "reference": "Endpoint/UMCG"
+          },
+          "description": "Dit is een voorbeeld Epic Endpoint voor UMCG.",
+          "name": "Epic UMCG Endpoint Example",
+          "groupingId": "group-zs"
+        },
         {
           "reference": {
             "reference": "Patient/eXxP1o8ZlOz21F6HXS9puLA3"
@@ -74,6 +117,14 @@
           },
           "description": "Dit is een Zorgverlener voorbeeld uit Epic.",
           "name": "Epic Practitioner Example",
+          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner"
+        },
+        {
+          "reference": {
+            "reference": "Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT"
+          },
+          "description": "Dit is een Zorgverlener voorbeeld uit Epic waarin qualifier is vertaald van Epic SER 6000 code naar SNOMED CT.",
+          "name": "Epic Practitioner Example met SNOMED CT",
           "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner"
         },
         {
@@ -154,14 +205,6 @@
           },
           "description": "Deze PlanDefinition bevat de (data) definitie van de BgZ 2017. Dit is de basis view voor alle zorgverleners.",
           "name": "PlanDefinition BgZ 2017"
-        },
-        {
-          "reference": {
-            "reference": "Endpoint/UMCG"
-          },
-          "description": "Dit is een voorbeeld Epic Endpoint.",
-          "name": "Epic UMCG Endpoint Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Endpoint"
         },
         {
           "reference": {
@@ -285,6 +328,11 @@
             "nameUrl": "conformance.html",
             "generation": "markdown",
             "title": "Conformance"
+          },
+          {
+            "nameUrl": "nen-normen.html",
+            "generation": "markdown",
+            "title": "NEN Normen Conformiteit"
           },
           {
             "nameUrl": "datasets.html",
