@@ -53,7 +53,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 
 **SAML Attributes Assertions mapping op FHIR tabel**:
 
-| Scope | Name/Path | Value | FHIR Path |
+| Scope | Attribute Name/Path | Value | FHIR Path |
 |--|--|--|--|
 | Workflow | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | ``?`` | nvt |
 | Practitioner | Subject/NameID | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
@@ -72,7 +72,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 
 **SAML Attributes Assertions op FHIR mapping tabel**:
 
-| Scope | Name/Path | Value | FHIR Path |
+| Scope | Attribute Name/Path | Value | FHIR Path |
 |--|--|--|--|
 | Organization | urn:oasis:names:tc:xspa:1.0:subject:organization-id | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Organization.identifier |
 | Practitioner | Subject/NameID | ``?`` | Practitioner.identifier |
