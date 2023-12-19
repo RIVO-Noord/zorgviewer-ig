@@ -32,6 +32,13 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 {% include Zorgviewer-seq-1-fhir.svg %}
 </div>
 
+**Token Attributes mapping op FHIR tabel**:
+
+| Scope | Name/Path | Value | FHIR Path |
+|--|--|--|--|
+| Practitioner | practitioner | ``abcd`` | Practitioner.id |
+| Patient | patient | ``wxyz`` | Patient.id |
+
 ### Opstarten zorgviewer: Chipsoft HiX/Zorgplatform
 
 Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens opstarten van de Zorgviewer.
@@ -48,10 +55,10 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 
 | Scope | Name/Path | Value | FHIR Path |
 |--|--|--|--|
-| Workflow | workflow-id | ``?`` | nvt |
+| Workflow | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | ``?`` | nvt |
 | Practitioner | Subject/NameID | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
-| Practitioner | role | ``SNOMED CT 62247001 huisarts`` | Practitioner.qualification[system=sct] |
-| Patient | resource-id | ``999911120`` | Patient.identifier[system=bsn] |
+| Practitioner | urn:oasis:names:tc:xacml:2.0:subject:role | ``SNOMED CT 62247001 huisarts`` | Practitioner.qualification[system=sct] |
+| Patient | urn:oasis:names:tc:xacml:1.0:resource:resource-id | ``999911120`` | Patient.identifier[system=bsn] |
 
 ### Opstarten zorgviewer: VIPlive
 
@@ -83,16 +90,17 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 
 | Scope | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
 |--|--|--|--|--|--|
-| Workflow | SAML workflow-id | nvt | nvt | ``?`` | nvt |
-| Practitioner | SAML Subject/NameID | SAML Subject/NameID | Practitioner read adhv token.practitioner | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
-| Practitioner | SAML role | SAML role | ^^ | ``code=62247001 display=huisarts system=SNOMED CT`` | Practitioner.qualification[system=sct] |
-| Practitioner | ? | professional.initials | ^^ | `L.` | Practitioner.name.given[extension=IN] |
-| Practitioner | ? | professional.family_name | ^^ | `Arts` | Practitioner.name.family |
-| Organization | SAML organization-id | SAML organization-id | ^^ | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Practitioner.meta[extension=source] |
-| Patient | SAML resource-id | SAML client.bsn | Patient read adhv token.patient | ``999911120`` | Patient.identifier[system=bsn] |
-| Patient | ? | client.initials | ^^| `J.` | Patient.name.given[extension=IN] |
-| Patient | ? | client.family_name | ^^| ``Fictief`` | Patient.name.family |
-| Patient | ? | client.birthdate | ^^| `19700101` | Patient.birthDate |
+| Workflow | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | ``?`` | nvt |
+| Practitioner | Subject/NameID | Subject/NameID | Practitioner read adhv token.practitioner / *zie FHIR Path* | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
+| Practitioner | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | ^^ / *zie FHIR Path* | ``code=62247001 display=huisarts system=SNOMED CT`` | Practitioner.qualification[system=sct] |
+| Practitioner | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials | ^^ / *zie FHIR Path* | `L.` | Practitioner.name.given[extension=IN] |
+| Practitioner | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.family_name | ^^ / *zie FHIR Path* | `Arts` | Practitioner.name.family |
+| Organization | urn:oasis:names:tc:xspa:1.0:subject:organization-id | organization-id | ^^ / *zie FHIR Path* | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Practitioner.meta[extension=source] |
+| Patient | urn:oasis:names:tc:xacml:1.0:resource:resource-id | client.bsn | Patient read adhv token.patient / *zie FHIR Path* | ``999911120`` | Patient.identifier[system=bsn] |
+| Patient | patient-fhir-id uit Task.reference read adhv workflow-id |  | token.patient / *zie FHIR Path* | ``abcd`` | Patient.id |
+| Patient | ^^ / *zie FHIR Path* | client.initials | ^^ / *zie FHIR Path* | `J.` | Patient.name.given[extension=IN] |
+| Patient | ^^ / *zie FHIR Path* | client.family_name | ^^ / *zie FHIR Path* | ``Fictief`` | Patient.name.family |
+| Patient | ^^ / *zie FHIR Path* | client.birthdate | ^^ / *zie FHIR Path* | `19700101` | Patient.birthDate |
 
 ### Bepalen zorgaanbieders
 
