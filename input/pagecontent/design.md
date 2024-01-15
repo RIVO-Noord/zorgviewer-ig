@@ -173,7 +173,7 @@ Epic ondersteunt dit nu dmv de [AORTA-ID HTTP-Header requestId](https://vzvz.atl
 <b>In de toekomst kijken we naar de <a href="https://www.w3.org/TR/trace-context/">W3C Recommendation Trace Context</a>. Niet in scope MVP2.</b>
 </div>
 
-#### Summary Table
+### Bevragen bronsysteem: Summary Table
 
 In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (SAML, SMART, FHIR).
 
