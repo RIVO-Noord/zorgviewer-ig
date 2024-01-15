@@ -168,7 +168,7 @@ Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende orga
 #### Toevoegen X-Request-Id HTTP-Header
 
 Tbv het correleren van de Zorgviewer logging met de logging van een Bronsysteem dient een `X-Request-Id` HTTP Header (zie [Custom Headers to support logs/audit](https://hl7.org/fhir/R4/http.html#custom)) te worden toegevoegd aan ieder request aan het Bronsysteem. Deze kan dan door het Bronsysteem gelogd worden. 
-Epic ondersteund dit nu dmv de (AORTA-ID HTTP-Header requestId)[https://vzvz.atlassian.net/wiki/spaces/AOFPUBLIC/pages/86606370/Resource+Broker+Interfaces+-+0.7.x#ResourceBrokerInterfaces-0.7.x-RB-LoggingInterface], zie [[https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072 Epic Nova]].
+Epic ondersteunt dit nu dmv de [AORTA-ID HTTP-Header requestId](https://vzvz.atlassian.net/wiki/spaces/AOFPUBLIC/pages/86606370/Resource+Broker+Interfaces+-+0.7.x#ResourceBrokerInterfaces-0.7.x-RB-LoggingInterface), zie [Epic Nova](https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072).
 <div style="margin: 5px; padding: 10px; color: #3c763d; background-color: #dff0d8; border: 4px solid black;">
 <b>In de toekomst kijken we naar de <a href="https://www.w3.org/TR/trace-context/">W3C Recommendation Trace Context</a>. Niet in scope MVP2.</b>
 </div>
