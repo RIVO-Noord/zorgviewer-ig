@@ -165,12 +165,12 @@ Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende orga
 }
 ```
 
-#### Toevoegen X-Request-Id HTTP-Header
+#### Toevoegen X-ZVLogging-Id HTTP-Header
 
-Tbv het correleren van de Zorgviewer logging met de logging van een Bronsysteem dient een `X-Request-Id` HTTP Header (zie [Custom Headers to support logs/audit](https://hl7.org/fhir/R4/http.html#custom)) te worden toegevoegd aan ieder request aan het Bronsysteem. Deze kan dan door het Bronsysteem gelogd worden. 
+Tbv het correleren van de Zorgviewer logging met de logging van een Bronsysteem dient een `X-ZVLogging-Id` HTTP Header te worden toegevoegd aan ieder request aan het Bronsysteem. Deze kan dan door het Bronsysteem gelogd worden, zodat de logging in de Zorgviewer kan worden gekoppeld aan de logging in het Bronsysteem.
 Epic ondersteunt dit nu dmv de [AORTA-ID HTTP-Header requestId](https://vzvz.atlassian.net/wiki/spaces/AOFPUBLIC/pages/86606370/Resource+Broker+Interfaces+-+0.7.x#ResourceBrokerInterfaces-0.7.x-RB-LoggingInterface), zie [Epic Nova](https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072).
 <div style="margin: 5px; padding: 10px; color: #3c763d; background-color: #dff0d8; border: 4px solid black;">
-<b>In de toekomst kijken we naar de <a href="https://www.w3.org/TR/trace-context/">W3C Recommendation Trace Context</a>. Niet in scope MVP2.</b>
+<b>In de toekomst kijken we naar de <a href="https://www.w3.org/TR/trace-context/">W3C Recommendation Trace Context</a>, [Custom Headers to support logs/audit](https://hl7.org/fhir/R4/http.html#custom)) en houden we de TWIIN keuzen in de gaten. Niet in scope MVP2.</b>
 </div>
 
 ### Bevragen bronsysteem: Summary Table
@@ -186,7 +186,7 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 | Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | auth_token.subject_role | ``code=62247001 display=huisarts system=SNOMED CT`` | Practitioner.qualification[system=sct] |
 | Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | ? | auth_token.subject_name | `L.` | Practitioner.name |
 | Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | ? | auth_token.subject_organization_id | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Practitioner.meta[extension=source] |
-| Correlation ID | ? | HTTP-Header X-Request-Id | HTTP-Header AORTA-ID requestId (of X-Request-Id) | ``UUID`` | nvt |
+| Zorgviewer Loggin ID | ? | HTTP-Header X-ZVLogging-Id | HTTP-Header AORTA-ID requestId | ``UUID`` | nvt |
 
 ### Bevragen bronsystemen zorgaanbieders documenten
 
