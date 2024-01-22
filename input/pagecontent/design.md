@@ -55,7 +55,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 
 | Item | Attribute Name/Path | Value | FHIR Path |
 |--|--|--|--|
-| Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | ``?`` | nvt |
+| Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
 | Practitioner ID | Subject/NameID | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
 | Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | ``SNOMED CT 62247001 huisarts`` | Practitioner.qualification[system=sct] |
 | Patient BSN | urn:oasis:names:tc:xacml:1.0:resource:resource-id | ``999911120`` | Patient.identifier[system=bsn] |
@@ -74,15 +74,15 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 
 | Item | Attribute Name/Path | Value | FHIR Path |
 |--|--|--|--|
-| Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Organization.identifier |
-| Practitioner ID | Subject/NameID | ``?`` | Practitioner.identifier |
-| Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | ``<Role code="62247001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT" displayName="huisarts" xmlns="urn:hl7-org:v3"/>`` | Practitioner.qualification[system=sct] |
+| Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | ``2.16.840.1.113883.2.4.3.164.2.1.2`` | Organization.identifier |
+| Practitioner ID | Subject/NameID | `177578` | Practitioner.identifier |
+| Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | `<Role code="62247001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT" displayName="huisarts" xmlns="urn:hl7-org:v3"/>` | Practitioner.qualification[system=sct] |
 | Practitioner Name | professional.initials | `L.` | Practitioner.name.given[extension=IN] |
 | Practitioner Name | professional.family_name | `Arts` | Practitioner.name.family |
 | Patient Name | client.initials | `J.` | Patient.name.given[extension=IN] |
-| Patient Name | client.family_name | ``Fictief`` | Patient.name.family |
+| Patient Name | client.family_name | `Fictief` | Patient.name.family |
 | Patient Birthdate | client.birthdate | `19700101` | Patient.birthDate |
-| Patient BSN | client.bsn | ``999911120`` | Patient.identifier[system=bsn] |
+| Patient BSN | client.bsn | `999911120` | Patient.identifier[system=bsn] |
 
 ### Opstarten zorgviewer: Summary Table
 
@@ -90,14 +90,14 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 
 | Item | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
 |--|--|--|--|--|--|
-| Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `?` | nvt |
-| Practitioner ID | Subject/NameID | Subject/NameID | Practitioner read adhv token.practitioner / *zie FHIR Path* | `larts@2.16.528.1.1007.3.3.15123` | Practitioner.identifier |
-| Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | ^^ / *zie FHIR Path* | ``code=62247001 display=huisarts system=SNOMED CT`` | Practitioner.qualification[system=sct] |
+| Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
+| Practitioner ID | Subject/NameID | Subject/NameID | Practitioner read adhv token.practitioner / *zie FHIR Path* | `177578` | Practitioner.identifier |
+| Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | ^^ / *zie FHIR Path* | `code=62247001 display=huisarts system=SNOMED CT` | Practitioner.qualification[system=sct] |
 | Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials | ^^ / *zie FHIR Path* | `L.` | Practitioner.name.given[extension=IN] |
 | Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.family_name | ^^ / *zie FHIR Path* | `Arts` | Practitioner.name.family |
-| Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | organization-id | ^^ / *zie FHIR Path* | `urn:oid:2.16.840.1.113883.2.4.3.8` | Practitioner.meta[extension=source] |
-| Patient BSN | urn:oasis:names:tc:xacml:1.0:resource:resource-id | client.bsn | Patient read adhv token.patient / *zie FHIR Path* | ``999911120`` | Patient.identifier[system=bsn] |
-| Patient FHIR ID | patient-fhir-id uit Task.reference read adhv workflow-id |  | token.patient / *zie FHIR Path* | `abcd` | Patient.id |
+| Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | organization-id | ^^ / *zie FHIR Path* | `2.16.840.1.113883.2.4.3.8` | Practitioner.meta[extension=source] |
+| Patient BSN | urn:oasis:names:tc:xacml:1.0:resource:resource-id | client.bsn | Patient read adhv token.patient / *zie FHIR Path* | `999911120` | Patient.identifier[system=bsn] |
+| Patient FHIR ID | patient-fhir-id uit Task.reference read adhv workflow-id |  | token.patient / *zie FHIR Path* | `9819C39260647B5DE61609CDF1FA1C` | Patient.id |
 | Patient Name | ^^ / *zie FHIR Path* | client.initials | ^^ / *zie FHIR Path* | `J.` | Patient.name.given[extension=IN] |
 | Patient Name | ^^ / *zie FHIR Path* | client.family_name | ^^ / *zie FHIR Path* | `Fictief` | Patient.name.family |
 | Patient Birthdate | ^^ / *zie FHIR Path* | client.birthdate | ^^ / *zie FHIR Path* | `19700101` | Patient.birthDate |
@@ -178,13 +178,13 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 | Item | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
 |--|--|--|--|--|--|
 | PurposeOfUse | urn:oasis:names:tc:xspa:1.0:subject:purposeofuse | nvt | nvt | `TREATMENT` | nvt |
-| Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `?` | nvt |
-| Patient ID | urn:oasis:names:tc:xacml:1.0:resource:resource-id | ? | nvt | `999911120` | Practitioner.identifier[system=BSN] |
-| Practitioner ID | Subject/NameID | Subject/NameID | auth_token.subject_id en HTTP-Header AORTA-ID usr | `..` | Practitioner.identifier |
+| Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
+| Patient BSN | urn:oasis:names:tc:xacml:1.0:resource:resource-id | client.bsn | nvt | `999911120` | Practitioner.identifier[system=BSN] |
+| Practitioner ID | Subject/NameID | Subject/NameID | auth_token.subject_id en HTTP-Header AORTA-ID usr | `177578` | Practitioner.identifier |
 | Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | auth_token.subject_role en HTTP-Header AORTA-ID rol | `code=62247001 display=huisarts system=SNOMED CT` | Practitioner.qualification[system=sct] |
-| Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | ? | auth_token.subject_name | `L. Arts` | Practitioner.name |
-| Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | ? | auth_token.subject_organization_id en HTTP-Header AORTA-ID org | `urn:oid:2.16.840.1.113883.2.4.3.8` | Practitioner.meta[extension=source] |
-| Zorgviewer Sessio ID | HTTP-Header X-Correlation-Id UUID | HTTP-Header X-Correlation-Id | x | | nvt |
+| Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials + professional.family_name | auth_token.subject_name | `L. Arts` | Practitioner.name |
+| Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | auth_token.subject_organization_id en HTTP-Header AORTA-ID org | `2.16.528.1.1007.3.3.15123` | Practitioner.meta[extension=source] |
+| Zorgviewer Session ID | HTTP-Header X-Correlation-Id UUID | HTTP-Header X-Correlation-Id | nvt | `bc6fea62-f131-4e15-891e-06cad6a6c2b3` | nvt |
 | Zorgviewer Request ID | HTTP-Header X-Request-Id UUID | HTTP-Header X-Request-Id | HTTP-Header AORTA-ID req | `3aaab721-f8ae-4cbb-a83a-67306ffd04ae` | nvt |
 
 ### Bevragen bronsystemen zorgaanbieders documenten
