@@ -5,15 +5,16 @@
 |Versie|Datum|Changes|
 |---|---|---|
 |0.19.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.18.0-sprint22...master)|
+|*sprint23*||*Overgeslagen*|
 |0.18.0-sprint22|11-dec-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.17.0-sprint20...0.18.0-sprint22)|
 |0.18.0-sprint21|17-nov-2023|*Verwerkt in sprint 22*|
 |0.17.0-sprint20|13-nov-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.16.0-sprint18...0.17.0-sprint20)<br/>* RIVO kleur toegepast<br/>* Topicus behandelaanwijzing wijzigingen|
-|*sprint19*||*Overgeslagen ivm vakanties*|
+|*sprint19*||*Overgeslagen*|
 |0.16.0-sprint18|18-okt-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.15.0-sprint17...0.16.0-sprint18)<br/>* Epic Checklist update<br/>* Topicus feedback<br/>* new: Zorgviewer Services|
 |0.15.0-sprint17|3-okt-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.14.0-sprint16...0.15.0-sprint17)<br/>* Lab updates<br/>* Patient.deceased added|
 |0.14.0-sprint16|19-sep-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.13.0-sprint15...0.14.0-sprint16)<br/>* Voornamelijk updates en fixes|
 |0.13.0-sprint15|4-sep-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.12.0-sprint13...0.13.0-sprint15)<br/>* Logging AuditEvent uitwerking|
-|*sprint14*||*Overgeslagen ivm vakanties*|
+|*sprint14*||*Overgeslagen*|
 |0.12.0-sprint13|9-aug-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.11.0-sprint12...0.12.0-sprint13)<br/>* UI Guidances detail updates/fixes<br/>* Epic checklist uitgewerkt|
 |0.11.0-sprint12|27-jul-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.10.1-sprint11...0.11.0-sprint12)<br/>* Nog een lab voorbeeld toegevoegd<br/>* UI Guidances gelijkgetrokken<br/>* Structuur artifact pagina's gelijkgetrokken|
 |0.10.1-sprint11|18-jul-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.10.0-sprint11...0.10.1-sprint11)<br/>* Behandelaanwijzing mapping ivm VIPLive aansluiting<br/>* Review en QA fixes|
