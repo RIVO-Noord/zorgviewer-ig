@@ -90,16 +90,16 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 
 | Item | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
 |--|--|--|--|--|--|
-| Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | ``?`` | nvt |
-| Practitioner ID | Subject/NameID | Subject/NameID | Practitioner read adhv token.practitioner / *zie FHIR Path* | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
+| Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `?` | nvt |
+| Practitioner ID | Subject/NameID | Subject/NameID | Practitioner read adhv token.practitioner / *zie FHIR Path* | `larts@2.16.528.1.1007.3.3.15123` | Practitioner.identifier |
 | Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | ^^ / *zie FHIR Path* | ``code=62247001 display=huisarts system=SNOMED CT`` | Practitioner.qualification[system=sct] |
 | Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials | ^^ / *zie FHIR Path* | `L.` | Practitioner.name.given[extension=IN] |
 | Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.family_name | ^^ / *zie FHIR Path* | `Arts` | Practitioner.name.family |
-| Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | organization-id | ^^ / *zie FHIR Path* | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Practitioner.meta[extension=source] |
+| Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | organization-id | ^^ / *zie FHIR Path* | `urn:oid:2.16.840.1.113883.2.4.3.8` | Practitioner.meta[extension=source] |
 | Patient BSN | urn:oasis:names:tc:xacml:1.0:resource:resource-id | client.bsn | Patient read adhv token.patient / *zie FHIR Path* | ``999911120`` | Patient.identifier[system=bsn] |
-| Patient FHIR ID | patient-fhir-id uit Task.reference read adhv workflow-id |  | token.patient / *zie FHIR Path* | ``abcd`` | Patient.id |
+| Patient FHIR ID | patient-fhir-id uit Task.reference read adhv workflow-id |  | token.patient / *zie FHIR Path* | `abcd` | Patient.id |
 | Patient Name | ^^ / *zie FHIR Path* | client.initials | ^^ / *zie FHIR Path* | `J.` | Patient.name.given[extension=IN] |
-| Patient Name | ^^ / *zie FHIR Path* | client.family_name | ^^ / *zie FHIR Path* | ``Fictief`` | Patient.name.family |
+| Patient Name | ^^ / *zie FHIR Path* | client.family_name | ^^ / *zie FHIR Path* | `Fictief` | Patient.name.family |
 | Patient Birthdate | ^^ / *zie FHIR Path* | client.birthdate | ^^ / *zie FHIR Path* | `19700101` | Patient.birthDate |
 
 ### Bepalen zorgaanbieders
@@ -165,13 +165,11 @@ Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende orga
 }
 ```
 
-#### Toevoegen X-ZVLogging-Id HTTP-Header
+#### Toevoegen Logging HTTP-Headers
 
-Tbv het correleren van de Zorgviewer logging met de logging van een Bronsysteem dient een `X-ZVLogging-Id` HTTP Header te worden toegevoegd aan ieder request aan het Bronsysteem. Deze kan dan door het Bronsysteem gelogd worden, zodat de logging in de Zorgviewer kan worden gekoppeld aan de logging in het Bronsysteem.
-Epic ondersteunt dit nu dmv de [AORTA-ID HTTP-Header requestId](https://vzvz.atlassian.net/wiki/spaces/AOFPUBLIC/pages/86606370/Resource+Broker+Interfaces+-+0.7.x#ResourceBrokerInterfaces-0.7.x-RB-LoggingInterface), zie [Epic Nova](https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072).
-<div style="margin: 5px; padding: 10px; color: #3c763d; background-color: #dff0d8; border: 4px solid black;">
-<b>In de toekomst kijken we naar de <a href="https://www.w3.org/TR/trace-context/">W3C Recommendation Trace Context</a>, [Custom Headers to support logs/audit](https://hl7.org/fhir/R4/http.html#custom)) en houden we de TWIIN keuzen in de gaten. Niet in scope MVP2.</b>
-</div>
+Tbv het correleren van de Zorgviewer logging met de logging van een Bronsysteem dient een `X-Correlation-Id` HTTP Header (per sessie) en een `X-Request-Id` HTTP Header (per request) te worden toegevoegd aan ieder request aan het Bronsysteem. Deze kan dan door het Bronsysteem gelogd worden, zodat de logging in de Zorgviewer kan worden gekoppeld aan de logging in het Bronsysteem.
+Epic ondersteunt dit nu dmv key-value pairs in de `AORTA-ID` HTTP-Header, zie [Epic Nova](https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072).
+Voorbeeld voor Epic HTTP-Header: `AORTA-ID: req=3aaab721-f8ae-4cbb-a83a-67306ffd04ae; usr=larts@2.16.528.1.1007.3.3.15123; rol=62247001; org=2.16.840.1.113883.2.4.3.8`. N.B. zonder de sessionId, want de maximale lengte is 128 characters.
 
 ### Bevragen bronsysteem: Summary Table
 
@@ -179,14 +177,15 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 
 | Item | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
 |--|--|--|--|--|--|
-| PurposeOfUse | urn:oasis:names:tc:xspa:1.0:subject:purposeofuse | nvt | nvt | ``TREATMENT`` | nvt |
-| Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | ``?`` | nvt |
-| Patient ID | urn:oasis:names:tc:xacml:1.0:resource:resource-id | ? | nvt | ``999911120`` | Practitioner.identifier[system=BSN] |
-| Practitioner ID | Subject/NameID | Subject/NameID | auth_token.subject_id | ``..`` | Practitioner.identifier |
-| Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | auth_token.subject_role | ``code=62247001 display=huisarts system=SNOMED CT`` | Practitioner.qualification[system=sct] |
-| Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | ? | auth_token.subject_name | `L.` | Practitioner.name |
-| Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | ? | auth_token.subject_organization_id | ``urn:oid:2.16.840.1.113883.2.4.3.8`` | Practitioner.meta[extension=source] |
-| Zorgviewer Loggin ID | ? | HTTP-Header X-ZVLogging-Id | HTTP-Header AORTA-ID requestId | ``UUID`` | nvt |
+| PurposeOfUse | urn:oasis:names:tc:xspa:1.0:subject:purposeofuse | nvt | nvt | `TREATMENT` | nvt |
+| Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `?` | nvt |
+| Patient ID | urn:oasis:names:tc:xacml:1.0:resource:resource-id | ? | nvt | `999911120` | Practitioner.identifier[system=BSN] |
+| Practitioner ID | Subject/NameID | Subject/NameID | auth_token.subject_id en HTTP-Header AORTA-ID usr | `..` | Practitioner.identifier |
+| Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | auth_token.subject_role en HTTP-Header AORTA-ID rol | `code=62247001 display=huisarts system=SNOMED CT` | Practitioner.qualification[system=sct] |
+| Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | ? | auth_token.subject_name | `L. Arts` | Practitioner.name |
+| Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | ? | auth_token.subject_organization_id en HTTP-Header AORTA-ID org | `urn:oid:2.16.840.1.113883.2.4.3.8` | Practitioner.meta[extension=source] |
+| Zorgviewer Sessio ID | HTTP-Header X-Correlation-Id UUID | HTTP-Header X-Correlation-Id | x | | nvt |
+| Zorgviewer Request ID | HTTP-Header X-Request-Id UUID | HTTP-Header X-Request-Id | HTTP-Header AORTA-ID req | `3aaab721-f8ae-4cbb-a83a-67306ffd04ae` | nvt |
 
 ### Bevragen bronsystemen zorgaanbieders documenten
 
