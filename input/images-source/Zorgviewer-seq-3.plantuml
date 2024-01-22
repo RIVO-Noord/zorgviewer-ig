@@ -44,7 +44,8 @@ loop voor iedere zorgaanbieder
         ],
       (optioneel) "subject_organization": "UMCG",
       "subject_organization_id": "urn:oid:2.16.840.1.113883.2.4.3.8",
-      ... }    
+      ... }
+    ... zie tabel
   end note
   Bron->Bronsysteem : Patient request
   activate Bronsysteem
@@ -73,8 +74,8 @@ via Patient.managingOrganization.identifier
     end opt
     Bron->Bronsysteem : gegevensverzoek (per zib) met access token
     note right Bron
-        header "X-Request-ID/AORTA-ID" meesturen
-        zie [[https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072 Epic Nova]]
+        HTTP-Header X-ZVLogging-Id toevoegen
+        ... zie tabel
     end note
     activate Bronsysteem
     Bronsysteem-->Bronsysteem: log request

@@ -6,13 +6,13 @@ De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal w
 * Inhoud: Vertalingen (ValueSet, CodeSystem, ConceptMap)
 * Tijdelijk: CodeSystem en ValueSets in deze IG.
 
-### [Toestemming & PatientIndex](CapabilityStatement-Toestemming.html)
+### [Toestemming / PatientIndex](CapabilityStatement-Toestemming.html)
 
 * Doel: landelijke MITZ open vraag
 * Inhoud: Toestemmingen van een patient (Consents)
 * Tijdelijk: Vullen [Toestemming Consent](StructureDefinition-ToestemmingConsent) dmv afvangen HL7 v2 toestemming berichten.
 
-### Zorgverlener Directory
+### [Zorgverlener Directory](CapabilityStatement-ZorgverlenerDirectory.html)
 
 * Doel: landelijke [ZORG-AB](https://www.vzvz.nl/diensten/gemeenschappelijke-diensten/zorg-ab/releases) of AGB Register
 * Inhoud
@@ -20,7 +20,7 @@ De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal w
     * Zorgverlener Rol en metadata zoals specialisme (kwalificaties) adhv AGB code ([PractitionerRole](StructureDefinition-PractitionerRole.html))
 * Tijdelijk: Verkrijgen AGB codes met bijbehorende specialismen en deze als PractitionerRole.
 
-### Adressering
+### [Adressering](CapabilityStatement-Adressering.html)
 
 * Doel: landelijke [ZORG-AB](https://www.vzvz.nl/diensten/gemeenschappelijke-diensten/zorg-ab/releases)
 * Inhoud

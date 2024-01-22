@@ -94,6 +94,7 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence
 Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documentatie Backend System Integration](https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&PrefDocID=97042)
 * 3.3 Uitvoeren van de Epic Sherlock Checklist BgZ VIPP5 voor de zorginformatiebouwstenen in scope
 * 3.4 Om te voorkomen dat onterecht een werkdiagnose (die wel in problemlijst mee komen) op "confirmed" worden gezet, moet de FHIR Profile Variabele (AIP) FHIR_NL_PROBLEM_SHOW_VERIFY_STATUS ingesteld worden op 0 (Nee)
+* 3.5 Ten behoeve van Audit Logging [Epic Nova](https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072)
 
 **Stap 4: Configureren EndPoints**
 * 4.1 (UMCG OPLOSSING) Patiënttoestemmingscheck bouwen in broker. De gekozen oplossing is afhankelijk van het eigen organisatie. In het UMCG is dit als volgt geimplementeerd:
