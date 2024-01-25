@@ -5,21 +5,29 @@ on:
   workflow_dispatch:
 
 jobs:
-  Run-npm-on-Ubuntu:
+  Run-IG-Builder:
     name: Run IG builder on Ubuntu
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4.0.0
+      - name: Setup JDK version
+        uses: actions/setup-java@v4.0.0
         with:
           java-version: 21
           distribution: temurin
-#      - uses: ts-graphviz/setup-graphviz@v1
-      - run: sudo apt update
-      - run: sudo apt install graphviz jekyll
-#      - run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
-      - run: curl -L https://vdzel.home.xs4all.nl/publisher.jar -o publisher.jar
-      - run: java -jar publisher.jar -ig ig.ini
+
+      - name: Install GraphViz and Jekyll
+        run: sudo apt update; sudo apt install graphviz jekyll
+
+      - name: Get IG Publisher jar
+#        run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
+        run: curl -L https://vdzel.home.xs4all.nl/publisher.jar -o publisher.jar
+
+      - name: Checkout IG files
+        uses: actions/checkout@v4
+
+      - name: Run the IG Builder
+        run: java -jar publisher.jar -ig ig.ini
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
