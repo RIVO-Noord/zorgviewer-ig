@@ -6,8 +6,9 @@ on:
 
 jobs:
   Run-npm-on-Ubuntu:
-    name: Run npm on Ubuntu
+    name: Run IG builder on Ubuntu
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm help
+      - run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o input-cache/publisher.jar
+      - run: cat ig.ini
