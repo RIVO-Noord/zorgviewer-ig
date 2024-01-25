@@ -14,7 +14,9 @@ jobs:
         with:
           java-version: 21
           distribution: temurin
-      - uses: ts-graphviz/setup-graphviz@v1
+#      - uses: ts-graphviz/setup-graphviz@v1
+      - run: sudo apt update
+      - run: sudo apt install graphviz jekyll
 #      - run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
       - run: curl -L https://vdzel.home.xs4all.nl/publisher.jar -o publisher.jar
       - run: java -jar publisher.jar -ig ig.ini
