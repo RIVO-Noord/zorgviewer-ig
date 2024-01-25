@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1"/>
+  <meta>
+    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Johan Johan J. XXX_Helleman_Afblijven </b> male, DoB: 1964-07-25 ( id: Burgerservicenummer (BSN)#999911120)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Known status of Patient">Deceased:</td><td>false</td><td style="background-color: #f3f5da" title="Known Marital status of Patient">Marital Status:</td><td><span title="Codes: {http://hl7.org/fhir/v3/MaritalStatus M}">Married</span></td></tr><tr><td style="background-color: #f3f5da" title="Known multipleBirth status of Patient">Multiple Birth:</td><td colspan="3">false</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Details:</td><td colspan="3"><ul><li><a href="tel:+31612345678">+31612345678</a></li><li><a href="mailto:XXX_Helleman@hotmail.com">XXX_Helleman@hotmail.com</a></li><li>Knolweg 1000 STITSWERD 9999XA NL (HOME)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient contact">Contact</td><td colspan="3"><ul><li>Jannie J.P.M van Putten Helleman </li><li>Relationships: <span title="Codes: {http://hl7.org/fhir/v3/RoleCode WIFE}">Echtgenote</span>, <span title="Codes: {urn:oid:2.16.840.1.113883.2.4.3.11.22.472 1}">Eerste relatie/contactpersoon</span></li><li>Knolweg 1000 STITSWERD 9999XA NL </li><li><a href="tel:+31612345678">+31612345678</a></li><li><a href="mailto:XXX_Helleman@hotmail.com">XXX_Helleman@hotmail.com</a></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>General Practitioner: <a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=http://example.org/Practitioner/efc2bedd-0501-48be-a487-8e133f3b7884">http://example.org/Practitioner/efc2bedd-0501-48be-a487-8e133f3b7884: Practitioner with name: 'Huisarts Onbekend'.</a></li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/bsn"/>
+    <value value="999911120"/>
+  </identifier>
+  <name>
+    <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+      <valueCode value="NL1"/>
+    </extension>
+    <family value="XXX_Helleman_Afblijven">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="XXX_Helleman_Afblijven"/>
+      </extension>
+    </family>
+    <given value="Johan">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="BR"/>
+      </extension>
+    </given>
+    <given value="Johan">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="CL"/>
+      </extension>
+    </given>
+    <given value="J.">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="IN"/>
+      </extension>
+    </given>
+  </name>
+  <telecom>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/v3/AddressUse"/>
+          <code value="MC"/>
+          <display value="Mobile Phone"/>
+        </coding>
+        <text value="Mobile Phone"/>
+      </valueCodeableConcept>
+    </extension>
+    <system value="phone"/>
+    <value value="+31612345678"/>
+    <use value="mobile"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="XXX_Helleman@hotmail.com"/>
+  </telecom>
+  <gender value="male">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/v3/AdministrativeGender"/>
+          <code value="M"/>
+          <display value="Male"/>
+        </coding>
+        <text value="Male"/>
+      </valueCodeableConcept>
+    </extension>
+  </gender>
+  <birthDate value="1964-07-25"/>
+  <deceasedBoolean value="false"/>
+  <address>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/v3/AddressUse"/>
+          <code value="HP"/>
+          <display value="Primary Home"/>
+        </coding>
+        <text value="Primary Home"/>
+      </valueCodeableConcept>
+    </extension>
+    <use value="home"/>
+    <line value="Knolweg 1000">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+        <valueString value="Knolweg"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+        <valueString value="1000"/>
+      </extension>
+    </line>
+    <city value="STITSWERD"/>
+    <district value="HET HOGELAND"/>
+    <postalCode value="9999XA"/>
+    <country value="NL">
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="NL"/>
+            <display value="Netherlands (the)"/>
+          </coding>
+          <text value="Netherlands (the)"/>
+        </valueCodeableConcept>
+      </extension>
+    </country>
+  </address>
+  <maritalStatus>
+    <coding>
+      <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
+      <code value="M"/>
+      <display value="Married"/>
+    </coding>
+    <text value="Married"/>
+  </maritalStatus>
+  <multipleBirthBoolean value="false"/>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://hl7.org/fhir/v3/RoleCode"/>
+        <code value="WIFE"/>
+        <display value="Wife"/>
+      </coding>
+      <text value="Echtgenote"/>
+    </relationship>
+    <relationship>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.22.472"/>
+        <code value="1"/>
+        <display value="Eerste relatie/contactpersoon"/>
+      </coding>
+      <text value="Eerste relatie/contactpersoon"/>
+    </relationship>
+    <name>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+        <valueCode value="NL4"/>
+      </extension>
+      <family value="van Putten Helleman">
+        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+          <valueString value="van"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+          <valueString value="Putten"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
+          <valueString value="Helleman"/>
+        </extension>
+      </family>
+      <given value="Jannie">
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+          <valueCode value="BR"/>
+        </extension>
+      </given>
+      <given value="J.P.M">
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+          <valueCode value="IN"/>
+        </extension>
+      </given>
+    </name>
+    <telecom>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/v3/AddressUse"/>
+            <code value="MC"/>
+            <display value="Mobile Phone"/>
+          </coding>
+          <text value="Mobile Phone"/>
+        </valueCodeableConcept>
+      </extension>
+      <system value="phone"/>
+      <value value="+31612345678"/>
+      <use value="mobile"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="XXX_Helleman@hotmail.com"/>
+      <use value="home"/>
+    </telecom>
+    <address>
+      <line value="Knolweg 1000">
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+          <valueString value="Knolweg"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+          <valueString value="1000"/>
+        </extension>
+      </line>
+      <city value="STITSWERD"/>
+      <district value="HET HOGELAND"/>
+      <postalCode value="9999XA"/>
+      <country value="NL">
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+          <valueCodeableConcept>
+            <coding>
+              <system value="urn:iso:std:iso:3166"/>
+              <code value="NL"/>
+              <display value="Netherlands (the)"/>
+            </coding>
+            <text value="Netherlands (the)"/>
+          </valueCodeableConcept>
+        </extension>
+      </country>
+    </address>
+  </contact>
+  <generalPractitioner>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+      <valueReference>
+        <reference value="http://example.org/PractitionerRole/BBB541253D6EB35B0D3641B1D6797B988CDB2B5FAD52C1C8BAC39480D7E44274"/>
+        <display value="Practitioner role with function: 'primary care physician'."/>
+      </valueReference>
+    </extension>
+    <reference value="http://example.org/Practitioner/efc2bedd-0501-48be-a487-8e133f3b7884"/>
+    <display value="Practitioner with name: 'Huisarts Onbekend'."/>
+  </generalPractitioner>
+</Patient>

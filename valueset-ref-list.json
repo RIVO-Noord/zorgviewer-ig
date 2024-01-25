@@ -1,0 +1,56 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.1.1--20171231000000",
+      "version" : "2017-12-31T00:00:00",
+      "status" : "active",
+      "name" : "BehandelingCodelijst",
+      "title" : "BehandelingCodelijst",
+      "description" : "BehandelingCodelijst",
+      "systems" : ["http://hl7.org/fhir/v3/NullFlavor", "http://snomed.info/sct"],
+      "uses" : {
+      },
+      "ValueSet-ACPTreatmentCodelist.html" : "ACP behandelingen waardelijst"
+    },
+    {
+      "url" : "http://hl7.nl/fhir/zorgviewer/ValueSet/ACPTreatmentCodelist",
+      "version" : "0.20.0",
+      "status" : "active",
+      "name" : "ACPTreatmentCodelist",
+      "title" : "ACP behandelingen waardelijst",
+      "description" : "Active Care Planning (ACP) behandelingen waardelijst",
+      "systems" : ["http://hl7.org/fhir/v3/NullFlavor", "http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
+    },
+    {
+      "url" : "http://hl7.nl/fhir/zorgviewer/ValueSet/ProbleemNaamCodelist",
+      "version" : "0.20.0",
+      "status" : "active",
+      "name" : "ProbleemNaamCodelist",
+      "title" : "Zorgviewer probleem naam waardelijst",
+      "description" : "De Zorgviewer probleem naam waardelijst o.b.v. de DHD Diagnose Thesaurus (SNOMED CT en ICD-10-nl codes) en de ICPC-1 NL coderingen vanuit de huisartsen",
+      "systems" : [
+        "http://hl7.org/fhir/sid/icpc-1-nl",
+        "http://hl7.org/fhir/sid/icd-10-nl",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Condition.html" : "Condition"
+    },
+    {
+      "url" : "http://hl7.nl/fhir/zorgviewer/ValueSet/SubjectRoleCodelist",
+      "version" : "0.20.0",
+      "status" : "active",
+      "name" : "SubjectRoleCodelist",
+      "title" : "Subject rol (beroepen) waardelijst",
+      "description" : "Subject rol waardelijst. Deze rol is nodig voor autorisatie bij de bron",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Practitioner.html" : "Practitioner"
+    }
+  ]
+}

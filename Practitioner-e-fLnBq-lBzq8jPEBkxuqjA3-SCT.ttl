@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "e-fLnBq-lBzq8jPEBkxuqjA3-SCT"] ; # 
+  fhir:meta [
+     fhir:profile ( [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"e-fLnBq-lBzq8jPEBkxuqjA3-SCT\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;e-fLnBq-lBzq8jPEBkxuqjA3-SCT&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner\">nl-core-practitioner</a></p></div><p><b>identifier</b>: EXTERNAL: IMMD (use: USUAL), PROVID: 10000641 (use: USUAL), VEKTIS: Vektis AGB-z zorgverlener tabel#03103161 (use: USUAL), EXTERNAL: 10000641 (use: USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: Schroder, CP, Arts</p><p><b>telecom</b>: <a href=\"mailto:int.arts@umcg.nl\">int.arts@umcg.nl</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1967-01-28</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>Arts <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#11; <a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#309343006 &quot;Medical doctor&quot;)</span></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:text [ fhir:v "EXTERNAL" ]
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.2.697780"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "IMMD" ]
+  ] [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:text [ fhir:v "PROVID" ]
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.5.737384.6"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "10000641" ]
+  ] [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:text [ fhir:v "VEKTIS" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.nl/fhir/NamingSystem/agb-z"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "03103161" ]
+  ] [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:text [ fhir:v "EXTERNAL" ]
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.2.836982"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "10000641" ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:text [ fhir:v "Schroder, CP, Arts" ] ;
+     fhir:family [ fhir:v "Schroder" ] ;
+     fhir:given ( [ fhir:v "CP." ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "int.arts@umcg.nl" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1967-01-28"^^xsd:date] ; # 
+  fhir:qualification ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.4.836982.6000"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "11" ] ;
+         fhir:display [ fhir:v "Arts" ]
+       ] [
+         a sct:309343006 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "309343006" ] ;
+         fhir:display [ fhir:v "Medical doctor" ]
+       ] ) ;
+       fhir:text [ fhir:v "Arts" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

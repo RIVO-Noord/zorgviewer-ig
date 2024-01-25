@@ -1,0 +1,2352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Practitioner"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-Practitioner-definitions.html#Practitioner">Practitioner</a><a name="Practitioner"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;" href="http://hl7.org/fhir/STU3/conformance-rules.html#constraints" title="This element has or is affected by constraints (zv-pra-3)">C</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner">nl-core-practitioner</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">HealthProfessional</span><br/><span style="font-weight:bold">zv-pra-3: </span>Either Practitioner BIG or AGB-Z identifier SHALL be present.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-Practitioner-definitions.html#Practitioner.identifier">identifier</a><a name="Practitioner.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">HealthProfessionalIdentificationNumber</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-Practitioner-definitions.html#Practitioner.identifier:AGB" title="Slice AGB">identifier:AGB</a><a name="Practitioner.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">AGB</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-Practitioner-definitions.html#Practitioner.identifier:BIG" title="Slice BIG">identifier:BIG</a><a name="Practitioner.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">BIG</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-Practitioner-definitions.html#Practitioner.name">name</a><a name="Practitioner.name"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><a style="padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;" href="http://hl7.org/fhir/STU3/conformance-rules.html#constraints" title="This element has or is affected by constraints (zv-pra-1, zv-pra-2)">C</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-humanname" title="HumanName">nl-core-humanname</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">NameInformation</span><br/><span style="font-weight:bold">zv-pra-1: </span>Either Practitioner.name.given and/or Practitioner.name.family and/or Practitioner.name.text SHALL be present.<br/><span style="font-weight:bold">zv-pra-2: </span>To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-Practitioner-definitions.html#Practitioner.qualification">qualification</a><a name="Practitioner.qualification"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;" href="http://hl7.org/fhir/STU3/conformance-rules.html#constraints" title="This element has or is affected by constraints (zv-pra-4)">C</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Qualifications obtained by training and certification</span><br/><span style="font-weight:bold">Binding: </span><a href="ValueSet-SubjectRoleCodelist.html" title="http://hl7.nl/fhir/zorgviewer/ValueSet/SubjectRoleCodelist">Subject rol (beroepen) waardelijst</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.">extensible</a>): Subject rol waardelijst. Deze rol is nodig voor autorisatie bij de bron.<br/><br/><br/><span style="font-weight:bold">zv-pra-4: </span>A SNOMED CT (beroep) code SHOULD be present.</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <url value="http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner"/>
+  <version value="0.20.0"/>
+  <name value="Practitioner"/>
+  <title value="Practitioner"/>
+  <status value="draft"/>
+  <date value="2024-01-25T12:12:38+00:00"/>
+  <publisher value="RIVO-NN HL7NL"/>
+  <contact>
+    <name value="RIVO-NN"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://rivo-noord.nl"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="HL7NL"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://hl7.nl"/>
+    </telecom>
+  </contact>
+  <description value="Zorgverlener"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="NL"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="3.0.2"/>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.2-2017EN"/>
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.2(2017EN)"/>
+    <name value="HCIM HealthProfessional-v3.2(2017EN)"/>
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactinformation-v1.0-2017EN"/>
+    <uri value="https://zibs.nl/wiki/ContactInformation-v1.0(2017EN)"/>
+    <name value="HCIM ContactInformation-v1.0(2017EN)"/>
+    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs."/>
+  </mapping>
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN"/>
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"/>
+    <name value="HCIM BasicElements-v1.0(2017EN)"/>
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.0-2016EN"/>
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.0(2016EN)"/>
+    <name value="HCIM HealthProfessional-v3.0(2016EN)"/>
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactinformation-v3.0-2016EN"/>
+    <uri value="https://zibs.nl/wiki/Patient-v3.0(2016EN)"/>
+    <name value="HCIM Patient-v3.0(2016EN)"/>
+    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs"/>
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
+    <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)"/>
+    <name value="HCIM Patient-v2.0.1(2015EN)"/>
+    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs"/>
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)"/>
+    <name value="HCIM HealthProfessional-v1.2.1(2015EN)"/>
+  </mapping>
+  <mapping>
+    <identity value="v2"/>
+    <uri value="http://hl7.org/v2"/>
+    <name value="HL7 v2 Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="servd"/>
+    <uri value="http://www.omg.org/spec/ServD/1.0/"/>
+    <name value="ServD"/>
+  </mapping>
+  <mapping>
+    <identity value="w5"/>
+    <uri value="http://hl7.org/fhir/w5"/>
+    <name value="W5 Mapping"/>
+  </mapping>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Practitioner"/>
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+  <derivation value="constraint"/>
+  <snapshot>
+    <element id="Practitioner">
+      <path value="Practitioner"/>
+      <short value="HealthProfessional"/>
+      <definition value="A person who is directly or indirectly involved in the provisioning of healthcare."/>
+      <comment value="Note that a cab driver no longer fits the bill. You probably would be interested in the organization rather than the individual?"/>
+      <alias value="Zorgverlener"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Practitioner"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <constraint>
+        <key value="dom-2"/>
+        <severity value="error"/>
+        <human value="If the resource is contained in another resource, it SHALL NOT contain nested Resources"/>
+        <expression value="contained.contained.empty()"/>
+        <xpath value="not(parent::f:contained and f:contained)"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+      </constraint>
+      <constraint>
+        <key value="dom-1"/>
+        <severity value="error"/>
+        <human value="If the resource is contained in another resource, it SHALL NOT contain any narrative"/>
+        <expression value="contained.text.empty()"/>
+        <xpath value="not(parent::f:contained and f:text)"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+      </constraint>
+      <constraint>
+        <key value="dom-4"/>
+        <severity value="error"/>
+        <human value="If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated"/>
+        <expression value="contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()"/>
+        <xpath value="not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+      </constraint>
+      <constraint>
+        <key value="dom-3"/>
+        <severity value="error"/>
+        <human value="If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource"/>
+        <expression value="contained.where(('#'+id in %resource.descendants().reference).not()).empty()"/>
+        <xpath value="not(exists(for $id in f:contained/*/@id return $id[not(ancestor::f:contained/parent::*/descendant::f:reference/@value=concat('#', $id))]))"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+      </constraint>
+      <constraint>
+        <key value="zv-pra-3"/>
+        <severity value="error"/>
+        <human value="Either Practitioner BIG or AGB-Z identifier SHALL be present."/>
+        <expression value="identifier.where(system='http://fhir.nl/fhir/NamingSystem/agb-z') or identifier.where(system='http://fhir.nl/fhir/NamingSystem/big')"/>
+        <xpath value="/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z' or /f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/big'"/>
+      </constraint>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Entity. Role, or Act"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PRD (as one example)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="Provider"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="administrative.individual"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
+        <map value="NL-CM:17.1.1"/>
+        <comment value="HealthcareProvider"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v3.0-2016EN"/>
+        <map value="NL-CM:17.1.1"/>
+        <comment value="HealthcareProvider"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v3.2-2017EN"/>
+        <map value="NL-CM:17.1.1"/>
+        <comment value="HealthProfessional"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.4"/>
+        <comment value="HealthProfessional"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.9"/>
+        <comment value="HealthProfessionalAsAuthor::HealthProfessional"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.id">
+      <path value="Practitioner.id"/>
+      <short value="Logical id of this artifact"/>
+      <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."/>
+      <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Resource.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element id="Practitioner.meta">
+      <path value="Practitioner.meta"/>
+      <short value="Metadata about the resource"/>
+      <definition value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Resource.meta"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Meta"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element id="Practitioner.implicitRules">
+      <path value="Practitioner.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <definition value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comment value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. &#xA;&#xA;This element is labelled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Resource.implicitRules"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+    </element>
+    <element id="Practitioner.language">
+      <path value="Practitioner.language"/>
+      <short value="Language of the resource content"/>
+      <definition value="The base language in which the resource is written."/>
+      <comment value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Resource.language"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet">
+          <valueReference>
+            <reference value="http://hl7.org/fhir/ValueSet/all-languages"/>
+          </valueReference>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="Language"/>
+        </extension>
+        <strength value="extensible"/>
+        <description value="A human language."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/languages"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Practitioner.text">
+      <path value="Practitioner.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <definition value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comment value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a &quot;text blob&quot; or where text is additionally entered raw or narrated and encoded in formation is added later."/>
+      <alias value="narrative"/>
+      <alias value="html"/>
+      <alias value="xhtml"/>
+      <alias value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DomainResource.text"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="dom-1"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.contained">
+      <path value="Practitioner.contained"/>
+      <short value="Contained, inline Resources"/>
+      <definition value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comment value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <alias value="inline resources"/>
+      <alias value="anonymous resources"/>
+      <alias value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.contained"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.extension">
+      <path value="Practitioner.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.modifierExtension">
+      <path value="Practitioner.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isModifier value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier">
+      <path value="Practitioner.identifier"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="system"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="HealthProfessionalIdentificationNumber"/>
+      <definition value="The health professional identification number is a number that uniquely identifies the health professional.  &#xD;&#xA;&#xD;&#xA;The following numbers are used in the Netherlands:&#xD;&#xA;1. UZI Health Professionals. Identification of health professionals (people) in the Dutch healthcare industry.&#xD;&#xA;2. VEKTIS AGB-Z. Identifies health professionals and healthcare organizations.&#xD;&#xA;3. BIG-ID. The ID of the health professional listed in the BIG Register.&#xD;&#xA;&#xD;&#xA;This information is not readily available for foreign health professionals."/>
+      <requirements value="Often, specific identities are assigned for the agent."/>
+      <alias value="ZorgverlenerIdentificatieNummer"/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="Practitioner.identifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PRD-7 (or XCN.1)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./id"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Identifiers"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="id"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
+        <map value="NL-CM:17.1.2"/>
+        <comment value="HealthcareProviderIdentificationNumber"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v3.0-2016EN"/>
+        <map value="NL-CM:17.1.2"/>
+        <comment value="HealthcareProviderIdentificationNumber"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v3.2-2017EN"/>
+        <map value="NL-CM:17.1.2"/>
+        <comment value="HealthProfessionalIdentificationNumber"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.6"/>
+        <comment value="IdentificationNumber"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:UZI">
+      <path value="Practitioner.identifier"/>
+      <sliceName value="UZI"/>
+      <short value="UZI"/>
+      <definition value="Unieke Zorgverlener Identificatie (Dutch physician identification number)"/>
+      <requirements value="Often, specific identities are assigned for the agent."/>
+      <alias value="UZI"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Practitioner.identifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PRD-7 (or XCN.1)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./id"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Identifiers"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="id"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:UZI.id">
+      <path value="Practitioner.identifier.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:UZI.extension">
+      <path value="Practitioner.identifier.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:UZI.use">
+      <path value="Practitioner.identifier.use"/>
+      <short value="usual | official | temp | secondary (If known)"/>
+      <definition value="The purpose of this identifier."/>
+      <comment value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary."/>
+      <requirements value="Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.use"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierUse"/>
+        </extension>
+        <strength value="required"/>
+        <description value="Identifies the purpose for this identifier, if known ."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/identifier-use"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:UZI.type">
+      <path value="Practitioner.identifier.type"/>
+      <short value="Description of identifier"/>
+      <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose."/>
+      <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage. &#xA;&#xA;Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type."/>
+      <requirements value="Allows users to make use of identifiers when the identifier system is not known."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.type"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType"/>
+        </extension>
+        <strength value="extensible"/>
+        <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/identifier-type"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:UZI.system">
+      <path value="Practitioner.identifier.system"/>
+      <short value="The namespace for the identifier value"/>
+      <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique."/>
+      <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.system"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://fhir.nl/fhir/NamingSystem/uzi-nr-pers"/>
+      <example>
+        <label value="General"/>
+        <valueUri value="http://www.acme.com/identifiers/patient"/>
+      </example>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / EI-2-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.root or Role.id.root"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierType"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:UZI.value">
+      <path value="Practitioner.identifier.value"/>
+      <short value="The value that is unique"/>
+      <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system."/>
+      <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/STU3/extension-rendered-value.html)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.value"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <example>
+        <label value="General"/>
+        <valueString value="123456"/>
+      </example>
+      <example>
+        <label value="Example"/>
+        <valueString value="01011234"/>
+      </example>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.1 / EI.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Value"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:UZI.period">
+      <path value="Practitioner.identifier.period"/>
+      <short value="Time period when id is/was valid for use"/>
+      <definition value="Time period during which identifier is/was valid for use."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.period"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Period"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.7 + CX.8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.effectiveTime or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./StartDate and ./EndDate"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:UZI.assigner">
+      <path value="Practitioner.identifier.assigner"/>
+      <short value="Organization that issued id (may be just text)"/>
+      <definition value="Organization that issued/manages the identifier."/>
+      <comment value="The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.assigner"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / (CX.4,CX.9,CX.10)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierIssuingAuthority"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:AGB">
+      <path value="Practitioner.identifier"/>
+      <sliceName value="AGB"/>
+      <short value="AGB"/>
+      <definition value="An identifier that applies to this person in this role."/>
+      <requirements value="Often, specific identities are assigned for the agent."/>
+      <alias value="AGB"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Practitioner.identifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PRD-7 (or XCN.1)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./id"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Identifiers"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="id"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:AGB.id">
+      <path value="Practitioner.identifier.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:AGB.extension">
+      <path value="Practitioner.identifier.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:AGB.use">
+      <path value="Practitioner.identifier.use"/>
+      <short value="usual | official | temp | secondary (If known)"/>
+      <definition value="The purpose of this identifier."/>
+      <comment value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary."/>
+      <requirements value="Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.use"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierUse"/>
+        </extension>
+        <strength value="required"/>
+        <description value="Identifies the purpose for this identifier, if known ."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/identifier-use"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:AGB.type">
+      <path value="Practitioner.identifier.type"/>
+      <short value="Description of identifier"/>
+      <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose."/>
+      <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage. &#xA;&#xA;Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type."/>
+      <requirements value="Allows users to make use of identifiers when the identifier system is not known."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.type"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType"/>
+        </extension>
+        <strength value="extensible"/>
+        <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/identifier-type"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:AGB.system">
+      <path value="Practitioner.identifier.system"/>
+      <short value="The namespace for the identifier value"/>
+      <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique."/>
+      <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.system"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+      <example>
+        <label value="General"/>
+        <valueUri value="http://www.acme.com/identifiers/patient"/>
+      </example>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / EI-2-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.root or Role.id.root"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierType"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:AGB.value">
+      <path value="Practitioner.identifier.value"/>
+      <short value="The value that is unique"/>
+      <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system."/>
+      <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/STU3/extension-rendered-value.html)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.value"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <example>
+        <label value="General"/>
+        <valueString value="123456"/>
+      </example>
+      <example>
+        <label value="Example"/>
+        <valueString value="123456"/>
+      </example>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.1 / EI.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Value"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:AGB.period">
+      <path value="Practitioner.identifier.period"/>
+      <short value="Time period when id is/was valid for use"/>
+      <definition value="Time period during which identifier is/was valid for use."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.period"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Period"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.7 + CX.8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.effectiveTime or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./StartDate and ./EndDate"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:AGB.assigner">
+      <path value="Practitioner.identifier.assigner"/>
+      <short value="Organization that issued id (may be just text)"/>
+      <definition value="Organization that issued/manages the identifier."/>
+      <comment value="The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.assigner"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / (CX.4,CX.9,CX.10)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierIssuingAuthority"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:BIG">
+      <path value="Practitioner.identifier"/>
+      <sliceName value="BIG"/>
+      <short value="BIG"/>
+      <definition value="An identifier that applies to this person in this role."/>
+      <requirements value="Often, specific identities are assigned for the agent."/>
+      <alias value="BIG"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Practitioner.identifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PRD-7 (or XCN.1)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./id"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Identifiers"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="id"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:BIG.id">
+      <path value="Practitioner.identifier.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:BIG.extension">
+      <path value="Practitioner.identifier.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:BIG.use">
+      <path value="Practitioner.identifier.use"/>
+      <short value="usual | official | temp | secondary (If known)"/>
+      <definition value="The purpose of this identifier."/>
+      <comment value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary."/>
+      <requirements value="Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.use"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierUse"/>
+        </extension>
+        <strength value="required"/>
+        <description value="Identifies the purpose for this identifier, if known ."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/identifier-use"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:BIG.type">
+      <path value="Practitioner.identifier.type"/>
+      <short value="Description of identifier"/>
+      <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose."/>
+      <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage. &#xA;&#xA;Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type."/>
+      <requirements value="Allows users to make use of identifiers when the identifier system is not known."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.type"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType"/>
+        </extension>
+        <strength value="extensible"/>
+        <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/identifier-type"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:BIG.system">
+      <path value="Practitioner.identifier.system"/>
+      <short value="The namespace for the identifier value"/>
+      <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique."/>
+      <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.system"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://fhir.nl/fhir/NamingSystem/big"/>
+      <example>
+        <label value="General"/>
+        <valueUri value="http://www.acme.com/identifiers/patient"/>
+      </example>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / EI-2-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.root or Role.id.root"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierType"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:BIG.value">
+      <path value="Practitioner.identifier.value"/>
+      <short value="The value that is unique"/>
+      <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system."/>
+      <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/STU3/extension-rendered-value.html)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.value"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <example>
+        <label value="General"/>
+        <valueString value="123456"/>
+      </example>
+      <example>
+        <label value="Example"/>
+        <valueString value="12345678"/>
+      </example>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.1 / EI.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Value"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:BIG.period">
+      <path value="Practitioner.identifier.period"/>
+      <short value="Time period when id is/was valid for use"/>
+      <definition value="Time period during which identifier is/was valid for use."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.period"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Period"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.7 + CX.8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.effectiveTime or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./StartDate and ./EndDate"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:BIG.assigner">
+      <path value="Practitioner.identifier.assigner"/>
+      <short value="Organization that issued id (may be just text)"/>
+      <definition value="Organization that issued/manages the identifier."/>
+      <comment value="The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Identifier.assigner"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / (CX.4,CX.9,CX.10)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierIssuingAuthority"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.active">
+      <path value="Practitioner.active"/>
+      <short value="Whether this practitioner's record is in active use"/>
+      <definition value="Whether this practitioner's record is in active use."/>
+      <comment value="Default is true. &#xD;&#xD;If the practitioner is not in use by one organization, then it should mark the period on the PractitonerRole with an end date (even if they are active) as they may be active in another role."/>
+      <requirements value="Need to be able to mark a practitioner record as not to be used because it was created in error."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Practitioner.active"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <defaultValueBoolean value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./statusCode"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="status"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.name">
+      <path value="Practitioner.name"/>
+      <short value="NameInformation"/>
+      <definition value="Health professional’s full name. If a health professional identification number is entered, it will be the name as listed in UZI, AGB or by the healthcare center."/>
+      <comment value="Dutch names require that certain name parts are separately communicable. For this reason, extensions are added onto the base HumanName element to mark the meaning of each part. A Dutch HumanName is still a proper FHIR HumanName; however, there might be an incompatibilty with the default FHIR mechanism for communicating given names. See the compatibility note below for more information.&#xD;&#xA;&#xD;&#xA;The extension elements cover birth name (NL: eigennaam / geslachtsnaam) and partner/spouse name. Both may have a prefix (NL: voorvoegsel). When a person marries, he or she may keep their own name, assume the partner name, append the partner name to their own name, or the other way around.&#xD;&#xA;&#xD;&#xA;**Incompatibility note**: It has come to light that this specification deviates from the way that the HumanName datatype is normally used. This will be fixed in a future release. However, current implementations should be aware of the special considerations regarding the use of this specification. &#xD;&#xA;&#xD;&#xA;The issue at hand is the way alternative representations of a name, like initials or a nickname, are communicated. Normally this is done using multiple HumanName instances, which are differentiated using the `.use` element. However, this specification allows for including all alternative representations in the _same_ HumanName instance, with the expectation that the extensions provide enough information for receiving systems to differentiate them. However, this means that contrary to the normal usage of this datatype, repetitions of `.given` names cannot be concatenated to get the full list of given names; the list might be a mix of full names, nicknames and initials.&#xD;&#xA;&#xD;&#xA;Since multiple implementations are based on this specification, sending systems are advised (but not required) to keep the approach with one HumanName instance, while receiving systems should be able to handle this one-instance approach. More specifically:&#xD;&#xA;&#xD;&#xA;* Sending and receiving systems SHOULD always use the specified extensions when using this datatype.&#xD;&#xA;* Sending systems are encouraged to populate the `.text` element to unambigiously communicate the person's name.&#xD;&#xA;* Sending systems are encouraged to send either the full given names or the initials, but not both. This alleviates the duplication of names in `.given`.&#xD;&#xA;* When a sending system uses the current one-instance approach for communicating multiple representations, `.use` MAY NOT be populated. After all, it is not possible to select a single `.use` when the instance contains different representations.&#xD;&#xA;* When a receiving system interprets the instance as the single-instance-multiple-representations approach, the `.given` names marked as initials SHOULD be interpreted as alternatives to the full given names. Note the underlying HCIM expects both the _list_ of full names and _list_ of initials to be a single string; there's no match for an initial to a full name. The instance SHOULD be regarded as using this approach when:&#xD;&#xA;  * They encounter a single instance&#xD;&#xA;  * And the `.use` element is absent&#xD;&#xA;  * And all the name parts are differentiated using the specified extensions&#xD;&#xA;* In any other circumstance, receiving systems SHOULD interpret the usage as the normal use.&#xD;&#xA;&#xD;&#xA;Example: miss Irma Jongeneel marries mister de Haas and assumes the name Irma Jongeneel-de Haas:&#xD;&#xA;&#xD;&#xA;* `.family` = &quot;Jongeneel-de Haas&quot;&#xD;&#xA;* `.given` = &quot;Irma&quot; (with `.given:iso21090EnQualifier` = _BR_)&#xD;&#xA;* `.family:humannameOwnName` = &quot;Jongeneel&quot;&#xD;&#xA;* `.family:humannamePartnerPrefix` = &quot;de &quot;&#xD;&#xA;* `.family:humannamePartnerName` = &quot;Haas&quot;"/>
+      <requirements value="The name(s) that a Practitioner is known by. Where there are multiple, the name that the practitioner is usually known as should be used in the display."/>
+      <alias value="Naamgegevens"/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="Practitioner.name"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="HumanName"/>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-humanname"/>
+      </type>
+      <example>
+        <label value="Structured HumanName (preferred above unstructured)"/>
+        <valueHumanName>
+          <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+            <valueCode value="NL4"/>
+          </extension>
+          <text value="Irma Jongeneel-de Haas"/>
+          <family value="Jongeneel-de Haas">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+              <valueString value="Jongeneel"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
+              <valueString value="de"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
+              <valueString value="Haas"/>
+            </extension>
+          </family>
+          <given value="Irma">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+              <valueCode value="CL"/>
+            </extension>
+          </given>
+        </valueHumanName>
+      </example>
+      <example>
+        <label value="Unstructured HumanName"/>
+        <valueHumanName>
+          <text value="Irma Jongeneel-de Haas"/>
+        </valueHumanName>
+      </example>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="nl-core-humanname-1"/>
+        <severity value="error"/>
+        <human value="if you specify a prefix for an own name then an own name is also expected"/>
+        <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()"/>
+        <xpath value="not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-own-prefix']) or f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-own-name']"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+      </constraint>
+      <constraint>
+        <key value="nl-core-humanname-2"/>
+        <severity value="error"/>
+        <human value="if you specify a voorvoegsel for a partner name then a partner name is also expected"/>
+        <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()"/>
+        <xpath value="not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix']) or f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-partner-name']"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+      </constraint>
+      <constraint>
+        <key value="zv-pra-1"/>
+        <severity value="error"/>
+        <human value="Either Practitioner.name.given and/or Practitioner.name.family and/or Practitioner.name.text SHALL be present."/>
+        <expression value="(family.exists() or given.exists() or text.exists())"/>
+        <xpath value="/f:name/f:family or /f:name/f:given or /f:name/f:text"/>
+      </constraint>
+      <constraint>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice">
+          <valueBoolean value="true"/>
+        </extension>
+        <key value="zv-pra-2"/>
+        <severity value="warning"/>
+        <human value="To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present."/>
+        <expression value="text.exists()"/>
+        <xpath value="/f:name/f:text"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XPN"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="EN (actually, PN)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="ProviderName"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
+        <map value="NL-CM:0.1.6"/>
+        <comment value="NameInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-nameinformation-v3.0-2016EN"/>
+        <map value="NL-CM:0.1.6"/>
+        <comment value="NameInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
+        <map value="NL-CM:20.4.1"/>
+        <comment value="NameInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="BRP"/>
+        <map value="02"/>
+        <comment value="Naam"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
+        <map value="NL-CM:17.1.3"/>
+        <comment value="HealthcareProviderName"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v3.0-2016EN"/>
+        <map value="NL-CM:17.1.3"/>
+        <comment value="HealthcareProviderName"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v3.2-2017EN"/>
+        <map value="NL-CM:17.1.3"/>
+        <comment value="NameInformation"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.telecom">
+      <path value="Practitioner.telecom"/>
+      <short value="ContactInformation"/>
+      <definition value="Contact information includes a person's telephone numbers and email addresses. This datatype defines a common basis for expressing all contact information around the world, but adds extensions to express Dutch contacts specifically, according to the HCIM ContactInformation (v1.0, 2017). A Dutch ContactPoint still is a proper FHIR ContactPoint, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype. The table below explains how the HCIM concepts are mapped to the various FHIR elements. The HCIM code itself should also be included using the TelecomType extension.&#xD;&#xA;&#xD;&#xA;| HCIM                                               | `.ext:TelecomType` | `.system` | `.use`   |&#xD;&#xA;|----------------------------------------------------|:------------------:|:---------:|:--------:|&#xD;&#xA;| Primary Home Land Line                             | _LL_               | _phone_   | _home_   |&#xD;&#xA;| Temporary Land Line                                | _LL_               | _phone_   | _temp_   |&#xD;&#xA;| Primary Work Land Line                             | _LL_               | _phone_   | _work_   |&#xD;&#xA;|                                                    |                    |           |          |&#xD;&#xA;| Primary Home Fax                                   | _FAX_              | _fax_     | _home_   |&#xD;&#xA;| Temporary Fax                                      | _FAX_              | _fax_     | _temp_   |&#xD;&#xA;| Primary Work Fax                                   | _FAX_              | _fax_     | _work_   |&#xD;&#xA;|                                                    |                    |           |          |&#xD;&#xA;| Primary Home Mobile Phone                          | _MC_               | _phone_   | _home_   |&#xD;&#xA;| Temporary Mobile Phone                             | _MC_               | _phone_   | _temp_   |&#xD;&#xA;| Primary Work Mobile Phone                          | _MC_               | _phone_   | _work_   |&#xD;&#xA;|                                                    |                    |           |          |&#xD;&#xA;| Primary Home Pager                                 | _PG_               | _pager_   | _home_   |&#xD;&#xA;| Temporary Pager                                    | _PG_               | _pager_   | _temp_   |&#xD;&#xA;| Primary Work Pager                                 | _PG_               | _pager_   | _work_   |&#xD;&#xA;|                                                    |                    |           |          |&#xD;&#xA;| Private email address                              |                    | _email_   | _home_   |&#xD;&#xA;| Work email address                                 |                    | _email_   | _work_   |&#xD;&#xA;|                                                    |                    |           |          |&#xD;&#xA;| Mobile phone number undetermined private/business  |                    | _phone_   | _mobile_ |"/>
+      <comment value="Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification&#xD;&#xD;These typically will have home numbers, or mobile numbers that are not role specific."/>
+      <requirements value="Need to know how to reach a practitioner independent to any roles the practitioner may have."/>
+      <alias value="Contactgegevens"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Practitioner.telecom"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="ContactPoint"/>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint"/>
+      </type>
+      <example>
+        <label value="Mobile business phone number. Note: the mobile nature stems from the number being an 06-* number."/>
+        <valueContactPoint>
+          <system value="phone"/>
+          <value value="+31611234567"/>
+          <use value="work"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Mobile phone number undetermined private/business. Note: the mobile nature stems from the number being an 06-* number."/>
+        <valueContactPoint>
+          <system value="phone"/>
+          <value value="+31611234567"/>
+          <use value="mobile"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Home Land Line"/>
+        <valueContactPoint>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                <code value="LL"/>
+                <display value="Land Line"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <system value="phone"/>
+          <value value="..."/>
+          <use value="home"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Temporary Land Line"/>
+        <valueContactPoint>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                <code value="LL"/>
+                <display value="Land Line"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <system value="phone"/>
+          <value value="..."/>
+          <use value="temp"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Work Land Line"/>
+        <valueContactPoint>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                <code value="LL"/>
+                <display value="Land Line"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <system value="phone"/>
+          <value value="..."/>
+          <use value="work"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Home Fax"/>
+        <valueContactPoint>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                <code value="FAX"/>
+                <display value="Fax"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <system value="fax"/>
+          <value value="..."/>
+          <use value="home"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Temporary Fax"/>
+        <valueContactPoint>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                <code value="FAX"/>
+                <display value="Fax"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <system value="fax"/>
+          <value value="..."/>
+          <use value="temp"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Work Fax"/>
+        <valueContactPoint>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                <code value="FAX"/>
+                <display value="Fax"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <system value="fax"/>
+          <value value="..."/>
+          <use value="work"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Home Mobile Phone"/>
+        <valueContactPoint>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/v3/AddressUse"/>
+                <code value="MC"/>
+                <display value="Mobile Phone"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <system value="phone"/>
+          <value value="..."/>
+          <use value="home"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Temporary Mobile Phone"/>
+        <valueContactPoint>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/v3/AddressUse"/>
+                <code value="MC"/>
+                <display value="Mobile Phone"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <system value="phone"/>
+          <value value="..."/>
+          <use value="temp"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Work Mobile Phone"/>
+        <valueContactPoint>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/v3/AddressUse"/>
+                <code value="MC"/>
+                <display value="Mobile Phone"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <system value="phone"/>
+          <value value="..."/>
+          <use value="work"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Home Pager"/>
+        <valueContactPoint>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/v3/AddressUse"/>
+                <code value="PG"/>
+                <display value="Pager"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <system value="pager"/>
+          <value value="..."/>
+          <use value="home"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Temporary Pager"/>
+        <valueContactPoint>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/v3/AddressUse"/>
+                <code value="PG"/>
+                <display value="Pager"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <system value="pager"/>
+          <value value="..."/>
+          <use value="temp"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Work Pager"/>
+        <valueContactPoint>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/v3/AddressUse"/>
+                <code value="PG"/>
+                <display value="Pager"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <system value="pager"/>
+          <value value="..."/>
+          <use value="work"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Private email address"/>
+        <valueContactPoint>
+          <system value="email"/>
+          <value value="giesput@myweb.nl"/>
+          <use value="home"/>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Work email address"/>
+        <valueContactPoint>
+          <system value="email"/>
+          <value value="example@workplace.nl"/>
+          <use value="work"/>
+        </valueContactPoint>
+      </example>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="cpt-2"/>
+        <severity value="error"/>
+        <human value="A system is required if a value is provided."/>
+        <expression value="value.empty() or system.exists()"/>
+        <xpath value="not(exists(f:value)) or exists(f:system)"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/ContactPoint"/>
+      </constraint>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XTN"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="TEL"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="ContactPoint"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
+        <map value="NL-CM:0.1.5"/>
+        <comment value="ContactInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v3.0-2016EN"/>
+        <map value="NL-CM:0.1.5"/>
+        <comment value="ContactInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN"/>
+        <map value="NL-CM:20.6.1"/>
+        <comment value="ContactInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
+        <map value="NL-CM:17.1.8"/>
+        <comment value="TelephoneEmail"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v3.0-2016EN"/>
+        <map value="NL-CM:17.1.8"/>
+        <comment value="TelephoneEmail"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v3.2-2017EN"/>
+        <map value="NL-CM:17.1.8"/>
+        <comment value="ContactInformation"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.address">
+      <path value="Practitioner.address"/>
+      <short value="AddressInformation"/>
+      <definition value="This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.&#xD;&#xA;&#xD;&#xA;To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.&#xD;&#xA;&#xD;&#xA;**Separate address parts**&#xD;&#xA;&#xD;&#xA;The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.&#xD;&#xA;&#xD;&#xA;**Custom address types**&#xD;&#xA;&#xD;&#xA;The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps &lt;http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse&gt; and &lt;http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType&gt; as well). The HCIM code itself should also be included using the AddressType extension.&#xD;&#xA;&#xD;&#xA;| HCIM                              |` .ext:AddressType` | `.ext:official` | `.use` | `.type`    |&#xD;&#xA;|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|&#xD;&#xA;| Postal Address/Postadres          | _PST_              |                 |        | _postal_   |&#xD;&#xA;| Primary Home/Officieel adres      | _HP_               | true            | _home_ |            |&#xD;&#xA;| Visit Address/Woon-/verblijfadres | _PHYS_             |                 | _home_ | _physical_ |&#xD;&#xA;| Temporary Address/Tijdelijk adres | _TMP_              |                 | _temp_ |            |&#xD;&#xA;| Work Place/Werkadres              | _WP_               |                 | _work_ |            |&#xD;&#xA;| Vacation Home/Vakantie adres      | _HV_               |                 | _temp_ |            |&#xD;&#xA;&#xD;&#xA; If Address.type is _both_ then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.&#xD;&#xA;&#xD;&#xA;NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension."/>
+      <comment value="Note: address is for postal addresses, not physical locations."/>
+      <requirements value="The home/mailing address of the practitioner is often required for employee administration purposes, and also for some rostering services where the start point (practitioners home) can be used in calculations."/>
+      <alias value="AdresInformatie"/>
+      <alias value="Adresgegevens"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Practitioner.address"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Address"/>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address"/>
+      </type>
+      <example>
+        <label value="Example of a Vacation Home address"/>
+        <valueAddress>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/v3/AddressUse"/>
+                <code value="HV"/>
+                <display value="Vakantie adres"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <use value="temp"/>
+          <line value="Binnenkant 12A Hoog">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+              <valueString value="Binnenkant"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+              <valueString value="12"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+              <valueString value="A"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
+              <valueString value="Hoog"/>
+            </extension>
+          </line>
+          <city value="Amsterdam"/>
+          <state value="NH"/>
+          <postalCode value="1000AA"/>
+          <country value="NLD"/>
+        </valueAddress>
+      </example>
+      <example>
+        <label value="Example of a Primary Home address"/>
+        <valueAddress>
+          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/v3/AddressUse"/>
+                <code value="HP"/>
+                <display value="Officieel adres"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="http://fhir.nl/fhir/StructureDefinition/nl-core-address-official">
+            <valueBoolean value="true"/>
+          </extension>
+          <use value="home"/>
+          <line value="Binnenkant to 10">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+              <valueString value="Binnenkant"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="to"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+              <valueString value="10"/>
+            </extension>
+          </line>
+          <city value="Amsterdam"/>
+          <state value="NH"/>
+          <postalCode value="1001AA"/>
+          <country value="NLD"/>
+        </valueAddress>
+      </example>
+      <condition value="ele-1"/>
+      <condition value="nl-streetname-if-official-and-other-line-parts"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="nl-streetname-if-official-and-other-line-parts"/>
+        <requirements value="This constraint checks conformance against the Dutch BRP constraints on address parts. However: when you only send postalCode + houseNumber which is enough for certain cases this may still be a valid address"/>
+        <severity value="error"/>
+        <human value="Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value"/>
+        <expression value="(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))"/>
+        <xpath value="not(.[f:extension[@url='http://fhir.nl/fhir/StructureDefinition/nl-core-address-official'][f:valueBoolean/@value='true']][f:line[empty(f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName'])][f:extension[@url=('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator')]]])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+      </constraint>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XAD"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="AD"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="Address"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-address-v2.0.1-2015EN"/>
+        <map value="NL-CM:0.1.4"/>
+        <comment value="AddressInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-addressinformation-v3.0-2016EN"/>
+        <map value="NL-CM:0.1.4"/>
+        <comment value="AddressInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-addressinformation-v1.0-2017EN"/>
+        <map value="NL-CM:20.5.1"/>
+        <comment value="AddressInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
+        <map value="NL-CM:17.1.7"/>
+        <comment value="Address"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v3.0-2016EN"/>
+        <map value="NL-CM:17.1.7"/>
+        <comment value="Address"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthprofessional-v3.2-2017EN"/>
+        <map value="NL-CM:17.1.7"/>
+        <comment value="AddressInformation"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.gender">
+      <path value="Practitioner.gender"/>
+      <short value="male | female | other | unknown"/>
+      <definition value="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes."/>
+      <requirements value="Needed to address the person correctly."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Practitioner.gender"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="AdministrativeGender"/>
+        </extension>
+        <strength value="required"/>
+        <description value="The gender of a person used for administrative purposes."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/administrative-gender"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="STF-5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./administrativeGender"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./GenderCode"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.birthDate">
+      <path value="Practitioner.birthDate"/>
+      <short value="The date  on which the practitioner was born"/>
+      <definition value="The date of birth for the practitioner."/>
+      <requirements value="Needed for identification."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Practitioner.birthDate"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="STF-6"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./birthTime"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="(not represented in ServD)"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.photo">
+      <path value="Practitioner.photo"/>
+      <short value="Image of the person"/>
+      <definition value="Image of the person."/>
+      <requirements value="Many EHR systems have the capability to capture an image of patients and personnel. Fits with newer social media usage too."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Practitioner.photo"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Attachment"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./subjectOf/ObservationEvent[code=&quot;photo&quot;]/value"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./ImageURI (only supports the URI reference)"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.qualification">
+      <path value="Practitioner.qualification"/>
+      <short value="Qualifications obtained by training and certification"/>
+      <definition value="Qualifications obtained by training and certification."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Practitioner.qualification"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() | (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="zv-pra-4"/>
+        <severity value="warning"/>
+        <human value="A SNOMED CT (beroep) code SHOULD be present."/>
+        <expression value="code.coding.where(system='http://snomed.info/sct')"/>
+        <xpath value="/f::code/f:coding/f:system='http://snomed.info/sct'"/>
+      </constraint>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CER?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".playingEntity.playingRole[classCode=QUAL].code"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Qualifications"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.qualification.id">
+      <path value="Practitioner.qualification.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.qualification.extension">
+      <path value="Practitioner.qualification.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.qualification.modifierExtension">
+      <path value="Practitioner.qualification.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.qualification.identifier">
+      <path value="Practitioner.qualification.identifier"/>
+      <short value="An identifier for this qualification for the practitioner"/>
+      <definition value="An identifier that applies to this person's qualification in this role."/>
+      <requirements value="Often, specific identities are assigned for the qualification."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Practitioner.qualification.identifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".playingEntity.playingRole[classCode=QUAL].id"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.qualification.code">
+      <path value="Practitioner.qualification.code"/>
+      <short value="Coded representation of the qualification"/>
+      <definition value="Coded representation of the qualification."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Practitioner.qualification.code"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="Qualification"/>
+        </extension>
+        <strength value="example"/>
+        <description value="Specific qualification the practitioner has to provide a service"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/v2-2.7-0360"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".playingEntity.playingRole[classCode=QUAL].code"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Qualifications.Value"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.qualification.period">
+      <path value="Practitioner.qualification.period"/>
+      <short value="Period during which the qualification is valid"/>
+      <definition value="Period during which the qualification is valid."/>
+      <requirements value="Qualifications are often for a limited period of time, and can be revoked."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Practitioner.qualification.period"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Period"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".playingEntity.playingRole[classCode=QUAL].effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Qualifications.StartDate and ./Qualifications.EndDate"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.qualification.issuer">
+      <path value="Practitioner.qualification.issuer"/>
+      <short value="Organization that regulates and issues the qualification"/>
+      <definition value="Organization that regulates and issues the qualification."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Practitioner.qualification.issuer"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".playingEntity.playingRole[classCode=QUAL].scoper"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.communication">
+      <path value="Practitioner.communication"/>
+      <short value="A language the practitioner is able to use in patient communication"/>
+      <definition value="A language the practitioner is able to use in patient communication."/>
+      <comment value="The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type."/>
+      <requirements value="Knowing which language a practitioner speaks can help in facilitating communication with patients."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Practitioner.communication"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet">
+          <valueReference>
+            <reference value="http://hl7.org/fhir/ValueSet/all-languages"/>
+          </valueReference>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="Language"/>
+        </extension>
+        <strength value="extensible"/>
+        <description value="A human language."/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/languages"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-15, NK1-20, LAN-2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./languageCommunication"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Languages.LanguageSpokenCode"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="Practitioner">
+      <path value="Practitioner"/>
+      <constraint>
+        <key value="zv-pra-3"/>
+        <severity value="error"/>
+        <human value="Either Practitioner BIG or AGB-Z identifier SHALL be present."/>
+        <expression value="identifier.where(system='http://fhir.nl/fhir/NamingSystem/agb-z') or identifier.where(system='http://fhir.nl/fhir/NamingSystem/big')"/>
+        <xpath value="/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z' or /f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/big'"/>
+      </constraint>
+    </element>
+    <element id="Practitioner.identifier">
+      <path value="Practitioner.identifier"/>
+      <min value="1"/>
+    </element>
+    <element id="Practitioner.identifier:AGB">
+      <path value="Practitioner.identifier"/>
+      <sliceName value="AGB"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Practitioner.identifier:BIG">
+      <path value="Practitioner.identifier"/>
+      <sliceName value="BIG"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Practitioner.name">
+      <path value="Practitioner.name"/>
+      <min value="1"/>
+      <constraint>
+        <key value="zv-pra-1"/>
+        <severity value="error"/>
+        <human value="Either Practitioner.name.given and/or Practitioner.name.family and/or Practitioner.name.text SHALL be present."/>
+        <expression value="(family.exists() or given.exists() or text.exists())"/>
+        <xpath value="/f:name/f:family or /f:name/f:given or /f:name/f:text"/>
+      </constraint>
+      <constraint>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice">
+          <valueBoolean value="true"/>
+        </extension>
+        <key value="zv-pra-2"/>
+        <severity value="warning"/>
+        <human value="To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present."/>
+        <expression value="text.exists()"/>
+        <xpath value="/f:name/f:text"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Practitioner.qualification">
+      <path value="Practitioner.qualification"/>
+      <constraint>
+        <key value="zv-pra-4"/>
+        <severity value="warning"/>
+        <human value="A SNOMED CT (beroep) code SHOULD be present."/>
+        <expression value="code.coding.where(system='http://snomed.info/sct')"/>
+        <xpath value="/f::code/f:coding/f:system='http://snomed.info/sct'"/>
+      </constraint>
+      <binding>
+        <strength value="extensible"/>
+        <description value="Subject rol waardelijst. Deze rol is nodig voor autorisatie bij de bron."/>
+        <valueSetReference>
+          <reference value="http://hl7.nl/fhir/zorgviewer/ValueSet/SubjectRoleCodelist"/>
+        </valueSetReference>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

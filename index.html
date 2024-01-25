@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Home Page - RIVO-Noord Zorgviewer MVP2 Implementation Guide v0.20.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/rivo.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://rivo-noord.nl"><img height="50"
+            alt="Visit the RIVO-Noord website" src="assets/images/rivonoord-logo.png" /> </a>
+</div>
+
+<div id="family-nav">
+    <a id="family-logo" no-external="true" href="https://hl7.nl"><img height="50" alt="Visit the HL7 NL website"
+            src="assets/images/HL7nl_Logo.png" /> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">RIVO-Noord Zorgviewer MVP2 Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.20.0 - CI build
+
+
+
+  <img alt="Netherlands flag" src="assets/images/nld.svg" height="16" title="Netherlands"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requirements &#8964;</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="conformance.html">Uitgangspunten en Requirements</a>
+			</li>
+			<li>
+				<a href="nen-normen.html">NEN Normen Conformiteit</a>
+			</li>
+			<li>
+				<a href="datasets.html">Datasets</a>
+			</li>
+			<li>
+				<a href="must-support.html">Must Support</a>
+			</li>
+		</ul>
+	</li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="design.html">Design</a>
+			</li>
+			<li>
+				<a href="design-background.html">Design Achtergrond</a>
+			</li>
+			<li>
+				<a href="security-design.html">Security Design</a>
+			</li>
+			<li>
+				<a href="zorgviewer-services.html">Zorgviewer Services</a>
+			</li>
+		</ul>
+	</li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="testing.html">Testing</a></li>
+  <li><a href="checklists.html">Checklists &amp; Aansluiten</a></li>
+  <li><a href="copyrights.html">Copyrights</a></li>
+  <li><a href="changes.html">Change Log</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home Page</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer MVP2 Implementation Guide - Local Development build (v0.20.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Home Page</h2>
+  
+
+
+
+
+
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.nl/fhir/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.nl/fhir/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.20.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hl7.nl/fhir/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer|0.20.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2024-01-25
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">zorgviewer-ig</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#historie" id="markdown-toc-historie">Historie</a></li>
+  <li><a href="#milestones" id="markdown-toc-milestones">Milestones</a></li>
+  <li><a href="#bouwblokken" id="markdown-toc-bouwblokken">Bouwblokken</a></li>
+  <li><a href="#bouwblokken-samenwerking" id="markdown-toc-bouwblokken-samenwerking">Bouwblokken samenwerking</a></li>
+  <li><a href="#functionaliteiten" id="markdown-toc-functionaliteiten">Functionaliteiten</a></li>
+  <li><a href="#dependencies" id="markdown-toc-dependencies">Dependencies</a></li>
+  <li><a href="#globals" id="markdown-toc-globals">Globals</a></li>
+</ul>
+
+</div>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>Zie <a href="http://rivo-noord.nl">RIVO NN</a> en met name <a href="https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/">RIVO-Noord Zorgviewer MVP2 Project</a>.</p>
+
+<h3 id="historie">Historie</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2020​</td>
+      <td><a href="">Netwerkzorg Architectuur​ vastgesteld</a></td>
+    </tr>
+    <tr>
+      <td>2021-nov​</td>
+      <td>Zorgviewer Prototype​ middels <a href="https://wiki-dhealth.web.rug.nl/index.php/Clinical_Connectathon_Netwerkzorg_Track">Clinical Connectathon Netwerkzorg</a></td>
+    </tr>
+    <tr>
+      <td>2022</td>
+      <td><a href="https://www.salesforce.com/nl/blog/2022/05/supernova.html">Supernova Zorgviewer MVP1</a></td>
+    </tr>
+    <tr>
+      <td>2023</td>
+      <td><a href="https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/">RIVO-Noord Zorgviewer MVP2 Project</a></td>
+    </tr>
+    <tr>
+      <td>2023-nov</td>
+      <td>tbd <em>Connectathon Behandelplan (HL7 NL en dHealthLab)</em>​</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="milestones">Milestones</h3>
+
+<ol>
+  <li><strong>(dec-2023) MVP2 Zorgviewer opstarten vanuit Epic (MCL, UMCG), Chipsoft (Martini ziekenhuis, Tjongerschans) en Topicus (Dokter Drenthe) en ontsluiten van de BgZ en PDF/a (voor zover ingericht in de bronnen adhv VIPP5 module 1 en 2 en VIPP OPEN)</strong>
+    <ol>
+      <li>Focus ligt eerst op BIG of AGB-Z geregistreerde gebruikers</li>
+      <li>Parallel: Uitbreiden vulling BgZ en PDF/a. Hiervoor zijn de EPD teams nodig</li>
+    </ol>
+  </li>
+  <li>Uitbreiden bronnen, uitbreiden “opstarten vanuit” en daarmee gebruikersgroepen</li>
+  <li>Uitbreiding zibs buiten BgZ - gegevenssets breder ondersteunen (Acute Zorg, HartNet, Oncologie, Palliatieve Zorg)</li>
+  <li>Behandelplan functionaliteit uitbreiden, keuze behandelplan en later workflow</li>
+  <li>Patiënt als gebruiker</li>
+</ol>
+
+<h4 id="prioritering-werkzaamheden">Prioritering werkzaamheden</h4>
+
+<ol>
+  <li>Correspondentie</li>
+  <li>(Radiologie) verslagen</li>
+  <li>Problemen</li>
+  <li>Verrichtingen</li>
+  <li>Behandelaanwijzingingen</li>
+  <li>Laboratorium uitslagen</li>
+</ol>
+
+<h3 id="bouwblokken">Bouwblokken</h3>
+
+<div style="clear:both;">
+<img src="bouwblokken.png" class="figure-img img-responsive img-rounded center-block" alt="Bouwblokken" style="width:70%" /><br />
+<center><strong>Bouwblokken</strong></center>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><a href="CapabilityStatement-Toestemming.html">Toestemming</a></strong></td>
+      <td>Inwoners van onze zorgregio geven op één keer, op één plek zorgverleners toestemming, dat zij  hun zorggegevens mogen inzien van andere behandelaren en vanuit andere zorgorganisaties.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="CapabilityStatement-ZorgviewerHost.html">Authenticatie</a></strong></td>
+      <td>Klopt het dat jij als zorgverlener bent, wie je zegt dat je bent? Werk jij echt bij die zorgorganisatie? Door middel van twee factor authenticatie binnen je eigen informatieomgeving wordt jouw identiteit op twee manieren gecheckt. Met deze authenticatie heb je ook toegang tot de Zorgviewer.</td>
+    </tr>
+    <tr>
+      <td><strong>Autorisatie</strong></td>
+      <td>Welke informatie van patiënten en cliënten is voor mij als zorgverlener beschikbaar? Mag je als apotheker bijvoorbeeld de volledige zorginformatie zien of heb je enkel inzag in labuitslagen en medicatie?<br /><strong>N.B. MVP2 heeft 1 autorisatie profiel, namelijk alle Zorgverleners die via de Authenticatie bouwblok toegang hebben tot de Zorgviewer hebben toegang tot de BgZ en Correspondentie van de patient.</strong></td>
+    </tr>
+    <tr>
+      <td><strong><a href="CapabilityStatement-Toestemming.html">Patiëntindex</a></strong></td>
+      <td>De patiëntindex maakt inzichtelijk bij welke zorgorganisaties de patiënt of cliënt bekend is. De zorgviewer bevraagt bij het inloggen door een zorgverlener enkel de informatiesystemen van deze zorgorganisaties.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="CapabilityStatement-Logging.html">Logging</a></strong></td>
+      <td>Wie logt wanneer en waar in? Het geautomatiseerde logboek houdt exact bij welke zorgverlener toegang heeft gevraagd en gekregen tot de zorginformatie van een patiënt of cliënt.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="CapabilityStatement-Behandelplan.html">Behandelplan</a></strong></td>
+      <td>De stappen die je als patiënt of cliënt doorloopt in het zorgpad. In de zorgviewer zie je een digitale weergave van het -regionaal overeengekomen- zorgpad. Aan de gestructureerde stappen ‘hangen’ informatiecomponenten vast.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="CapabilityStatement-OntsluitenBronsysteem.html">Ontsluiting bronsysteem</a></strong></td>
+      <td>Elk informatiesysteem communiceert in een eigen taal. Dit technische bouwblok is een koppeling, die ervoor zorgt, dat alle zorginformatie uit de verschillende bronsystemen in de zorgviewer in dezelfde taal beschikbaar is.</td>
+    </tr>
+    <tr>
+      <td><strong>Overname</strong> <em>TOEKOMST</em></td>
+      <td>Is de zorginformatie -beschikbaar in de zorgviewer, afkomstig van een ander bronsysteem- voor jou als zorgverlener relevant, dan kan je deze selecteren en overnemen in de informatieomgeving van jouw zorgorganisatie.</td>
+    </tr>
+    <tr>
+      <td><strong>Zorgviewer</strong></td>
+      <td>Alle bouwblokken samen vormen de zorgviewer. De zorgviewer combineert, ontdubbelt en filtert de informatie op basis van jouw behoefte als zorgverlener. De zorgviewer biedt zorgverleners een 360° beeld van de patiënt of cliënt. Opgebouwd uit alle beschikbare zorginformatie, waarvoor de patiënt of cliënt toestemming heeft gegeven.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Multi-inzetbaar</strong>: <em>De bouwblokken zijn niet alleen bruikbaar voor de regionale zorgviewer, maar zijn ook bruikbaar en essentieel voor het delen van diagnostiek, multidisciplinair overleg, monitoring en e-Health en de Persoonlijke Gezondheidsomgeving (PGO).</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong><a href="zorgviewer-services.html">Zorgviewer Services</a></strong></p>
+
+<h3 id="bouwblokken-samenwerking">Bouwblokken samenwerking</h3>
+
+<p>In onderstaande schema zie je de groepering en interacties (in globale volgorde) tussen de verschillende bouwblokken.</p>
+
+<div>
+<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="645px" preserveAspectRatio="none" style="width:1679px;height:645px;background:#FFFFFF;" version="1.1" viewBox="0 0 1679 645" width="1679px" zoomAndPan="magnify"><defs /><g><!--cluster cloud--><g id="cluster_cloud"><path d="M655.8826,29.5944 C663.8825,12.2746 678.275,13.2551 688.2913,27.5258 C697.1323,10.8257 707.1843,10.1764 718.6682,24.9772 C730.4291,6.4501 748.0585,11.6397 757.093,27.9816 C766.0434,14.0986 775.2462,12.124 785.7905,26.3547 C798.3348,7.0457 810.1496,6.2917 822.7099,26.3397 C830.0544,9.9595 847.1923,10.0926 857.0417,23.4474 C867.3463,10.4356 882.0675,10.1036 890.4326,25.7103 C901.9688,10.0973 911.9239,11.8623 922.2679,26.9467 C929.2178,9.8089 941.857,9.2661 952.1816,23.7547 C963.7658,6.0197 981.2979,6 989.3442,27.137 C1000.1931,13.7064 1012.8248,12.9181 1022.6811,28.2859 C1030.1419,10.3796 1045.1423,11.8922 1055.4483,25.3096 C1066.0039,10.6063 1079.1297,7.7206 1089.6843,25.3107 C1102.0748,12.5028 1118.2203,12.3004 1125,31.5012 C1126.3421,29.8943 1127.4955,29.6768 1128.6452,31.6947 C1152.3831,40.7049 1151.7681,61.8101 1133.8024,75.7069 C1153.6816,85.9535 1155.1722,104.5553 1134.2335,115.2469 C1156.0929,123.9405 1156.9571,141.0514 1141.0727,156.0685 C1154.1762,170.1918 1154.2642,185.3074 1133.2726,192.0368 C1150.6464,204.8029 1148.2494,223.7314 1128.8039,232.4234 C1145.1771,250.9457 1144.4104,270.0104 1118,278.5012 C1118.3109,278.2227 1118.5567,278.3092 1118.7319,278.6592 C1112.8806,293.9312 1096.7954,296.6916 1086.483,283.7604 C1077.7604,299.2578 1065.1494,300.8308 1055.1826,285.0037 C1046.9257,301.7847 1030.7909,303.1103 1021.5771,285.9512 C1010.8349,300.0876 999.0833,299.5176 988.8288,285.3861 C979.2722,302.79 966.1585,304.8813 952.3665,290.1992 C944.202,306.2134 932.4421,307.7598 921.6648,292.7879 C910.4695,309.0527 899.1886,308.7981 886.706,294.2484 C876.3843,306.9501 865.6177,309.142 855.167,294.3968 C842.9315,310.0469 828.9112,306.3212 819.6757,290.9631 C809.1553,308.0106 796.9778,307.0885 786.2269,291.1972 C773.6764,305.744 762.7083,305.8896 752.1936,288.9937 C741.1205,301.176 726.7144,302.4428 720.3685,284.0699 C708.2553,297.8748 696.1866,297.5423 686.2861,281.5399 C668.9209,296.4125 651.642,297.5859 644,271.5012 C646.8714,272.3928 648.2915,274.01 646.0279,276.8488 C627.0826,263.2323 622.1289,248.1825 643.7368,232.4723 C626.5152,220.6576 627.8614,209.5111 642.7422,196.8013 C620.7819,184.3569 620.1906,169.9693 640.5021,155.2462 C622.3853,140.2731 623.3053,128.4012 643.8938,116.8468 C623.6538,103.8061 622.406,90.4023 643.5912,77.0467 C623.9876,57.7932 621.8492,36.8805 651,24.5012 C654.4618,23.7987 657.0352,25.8734 655.8826,29.5944 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43" x="863" y="42.4963">cloud</text></g><!--cluster Epic huis--><g id="cluster_Epic huis"><polygon fill="none" points="596,353.5012,606,343.5012,1131,343.5012,1131,618.5012,1121,628.5012,596,628.5012,596,353.5012" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="1121" x2="1131" y1="353.5012" y2="343.5012" /><line style="stroke:#181818;stroke-width:1.0;" x1="596" x2="1121" y1="353.5012" y2="353.5012" /><line style="stroke:#181818;stroke-width:1.0;" x1="1121" x2="1121" y1="353.5012" y2="628.5012" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="70" x="824.5" y="369.4963">Epic huis</text></g><!--cluster Chipsoft of Topicus huis--><g id="cluster_Chipsoft of Topicus huis"><polygon fill="none" points="16,345.5012,26,335.5012,572,335.5012,572,476.5012,562,486.5012,16,486.5012,16,345.5012" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="562" x2="572" y1="345.5012" y2="335.5012" /><line style="stroke:#181818;stroke-width:1.0;" x1="16" x2="562" y1="345.5012" y2="345.5012" /><line style="stroke:#181818;stroke-width:1.0;" x1="562" x2="562" y1="345.5012" y2="486.5012" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="192" x="194" y="361.4963">Chipsoft of Topicus huis</text></g><!--cluster Zorgviewer Host Los--><g id="cluster_Zorgviewer Host Los"><polygon fill="none" points="1155,345.5012,1165,335.5012,1662,335.5012,1662,460.5012,1652,470.5012,1155,470.5012,1155,345.5012" style="stroke:#D3D3D3;stroke-width:1.0;" /><line style="stroke:#D3D3D3;stroke-width:1.0;" x1="1652" x2="1662" y1="345.5012" y2="335.5012" /><line style="stroke:#D3D3D3;stroke-width:1.0;" x1="1155" x2="1652" y1="345.5012" y2="345.5012" /><line style="stroke:#D3D3D3;stroke-width:1.0;" x1="1652" x2="1652" y1="345.5012" y2="470.5012" /><text fill="#808080" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="59" x="1375" y="361.4963">&#171;future&#187;</text><text fill="#808080" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="166" x="1321.5" y="377.7932">Zorgviewer Host Los</text></g><!--entity Zorgviewer--><g id="elem_Zorgviewer"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="117" x="718.5" y="208.0012" /><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="815.5" y="213.0012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="813.5" y="215.0012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="813.5" y="219.0012" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="733.5" y="240.9963">Zorgviewer</text></g><!--entity Behandelplan--><g id="elem_Behandelplan"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#D3D3D3;stroke-width:0.5;" width="135" x="981.5" y="51.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#D3D3D3;stroke-width:0.5;" width="15" x="1096.5" y="56.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#D3D3D3;stroke-width:0.5;" width="4" x="1094.5" y="58.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#D3D3D3;stroke-width:0.5;" width="4" x="1094.5" y="62.5012" /><text fill="#808080" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="59" x="1014.5" y="84.4963">&#171;future&#187;</text><text fill="#808080" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="996.5" y="100.7932">Behandelplan</text></g><!--entity Toestemming--><g id="elem_Toestemming"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#D3D3D3;stroke-width:0.5;" width="136" x="652" y="51.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#D3D3D3;stroke-width:0.5;" width="15" x="768" y="56.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#D3D3D3;stroke-width:0.5;" width="4" x="766" y="58.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#D3D3D3;stroke-width:0.5;" width="4" x="766" y="62.5012" /><text fill="#808080" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="59" x="685.5" y="84.4963">&#171;future&#187;</text><text fill="#808080" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="667" y="100.7932">Toestemming</text></g><!--entity Adressering--><g id="elem_Adressering"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#D3D3D3;stroke-width:0.5;" width="123" x="823.5" y="51.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#D3D3D3;stroke-width:0.5;" width="15" x="926.5" y="56.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#D3D3D3;stroke-width:0.5;" width="4" x="924.5" y="58.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#D3D3D3;stroke-width:0.5;" width="4" x="924.5" y="62.5012" /><text fill="#808080" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="59" x="850.5" y="84.4963">&#171;future&#187;</text><text fill="#808080" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="838.5" y="100.7932">Adressering</text></g><!--entity Zorgverlener\nDirectory--><g id="elem_Zorgverlener\nDirectory"><rect fill="#F1F1F1" height="78.8906" rx="2.5" ry="2.5" style="stroke:#D3D3D3;stroke-width:0.5;" width="129" x="987.5" y="191.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#D3D3D3;stroke-width:0.5;" width="15" x="1096.5" y="196.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#D3D3D3;stroke-width:0.5;" width="4" x="1094.5" y="198.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#D3D3D3;stroke-width:0.5;" width="4" x="1094.5" y="202.5012" /><text fill="#808080" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="59" x="1017.5" y="224.4963">&#171;future&#187;</text><text fill="#808080" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="1002.5" y="240.7932">Zorgverlener</text><text fill="#808080" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="1002.5" y="257.0901">Directory</text></g><!--entity Hyperspace--><g id="elem_Hyperspace"><rect fill="#F1F1F1" height="78.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="127" x="802.5" y="383.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="909.5" y="388.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="907.5" y="390.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="907.5" y="394.5012" /><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="87" x="817.5" y="416.4963">&#171;Zorgviewer</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="41" x="840.5" y="432.7932">Host&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="820" y="449.0901">Hyperspace</text></g><!--entity Epic Auth--><g id="elem_Epic Auth"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="150" x="965" y="391.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="1095" y="396.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1093" y="398.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1093" y="402.5012" /><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="110" x="980" y="424.4963">&#171;Authenticatie&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="1002.5" y="440.7932">Epic Auth</text></g><!--entity Broker--><g id="elem_Broker"><rect fill="#F1F1F1" height="78.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="155" x="612.5" y="383.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="747.5" y="388.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="745.5" y="390.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="745.5" y="394.5012" /><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="100" x="635" y="416.4963">&#171;Bronsysteem</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="80" x="645" y="432.7932">ontsluiting&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="627.5" y="449.0901">IRIS of Rhapsody</text></g><!--entity Epic--><g id="elem_Epic"><rect fill="#F1F1F1" height="78.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="140" x="796" y="533.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="916" y="538.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="914" y="540.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="914" y="544.5012" /><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="100" x="811" y="566.4963">&#171;Bronsysteem</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="80" x="821" y="582.7932">&amp; Logging&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="846.5" y="599.0901">Epic</text></g><!--entity HiX of VIPLive--><g id="elem_HiX of VIPLive"><rect fill="#F1F1F1" height="95.1875" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="163" x="207.5" y="375.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="350.5" y="380.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="348.5" y="382.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="348.5" y="386.5012" /><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="123" x="222.5" y="408.4963">&#171;Zorgviewer Host</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="71" x="248.5" y="424.7932">&amp; Logging</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="115" x="226.5" y="441.0901">&amp; Bronsysteem&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="239" y="457.3869">HiX of VIPLive</text></g><!--entity Zorgplatform of\nVIPLive Auth--><g id="elem_Zorgplatform of\nVIPLive Auth"><rect fill="#F1F1F1" height="78.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="150" x="406" y="383.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="536" y="388.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="534" y="390.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="534" y="394.5012" /><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="110" x="421" y="416.4963">&#171;Authenticatie&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="423" y="432.7932">Zorgplatform of</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="423" y="449.0901">VIPLive Auth</text></g><!--entity Zorgplatform\nof VIPLive--><g id="elem_Zorgplatform\nof VIPLive"><rect fill="#F1F1F1" height="95.1875" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="140" x="32" y="375.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="152" y="380.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="150" y="382.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="150" y="386.5012" /><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="100" x="47" y="408.4963">&#171;Bronsysteem</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="80" x="57" y="424.7932">ontsluiting&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="52.5" y="441.0901">Zorgplatform</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="52.5" y="457.3869">of VIPLive</text></g><!--entity ZV Los--><g id="elem_ZV Los"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#D3D3D3;stroke-width:0.5;" width="231" x="1415.5" y="391.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#D3D3D3;stroke-width:0.5;" width="15" x="1626.5" y="396.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#D3D3D3;stroke-width:0.5;" width="4" x="1624.5" y="398.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#D3D3D3;stroke-width:0.5;" width="4" x="1624.5" y="402.5012" /><text fill="#808080" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="191" x="1430.5" y="424.4963">&#171;Zorgviewer Host&#187;&#171;future&#187;</text><text fill="#808080" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="1502.5" y="440.7932">ZV Los</text></g><!--entity ZV Los Auth--><g id="elem_ZV Los Auth"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#D3D3D3;stroke-width:0.5;" width="209" x="1171.5" y="391.5012" /><rect fill="#F1F1F1" height="10" style="stroke:#D3D3D3;stroke-width:0.5;" width="15" x="1360.5" y="396.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#D3D3D3;stroke-width:0.5;" width="4" x="1358.5" y="398.5012" /><rect fill="#F1F1F1" height="2" style="stroke:#D3D3D3;stroke-width:0.5;" width="4" x="1358.5" y="402.5012" /><text fill="#808080" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="169" x="1186.5" y="424.4963">&#171;Authenticatie&#187;&#171;future&#187;</text><text fill="#808080" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="1229.5" y="440.7932">ZV Los Auth</text></g><!--link Hyperspace to Epic--><g id="link_Hyperspace_Epic"><path d="M866,462.8912 C866,482.9412 866,507.4712 866,528.1912 " fill="none" id="Hyperspace-to-Epic" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="866,533.3712,870,524.3712,866,528.3712,862,524.3712,866,533.3712" style="stroke:#181818;stroke-width:1.0;" /></g><!--link Broker to Epic--><g id="link_Broker_Epic"><path d="M736.24,462.8912 C760.8,483.5312 791,508.9312 816.09,530.0312 " fill="none" id="Broker-to-Epic" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="820.07,533.3712,815.7684,524.5114,816.2477,530.1479,810.6111,530.6271,820.07,533.3712" style="stroke:#181818;stroke-width:1.0;" /></g><!--link Epic Auth to Epic--><g id="link_Epic Auth_Epic"><path d="M1003.95,454.6712 C978.33,476.4512 943.62,505.9812 915.42,529.9712 " fill="none" id="Epic Auth-to-Epic" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="911.31,533.4612,920.7577,530.6791,915.1193,530.2225,915.5759,524.5841,911.31,533.4612" style="stroke:#181818;stroke-width:1.0;" /></g><!--link Zorgplatform\nof VIPLive to HiX of VIPLive--><g id="link_Zorgplatform\nof VIPLive_HiX of VIPLive"><path d="M172.12,423.0012 C182.1,423.0012 192.08,423.0012 202.06,423.0012 " fill="none" id="Zorgplatform\nof VIPLive-to-HiX of VIPLive" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="207.28,423.0012,198.28,419.0012,202.28,423.0012,198.28,427.0012,207.28,423.0012" style="stroke:#181818;stroke-width:1.0;" /></g><!--reverse link Zorgviewer to Hyperspace--><g id="link_Zorgviewer_Hyperspace"><path d="M790.6,258.8212 C797.18,271.9312 805.12,287.9812 812,302.5012 C824.72,329.3512 838.51,359.8812 848.97,383.3612 " fill="none" id="Zorgviewer-backto-Hyperspace" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="788.24,254.1312,788.6998,263.9693,790.4818,258.6005,795.8506,260.3825,788.24,254.1312" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62" x="820" y="315.5681">1. opstart</text></g><!--reverse link Zorgviewer to HiX of VIPLive--><g id="link_Zorgviewer_HiX of VIPLive"><path d="M713.02,237.4912 C632.79,246.6012 493.02,269.9312 388,327.5012 C365.91,339.6112 345.14,357.8912 328.39,375.1612 " fill="none" id="Zorgviewer-backto-HiX of VIPLive" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="718.22,236.9112,708.839,233.9118,713.2495,237.4539,709.7074,241.8645,718.22,236.9112" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62" x="438" y="315.5681">1. opstart</text></g><!--link ZV Los to Zorgviewer--><g id="link_ZV Los_Zorgviewer"><path d="M1498.28,391.3912 C1472.95,369.6312 1435.89,341.8212 1398,327.5012 C1298.93,290.0512 1266.63,310.2812 1161,302.5012 C1076.27,296.2612 1053.63,309.5012 970,294.5012 C924.22,286.2912 874.3,269.9112 836.71,255.9812 " fill="none" id="ZV Los-to-Zorgviewer" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;" /><polygon fill="#181818" points="831.72,254.1212,838.7425,261.0266,836.4016,255.8768,841.5515,253.536,831.72,254.1212" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62" x="1371" y="315.5681">1. opstart</text></g><!--link Zorgviewer to Epic Auth--><g id="link_Zorgviewer_Epic Auth"><path d="M824.28,254.0312 C859.66,271.5712 908.41,298.0012 947,327.5012 C970.15,345.1912 993.14,368.4912 1010.47,387.5212 " fill="none" id="Zorgviewer-to-Epic Auth" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="1013.86,391.2712,1010.7747,381.9181,1010.5002,387.5683,1004.85,387.2937,1013.86,391.2712" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="43" x="935" y="315.5681">2. wie?</text></g><!--link Zorgviewer to ZV Los Auth--><g id="link_Zorgviewer_ZV Los Auth"><path d="M835.63,252.8612 C873.62,265.9112 924.36,282.4712 970,294.5012 C1040.63,313.1112 1063.44,299.7412 1131,327.5012 C1168.22,342.7912 1206.18,367.9512 1233.92,388.4612 " fill="none" id="Zorgviewer-to-ZV Los Auth" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;" /><polygon fill="#181818" points="1237.93,391.4512,1233.0957,382.8704,1233.918,388.4672,1228.3213,389.2896,1237.93,391.4512" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="43" x="1109" y="315.5681">2. wie?</text></g><!--link Zorgviewer to Zorgplatform of\nVIPLive Auth--><g id="link_Zorgviewer_Zorgplatform of\nVIPLive Auth"><path d="M729.01,254.0212 C691.63,271.9412 639.05,298.8812 596,327.5012 C572.39,343.1912 547.91,362.7912 527.62,380.0612 " fill="none" id="Zorgviewer-to-Zorgplatform of\nVIPLive Auth" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="523.62,383.4812,533.0626,380.6816,527.4233,380.2355,527.8694,374.5962,523.62,383.4812" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="43" x="636" y="315.5681">2. wie?</text></g><!--reverse link Toestemming to Zorgviewer--><g id="link_Toestemming_Zorgviewer"><path d="M733.78,119.3012 C744.57,146.9312 759.23,184.4912 768.4,207.9812 " fill="none" id="Toestemming-backto-Zorgviewer" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="731.95,114.6112,731.4898,124.4493,733.765,119.2701,738.9441,121.5453,731.95,114.6112" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="752" y="157.5681">3a. waar?</text></g><!--reverse link Adressering to Zorgviewer--><g id="link_Adressering_Zorgviewer"><path d="M859.14,118.9612 C838.68,146.6212 810.74,184.3912 793.29,207.9812 " fill="none" id="Adressering-backto-Zorgviewer" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="862.36,114.6112,853.7904,119.4652,859.3852,118.63,860.2205,124.2248,862.36,114.6112" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="838" y="157.5681">3b. waar?</text></g><!--reverse link Behandelplan to Zorgviewer--><g id="link_Behandelplan_Zorgviewer"><path d="M989.28,117.1812 C964.23,131.0112 934.77,147.1512 908,161.5012 C878.71,177.2112 845.53,194.5512 819.89,207.8612 " fill="none" id="Behandelplan-backto-Zorgviewer" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="993.9,114.6312,984.0879,115.4808,989.5232,117.0485,987.9555,122.4838,993.9,114.6312" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="51" x="940" y="157.5681">4. filters</text></g><!--link Zorgviewer to Zorgplatform\nof VIPLive--><g id="link_Zorgviewer_Zorgplatform\nof VIPLive"><path d="M718.49,236.5112 C588.6,247.3212 280.52,277.5712 190,327.5012 C170.46,338.2812 152.8,354.9712 138.53,371.3412 " fill="none" id="Zorgviewer-to-Zorgplatform\nof VIPLive" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="134.97,375.4912,143.8628,371.2583,138.2228,371.6939,137.7872,366.0538,134.97,375.4912" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="259" y="315.5681">5. bevragen</text></g><!--link Zorgviewer to Broker--><g id="link_Zorgviewer_Broker"><path d="M759.94,254.2512 C750.22,267.6912 738.35,285.4612 730,302.5012 C718.14,326.7112 708.43,355.3112 701.55,378.4512 " fill="none" id="Zorgviewer-to-Broker" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="700.12,383.3012,706.5006,375.7986,701.5331,378.505,698.8268,373.5376,700.12,383.3012" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="731" y="315.5681">5. bevragen</text></g><!--link Zorgviewer to Zorgverlener\nDirectory--><g id="link_Zorgviewer_Zorgverlener\nDirectory"><path d="M835.66,231.0012 C878.49,231.0012 936.74,231.0012 982.01,231.0012 " fill="none" id="Zorgviewer-to-Zorgverlener\nDirectory" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="987.18,231.0012,978.18,227.0012,982.18,231.0012,978.18,235.0012,987.18,231.0012" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="115" x="854" y="224.0681">(opt)5b. bevragen</text></g></g></svg>
+</div>
+
+<h3 id="functionaliteiten">Functionaliteiten</h3>
+
+<p>Hierna volgt een schema met functionaliteiten per bouwblok.</p>
+
+<div>
+<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="349px" preserveAspectRatio="none" style="width:2472px;height:349px;background:#FFFFFF;" version="1.1" viewBox="0 0 2472 349" width="2472px" zoomAndPan="magnify"><defs /><g><!--cluster Zorgviewer--><g id="cluster_Zorgviewer"><path d="M8.5,75.364 L101.5,75.364 A3.75,3.75 0 0 1 104,77.864 L111,97.6608 L640.5,97.6608 A2.5,2.5 0 0 1 643,100.1608 L643,255.364 A2.5,2.5 0 0 1 640.5,257.864 L8.5,257.864 A2.5,2.5 0 0 1 6,255.364 L6,77.864 A2.5,2.5 0 0 1 8.5,75.364 " fill="none" style="stroke:#000000;stroke-width:1.5;" /><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="111" y1="97.6608" y2="97.6608" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="92" x="10" y="90.3591">Zorgviewer</text></g><!--cluster Epic, Chipsoft, Topicus, Zorgviewer Los--><g id="cluster_Epic, Chipsoft, Topicus, Zorgviewer Los"><path d="M669.5,56.864 L985.5,56.864 A3.75,3.75 0 0 1 988,59.364 L995,79.1608 L1233.5,79.1608 A2.5,2.5 0 0 1 1236,81.6608 L1236,253.364 A2.5,2.5 0 0 1 1233.5,255.864 L669.5,255.864 A2.5,2.5 0 0 1 667,253.364 L667,59.364 A2.5,2.5 0 0 1 669.5,56.864 " fill="none" style="stroke:#000000;stroke-width:1.5;" /><line style="stroke:#000000;stroke-width:1.5;" x1="667" x2="995" y1="79.1608" y2="79.1608" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="315" x="671" y="71.8591">Epic, Chipsoft, Topicus, Zorgviewer Los</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="132" x="889.5" y="94.1559">&#171;Zorgviewer Host&#187;</text></g><g id="cluster_##16"><path d="M1282.2343,61.5536 C1308.0611,22.4436 1331.3779,20.9962 1357.0049,61.7407 C1381.8405,19.1183 1409.2922,20.772 1436.1337,59.7966 C1462.7012,13.6016 1492.401,13.7601 1526.1679,52.1317 C1552.7492,17.8586 1584.8078,11.8076 1607.0532,56.5692 C1631.9611,24.4377 1654.7194,22.292 1675.6565,60.445 C1694.6018,22.3569 1727.4744,13.8625 1756.7244,49.0435 C1788.3876,6 1827.0604,11.444 1847.9536,59.7941 C1871.4698,25.1594 1895.1734,15.1065 1923.8311,54.526 C1945.0898,10.6508 1976.0644,15.183 2002.6864,49.0885 C2035.4394,18.2211 2067.3711,17.9521 2089.351,61.6155 C2114.2726,25.0068 2144.7591,23.5839 2169.3959,61.9198 C2188.2527,26.32 2222.7318,29.7535 2244.0889,59.0417 C2262.9743,16.5531 2289.8702,13.6578 2318.2414,50.134 C2343.8567,13.3611 2383.6494,20.6951 2403,57.364 C2408.8558,54.7333 2411.6391,57.6538 2411.2718,63.4631 C2465.4727,91.2128 2458.9431,136.3404 2411.4374,164.2572 C2458.569,209.5529 2447.1147,243.7188 2396,275.364 C2403.2439,277.3218 2403.4998,283.4986 2398.0965,287.6199 C2379.4458,324.7719 2349.0137,325.7233 2329.6186,288.3034 C2304.7196,334.5116 2273.5678,331.7268 2245.2088,291.6899 C2218.7053,329.0857 2195.1146,323.7857 2169.2011,291.0504 C2146.0068,336.0885 2104.8973,341.221 2076.3386,296.6069 C2049.1236,331.4396 2021.6224,329.2568 1998.2593,292.411 C1974.9644,322.5402 1948.9784,331.114 1926.3248,291.7471 C1904.2147,334.1609 1875.324,341.933 1843.8521,301.0121 C1816.3353,342.6567 1776.5068,334.6984 1756.9922,292.702 C1735.1297,326.7621 1706.1532,323.1879 1685.7326,291.1476 C1656.2194,333.1169 1629.1901,322.8062 1604.1199,286.5144 C1583.8093,331.0341 1545.6645,331.523 1517.4087,295.0172 C1492.783,321.8471 1461.294,323.9935 1444.1757,286.4734 C1419.9973,318.7637 1376.8067,324.7221 1359.3923,279.1117 C1324.1673,316.6283 1293.24,315.7537 1268,268.364 C1274.4052,269.1731 1275.4548,272.4632 1272.8158,277.8594 C1228.0573,250.1354 1220.6298,208.0393 1265.7301,174.1745 C1205.1072,131.1271 1205.2346,83.6489 1275,50.364 C1283.3284,49.7892 1286.0656,54.2668 1282.2343,61.5536 " fill="none" style="stroke:#181818;stroke-width:1.0;" /></g><!--cluster Behandelplan--><g id="cluster_Behandelplan"><path d="M1825.5,66.364 L1932.5,66.364 A3.75,3.75 0 0 1 1935,68.864 L1942,88.6608 L2384.5,88.6608 A2.5,2.5 0 0 1 2387,91.1608 L2387,256.864 A2.5,2.5 0 0 1 2384.5,259.364 L1825.5,259.364 A2.5,2.5 0 0 1 1823,256.864 L1823,68.864 A2.5,2.5 0 0 1 1825.5,66.364 " fill="none" style="stroke:#000000;stroke-width:1.5;" /><line style="stroke:#000000;stroke-width:1.5;" x1="1823" x2="1942" y1="88.6608" y2="88.6608" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="106" x="1827" y="81.3591">Behandelplan</text></g><!--cluster Toestemming & Patientindex--><g id="cluster_Toestemming &amp; Patientindex"><path d="M1286.5,66.364 L1515.5,66.364 A3.75,3.75 0 0 1 1518,68.864 L1525,88.6608 L1796.5,88.6608 A2.5,2.5 0 0 1 1799,91.1608 L1799,173.864 A2.5,2.5 0 0 1 1796.5,176.364 L1286.5,176.364 A2.5,2.5 0 0 1 1284,173.864 L1284,68.864 A2.5,2.5 0 0 1 1286.5,66.364 " fill="none" style="stroke:#000000;stroke-width:1.5;" /><line style="stroke:#000000;stroke-width:1.5;" x1="1284" x2="1525" y1="88.6608" y2="88.6608" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="228" x="1288" y="81.3591">Toestemming &amp; Patientindex</text></g><g id="elem_Patient banner"><ellipse cx="115.0678" cy="130.8775" fill="#F1F1F1" rx="73.0678" ry="17.0136" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="61.5678" y="134.6251">Patient banner</text></g><g id="elem_Weergave gegevens"><ellipse cx="279.1144" cy="130.7868" fill="#F1F1F1" rx="90.1144" ry="20.4229" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="208.1144" y="133.6335">Weergave gegevens</text></g><g id="elem_Sorteren"><ellipse cx="424.8402" cy="131.0978" fill="#F1F1F1" rx="54.8402" ry="14.7338" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="391.8402" y="134.8453">Sorteren</text></g><g id="elem_Conflicten attenderen"><ellipse cx="115.1693" cy="217.9978" fill="#F1F1F1" rx="93.6693" ry="21.1339" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="40.1693" y="220.8445">Conflicten attenderen</text></g><g id="elem_Ontdubbelen gegevens"><ellipse cx="309.9738" cy="217.7587" fill="#F1F1F1" rx="99.9738" ry="22.3948" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="164" x="227.9738" y="220.6054">Ontdubbelen gegevens</text></g><g id="elem_Filtering obv Behandelplan"><ellipse cx="519.209" cy="217.9057" fill="#F1F1F1" rx="108.209" ry="24.0418" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="182" x="428.209" y="220.7524">Filtering obv Behandelplan</text></g><g id="elem_Opstart Zorgviewer"><ellipse cx="769.228" cy="130.9096" fill="#F1F1F1" rx="85.728" ry="19.5456" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="703.228" y="133.7562">Opstart Zorgviewer</text></g><g id="elem_Stelt identity vast"><ellipse cx="934.8735" cy="130.6387" fill="#F1F1F1" rx="79.3735" ry="18.2747" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="874.4676" y="134.0888">Stelt identity vast</text></g><g id="elem_Controle behandelrelatie"><ellipse cx="1118.2042" cy="130.8048" fill="#F1F1F1" rx="102.7042" ry="22.9408" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="170" x="1033.2042" y="133.6515">Controle behandelrelatie</text></g><g id="elem_Patient selectie"><ellipse cx="768.9948" cy="217.7629" fill="#F1F1F1" rx="74.9948" ry="17.399" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="712.9948" y="221.5105">Patient selectie</text></g><g id="elem_Zorgverlener gegevens"><ellipse cx="944.0673" cy="218.0774" fill="#F1F1F1" rx="99.0673" ry="22.2135" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="863.0673" y="220.9241">Zorgverlener gegevens</text></g><g id="elem_Zorgverlener rollen"><ellipse cx="1129.7932" cy="217.8226" fill="#F1F1F1" rx="85.2932" ry="19.4586" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="1064.2932" y="220.6693">Zorgverlener rollen</text></g><g id="elem_Behandelplannen adhv diagnose"><ellipse cx="1968.7544" cy="130.6148" fill="#F1F1F1" rx="129.2544" ry="28.2509" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="227" x="1855.2544" y="133.4615">Behandelplannen adhv diagnose</text></g><g id="elem_Relevante gegevens adhv zorgpad"><ellipse cx="2234.9233" cy="130.8486" fill="#F1F1F1" rx="135.4233" ry="29.4847" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="240" x="2114.9233" y="133.6953">Relevante gegevens adhv zorgpad</text></g><g id="elem_Relevante gegevens adhv rol"><ellipse cx="1969.0602" cy="218.076" fill="#F1F1F1" rx="116.5602" ry="25.712" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="200" x="1869.0602" y="220.9227">Relevante gegevens adhv rol</text></g><g id="elem_Toegestane bronsystemen patient"><ellipse cx="1646.9233" cy="130.8486" fill="#F1F1F1" rx="135.4233" ry="29.4847" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="240" x="1526.9233" y="133.6953">Toegestane bronsystemen patient</text></g><g id="elem_Bronsystemen endpoints"><ellipse cx="1404.9911" cy="130.7622" fill="#F1F1F1" rx="104.9911" ry="23.3982" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175" x="1317.4911" y="133.6088">Bronsystemen endpoints</text></g></g></svg>
+</div>
+
+<h4 id="leeswijzer-implementatiegids">Leeswijzer implementatiegids</h4>
+
+<ul>
+  <li><a href="datasets.html">Datasets</a> = content van praktijkvoorbeelden</li>
+  <li><a href="design.html">Design</a> = startpagina bouwteam</li>
+  <li><a href="artifacts.html">Artifact index</a> = beschrijving van onder andere de FHIR resources</li>
+  <li><a href="checklists.html">Checklists</a> = startpagina voor aansluiten van nieuwe zorgaanbieders</li>
+</ul>
+
+<h5 id="bijbehorende-zibs-zoeken-van-een-fhir-resource">Bijbehorende Zibs zoeken van een FHIR resource</h5>
+
+<ul>
+  <li>In onderstaande voorbeeld staat “This structure is derived from Zib Problem”, deze link gaat naar de volledige zib op Simplifier.net. Op deze site staat onder het tabblad ‘Mappings’ bovenaan in de tabel de directe link naar de zib op zibs.nl.</li>
+  <li>Ook in de link onder het kopje ‘Type’, in dit geval ‘Zib Prolem’ gaat de link naar Simplifier.net. Het ‘Overview’ tabblad is de FHIR-representatie van de Zib. Daarin zitten de Mappings terug naar de Zib.</li>
+  <li>In de kolom “Description” staat de naam van het element in de Zib. Via bovenstaande links naar Simplifier.net staat in de kolom ‘Mappings’ de uitgebreide beschrijving.</li>
+</ul>
+<div>
+<div style="clear:both;">
+<img src="leeswijzer-fhir-resources-en-zibs.png" class="figure-img img-responsive img-rounded center-block" alt="" style="width:70%" /><br />
+<center><strong></strong></center>
+</div>
+</div>
+
+<h3 id="dependencies">Dependencies</h3>
+
+<div><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Implementation Guide Reference">IG</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR</span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/zorgviewer-ig/zorgviewer-ig/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <span title="Canonical: http://hl7.nl/fhir/zorgviewer">RIVO-Noord Zorgviewer MVP2 Implementation Guide</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.nl.zorgviewer/0.20.0">hl7.fhir.nl.zorgviewer#0.20.0</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3">R3</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/zorgviewer-ig/zorgviewer-ig/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://terminology.hl7.org/5.3.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r3/5.3.0">hl7.terminology.r3#5.3.0</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3">R3</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/zorgviewer-ig/zorgviewer-ig/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALElEQVR4Xu3IsQ0AIAwEsez6+89AqKGGJj7JzVWS+mm3zgcAAMxwDQAAgFcaYAVAgNGLTjgAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_MedMij" title="Canonical: null">Nictiz FHIR NL STU3 Zib2017</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.16">nictiz.fhir.nl.stu3.zib2017#2.2.16</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3">R3</a></td></tr>
+</table></div>
+<table class="grid"><tr><td><p><b>Package nictiz.fhir.nl.stu3.zib2017#2.2.16</b></p>
+<p>Nictiz NL package of FHIR STU3 conformance resources for HCIM Release 2017. Includes MedMij and HL7 NL.</p>
+<p>HCIMs: https://zibs.nl/wiki/HCIM<em>Release</em>2017(EN)</p>
+</td></tr></table>
+<!--$$3$$-->
+
+<h3 id="globals">Globals</h3>
+
+<p><i>There are no Global profiles defined</i></p>
+<!--$$4$$-->
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023 <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.20.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Thu, Jan 25, 2024 12:12+0000">2024-01-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

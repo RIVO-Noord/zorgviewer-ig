@@ -1,0 +1,128 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/ConceptMap/behandelaanwijzing-2017-2020> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "behandelaanwijzing-2017-2020"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from https://zibs.nl/wiki/TreatmentDirective-v3.1(2017EN) to https://zibs.nl/wiki/TreatmentDirective2-v1.0(2020EN)</p><p>ACTIVE (not intended for production usage). Published on 2024-01-25 12:12:38+0000 by RIVO-NN HL7NL (RIVO-NN: <a href=\"https://rivo-noord.nl\">https://rivo-noord.nl</a>, HL7NL: <a href=\"https://hl7.nl\">https://hl7.nl</a>). </p><div><p>Deze ConceptMap representeert de mapping tussen de BehandelingAanwijzing 2017 en de BehandelAanwijzing2 2020.</p>\n</div><br/><p><b>Group 1</b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>Beperkingen</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#null\"/></td><td>SpecificatieAnders</td></tr><tr><td>BeginDatum</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#null\"/></td><td>MeestRecenteBespreekdatum</td></tr><tr><td>EindDatum</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#null\"/></td><td>DatumBeeindigd</td></tr><tr><td>Toelichting</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#null\"/></td><td>Toelichting</td></tr></table><hr/><p><b>Group 2</b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>JA</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#null\"/></td><td>0 (Wel uitvoeren)</td></tr><tr><td>NEE</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#null\"/></td><td>2 (Niet uitvoeren)</td></tr><tr><td>JA_MAAR (Ja, maar met beperkingen)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#null\"/></td><td>1 (Anders)</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.nl/fhir/zorgviewer/ConceptMap/behandelaanwijzing-2017-2020"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.20.0"] ; # 
+  fhir:name [ fhir:v "behandelaanwijzing2017to2020"] ; # 
+  fhir:title [ fhir:v "Behandelaanwijzing 2017 BehandelingAanwijzing2 2020 Mapping"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-01-25T12:12:38+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "RIVO-NN" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://rivo-noord.nl" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "HL7NL" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://hl7.nl" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Deze ConceptMap representeert de mapping tussen de BehandelingAanwijzing 2017 en de BehandelAanwijzing2 2020."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NL" ]
+     ] )
+  ] ) ; # 
+  fhir:source [ fhir:v "https://zibs.nl/wiki/TreatmentDirective-v3.1(2017EN)"^^xsd:anyURI] ; # 
+  fhir:target [ fhir:v "https://zibs.nl/wiki/TreatmentDirective2-v1.0(2020EN)"^^xsd:anyURI] ; # 
+  fhir:group ( [
+     fhir:element ( [
+       fhir:code [ fhir:v "Beperkingen" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "SpecificatieAnders" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "BeginDatum" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equal" ]
+         ] ) ;
+         fhir:code [ fhir:v "MeestRecenteBespreekdatum" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "EindDatum" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "DatumBeeindigd" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Toelichting" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equal" ]
+         ] ) ;
+         fhir:code [ fhir:v "Toelichting" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] )
+  ] [
+     fhir:element ( [
+       fhir:code [ fhir:v "JA" ] ;
+       fhir:display [ fhir:v "Ja" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equal" ]
+         ] ) ;
+         fhir:code [ fhir:v "0" ] ;
+         fhir:display [ fhir:v "Wel uitvoeren" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "NEE" ] ;
+       fhir:display [ fhir:v "Nee" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equal" ]
+         ] ) ;
+         fhir:code [ fhir:v "2" ] ;
+         fhir:display [ fhir:v "Niet uitvoeren" ] ;
+         fhir:equivalence [ fhir:v "equal" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "JA_MAAR" ] ;
+       fhir:display [ fhir:v "Ja, maar met beperkingen" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "Anders" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

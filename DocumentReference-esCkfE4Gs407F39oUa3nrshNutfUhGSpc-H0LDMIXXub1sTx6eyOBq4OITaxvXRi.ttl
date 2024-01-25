@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi> a fhir:DocumentReference ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DocumentReference</b><a name=\"esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DocumentReference &quot;esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi&quot; </p></div><p><b>masterIdentifier</b>: id: Z1384252^55437.99^A0</p><p><b>identifier</b>: id: 269312157</p><p><b>status</b>: current</p><p><b>docStatus</b>: final</p><p><b>type</b>: Patiëntenbrief <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#56444-3 &quot;Healthcare communication Document&quot;; unknown#2101200003)</span></p><p><b>class</b>: Correspondence <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (document-reference-class#correspondence)</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=https:///example.org/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3\">https:///example.org/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3: Fictief, Jan</a></p><p><b>created</b>: 2021-12-15 09:42:11+0000</p><p><b>indexed</b>: Dec 15, 2021, 9:42:11 AM</p><p><b>author</b>: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=https://example.org/PRD-OAUTH2/api/FHIR/STU3/Practitioner/ec6Rbm68P1PUCdhJhmzP0Jg-DOxJbgJDmPpildGhow943\">https://example.org/PRD-OAUTH2/api/FHIR/STU3/Practitioner/ec6Rbm68P1PUCdhJhmzP0Jg-DOxJbgJDmPpildGhow943: G Boer</a></p><p><b>description</b>: Patiëntenbrief</p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td><a href=\"https://example.org/PRD-OAUTH2/api/FHIR/STU3/Binary/H6MxvY5-Q6bvzVSBsmNKpOld.Wwpzbc3P0Wj3zdD-lGov.W-bA1q9NpIp1RSdgAg\">https://example.org/PRD-OAUTH2/api/FHIR/STU3/Binary/H6MxvY5-Q6bvzVSBsmNKpOld.Wwpzbc3P0Wj3zdD-lGov.W-bA1q9NpIp1RSdgAg</a></td></tr></table></blockquote><h3>Contexts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Encounter</b></td><td><b>Period</b></td><td><b>PracticeSetting</b></td></tr><tr><td style=\"display: none\">*</td><td><span>: Brief (uit)</span></td><td>2021-12-15 09:36:00+0000 --&gt; (ongoing)</td><td>KGA - Genetica <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#039000)</span></td></tr></table></div>"
+  ] ; # 
+  fhir:masterIdentifier [
+     fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.2.7.6.698084.19749"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Z1384252^55437.99^A0" ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.2.7.2.727879"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "269312157" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:docStatus [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:56444-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "56444-3" ] ;
+       fhir:display [ fhir:v "Healthcare communication Document" ]
+     ] [
+       fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.2.7.10.698084.20208"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2101200003" ] ;
+       fhir:display [ fhir:v "Patiëntenbrief" ]
+     ] ) ;
+     fhir:text [ fhir:v "Patiëntenbrief" ]
+  ] ; # 
+  fhir:class [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://open.epic.com/FHIR/StructureDefinition/document-reference-class"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "correspondence" ] ;
+       fhir:display [ fhir:v "Correspondence" ]
+     ] ) ;
+     fhir:text [ fhir:v "Correspondence" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https:///example.org/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3> ;
+     fhir:reference [ fhir:v "https:///example.org/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3" ] ;
+     fhir:display [ fhir:v "Fictief, Jan" ]
+  ] ; # 
+  fhir:created [ fhir:v "2021-12-15T09:42:11Z"^^xsd:dateTime] ; # 
+  fhir:indexed [ fhir:v "2021-12-15T09:42:11Z"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:link <https://example.org/PRD-OAUTH2/api/FHIR/STU3/Practitioner/ec6Rbm68P1PUCdhJhmzP0Jg-DOxJbgJDmPpildGhow943> ;
+     fhir:reference [ fhir:v "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Practitioner/ec6Rbm68P1PUCdhJhmzP0Jg-DOxJbgJDmPpildGhow943" ] ;
+     fhir:display [ fhir:v "G Boer" ]
+  ] ) ; # 
+  fhir:description [ fhir:v "Patiëntenbrief"] ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:url [ fhir:v "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Binary/H6MxvY5-Q6bvzVSBsmNKpOld.Wwpzbc3P0Wj3zdD-lGov.W-bA1q9NpIp1RSdgAg"^^xsd:anyURI ]
+     ]
+  ] ) ; # 
+  fhir:context [
+     fhir:encounter [
+       fhir:identifier [
+         fhir:use [ fhir:v "usual" ] ;
+         fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.2.7.3.698084.8"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "1043087869" ]
+       ] ;
+       fhir:display [ fhir:v "Brief (uit)" ]
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2021-12-15T09:36:00Z"^^xsd:dateTime ]
+     ] ;
+     fhir:practiceSetting [
+       fhir:coding ( [
+         fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.2.7.10.727879.59"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "039000" ] ;
+         fhir:display [ fhir:v "KGA - Genetica" ]
+       ] ) ;
+       fhir:text [ fhir:v "KGA - Genetica" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

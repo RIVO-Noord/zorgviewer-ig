@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="b5160776-43dc-43e1-9bb7-a6e3edf8e63d"/>
+  <meta>
+    <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h3>Practitioner resource:</h3><ul><li><p><strong>Identification:</strong> &#x27; 2.16.840.1.113883.2.4.6.1, 03123456&#x27;</p></li><li><p><strong>Name:</strong> &#x27;Lisette (L.) van Cruijningen de Winter&#x27;</p></li><li><p><strong>Phone number:</strong> &#x27;&#x2B;3120&#x27;</p></li><li><p><strong>Address</strong> &#x27;Tt.Melissaweg 1033SP Amsterdam (AMSTERDAM)&#x27;</p></li></ul></div>
+  </text>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+    <value value="03123456"/>
+  </identifier>
+  <name>
+    <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+      <valueCode value="NL4"/>
+    </extension>
+    <family value="van Cruijningen de Winter">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+        <valueString value="van"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Cruijningen"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
+        <valueString value="de"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
+        <valueString value="Winter"/>
+      </extension>
+    </family>
+    <given value="Lisette">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="CL"/>
+      </extension>
+    </given>
+    <given value="L.">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="IN"/>
+      </extension>
+    </given>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+3120"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/v3/AddressUse"/>
+          <code value="DIR"/>
+          <display value="Work Place"/>
+        </coding>
+        <text value="Work Place"/>
+      </valueCodeableConcept>
+    </extension>
+    <use value="work"/>
+    <line value="Tt.Melissaweg">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+        <valueString value="Tt.Melissaweg"/>
+      </extension>
+    </line>
+    <city value="Amsterdam"/>
+    <district value="AMSTERDAM"/>
+    <postalCode value="1033SP"/>
+  </address>
+</Practitioner>

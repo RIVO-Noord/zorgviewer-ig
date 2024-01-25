@@ -1,0 +1,373 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Chipsoft Lab-uitslag Example - XML Representation - RIVO-Noord Zorgviewer MVP2 Implementation Guide v0.20.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/rivo.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"15.64"}
+    h3,h4,h5,h6{--heading-prefix:"15.64"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://rivo-noord.nl"><img height="50"
+            alt="Visit the RIVO-Noord website" src="assets/images/rivonoord-logo.png" /> </a>
+</div>
+
+<div id="family-nav">
+    <a id="family-logo" no-external="true" href="https://hl7.nl"><img height="50" alt="Visit the HL7 NL website"
+            src="assets/images/HL7nl_Logo.png" /> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">RIVO-Noord Zorgviewer MVP2 Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.20.0 - CI build
+
+
+
+  <img alt="Netherlands flag" src="assets/images/nld.svg" height="16" title="Netherlands"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requirements &#8964;</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="conformance.html">Uitgangspunten en Requirements</a>
+			</li>
+			<li>
+				<a href="nen-normen.html">NEN Normen Conformiteit</a>
+			</li>
+			<li>
+				<a href="datasets.html">Datasets</a>
+			</li>
+			<li>
+				<a href="must-support.html">Must Support</a>
+			</li>
+		</ul>
+	</li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="design.html">Design</a>
+			</li>
+			<li>
+				<a href="design-background.html">Design Achtergrond</a>
+			</li>
+			<li>
+				<a href="security-design.html">Security Design</a>
+			</li>
+			<li>
+				<a href="zorgviewer-services.html">Zorgviewer Services</a>
+			</li>
+		</ul>
+	</li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="testing.html">Testing</a></li>
+  <li><a href="checklists.html">Checklists &amp; Aansluiten</a></li>
+  <li><a href="copyrights.html">Copyrights</a></li>
+  <li><a href="changes.html">Change Log</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Chipsoft Lab-uitslag Example</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer MVP2 Implementation Guide - Local Development build (v0.20.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Observation-39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Observation-39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Chipsoft Lab-uitslag Example - XML Representation</h2>
+
+
+<p><a href="Observation-39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C.xml" no-download="true">Raw xml</a> | <a href="Observation-39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" style="white-space: pre; text-wrap: nowrap;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
+
+&lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation">Observation</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.id">id</a>
+      <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h3&gt;Observation resource for laboratory test result:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Resource ID:&lt;/strong&gt; &amp;#x27;39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Profile:&lt;/strong&gt; &amp;#x27;http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Identifier:&lt;/p&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Use&lt;/th&gt;&lt;th&gt;System&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;urn:oid:2.16.840.1.113883.2.4.3.124.7.26436.6&lt;/td&gt;&lt;td&gt;6580E40AF9B642F5B6910110EE6284CA&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Status:&lt;/strong&gt; &amp;#x27;Definitief&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt;&lt;/p&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Text&lt;/th&gt;&lt;th&gt;Display:&lt;/th&gt;&lt;th&gt;Code:&lt;/th&gt;&lt;th&gt;Code system:&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Laboratory test finding(finding)&lt;/td&gt;&lt;td&gt;Laboratory test finding(finding)&lt;/td&gt;&lt;td&gt;49581000146104&lt;/td&gt;&lt;td&gt;http://snomed.info/sct&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Klinische chemie&lt;/td&gt;&lt;td&gt;Chemistry&lt;/td&gt;&lt;td&gt;275711006&lt;/td&gt;&lt;td&gt;http://snomed.info/sct&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Code:&lt;/strong&gt; &amp;#x27;Chloride&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt; &amp;#x27;Johan XXX_Helleman_Afblijven&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Effective:&lt;/strong&gt; &amp;#x27;2022-09-30T13:48:00&amp;#x2B;02:00&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Value:&lt;/strong&gt; &amp;#x27;109 &amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Interpretation:&lt;/p&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Code&lt;/th&gt;&lt;th&gt;Code system&lt;/th&gt;&lt;th&gt;Display&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;281302008&lt;/td&gt;&lt;td&gt;http://snomed.info/sct&lt;/td&gt;&lt;td&gt;Above reference range&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Specimen:&lt;/strong&gt; &amp;#x27;Serum&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Reference range:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Lower bound &amp;#x27;99 &amp;#x27;, upper bound &amp;#x27;108 &amp;#x27;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;urn:oid:2.16.840.1.113883.2.4.3.124.7.26436.6&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;6580E40AF9B642F5B6910110EE6284CA&quot;/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;final&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#code#code.extension">extension</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://nictiz.nl/fhir/StructureDefinition/code-specification&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.16.1&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;final&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Final&quot;/&gt;
+        &lt;/coding&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Definitief&quot;/&gt;
+      &lt;/valueCodeableConcept&gt;
+    &lt;/extension&gt;
+  &lt;/status&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.category">category</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;49581000146104&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Laboratory test finding(finding)&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Laboratory test finding(finding)&quot;/&gt;
+  &lt;/category&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.category">category</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;275711006&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Chemistry&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Klinische chemie&quot;/&gt;
+  &lt;/category&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.code">code</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;2069-3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Chloride&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Chloride&quot;/&gt;
+  &lt;/code&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.subject">subject</a>&gt;<a href="Patient-9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1.html" style="color: Maroon">&#x1F517;</a> 
+    &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Johan XXX_Helleman_Afblijven&quot;/&gt;
+  &lt;/subject&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.effective[x]">effectiveDateTime</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2022-09-30T13:48:00+02:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.value[x]">valueQuantity</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Quantity#Quantity.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;109&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Quantity#Quantity.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://unitsofmeasure.org&quot;/&gt;
+  &lt;/valueQuantity&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.interpretation">interpretation</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;281302008&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Above reference range&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/v2/0078&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;H&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;High&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Boven referentiewaarde&quot;/&gt;
+  &lt;/interpretation&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.specimen">specimen</a>&gt;<a href="Specimen-35648ae9-a74d-4800-9f15-4e436ebd12c8.html" style="color: Maroon">&#x1F517;</a> 
+    &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Specimen/35648ae9-a74d-4800-9f15-4e436ebd12c8&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Serum&quot;/&gt;
+  &lt;/specimen&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.referenceRange">referenceRange</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.referenceRange.low">low</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#SimpleQuantity#Quantity.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;99&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#SimpleQuantity#Quantity.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://unitsofmeasure.org&quot;/&gt;
+    &lt;/low&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/observation.html#Observation.referenceRange.high">high</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#SimpleQuantity#Quantity.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;108&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#SimpleQuantity#Quantity.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://unitsofmeasure.org&quot;/&gt;
+    &lt;/high&gt;
+  &lt;/referenceRange&gt;
+&lt;/Observation&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023 <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.20.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Thu, Jan 25, 2024 12:12+0000">2024-01-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

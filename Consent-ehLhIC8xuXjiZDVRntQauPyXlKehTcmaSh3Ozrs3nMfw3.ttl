@@ -1,0 +1,114 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3> a fhir:_Consent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3"] ; # 
+  fhir:meta [
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Consent</b><a name=\"ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Consent &quot;ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective\">HCIM TreatmentDirective</a></p></div><blockquote><p><b>HCIM TreatmentDirective Verification</b></p><p><b>url</b>: <code>Verified</code></p><p><b>value</b>: true</p><p><b>url</b>: <code>VerifiedWith</code></p><p><b>value</b>: patiënt (persoon) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#116154003; unknown#1 &quot;Patiënt&quot;)</span></p></blockquote><p><b>HCIM TreatmentDirective Treatment</b>: kunstmatige beademing (verrichting) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#40617009; unknown#3 &quot;Kunstmatige beademing&quot;)</span></p><blockquote><p><b>modifierExtension[http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted]</b></p></blockquote><p><b>identifier</b>: id: 20381675 (use: USUAL)</p><p><b>status</b>: active</p><p><b>category</b>: Advance Directive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-consentcategorycodes.html\">Consent Category Codes</a>#acd; unknown#3042102 &quot;Vastgelegd&quot;; <a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#11291000146105)</span></p><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=https:///example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eXxP1o8ZlOz21F6HXS9puLA3\">https:///example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eXxP1o8ZlOz21F6HXS9puLA3: XXX-Helleman, Johan</a></p><p><b>period</b>: 2022-03-22 12:45:21+0000 --&gt; (ongoing)</p><p><b>dateTime</b>: 2022-03-22 12:45:21+0000</p><h3>Policies</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td></tr><tr><td style=\"display: none\">*</td><td/></tr></table><h3>Excepts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>deny</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "Verified"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:url [ fhir:v "VerifiedWith"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:116154003 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "116154003" ] ;
+           fhir:display [ fhir:v "patiënt (persoon)" ]
+         ] [
+           fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.4.696784.72007"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "1" ] ;
+           fhir:display [ fhir:v "Patiënt" ]
+         ] ) ;
+         fhir:text [ fhir:v "patiënt (persoon)" ]
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification"^^xsd:anyURI ]
+  ] [
+     fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:40617009 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "40617009" ] ;
+         fhir:display [ fhir:v "kunstmatige beademing (verrichting)" ]
+       ] [
+         fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.4.696784.72009"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "3" ] ;
+         fhir:display [ fhir:v "Kunstmatige beademing" ]
+       ] ) ;
+       fhir:text [ fhir:v "kunstmatige beademing (verrichting)" ]
+     ]
+  ] ) ; # 
+  fhir:modifierExtension ( [
+     fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "JA_MAAR" ] ;
+         fhir:display [ fhir:v "Ja, maar met beperkingen" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.2.798268"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "20381675" ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/consentcategorycodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "acd" ] ;
+       fhir:display [ fhir:v "Advance Directive" ]
+     ] [
+       fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.4.796783.100"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3042102" ] ;
+       fhir:display [ fhir:v "Vastgelegd" ]
+     ] [
+       a sct:11291000146105 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11291000146105" ]
+     ] )
+  ] ) ; # 
+  fhir:patient [
+     fhir:link <https:///example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eXxP1o8ZlOz21F6HXS9puLA3> ;
+     fhir:reference [ fhir:v "https:///example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eXxP1o8ZlOz21F6HXS9puLA3" ] ;
+     fhir:display [ fhir:v "XXX-Helleman, Johan" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-03-22T12:45:21Z"^^xsd:dateTime ]
+  ] ; # 
+  fhir:dateTime [ fhir:v "2022-03-22T12:45:21Z"^^xsd:dateTime] ; # 
+  fhir:policy ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] )
+  ] ) ; # 
+  fhir:except ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Eerst overleg met echtgenote" ]
+     ] ) ;
+     fhir:type [ fhir:v "deny" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

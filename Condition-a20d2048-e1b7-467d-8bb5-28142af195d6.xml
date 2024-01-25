@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="a20d2048-e1b7-467d-8bb5-28142af195d6"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h3>Condition resource:</h3><ul><li><p><strong>Subject:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Clinical status:</strong> &#x27;Active&#x27;</p></li><li><p><strong>Verification status:</strong> &#x27;Confirmed&#x27;</p></li><li><p><strong>Category:</strong> &#x27;Diagnosis&#x27;</p></li><li><p><strong>Code:</strong> &#x27;Other&#x27;</p></li><li><p><strong>Onset date/time:</strong> &#x27;1-1-2001&#x27;</p></li><li><p><strong>Body site:</strong> &#x27;Other&#x27;</p></li><li><p><strong>Laterality:</strong> &#x27;Right&#x27;</p></li><li><p><strong>Asserter:</strong> &#x27;Practitioner author with last name &#x27;van Cruijningen de Winter&#x27;.&#x27;</p></li><li><p><strong>Note:</strong> &#x27;Gevallen op kunstijsbaan.&#x27;</p></li></ul></div>
+  </text>
+  <clinicalStatus value="active">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="55561003"/>
+          <display value="Active"/>
+        </coding>
+        <text value="Actueel"/>
+      </valueCodeableConcept>
+    </extension>
+  </clinicalStatus>
+  <verificationStatus value="confirmed">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="410605003"/>
+          <display value="Confirmed"/>
+        </coding>
+        <text value="Confirmed"/>
+      </valueCodeableConcept>
+    </extension>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="282291009"/>
+      <display value="Diagnosis"/>
+    </coding>
+    <text value="Diagnose"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+      <code value="OTH"/>
+      <display value="other"/>
+    </coding>
+    <text value="fractuur van pols"/>
+  </code>
+  <bodySite>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="24028007"/>
+          <display value="Right"/>
+        </coding>
+        <text value="Rechts"/>
+      </valueCodeableConcept>
+    </extension>
+  </bodySite>
+  <subject>
+    <reference value="Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1"/>
+    <display value="Patient name: Johan XXX_Helleman_Afblijven"/>
+  </subject>
+  <onsetDateTime value="2001-01-01"/>
+  <assertedDate value="2001-01-01"/>
+  <asserter>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+      <valueReference>
+        <reference value="http://example.org/PractitionerRole/2FEBFCB8FFA86EBEF907D0B6CC74E210A7647FA82CEC3DE55E3FA8813D5756F6"/>
+        <display value="Practitioner role with function: 'attending physician'."/>
+      </valueReference>
+    </extension>
+    <reference value="http://example.org/Practitioner/ecb6593e-75fe-4b02-8a4f-25302a6f9693"/>
+    <display value="Practitioner with name: 'Lisette van Cruijningen de Winter'."/>
+  </asserter>
+  <note>
+    <text value="Gevallen op kunstijsbaan."/>
+  </note>
+</Condition>

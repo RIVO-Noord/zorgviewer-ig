@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.nl.zorgviewer"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>zorgviewer-ig</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.nl/fhir/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>
+</div></div>
+  </text>
+  <url value="http://hl7.nl/fhir/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer"/>
+  <version value="0.20.0"/>
+  <name value="zorgviewer-ig"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-01-25T12:12:38+00:00"/>
+  <publisher value="RIVO-NN HL7NL"/>
+  <contact>
+    <name value="RIVO-NN"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://rivo-noord.nl"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="HL7NL"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://hl7.nl"/>
+    </telecom>
+  </contact>
+  <description value="A brief description of what MyIG is about (probably the same text as in your readme)"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="NL"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="3.0.2"/>
+  <dependency>
+    <extension url="http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId">
+      <valueId value="hl7.terminology.r3"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version">
+      <valueString value="5.3.0"/>
+    </extension>
+    <type value="reference"/>
+    <uri value="https://simplifier.net/packages/hl7.terminology.r3/5.3.0"/>
+  </dependency>
+  <dependency>
+    <extension url="http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId">
+      <valueId value="nictiz.fhir.nl.stu3.zib2017"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version">
+      <valueString value="2.2.16"/>
+    </extension>
+    <type value="reference"/>
+    <uri value="https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.16"/>
+  </dependency>
+  <package id="group-zs">
+    <name value="Zorgviewer Services"/>
+    <description value="Zie [Zorgviewer Services pagina](zorgviewer-services.html) voor details."/>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <example value="true"/>
+      <name value="Organization UMCG"/>
+      <sourceReference>
+        <reference value="Organization/UMCG"/>
+      </sourceReference>
+      <exampleFor>
+        <reference value="http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization"/>
+      </exampleFor>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <example value="true"/>
+      <name value="Organization Tjongerschans"/>
+      <sourceReference>
+        <reference value="Organization/Tjongerschans"/>
+      </sourceReference>
+      <exampleFor>
+        <reference value="http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization"/>
+      </exampleFor>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <example value="true"/>
+      <name value="Organization MCL"/>
+      <sourceReference>
+        <reference value="Organization/MCL"/>
+      </sourceReference>
+      <exampleFor>
+        <reference value="http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization"/>
+      </exampleFor>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <example value="true"/>
+      <name value="Organization VIPLive"/>
+      <sourceReference>
+        <reference value="Organization/VIPLive"/>
+      </sourceReference>
+      <exampleFor>
+        <reference value="http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization"/>
+      </exampleFor>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Endpoint"/>
+      </extension>
+      <example value="false"/>
+      <name value="Epic UMCG Endpoint Example"/>
+      <description value="Dit is een voorbeeld Epic Endpoint voor UMCG."/>
+      <sourceReference>
+        <reference value="Endpoint/UMCG"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <page>
+    <source value="index.html"/>
+    <title value="Home Page"/>
+    <kind value="resource"/>
+    <page>
+      <source value="conformance.html"/>
+      <title value="Conformance"/>
+      <kind value="resource"/>
+    </page>
+    <page>
+      <source value="nen-normen.html"/>
+      <title value="EGIZ NEN Normen Conformiteit"/>
+      <kind value="resource"/>
+    </page>
+    <page>
+      <source value="datasets.html"/>
+      <title value="Datasets"/>
+      <kind value="resource"/>
+    </page>
+    <page>
+      <source value="must-support.html"/>
+      <title value="Must Support"/>
+      <kind value="resource"/>
+    </page>
+    <page>
+      <source value="design.html"/>
+      <title value="Design"/>
+      <kind value="resource"/>
+    </page>
+    <page>
+      <source value="design-background.html"/>
+      <title value="Design Achtergrond"/>
+      <kind value="resource"/>
+    </page>
+    <page>
+      <source value="security-design.html"/>
+      <title value="Security Design"/>
+      <kind value="resource"/>
+    </page>
+    <page>
+      <source value="zorgviewer-services.html"/>
+      <title value="Zorgviewer Services"/>
+      <kind value="resource"/>
+    </page>
+    <page>
+      <source value="downloads.html"/>
+      <title value="Useful Downloads"/>
+      <kind value="resource"/>
+    </page>
+    <page>
+      <source value="testing.html"/>
+      <title value="Testing"/>
+      <kind value="resource"/>
+    </page>
+    <page>
+      <source value="checklists.html"/>
+      <title value="Checklists &amp; Aansluiten"/>
+      <kind value="resource"/>
+    </page>
+    <page>
+      <source value="changes.html"/>
+      <title value="IG Change History"/>
+      <kind value="resource"/>
+    </page>
+    <page>
+      <source value="copyrights.html"/>
+      <title value="Copyrights"/>
+      <kind value="resource"/>
+    </page>
+  </page>
+</ImplementationGuide>

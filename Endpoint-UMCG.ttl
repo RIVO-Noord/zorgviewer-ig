@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Endpoint/UMCG> a fhir:Endpoint ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "UMCG"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Endpoint</b><a name=\"UMCG\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Endpoint &quot;UMCG&quot; </p></div><p><b>status</b>: test</p><p><b>connectionType</b>: HL7 FHIR (Details: http://hl7.org/fhir/endpoint-connection-type code hl7-fhir-rest = 'HL7 FHIR', stated as 'null')</p><p><b>name</b>: UMCG</p><p><b>managingOrganization</b>: <a href=\"Organization-eXovwVA3zYl3U3fBH8mdkxw3.html\">Organization/eXovwVA3zYl3U3fBH8mdkxw3</a> &quot;UMCG&quot;</p><p><b>payloadType</b>: Patient <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/STU3/codesystem-resource-types.html\">ResourceType</a>#Patient)</span></p><p><b>payloadMimeType</b>: application/fhir+json, application/json+fhir, application/xml+fhir, application/fhir+xml</p><p><b>address</b>: <a href=\"https:///example.org/TST-OAUTH2/api/FHIR/STU3/\">https:///example.org/TST-OAUTH2/api/FHIR/STU3/</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "test"] ; # 
+  fhir:connectionType [
+     fhir:system [ fhir:v "http://hl7.org/fhir/endpoint-connection-type"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "hl7-fhir-rest" ]
+  ] ; # 
+  fhir:name [ fhir:v "UMCG"] ; # 
+  fhir:managingOrganization [
+     fhir:link <http://hl7.nl/fhir/zorgviewer/Organization/eXovwVA3zYl3U3fBH8mdkxw3> ;
+     fhir:reference [ fhir:v "Organization/eXovwVA3zYl3U3fBH8mdkxw3" ]
+  ] ; # 
+  fhir:payloadType ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/resource-types"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "Patient" ]
+     ] )
+  ] ) ; # 
+  fhir:payloadMimeType ( [ fhir:v "application/fhir+json"] [ fhir:v "application/json+fhir"] [ fhir:v "application/xml+fhir"] [ fhir:v "application/fhir+xml"] ) ; # 
+  fhir:address [ fhir:v "https:///example.org/TST-OAUTH2/api/FHIR/STU3/"^^xsd:anyURI] . # 
+
+# -------------------------------------------------------------------------------------
+

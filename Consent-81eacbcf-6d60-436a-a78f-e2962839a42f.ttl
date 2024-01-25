@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Consent/81eacbcf-6d60-436a-a78f-e2962839a42f> a fhir:_Consent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "81eacbcf-6d60-436a-a78f-e2962839a42f"] ; # 
+  fhir:meta [
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Consent resource for treatment directive:</h3><ul><li><p><strong>Patient:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Treatment permitted:</strong> &#x27;Ja, maar met beperkingen&#x27;</p></li><li><p><strong>Verified With:</strong> &#x27;Toelichting: Eerst overleg met echtgenote&#x27;</p></li><li><p><strong>Treatment:</strong> &#x27;Artificial respiration (procedure)&#x27;</p></li><li><p><strong>Start:</strong> &#x27;30-9-2022 10:33&#x2B;0200&#x27;</p></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:40617009 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "40617009" ] ;
+         fhir:display [ fhir:v "Artificial respiration (procedure)" ]
+       ] ) ;
+       fhir:text [ fhir:v "Kunstmatige beademing" ]
+     ]
+  ] ) ; # 
+  fhir:modifierExtension ( [
+     fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "JA_MAAR" ] ;
+         fhir:display [ fhir:v "Ja, maar met beperkingen" ]
+       ] ) ;
+       fhir:text [ fhir:v "Behandeling toegestaan en/of wenselijk maar met beperkingen die dan ook vermeld moeten worden." ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:11291000146105 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11291000146105" ] ;
+       fhir:display [ fhir:v "Treatment instructions" ]
+     ] ) ;
+     fhir:text [ fhir:v "Treatment instructions" ]
+  ] ) ; # 
+  fhir:patient [
+     fhir:link <http://example.org/Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1> ;
+     fhir:reference [ fhir:v "http://example.org/Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1" ] ;
+     fhir:display [ fhir:v "Johan XXX_Helleman_Afblijven" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-09-30T10:33:00+02:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:policyRule [ fhir:v "http://wetten.overheid.nl/"^^xsd:anyURI] ; # 
+  fhir:except ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Toelichting: Eerst overleg met echtgenote" ]
+     ] ) ;
+     fhir:type [ fhir:v "deny" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

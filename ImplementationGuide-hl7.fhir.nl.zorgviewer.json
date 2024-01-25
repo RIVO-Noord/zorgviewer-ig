@@ -1,0 +1,204 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "hl7.fhir.nl.zorgviewer",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>zorgviewer-ig</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.nl/fhir/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>\n</div></div>"
+  },
+  "url" : "http://hl7.nl/fhir/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer",
+  "version" : "0.20.0",
+  "name" : "zorgviewer-ig",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2024-01-25T12:12:38+00:00",
+  "publisher" : "RIVO-NN HL7NL",
+  "contact" : [{
+    "name" : "RIVO-NN",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://rivo-noord.nl"
+    }]
+  },
+  {
+    "name" : "HL7NL",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://hl7.nl"
+    }]
+  }],
+  "description" : "A brief description of what MyIG is about (probably the same text as in your readme)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NL"
+    }]
+  }],
+  "fhirVersion" : "3.0.2",
+  "dependency" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId",
+      "valueId" : "hl7.terminology.r3"
+    },
+    {
+      "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version",
+      "valueString" : "5.3.0"
+    }],
+    "type" : "reference",
+    "uri" : "https://simplifier.net/packages/hl7.terminology.r3/5.3.0"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId",
+      "valueId" : "nictiz.fhir.nl.stu3.zib2017"
+    },
+    {
+      "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version",
+      "valueString" : "2.2.16"
+    }],
+    "type" : "reference",
+    "uri" : "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.16"
+  }],
+  "package" : [{
+    "id" : "group-zs",
+    "name" : "Zorgviewer Services",
+    "description" : "Zie [Zorgviewer Services pagina](zorgviewer-services.html) voor details.",
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "example" : true,
+      "name" : "Organization UMCG",
+      "sourceReference" : {
+        "reference" : "Organization/UMCG"
+      },
+      "exampleFor" : {
+        "reference" : "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "example" : true,
+      "name" : "Organization Tjongerschans",
+      "sourceReference" : {
+        "reference" : "Organization/Tjongerschans"
+      },
+      "exampleFor" : {
+        "reference" : "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "example" : true,
+      "name" : "Organization MCL",
+      "sourceReference" : {
+        "reference" : "Organization/MCL"
+      },
+      "exampleFor" : {
+        "reference" : "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "example" : true,
+      "name" : "Organization VIPLive",
+      "sourceReference" : {
+        "reference" : "Organization/VIPLive"
+      },
+      "exampleFor" : {
+        "reference" : "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Endpoint"
+      }],
+      "example" : false,
+      "name" : "Epic UMCG Endpoint Example",
+      "description" : "Dit is een voorbeeld Epic Endpoint voor UMCG.",
+      "sourceReference" : {
+        "reference" : "Endpoint/UMCG"
+      }
+    }]
+  }],
+  "page" : {
+    "source" : "index.html",
+    "title" : "Home Page",
+    "kind" : "resource",
+    "page" : [{
+      "source" : "conformance.html",
+      "title" : "Conformance",
+      "kind" : "resource"
+    },
+    {
+      "source" : "nen-normen.html",
+      "title" : "EGIZ NEN Normen Conformiteit",
+      "kind" : "resource"
+    },
+    {
+      "source" : "datasets.html",
+      "title" : "Datasets",
+      "kind" : "resource"
+    },
+    {
+      "source" : "must-support.html",
+      "title" : "Must Support",
+      "kind" : "resource"
+    },
+    {
+      "source" : "design.html",
+      "title" : "Design",
+      "kind" : "resource"
+    },
+    {
+      "source" : "design-background.html",
+      "title" : "Design Achtergrond",
+      "kind" : "resource"
+    },
+    {
+      "source" : "security-design.html",
+      "title" : "Security Design",
+      "kind" : "resource"
+    },
+    {
+      "source" : "zorgviewer-services.html",
+      "title" : "Zorgviewer Services",
+      "kind" : "resource"
+    },
+    {
+      "source" : "downloads.html",
+      "title" : "Useful Downloads",
+      "kind" : "resource"
+    },
+    {
+      "source" : "testing.html",
+      "title" : "Testing",
+      "kind" : "resource"
+    },
+    {
+      "source" : "checklists.html",
+      "title" : "Checklists & Aansluiten",
+      "kind" : "resource"
+    },
+    {
+      "source" : "changes.html",
+      "title" : "IG Change History",
+      "kind" : "resource"
+    },
+    {
+      "source" : "copyrights.html",
+      "title" : "Copyrights",
+      "kind" : "resource"
+    }]
+  }
+}

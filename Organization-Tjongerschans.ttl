@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Organization/Tjongerschans> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Tjongerschans"] ; # 
+  fhir:meta [
+     fhir:profile ( [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Organization</b><a name=\"Tjongerschans\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Organization &quot;Tjongerschans&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Organization.html\">Organization</a></p></div><p><b>identifier</b>: VEKTIS: Vektis AGB-z zorgverlener tabel#06010205 (use: USUAL), HL7NL: 2.16.528.1.1007.3.3.15123 (use: USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: Tjongerschans</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:text [ fhir:v "VEKTIS" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.nl/fhir/NamingSystem/agb-z"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "06010205" ]
+  ] [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:text [ fhir:v "HL7NL" ]
+     ] ;
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2.16.528.1.1007.3.3.15123" ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:name [ fhir:v "Tjongerschans"] . # 
+
+# -------------------------------------------------------------------------------------
+

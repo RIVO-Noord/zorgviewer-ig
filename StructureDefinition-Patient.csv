@@ -1,0 +1,904 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: HCIM Patient-v3.1(2017EN)","Mapping: HCIM MaritalStatus-v3.0(2017EN)","Mapping: HCIM ContactPerson-v3.1(2017EN)","Mapping: HCIM HealthcareProvider-v3.1.1(2017EN)","Mapping: HCIM HealthProfessional-v3.2(2017EN)","Mapping: HCIM Nationality-v3.0(2017EN)","Mapping: HCIM Payer-v3.1(2017EN)","Mapping: HCIM ContactInformation-v1.0(2017EN)","Mapping: HCIM LanguageProficiency-v3.1(2017EN)","Mapping: HCIM FreedomRestrictingMeasures-v3.1(2017EN)","Mapping: HCIM BasicElements-v1.0(2017EN)","Mapping: HCIM FamilySituation-v3.0(2017EN)","Mapping: HCIM LifeStance-v3.1(2017EN)","Mapping: HCIM Patient-v3.0(2016EN)","Mapping: HCIM MaritalStatus-v3.0(2016EN)","Mapping: HCIM ContactPerson-v3.0(2016EN)","Mapping: HCIM HealthcareProvider-v3.0(2016EN)","Mapping: HCIM HealthProfessional-v3.0(2016EN)","Mapping: HCIM Nationality-v3.0(2016EN)","Mapping: HCIM Payer-v3.0(2016EN)","Mapping: HCIM FamilySituation-v3.0(2016EN)","Mapping: HCIM Patient-v2.0.1(2015EN)","Mapping: HCIM MaritalStatus-v1.2.1(2015EN)","Mapping: HCIM ContactPerson-v1.2(2015EN)","Mapping: HCIM HealthcareProvider-v1.2(2015EN)","Mapping: HCIM HealthProfessional-v1.2.1(2015EN)","Mapping: HCIM Nationality-v2.0(2015EN)","Mapping: HCIM Payer-v1.2(2015EN)","Mapping: HCIM FamilySituation-v1.0(2015EN)","Mapping: RIM Mapping","Mapping: CDA (R2)","Mapping: W5 Mapping","Mapping: HL7 v2 Mapping","Mapping: LOINC code for the element"
+"Patient","Patient","","SubjectOfCare Client Resident
+Patiënt","",0,*,"","","","null {[]} {[]}
+","Patient","Demographics and other administrative information about an individual or animal receiving care or other health-related services.","","","","","","","","","",,,,,"",,,,"Patient",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
+dom-1:If the resource is contained in another resource, it SHALL NOT contain any narrative {contained.text.empty()}dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource {contained.where(('#'+id in %resource.descendants().reference).not()).empty()}","NL-CM:0.1.1","NL-CM:1.1.2","NL-CM:0.0.3","NL-CM:0.0.8","NL-CM:0.0.12","NL-CM:0.1.1","NL-CM:1.1.2","NL-CM:0.1.1","NL-CM:1.1.2","Entity. Role, or Act","Patient[classCode=PAT]","ClinicalDocument.recordTarget.patientRole","administrative.individual"
+"Patient.id","Patient.id","","","",0,1,"","","Y","id {[]} {[]}
+","Logical id of this artifact","The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.","The only time that a resource does not have an id is when it is being submitted to the server using a create operation.","","","","","","","","",,,,,"",,,,"Resource.id",0,1,"",""
+"Patient.meta","Patient.meta","","","",0,1,"","","Y","Meta {[]} {[]}
+","Metadata about the resource","The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.","","","","","","","","","",,,,,"",,,,"Resource.meta",0,1,"",""
+"Patient.implicitRules","Patient.implicitRules","","","",0,1,"","Y","Y","uri {[]} {[]}
+","A set of rules under which this content was created","A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.","Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. 
+
+This element is labelled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation.","","","","","","","","",,,,,"",,,,"Resource.implicitRules",0,1,"",""
+"Patient.language","Patient.language","","","",0,1,"","","","code {[]} {[]}
+","Language of the resource content","The base language in which the resource is written.","Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).","","","","","","","","",,"extensible","A human language.","http://hl7.org/fhir/ValueSet/languages","",,,,"Resource.language",0,1,"",""
+"Patient.text","Patient.text","","narrative
+htmlxhtmldisplay","",0,1,"","","","Narrative {[]} {[]}
+","Text summary of the resource, for human interpretation","A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it ""clinically safe"" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.","Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a ""text blob"" or where text is additionally entered raw or narrated and encoded in formation is added later.","","","","","","","","",,,,,"",,,,"DomainResource.text",0,1,"dom-1
+","","Act.text?"
+"Patient.contained","Patient.contained","","inline resources
+anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
+","Contained, inline Resources","These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"","","N/A"
+"Patient.extension","Patient.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","",,"open","DomainResource.extension",0,*,"",""
+"Patient.extension:preferredPharmacy","Patient.extension","preferredPharmacy","Verwijst naar de voorkeursapotheek van de patiënt
+","",0,1,"","","","Extension {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-preferred-pharmacy]]} {[]}
+","References a patient's preferered pharmacy","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
+"Patient.extension:nationality","Patient.extension","nationality","Nationaliteit
+","",0,*,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/patient-nationality]]} {[]}
+","Nationality","The nationality of the patient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","NL-CM:7.6.3","NL-CM:7.6.3","NL-CM:7.6.3"
+"Patient.extension:nationality.id","Patient.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.extension:nationality.extension","Patient.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.extension:nationality.extension:code","Patient.extension.extension","code","","",0,1,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
+"Patient.extension:nationality.extension:code.id","Patient.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.extension:nationality.extension:code.extension","Patient.extension.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.extension:nationality.extension:code.url","Patient.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""code""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.extension:nationality.extension:code.valueCodeableConcept:valueCodeableConcept","Patient.extension.extension.valueCodeableConcept","valueCodeableConcept","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,"extensible","Indicates the country of citizenship.","http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000","",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.extension:nationality.extension:period","Patient.extension.extension","period","","",0,1,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
+"Patient.extension:nationality.extension:period.id","Patient.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.extension:nationality.extension:period.extension","Patient.extension.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.extension:nationality.extension:period.url","Patient.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""period""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.extension:nationality.extension:period.valuePeriod:valuePeriod","Patient.extension.extension.valuePeriod","valuePeriod","","",0,1,"","","","Period {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.extension:nationality.url","Patient.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/patient-nationality""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.extension:nationality.value[x]","Patient.extension.value[x]","","","",0,0,"","","","base64Binary {[]} {[]}
+boolean {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.extension:legalStatus","Patient.extension","legalStatus","","",0,2,"","","","Extension {[CanonicalType[http://nictiz.nl/fhir/StructureDefinition/zib-patient-legalstatus]]} {[]}
+","legalStatus","The legal situation that applies to the patient during the intervention. The code of the legal status is based on the Vektis/AZR code list COD232-VEKT Legal Status.","The concept LegalStatus of the HCIM FreedomRestrictingMeasures plays an important role in the context of mental healthcare (GGZ). This concept will become an independent HCIM with the next release of HCIM (2018 release).  
+
+The LegalStatus concept and associated ValueSet will be split in two concepts: legal status and representative. These concepts are currently captured in one ValueSet. It is possible to have a legal status AND a representative. Therefore, we allow this extension to have a cardinality of 0..2.","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","NL-CM:14.3.2"
+"Patient.extension:legalStatus.id","Patient.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.extension:legalStatus.extension","Patient.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.extension:legalStatus.url","Patient.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://nictiz.nl/fhir/StructureDefinition/zib-patient-legalstatus""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.extension:legalStatus.value[x]","Patient.extension.value[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"","type:$this}
+","",,"closed","Extension.value[x]",0,1,"","","N/A"
+"Patient.extension:legalStatus.value[x]:valueCodeableConcept","Patient.extension.value[x]","valueCodeableConcept","JuridischeStatus
+","",1,1,"","","","CodeableConcept {[]} {[]}
+","LegalStatus","The legal situation that applies to the patient during the intervention. The code of the legal status is based on the Vektis/AZR code list COD232-VEKT Legal Status.","","","","","","","","","",,"extensible","","http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000","",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.extension:legalStatus.value[x]:valueCodeableConcept.id","Patient.extension.value[x].id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.extension:legalStatus.value[x]:valueCodeableConcept.extension","Patient.extension.value[x].extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.extension:legalStatus.value[x]:valueCodeableConcept.coding","Patient.extension.value[x].coding","","","",1,*,"","","Y","Coding {[]} {[]}
+","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","","union(., ./translation)","C*E.1-8, C*E.10-22"
+"Patient.extension:legalStatus.value[x]:valueCodeableConcept.coding.id","Patient.extension.value[x].coding.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.extension:legalStatus.value[x]:valueCodeableConcept.coding.extension","Patient.extension.value[x].coding.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.extension:legalStatus.value[x]:valueCodeableConcept.coding.system","Patient.extension.value[x].coding.system","","","",1,1,"","","Y","uri {[]} {[]}
+","Identity of the terminology system","The identification of the code system that defines the meaning of the symbol in the code.","The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.","Need to be unambiguous about the source of the definition of the symbol.","","","","","","","",,,,,"",,,,"Coding.system",0,1,"","","./codeSystem","C*E.3"
+"Patient.extension:legalStatus.value[x]:valueCodeableConcept.coding.version","Patient.extension.value[x].coding.version","","","",0,1,"","","Y","string {[]} {[]}
+","Version of the system - if relevant","The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.","Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.","","","","","","","","",,,,,"",,,,"Coding.version",0,1,"","","./codeSystemVersion","C*E.7"
+"Patient.extension:legalStatus.value[x]:valueCodeableConcept.coding.code","Patient.extension.value[x].coding.code","","","",1,1,"","","Y","code {[]} {[]}
+","Symbol in syntax defined by the system","A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).","","Need to refer to a particular code in the system.","","","","","","","",,,,,"",,,,"Coding.code",0,1,"","","./code","C*E.1"
+"Patient.extension:legalStatus.value[x]:valueCodeableConcept.coding.display","Patient.extension.value[x].coding.display","","","",0,1,"","","Y","string {[]} {[]}
+","Representation defined by the system","A representation of the meaning of the code in the system, following the rules of the system.","","Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.","","","","","","","",,,,,"",,,,"Coding.display",0,1,"","","CV.displayName","C*E.2 - but note this is not well followed"
+"Patient.extension:legalStatus.value[x]:valueCodeableConcept.coding.userSelected","Patient.extension.value[x].coding.userSelected","","","",0,1,"","","Y","boolean {[]} {[]}
+","If this coding was chosen directly by the user","Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).","Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.","This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.","","","","","","","",,,,,"",,,,"Coding.userSelected",0,1,"","","CD.codingRationale","Sometimes implied by being first"
+"Patient.extension:legalStatus.value[x]:valueCodeableConcept.text","Patient.extension.value[x].text","","","",0,1,"","","Y","string {[]} {[]}
+","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","","./originalText[mediaType/code=""text/plain""]/data","C*E.9. But note many systems use C*E.2 for this"
+"Patient.extension:lifeStance","Patient.extension","lifeStance","","",0,*,"","","","Extension {[CanonicalType[http://nictiz.nl/fhir/StructureDefinition/zib-LifeStance]]} {[]}
+","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
+"Patient.extension:lifeStance.id","Patient.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.extension:lifeStance.extension","Patient.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.extension:lifeStance.url","Patient.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://nictiz.nl/fhir/StructureDefinition/zib-LifeStance""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.extension:lifeStance.value[x]","Patient.extension.value[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"","type:$this}
+","",,"closed","Extension.value[x]",0,1,"","","N/A"
+"Patient.extension:lifeStance.value[x]:valueCodeableConcept","Patient.extension.value[x]","valueCodeableConcept","Levensovertuiging
+","",1,1,"","","","CodeableConcept {[]} {[]}
+","LifeStance","Patient’s life stance and/or religion.","","","","","","","","","",,"preferred","LevensovertuigingCodelijst","http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000","",,,,"Extension.value[x]",0,1,"","","NL-CM:7.5.2","N/A"
+"Patient.extension:lifeStance.value[x]:valueCodeableConcept.id","Patient.extension.value[x].id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.extension:lifeStance.value[x]:valueCodeableConcept.extension","Patient.extension.value[x].extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.extension:lifeStance.value[x]:valueCodeableConcept.coding","Patient.extension.value[x].coding","","","",1,1,"","","Y","Coding {[]} {[]}
+","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","","union(., ./translation)","C*E.1-8, C*E.10-22"
+"Patient.extension:lifeStance.value[x]:valueCodeableConcept.coding.id","Patient.extension.value[x].coding.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.extension:lifeStance.value[x]:valueCodeableConcept.coding.extension","Patient.extension.value[x].coding.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.extension:lifeStance.value[x]:valueCodeableConcept.coding.system","Patient.extension.value[x].coding.system","","","",1,1,"","","Y","uri {[]} {[]}
+","Identity of the terminology system","The identification of the code system that defines the meaning of the symbol in the code.","The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.","Need to be unambiguous about the source of the definition of the symbol.","","","","","","","",,,,,"",,,,"Coding.system",0,1,"","","./codeSystem","C*E.3"
+"Patient.extension:lifeStance.value[x]:valueCodeableConcept.coding.version","Patient.extension.value[x].coding.version","","","",0,1,"","","Y","string {[]} {[]}
+","Version of the system - if relevant","The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.","Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.","","","","","","","","",,,,,"",,,,"Coding.version",0,1,"","","./codeSystemVersion","C*E.7"
+"Patient.extension:lifeStance.value[x]:valueCodeableConcept.coding.code","Patient.extension.value[x].coding.code","","","",1,1,"","","Y","code {[]} {[]}
+","Symbol in syntax defined by the system","A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).","","Need to refer to a particular code in the system.","","","","","","","",,,,,"",,,,"Coding.code",0,1,"","","./code","C*E.1"
+"Patient.extension:lifeStance.value[x]:valueCodeableConcept.coding.display","Patient.extension.value[x].coding.display","","","",0,1,"","","Y","string {[]} {[]}
+","Representation defined by the system","A representation of the meaning of the code in the system, following the rules of the system.","","Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.","","","","","","","",,,,,"",,,,"Coding.display",0,1,"","","CV.displayName","C*E.2 - but note this is not well followed"
+"Patient.extension:lifeStance.value[x]:valueCodeableConcept.coding.userSelected","Patient.extension.value[x].coding.userSelected","","","",0,1,"","","Y","boolean {[]} {[]}
+","If this coding was chosen directly by the user","Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).","Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.","This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.","","","","","","","",,,,,"",,,,"Coding.userSelected",0,1,"","","CD.codingRationale","Sometimes implied by being first"
+"Patient.extension:lifeStance.value[x]:valueCodeableConcept.text","Patient.extension.value[x].text","","","",0,1,"","","Y","string {[]} {[]}
+","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","","./originalText[mediaType/code=""text/plain""]/data","C*E.9. But note many systems use C*E.2 for this"
+"Patient.modifierExtension","Patient.modifierExtension","","extensions
+user content","",0,*,"","Y","","Extension {[]} {[]}
+","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","","N/A"
+"Patient.identifier","Patient.identifier","","Identificatienummer
+","",1,*,"","","Y","Identifier {[]} {[]}
+","PatientIdentificationNumber","The Burgerservicenummer or BSN, as one of the possible patient identification numbers, should at least be sent unless there is a reason not to. Reasons for not sending the burgerservicenummer include but are not limited to, research and apps without a contract for processing data (Dutch: bewerkingsovereenkomst).","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"","value:system}
+","",,"open","Patient.identifier",0,*,"","","NL-CM:0.1.7","NL-CM:0.0.6","NL-CM:0.1.7","NL-CM:0.1.7","id",".id","id","PID-3"
+"Patient.identifier:BSN","Patient.identifier","BSN","BSN
+","",1,1,"Y","","Y","Identifier {[]} {[]}
+","BSN","An identifier for this patient.","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"","","id",".id","id","PID-3"
+"Patient.identifier:BSN.id","Patient.identifier.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.identifier:BSN.extension","Patient.identifier.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.identifier:BSN.use","Patient.identifier.use","","","",0,1,"","Y","Y","code {[]} {[]}
+","usual | official | temp | secondary (If known)","The purpose of this identifier.","This is labeled as ""Is Modifier"" because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.","Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers.","","","","","","","",,"required","Identifies the purpose for this identifier, if known .","http://hl7.org/fhir/ValueSet/identifier-use","",,,,"Identifier.use",0,1,"","","Role.code or implied by context","N/A"
+"Patient.identifier:BSN.type","Patient.identifier.type","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
+","Description of identifier","A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.","This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage. 
+
+Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.","Allows users to make use of identifiers when the identifier system is not known.","","","","","","","",,"extensible","A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.","http://hl7.org/fhir/ValueSet/identifier-type","",,,,"Identifier.type",0,1,"","","Role.code or implied by context","CX.5"
+"Patient.identifier:BSN.system","Patient.identifier.system","","","",1,1,"","","Y","uri {[]} {[]}
+","The namespace for the identifier value","Establishes the namespace for the value - that is, a URL that describes a set values that are unique.","","There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://fhir.nl/fhir/NamingSystem/bsn""/>","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://www.acme.com/identifiers/patient""/>","","",,,,,"",,,,"Identifier.system",0,1,"","","II.root or Role.id.root","CX.4 / EI-2-4"
+"Patient.identifier:BSN.value","Patient.identifier.value","","BSN
+","",1,1,"","","Y","string {[]} {[]}
+","BSN (Burgerservicenummer (Dutch person identification number))","Burgerservicenummer is the Dutch person identification number which is also allowed for use in healthcare.","The official format according to the 'Logisch Ontwerp BSN 1.4.pdf' is N8..9 and SHALL conform to an 11-proof algorithm. In order to check if the number is 11-proof the number, if N8, SHALL be prefixed with a leading zero. The expected format in FHIR is N9 with leading zero applied to any N8 bsn.","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""123456""/>","","",,,,,"",,,,"Identifier.value",0,1,"","","II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)","CX.1 / EI.1"
+"Patient.identifier:BSN.period","Patient.identifier.period","","","",0,1,"","","Y","Period {[]} {[]}
+","Time period when id is/was valid for use","Time period during which identifier is/was valid for use.","","","","","","","","","",,,,,"",,,,"Identifier.period",0,1,"","","Role.effectiveTime or implied by context","CX.7 + CX.8"
+"Patient.identifier:BSN.assigner","Patient.identifier.assigner","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+","Organization that issued id (may be just text)","Organization that issued/manages the identifier.","The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.","","","","","","","","",,,,,"",,,,"Identifier.assigner",0,1,"","","II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper","CX.4 / (CX.4,CX.9,CX.10)"
+"Patient.active","Patient.active","","","",0,1,"","Y","Y","boolean {[]} {[]}
+","Whether this patient's record is in active use","This field determines the status of the 'patient' record in the context of the organization that owns the record. Note that the record is not the medical record, but rather the actual patient 'resource'. Obviously when the patient 'resource' is not active, then by extension his medical record might also be inactive. Patient.active='false' may be used discourage use of the record, but that it is kept beause there is (medical) data attached to it. Another use case is a patient moving to a different GP practice. Patient.active would be 'false' in the system of the previous GP.","Default is true. If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient
+
+This element is labeled as a modifier because when the patient record is marked as not active it is not expected to be used/referenced without being changed back to active.","Need to be able to mark a patient record as not to be used because it was created in error.","<valueBoolean xmlns=""http://hl7.org/fhir"" value=""true""/>","","","","","","",,,,,"",,,,"Patient.active",0,1,"","","statusCode","n/a","status"
+"Patient.name","Patient.name","","Naamgegevens
+","",1,*,"Y","","","HumanName {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-humanname]]} {[]}
+","NameInformation","A human's name with the ability to identify parts and usage.","Dutch names require that certain name parts are separately communicable. For this reason, extensions are added onto the base HumanName element to mark the meaning of each part. A Dutch HumanName is still a proper FHIR HumanName; however, there might be an incompatibilty with the default FHIR mechanism for communicating given names. See the compatibility note below for more information.
+
+The extension elements cover birth name (NL: eigennaam / geslachtsnaam) and partner/spouse name. Both may have a prefix (NL: voorvoegsel). When a person marries, he or she may keep their own name, assume the partner name, append the partner name to their own name, or the other way around.
+
+**Incompatibility note**: It has come to light that this specification deviates from the way that the HumanName datatype is normally used. This will be fixed in a future release. However, current implementations should be aware of the special considerations regarding the use of this specification. 
+
+The issue at hand is the way alternative representations of a name, like initials or a nickname, are communicated. Normally this is done using multiple HumanName instances, which are differentiated using the `.use` element. However, this specification allows for including all alternative representations in the _same_ HumanName instance, with the expectation that the extensions provide enough information for receiving systems to differentiate them. However, this means that contrary to the normal usage of this datatype, repetitions of `.given` names cannot be concatenated to get the full list of given names; the list might be a mix of full names, nicknames and initials.
+
+Since multiple implementations are based on this specification, sending systems are advised (but not required) to keep the approach with one HumanName instance, while receiving systems should be able to handle this one-instance approach. More specifically:
+
+* Sending and receiving systems SHOULD always use the specified extensions when using this datatype.
+* Sending systems are encouraged to populate the `.text` element to unambigiously communicate the person's name.
+* Sending systems are encouraged to send either the full given names or the initials, but not both. This alleviates the duplication of names in `.given`.
+* When a sending system uses the current one-instance approach for communicating multiple representations, `.use` MAY NOT be populated. After all, it is not possible to select a single `.use` when the instance contains different representations.
+* When a receiving system interprets the instance as the single-instance-multiple-representations approach, the `.given` names marked as initials SHOULD be interpreted as alternatives to the full given names. Note the underlying HCIM expects both the _list_ of full names and _list_ of initials to be a single string; there's no match for an initial to a full name. The instance SHOULD be regarded as using this approach when:
+  * They encounter a single instance
+  * And the `.use` element is absent
+  * And all the name parts are differentiated using the specified extensions
+* In any other circumstance, receiving systems SHOULD interpret the usage as the normal use.
+
+Example: miss Irma Jongeneel marries mister de Haas and assumes the name Irma Jongeneel-de Haas:
+
+* `.family` = ""Jongeneel-de Haas""
+* `.given` = ""Irma"" (with `.given:iso21090EnQualifier` = _BR_)
+* `.family:humannameOwnName` = ""Jongeneel""
+* `.family:humannamePartnerPrefix` = ""de ""
+* `.family:humannamePartnerName` = ""Haas""","Need to be able to track the patient by multiple names. Examples are your official name and a partner name.","","","","","<valueHumanName xmlns=""http://hl7.org/fhir"">
+  <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"">
+    <valueCode value=""NL4""/>
+  </extension>
+  <text value=""Irma Jongeneel-de Haas""/>
+  <family value=""Jongeneel-de Haas"">
+    <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-own-name"">
+      <valueString value=""Jongeneel""/>
+    </extension>
+    <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix"">
+      <valueString value=""de""/>
+    </extension>
+    <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-partner-name"">
+      <valueString value=""Haas""/>
+    </extension>
+  </family>
+  <given value=""Irma"">
+    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"">
+      <valueCode value=""CL""/>
+    </extension>
+  </given>
+</valueHumanName>","","",,,,,"",,,,"Patient.name",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+nl-core-humanname-1:if you specify a prefix for an own name then an own name is also expected {name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()}nl-core-humanname-2:if you specify a voorvoegsel for a partner name then a partner name is also expected {name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()}zv-pat-1:Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present. {(family.exists() or given.exists() or text.exists())}zv-pat-2:To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present. {text.exists()}","NL-CM:0.1.6","NL-CM:1.1.5","NL-CM:0.1.6","NL-CM:1.1.5","NL-CM:0.1.6","NL-CM:1.1.5","n/a","EN (actually, PN)","XPN"
+"Patient.name.id","Patient.name.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.name.extension","Patient.name.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"",""
+"Patient.name.extension:humannameAssemblyOrder","Patient.name.extension","humannameAssemblyOrder","","",0,*,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/humanname-assembly-order]]} {[]}
+","Preferred display order of name parts","A code that represents the preferred display order of the components of this human name.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
+"Patient.name.extension:humannameAssemblyOrder.id","Patient.name.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.name.extension:humannameAssemblyOrder.extension","Patient.name.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.name.extension:humannameAssemblyOrder.url","Patient.name.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/humanname-assembly-order""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.name.extension:humannameAssemblyOrder.valueCode:valueCode","Patient.name.extension.valueCode","valueCode","","",0,1,"","","","code {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,"required","A code that represents the preferred display order of the components of a human name","http://hl7.org/fhir/ValueSet/name-assembly-order","",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.name.use","Patient.name.use","","","",0,1,"","Y","Y","code {[]} {[]}
+","usual | official | temp | nickname | anonymous | old | maiden","Identifies the purpose for this name.","This is labeled as ""Is Modifier"" because applications should not mistake a temporary or old name etc.for a current/permanent one. Applications can assume that a name is current unless it explicitly says that it is temporary or old.","Allows the appropriate name for a particular context of use to be selected from among a set of names.","","","","","","","",,"required","The use of a human name","http://hl7.org/fhir/ValueSet/name-use","",,,,"HumanName.use",0,1,"","","unique(./use)","XPN.7, but often indicated by which field contains the name"
+"Patient.name.text","Patient.name.text","","","",0,1,"","","Y","string {[]} {[]}
+","Text representation of the full name","A full text representation of the name.","Can provide both a text representation and structured parts.","A renderable, unencoded form.","","","","","","","",,,,,"",,,,"HumanName.text",0,1,"","","NL-CM:1.1.5","NL-CM:1.1.5","NL-CM:1.1.5","./formatted","implied by XPN.11"
+"Patient.name.family","Patient.name.family","","surname
+Achternaam","",0,1,"","","Y","string {[]} {[]}
+","Surname","The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.","Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).","","","","","","","","",,,,,"",,,,"HumanName.family",0,1,"","","./part[partType = FAM]","XPN.1/FN.1"
+"Patient.name.family.id","Patient.name.family.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references)","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"Patient.name.family.extension","Patient.name.family.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","",,"open","Element.extension",0,*,"",""
+"Patient.name.family.extension:humannameOwnPrefix","Patient.name.family.extension","humannameOwnPrefix","VoorvoegselGeslachtsnaam
+","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/humanname-own-prefix]]} {[]}
+","PrefixOwnName","The prefix portion (e.g. voorvoegsel) inclusive of the space between the prefix and the surname, if applicable, of the family name that is derived from the person's own surname, as distinguished from any portion that is derived from the surname of the person's partner or spouse.","An example of a voorvoegsel is the ""van"" in ""Ludwig van Beethoven"". Since the voorvoegsel doesn't sort completely alphabetically, it is reasonable to specify it as a separate sub-component.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ENXP where Qualifiers = (VV, R)","FN.2"
+"Patient.name.family.extension:humannameOwnPrefix.id","Patient.name.family.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.name.family.extension:humannameOwnPrefix.extension","Patient.name.family.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.name.family.extension:humannameOwnPrefix.url","Patient.name.family.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/humanname-own-prefix""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.name.family.extension:humannameOwnPrefix.valueString:valueString","Patient.name.family.extension.valueString","valueString","","",0,1,"","","","string {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.name.family.extension:humannameOwnName","Patient.name.family.extension","humannameOwnName","Geslachtsnaam
+","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/humanname-own-name]]} {[]}
+","OwnName","The person’s official last name.","The portion of the family name that is derived from the person's own surname, as distinguished from any portion that is derived from the surname of the person's partner or spouse. If the person's surname has legally changed to become (or incorporate) the surname of the person's partner or spouse, this is the person's surname immediately prior to such change. Often this is the person's ""maiden name"".","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ENXP where Qualifiers = (BR)","FN.3"
+"Patient.name.family.extension:humannameOwnName.id","Patient.name.family.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.name.family.extension:humannameOwnName.extension","Patient.name.family.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.name.family.extension:humannameOwnName.url","Patient.name.family.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/humanname-own-name""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.name.family.extension:humannameOwnName.valueString:valueString","Patient.name.family.extension.valueString","valueString","","",0,1,"","","","string {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.name.family.extension:humannamePartnerPrefix","Patient.name.family.extension","humannamePartnerPrefix","VoorvoegselGeslachtsnaamPartner
+","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix]]} {[]}
+","PrefixSurname","Voorvoegsel derived from person's partner's surname inclusive of the space between the prefix and the surname, if applicable.","An example of a voorvoegsel is the ""van"" in ""Ludwig van Beethoven"". Since the voorvoegsel doesn't sort completely alphabetically, it is reasonable to identify it as a separate sub-component.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ENXP where Qualifiers = (VV, SP)","FN.4"
+"Patient.name.family.extension:humannamePartnerPrefix.id","Patient.name.family.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.name.family.extension:humannamePartnerPrefix.extension","Patient.name.family.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.name.family.extension:humannamePartnerPrefix.url","Patient.name.family.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.name.family.extension:humannamePartnerPrefix.valueString:valueString","Patient.name.family.extension.valueString","valueString","","",0,1,"","","","string {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.name.family.extension:humannamePartnerName","Patient.name.family.extension","humannamePartnerName","GeslachtsnaamPartner
+","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/humanname-partner-name]]} {[]}
+","LastNamePartner","Partner’s official last name.","The portion of the family name that is derived from the person's partner's surname, as distinguished from any portion that is derived from the surname of the person's own name. If the person's surname has legally changed to become (or incorporate) the surname of the person's partner or spouse, this is the person's surname immediately prior to such change. Often this is the person's ""maiden name"".","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ENXP where Qualifiers = (SP)","FN.5"
+"Patient.name.family.extension:humannamePartnerName.id","Patient.name.family.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.name.family.extension:humannamePartnerName.extension","Patient.name.family.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.name.family.extension:humannamePartnerName.url","Patient.name.family.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/humanname-partner-name""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.name.family.extension:humannamePartnerName.valueString:valueString","Patient.name.family.extension.valueString","valueString","","",0,1,"","","","string {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.name.family.value","Patient.name.family.value","","","",0,1,"","","","string {[]} {[]}
+","Primitive value for string","The actual value","","","","","","","","","",1048576,,,,"",,,,"string.value",0,1,"",""
+"Patient.name.given","Patient.name.given","","first name
+middle nameVoornamenInitialenRoepnaam","",0,*,"","","Y","string {[]} {[]}
+","Given","Note that in order to mark the type of a given name, the FHIR standard extension for ISO 21090 EN Qualifiers is to be used. Examples include call me name (Dutch: roepnaam) and initials. Each initial is expected to be delimited by a dot.","Note that in order to mark the type of a given name, the FHIR standard extension for ISO 21090 EN Qualifiers is to be used. Examples include call me name (Dutch: roepnaam) and initials. Each initial is expected to be delimited by a dot. To be conformant to the HCIM for NameInformation, at least the following qualifiers SHALL be supported: _BR_, _IN_ and _CL_. The qualifier _BR_ maps to the HCIM concept FirstNames, _IN_ maps to Initials and _CL_ to GivenName.
+
+Please see the compatibility note on the containing element as well!","","","","","","","","",,,,,"",,,,"HumanName.given",0,*,"","","./part[partType = GIV]","XPN.2 + XPN.3"
+"Patient.name.given.id","Patient.name.given.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references)","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"Patient.name.given.extension","Patient.name.given.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","",,"open","Element.extension",0,*,"",""
+"Patient.name.given.extension:iso21090EnQualifier","Patient.name.given.extension","iso21090EnQualifier","","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier]]} {[]}
+","LS | AC | NB | PR | HON | BR | AD | SP | MID | CL | IN | VV","A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type.","Used to indicate additional information about the name part and how it should be used.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ENXP.qualifier"
+"Patient.name.given.extension:iso21090EnQualifier.id","Patient.name.given.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.name.given.extension:iso21090EnQualifier.extension","Patient.name.given.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.name.given.extension:iso21090EnQualifier.url","Patient.name.given.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.name.given.extension:iso21090EnQualifier.valueCode:valueCode","Patient.name.given.extension.valueCode","valueCode","","",0,1,"","","","code {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,"required","A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type","http://hl7.org/fhir/ValueSet/name-part-qualifier","",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.name.given.value","Patient.name.given.value","","","",0,1,"","","","string {[]} {[]}
+","Primitive value for string","The actual value","","","","","","","","","",1048576,,,,"",,,,"string.value",0,1,"",""
+"Patient.name.prefix","Patient.name.prefix","","","",0,*,"","","Y","string {[]} {[]}
+","Parts that come before the name","Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.","","","","","","","","","",,,,,"",,,,"HumanName.prefix",0,*,"","","./part[partType = PFX]","XPN.5"
+"Patient.name.suffix","Patient.name.suffix","","","",0,*,"","","Y","string {[]} {[]}
+","Parts that come after the name","Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.","","","","","","","","","",,,,,"",,,,"HumanName.suffix",0,*,"","","./part[partType = SFX]","XPN/4"
+"Patient.name.period","Patient.name.period","","","",0,1,"","","Y","Period {[]} {[]}
+","Time period when name was/is in use","Indicates the period of time when this name was valid for the named person.","","Allows names to be placed in historical context.","","","","","","","",,,,,"",,,,"HumanName.period",0,1,"","","./usablePeriod[type=""IVL<TS>""]","XPN.13 + XPN.14"
+"Patient.telecom","Patient.telecom","","Contactgegevens
+","",0,*,"","","","ContactPoint {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint]]} {[]}
+","ContactInformation","A contact detail for the individual. Note that there is no support for multiple use values like 'mobile business'.","A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address may not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).","People have (primary) ways to contact them in some way such as phone, email.","","","","","<valueContactPoint xmlns=""http://hl7.org/fhir"">
+  <system value=""phone""/>
+  <value value=""+31611234567""/>
+  <use value=""work""/>
+</valueContactPoint>","","",,,,,"",,,,"Patient.telecom",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+cpt-2:A system is required if a value is provided. {value.empty() or system.exists()}","NL-CM:0.1.5","NL-CM:1.1.12","NL-CM:20.6.1","NL-CM:0.1.5","NL-CM:1.1.12","NL-CM:0.1.5","NL-CM:1.1.12","n/a","TEL","XTN"
+"Patient.gender","Patient.gender","","Geslacht
+","",0,1,"Y","","Y","code {[]} {[]}
+","Gender","Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes.","The gender may not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though the vast majority of systems and contexts only support M and F.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific gender aspect of interest (anatomical, chromosonal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosonal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overrideable error, not a ""hard"" error.","Needed for identification of the individual, in combination with (at least) name and birth date. Gender of individual drives many clinical processes.","","","","","","","",,"required","","http://hl7.org/fhir/ValueSet/administrative-gender","",,,,"Patient.gender",0,1,"","","NL-CM:0.1.9","NL-CM:0.1.9","NL-CM:0.1.9","player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender",".patient.administrativeGenderCode","PID-8"
+"Patient.gender.id","Patient.gender.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references)","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"Patient.gender.extension","Patient.gender.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","",,"open","Element.extension",0,*,"",""
+"Patient.gender.extension:GeslachtCodelijst","Patient.gender.extension","GeslachtCodelijst","Bevat de specifieke code conform de zib, bij een FHIR-element die een verplichte koppeling heeft met een bepaalde FHIR waardelijst of een FHIR element die niet gecodeerd is gedefinieerd, terwijl de zib dit wel doet.
+Geslacht","",0,1,"","","","Extension {[CanonicalType[http://nictiz.nl/fhir/StructureDefinition/code-specification]]} {[]}
+","Gender","Patient’s administrative gender.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.gender.extension:GeslachtCodelijst.id","Patient.gender.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.gender.extension:GeslachtCodelijst.extension","Patient.gender.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.gender.extension:GeslachtCodelijst.url","Patient.gender.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://nictiz.nl/fhir/StructureDefinition/code-specification""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.gender.extension:GeslachtCodelijst.value[x]","Patient.gender.extension.value[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"","type:$this}
+","",,"closed","Extension.value[x]",0,1,"","","N/A"
+"Patient.gender.extension:GeslachtCodelijst.value[x]:valueCodeableConcept","Patient.gender.extension.value[x]","valueCodeableConcept","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,"extensible","GeslachtCodelijst","http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000","",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.gender.value","Patient.gender.value","","","",0,1,"","","","code {[]} {[]}
+","Primitive value for code","Primitive value for code","","","","","","","","","",,,,,"",,,,"string.value",0,1,"",""
+"Patient.birthDate","Patient.birthDate","","Geboortedatum
+","",0,1,"Y","","Y","date {[]} {[]}
+","Patients date of birth. The date of birth is mandatory for a patient. An incomplete date, e.g. only year or only year + month, is permitted.","The date of birth for the individual.","At least an estimated year should be provided as a guess if the real DOB is unknown  There is a standard extension ""patient-birthTime"" available that should be used where Time is required (such as in maternaty/infant care systems).","Age of the individual drives many clinical processes.","","","","","","","",,,,,"",,,,"Patient.birthDate",0,1,"","","NL-CM:0.1.10","NL-CM:0.1.10","NL-CM:0.1.10","player[classCode=PSN|ANM and determinerCode=INSTANCE]/birthTime",".patient.birthTime","PID-7","21112-8"
+"Patient.deceased[x]","Patient.deceased[x]","","Overlijdensindicator/DatumOverlijden
+","",0,1,"Y","Y","Y","boolean {[]} {[]}
+dateTime {[]} {[]}","DeathIndicator/DateOfDeath","Indicates if the individual is deceased or not.","If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
+
+This element is labeled as a modifier because once a patient is marked as deceased, the actions that are appropriate to perform on the patient may be significantly different.","The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.","","","","","","","",,,,,"",,,,"Patient.deceased[x]",0,1,"","","NL-CM:0.1.32","NL-CM:0.1.33","NL-CM:0.1.32","NL-CM:0.1.33","NL-CM:0.1.32","NL-CM:0.1.33","player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime","n/a","PID-30  (bool) and PID-29 (datetime)"
+"Patient.address","Patient.address","","AdresInformatie
+Adresgegevens","",0,*,"","","","Address {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-address]]} {[]}
+","AddressInformation","This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.
+
+To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.
+
+**Separate address parts**
+
+The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.
+
+**Custom address types**
+
+The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse> and <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType> as well). The HCIM code itself should also be included using the AddressType extension.
+
+| HCIM                              |` .ext:AddressType` | `.ext:official` | `.use` | `.type`    |
+|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|
+| Postal Address/Postadres          | _PST_              |                 |        | _postal_   |
+| Primary Home/Officieel adres      | _HP_               | true            | _home_ |            |
+| Visit Address/Woon-/verblijfadres | _PHYS_             |                 | _home_ | _physical_ |
+| Temporary Address/Tijdelijk adres | _TMP_              |                 | _temp_ |            |
+| Work Place/Werkadres              | _WP_               |                 | _work_ |            |
+| Vacation Home/Vakantie adres      | _HV_               |                 | _temp_ |            |
+
+ If Address.type is _both_ then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.
+
+NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension.","Note: address is for postal addresses, not physical locations.","May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.","","","","","<valueAddress xmlns=""http://hl7.org/fhir"">
+  <extension url=""http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType"">
+    <valueCodeableConcept>
+      <coding>
+        <system value=""http://hl7.org/fhir/v3/AddressUse""/>
+        <code value=""HV""/>
+        <display value=""Vakantie adres""/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <use value=""temp""/>
+  <line value=""Binnenkant 12A Hoog"">
+    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"">
+      <valueString value=""Binnenkant""/>
+    </extension>
+    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"">
+      <valueString value=""12""/>
+    </extension>
+    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix"">
+      <valueString value=""A""/>
+    </extension>
+    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID"">
+      <valueString value=""Hoog""/>
+    </extension>
+  </line>
+  <city value=""Amsterdam""/>
+  <state value=""NH""/>
+  <postalCode value=""1000AA""/>
+  <country value=""NLD""/>
+</valueAddress>","","",,,,,"",,,,"Patient.address",0,*,"ele-1
+nl-streetname-if-official-and-other-line-parts","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+nl-streetname-if-official-and-other-line-parts:Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value {(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))}","NL-CM:0.1.4","NL-CM:1.1.17","NL-CM:0.1.4","NL-CM:1.1.17","NL-CM:0.1.4","NL-CM:1.1.17","n/a","AD","XAD"
+"Patient.maritalStatus","Patient.maritalStatus","","BurgerlijkeStaat
+","",0,1,"","","","CodeableConcept {[]} {[]}
+","MaritalStatus","This field contains a patient's most recent marital (civil) status. A person’s marital status according to the terms and definition in the Dutch civil code.","","Most, if not all systems capture it.","","","","","","","",,"extensible","","http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000","",,,,"Patient.maritalStatus",0,1,"","","NL-CM:7.9.2","NL-CM:7.13.7","NL-CM:7.9.2","NL-CM:7.13.7","NL-CM:7.9.2","NL-CM:7.13.7","player[classCode=PSN]/maritalStatusCode",".patient.maritalStatusCode","PID-16"
+"Patient.multipleBirth[x]","Patient.multipleBirth[x]","","Meerlingindicator
+","",0,1,"","","","boolean {[]} {[]}
+integer {[]} {[]}","MultipleBirthIndicator","Indicates whether the patient is part of a multiple (bool) or indicates the actual birth order (integer).","Where the valueInteger is provided, the number is the birth number in the sequence.
+E.g. The middle birth in tripplets would be valueInteger=2 and the third born would have valueInteger=3
+If a bool value was provided for this tripplets examle, then all 3 patient records would have valueBool=true (the ordering is not indicated).","For disambiguation of multiple-birth children, especially relevant where the care provider doesn't meet the patient, such as labs.","","","","","","","",,,,,"",,,,"Patient.multipleBirth[x]",0,1,"","","NL-CM:0.1.31","NL-CM:0.1.31","NL-CM:0.1.31","player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd,  player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber","n/a","PID-24 (bool), PID-25 (integer)"
+"Patient.photo","Patient.photo","","","",0,*,"","","","Attachment {[]} {[]}
+","Image of the patient","Image of the patient.","","Many EHR systems have the capability to capture an image of the patient. Fits with newer social media usage too.","","","","","","","",,,,,"",,,,"Patient.photo",0,*,"","","player[classCode=PSN|ANM and determinerCode=INSTANCE]/desc","n/a","OBX-5 - needs a profile"
+"Patient.contact","Patient.contact","","Contactpersoon
+","",0,*,"","","","BackboneElement {[]} {[]}
+","ContactPerson","Contacts are related persons in some way, but not all related persons are contacts. The HCIM ContactPerson is designed to deal with both related persons and contacts. An HCIM ContactPerson who is a contact, is expected to have an NL-CM:3.1.2 Role primary contact ('Eerste relatie/contactpersoon') or secondary contact ('Tweede relatie/contactpersoon'). See Patient.contact.relationship in slice 'role'.","Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.","Need to track people you can contact about the patient.","","","","","","","",,,,,"",,,,"Patient.contact",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+pat-1:SHALL at least contain a contact's details or a reference to an organization {name.exists() or telecom.exists() or address.exists() or organization.exists()}","NL-CM:3.1.1","NL-CM:3.1.1","NL-CM:3.1.1","player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]","n/a"
+"Patient.contact.id","Patient.contact.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.contact.extension","Patient.contact.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","","n/a"
+"Patient.contact.modifierExtension","Patient.contact.modifierExtension","","extensions
+user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","","N/A"
+"Patient.contact.relationship","Patient.contact.relationship","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","The kind of relationship","The nature of the relationship between the patient and the contact person.","","Used to determine which contact person is the most relevant to approach, depending on circumstances.","","","","","","","",,"extensible","The nature of the relationship between a patient and a contact person for that patient.","http://hl7.org/fhir/ValueSet/v2-0131","","value:$this}
+","",,"open","Patient.contact.relationship",0,*,"","","code","n/a","NK1-7, NK1-3"
+"Patient.contact.relationship:relationship","Patient.contact.relationship","relationship","Relatie
+","",0,*,"","","","CodeableConcept {[]} {[]}
+","Relationship","The nature of the relationship between the patient and the contact person.","","Used to determine which contact person is the most relevant to approach, depending on circumstances.","","","","","","","",,"required","","http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000","",,,,"Patient.contact.relationship",0,*,"","","NL-CM:3.1.3","NL-CM:3.1.3","NL-CM:3.1.3","code","n/a","NK1-7, NK1-3"
+"Patient.contact.relationship:role","Patient.contact.relationship","role","Rol
+","",0,*,"","","","CodeableConcept {[]} {[]}
+","Role","Expectation is to have at least one of primary contact ('Eerste relatie/contactpersoon') or secondary contact ('Tweede relatie/contactpersoon')","","Used to determine which contact person is the most relevant to approach, depending on circumstances.","","","","","","","",,"required","","http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000","",,,,"Patient.contact.relationship",0,*,"","","NL-CM:3.1.2","NL-CM:3.1.2","NL-CM:3.1.2","code","n/a","NK1-7, NK1-3"
+"Patient.contact.name","Patient.contact.name","","Naamgegevens
+","",0,1,"","","","HumanName {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-humanname]]} {[]}
+","NameInformation","A human's name with the ability to identify parts and usage.","Dutch names require that certain name parts are separately communicable. For this reason, extensions are added onto the base HumanName element to mark the meaning of each part. A Dutch HumanName is still a proper FHIR HumanName; however, there might be an incompatibilty with the default FHIR mechanism for communicating given names. See the compatibility note below for more information.
+
+The extension elements cover birth name (NL: eigennaam / geslachtsnaam) and partner/spouse name. Both may have a prefix (NL: voorvoegsel). When a person marries, he or she may keep their own name, assume the partner name, append the partner name to their own name, or the other way around.
+
+**Incompatibility note**: It has come to light that this specification deviates from the way that the HumanName datatype is normally used. This will be fixed in a future release. However, current implementations should be aware of the special considerations regarding the use of this specification. 
+
+The issue at hand is the way alternative representations of a name, like initials or a nickname, are communicated. Normally this is done using multiple HumanName instances, which are differentiated using the `.use` element. However, this specification allows for including all alternative representations in the _same_ HumanName instance, with the expectation that the extensions provide enough information for receiving systems to differentiate them. However, this means that contrary to the normal usage of this datatype, repetitions of `.given` names cannot be concatenated to get the full list of given names; the list might be a mix of full names, nicknames and initials.
+
+Since multiple implementations are based on this specification, sending systems are advised (but not required) to keep the approach with one HumanName instance, while receiving systems should be able to handle this one-instance approach. More specifically:
+
+* Sending and receiving systems SHOULD always use the specified extensions when using this datatype.
+* Sending systems are encouraged to populate the `.text` element to unambigiously communicate the person's name.
+* Sending systems are encouraged to send either the full given names or the initials, but not both. This alleviates the duplication of names in `.given`.
+* When a sending system uses the current one-instance approach for communicating multiple representations, `.use` MAY NOT be populated. After all, it is not possible to select a single `.use` when the instance contains different representations.
+* When a receiving system interprets the instance as the single-instance-multiple-representations approach, the `.given` names marked as initials SHOULD be interpreted as alternatives to the full given names. Note the underlying HCIM expects both the _list_ of full names and _list_ of initials to be a single string; there's no match for an initial to a full name. The instance SHOULD be regarded as using this approach when:
+  * They encounter a single instance
+  * And the `.use` element is absent
+  * And all the name parts are differentiated using the specified extensions
+* In any other circumstance, receiving systems SHOULD interpret the usage as the normal use.
+
+Example: miss Irma Jongeneel marries mister de Haas and assumes the name Irma Jongeneel-de Haas:
+
+* `.family` = ""Jongeneel-de Haas""
+* `.given` = ""Irma"" (with `.given:iso21090EnQualifier` = _BR_)
+* `.family:humannameOwnName` = ""Jongeneel""
+* `.family:humannamePartnerPrefix` = ""de ""
+* `.family:humannamePartnerName` = ""Haas""","Contact persons need to be identified by name, but it is uncommon to need details about multiple other names for that contact person.","","","","","<valueHumanName xmlns=""http://hl7.org/fhir"">
+  <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"">
+    <valueCode value=""NL4""/>
+  </extension>
+  <text value=""Irma Jongeneel-de Haas""/>
+  <family value=""Jongeneel-de Haas"">
+    <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-own-name"">
+      <valueString value=""Jongeneel""/>
+    </extension>
+    <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix"">
+      <valueString value=""de""/>
+    </extension>
+    <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-partner-name"">
+      <valueString value=""Haas""/>
+    </extension>
+  </family>
+  <given value=""Irma"">
+    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"">
+      <valueCode value=""CL""/>
+    </extension>
+  </given>
+</valueHumanName>","","",,,,,"",,,,"Patient.contact.name",0,1,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+nl-core-humanname-1:if you specify a prefix for an own name then an own name is also expected {name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()}nl-core-humanname-2:if you specify a voorvoegsel for a partner name then a partner name is also expected {name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()}","NL-CM:3.1.4","NL-CM:3.1.4","NL-CM:3.1.4","n/a","EN (actually, PN)","XPN"
+"Patient.contact.name.id","Patient.contact.name.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.contact.name.extension","Patient.contact.name.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"",""
+"Patient.contact.name.extension:humannameAssemblyOrder","Patient.contact.name.extension","humannameAssemblyOrder","","",0,*,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/humanname-assembly-order]]} {[]}
+","Preferred display order of name parts","A code that represents the preferred display order of the components of this human name.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
+"Patient.contact.name.extension:humannameAssemblyOrder.id","Patient.contact.name.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.contact.name.extension:humannameAssemblyOrder.extension","Patient.contact.name.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.contact.name.extension:humannameAssemblyOrder.url","Patient.contact.name.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/humanname-assembly-order""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.contact.name.extension:humannameAssemblyOrder.valueCode:valueCode","Patient.contact.name.extension.valueCode","valueCode","","",0,1,"","","","code {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,"required","A code that represents the preferred display order of the components of a human name","http://hl7.org/fhir/ValueSet/name-assembly-order","",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.contact.name.use","Patient.contact.name.use","","","",0,1,"","Y","Y","code {[]} {[]}
+","usual | official | temp | nickname | anonymous | old | maiden","Identifies the purpose for this name.","This is labeled as ""Is Modifier"" because applications should not mistake a temporary or old name etc.for a current/permanent one. Applications can assume that a name is current unless it explicitly says that it is temporary or old.","Allows the appropriate name for a particular context of use to be selected from among a set of names.","","","","","","","",,"required","The use of a human name","http://hl7.org/fhir/ValueSet/name-use","",,,,"HumanName.use",0,1,"","","unique(./use)","XPN.7, but often indicated by which field contains the name"
+"Patient.contact.name.text","Patient.contact.name.text","","","",0,1,"","","Y","string {[]} {[]}
+","Text representation of the full name","A full text representation of the name.","Can provide both a text representation and structured parts.","A renderable, unencoded form.","","","","","","","",,,,,"",,,,"HumanName.text",0,1,"","","NL-CM:1.1.5","NL-CM:1.1.5","NL-CM:1.1.5","./formatted","implied by XPN.11"
+"Patient.contact.name.family","Patient.contact.name.family","","surname
+Achternaam","",0,1,"","","Y","string {[]} {[]}
+","Surname","The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.","Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).","","","","","","","","",,,,,"",,,,"HumanName.family",0,1,"","","./part[partType = FAM]","XPN.1/FN.1"
+"Patient.contact.name.family.id","Patient.contact.name.family.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references)","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"Patient.contact.name.family.extension","Patient.contact.name.family.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","",,"open","Element.extension",0,*,"",""
+"Patient.contact.name.family.extension:humannameOwnPrefix","Patient.contact.name.family.extension","humannameOwnPrefix","VoorvoegselGeslachtsnaam
+","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/humanname-own-prefix]]} {[]}
+","PrefixOwnName","The prefix portion (e.g. voorvoegsel) inclusive of the space between the prefix and the surname, if applicable, of the family name that is derived from the person's own surname, as distinguished from any portion that is derived from the surname of the person's partner or spouse.","An example of a voorvoegsel is the ""van"" in ""Ludwig van Beethoven"". Since the voorvoegsel doesn't sort completely alphabetically, it is reasonable to specify it as a separate sub-component.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ENXP where Qualifiers = (VV, R)","FN.2"
+"Patient.contact.name.family.extension:humannameOwnPrefix.id","Patient.contact.name.family.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.contact.name.family.extension:humannameOwnPrefix.extension","Patient.contact.name.family.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.contact.name.family.extension:humannameOwnPrefix.url","Patient.contact.name.family.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/humanname-own-prefix""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.contact.name.family.extension:humannameOwnPrefix.valueString:valueString","Patient.contact.name.family.extension.valueString","valueString","","",0,1,"","","","string {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.contact.name.family.extension:humannameOwnName","Patient.contact.name.family.extension","humannameOwnName","Geslachtsnaam
+","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/humanname-own-name]]} {[]}
+","OwnName","The person’s official last name.","The portion of the family name that is derived from the person's own surname, as distinguished from any portion that is derived from the surname of the person's partner or spouse. If the person's surname has legally changed to become (or incorporate) the surname of the person's partner or spouse, this is the person's surname immediately prior to such change. Often this is the person's ""maiden name"".","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ENXP where Qualifiers = (BR)","FN.3"
+"Patient.contact.name.family.extension:humannameOwnName.id","Patient.contact.name.family.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.contact.name.family.extension:humannameOwnName.extension","Patient.contact.name.family.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.contact.name.family.extension:humannameOwnName.url","Patient.contact.name.family.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/humanname-own-name""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.contact.name.family.extension:humannameOwnName.valueString:valueString","Patient.contact.name.family.extension.valueString","valueString","","",0,1,"","","","string {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.contact.name.family.extension:humannamePartnerPrefix","Patient.contact.name.family.extension","humannamePartnerPrefix","VoorvoegselGeslachtsnaamPartner
+","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix]]} {[]}
+","PrefixSurname","Voorvoegsel derived from person's partner's surname inclusive of the space between the prefix and the surname, if applicable.","An example of a voorvoegsel is the ""van"" in ""Ludwig van Beethoven"". Since the voorvoegsel doesn't sort completely alphabetically, it is reasonable to identify it as a separate sub-component.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ENXP where Qualifiers = (VV, SP)","FN.4"
+"Patient.contact.name.family.extension:humannamePartnerPrefix.id","Patient.contact.name.family.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.contact.name.family.extension:humannamePartnerPrefix.extension","Patient.contact.name.family.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.contact.name.family.extension:humannamePartnerPrefix.url","Patient.contact.name.family.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.contact.name.family.extension:humannamePartnerPrefix.valueString:valueString","Patient.contact.name.family.extension.valueString","valueString","","",0,1,"","","","string {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.contact.name.family.extension:humannamePartnerName","Patient.contact.name.family.extension","humannamePartnerName","GeslachtsnaamPartner
+","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/humanname-partner-name]]} {[]}
+","LastNamePartner","Partner’s official last name.","The portion of the family name that is derived from the person's partner's surname, as distinguished from any portion that is derived from the surname of the person's own name. If the person's surname has legally changed to become (or incorporate) the surname of the person's partner or spouse, this is the person's surname immediately prior to such change. Often this is the person's ""maiden name"".","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ENXP where Qualifiers = (SP)","FN.5"
+"Patient.contact.name.family.extension:humannamePartnerName.id","Patient.contact.name.family.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.contact.name.family.extension:humannamePartnerName.extension","Patient.contact.name.family.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.contact.name.family.extension:humannamePartnerName.url","Patient.contact.name.family.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/humanname-partner-name""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.contact.name.family.extension:humannamePartnerName.valueString:valueString","Patient.contact.name.family.extension.valueString","valueString","","",0,1,"","","","string {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.contact.name.family.value","Patient.contact.name.family.value","","","",0,1,"","","","string {[]} {[]}
+","Primitive value for string","The actual value","","","","","","","","","",1048576,,,,"",,,,"string.value",0,1,"",""
+"Patient.contact.name.given","Patient.contact.name.given","","first name
+middle nameVoornamenInitialenRoepnaam","",0,*,"","","Y","string {[]} {[]}
+","Given","Note that in order to mark the type of a given name, the FHIR standard extension for ISO 21090 EN Qualifiers is to be used. Examples include call me name (Dutch: roepnaam) and initials. Each initial is expected to be delimited by a dot.","Note that in order to mark the type of a given name, the FHIR standard extension for ISO 21090 EN Qualifiers is to be used. Examples include call me name (Dutch: roepnaam) and initials. Each initial is expected to be delimited by a dot. To be conformant to the HCIM for NameInformation, at least the following qualifiers SHALL be supported: _BR_, _IN_ and _CL_. The qualifier _BR_ maps to the HCIM concept FirstNames, _IN_ maps to Initials and _CL_ to GivenName.
+
+Please see the compatibility note on the containing element as well!","","","","","","","","",,,,,"",,,,"HumanName.given",0,*,"","","./part[partType = GIV]","XPN.2 + XPN.3"
+"Patient.contact.name.given.id","Patient.contact.name.given.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references)","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"Patient.contact.name.given.extension","Patient.contact.name.given.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","",,"open","Element.extension",0,*,"",""
+"Patient.contact.name.given.extension:iso21090EnQualifier","Patient.contact.name.given.extension","iso21090EnQualifier","","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier]]} {[]}
+","LS | AC | NB | PR | HON | BR | AD | SP | MID | CL | IN | VV","A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type.","Used to indicate additional information about the name part and how it should be used.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ENXP.qualifier"
+"Patient.contact.name.given.extension:iso21090EnQualifier.id","Patient.contact.name.given.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.contact.name.given.extension:iso21090EnQualifier.extension","Patient.contact.name.given.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.contact.name.given.extension:iso21090EnQualifier.url","Patient.contact.name.given.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.contact.name.given.extension:iso21090EnQualifier.valueCode:valueCode","Patient.contact.name.given.extension.valueCode","valueCode","","",0,1,"","","","code {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,"required","A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type","http://hl7.org/fhir/ValueSet/name-part-qualifier","",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.contact.name.given.value","Patient.contact.name.given.value","","","",0,1,"","","","string {[]} {[]}
+","Primitive value for string","The actual value","","","","","","","","","",1048576,,,,"",,,,"string.value",0,1,"",""
+"Patient.contact.name.prefix","Patient.contact.name.prefix","","","",0,*,"","","Y","string {[]} {[]}
+","Parts that come before the name","Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.","","","","","","","","","",,,,,"",,,,"HumanName.prefix",0,*,"","","./part[partType = PFX]","XPN.5"
+"Patient.contact.name.suffix","Patient.contact.name.suffix","","","",0,*,"","","Y","string {[]} {[]}
+","Parts that come after the name","Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.","","","","","","","","","",,,,,"",,,,"HumanName.suffix",0,*,"","","./part[partType = SFX]","XPN/4"
+"Patient.contact.name.period","Patient.contact.name.period","","","",0,1,"","","Y","Period {[]} {[]}
+","Time period when name was/is in use","Indicates the period of time when this name was valid for the named person.","","Allows names to be placed in historical context.","","","","","","","",,,,,"",,,,"HumanName.period",0,1,"","","./usablePeriod[type=""IVL<TS>""]","XPN.13 + XPN.14"
+"Patient.contact.telecom","Patient.contact.telecom","","Contactgegevens
+","",0,*,"","","","ContactPoint {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint]]} {[]}
+","ContactInformation","Contact information includes a person's telephone numbers and email addresses. This datatype defines a common basis for expressing all contact information around the world, but adds extensions to express Dutch contacts specifically, according to the HCIM ContactInformation (v1.0, 2017). A Dutch ContactPoint still is a proper FHIR ContactPoint, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype. The table below explains how the HCIM concepts are mapped to the various FHIR elements. The HCIM code itself should also be included using the TelecomType extension.
+
+| HCIM                                               | `.ext:TelecomType` | `.system` | `.use`   |
+|----------------------------------------------------|:------------------:|:---------:|:--------:|
+| Primary Home Land Line                             | _LL_               | _phone_   | _home_   |
+| Temporary Land Line                                | _LL_               | _phone_   | _temp_   |
+| Primary Work Land Line                             | _LL_               | _phone_   | _work_   |
+|                                                    |                    |           |          |
+| Primary Home Fax                                   | _FAX_              | _fax_     | _home_   |
+| Temporary Fax                                      | _FAX_              | _fax_     | _temp_   |
+| Primary Work Fax                                   | _FAX_              | _fax_     | _work_   |
+|                                                    |                    |           |          |
+| Primary Home Mobile Phone                          | _MC_               | _phone_   | _home_   |
+| Temporary Mobile Phone                             | _MC_               | _phone_   | _temp_   |
+| Primary Work Mobile Phone                          | _MC_               | _phone_   | _work_   |
+|                                                    |                    |           |          |
+| Primary Home Pager                                 | _PG_               | _pager_   | _home_   |
+| Temporary Pager                                    | _PG_               | _pager_   | _temp_   |
+| Primary Work Pager                                 | _PG_               | _pager_   | _work_   |
+|                                                    |                    |           |          |
+| Private email address                              |                    | _email_   | _home_   |
+| Work email address                                 |                    | _email_   | _work_   |
+|                                                    |                    |           |          |
+| Mobile phone number undetermined private/business  |                    | _phone_   | _mobile_ |","Telecommunication data details (phone/email) is physically modeled in the HCIM Patient, which is why the telecommunication mappings appear to be coming from the HCIM Patient instead of the HCIM ContactPerson","People have (primary) ways to contact them in some way such as phone, email.","","","","","<valueContactPoint xmlns=""http://hl7.org/fhir"">
+  <system value=""phone""/>
+  <value value=""+31611234567""/>
+  <use value=""work""/>
+</valueContactPoint>","","",,,,,"",,,,"Patient.contact.telecom",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+cpt-2:A system is required if a value is provided. {value.empty() or system.exists()}","NL-CM:3.1.6","NL-CM:20.6.1","NL-CM:3.1.6","NL-CM:3.1.6","n/a","TEL","XTN"
+"Patient.contact.address","Patient.contact.address","","AdresInformatie
+Adresgegevens","",0,1,"","","","Address {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-address]]} {[]}
+","AddressInformation","This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.
+
+To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.
+
+**Separate address parts**
+
+The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.
+
+**Custom address types**
+
+The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse> and <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType> as well). The HCIM code itself should also be included using the AddressType extension.
+
+| HCIM                              |` .ext:AddressType` | `.ext:official` | `.use` | `.type`    |
+|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|
+| Postal Address/Postadres          | _PST_              |                 |        | _postal_   |
+| Primary Home/Officieel adres      | _HP_               | true            | _home_ |            |
+| Visit Address/Woon-/verblijfadres | _PHYS_             |                 | _home_ | _physical_ |
+| Temporary Address/Tijdelijk adres | _TMP_              |                 | _temp_ |            |
+| Work Place/Werkadres              | _WP_               |                 | _work_ |            |
+| Vacation Home/Vakantie adres      | _HV_               |                 | _temp_ |            |
+
+ If Address.type is _both_ then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.
+
+NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension.","Note: address is for postal addresses, not physical locations.","Need to keep track where the contact person can be contacted per postal mail or visited.","","","","","<valueAddress xmlns=""http://hl7.org/fhir"">
+  <extension url=""http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType"">
+    <valueCodeableConcept>
+      <coding>
+        <system value=""http://hl7.org/fhir/v3/AddressUse""/>
+        <code value=""HV""/>
+        <display value=""Vakantie adres""/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <use value=""temp""/>
+  <line value=""Binnenkant 12A Hoog"">
+    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"">
+      <valueString value=""Binnenkant""/>
+    </extension>
+    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"">
+      <valueString value=""12""/>
+    </extension>
+    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix"">
+      <valueString value=""A""/>
+    </extension>
+    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID"">
+      <valueString value=""Hoog""/>
+    </extension>
+  </line>
+  <city value=""Amsterdam""/>
+  <state value=""NH""/>
+  <postalCode value=""1000AA""/>
+  <country value=""NLD""/>
+</valueAddress>","","",,,,,"",,,,"Patient.contact.address",0,1,"ele-1
+nl-streetname-if-official-and-other-line-parts","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+nl-streetname-if-official-and-other-line-parts:Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value {(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))}","NL-CM:3.1.5","NL-CM:3.1.5","NL-CM:3.1.5","n/a","AD","XAD"
+"Patient.contact.gender","Patient.contact.gender","","","",0,1,"","","","code {[]} {[]}
+","male | female | other | unknown","Administrative Gender - the gender that the contact person is considered to have for administration and record keeping purposes.","","Needed to address the person correctly.","","","","","","","",,"required","The gender of a person used for administrative purposes.","http://hl7.org/fhir/ValueSet/administrative-gender","",,,,"Patient.contact.gender",0,1,"","","player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender","n/a","NK1-15"
+"Patient.contact.organization","Patient.contact.organization","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+","Organization that is associated with the contact","Organization on behalf of which the contact is acting or for which the contact is working.","","For guardians or business related contacts, the organization is relevant.","","","","","","","",,,,,"",,,,"Patient.contact.organization",0,1,"pat-1
+","","scoper","n/a","NK1-13, NK1-30, NK1-31, NK1-32, NK1-41"
+"Patient.contact.period","Patient.contact.period","","","",0,1,"","","","Period {[]} {[]}
+","The period during which this contact person or organization is valid to be contacted relating to this patient","The period during which this contact person or organization is valid to be contacted relating to this patient.","","","","","","","","","",,,,,"",,,,"Patient.contact.period",0,1,"","","effectiveTime","n/a"
+"Patient.animal","Patient.animal","","","",0,1,"","Y","Y","BackboneElement {[]} {[]}
+","This patient is known to be an animal (non-human)","This patient is known to be an animal.","The animal element is labeled ""Is Modifier"" since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject declared animal records.   The absense of the animal element does not imply that the patient is a human. If a system requires such a positive assertion that the patient is human, an extension will be required.  (Do not use a species of homo-sapiens in animal species, as this would incorrectly infer that the patient is an animal).","Many clinical systems are extended to care for animal patients as well as human.","","","","","","","",,,,,"",,,,"Patient.animal",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+","player[classCode=ANM]","n/a"
+"Patient.animal.id","Patient.animal.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.animal.extension","Patient.animal.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","","n/a"
+"Patient.animal.modifierExtension","Patient.animal.modifierExtension","","extensions
+user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","","N/A"
+"Patient.animal.species","Patient.animal.species","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
+","E.g. Dog, Cow","Identifies the high level taxonomic categorization of the kind of animal.","If the patient is non-human, at least a species SHALL be specified. Species SHALL be a widely recognised taxonomic classification.  It may or may not be Linnaean taxonomy and may or may not be at the level of species. If the level is finer than species--such as a breed code--the code system used SHALL allow inference of the species.  (The common example is that the word ""Hereford"" does not allow inference of the species Bos taurus, because there is a Hereford pig breed, but the SNOMED CT code for ""Hereford Cattle Breed"" does.).","Need to know what kind of animal.","","","","","","","",,"example","The species of an animal.","http://hl7.org/fhir/ValueSet/animal-species","",,,,"Patient.animal.species",1,1,"","","code","n/a","PID-35"
+"Patient.animal.breed","Patient.animal.breed","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
+","E.g. Poodle, Angus","Identifies the detailed categorization of the kind of animal.","Breed MAY be used to provide further taxonomic or non-taxonomic classification.  It may involve local or proprietary designation--such as commercial strain--and/or additional information such as production type.","May need to know the specific kind within the species.","","","","","","","",,"example","The breed of an animal.","http://hl7.org/fhir/ValueSet/animal-breeds","",,,,"Patient.animal.breed",0,1,"","","playedRole[classCode=GEN]/scoper[classCode=ANM, determinerCode=KIND]/code","n/a","PID-37"
+"Patient.animal.genderStatus","Patient.animal.genderStatus","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
+","E.g. Neutered, Intact","Indicates the current state of the animal's reproductive organs.","","Gender status can affect housing and animal behavior.","","","","","","","",,"example","The state of the animal's reproductive organs.","http://hl7.org/fhir/ValueSet/animal-genderstatus","",,,,"Patient.animal.genderStatus",0,1,"","","genderStatusCode","n/a","N/A"
+"Patient.communication","Patient.communication","","Taalvaardigheid
+","",0,*,"","","","BackboneElement {[]} {[]}
+","A list of Languages which may be used to communicate with the patient about his or her health","Languages which may be used to communicate with the patient about his or her health.","If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.","If a patient does not speak the local language, interpreters may be required, so languages spoken and proficiency is an important things to keep track of both for patient and other persons of interest.","","","","","","","",,,,,"",,,,"Patient.communication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+","NL-CM:7.12.1","LanguageCommunication","patient.languageCommunication"
+"Patient.communication.id","Patient.communication.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.communication.extension","Patient.communication.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","",,"open","Element.extension",0,*,"",""
+"Patient.communication.extension:languageProficiency","Patient.communication.extension","languageProficiency","","",0,*,"","","","Extension {[CanonicalType[http://nictiz.nl/fhir/StructureDefinition/patient-proficiency]]} {[]}
+","Proficiency level of the communication","Proficiency level of the communication.","The HCIM concepts LanguageControlListening, LanguageControlReading, LanguageControlSpeaking are captuperd using a mocked offical HL7 core extension from the R4 FHIR specification. Each of these three concepts is encoded as a copy of the extension, typed using the code in the type slice according to the following mapping:
+* LanguaneControlListening maps to code 'RSP' (Received spoken)
+* LanguageControlReading maps to code 'RWR' (Received written)
+* LanguageControlSpeaking maps to code 'ESP' (Expressed spoken)","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","NL-CM:7.12.6","NL-CM:7.12.7","NL-CM:7.12.8"
+"Patient.communication.extension:languageProficiency.id","Patient.communication.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.communication.extension:languageProficiency.extension","Patient.communication.extension.extension","","","",2,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"",""
+"Patient.communication.extension:languageProficiency.extension:type","Patient.communication.extension.extension","type","","",1,1,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
+"Patient.communication.extension:languageProficiency.extension:type.id","Patient.communication.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.communication.extension:languageProficiency.extension:type.extension","Patient.communication.extension.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.communication.extension:languageProficiency.extension:type.url","Patient.communication.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""type""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.communication.extension:languageProficiency.extension:type.value[x]","Patient.communication.extension.extension.value[x]","","","",1,1,"","","","Coding {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"","type:$this}
+","",,"closed","Extension.value[x]",0,1,"","","N/A"
+"Patient.communication.extension:languageProficiency.extension:type.value[x]:valueCoding","Patient.communication.extension.extension.value[x]","valueCoding","","",1,1,"","","","Coding {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,"extensible","","http://hl7.org/fhir/ValueSet/v3-LanguageAbilityMode","",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.communication.extension:languageProficiency.extension:level","Patient.communication.extension.extension","level","","",1,1,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
+"Patient.communication.extension:languageProficiency.extension:level.id","Patient.communication.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.communication.extension:languageProficiency.extension:level.extension","Patient.communication.extension.extension.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
+"Patient.communication.extension:languageProficiency.extension:level.url","Patient.communication.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""level""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.communication.extension:languageProficiency.extension:level.value[x]","Patient.communication.extension.extension.value[x]","","","",1,1,"","","","Coding {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"","type:$this}
+","",,"closed","Extension.value[x]",0,1,"","","N/A"
+"Patient.communication.extension:languageProficiency.extension:level.value[x]:valueCoding","Patient.communication.extension.extension.value[x]","valueCoding","","",1,1,"","","","Coding {[]} {[]}
+","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,"extensible","","http://hl7.org/fhir/ValueSet/v3-LanguageAbilityProficiency","",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.communication.extension:languageProficiency.url","Patient.communication.extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://nictiz.nl/fhir/StructureDefinition/patient-proficiency""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
+"Patient.communication.extension:languageProficiency.value[x]","Patient.communication.extension.value[x]","","","",0,0,"","","","base64Binary {[]} {[]}
+boolean {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","","N/A"
+"Patient.communication.extension:comment","Patient.communication.extension","comment","Toelichting
+","",0,*,"","","","Extension {[CanonicalType[http://nictiz.nl/fhir/StructureDefinition/Comment]]} {[]}
+","Comment","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","NL-CM:7.12.5"
+"Patient.communication.modifierExtension","Patient.communication.modifierExtension","","extensions
+user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","","N/A"
+"Patient.communication.language","Patient.communication.language","","CommunicatieTaal
+","",1,1,"","","","CodeableConcept {[]} {[]}
+","CommunicationLanguage","The language of communication. 
+
+The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. ""en"" for English, or ""en-US"" for American English versus ""en-EN"" for England English.","The FHIR value set http://hl7.org/fhir/valueset-languages.html is used instead of the HCIM value set CommunicationLanguageCodelist. The FHIR value set uses the code system urn:ietf:bcp:47 which includes the ISO-639-2 alpha code system used by the HCIM value set.","Most systems in multilingual countries will want to convey language. Not all systems actually need the regional dialect.","","","","","","","",,"extensible","A human language.","http://hl7.org/fhir/ValueSet/languages","",,,,"Patient.communication.language",1,1,"","","NL-CM:7.12.3","player[classCode=PSN|ANM and determinerCode=INSTANCE]/languageCommunication/code",".languageCode","PID-15, LAN-2"
+"Patient.communication.preferred","Patient.communication.preferred","","","",0,1,"","","","boolean {[]} {[]}
+","Language preference indicator","Indicates whether or not the patient prefers this language (over other languages he masters up a certain level).","This language is specifically identified for communicating healthcare information.","People that master multiple languages up to certain level may prefer one or more, i.e. feel more confident in communicating in a particular language making other languages sort of a fall back method.","","","","","","","",,,,,"",,,,"Patient.communication.preferred",0,1,"","","preferenceInd",".preferenceInd","PID-15"
+"Patient.generalPractitioner","Patient.generalPractitioner","","careProvider
+Huisarts","",0,1,"","","","Reference {[]} {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-organization], CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner]]}
+","GeneralPractitioner","Patient's nominated care provider.","This may be the primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disablity setting, or even organization that will provide people to perform the care provider roles.
+
+It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources.","","","","","","","","",,,,,"",,,,"Patient.generalPractitioner",0,*,"","","NL-CM:17.2.1","NL-CM:17.1.1","NL-CM:17.2.1","NL-CM:17.1.1","NL-CM:17.2.1","NL-CM:17.1.1","subjectOf.CareEvent.performer.AssignedEntity","n/a","PD1-4"
+"Patient.generalPractitioner.id","Patient.generalPractitioner.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.generalPractitioner.extension","Patient.generalPractitioner.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"",""
+"Patient.generalPractitioner.extension:practitionerRole","Patient.generalPractitioner.extension","practitionerRole","","",0,1,"","","","Extension {[CanonicalType[http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference]]} {[]}
+","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","","n/a","N/A"
+"Patient.generalPractitioner.reference","Patient.generalPractitioner.reference","","","",0,1,"","","Y","string {[]} {[]}
+","Literal reference, Relative, internal or absolute URL","A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.","Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure ""/[type]/[id]"" then it should be assumed that the reference is to a FHIR RESTful server.","","","","","","","","",,,,,"",,,,"Reference.reference",0,1,"ref-1
+","","N/A"
+"Patient.generalPractitioner.identifier","Patient.generalPractitioner.identifier","","","",0,1,"","","Y","Identifier {[]} {[]}
+","Logical reference, when literal reference is not known","An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.","When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. 
+
+When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference
+
+Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.","","","","","","","","",,,,,"",,,,"Reference.identifier",0,1,"","",".identifier"
+"Patient.generalPractitioner.display","Patient.generalPractitioner.display","","","",0,1,"","","Y","string {[]} {[]}
+","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","","N/A"
+"Patient.managingOrganization","Patient.managingOrganization","","","",0,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+","Organization that is the custodian of the patient record","Organization that is the custodian of the patient record.","There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association).","Need to know who recognizes this patient record, manages and updates it.","","","","","","","",,,,,"",,,,"Patient.managingOrganization",0,1,"","","scoper",".providerOrganization"
+"Patient.link","Patient.link","","","",0,*,"","Y","Y","BackboneElement {[]} {[]}
+","Link to another patient resource that concerns the same actual person","Link to another patient resource that concerns the same actual patient.","There is no assumption that linked patient records have mutual links. 
+
+This element is labelled as a modifier because it may not be the main Patient resource, and the referenced patient should be used instead of this Patient record. This is when the link.type value is 'replaced-by'.","There are multiple usecases: 
+
+* Duplicate patient records due to the clerical errors associated with the difficulties of identifying humans consistently, and * Distribution of patient information across multiple servers.","","","","","","","",,,,,"",,,,"Patient.link",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+","outboundLink","n/a"
+"Patient.link.id","Patient.link.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.link.extension","Patient.link.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","","n/a"
+"Patient.link.modifierExtension","Patient.link.modifierExtension","","extensions
+user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","","N/A"
+"Patient.link.other","Patient.link.other","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson]]}
+","The other patient or related person resource that the link refers to","The other patient resource that the link refers to.","Referencing a RelatedPerson here removes the need to use a Person record to associate a Patient and RelatedPerson as the same individual.","","","","","","","","",,,,,"",,,,"Patient.link.other",1,1,"","","id","n/a","PID-3, MRG-1"
+"Patient.link.type","Patient.link.type","","","",1,1,"","","Y","code {[]} {[]}
+","replaced-by | replaces | refer | seealso - type of link","The type of link between this patient resource and another patient resource.","","","","","","","","","",,"required","The type of link between this patient resource and another patient resource.","http://hl7.org/fhir/ValueSet/link-type","",,,,"Patient.link.type",1,1,"","","typeCode","n/a"

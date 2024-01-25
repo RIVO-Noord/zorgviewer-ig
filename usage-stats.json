@@ -1,0 +1,310 @@
+{
+  "package": "hl7.fhir.nl.zorgviewer",
+  "version": "0.20.0",
+  "fhirVersion": "3.0.2",
+  "jurisdiction": "NL",
+  "extensions": [
+    {
+      "url": "http://hl7.org/fhir/R4/StructureDefinition/extension-Meta.source",
+      "title": "extension-Meta.source",
+      "types": [
+        "uri",
+        "uri"
+      ]
+    }
+  ],
+  "profiles": {
+    "Consent": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/ToestemmingConsent",
+        "title": "ToestemmingConsent"
+      },
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/TreatmentDirective",
+        "title": "TreatmentDirective"
+      }
+    ],
+    "AuditEvent": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AuditEvent",
+        "title": "AuditEvent"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition",
+        "title": "Condition"
+      }
+    ],
+    "DocumentReference": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/DocumentReference",
+        "title": "DocumentReference"
+      }
+    ],
+    "Endpoint": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Endpoint",
+        "title": "Endpoint"
+      }
+    ],
+    "Flag": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Flag",
+        "title": "Alert"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/LaboratoryTestResult",
+        "title": "LaboratoryTestResult"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization",
+        "title": "Organization"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient",
+        "title": "Patient"
+      }
+    ],
+    "PlanDefinition": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/PlanDefinition",
+        "title": "PlanDefinition"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner",
+        "title": "Practitioner"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole",
+        "title": "PractitionerRole"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure",
+        "title": "Procedure"
+      }
+    ],
+    "Specimen": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Specimen",
+        "title": "Specimen"
+      }
+    ]
+  },
+  "usage": {
+    "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official": [
+      "StructureDefinition.snapshot.element.example.valueAddress"
+    ],
+    "http://fhir.nl/fhir/StructureDefinition/nl-core-preferred-pharmacy": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence": [
+      "ConceptMap.group.element.target"
+    ],
+    "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId": [
+      "ImplementationGuide.dependency"
+    ],
+    "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version": [
+      "ImplementationGuide.dependency"
+    ],
+    "http://hl7.org/fhir/R4/StructureDefinition/extension-Meta.source": [
+      "Consent.meta"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
+      "CapabilityStatement.rest.resource",
+      "CapabilityStatement.rest.resource.interaction",
+      "CapabilityStatement.rest.resource.searchParam"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
+      "Consent.policy"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.differential.element.constraint",
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/flag-detail": [
+      "Flag"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order": [
+      "Patient.contact.name",
+      "Patient.name",
+      "Practitioner.name",
+      "StructureDefinition.snapshot.element.example.valueHumanName"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/humanname-own-name": [
+      "Patient.contact.name.family",
+      "Patient.name.family",
+      "Practitioner.name.family",
+      "StructureDefinition.snapshot.element.example.valueHumanName.family"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix": [
+      "Patient.contact.name.family",
+      "Patient.name.family",
+      "Practitioner.name.family"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/humanname-partner-name": [
+      "Patient.contact.name.family",
+      "Patient.name.family",
+      "Practitioner.name.family",
+      "StructureDefinition.snapshot.element.example.valueHumanName.family"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix": [
+      "Patient.contact.name.family",
+      "Patient.name.family",
+      "Practitioner.name.family",
+      "StructureDefinition.snapshot.element.example.valueHumanName.family"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator": [
+      "StructureDefinition.snapshot.element.example.valueAddress.line"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix": [
+      "StructureDefinition.snapshot.element.example.valueAddress.line"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber": [
+      "Patient.address.line",
+      "Patient.contact.address.line",
+      "StructureDefinition.snapshot.element.example.valueAddress.line"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName": [
+      "Organization.address.line",
+      "Patient.address.line",
+      "Patient.contact.address.line",
+      "Practitioner.address.line",
+      "StructureDefinition.snapshot.element.example.valueAddress.line"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID": [
+      "StructureDefinition.snapshot.element.example.valueAddress.line"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier": [
+      "Patient.contact.name.given",
+      "Patient.name.given",
+      "Practitioner.name.given",
+      "StructureDefinition.snapshot.element.example.valueHumanName.given"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-nationality": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/procedure-method": [
+      "Procedure"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/rendered-value": [
+      "Patient.identifier"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type": [
+      "StructureDefinition.snapshot.element.type.code"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type": [
+      "StructureDefinition.snapshot.element.type.code"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type": [
+      "StructureDefinition.snapshot.element.type.code"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.package.resource"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/BodySite-Morphology": [
+      "Specimen.collection.bodySite"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier": [
+      "Condition.bodySite",
+      "Procedure.bodySite",
+      "Specimen.collection.bodySite"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/Comment": [
+      "Consent",
+      "Patient.communication"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/code-specification": [
+      "Condition.clinicalStatus",
+      "Condition.verificationStatus",
+      "Observation.status",
+      "Patient.address.country",
+      "Patient.contact.address.country",
+      "Patient.gender"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/consent-additionalSources": [
+      "Consent"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/patient-proficiency": [
+      "Patient.communication"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/period-duration": [
+      "Specimen.collection.collected[x]"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference": [
+      "Condition.asserter",
+      "Consent.actor.reference",
+      "Consent.consentingParty",
+      "Consent.except.actor.reference",
+      "Flag.author",
+      "Flag.subject",
+      "Observation.performer",
+      "Patient.generalPractitioner",
+      "Procedure.performer.actor"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType": [
+      "Patient.address",
+      "Practitioner.address",
+      "StructureDefinition.snapshot.element.example.valueAddress"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective-Disorder": [
+      "Consent"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType": [
+      "Patient.contact.telecom",
+      "Patient.telecom",
+      "StructureDefinition.snapshot.element.example.valueContactPoint"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/zib-LifeStance": [
+      "Patient"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions": [
+      "Consent.except"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment": [
+      "Consent"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted": [
+      "Consent"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification": [
+      "Consent"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/zib-patient-legalstatus": [
+      "Patient"
+    ],
+    "http://open.epic.com/FHIR/StructureDefinition/extension/legal-sex": [
+      "Patient"
+    ],
+    "http://open.epic.com/FHIR/StructureDefinition/extension/sex-for-clinical-use": [
+      "Patient"
+    ]
+  }
+}

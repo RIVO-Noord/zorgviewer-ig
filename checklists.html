@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Checklists &amp; Aansluiten - RIVO-Noord Zorgviewer MVP2 Implementation Guide v0.20.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/rivo.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"12"}
+    h3,h4,h5,h6{--heading-prefix:"12"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://rivo-noord.nl"><img height="50"
+            alt="Visit the RIVO-Noord website" src="assets/images/rivonoord-logo.png" /> </a>
+</div>
+
+<div id="family-nav">
+    <a id="family-logo" no-external="true" href="https://hl7.nl"><img height="50" alt="Visit the HL7 NL website"
+            src="assets/images/HL7nl_Logo.png" /> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">RIVO-Noord Zorgviewer MVP2 Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.20.0 - CI build
+
+
+
+  <img alt="Netherlands flag" src="assets/images/nld.svg" height="16" title="Netherlands"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requirements &#8964;</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="conformance.html">Uitgangspunten en Requirements</a>
+			</li>
+			<li>
+				<a href="nen-normen.html">NEN Normen Conformiteit</a>
+			</li>
+			<li>
+				<a href="datasets.html">Datasets</a>
+			</li>
+			<li>
+				<a href="must-support.html">Must Support</a>
+			</li>
+		</ul>
+	</li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="design.html">Design</a>
+			</li>
+			<li>
+				<a href="design-background.html">Design Achtergrond</a>
+			</li>
+			<li>
+				<a href="security-design.html">Security Design</a>
+			</li>
+			<li>
+				<a href="zorgviewer-services.html">Zorgviewer Services</a>
+			</li>
+		</ul>
+	</li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="testing.html">Testing</a></li>
+  <li><a href="checklists.html">Checklists &amp; Aansluiten</a></li>
+  <li><a href="copyrights.html">Copyrights</a></li>
+  <li><a href="changes.html">Change Log</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Checklists &amp; Aansluiten</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer MVP2 Implementation Guide - Local Development build (v0.20.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Checklists &amp; Aansluiten</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#basis-afspraken" id="markdown-toc-basis-afspraken">Basis afspraken</a></li>
+  <li><a href="#epic-huizen" id="markdown-toc-epic-huizen">Epic huizen</a></li>
+  <li><a href="#chipsoft-huizen" id="markdown-toc-chipsoft-huizen">Chipsoft huizen</a></li>
+  <li><a href="#topicus-huizen-met-viplive" id="markdown-toc-topicus-huizen-met-viplive">Topicus huizen met VIPLive</a></li>
+  <li><a href="#verbinding-en-tls-certificaten" id="markdown-toc-verbinding-en-tls-certificaten">Verbinding en TLS Certificaten</a></li>
+  <li><a href="#behandelplan--zorgpad--zorgproces" id="markdown-toc-behandelplan--zorgpad--zorgproces">Behandelplan / zorgpad / zorgproces</a></li>
+</ul>
+
+</div>
+
+<p>Op deze pagina volgen de checklists die als handvat kunnen worden gebruikt als je als bronsysteem wilt aansluiten (bouwblok Ontsluiten Bronsysteem) of als je de Zorgviewer wilt kunnen opstarten vanuit je eigen systeem (bouwblok Zorgviewer Host).
+Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voor bepaalde aandoening of gewoon een setje relevante gegevens filters op gegevens.</p>
+
+<h3 id="basis-afspraken">Basis afspraken</h3>
+
+<ol>
+  <li><em>Vulling</em>: Zorgaanbieder is verantwoordelijk om zoveel mogelijk van de Zorgviewer implementatiegids zib vulling te regelen</li>
+  <li><em>Vulling</em>: Zorgaanbieder is er bewust van dat niet alle gegevens beschikbaar zijn in de Zorgviewer, of doordat het technisch (nog) niet mogelijk is (FHIR), of omdat de workflow niet is ingericht (Bronsysteem), of omdat configuratie niet volledig is (Bronsysteem of Bronsysteem ontsluiting), of omdat de Zorgviewer het betreffende veld (nog) niet toont.</li>
+  <li><em>Vulling</em>: Zorgaanbieder accepteert dat vulling vanuit andere Zorgaanbieders minder kan zijn dan verwacht. We ontsluiten eerst wat we (technisch) kunnen. Bijvoorbeeld:
+    <ol>
+      <li>codering mist, omdat coderingen niet (volledig) zijn ingelezen</li>
+      <li>regels missen, e.g. medische voorgeschiedenis</li>
+    </ol>
+  </li>
+  <li><em>Identiteit/Security</em>: Zorgaanbieder accepteert identiteit van de andere aangesloten Zorgaanbieders en mag ervanuit gaan dat er wordt gezorgd voor een juiste gebruikersrechten administratie.</li>
+  <li><em>Security</em>: Zorgaanbieder staat in het NEN 7510 register</li>
+  <li><em>Logging</em>: Zorgaanbieder moet voor de NEN 7513 conforme logging zorgen</li>
+  <li><em>Governance</em>: Zorgaanbieder is deelnemer RIVO-Noord</li>
+</ol>
+
+<h3 id="epic-huizen">Epic huizen</h3>
+
+<div>
+<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="511px" preserveAspectRatio="none" style="width:717px;height:511px;background:#FFFFFF;" version="1.1" viewBox="0 0 717 511" width="717px" zoomAndPan="magnify"><defs /><g><rect fill="#DDDDDD" height="499.0859" style="stroke:#181818;stroke-width:0.5;" width="200" x="173" y="6" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="176" x="185" y="18.0669">Ontsluiten bronsysteem</text><rect fill="#DDDDDD" height="499.0859" style="stroke:#181818;stroke-width:0.5;" width="146" x="385" y="6" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="96" x="410" y="18.0669">Bronsysteem</text><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="86" x2="86" y1="56.4297" y2="499.0859" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="273" x2="273" y1="56.4297" y2="499.0859" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="458" x2="458" y1="56.4297" y2="499.0859" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="629" x2="629" y1="56.4297" y2="499.0859" /><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="162" x="5" y="25.1328" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148" x="12" y="45.1279">Zorgviewer-Back-end</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="161" x="192.5" y="25.1328" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="199.5" y="45.1279">Broker / Interconnect</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="138" x="389" y="25.1328" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="396" y="45.1279">Epic / Hyperspace</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="164" x="547" y="25.1328" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="554" y="45.1279">Zorgviewer-Front-end</text><polygon fill="#181818" points="97,66.4297,87,70.4297,97,74.4297,93,70.4297" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="261,66.4297,271,70.4297,261,74.4297,265,70.4297" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="91" x2="267" y1="70.4297" y2="70.4297" /><path d="M91,83.4297 L91,153.4297 L144,153.4297 L144,93.4297 L134,83.4297 L91,83.4297 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><path d="M134,83.4297 L134,93.4297 L144,93.4297 L134,83.4297 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><ellipse cx="102.5" cy="96.0625" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="109" y="100.4966">1.3</text><ellipse cx="102.5" cy="111.1953" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="109" y="115.6294">2.1</text><ellipse cx="102.5" cy="126.3281" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="109" y="130.7622">2.2</text><ellipse cx="102.5" cy="141.4609" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="109" y="145.895">2.3</text><polygon fill="#181818" points="284,160.9609,274,164.9609,284,168.9609,280,164.9609" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="446,160.9609,456,164.9609,446,168.9609,450,164.9609" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="278" x2="452" y1="164.9609" y2="164.9609" /><path d="M278,177.9609 L278,292.9609 L331,292.9609 L331,187.9609 L321,177.9609 L278,177.9609 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><path d="M321,177.9609 L321,187.9609 L331,187.9609 L321,177.9609 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><ellipse cx="289.5" cy="190.5938" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="296" y="195.0278">1.1</text><ellipse cx="289.5" cy="205.7266" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="296" y="210.1606">4.1</text><ellipse cx="289.5" cy="220.8594" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="296" y="225.2935">4.2</text><ellipse cx="289.5" cy="235.9922" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="296" y="240.4263">4.3</text><ellipse cx="289.5" cy="251.125" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="296" y="255.5591">4.4</text><ellipse cx="289.5" cy="266.2578" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="296" y="270.6919">4.5</text><ellipse cx="289.5" cy="281.3906" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="296" y="285.8247">4.6</text><path d="M571,303.8906 L571,328.8906 L624,328.8906 L624,313.8906 L614,303.8906 L571,303.8906 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><path d="M614,303.8906 L614,313.8906 L624,313.8906 L614,303.8906 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><ellipse cx="582.5" cy="316.5234" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="589" y="320.9575">1.2</text><path d="M463,339.0234 L463,470.0234 L528,470.0234 L528,349.0234 L518,339.0234 L463,339.0234 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><path d="M518,339.0234 L518,349.0234 L528,349.0234 L518,339.0234 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><ellipse cx="474.5" cy="351.6563" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="481" y="356.0903">3.1</text><ellipse cx="474.5" cy="366.7891" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="481" y="371.2231">3.2</text><ellipse cx="474.5" cy="381.9219" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="481" y="386.356">3.3</text><ellipse cx="474.5" cy="397.0547" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="481" y="401.4888">3.4</text><ellipse cx="474.5" cy="412.1875" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="481" y="416.6216">3.5</text><ellipse cx="474.5" cy="427.3203" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="481" y="431.7544">4.1.1</text><ellipse cx="474.5" cy="442.4531" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="481" y="446.8872">5.1</text><ellipse cx="474.5" cy="457.5859" fill="#000000" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="481" y="462.02">5.2</text><polygon fill="#181818" points="469,477.0859,459,481.0859,469,485.0859,465,481.0859" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="617,477.0859,627,481.0859,617,485.0859,621,481.0859" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="463" x2="623" y1="481.0859" y2="481.0859" /></g></svg>
+</div>
+
+<style>table, td, th { border: 1px solid black; padding:5px; }</style>
+
+<p><strong>Stap 1 Aanmaken Apps in Epic: Zorgviewer FrontEnd en Zorgviewer Backend</strong><br />
+De frontend is een SMART-on-FHIR integratie, waarbij de standaard <a href="https://galaxy.epic.com/?#Browse/page=1!68!50!3404409,100001067,100001075,100001077&amp;from=Galaxy-Redirect">Epic sequence er zo uit ziet</a>.</p>
+<ul>
+  <li>1.1 Front-end App: Interconnect (Foreground) verbinding kan maken naar https://auth-np.zorgviewer.nl/.well-known/jwks</li>
+  <li>1.2 Front-end App: Ga naar <a href="https://vendorservices.epic.com/Developer/Apps">My Apps / Vendor Services (epic.com)</a> en maak de volgende App registratie:</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Veld</th>
+      <th>Vulling</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Application Name:</td>
+      <td><code class="language-plaintext highlighter-rouge">Zorgviewer-Frontend</code></td>
+    </tr>
+    <tr>
+      <td>Who will primarily be using this app?</td>
+      <td>Clinicians, Staff, or Administrative Users</td>
+    </tr>
+    <tr>
+      <td>Features:</td>
+      <td>Incoming API</td>
+    </tr>
+    <tr>
+      <td>Selecteer de volgende Scopes:</td>
+      <td>* Patient.Read (STU3)<br />* Practitioner.Read (STU3)</td>
+    </tr>
+    <tr>
+      <td>Does your app use OAuth 2.0?</td>
+      <td>Use Oauth 2.0</td>
+    </tr>
+    <tr>
+      <td>App FHIR Version:</td>
+      <td>STU3</td>
+    </tr>
+    <tr>
+      <td>FHIR ID Generation Scheme:</td>
+      <td>Use Unconstrained FHIR ID’s</td>
+    </tr>
+    <tr>
+      <td>Endpoint URI:</td>
+      <td>* <code class="language-plaintext highlighter-rouge">dev.zorgviewer.nl/api/application/redirect</code><br />* <code class="language-plaintext highlighter-rouge">app-dev.zorgviewer.nl/api/application/redirect</code><br />* <code class="language-plaintext highlighter-rouge">app-tst.zorgviewer.nl/api/application/redirect</code><br />* <code class="language-plaintext highlighter-rouge">app-acc.zorgviewer.nl/api/application/redirect</code><br />* <code class="language-plaintext highlighter-rouge">app.zorgviewer.nl/api/application/redirect</code></td>
+    </tr>
+    <tr>
+      <td>Is this a confidential Client?</td>
+      <td>Disable</td>
+    </tr>
+    <tr>
+      <td>Advanced:</td>
+      <td>* Enable on Sandbox: Disable</td>
+    </tr>
+    <tr>
+      <td>Non-Production Client ID:</td>
+      <td>Activate for Non-Production (production volgt in een later stadium)</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>1.3 Back-end App: Ga naar <a href="https://vendorservices.epic.com/Developer/Apps">My Apps / Vendor Services (epic.com)</a> en maak de volgende App registratie:</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Veld</th>
+      <th>Vulling</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Application Name:</td>
+      <td><code class="language-plaintext highlighter-rouge">Zorgviewer-Backend</code></td>
+    </tr>
+    <tr>
+      <td>Who will primarily be using this app?</td>
+      <td>Backend Systems</td>
+    </tr>
+    <tr>
+      <td>Features:</td>
+      <td>Incoming API</td>
+    </tr>
+    <tr>
+      <td>Selecteer de volgende Scopes:</td>
+      <td>* Binary.Read (Correspondences) (STU3)<br />* Binary.Read (Radiology Results) (STU3)<br />* Condition.Search (Encounter Diagnosis, Problems) (STU3)<br />* Consent.Search (Code Status) (STU3)<br />* Consent.Search (Document) (STU3)<br />* DocumentReference.Search (Correspondences) (STU3)<br />* DocumentReference.Search (Radiology Results) (STU3)<br />* Observation.$lastn (Labs) (STU3)<br />* Observation.Search (Labs) (STU3)<br />* Patient.Search (STU3)<br />* Procedure.Search (Orders, Surgeries) (STU3)<br />* Specimen.Read (Labs) (STU3)</td>
+    </tr>
+    <tr>
+      <td>Does your app use OAuth 2.0?</td>
+      <td>Use Oauth 2.0</td>
+    </tr>
+    <tr>
+      <td>App FHIR Version:</td>
+      <td>STU3</td>
+    </tr>
+    <tr>
+      <td>FHIR ID Generation Scheme:</td>
+      <td>Use Unconstrained FIHR ID’s</td>
+    </tr>
+    <tr>
+      <td>Non-Production JWK Set URL:</td>
+      <td><code class="language-plaintext highlighter-rouge">https://auth-np.zorgviewer.nl/.well-known/jwks</code></td>
+    </tr>
+    <tr>
+      <td>Production JWK Set URL:</td>
+      <td>voorlopig leeg laten</td>
+    </tr>
+    <tr>
+      <td>Advanced:</td>
+      <td>* Enable on Sandbox: Disable<br />* Non-Production Client ID: Activate for Non-Production (production volgt in een later stadium)<br />* Ter info: deze waarschuwing kan genegeerd worden “Add Non-Production Credentials”</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Stap 2 Client Certificate van de Zorgviewer back-end</strong></p>
+<ul>
+  <li>2.1 Team Zorgviewer: Het Zorgviewer team genereert een Zorgviewer-Bronsysteem specifiek Certificate Request (Client Certificaat) en leveren dit aan het aan te sluiten organisatie.</li>
+  <li>2.2 Op basis van het door Zorgviewer gegenereerde CSR, vraag een Client Certificaat aan. Dit mag een Publieke CA zijn, maar mag ook uitgegeven zijn door een Interne CA.
+    <ul>
+      <li>Deel het Certificaat met team Zorgviewer.</li>
+    </ul>
+  </li>
+  <li>2.3 Team Zorgviewer: PFX genereren op basis van Private Key + Gegenereerde Certificaat en opnemen in de Zorgviewer KeyVault</li>
+</ul>
+
+<p><strong>Stap 3 Parallel kan het volgende worden geregeld</strong></p>
+<ul>
+  <li>3.1 Maak een backend User (EMP) aan met de volgende security points:<br />
+  <strong>! Let op: wanneer meer informatie (zibs) worden gedeeld, kan het zijn dat er aanvullende security points nodig zijn.</strong>
+    <ul>
+      <li>EpicCare Ambulatory security point 1-Patient Search/Select</li>
+      <li>EpicCare Ambulatory security point 16-Chart Review</li>
+      <li>EpicCare Ambulatory security point 54-Demographics</li>
+      <li>EpicCare Ambulatory security point 94-Chart Review – Order Tabs</li>
+      <li>EpicCare Ambulatory security point 111-Problem List</li>
+      <li>EpicCare Ambulatory security point 176-Review Procedure Reports</li>
+      <li>EpicCare Ambulatory security point 262-View Only Demographics</li>
+      <li>EpicCare Ambulatory security point 311-Order Review</li>
+      <li>EpicCare Ambulatory security point 333-Results Review</li>
+      <li>EpicCare Inpatient security point 4-Results Review</li>
+      <li>EpicCare Inpatient security point 5-Patient Summary</li>
+      <li>EpicCare Inpatient security point 6-Demographics</li>
+      <li>EpicCare Inpatient security point 7-Chart Review</li>
+      <li>EpicCare Inpatient security point 8-View Only Demographics</li>
+      <li>EpicCare Inpatient security point 12-Order Review</li>
+      <li>EpicCare Inpatient security point 13-Problem List</li>
+      <li>EpicCare Inpatient security point 184-View Procedure Reports</li>
+      <li>Nurse Triage/Call Management security point 902-Chart Review</li>
+      <li>Nurse Triage/Call Management security point 903-Demographics</li>
+      <li>MyChart - Hyperspace User security point 47 – Third Party View Questionnaires</li>
+      <li>Care Everywhere security point 4-View Documents</li>
+      <li>Cadence security point 5105-Edit Patient Record</li>
+      <li>Cadence security point 5201-Open Patient Record</li>
+      <li>EpicCare security point 35-Create New Patient</li>
+      <li>Identity security point 1-Create Record</li>
+    </ul>
+  </li>
+  <li>3.2 <em>Moet nog aangevuld worden…</em> - FHIR endpoint (interconnect) &gt; client id koppelen aan emp (epic manual)
+Er moet een backend EMP worden aangemaakt, zie hiervoor de  <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&amp;PrefDocID=97042">Epic Galaxy documentatie Backend System Integration</a></li>
+  <li>3.3 Uitvoeren van de Epic Sherlock Checklist BgZ VIPP5 voor de zorginformatiebouwstenen in scope</li>
+  <li>3.4 Om te voorkomen dat onterecht een werkdiagnose (die wel in problemlijst mee komen) op “confirmed” worden gezet, moet de FHIR Profile Variabele (AIP) FHIR_NL_PROBLEM_SHOW_VERIFY_STATUS ingesteld worden op 0 (Nee)</li>
+  <li>3.5 Ten behoeve van Audit Logging <a href="https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072">Epic Nova</a></li>
+</ul>
+
+<p><strong>Stap 4: Configureren EndPoints</strong></p>
+<ul>
+  <li>4.1 (UMCG OPLOSSING) Patiënttoestemmingscheck bouwen in broker. De gekozen oplossing is afhankelijk van het eigen organisatie. In het UMCG is dit als volgt geimplementeerd:</li>
+</ul>
+<div>
+<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="380px" preserveAspectRatio="none" style="width:1112px;height:380px;background:#FFFFFF;" version="1.1" viewBox="0 0 1112 380" width="1112px" zoomAndPan="magnify"><defs /><g><rect fill="#FFFFFF" height="280.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="96" y="83.7266" /><rect fill="#FFFFFF" height="280.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="327" y="83.7266" /><rect fill="none" height="148.4688" style="stroke:#000000;stroke-width:1.5;" width="1095" x="10" y="208.3906" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="101" x2="101" y1="52.5938" y2="373.8594" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="332" x2="332" y1="52.5938" y2="373.8594" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1033" x2="1033" y1="52.5938" y2="373.8594" /><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="162" x="20" y="21.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148" x="27" y="41.292">Zorgviewer-Back-end</text><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="198" x="233" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="184" x="240" y="24.9951">&#171;Ontsluiten bronsysteem&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25" x="319.5" y="41.292">IRIS</text><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="124" x="971" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="978" y="24.9951">&#171;Bronsysteem&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="1017.5" y="41.292">EPIC</text><rect fill="#FFFFFF" height="280.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="96" y="83.7266" /><rect fill="#FFFFFF" height="280.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="327" y="83.7266" /><polygon fill="#181818" points="315,79.7266,325,83.7266,315,87.7266,319,83.7266" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="106" x2="321" y1="83.7266" y2="83.7266" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="207" x="113" y="78.6606">gegevensverzoek (FHIR request)</text><polygon fill="#181818" points="1021,123.9922,1031,127.9922,1021,131.9922,1025,127.9922" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="337" x2="1027" y1="127.9922" y2="127.9922" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="308" x="344" y="107.7935">Consent call uitvoeren voor de gewenste patient</text><text fill="#000000" font-family="monospace" font-size="13" lengthAdjust="spacing" textLength="672" x="344" y="122.9263">&lt;epic-fhir-base&gt;/Consent?category=http://loinc.org|59284-0&amp;patient=&lt;patient_fhir_id&gt;</text><path d="M342,140.9922 L342,195.9922 L931,195.9922 L931,150.9922 L921,140.9922 L342,140.9922 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><path d="M921,140.9922 L921,150.9922 L931,150.9922 L921,140.9922 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="358" x="348" y="158.0591">"Toestemming uitwisselen dossier" consent is active als:</text><text fill="#000000" font-family="monospace" font-size="13" lengthAdjust="spacing" textLength="568" x="348" y="173.1919">Consent.coding[0]&#160;=&#160;urn:oid:1.2.840.114350.1.13.3.7.4.686783.100#201047</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="190" x="348" y="188.3247">en datum van vandaag valt in</text><text fill="#000000" font-family="monospace" font-size="13" lengthAdjust="spacing" textLength="112" x="542" y="188.3247">Consent.period</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="16" x="658" y="188.3247">en</text><text fill="#000000" font-family="monospace" font-size="13" lengthAdjust="spacing" textLength="192" x="678" y="188.3247">Consent.status&#160;=&#160;#active</text><path d="M10,208.3906 L74,208.3906 L74,215.5234 L64,225.5234 L10,225.5234 L10,208.3906 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="148.4688" style="stroke:#000000;stroke-width:1.5;" width="1095" x="10" y="208.3906" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="19" x="25" y="221.4575">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="140" x="89" y="220.6011">[geen active consent]</text><polygon fill="#181818" points="117,242.6563,107,246.6563,117,250.6563,113,246.6563" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="111" x2="326" y1="246.6563" y2="246.6563" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="75" x="123" y="241.5903">lege Bundle</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="10" x2="1105" y1="255.6563" y2="255.6563" /><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="104" x="15" y="265.8667">[active consent]</text><polygon fill="#181818" points="1021,286.5938,1031,290.5938,1021,294.5938,1025,290.5938" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="337" x2="1027" y1="290.5938" y2="290.5938" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="281" x="344" y="285.5278">doorsturen gegevensverzoek (FHIR request)</text><polygon fill="#181818" points="348,315.7266,338,319.7266,348,323.7266,344,319.7266" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="342" x2="1032" y1="319.7266" y2="319.7266" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="91" x="354" y="314.6606">results Bundle</text><polygon fill="#181818" points="117,344.8594,107,348.8594,117,352.8594,113,348.8594" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="111" x2="326" y1="348.8594" y2="348.8594" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="91" x="123" y="343.7935">results Bundle</text></g></svg>
+</div>
+
+<ul>
+  <li>4.1.1 In Epic: Ga naar Documenttype administratie: mapping van het Toestemmingsformulier onder de DocType Group van Patiënttoestemming. Dit is ook afhankelijk van de specifieke inrichting en beleid van de eigen organisatie.</li>
+  <li>4.2 <em>Moet nog aangevuld worden…</em> - Interconnect config + interne url’s</li>
+  <li>4.3 Ontsluiten van Frontend en Backend end-points via broker naar internet en vervolgens de Zorgviewer IP-reeks 20.160.37.56/31 in de ACL van de Firewall (etc) opnemen zodat de Zorgviewer kan communiceren (HTTPS) met de endpoints. Dit is ook afhankelijk van de eigen organisatie hoe de beveiliging ingeregeld dient te worden. Indien de organisatie met een IP filter wilt werken is bovenstaande nodig.</li>
+  <li>4.4 Endpoint ontsluiten
+    <ul>
+      <li>Client Certificaat controle op BackendEndpoint</li>
+    </ul>
+  </li>
+  <li>4.5 Aanleveren aan Zorgviewer volgende gegevens:
+    <ul>
+      <li>Client ID’s</li>
+      <li>Backend (base en token) Endpoints externe URL’s backend</li>
+      <li>ISS URL frontend</li>
+    </ul>
+  </li>
+  <li>4.6 Toevoegen meta.source (HL7 NL OID van de zorgaanbieder) bij iedere FHIR resource in de FHIR response Bundle
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+</span><span class="nl">"entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/R4/StructureDefinition/extension-Meta.source"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"valueUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri:oid:2.16.840.1.113883.2.4.3.8"</span><span class="w">
+      </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Stap 5: Hyperspace configuratie Opstarten Zorgviewer</strong></p>
+<ul>
+  <li>5.1 FDI record maken voor de Zorgviewer. Gebruik Naming Convention van eigen organisatie.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Veld</th>
+      <th>Vulling</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type:</td>
+      <td>PACS[1]</td>
+    </tr>
+    <tr>
+      <td>Model Record:</td>
+      <td>SMART ON FHIR</td>
+    </tr>
+    <tr>
+      <td>Patient ID Type:</td>
+      <td>MDN</td>
+    </tr>
+    <tr>
+      <td>Installation Mnemonic Values:</td>
+      <td>1 URL: <code class="language-plaintext highlighter-rouge">https://dev.zorgviewer.nl/api/application/launch</code><br />2 Protected: <code class="language-plaintext highlighter-rouge">1</code><br />3 ClientID: eigen clientID<br />4 Launchtype: 7 (of 6)<br />7 Use edge browser: 1</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>5.2 Knop (E2U) maken voor het kunnen opstarten van de Zorgviewer
+    <ul>
+      <li>5.2.1 Plaats de knop in de patiëntencontext en respecteer hierbij eigen Break-the-Glass regels</li>
+      <li>5.2.2 Knop is dan alleen beschikbaar wanneer iemand in een (poli)klinisch contact van een patiënt kan</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Stap 6: Testen van de volledige bouw</strong></p>
+
+<h3 id="chipsoft-huizen">Chipsoft huizen</h3>
+
+<h4 id="ontsluiten-bronsysteem">Ontsluiten bronsysteem</h4>
+
+<ol>
+  <li>Regel Zorgplatform contract, specifiek voor de BgZ en Documenten Services van de <a href="https://developer.zorgplatform.online/digital-care">Digital-Care API</a></li>
+  <li>OID’s voor Zorgplatform ontsluiting en HiX Webintegratie activiteitendefinities
+    <ul>
+      <li>2.16.840.1.113883.2.4.3.213.1.3 = Test Zorgviewer</li>
+      <li>2.16.840.1.113883.2.4.3.213.1.2 = Acceptatie Zorgviewer</li>
+      <li>2.16.840.1.113883.2.4.3.213.1.1 = Productie Zorgviewer</li>
+    </ul>
+  </li>
+  <li>Eerste keer FHIR ontsluiting toepassen: Aanzetten / synchroniseren Zorgplatform</li>
+</ol>
+
+<h4 id="opstarten-van-de-zorgviewer-vanuit-eigen-epd">Opstarten van de Zorgviewer vanuit eigen EPD</h4>
+
+<ol>
+  <li>Webintegratie configureren in HiX</li>
+</ol>
+
+<h3 id="topicus-huizen-met-viplive">Topicus huizen met VIPLive</h3>
+
+<h4 id="ontsluiten-bronsysteem-1">Ontsluiten bronsysteem</h4>
+<ol>
+  <li>…</li>
+</ol>
+
+<h4 id="opstarten-van-de-zorgviewer-vanuit-eigen-epd-1">Opstarten van de Zorgviewer vanuit eigen EPD</h4>
+<ol>
+  <li>…</li>
+</ol>
+
+<h3 id="verbinding-en-tls-certificaten">Verbinding en TLS Certificaten</h3>
+
+<ol>
+  <li><a href="https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1">NCSC ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS)</a></li>
+  <li>?? Eisen?</li>
+  <li>?? Waar kan/moet je de Client en Server aanvragen?</li>
+  <li>…</li>
+</ol>
+
+<h3 id="behandelplan--zorgpad--zorgproces">Behandelplan / zorgpad / zorgproces</h3>
+
+<ol>
+  <li>Maak uitwerking volgend RadB analysesheet / ZiRA…</li>
+  <li>Installeer in Behandelplan bouwblok</li>
+</ol>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023 <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.20.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Thu, Jan 25, 2024 12:12+0000">2024-01-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

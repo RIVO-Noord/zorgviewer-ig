@@ -1,0 +1,109 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Condition/a20d2048-e1b7-467d-8bb5-28142af195d6> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "a20d2048-e1b7-467d-8bb5-28142af195d6"] ; # 
+  fhir:meta [
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Problem"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Condition resource:</h3><ul><li><p><strong>Subject:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Clinical status:</strong> &#x27;Active&#x27;</p></li><li><p><strong>Verification status:</strong> &#x27;Confirmed&#x27;</p></li><li><p><strong>Category:</strong> &#x27;Diagnosis&#x27;</p></li><li><p><strong>Code:</strong> &#x27;Other&#x27;</p></li><li><p><strong>Onset date/time:</strong> &#x27;1-1-2001&#x27;</p></li><li><p><strong>Body site:</strong> &#x27;Other&#x27;</p></li><li><p><strong>Laterality:</strong> &#x27;Right&#x27;</p></li><li><p><strong>Asserter:</strong> &#x27;Practitioner author with last name &#x27;van Cruijningen de Winter&#x27;.&#x27;</p></li><li><p><strong>Note:</strong> &#x27;Gevallen op kunstijsbaan.&#x27;</p></li></ul></div>"
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:v "active" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/code-specification"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:55561003 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "55561003" ] ;
+           fhir:display [ fhir:v "Active" ]
+         ] ) ;
+         fhir:text [ fhir:v "Actueel" ]
+       ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:v "confirmed" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/code-specification"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:410605003 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "410605003" ] ;
+           fhir:display [ fhir:v "Confirmed" ]
+         ] ) ;
+         fhir:text [ fhir:v "Confirmed" ]
+       ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:282291009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "282291009" ] ;
+       fhir:display [ fhir:v "Diagnosis" ]
+     ] ) ;
+     fhir:text [ fhir:v "Diagnose" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/v3/NullFlavor"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "OTH" ] ;
+       fhir:display [ fhir:v "other" ]
+     ] ) ;
+     fhir:text [ fhir:v "fractuur van pols" ]
+  ] ; # 
+  fhir:bodySite ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:24028007 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "24028007" ] ;
+           fhir:display [ fhir:v "Right" ]
+         ] ) ;
+         fhir:text [ fhir:v "Rechts" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://hl7.nl/fhir/zorgviewer/Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1> ;
+     fhir:reference [ fhir:v "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1" ] ;
+     fhir:display [ fhir:v "Patient name: Johan XXX_Helleman_Afblijven" ]
+  ] ; # 
+  fhir:onset [ fhir:v "2001-01-01"^^xsd:date] ; # 
+  fhir:assertedDate [ fhir:v "2001-01-01"^^xsd:date] ; # 
+  fhir:asserter [
+     fhir:link <http://example.org/Practitioner/ecb6593e-75fe-4b02-8a4f-25302a6f9693> ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <http://example.org/PractitionerRole/2FEBFCB8FFA86EBEF907D0B6CC74E210A7647FA82CEC3DE55E3FA8813D5756F6> ;
+         fhir:reference [ fhir:v "http://example.org/PractitionerRole/2FEBFCB8FFA86EBEF907D0B6CC74E210A7647FA82CEC3DE55E3FA8813D5756F6" ] ;
+         fhir:display [ fhir:v "Practitioner role with function: 'attending physician'." ]
+       ]
+     ] ) ;
+     fhir:reference [ fhir:v "http://example.org/Practitioner/ecb6593e-75fe-4b02-8a4f-25302a6f9693" ] ;
+     fhir:display [ fhir:v "Practitioner with name: 'Lisette van Cruijningen de Winter'." ]
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Gevallen op kunstijsbaan." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

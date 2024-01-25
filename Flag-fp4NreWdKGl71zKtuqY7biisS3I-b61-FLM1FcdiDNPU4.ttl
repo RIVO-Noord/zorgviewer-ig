@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Flag/fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4> a fhir:Flag ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4"] ; # 
+  fhir:meta [
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Alert"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Flag</b><a name=\"fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Flag &quot;fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=http://nictiz.nl/fhir/StructureDefinition/zib-Alert\">HCIM Alert</a></p></div><p><b>status</b>: inactive</p><p><b>category</b>: Infection Flag <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (flag-category#infection; <a href=\"https://loinc.org/\">LOINC</a>#75323-6 &quot;condition&quot;)</span></p><p><b>code</b>: TBC <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#116; <a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#56717001 &quot;Tuberculose&quot;)</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=https:///example.org/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3\">https:///example.org/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3: Fictief, Jan</a></p><p><b>period</b>: 2022-05-10 20:55:17+0000 --&gt; 2022-05-10 20:55:43+0000</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "inactive"] ; # 
+  fhir:category [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://open.epic.com/FHIR/StructureDefinition/flag-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "infection" ] ;
+       fhir:display [ fhir:v "Infection Flag" ]
+     ] [
+       a loinc:75323-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "75323-6" ] ;
+       fhir:display [ fhir:v "condition" ]
+     ] ) ;
+     fhir:text [ fhir:v "Infection Flag" ]
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.2.7.4.698084.10375"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "116" ] ;
+       fhir:display [ fhir:v "TBC" ]
+     ] [
+       a sct:56717001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "56717001" ] ;
+       fhir:display [ fhir:v "Tuberculose" ]
+     ] ) ;
+     fhir:text [ fhir:v "TBC" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https:///example.org/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3> ;
+     fhir:reference [ fhir:v "https:///example.org/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3" ] ;
+     fhir:display [ fhir:v "Fictief, Jan" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-05-10T20:55:17Z"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2022-05-10T20:55:43Z"^^xsd:dateTime ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

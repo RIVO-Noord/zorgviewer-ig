@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Organization/eXovwVA3zYl3U3fBH8mdkxw3> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eXovwVA3zYl3U3fBH8mdkxw3"] ; # 
+  fhir:meta [
+     fhir:profile ( [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-organization"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Organization</b><a name=\"eXovwVA3zYl3U3fBH8mdkxw3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Organization &quot;eXovwVA3zYl3U3fBH8mdkxw3&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-organization\">nl-core-organization</a></p></div><p><b>identifier</b>: VEKTIS: 06020101 (use: USUAL, period: 2011-05-17 --&gt; (ongoing)), FAC: S_UMCG (use: USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: UMCG</p><p><b>address</b>: null Groningen 9713 GZ Nederland </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:text [ fhir:v "VEKTIS" ]
+     ] ;
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.6.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "06020101" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2011-05-17"^^xsd:date ]
+     ]
+  ] [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:text [ fhir:v "FAC" ]
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.5.737384.112"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "S_UMCG" ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:name [ fhir:v "UMCG"] ; # 
+  fhir:address ( [
+     fhir:line ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Hanzeplein" ]
+       ] )
+     ] ) ;
+     fhir:city [ fhir:v "Groningen" ] ;
+     fhir:postalCode [ fhir:v "9713 GZ" ] ;
+     fhir:country [ fhir:v "Nederland" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

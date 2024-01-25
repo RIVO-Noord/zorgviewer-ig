@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Specimen/edAE6aGl0-InKRnWJAWRiChE4AhLNTRTlNIiljUcUA-I3> a fhir:Specimen ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "edAE6aGl0-InKRnWJAWRiChE4AhLNTRTlNIiljUcUA-I3"] ; # 
+  fhir:meta [
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Specimen</b><a name=\"edAE6aGl0-InKRnWJAWRiChE4AhLNTRTlNIiljUcUA-I3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Specimen &quot;edAE6aGl0-InKRnWJAWRiChE4AhLNTRTlNIiljUcUA-I3&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen\">HCIM LaboratoryTestResult Specimen</a></p></div><p><b>identifier</b>: id: 115028194, id: 22340000971, id: ZZ20316889</p><p><b>type</b>: Bloed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#3; <a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#119297000 &quot;bloed (monster)&quot;)</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eSGar8w78ryJi3BCYMGOK5w3\">https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eSGar8w78ryJi3BCYMGOK5w3: Fictief, J.</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.16&amp;canonical=https://example.org/TST-OAUTH2/api/FHIR/STU3/Practitioner/eT.PRb-JKLSH61-PkLvdAebARHxNCs1jyIwXm4FM5lVg3\">https://example.org/TST-OAUTH2/api/FHIR/STU3/Practitioner/eT.PRb-JKLSH61-PkLvdAebARHxNCs1jyIwXm4FM5lVg3: Hogendorf, LA.</a></td><td>2022-08-25 09:50:00+0000</td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.3.798268.320"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "115028194" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "GLIMS_F" ]
+     ]
+  ] [
+     fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.3.798268.850"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "22340000971" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "GLIMS_F" ]
+     ]
+  ] [
+     fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.3.798268.800"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "ZZ20316889" ]
+  ] ) ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.4.798268.300"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3" ] ;
+       fhir:display [ fhir:v "Bloed" ]
+     ] [
+       a sct:119297000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "119297000" ] ;
+       fhir:display [ fhir:v "bloed (monster)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Bloed" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eSGar8w78ryJi3BCYMGOK5w3> ;
+     fhir:reference [ fhir:v "https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eSGar8w78ryJi3BCYMGOK5w3" ] ;
+     fhir:display [ fhir:v "Fictief, J." ]
+  ] ; # 
+  fhir:collection [
+     fhir:collector [
+       fhir:link <https://example.org/TST-OAUTH2/api/FHIR/STU3/Practitioner/eT.PRb-JKLSH61-PkLvdAebARHxNCs1jyIwXm4FM5lVg3> ;
+       fhir:reference [ fhir:v "https://example.org/TST-OAUTH2/api/FHIR/STU3/Practitioner/eT.PRb-JKLSH61-PkLvdAebARHxNCs1jyIwXm4FM5lVg3" ] ;
+       fhir:display [ fhir:v "Hogendorf, LA." ]
+     ] ;
+     fhir:collected [ fhir:v "2022-08-25T09:50:00Z"^^xsd:dateTime ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

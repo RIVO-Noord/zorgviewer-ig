@@ -1,0 +1,52 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ProbleemNaamCodelist",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a></li><li>Include all codes defined in <a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-ICD10dut.html\"><code>http://hl7.org/fhir/sid/icd-10-nl</code></a></li><li>Include all codes defined in <a href=\"CodeSystem-ICPC-1-NL.html\"><code>http://hl7.org/fhir/sid/icpc-1-nl</code></a></li></ul></div>"
+  },
+  "url" : "http://hl7.nl/fhir/zorgviewer/ValueSet/ProbleemNaamCodelist",
+  "version" : "0.20.0",
+  "name" : "ProbleemNaamCodelist",
+  "title" : "Zorgviewer probleem naam waardelijst",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-01-25T12:12:38+00:00",
+  "publisher" : "RIVO-NN HL7NL",
+  "contact" : [{
+    "name" : "RIVO-NN",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://rivo-noord.nl"
+    }]
+  },
+  {
+    "name" : "HL7NL",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://hl7.nl"
+    }]
+  }],
+  "description" : "De Zorgviewer probleem naam waardelijst o.b.v. de DHD Diagnose Thesaurus (SNOMED CT en ICD-10-nl codes) en de ICPC-1 NL coderingen vanuit de huisartsen",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NL"
+    }]
+  }],
+  "copyright" : "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-nl"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icpc-1-nl"
+    }]
+  }
+}

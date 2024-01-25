@@ -1,0 +1,207 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hl7.fhir.nl.zorgviewer"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>zorgviewer-ig</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.nl/fhir/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer</pre><div><p>A brief description of what MyIG is about (probably the same text as in your readme)</p>\n</div></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.nl/fhir/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.20.0"] ; # 
+  fhir:name [ fhir:v "zorgviewer-ig"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-01-25T12:12:38+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "RIVO-NN" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://rivo-noord.nl" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "HL7NL" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://hl7.nl" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A brief description of what MyIG is about (probably the same text as in your readme)"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NL" ]
+     ] )
+  ] ) ; # 
+  fhir:fhirVersion [ fhir:v "3.0.2"] ; # 
+  fhir:dependency ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "hl7.terminology.r3" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "5.3.0" ]
+     ] ) ;
+     fhir:type [ fhir:v "reference" ] ;
+     fhir:uri [ fhir:v "https://simplifier.net/packages/hl7.terminology.r3/5.3.0"^^xsd:anyURI ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "nictiz.fhir.nl.stu3.zib2017" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2.2.16" ]
+     ] ) ;
+     fhir:type [ fhir:v "reference" ] ;
+     fhir:uri [ fhir:v "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.16"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:package ( [
+     fhir:id [ fhir:v "group-zs" ] ;
+     fhir:name [ fhir:v "Zorgviewer Services" ] ;
+     fhir:description [ fhir:v "Zie [Zorgviewer Services pagina](zorgviewer-services.html) voor details." ] ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:name [ fhir:v "Organization UMCG" ] ;
+       fhir:source [
+         a fhir:Reference ;
+         fhir:link <http://hl7.nl/fhir/zorgviewer/Organization/UMCG> ;
+         fhir:reference [ fhir:v "Organization/UMCG" ]
+       ] ;
+       fhir:exampleFor [
+         fhir:link <http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization> ;
+         fhir:reference [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization" ]
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:name [ fhir:v "Organization Tjongerschans" ] ;
+       fhir:source [
+         a fhir:Reference ;
+         fhir:link <http://hl7.nl/fhir/zorgviewer/Organization/Tjongerschans> ;
+         fhir:reference [ fhir:v "Organization/Tjongerschans" ]
+       ] ;
+       fhir:exampleFor [
+         fhir:link <http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization> ;
+         fhir:reference [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization" ]
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:name [ fhir:v "Organization MCL" ] ;
+       fhir:source [
+         a fhir:Reference ;
+         fhir:link <http://hl7.nl/fhir/zorgviewer/Organization/MCL> ;
+         fhir:reference [ fhir:v "Organization/MCL" ]
+       ] ;
+       fhir:exampleFor [
+         fhir:link <http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization> ;
+         fhir:reference [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization" ]
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:name [ fhir:v "Organization VIPLive" ] ;
+       fhir:source [
+         a fhir:Reference ;
+         fhir:link <http://hl7.nl/fhir/zorgviewer/Organization/VIPLive> ;
+         fhir:reference [ fhir:v "Organization/VIPLive" ]
+       ] ;
+       fhir:exampleFor [
+         fhir:link <http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization> ;
+         fhir:reference [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization" ]
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Endpoint" ]
+       ] ) ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:name [ fhir:v "Epic UMCG Endpoint Example" ] ;
+       fhir:description [ fhir:v "Dit is een voorbeeld Epic Endpoint voor UMCG." ] ;
+       fhir:source [
+         a fhir:Reference ;
+         fhir:link <http://hl7.nl/fhir/zorgviewer/Endpoint/UMCG> ;
+         fhir:reference [ fhir:v "Endpoint/UMCG" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:page [
+     fhir:source [ fhir:v "index.html"^^xsd:anyURI ] ;
+     fhir:title [ fhir:v "Home Page" ] ;
+     fhir:kind [ fhir:v "resource" ] ;
+     fhir:page ( [
+       fhir:source [ fhir:v "conformance.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Conformance" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "nen-normen.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "EGIZ NEN Normen Conformiteit" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "datasets.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Datasets" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "must-support.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Must Support" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "design.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Design" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "design-background.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Design Achtergrond" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "security-design.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Security Design" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "zorgviewer-services.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Zorgviewer Services" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Useful Downloads" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "testing.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Testing" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "checklists.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Checklists & Aansluiten" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "changes.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "IG Change History" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "copyrights.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Copyrights" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

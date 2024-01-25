@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Consent xmlns="http://hl7.org/fhir">
+  <id value="81eacbcf-6d60-436a-a78f-e2962839a42f"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h3>Consent resource for treatment directive:</h3><ul><li><p><strong>Patient:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Treatment permitted:</strong> &#x27;Ja, maar met beperkingen&#x27;</p></li><li><p><strong>Verified With:</strong> &#x27;Toelichting: Eerst overleg met echtgenote&#x27;</p></li><li><p><strong>Treatment:</strong> &#x27;Artificial respiration (procedure)&#x27;</p></li><li><p><strong>Start:</strong> &#x27;30-9-2022 10:33&#x2B;0200&#x27;</p></li></ul></div>
+  </text>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="40617009"/>
+        <display value="Artificial respiration (procedure)"/>
+      </coding>
+      <text value="Kunstmatige beademing"/>
+    </valueCodeableConcept>
+  </extension>
+  <modifierExtension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted">
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"/>
+        <code value="JA_MAAR"/>
+        <display value="Ja, maar met beperkingen"/>
+      </coding>
+      <text value="Behandeling toegestaan en/of wenselijk maar met beperkingen die dan ook vermeld moeten worden."/>
+    </valueCodeableConcept>
+  </modifierExtension>
+  <status value="active"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="11291000146105"/>
+      <display value="Treatment instructions"/>
+    </coding>
+    <text value="Treatment instructions"/>
+  </category>
+  <patient>
+    <reference value="http://example.org/Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1"/>
+    <display value="Johan XXX_Helleman_Afblijven"/>
+  </patient>
+  <period>
+    <start value="2022-09-30T10:33:00+02:00"/>
+  </period>
+  <policyRule value="http://wetten.overheid.nl/"/>
+  <except>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions">
+      <valueString value="Toelichting: Eerst overleg met echtgenote"/>
+    </extension>
+    <type value="deny"/>
+  </except>
+</Consent>

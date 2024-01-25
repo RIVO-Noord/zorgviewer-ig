@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Datasets - RIVO-Noord Zorgviewer MVP2 Implementation Guide v0.20.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/rivo.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://rivo-noord.nl"><img height="50"
+            alt="Visit the RIVO-Noord website" src="assets/images/rivonoord-logo.png" /> </a>
+</div>
+
+<div id="family-nav">
+    <a id="family-logo" no-external="true" href="https://hl7.nl"><img height="50" alt="Visit the HL7 NL website"
+            src="assets/images/HL7nl_Logo.png" /> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">RIVO-Noord Zorgviewer MVP2 Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.20.0 - CI build
+
+
+
+  <img alt="Netherlands flag" src="assets/images/nld.svg" height="16" title="Netherlands"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requirements &#8964;</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="conformance.html">Uitgangspunten en Requirements</a>
+			</li>
+			<li>
+				<a href="nen-normen.html">NEN Normen Conformiteit</a>
+			</li>
+			<li>
+				<a href="datasets.html">Datasets</a>
+			</li>
+			<li>
+				<a href="must-support.html">Must Support</a>
+			</li>
+		</ul>
+	</li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="design.html">Design</a>
+			</li>
+			<li>
+				<a href="design-background.html">Design Achtergrond</a>
+			</li>
+			<li>
+				<a href="security-design.html">Security Design</a>
+			</li>
+			<li>
+				<a href="zorgviewer-services.html">Zorgviewer Services</a>
+			</li>
+		</ul>
+	</li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="testing.html">Testing</a></li>
+  <li><a href="checklists.html">Checklists &amp; Aansluiten</a></li>
+  <li><a href="copyrights.html">Copyrights</a></li>
+  <li><a href="changes.html">Change Log</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Datasets</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer MVP2 Implementation Guide - Local Development build (v0.20.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Datasets</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#data-requirements" id="markdown-toc-data-requirements">Data Requirements</a></li>
+  <li><a href="#bgzpdfa" id="markdown-toc-bgzpdfa">BgZ+PDF/a</a></li>
+  <li><a href="#typen-consent" id="markdown-toc-typen-consent">Typen consent</a></li>
+  <li><a href="#acute-zorg" id="markdown-toc-acute-zorg">Acute Zorg</a></li>
+  <li><a href="#hartnet---tavi-proces" id="markdown-toc-hartnet---tavi-proces">HartNet - TAVI Proces</a></li>
+  <li><a href="#advanced-care-planning" id="markdown-toc-advanced-care-planning">Advanced Care Planning</a></li>
+</ul>
+
+</div>
+<p>Deze pagina beschrijft de content van de datasets.
+N.B. Datasets zijn relevante selectie van data elementen met eventueel filters voor een bepaald zorgpad.</p>
+
+<h3 id="data-requirements">Data Requirements</h3>
+
+<p><em>Aka “Gegevenssets” virtueel bouwblok.</em></p>
+
+<ol>
+  <li>Basis zijn de 28 zibs uit de BgZ aangevuld met de correspondentie (radiologie brieven, specialisten brieven, notities, ontslag brief)</li>
+  <li>De Data Requirements zijn een gemeenschappelijk profiel op wat leveranciers nu kunnen en zorginstellingen hebben ingericht in hun workflows (VIPP5).
+    <ol>
+      <li>Leidend zijn de zibs</li>
+      <li>Vervolgens wordt getest wat de leveranciers ondersteunen van de zibs via FHIR
+        <ul>
+          <li>In sommige gevallen kan het zijn dat de workflow niet is ingericht of anders is ingericht (dat mag). Voor mantatory (min=1) en must-support elementen zou die workflow MOETEN worden aangepast om goed te functioneren in de Zorgviewer. Bijvoorbeeld bij zorgverleners MOET een externe identifier geregistreerd zijn, zodat deze ook via FHIR Practitioner wordt ontsloten.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="bgzpdfa">BgZ+PDF/a</h3>
+
+<p>Vanuit verschillende projecten en programma’s wordt er gewerkt aan de de Basisgegevensset Zorg (BgZ) bestaande uit 28 zorginformatiebouwstenen (zibs). Vanuit de verschillende projecten en programma’s worden bepaalde regels gehanteerd. Vanuit project Zorgviewer fase 1 richten wij ons op de overlap van al deze afspraken. Om hier een duidelijker beeld over te schetsen is het volgende flower venn-diagram opgesteld om de overeenkomsten van de verschillende projecten en programma’s zichtbaar te maken.</p>
+
+<div style="clear:both;">
+<img src="FlowerVenndiagram.png" class="figure-img img-responsive img-rounded center-block" alt="BgZ+PDF/a Flower Venn-Diagram" style="width:30%" /><br />
+<center><strong>BgZ+PDF/a Flower Venn-Diagram</strong></center>
+</div>
+
+<p>In het midden van bovenstaande flower venn-diagram staat de zorgviewer (ZV). Het project maakt gebruik van de eisen van verschillende programma’s, de mogelijkheden die de verschillende systemen aanbieden (ChipSoft, Epic, Topicus, etc.) en wat de verschillende organisaties al kunnen op het gebied van data-ontsluiting (Martini, MCL, Tjongerschans, UMCG, etc.).</p>
+
+<p>Onderstaande lijst sommeert nogmaals wat de verschillende bronnen zijn van de desbetreffende programma’s, leveranciers en organisaties:</p>
+<ol>
+  <li>Wat wordt geëist vanuit de wet en moet dus door de leveranciers worden ondersteund:
+    <ol>
+      <li><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjr49Tvntv9AhWK2aQKHdAaDooQFnoECAwQAQ&amp;url=https%3A%2F%2Fwww.rijksoverheid.nl%2Fbinaries%2Frijksoverheid%2Fdocumenten%2Frapporten%2F2022%2F09%2F16%2Fintegraal-zorgakkoord-samen-werken-aan-gezonde-zorg%2Fintegraal-zorg-akkoord.pdf&amp;usg=AOvVaw3KopPSCxT2VkhnPKQlehkb&amp;cshid=1678790821565394">IZA</a></li>
+      <li>Vanuit de ziekenhuizen: <a href="https://zoek.officielebekendmakingen.nl/stcrt-2020-7935.html">VIPP5 Staatscourant stcrt-2020-7935</a></li>
+      <li>Vanuit de huisartsen: <a href="https://zoek.officielebekendmakingen.nl/stcrt-2022-18226.html">VIPPOPEN Staatscourant 2022 3373260-1029631-CZ</a></li>
+    </ol>
+  </li>
+  <li>MedMij specs (basic):
+    <ol>
+      <li><a href="https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpBGZ_2017">BgZ 2017</a></li>
+      <li><a href="https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017">BgZ 2017 FHIR</a></li>
+      <li><a href="https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpPDFA">PDF/a</a></li>
+    </ol>
+  </li>
+  <li>Wat kan Epic nu:
+    <ol>
+      <li>De Epic huizen implementeren de zibs uit de BgZ, dus niet alleen laatste bloeddruk, maar alle b.v. Ofwel, we doen meer dan de BgZ en minder dan de zibs.</li>
+      <li><a href="https://fhir.epic.com/Specifications">Epic FHIR</a> <strong>STU3</strong> <em>Provider-Facing</em></li>
+      <li><a href="https://umcgonline.sharepoint.com/:b:/r/sites/RIVO-Noord-RealisatieZorgviewer/Shared%20Documents/Werkgroep%20Implementatie%20gids/Achtergrond%20materiaal/SMoR%20-%20VIPP%205%20Module%201%20-%20PDFA%20Correspondence%20via%20FHIR%20-%20Design%20-%20February%202021%20revision.pdf?csf=1&amp;web=1&amp;e=o7DDKG">SMoR - VIPP 5 Module 1 - PDFA Correspondence via FHIR - Design - February 2021 revision.pdf</a></li>
+      <li><a href="https://umcgonline.sharepoint.com/:b:/r/sites/RIVO-Noord-RealisatieZorgviewer/Shared%20Documents/Werkgroep%20Implementatie%20gids/Achtergrond%20materiaal/VIPP%205%20Module%201%20-%20Updates%20to%20BgZ%20on%20FHIR%20to%20Support%20Hospital%20MedMij%20Kwalificatie%20-%20Medications%20and%20Problems.pdf?csf=1&amp;web=1&amp;e=bTTAUJ">SMoR - VIPP 5 Module 1 - Updates to BgZ on FHIR to Support Hospital MedMij Kwalificatie - Medications and Problems</a></li>
+      <li><a href="https://umcgonline.sharepoint.com/:b:/r/sites/
+ RIVO-Noord-RealisatieZorgviewer/Shared%20Documents/Werkgroep%20Implementatie%20gids/Achtergrond%20materiaal/SMoR%20-%20VIPP%205%20Module%201%20-%20BGZ%20on%20FHIR%20-%20Design%20-%20July%202020%20revision.pdf?csf=1&amp;web=1&amp;e=fEd69C">SMoR - VIPP 5 Module 1 - BGZ on FHIR - Design - July 2020 revision.pdf</a></li>
+    </ol>
+  </li>
+  <li>Wat kan Chipsoft nu:
+    <ol>
+      <li><a href="https://developer.zorgplatform.online/digital-care">Digitale Zorg Zorgplatform</a></li>
+      <li><a href="https://developer.zorgplatform.online/digital-care/api/bgz">FHIR BgZ API</a></li>
+      <li><a href="https://developer.zorgplatform.online/digital-care/api/document">FHIR Document API</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h4 id="voorbeeld-bgz">Voorbeeld BgZ</h4>
+
+<p>De Basisgegevensset Zorg (BgZ), ook wel patient summary (PS) genoemd, behandelen wij als een sub-set van zibs. In de BgZ worden de BgZ-secties beperkt. Bijvoorbeeld de BgZ-sectie Uitslagen beperkt zich op klinisch chemisch lab, laatste uitslag. Dit zou betekenen dat de zorgverlener geen inzage heeft in trends (eerdere klinische chemie uitslagen) of andere typen laboratorium uitslagen. De andere laboratorium uitslagen zijn bijvoorbeeld hematologie, serologie/immunologie, virologie, toxicologie, microbiologie of moleculaire genetica (zie zib LaboratoriumUitslag - ResultaatType - ResultaatTypeCodelijst). Deze filters op de zibs beschouwen we als voorbeelden. Vanuit project zorgviewer laten wij deze filters achterwegen, zodat alle lab-uitslagen ingezien kunnen worden.</p>
+
+<h3 id="typen-consent">Typen consent</h3>
+
+<h4 id="informed-consent">Informed Consent</h4>
+
+<p>In de gezondheidszorg wordt gebruik gemaakt van de <a href="https://www.knmg.nl/advies-richtlijnen/dossiers/informed-consent">Informed Consent</a>. Middels de informed consent geeft de patiënt toestemming voor het uitvoeren van het medisch beleid door de zorgverlener. Het wordt ‘informed’ genoemd, omdat je de patiënt voorafgaand informeert over de mogelijke behandeling en de consequenties van behandelen. Bij behandelen worden ook de onderzoeken verstaan, zoals bloedafname of de röntgen foto.</p>
+
+<p>Het informeren van de patiënt over de behandeling is de informatieplicht die een zorgverlener heeft. Dit is ook vastgelegd in de Wet Geneeskundige BehandelOvereenkomst (WGBO).</p>
+
+<h4 id="toestemming-delen-gegevens">Toestemming delen gegevens</h4>
+
+<p>Voor het delen van gegevens moet apart toestemming gevraagd worden. Dit is niet opgenomen in het informed consent. Op dit moment moet bij elke instelling apart de toestemming gevraagd én geregistreerd worden in eigen informatiesysteem. Hierdoor ervaren gebruikers problemen, omdat niet in elke instelling de toestemming juist is geregistreerd, waardoor informatie niet uitgewisseld kan worden.</p>
+
+<p><a href="https://www.mitz-toestemming.nl/"><em>Mitz-toestemming</em></a>
+Om problemen rondom toestemming en gegevensuitwisseling tegen te gaan is er landelijk Mitz gekozen als dé oplossing voor de toestemmingsvoorziening. In Mitz kan de patiënt op één plek zijn/haar toestemmingen beheren. Alle uitwisselingssystemen (US) worden aangesloten op Mitz, zodat ook de US’en op de hoogte zijn van de toestemming van de patiënt. De toestemming wordt op een categorie van zorgaanbieders geregistreerd.</p>
+
+<p>Als een zorgaanbieder de toestemming van een patiënt wil raadplegen, dan wordt er een vraag gesteld aan het US. Het US vraagt dan de toestemming op bij Mitz. Eerst wordt er gevraagd of er toestemming is voor het delen van gegevens: <a href="https://www.mitz-toestemming.nl/over-mitz/hoe-werkt-mitz">de gesloten autorisatievraag</a>.</p>
+
+<h4 id="huidige-mitz-toestemmingen-v381">Huidige MITZ toestemmingen (v3.8.1)</h4>
+
+<p>Algemene vraag aan patient:</p>
+<blockquote>
+  <p>“Geeft u {gevelnaam zorgaanbieder} toestemming om uw noodzakelijke {gegevenscategorie} beschikbaar te stellen aan andere zorgaanbieders, zoals huisartsen, ziekenhuizen en andere medisch specialistische instellingen en apotheken, als dat voor uw behandeling nodig is?”</p>
+</blockquote>
+
+<p>Zorgaanbiedercategorien (raadeplegende):</p>
+<ul>
+  <li>Huisartsen en huisartsenposten</li>
+  <li>Ziekenhuizen, medische centra en klinieken</li>
+  <li>Geestelijke gezondheidszorg (GGZ)</li>
+  <li>Verpleging en verzorging</li>
+  <li>Apotheken</li>
+  <li>Laboratoria en diagnostische centra</li>
+</ul>
+
+<p>Gegevenscategorieën:</p>
+<ul>
+  <li>Behandelgegevens (medische gegevens)</li>
+  <li>Uitslagen (zit ook in #1)</li>
+  <li>Medicatiegegevens (zit ook in #1)</li>
+  <li>Alle gegevens</li>
+</ul>
+
+<h3 id="acute-zorg">Acute Zorg</h3>
+
+<p>Binnen de acute zorg lopen een aantal trajecten om gegevensuitwisseling voor elkaar te krijgen. Binnen de acute zorg is het noodzakelijk om op snelle wijze informatie over de patiënt te ontvangen. Denk bijvoorbeeld aan het reanimatiebeleid en -wensen van de patiënt. Middels project e-Spoed is getracht om afspraken rondom verschillende scenario’s in kaart te brengen. Per scenario’s worden verschillende technische en functionele eisen gesteld; denk aan het berichttype en naar wie het bericht verstuurd moet worden. Deze informatiestandaard staat onder beheer van Nictiz.</p>
+
+<p>Verder heeft de acute zorg meerdere andere informatiestandaarden per uitwisseling uitgeschreven, onder andere:</p>
+<ul>
+  <li>Ambulanceoverdracht naar SEH en retourbericht 2.4.0</li>
+  <li>(Triage)verwijzingen; spoedmelding; bevestiging en voorwaarschuwing 1.5.0</li>
+  <li>Professionele samenvatting en rapportages verleende zorg 2.1.0</li>
+</ul>
+
+<p>Hieronder nog een aantal links:</p>
+<ul>
+  <li><a href="https://nictiz.nl/standaarden/informatiestandaarden/acute-zorg/">https://nictiz.nl/standaarden/informatiestandaarden/acute-zorg/</a></li>
+  <li><a href="https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Acute_Zorg">https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Acute_Zorg</a></li>
+  <li><a href="https://amigo.nictiz.nl/acute-zorg/opvragingen-bij-huisarts/dataset">https://amigo.nictiz.nl/acute-zorg/opvragingen-bij-huisarts/dataset</a></li>
+</ul>
+
+<h3 id="hartnet---tavi-proces">HartNet - TAVI Proces</h3>
+
+<p><a href="https://www.umcg.nl/-/hartnet-de-juiste-hartzorg-op-de-juiste-plek">HartNet is een regionaal samenwerkingsverband tussen de ziekenhuizen in Groningen en Drenthe</a>. Het doel is om de juiste hartzorg op de juiste plek aan te bieden voor de bewoners in Noord-Nederland. HartNet heeft daarom vijf verschillende zorgpaden volledig uitgeschreven en geoptimaliseerd. Eén van deze zorgpaden is het TAVI zorgpad en staat voor Transcatheter Aortic Valve Implantation. Bij TAVI wordt een hartklep vervangen, wanneer deze niet optimaal werkt. Denk aan aandoeningen zoals aortaklepstenose; een aandoening waarbij de hartklep onvoldoende sluit.</p>
+
+<p>Het TAVI zorgpad is eerst uitgeschreven door de afdelingen van de verschillende huizen en vervolgens over elkaar gelegd.</p>
+
+<p>Het idee van de regionale zorgpaden is om de zorg op de juiste plek bij de juiste professional uit te voeren:</p>
+<ul>
+  <li>De diagnostiek vindt plaats in de 2e lijn;</li>
+  <li>De Hart Bespreking (MDO) vindt plaats in de 3e lijn voor het bepalen van het zorgplan;</li>
+  <li>De ingreep wordt uitgevoerd in de 3e lijn;</li>
+  <li>De follow-up wordt uitgevoerd in de 2e lijn.</li>
+</ul>
+
+<h3 id="advanced-care-planning">Advanced Care Planning</h3>
+
+<p>Advanced Care Planning (ACP) wordt ook wel het proactieve zorgplan genoemd. Een plan waarin de wensen en behoeften van de patiënt worden beschreven. In de ACP Leidraad proactieve zorgplanning (advance care planning) van Palliaweb wordt het proces van het verkrijgen van informatie rondom ACP uitgelegd. In het ACP staan zaken rondom de wilsbekwaamheid, wettelijke vertegenwoordiging, doelen van behandeling en behandelgrenzen. Behandelgrenzen beschrijven onder andere het reanimatiebeleid.</p>
+
+<p>Het ACP beschrijft ook informatie over de patiëntencontext in de Gegevensset Passende Zorg (GPZ). Deze gegevensset heeft overeenkomsten met de Gegevensset Oncologie Algemeen (GOA) en de MensGebonden Set (MGS). De set komt ook overeen met de basisgegevensset zorg (BgZ) met een aantal aanvullingen:</p>
+<ul>
+  <li>Sociale context
+    <ul>
+      <li>Gezinssamenstelling</li>
+      <li>Beroep</li>
+      <li>Hobbies</li>
+      <li>Sociaal netwerk</li>
+      <li>Onafhankelijkheid</li>
+      <li>Sociale observaties</li>
+    </ul>
+  </li>
+  <li>Zingeving</li>
+  <li>Communicatie</li>
+  <li>Organisatie van zorg
+    <ul>
+      <li>Plaats van zorg</li>
+      <li>Plaats van overlijden</li>
+    </ul>
+  </li>
+  <li>Functioneel en somatisch (specifieke vragenlijsten / metingen)</li>
+</ul>
+
+<p>Vanuit project Zorgviewer is de ACP deels in scope, namelijk de BehandelAanwijzing (TreatmentDirective) met een aanvulling in de codelijst. Codelijst die gebruikt gaat worden voor de zorgviewer is een lijst met 8 items, zie <a href="ValueSet-ACPTreatmentCodelist.html">TreatmentDirective ACP behandelingen waardelijst</a></p>
+
+<p>Voor de volledige dataset, kijk op <a href="https://decor.nictiz.nl/art-decor/decor-project--pall-izppz-">Nictiz ART-DECOR</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023 <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.20.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Thu, Jan 25, 2024 12:12+0000">2024-01-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
