@@ -13,8 +13,10 @@ jobs:
       - uses: actions/setup-java@v4.0.0
         with:
           java-version: 21
+          distribution: temurin
       - run: node --version
       - run: java -version
       - run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
       - run: java -jar publisher.jar -version
       - run: java -jar publisher.jar -ig ig.ini
+    
