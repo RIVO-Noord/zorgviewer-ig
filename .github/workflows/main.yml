@@ -20,3 +20,9 @@ jobs:
 #      - run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
       - run: curl -L https://vdzel.home.xs4all.nl/publisher.jar -o publisher.jar
       - run: java -jar publisher.jar -ig ig.ini
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: output
