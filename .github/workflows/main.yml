@@ -14,6 +14,6 @@ jobs:
         with:
           java-version: 21
           distribution: temurin
-      - run: apt install graphviz
+      - uses: ts-graphviz/setup-graphviz@v1
       - run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
       - run: java -jar publisher.jar -ig ig.ini
