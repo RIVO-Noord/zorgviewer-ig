@@ -1,6 +1,6 @@
 
 ### Introduction
-``
+
 Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/).
 
 ### Historie
