@@ -34,6 +34,6 @@ jobs:
         uses: bacongobbler/azure-blob-storage-upload@main
         with:
           source_dir: output
-          container_name: www
+          container_name: $web
           connection_string: ${{ secrets.ConnectionString }}
           overwrite: 'true'
