@@ -13,6 +13,14 @@
 > java -jar validator_cli.jar -version 3.0.2 input/resources -ig input/resources -ig nictiz.fhir.nl.stu3.zib2017#2.2.14
 ```
 
+## (optional) Create IG builder Docker
+```
+> docker run --name=zv -it -v "$(pwd)":/app node:lts-buster /bin/bash
+@> apt update
+@> apt install jekyll graphviz
+@> dpkg -i jdk-21_linux-x64_bin.deb
+```
+
 ## To build the IG (need minimal version 1.2.31 dd 1-feb-2023 ivm zib2017 package fix)
 ```
 (initial) > curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar

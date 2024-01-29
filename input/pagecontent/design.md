@@ -184,8 +184,8 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 | Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | auth_token.subject_role en HTTP-Header AORTA-ID rol | `code=62247001 display=huisarts system=SNOMED CT` | Practitioner.qualification[system=sct] |
 | Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials + professional.family_name | auth_token.subject_name | `L. Arts` | Practitioner.name |
 | Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | auth_token.subject_organization_id en HTTP-Header AORTA-ID org | `2.16.528.1.1007.3.3.15123` | Practitioner.meta[extension=source] |
-| Zorgviewer Session ID | HTTP-Header X-Correlation-Id UUID | HTTP-Header X-Correlation-Id | nvt | `bc6fea62-f131-4e15-891e-06cad6a6c2b3` | nvt |
-| Zorgviewer Request ID | HTTP-Header X-Request-Id UUID | HTTP-Header X-Request-Id | HTTP-Header AORTA-ID req | `3aaab721-f8ae-4cbb-a83a-67306ffd04ae` | nvt |
+| Zorgviewer Session ID | HTTP-Header X-Correlation-Id | HTTP-Header X-Correlation-Id | nvt | [UUID](https://www.ietf.org/rfc/rfc4122.txt) `bc6fea62-f131-4e15-891e-06cad6a6c2b3` | nvt |
+| Zorgviewer Request ID | HTTP-Header X-Request-Id | HTTP-Header X-Request-Id | HTTP-Header AORTA-ID req | [UUID](https://www.ietf.org/rfc/rfc4122.txt) `3aaab721-f8ae-4cbb-a83a-67306ffd04ae` | nvt |
 
 ### Bevragen bronsystemen zorgaanbieders documenten
 
