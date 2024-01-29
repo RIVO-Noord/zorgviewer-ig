@@ -18,8 +18,10 @@ jobs:
       - name: Install GraphViz and Jekyll
         run: sudo apt update; sudo apt install graphviz jekyll
 
-      - name: Checkout IG files
+      - name: Checkout snapshot-branch IG files
         uses: actions/checkout@v4
+        with:
+          ref: snapshot
 
       - name: Get IG Publisher jar
 #        run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
