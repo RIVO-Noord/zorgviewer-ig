@@ -1,7 +1,7 @@
 on:
-#  push:
-#    branches:
-#      - master
+  push:
+    branches:
+      - snapshot
   workflow_dispatch:
 
 jobs:
@@ -18,8 +18,10 @@ jobs:
       - name: Install GraphViz and Jekyll
         run: sudo apt update; sudo apt install graphviz jekyll
 
-      - name: Checkout IG files
+      - name: Checkout snapshot-branch IG files
         uses: actions/checkout@v4
+        with:
+          ref: snapshot
 
       - name: Get IG Publisher jar
 #        run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
@@ -28,9 +30,10 @@ jobs:
       - name: Run the IG Builder
         run: java -jar publisher.jar -ig ig.ini
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+      - name: Publish to Azure Website implementatiegids.zorgviewer.nl
+        uses: bacongobbler/azure-blob-storage-upload@main
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: output
+          source_dir: output
+          container_name: $web
+          connection_string: ${{ secrets.ConnectionString }}
+          overwrite: 'true'
