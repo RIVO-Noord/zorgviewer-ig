@@ -1,0 +1,32 @@
+on:
+  push:
+    branches:
+      - snapshot
+  workflow_dispatch:
+
+jobs:
+  Run-IG-Builder:
+    name: Run IG builder on Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup JDK version
+        uses: actions/setup-java@v4.0.0
+        with:
+          java-version: 21
+          distribution: temurin
+
+      - name: Install GraphViz and Jekyll
+        run: sudo apt update; sudo apt install graphviz jekyll
+
+      - name: Checkout IG files
+        uses: actions/checkout@v4
+
+      - name: Get IG Publisher jar
+#        run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
+        run: curl -L https://vdzel.home.xs4all.nl/publisher.jar -o publisher.jar
+
+      - name: Run the IG Builder
+        run: java -jar publisher.jar -ig ig.ini
+
+      - name: Publish to Azure Website implementatiegids.zorgviewer.nl
+        run: echo az storage blob ...
