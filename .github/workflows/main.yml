@@ -1,7 +1,7 @@
 on:
-#  push:
-#    branches:
-#      - master
+  push:
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
@@ -24,8 +24,8 @@ jobs:
           ref: master
 
       - name: Get IG Publisher jar
-#        run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
-        run: curl -L https://vdzel.home.xs4all.nl/publisher.jar -o publisher.jar
+        run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
+#        run: curl -L https://vdzel.home.xs4all.nl/publisher.jar -o publisher.jar
 
       - name: Run the IG Builder
         run: java -jar publisher.jar -ig ig.ini
