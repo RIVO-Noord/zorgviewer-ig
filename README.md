@@ -65,7 +65,9 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
 1. En werk verder in de master branch
 1. Update input/zorgviewer-ig.json version naar volgende minor "0.M+1.0"
 
-## Update implementatiegids.zorgviewer.nl
+## Handmatig publish implementatiegids.zorgviewer.nl
+
+N.B. Alleen nodig als de [GitHub Snapshot Publish Workflow](.github/workflows/publish.yml) niet werkt.
 
 1. Maak nieuwe publicatie
 ```
