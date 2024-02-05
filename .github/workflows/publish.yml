@@ -24,8 +24,8 @@ jobs:
           ref: snapshot
 
       - name: Get IG Publisher jar
-#        run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
-        run: curl -L https://vdzel.home.xs4all.nl/publisher.jar -o publisher.jar
+        run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
+#        run: curl -L https://vdzel.home.xs4all.nl/publisher.jar -o publisher.jar
 
       - name: Run the IG Builder
         run: java -jar publisher.jar -ig ig.ini
@@ -35,5 +35,5 @@ jobs:
         with:
           source_dir: output
           container_name: $web
-          connection_string: ${{ secrets.ConnectionString }}
+          connection_string: ${{ secrets.CONNECTION_STRING }}
           overwrite: 'true'
