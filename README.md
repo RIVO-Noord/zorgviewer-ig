@@ -13,6 +13,14 @@
 > java -jar validator_cli.jar -version 3.0.2 input/resources -ig input/resources -ig nictiz.fhir.nl.stu3.zib2017#2.2.14
 ```
 
+## (optional) Create IG builder Docker
+```
+> docker run --name=zv -it -v "$(pwd)":/app node:lts-buster /bin/bash
+@> apt update
+@> apt install jekyll graphviz
+@> dpkg -i jdk-21_linux-x64_bin.deb
+```
+
 ## To build the IG (need minimal version 1.2.31 dd 1-feb-2023 ivm zib2017 package fix)
 ```
 (initial) > curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
@@ -57,7 +65,9 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
 1. En werk verder in de master branch
 1. Update input/zorgviewer-ig.json version naar volgende minor "0.M+1.0"
 
-## Update implementatiegids.zorgviewer.nl
+## Handmatig publish implementatiegids.zorgviewer.nl
+
+N.B. Alleen nodig als de [GitHub Snapshot Publish Workflow](.github/workflows/publish.yml) niet werkt.
 
 1. Maak nieuwe publicatie
 ```

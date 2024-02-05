@@ -1,0 +1,38 @@
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  Run-IG-Builder:
+    name: Run IG builder on master and publish on GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup JDK version
+        uses: actions/setup-java@v4.0.0
+        with:
+          java-version: 21
+          distribution: temurin
+
+      - name: Install GraphViz and Jekyll
+        run: sudo apt update; sudo apt install graphviz jekyll
+
+      - name: Checkout IG files
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Get IG Publisher jar
+        run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
+#        run: curl -L https://vdzel.home.xs4all.nl/publisher.jar -o publisher.jar
+
+      - name: Run the IG Builder
+        run: java -jar publisher.jar -ig ig.ini
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: output
