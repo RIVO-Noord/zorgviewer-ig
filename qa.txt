@@ -1,9 +1,9 @@
 zorgviewer-ig : Validation Results
 =========================================
 
-err = 146, warn = 94, info = 85
+err = 137, warn = 85, info = 87
 IG Publisher Version: 1.5.16
-Generated Wed Feb 21 08:00:34 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#0.22.0 (canonical = http://hl7.nl/fhir/zorgviewer)
+Generated Wed Feb 21 09:17:36 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#0.22.0 (canonical = http://hl7.nl/fhir/zorgviewer)
  Build Errors : 2 / 6 / 0
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Chipsoft : 2 / 0 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Epic : 3 / 1 / 4
@@ -18,7 +18,7 @@ Generated Wed Feb 21 08:00:34 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgv
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/LaboratoryTestResult-Chipsoft : 1 / 5 / 6
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/LaboratoryTestResult-Epic : 1 / 3 / 11
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/LaboratoryTestResult2-Epic : 2 / 5 / 9
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Organization-Epic : 3 / 2 / 5
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Organization-Epic : 1 / 2 / 7
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Patient-Chipsoft : 0 / 10 / 5
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Patient-Epic : 32 / 9 / 30
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Practitioner-Chipsoft : 0 / 2 / 3
@@ -62,13 +62,13 @@ Generated Wed Feb 21 08:00:34 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgv
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-ICPC1NL : 3 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-SCT : 2 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-bronsysteem-zorgaanbieder : 0 / 0 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ConceptMap-behandelaanwijzing-2017-2020 : 0 / 11 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ConceptMap-behandelaanwijzing-2017-2020 : 0 / 9 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ConceptMap-patient-toestemming : 0 / 7 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Endpoint-UMCG : 0 / 0 / 2
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-MCL : 2 / 2 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-Tjongerschans : 2 / 2 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-UMCG : 2 / 2 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-VIPLive : 1 / 1 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-MCL : 0 / 0 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-Tjongerschans : 0 / 0 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-UMCG : 0 / 0 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-VIPLive : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/PlanDefinition-BgZ2017 : 0 / 2 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ValueSet-ACPTreatmentCodelist : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ValueSet-ProbleemNaamCodelist : 0 / 0 / 1
@@ -163,8 +163,8 @@ INFORMATION: Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT
 WARNING: Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3: Observation: Best Practice Recommendation: In general, all observations should have a performer
 INFORMATION: Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3: Observation.category[1]: This element does not match any known slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|2.1.12 (this may not be a problem, but you should check that it's not intended to match a slice)
 == input/examples/Organization-Epic.json ==
-ERROR: Organization/eXovwVA3zYl3U3fBH8mdkxw3: Organization.identifier[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [system] in profile Organization.identifier:OID - the discriminator http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.22.0 does not have fixed value, binding or existence assertions
-ERROR: Organization/eXovwVA3zYl3U3fBH8mdkxw3: Organization.identifier[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [system] in profile Organization.identifier:OID - the discriminator http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.22.0 does not have fixed value, binding or existence assertions
+INFORMATION: Organization/eXovwVA3zYl3U3fBH8mdkxw3: Organization.identifier[0]: This element does not match any known slice defined in the profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.22.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Organization/eXovwVA3zYl3U3fBH8mdkxw3: Organization.identifier[1]: This element does not match any known slice defined in the profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.22.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: Organization/eXovwVA3zYl3U3fBH8mdkxw3: Organization.identifier[0].type: No code provided, and a code should be provided from the value set 'Identifier Type Codes' (http://hl7.org/fhir/ValueSet/identifier-type|3.0.2)
 WARNING: Organization/eXovwVA3zYl3U3fBH8mdkxw3: Organization.identifier[1].type: No code provided, and a code should be provided from the value set 'Identifier Type Codes' (http://hl7.org/fhir/ValueSet/identifier-type|3.0.2)
 ERROR: Organization/eXovwVA3zYl3U3fBH8mdkxw3: Organization.address[0].postalCode: Constraint failed: nl-postal-code-pattern: 'Dutch postal code pattern 'nnnnAA''
@@ -333,12 +333,12 @@ ERROR: StructureDefinition/LaboratoryTestResult: StructureDefinition.snapshot.el
 ERROR: StructureDefinition/LaboratoryTestResult: StructureDefinition.snapshot.element[20]: The element Observation.status.value has no assigned types, and no content reference
 ERROR: StructureDefinition/LaboratoryTestResult: StructureDefinition.snapshot.element[65].constraint[0]: Error in constraint 'zib-LaboratoryTestResult-Observation-1' with expression 'coding.where(system = 'http://snomed.info/sct' and (code = '281302008' or '281300000' or '11896004' or '30714006' or '131196009')  ).exists() implies coding.where(system = 'http://hl7.org/fhir/v2/0078').exists()': Error evaluating FHIRPath expression: The name 'coding' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Coding] (@char 21)
 == input/profiles/StructureDefinition-Organization.json ==
-ERROR: StructureDefinition/Organization: StructureDefinition.snapshot.element[66].example[5].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' could not be found, so the code cannot be validated
-ERROR: StructureDefinition/Organization: StructureDefinition.snapshot.element[66].example[5].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'TelecomTypeCodelijst' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1--20171231000000|2017-12-31T00:00:00), and a coding from this value set is required) (codes = urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1#FAX)
-ERROR: StructureDefinition/Organization: StructureDefinition.snapshot.element[66].example[6].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' could not be found, so the code cannot be validated
-ERROR: StructureDefinition/Organization: StructureDefinition.snapshot.element[66].example[6].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'TelecomTypeCodelijst' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1--20171231000000|2017-12-31T00:00:00), and a coding from this value set is required) (codes = urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1#FAX)
-ERROR: StructureDefinition/Organization: StructureDefinition.snapshot.element[66].example[7].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' could not be found, so the code cannot be validated
-ERROR: StructureDefinition/Organization: StructureDefinition.snapshot.element[66].example[7].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'TelecomTypeCodelijst' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1--20171231000000|2017-12-31T00:00:00), and a coding from this value set is required) (codes = urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1#FAX)
+ERROR: StructureDefinition/Organization: StructureDefinition.snapshot.element[74].example[5].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' could not be found, so the code cannot be validated
+ERROR: StructureDefinition/Organization: StructureDefinition.snapshot.element[74].example[5].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'TelecomTypeCodelijst' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1--20171231000000|2017-12-31T00:00:00), and a coding from this value set is required) (codes = urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1#FAX)
+ERROR: StructureDefinition/Organization: StructureDefinition.snapshot.element[74].example[6].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' could not be found, so the code cannot be validated
+ERROR: StructureDefinition/Organization: StructureDefinition.snapshot.element[74].example[6].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'TelecomTypeCodelijst' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1--20171231000000|2017-12-31T00:00:00), and a coding from this value set is required) (codes = urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1#FAX)
+ERROR: StructureDefinition/Organization: StructureDefinition.snapshot.element[74].example[7].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' could not be found, so the code cannot be validated
+ERROR: StructureDefinition/Organization: StructureDefinition.snapshot.element[74].example[7].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'TelecomTypeCodelijst' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1--20171231000000|2017-12-31T00:00:00), and a coding from this value set is required) (codes = urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1#FAX)
 == input/profiles/StructureDefinition-Patient.json ==
 ERROR: StructureDefinition.snapshot.element[16]: The element Patient.extension:nationality.extension:code.valueCodeableConcept:valueCodeableConcept launches straight into slicing without the slicing being set up properly first
 ERROR: StructureDefinition.snapshot.element[21]: The element Patient.extension:nationality.extension:period.valuePeriod:valuePeriod launches straight into slicing without the slicing being set up properly first
@@ -429,9 +429,7 @@ WARNING: ConceptMap/behandelaanwijzing-2017-2020: ConceptMap.group[0].element[3]
 WARNING: ConceptMap/behandelaanwijzing-2017-2020: ConceptMap.group[1].element[0].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
 WARNING: ConceptMap/behandelaanwijzing-2017-2020: ConceptMap.group[1].element[1].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
 WARNING: ConceptMap/behandelaanwijzing-2017-2020: ConceptMap.group[1].element[2].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
-WARNING: ConceptMap/behandelaanwijzing-2017-2020: ConceptMap.group[0]: No Source Code System, so the source codes cannot be checked
 WARNING: ConceptMap/behandelaanwijzing-2017-2020: ConceptMap.group[0]: No Target Code System, so the target codes cannot be checked
-WARNING: ConceptMap/behandelaanwijzing-2017-2020: ConceptMap.group[1]: No Source Code System, so the source codes cannot be checked
 WARNING: ConceptMap/behandelaanwijzing-2017-2020: ConceptMap.group[1]: No Target Code System, so the target codes cannot be checked
 == input/resources/ConceptMap-patient-toestemming.json ==
 WARNING: ConceptMap/patient-toestemming: ConceptMap.group[0].element[0].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
@@ -444,23 +442,9 @@ WARNING: ConceptMap/patient-toestemming: ConceptMap.group[0]: No Target Code Sys
 == input/resources/Endpoint-UMCG.json ==
 INFORMATION: Endpoint/UMCG: Endpoint.payloadType[0]: Reference to draft CodeSystem http://hl7.org/fhir/resource-types|3.0.2
 == input/resources/Organization-MCL.json ==
-ERROR: Organization/MCL: Organization.identifier[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [system] in profile Organization.identifier:OID - the discriminator http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.22.0 does not have fixed value, binding or existence assertions
-ERROR: Organization/MCL: Organization.identifier[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [system] in profile Organization.identifier:OID - the discriminator http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.22.0 does not have fixed value, binding or existence assertions
-WARNING: Organization/MCL: Organization.identifier[0].type: No code provided, and a code should be provided from the value set 'Identifier Type Codes' (http://hl7.org/fhir/ValueSet/identifier-type|3.0.2)
-WARNING: Organization/MCL: Organization.identifier[1].type: No code provided, and a code should be provided from the value set 'Identifier Type Codes' (http://hl7.org/fhir/ValueSet/identifier-type|3.0.2)
 == input/resources/Organization-Tjongerschans.json ==
-ERROR: Organization/Tjongerschans: Organization.identifier[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [system] in profile Organization.identifier:OID - the discriminator http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.22.0 does not have fixed value, binding or existence assertions
-ERROR: Organization/Tjongerschans: Organization.identifier[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [system] in profile Organization.identifier:OID - the discriminator http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.22.0 does not have fixed value, binding or existence assertions
-WARNING: Organization/Tjongerschans: Organization.identifier[0].type: No code provided, and a code should be provided from the value set 'Identifier Type Codes' (http://hl7.org/fhir/ValueSet/identifier-type|3.0.2)
-WARNING: Organization/Tjongerschans: Organization.identifier[1].type: No code provided, and a code should be provided from the value set 'Identifier Type Codes' (http://hl7.org/fhir/ValueSet/identifier-type|3.0.2)
 == input/resources/Organization-UMCG.json ==
-ERROR: Organization/UMCG: Organization.identifier[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [system] in profile Organization.identifier:OID - the discriminator http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.22.0 does not have fixed value, binding or existence assertions
-ERROR: Organization/UMCG: Organization.identifier[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [system] in profile Organization.identifier:OID - the discriminator http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.22.0 does not have fixed value, binding or existence assertions
-WARNING: Organization/UMCG: Organization.identifier[0].type: No code provided, and a code should be provided from the value set 'Identifier Type Codes' (http://hl7.org/fhir/ValueSet/identifier-type|3.0.2)
-WARNING: Organization/UMCG: Organization.identifier[1].type: No code provided, and a code should be provided from the value set 'Identifier Type Codes' (http://hl7.org/fhir/ValueSet/identifier-type|3.0.2)
 == input/resources/Organization-VIPLive.json ==
-ERROR: Organization/VIPLive: Organization.identifier[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [system] in profile Organization.identifier:OID - the discriminator http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.22.0 does not have fixed value, binding or existence assertions
-WARNING: Organization/VIPLive: Organization.identifier[0].type: No code provided, and a code should be provided from the value set 'Identifier Type Codes' (http://hl7.org/fhir/ValueSet/identifier-type|3.0.2)
 == input/resources/PlanDefinition-BgZ2017.json ==
 WARNING: PlanDefinition/BgZ2017: PlanDefinition.action[0].output[2].codeFilter[0].valueCoding[0]: A code with no system has no defined meaning, and it cannot be validated. A system should be provided
 WARNING: PlanDefinition/BgZ2017: PlanDefinition.action[0].output[2].codeFilter[0].valueCoding[1]: A code with no system has no defined meaning, and it cannot be validated. A system should be provided
