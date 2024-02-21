@@ -10,7 +10,7 @@
 ## Validate resources
 ```
 (initial) > curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o validator_cli.jar
-> java -jar validator_cli.jar -version 3.0.2 input/resources -ig input/resources -ig nictiz.fhir.nl.stu3.zib2017#2.2.14
+> java -jar validator_cli.jar -version 3.0.2 input/resources -ig input/resources -ig nictiz.fhir.nl.stu3.zib2017
 ```
 
 ## (optional) Create IG builder Docker
