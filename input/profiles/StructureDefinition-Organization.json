@@ -32,10 +32,22 @@
                 "mustSupport": true
             },
             {
-                "id": "Organization.identifier:OID",
+                "id": "Organization.identifier:AGB.system",
+                "path": "Organization.identifier.system",
+                "min": 1,
+                "fixedUri": "http://fhir.nl/fhir/NamingSystem/agb-z"
+            },
+            {
+                "id": "Organization.identifier:HL7NL",
                 "path": "Organization.identifier",
-                "sliceName": "OID",
+                "sliceName": "HL7NL",
                 "mustSupport": true
+            },
+            {
+                "id": "Organization.identifier:HL7NL.system",
+                "path": "Organization.identifier.system",
+                "min": 1,
+                "fixedUri": "urn:oid:2.16.840.1.113883.2.4.3"
             }
         ]
     }
