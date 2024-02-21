@@ -6,9 +6,3 @@ Vanuit o.a. NEN 7510 wordt er altijd minimaal TLS verwacht op de verbindingen.
 <div>
 {% include Security-Design-seq.svg %}
 </div>
-
-### Andere view
-
-{% include img.html img="security-design-lagen-epic.png" caption="Security Design Lagen - Epic" width="90%" %}
-
-{% include img.html img="security-design-lagen-cs.png" caption="Security Design Lagen - Chipsoft en Zorgplatform" width="90%" %}

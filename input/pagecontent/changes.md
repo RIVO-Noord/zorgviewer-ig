@@ -4,7 +4,8 @@
 
 |Versie|Datum|Changes|
 |---|---|---|
-|0.21.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.20.0-sprint25...master)|
+|0.22.0-CIbuild|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.21.0-sprint26...master)|
+|0.21.0-sprint26|20-feb-2024|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.20.0-sprint25...0.21.0-sprint26)|
 |0.20.0-sprint25|5-feb-2024|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.19.0-sprint24...0.20.0-sprint25)|
 |0.19.0-sprint24|22-jan-2024|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.18.0-sprint22...0.19.0-sprint24)<br/>* Design rondom AuditLogging attributes|
 |*sprint23*||*Overgeslagen*|
