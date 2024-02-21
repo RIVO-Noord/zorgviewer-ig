@@ -24,7 +24,7 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 
 **Stap 1 Aanmaken Apps in Epic: Zorgviewer FrontEnd en Zorgviewer Backend**<br/>
 De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence er zo uit ziet](https://galaxy.epic.com/?#Browse/page=1!68!50!3404409,100001067,100001075,100001077&from=Galaxy-Redirect).
-* 1.1 Front-end App: Interconnect (Foreground) verbinding kan maken naar https://auth-np.zorgviewer.nl/.well-known/jwks
+* 1.1 Front-end App: Interconnect (Foreground) verbinding kan maken naar https://auth.zorgviewer.nl/.well-known/jwks
 * 1.2 Front-end App: Ga naar [My Apps / Vendor Services (epic.com)](https://vendorservices.epic.com/Developer/Apps) en maak de volgende App registratie:
 
 | Veld | Vulling |
@@ -52,7 +52,7 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence
 | Does your app use OAuth 2.0? |Use Oauth 2.0|
 | App FHIR Version:| STU3|
 | FHIR ID Generation Scheme: |Use Unconstrained FIHR ID's|
-| Non-Production JWK Set URL: | `https://auth-np.zorgviewer.nl/.well-known/jwks`|
+| Non-Production JWK Set URL: | `https://auth.zorgviewer.nl/.well-known/jwks`|
 | Production JWK Set URL: | voorlopig leeg laten|
 | Advanced: |* Enable on Sandbox: Disable<br/>* Non-Production Client ID: Activate for Non-Production (production volgt in een later stadium)<br/>* Ter info: deze waarschuwing kan genegeerd worden "Add Non-Production Credentials"|
 
@@ -104,7 +104,7 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 
 * 4.1.1 In Epic: Ga naar Documenttype administratie: mapping van het Toestemmingsformulier onder de DocType Group van Patiënttoestemming. Dit is ook afhankelijk van de specifieke inrichting en beleid van de eigen organisatie.
 * 4.2 *Moet nog aangevuld worden...* - Interconnect config + interne url's
-* 4.3 Ontsluiten van Frontend en Backend end-points via broker naar internet en vervolgens de Zorgviewer IP-reeks 20.160.37.56/31 in de ACL van de Firewall (etc) opnemen zodat de Zorgviewer kan communiceren (HTTPS) met de endpoints. Dit is ook afhankelijk van de eigen organisatie hoe de beveiliging ingeregeld dient te worden. Indien de organisatie met een IP filter wilt werken is bovenstaande nodig.
+* 4.3 Ontsluiten van Frontend en Backend end-points via broker naar internet en vervolgens de Zorgviewer IP-reeks 20.160.170.124/31 in de ACL van de Firewall (etc) opnemen zodat de Zorgviewer kan communiceren (HTTPS) met de endpoints. Dit is ook afhankelijk van de eigen organisatie hoe de beveiliging ingeregeld dient te worden. Indien de organisatie met een IP filter wilt werken is bovenstaande nodig.
 * 4.4 Endpoint ontsluiten
 	* Client Certificaat controle op BackendEndpoint
 * 4.5 Aanleveren aan Zorgviewer volgende gegevens:
