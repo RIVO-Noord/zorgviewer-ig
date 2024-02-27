@@ -168,24 +168,77 @@ Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende orga
 #### Toevoegen Logging HTTP-Headers
 
 Tbv het correleren van de Zorgviewer logging met de logging van een Bronsysteem dient een `X-Correlation-Id` HTTP Header (per sessie) en een `X-Request-Id` HTTP Header (per request) te worden toegevoegd aan ieder request aan het Bronsysteem. Deze kan dan door het Bronsysteem gelogd worden, zodat de logging in de Zorgviewer kan worden gekoppeld aan de logging in het Bronsysteem.
-Epic ondersteunt dit nu dmv key-value pairs in de `AORTA-ID` HTTP-Header, zie [Epic Nova](https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072).
-Voorbeeld voor Epic HTTP-Header van "L. Arts uit Tjongerschans": `AORTA-ID: req=3aaab721-f8ae-4cbb-a83a-67306ffd04ae; usr=larts; rol=62247001; org=2.16.528.1.1007.3.3.15123`. N.B. zonder de sessionId, want de maximale lengte is 128 characters.
+Epic ondersteunt dit nu d.m.v. key-value pairs in de `AORTA-ID` HTTP-Header, zie [Epic Nova](https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072).
+Voorbeeld voor Epic HTTP-Header van "L. Arts uit Tjongerschans": `AORTA-ID: req=1b9d6bCd-bBf; usr=larts; rol=62247001; org=2.16.528.1.1007.3.3.15123`. N.B. zonder de sessionId, want de maximale lengte is 128 characters.
+Voor de Request- en Correlation-ID's kan de [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) 12 tekens gebruikt.
+
+Voorbeeld van de headers:
+```
+GET /fhir/Patient/123456789 HTTP/1.1
+...
+X-Request-Id: 1b9d6bCd-bBf
+X-Correlation-Id: H54f_8b9d6bC
+```
+
+#### Gebruiker en Organisatie HTTP-Headers
+
+De overige velden worden op twee manieren meegestuurd: individueel als HTTP header en verpakt in een
+JWT, tevens als HTTP header.
+De JWT variant is de veiligere optie, omdat de JWT ondertekend is en de waarden daarmee niet aangepast
+kunnen worden. Het is echter niet perse gegarandeerd dat deze constructie door een bronsysteem
+ondersteund wordt. Daarom worden ze ook individueel als HTTP header meegestuurd.
+Voor de naamgeving is gekozen voor een prefix `X-ZV-` (Zorgviewer) gevolgd door de naam van het veld,
+die weer gebaseerd zijn op [IHE IUA](https://profiles.ihe.net/ITI/IUA/#3714221-json-web-token-option).
+
+Voorbeeld van de headers per veld:
+```
+GET /fhir/Patient/123456789 HTTP/1.1
+...
+X-ZV-Subject-Organization-Id: 2.16.840.1.113883.2.4.3.8
+X-ZV-Subject-Id: smart-Practitioner-71614502
+X-ZV-Subject-role: 223366009
+```
+
+Voorbeeld van de JWT:
+```
+{
+ "subject_organization_id": "2.16.840.1.113883.2.4.3.8",
+ "subject_id": "smart-Practitioner-71614502",
+ "subject_role": "223366009"
+}
+```
+
+De JWT wordt ondertekend met de private key waarmee ook de JWT voor het request voor access tokens
+wordt ondertekend. Hiervoor is al een route ingericht om het publieke deel van de key op te vragen ([JWKS](https://auth.zorgviewer.nl/.well-known/jwks)).
+Vervolgens wordt de JWT in een custom HTTP header geplaatst:
+```
+GET /fhir/Patient/123456789 HTTP/1.1
+...
+X-ZV-Context:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0X29yZ2FuaXphdGlvbl9pZCI6I
+jIuMTYuODQwLjEuMTEzODgzLjIuNC4zLjgiLCJzdWJqZWN0X2lkIjoic21hcnQtUHJhY3RpdGl
+vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
+8d-Bhf0h2wdEO1f_Jt1xHFe1Xc
+```
+Het ontvangende systeem kan nu de JWT decoden, valideren en de velden uitlezen.
 
 ### Bevragen bronsysteem: Summary Table
 
-In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (SAML, SMART, FHIR).
+In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (Zorgviewer, SAML, SMART-on-FHIR).
 
-| Item | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
-|--|--|--|--|--|--|
-| PurposeOfUse | urn:oasis:names:tc:xspa:1.0:subject:purposeofuse | nvt | nvt | `TREATMENT` | nvt |
-| Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
-| Patient BSN | urn:oasis:names:tc:xacml:1.0:resource:resource-id | client.bsn | nvt | `999911120` | Practitioner.identifier[system=BSN] |
-| Practitioner ID | Subject/NameID | Subject/NameID | auth_token.subject_id en HTTP-Header AORTA-ID usr | `177578` | Practitioner.identifier |
-| Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | auth_token.subject_role en HTTP-Header AORTA-ID rol | `code=62247001 display=huisarts system=SNOMED CT` | Practitioner.qualification[system=sct] |
-| Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials + professional.family_name | auth_token.subject_name | `L. Arts` | Practitioner.name |
-| Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | auth_token.subject_organization_id en HTTP-Header AORTA-ID org | `2.16.528.1.1007.3.3.15123` | Practitioner.meta[extension=source] |
-| Zorgviewer Session ID | HTTP-Header X-Correlation-Id | HTTP-Header X-Correlation-Id | nvt | [UUID](https://www.ietf.org/rfc/rfc4122.txt) `bc6fea62-f131-4e15-891e-06cad6a6c2b3` | nvt |
-| Zorgviewer Request ID | HTTP-Header X-Request-Id | HTTP-Header X-Request-Id | HTTP-Header AORTA-ID req | [UUID](https://www.ietf.org/rfc/rfc4122.txt) `3aaab721-f8ae-4cbb-a83a-67306ffd04ae` | nvt |
+| Item | Generiek (HTTP-Header) | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
+|--|--|--|--|--|--|--|
+| PurposeOfUse |   | urn:oasis:names:tc:xspa:1.0:subject:purposeofuse | nvt | nvt | `TREATMENT` | nvt |
+| Workflow ID |   | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
+| Patient BSN |   | urn:oasis:names:tc:xacml:1.0:resource:resource-id | client.bsn | nvt | `999911120` | Practitioner.identifier[system=BSN] |
+| Practitioner ID | X-ZV-Subject-Id | Subject/NameID | Subject/NameID | auth_token.subject_id en HTTP-Header AORTA-ID usr | `177578` | Practitioner.identifier |
+| Practitioner Role | X-ZV-Subject-Role  | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | auth_token.subject_role en HTTP-Header AORTA-ID rol | `code=62247001 display=huisarts system=SNOMED CT` | Practitioner.qualification[system=sct] |
+| Practitioner Name |   | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials + professional.family_name | auth_token.subject_name | `L. Arts` | Practitioner.name |
+| Organization OID | X-ZV-Subject-Organization-Id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | auth_token.subject_organization_id en HTTP-Header AORTA-ID org | `2.16.528.1.1007.3.3.15123` | Practitioner.meta[extension=source] |
+| Correlation ID | X-Correlation-Id | &#8656; | &#8656; | nvt | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `H54f_8b9d6bC` | nvt |
+| Request ID | X-Request-Id | &#8656; | &#8656; | HTTP-Header AORTA-ID req | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `1b9d6bCd-bBf` | nvt |
+| Context | X-ZV-Context | &#8656; | &#8656; | &#8656; | zie boven |   |
+
 
 ### Bevragen bronsystemen zorgaanbieders documenten
 
