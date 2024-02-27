@@ -576,17 +576,65 @@ Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende orga
 <h4 id="toevoegen-logging-http-headers">Toevoegen Logging HTTP-Headers</h4>
 
 <p>Tbv het correleren van de Zorgviewer logging met de logging van een Bronsysteem dient een <code class="language-plaintext highlighter-rouge">X-Correlation-Id</code> HTTP Header (per sessie) en een <code class="language-plaintext highlighter-rouge">X-Request-Id</code> HTTP Header (per request) te worden toegevoegd aan ieder request aan het Bronsysteem. Deze kan dan door het Bronsysteem gelogd worden, zodat de logging in de Zorgviewer kan worden gekoppeld aan de logging in het Bronsysteem.
-Epic ondersteunt dit nu dmv key-value pairs in de <code class="language-plaintext highlighter-rouge">AORTA-ID</code> HTTP-Header, zie <a href="https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072">Epic Nova</a>.
-Voorbeeld voor Epic HTTP-Header van “L. Arts uit Tjongerschans”: <code class="language-plaintext highlighter-rouge">AORTA-ID: req=3aaab721-f8ae-4cbb-a83a-67306ffd04ae; usr=larts; rol=62247001; org=2.16.528.1.1007.3.3.15123</code>. N.B. zonder de sessionId, want de maximale lengte is 128 characters.</p>
+Epic ondersteunt dit nu d.m.v. key-value pairs in de <code class="language-plaintext highlighter-rouge">AORTA-ID</code> HTTP-Header, zie <a href="https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072">Epic Nova</a>.
+Voorbeeld voor Epic HTTP-Header van “L. Arts uit Tjongerschans”: <code class="language-plaintext highlighter-rouge">AORTA-ID: req=1b9d6bCd-bBf; usr=larts; rol=62247001; org=2.16.528.1.1007.3.3.15123</code>. N.B. zonder de sessionId, want de maximale lengte is 128 characters.
+Voor de Request- en Correlation-ID’s kan de <a href="https://zelark.github.io/nano-id-cc/">NaN0-1D-12</a> 12 tekens gebruikt.</p>
+
+<p>Voorbeeld van de headers:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /fhir/Patient/123456789 HTTP/1.1
+...
+X-Request-Id: 1b9d6bCd-bBf
+X-Correlation-Id: H54f_8b9d6bC
+</code></pre></div></div>
+
+<h4 id="gebruiker-en-organisatie-http-headers">Gebruiker en Organisatie HTTP-Headers</h4>
+
+<p>De overige velden worden op twee manieren meegestuurd: individueel als HTTP header en verpakt in een
+JWT, tevens als HTTP header.
+De JWT variant is de veiligere optie, omdat de JWT ondertekend is en de waarden daarmee niet aangepast
+kunnen worden. Het is echter niet perse gegarandeerd dat deze constructie door een bronsysteem
+ondersteund wordt. Daarom worden ze ook individueel als HTTP header meegestuurd.
+Voor de naamgeving is gekozen voor een prefix <code class="language-plaintext highlighter-rouge">X-ZV-</code> (Zorgviewer) gevolgd door de naam van het veld,
+die weer gebaseerd zijn op <a href="https://profiles.ihe.net/ITI/IUA/#3714221-json-web-token-option">IHE IUA</a>.</p>
+
+<p>Voorbeeld van de headers per veld:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /fhir/Patient/123456789 HTTP/1.1
+...
+X-ZV-Subject-Organization-Id: 2.16.840.1.113883.2.4.3.8
+X-ZV-Subject-Id: smart-Practitioner-71614502
+X-ZV-Subject-role: 223366009
+</code></pre></div></div>
+
+<p>Voorbeeld van de JWT:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+ "subject_organization_id": "2.16.840.1.113883.2.4.3.8",
+ "subject_id": "smart-Practitioner-71614502",
+ "subject_role": "223366009"
+}
+</code></pre></div></div>
+
+<p>De JWT wordt ondertekend met de private key waarmee ook de JWT voor het request voor access tokens
+wordt ondertekend. Hiervoor is al een route ingericht om het publieke deel van de key op te vragen (<a href="https://auth.zorgviewer.nl/.well-known/jwks">JWKS</a>).
+Vervolgens wordt de JWT in een custom HTTP header geplaatst:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /fhir/Patient/123456789 HTTP/1.1
+...
+X-ZV-Context:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0X29yZ2FuaXphdGlvbl9pZCI6I
+jIuMTYuODQwLjEuMTEzODgzLjIuNC4zLjgiLCJzdWJqZWN0X2lkIjoic21hcnQtUHJhY3RpdGl
+vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
+8d-Bhf0h2wdEO1f_Jt1xHFe1Xc
+</code></pre></div></div>
+<p>Het ontvangende systeem kan nu de JWT decoden, valideren en de velden uitlezen.</p>
 
 <h3 id="bevragen-bronsysteem-summary-table">Bevragen bronsysteem: Summary Table</h3>
 
-<p>In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (SAML, SMART, FHIR).</p>
+<p>In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (Zorgviewer, SAML, SMART-on-FHIR).</p>
 
 <table>
   <thead>
     <tr>
       <th>Item</th>
+      <th>Generiek (HTTP-Header)</th>
       <th>Chipsoft Zorgplaform (SAML)</th>
       <th>VIPLive (SAML)</th>
       <th>Epic (SMART-on-FHIR)</th>
@@ -597,6 +645,7 @@ Voorbeeld voor Epic HTTP-Header van “L. Arts uit Tjongerschans”: <code class
   <tbody>
     <tr>
       <td>PurposeOfUse</td>
+      <td> </td>
       <td>urn:oasis:names:tc:xspa:1.0:subject:purposeofuse</td>
       <td>nvt</td>
       <td>nvt</td>
@@ -605,6 +654,7 @@ Voorbeeld voor Epic HTTP-Header van “L. Arts uit Tjongerschans”: <code class
     </tr>
     <tr>
       <td>Workflow ID</td>
+      <td> </td>
       <td>http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id</td>
       <td>nvt</td>
       <td>nvt</td>
@@ -613,6 +663,7 @@ Voorbeeld voor Epic HTTP-Header van “L. Arts uit Tjongerschans”: <code class
     </tr>
     <tr>
       <td>Patient BSN</td>
+      <td> </td>
       <td>urn:oasis:names:tc:xacml:1.0:resource:resource-id</td>
       <td>client.bsn</td>
       <td>nvt</td>
@@ -621,6 +672,7 @@ Voorbeeld voor Epic HTTP-Header van “L. Arts uit Tjongerschans”: <code class
     </tr>
     <tr>
       <td>Practitioner ID</td>
+      <td>X-ZV-Subject-Id</td>
       <td>Subject/NameID</td>
       <td>Subject/NameID</td>
       <td>auth_token.subject_id en HTTP-Header AORTA-ID usr</td>
@@ -629,6 +681,7 @@ Voorbeeld voor Epic HTTP-Header van “L. Arts uit Tjongerschans”: <code class
     </tr>
     <tr>
       <td>Practitioner Role</td>
+      <td>X-ZV-Subject-Role</td>
       <td>urn:oasis:names:tc:xacml:2.0:subject:role</td>
       <td>urn:oasis:names:tc:xacml:2.0:subject:role</td>
       <td>auth_token.subject_role en HTTP-Header AORTA-ID rol</td>
@@ -637,6 +690,7 @@ Voorbeeld voor Epic HTTP-Header van “L. Arts uit Tjongerschans”: <code class
     </tr>
     <tr>
       <td>Practitioner Name</td>
+      <td> </td>
       <td>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name</td>
       <td>professional.initials + professional.family_name</td>
       <td>auth_token.subject_name</td>
@@ -645,6 +699,7 @@ Voorbeeld voor Epic HTTP-Header van “L. Arts uit Tjongerschans”: <code class
     </tr>
     <tr>
       <td>Organization OID</td>
+      <td>X-ZV-Subject-Organization-Id</td>
       <td>urn:oasis:names:tc:xspa:1.0:subject:organization-id</td>
       <td>urn:oasis:names:tc:xspa:1.0:subject:organization-id</td>
       <td>auth_token.subject_organization_id en HTTP-Header AORTA-ID org</td>
@@ -652,20 +707,31 @@ Voorbeeld voor Epic HTTP-Header van “L. Arts uit Tjongerschans”: <code class
       <td>Practitioner.meta[extension=source]</td>
     </tr>
     <tr>
-      <td>Zorgviewer Session ID</td>
-      <td>HTTP-Header X-Correlation-Id</td>
-      <td>HTTP-Header X-Correlation-Id</td>
+      <td>Correlation ID</td>
+      <td>X-Correlation-Id</td>
+      <td>⇐</td>
+      <td>⇐</td>
       <td>nvt</td>
-      <td><a href="https://www.ietf.org/rfc/rfc4122.txt">UUID</a> <code class="language-plaintext highlighter-rouge">bc6fea62-f131-4e15-891e-06cad6a6c2b3</code></td>
+      <td><a href="https://zelark.github.io/nano-id-cc/">NaN0-1D-12</a> <code class="language-plaintext highlighter-rouge">H54f_8b9d6bC</code></td>
       <td>nvt</td>
     </tr>
     <tr>
-      <td>Zorgviewer Request ID</td>
-      <td>HTTP-Header X-Request-Id</td>
-      <td>HTTP-Header X-Request-Id</td>
+      <td>Request ID</td>
+      <td>X-Request-Id</td>
+      <td>⇐</td>
+      <td>⇐</td>
       <td>HTTP-Header AORTA-ID req</td>
-      <td><a href="https://www.ietf.org/rfc/rfc4122.txt">UUID</a> <code class="language-plaintext highlighter-rouge">3aaab721-f8ae-4cbb-a83a-67306ffd04ae</code></td>
+      <td><a href="https://zelark.github.io/nano-id-cc/">NaN0-1D-12</a> <code class="language-plaintext highlighter-rouge">1b9d6bCd-bBf</code></td>
       <td>nvt</td>
+    </tr>
+    <tr>
+      <td>Context</td>
+      <td>X-ZV-Context</td>
+      <td>⇐</td>
+      <td>⇐</td>
+      <td>⇐</td>
+      <td>zie boven</td>
+      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -707,7 +773,7 @@ Voorbeeld voor Epic HTTP-Header van “L. Arts uit Tjongerschans”: <code class
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.22.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 21, 2024 09:14+0000">2024-02-21</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.22.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Feb 27, 2024 08:38+0000">2024-02-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
