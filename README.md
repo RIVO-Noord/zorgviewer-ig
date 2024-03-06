@@ -15,7 +15,7 @@
 
 ## (optional) Create IG builder Docker
 ```
-> docker run --name=zv -it -v "$(pwd)":/app node:lts-buster /bin/bash
+> docker run --name=zv -it -v "$(pwd)":/app ubuntu:latest /bin/bash
 @> apt update
 @> apt install jekyll graphviz
 @> dpkg -i jdk-21_linux-x64_bin.deb
