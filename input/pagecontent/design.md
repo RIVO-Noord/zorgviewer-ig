@@ -7,15 +7,15 @@ Dit is de startpagina voor het bouwteam.
 
 Scope is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge), en Topicus VIPlive (bij Dokter Drenthe aangesloten partijen).
 
-### System Actors
+### IHE System Actors
 
-Note: (?) Probeer definities te hergebruiken uit [IHE Actors](https://gazelle.ihe.net/GMM/tf/actor/listActors.seam), b.v. de [IHE Mobile Profiles IHE_PCC_Suppl_QEDm](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_QEDm.pdf)
+Note: Relatie tussen bouwblokken en definities uit [IHE Actors](https://gazelle.ihe.net/GMM/tf/actor/listActors.seam), b.v. de [IHE Mobile Profiles IHE_PCC_Suppl_QEDm](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_QEDm.pdf)
 
-* Clinical Data Consumer "Raadpleger" - Zorgviewer bouwblok
-* Clinical Data Source "Beschikbaar steller" - Ontsluiten Bronsysteem bouwblok
 * Authorization Client, Result Aggregator - Zorgviewer bouwblok
 * Authorization Server - Authenticatie bouwblok
 * Provider Information Directory - Zorgverlener Registry bouwblok
+* Clinical Data Consumer "Raadpleger" - Zorgviewer bouwblok
+* Clinical Data Source "Beschikbaar steller" - Ontsluiten Bronsysteem bouwblok
 
 ### Sequence Diagrams
 
