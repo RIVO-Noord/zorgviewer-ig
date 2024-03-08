@@ -544,6 +544,7 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.</p>
   <li><a href="http://hl7.org/fhir/uv/bulkdata/authorization/index.html#obtaining-an-access-token">Bulk Data Access Backend Authentication</a></li>
   <li><a href="https://profiles.ihe.net/ITI/IUA/">IHE Internet User Authorization (IUA)</a></li>
   <li><a href="https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017">MedMij BgZ 2017 FHIR</a></li>
+  <li><a href="https://twiin-afsprakenstelsel.scrollhelp.site/ta12/10-2-5-tta-fhir-authentication-authorization">TA Notified Pull / TWIIN TTA FHIR</a></li>
   <li>Epic
     * <a href="https://appmarket.epic.com/Article/Index?docid=oauth2&amp;section=BackendOAuth2Guide">Epic Backend Authentication</a>
     * <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&amp;PrefDocID=97042">Epic Galaxy: Backend System Integrations</a>
@@ -561,6 +562,11 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.</p>
 
 <blockquote class="stu-note">
   <p>N.B. Deze IG bouwt op SMART-on-FHIR 1.0.0 ivm FHIR STU3 en Scopes notatie. De bijbehorende backend authenticatie is gespecificeerd in Bulk Data Access FHIR specificaties. SMART-on-FHIR 2.0 brengt eea weer samen, maar upgrade ook de Scopes en de FHIR versie naar R4. Daarom blijven wij voor MVP2 bij de 1.0.0 versie.</p>
+</blockquote>
+
+<blockquote class="stu-note">
+  <p>N.B. Vanuit de WEGIZ wordt de TA Notified Pull een eis. De richting de toekomst zullen de verschillende bronsystemen hiernaartoe werken.
+Naast SMART-on-FHIR zal de TA Notified Pull de voorkeur standaard zijn. Tot die tijd moeten we meerdere vormen ondersteunen, zie de Summary Tables.</p>
 </blockquote>
 
 <p>Hier passen we de request access token flow toe van de Bulk Data Access Backend authenticatie specificaties.
@@ -628,13 +634,14 @@ vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
 
 <h3 id="bevragen-bronsysteem-summary-table">Bevragen bronsysteem: Summary Table</h3>
 
-<p>In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (Zorgviewer, SAML, SMART-on-FHIR).</p>
+<p>In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (Zorgviewer, SAML, SMART-on-FHIR, TA Notified Pull).</p>
 
 <table>
   <thead>
     <tr>
       <th>Item</th>
       <th>Generiek (HTTP-Header)</th>
+      <th><strong>TA Notified Pull</strong></th>
       <th>Chipsoft Zorgplaform (SAML)</th>
       <th>VIPLive (SAML)</th>
       <th>Epic (SMART-on-FHIR)</th>
@@ -646,6 +653,7 @@ vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
     <tr>
       <td>PurposeOfUse</td>
       <td> </td>
+      <td><em>FHIR Task.code</em></td>
       <td>urn:oasis:names:tc:xspa:1.0:subject:purposeofuse</td>
       <td>nvt</td>
       <td>nvt</td>
@@ -655,6 +663,7 @@ vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
     <tr>
       <td>Workflow ID</td>
       <td> </td>
+      <td><em>FHIR Task.identifier</em></td>
       <td>http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id</td>
       <td>nvt</td>
       <td>nvt</td>
@@ -664,15 +673,17 @@ vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
     <tr>
       <td>Patient BSN</td>
       <td> </td>
+      <td>auth_token.patient</td>
       <td>urn:oasis:names:tc:xacml:1.0:resource:resource-id</td>
       <td>client.bsn</td>
-      <td>nvt</td>
+      <td>auth_token.patient</td>
       <td><code class="language-plaintext highlighter-rouge">999911120</code></td>
-      <td>Practitioner.identifier[system=BSN]</td>
+      <td>Patient.identifier[system=BSN]</td>
     </tr>
     <tr>
       <td>Practitioner ID</td>
       <td>X-ZV-Subject-Id</td>
+      <td>auth_token.user_id</td>
       <td>Subject/NameID</td>
       <td>Subject/NameID</td>
       <td>auth_token.subject_id en HTTP-Header AORTA-ID usr</td>
@@ -682,6 +693,7 @@ vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
     <tr>
       <td>Practitioner Role</td>
       <td>X-ZV-Subject-Role</td>
+      <td>auth_token.user_role</td>
       <td>urn:oasis:names:tc:xacml:2.0:subject:role</td>
       <td>urn:oasis:names:tc:xacml:2.0:subject:role</td>
       <td>auth_token.subject_role en HTTP-Header AORTA-ID rol</td>
@@ -690,6 +702,7 @@ vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
     </tr>
     <tr>
       <td>Practitioner Name</td>
+      <td> </td>
       <td> </td>
       <td>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name</td>
       <td>professional.initials + professional.family_name</td>
@@ -700,6 +713,7 @@ vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
     <tr>
       <td>Organization OID</td>
       <td>X-ZV-Subject-Organization-Id</td>
+      <td>auth_token.sub</td>
       <td>urn:oasis:names:tc:xspa:1.0:subject:organization-id</td>
       <td>urn:oasis:names:tc:xspa:1.0:subject:organization-id</td>
       <td>auth_token.subject_organization_id en HTTP-Header AORTA-ID org</td>
@@ -709,6 +723,7 @@ vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
     <tr>
       <td>Correlation ID</td>
       <td>X-Correlation-Id</td>
+      <td> </td>
       <td>⇐</td>
       <td>⇐</td>
       <td>nvt</td>
@@ -718,6 +733,7 @@ vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
     <tr>
       <td>Request ID</td>
       <td>X-Request-Id</td>
+      <td> </td>
       <td>⇐</td>
       <td>⇐</td>
       <td>HTTP-Header AORTA-ID req</td>
@@ -727,6 +743,7 @@ vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
     <tr>
       <td>Context</td>
       <td>X-ZV-Context</td>
+      <td> </td>
       <td>⇐</td>
       <td>⇐</td>
       <td>⇐</td>
@@ -773,7 +790,7 @@ vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.23.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Mar 6, 2024 08:54+0000">2024-03-06</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.23.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Mar 8, 2024 10:15+0000">2024-03-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
