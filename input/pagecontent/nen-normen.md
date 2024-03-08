@@ -6,7 +6,7 @@ Op deze pagine beschrijven we de conformiteit met de verschillende NEN normen al
     * Zorgviewer is conform de "BGZ-uitwisseling tussen instellingen voor medisch specialistische zorg" 
     * "Figuur 9 – Usecase Opvragen BgZ" 
     * En voor "6.4.7. Stap 7: Verwerken BgZ' ondersteund het de "Inzien" functie
-* (TTA Direct Pull)[https://vzvz.atlassian.net/wiki/spaces/Twiincon/pages/331847141/10.2.4+TTA+FHIR+-+Pull] *in ontwikkeling*
+* [TTA Direct Pull](https://vzvz.atlassian.net/wiki/spaces/Twiincon/pages/331847141/10.2.4+TTA+FHIR+-+Pull) *in ontwikkeling*
 
 ### Normen voor generieke functies
 
