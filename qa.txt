@@ -1,9 +1,9 @@
 zorgviewer-ig : Validation Results
 =========================================
 
-err = 138, warn = 85, info = 87
-IG Publisher Version: 1.6.0
-Generated Fri Mar 08 11:22:29 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#0.23.0 (canonical = http://hl7.nl/fhir/zorgviewer)
+err = 138, warn = 85, info = 89
+IG Publisher Version: 1.6.1
+Generated Mon Mar 18 14:37:19 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#0.23.0 (canonical = http://hl7.nl/fhir/zorgviewer)
  Build Errors : 2 / 6 / 0
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Chipsoft : 2 / 0 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Epic : 3 / 1 / 4
@@ -58,8 +58,8 @@ Generated Fri Mar 08 11:22:29 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgv
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CapabilityStatement-Toestemming : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CapabilityStatement-ZorgverlenerDirectory : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CapabilityStatement-ZorgviewerHost : 0 / 0 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-ICD10dut : 3 / 0 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-ICPC1NL : 3 / 0 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-ICD10dut : 3 / 0 / 2
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-ICPC1NL : 3 / 0 / 2
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-SCT : 2 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-bronsysteem-zorgaanbieder : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ConceptMap-behandelaanwijzing-2017-2020 : 0 / 9 / 1
@@ -413,10 +413,12 @@ ERROR: CapabilityStatement/OntsluitenBronsysteem: CapabilityStatement.rest[0]: C
 == input/resources/CodeSystem-ICD10dut.json ==
 ERROR: CodeSystem.where(url = 'http://hl7.org/fhir/sid/icd-10-nl'): Conformance resource /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-ICD10dut.json - the canonical URL (http://hl7.nl/fhir/zorgviewer/CodeSystem/ICD10dut) does not match the URL (http://hl7.org/fhir/sid/icd-10-nl)
 ERROR: CodeSystem/ICD10dut: CodeSystem: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+INFORMATION: CodeSystem/ICD10dut: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book)
 ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-ICD10dut: URL Mismatch http://hl7.nl/fhir/zorgviewer/CodeSystem/ICD10dut vs http://hl7.org/fhir/sid/icd-10-nl
 == input/resources/CodeSystem-ICPC1NL.json ==
 ERROR: CodeSystem.where(url = 'http://hl7.org/fhir/sid/icpc-1-nl'): Conformance resource /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-ICPC1NL.json - the canonical URL (http://hl7.nl/fhir/zorgviewer/CodeSystem/ICPC-1-NL) does not match the URL (http://hl7.org/fhir/sid/icpc-1-nl)
 ERROR: CodeSystem/ICPC-1-NL: CodeSystem: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+INFORMATION: CodeSystem/ICPC-1-NL: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book)
 ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-ICPC1NL: URL Mismatch http://hl7.nl/fhir/zorgviewer/CodeSystem/ICPC-1-NL vs http://hl7.org/fhir/sid/icpc-1-nl
 == input/resources/CodeSystem-SCT.json ==
 ERROR: CodeSystem.where(url = 'http://snomed.info/sct'): Conformance resource /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-SCT.json - the canonical URL (http://hl7.nl/fhir/zorgviewer/CodeSystem/SCT) does not match the URL (http://snomed.info/sct)
