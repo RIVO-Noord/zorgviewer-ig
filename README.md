@@ -1,8 +1,8 @@
 
 ## Zorgviewer-IG output
 
-* [Snapshot laatste release](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/snapshot/)
-* [CI Build](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/)
+* [Official Snapshot laatste release](https://implementatiegids.zorgviewer.nl/) of [Snapshot Release](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/snapshot/)
+* [HL7 FHIR CI Build](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/) of [RIVO CI Build](https://rivo-noord.github.io/zorgviewer-ig/)
 * [Releases](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/)
 * [Web-based editor](https://github.dev/RIVO-Noord/zorgviewer-ig/)
 * [Auto-IG build dashboard](https://fhir.github.io/auto-ig-builder/)
