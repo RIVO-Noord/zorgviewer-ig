@@ -1,6 +1,6 @@
 <style>table, td, th { border: 1px solid black; padding:5px; }</style>
 
-Deze pagina beschrijft de interacties tussen de systemen. 
+Deze pagina beschrijft de interacties tussen de bouwblokken. 
 Dit is de startpagina voor het bouwteam.
 
 ### Actors

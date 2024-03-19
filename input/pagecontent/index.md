@@ -18,12 +18,14 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
 1. **(dec-2023) MVP2 Zorgviewer opstarten vanuit Epic (MCL, UMCG), Chipsoft (Martini ziekenhuis, Tjongerschans) en Topicus (Dokter Drenthe) en ontsluiten van de BgZ en PDF/a (voor zover ingericht in de bronnen adhv VIPP5 module 1 en 2 en VIPP OPEN)**
     1. Focus ligt eerst op BIG of AGB-Z geregistreerde gebruikers
     1. Parallel: Uitbreiden vulling BgZ en PDF/a. Hiervoor zijn de EPD teams nodig
-1. Uitbreiden bronnen, uitbreiden "opstarten vanuit" en daarmee gebruikersgroepen
+1. **(mrt-2024) Uitbreiden bronnen en "opstarten vanuit" en daarmee gebruikersgroepen**
+    1. Nexus
+    1. Nedap
 1. Uitbreiding zibs buiten BgZ - gegevenssets breder ondersteunen (Acute Zorg, HartNet, Oncologie, Palliatieve Zorg)
 1. Behandelplan functionaliteit uitbreiden, keuze behandelplan en later workflow
 1. Patiënt als gebruiker
 
-#### Prioritering werkzaamheden
+#### Prioritering content
 
 1. Correspondentie
 1. (Radiologie) verslagen

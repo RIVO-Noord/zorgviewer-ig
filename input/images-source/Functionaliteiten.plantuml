@@ -1,36 +1,35 @@
 @startuml
 
-'left to right direction
 skinparam nodesep 1
 skinparam ranksep 1
 
 package "Zorgviewer" {
- (Patient banner)
- (Weergave gegevens)
+ (Patient\nbanner)
+ (Weergave\ngegevens)
  (Sorteren)
- (Conflicten attenderen)
- (Ontdubbelen gegevens)
- (Filtering obv Behandelplan)
+ (Conflicten\nattenderen)
+ (Ontdubbelen\ngegevens)
+ (Filtering obv\nBehandelplan)
 }
 
-package "Epic, Chipsoft, Topicus, Zorgviewer Los" <<Zorgviewer Host>> {
- (Opstart Zorgviewer)
- (Stelt identity vast)
- (Controle behandelrelatie)
- (Patient selectie)
- (Zorgverlener gegevens)
- (Zorgverlener rollen)
+package "Zorgviewer Host" {
+ (Opstart\nZorgviewer)
+ (Stelt\nidentity vast)
+ (Controle\nbehandelrelatie)
+ (Patient\nselectie)
+ (Zorgverlener\ngegevens)
+ (Zorgverlener\nrollen)
 }
 
 cloud {
  package "Behandelplan" {
-  (Behandelplannen adhv diagnose)
-  (Relevante gegevens adhv zorgpad)
-  (Relevante gegevens adhv rol)
+  (Behandelplannen\nadhv diagnose)
+  (Relevante gegevens\nadhv zorgpad)
+  (Relevante gegevens\nadhv rol)
  }
  package "Toestemming & Patientindex" {
-  (Toegestane bronsystemen patient)
-  (Bronsystemen endpoints)
+  (Toegestane\nbronsystemen patient)
+  (Bronsystemen\nendpoints)
  }
 }
 
