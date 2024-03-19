@@ -7,15 +7,15 @@ Dit is de startpagina voor het bouwteam.
 
 Scope is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge), en Topicus VIPlive (bij Dokter Drenthe aangesloten partijen).
 
-### System Actors
+### IHE System Actors
 
-Note: (?) Probeer definities te hergebruiken uit [IHE Actors](https://gazelle.ihe.net/GMM/tf/actor/listActors.seam), b.v. de [IHE Mobile Profiles IHE_PCC_Suppl_QEDm](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_QEDm.pdf)
+Note: Relatie tussen bouwblokken en definities uit [IHE Actors](https://gazelle.ihe.net/GMM/tf/actor/listActors.seam), b.v. de [IHE Mobile Profiles IHE_PCC_Suppl_QEDm](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_QEDm.pdf)
 
-* Clinical Data Consumer "Raadpleger" - Zorgviewer bouwblok
-* Clinical Data Source "Beschikbaar steller" - Ontsluiten Bronsysteem bouwblok
 * Authorization Client, Result Aggregator - Zorgviewer bouwblok
 * Authorization Server - Authenticatie bouwblok
 * Provider Information Directory - Zorgverlener Registry bouwblok
+* Clinical Data Consumer "Raadpleger" - Zorgviewer bouwblok
+* Clinical Data Source "Beschikbaar steller" - Ontsluiten Bronsysteem bouwblok
 
 ### Sequence Diagrams
 
@@ -136,6 +136,7 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
 * [Bulk Data Access Backend Authentication](http://hl7.org/fhir/uv/bulkdata/authorization/index.html#obtaining-an-access-token)
 * [IHE Internet User Authorization (IUA)](https://profiles.ihe.net/ITI/IUA/)
 * [MedMij BgZ 2017 FHIR](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
+* [TA Notified Pull / TWIIN TTA FHIR](https://twiin-afsprakenstelsel.scrollhelp.site/ta12/10-2-5-tta-fhir-authentication-authorization)
 * Epic
       * [Epic Backend Authentication](https://appmarket.epic.com/Article/Index?docid=oauth2&section=BackendOAuth2Guide)
       * [Epic Galaxy: Backend System Integrations](https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&PrefDocID=97042)
@@ -152,6 +153,11 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
 
 <blockquote class="stu-note" markdown="1">
 N.B. Deze IG bouwt op SMART-on-FHIR 1.0.0 ivm FHIR STU3 en Scopes notatie. De bijbehorende backend authenticatie is gespecificeerd in Bulk Data Access FHIR specificaties. SMART-on-FHIR 2.0 brengt eea weer samen, maar upgrade ook de Scopes en de FHIR versie naar R4. Daarom blijven wij voor MVP2 bij de 1.0.0 versie.
+</blockquote>
+
+<blockquote class="stu-note" markdown="1">
+N.B. Vanuit de WEGIZ wordt de TA Notified Pull een eis. De richting de toekomst zullen de verschillende bronsystemen hiernaartoe werken.
+Naast SMART-on-FHIR zal de TA Notified Pull de voorkeur standaard zijn. Tot die tijd moeten we meerdere vormen ondersteunen, zie de Summary Tables. 
 </blockquote>
 
 Hier passen we de request access token flow toe van de Bulk Data Access Backend authenticatie specificaties.
@@ -224,20 +230,20 @@ Het ontvangende systeem kan nu de JWT decoden, valideren en de velden uitlezen.
 
 ### Bevragen bronsysteem: Summary Table
 
-In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (Zorgviewer, SAML, SMART-on-FHIR).
+In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (Zorgviewer, SAML, SMART-on-FHIR, TA Notified Pull).
 
-| Item | Generiek (HTTP-Header) | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
-|--|--|--|--|--|--|--|
-| PurposeOfUse |   | urn:oasis:names:tc:xspa:1.0:subject:purposeofuse | nvt | nvt | `TREATMENT` | nvt |
-| Workflow ID |   | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
-| Patient BSN |   | urn:oasis:names:tc:xacml:1.0:resource:resource-id | client.bsn | nvt | `999911120` | Practitioner.identifier[system=BSN] |
-| Practitioner ID | X-ZV-Subject-Id | Subject/NameID | Subject/NameID | auth_token.subject_id en HTTP-Header AORTA-ID usr | `177578` | Practitioner.identifier |
-| Practitioner Role | X-ZV-Subject-Role  | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | auth_token.subject_role en HTTP-Header AORTA-ID rol | `code=62247001 display=huisarts system=SNOMED CT` | Practitioner.qualification[system=sct] |
-| Practitioner Name |   | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials + professional.family_name | auth_token.subject_name | `L. Arts` | Practitioner.name |
-| Organization OID | X-ZV-Subject-Organization-Id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | auth_token.subject_organization_id en HTTP-Header AORTA-ID org | `2.16.528.1.1007.3.3.15123` | Practitioner.meta[extension=source] |
-| Correlation ID | X-Correlation-Id | &#8656; | &#8656; | nvt | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `H54f_8b9d6bC` | nvt |
-| Request ID | X-Request-Id | &#8656; | &#8656; | HTTP-Header AORTA-ID req | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `1b9d6bCd-bBf` | nvt |
-| Context | X-ZV-Context | &#8656; | &#8656; | &#8656; | zie boven |   |
+| Item | Generiek (HTTP-Header) | **TA Notified Pull** | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
+|--|--|--|--|--|--|--|--|
+| PurposeOfUse |   | *FHIR Task.code* | urn:oasis:names:tc:xspa:1.0:subject:purposeofuse | nvt | nvt | `TREATMENT` | nvt |
+| Workflow ID |   | *FHIR Task.identifier* | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
+| Patient BSN |   | auth_token.patient | urn:oasis:names:tc:xacml:1.0:resource:resource-id | client.bsn | auth_token.patient | `999911120` | Patient.identifier[system=BSN] |
+| Practitioner ID | X-ZV-Subject-Id | auth_token.user_id | Subject/NameID | Subject/NameID | auth_token.subject_id en HTTP-Header AORTA-ID usr | `177578` | Practitioner.identifier |
+| Practitioner Role | X-ZV-Subject-Role | auth_token.user_role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | auth_token.subject_role en HTTP-Header AORTA-ID rol | `code=62247001 display=huisarts system=SNOMED CT` | Practitioner.qualification[system=sct] |
+| Practitioner Name |   |   | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials + professional.family_name | auth_token.subject_name | `L. Arts` | Practitioner.name |
+| Organization OID | X-ZV-Subject-Organization-Id | auth_token.sub | urn:oasis:names:tc:xspa:1.0:subject:organization-id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | auth_token.subject_organization_id en HTTP-Header AORTA-ID org | `2.16.528.1.1007.3.3.15123` | Practitioner.meta[extension=source] |
+| Correlation ID | X-Correlation-Id |   | &#8656; | &#8656; | nvt | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `H54f_8b9d6bC` | nvt |
+| Request ID | X-Request-Id |   | &#8656; | &#8656; | HTTP-Header AORTA-ID req | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `1b9d6bCd-bBf` | nvt |
+| Context | X-ZV-Context |   | &#8656; | &#8656; | &#8656; | zie boven |   |
 
 
 ### Bevragen bronsystemen zorgaanbieders documenten

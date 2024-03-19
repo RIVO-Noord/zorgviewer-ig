@@ -4,11 +4,11 @@ autonumber
 
 actor Zorgverlener
 participant Zorgviewer
+participant "Zorgverlener\nDirectory" as zvdir
 box "Andere zorgaanbieder"
 participant "Bronsysteem ontsluiting" as Bron
 participant Bronsysteem
 end box
-participant "Zorgviewer\nDirectory" as zvdir
 
 activate Zorgviewer
 Zorgverlener->Zorgviewer: ..vervolg bevragen bronsystemen zorgaanbieders..
@@ -19,13 +19,16 @@ loop
     Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/DocumentReference?patient=<patient_fhir_id>""
     activate Bron
     opt als token verlopen
-        Bron->Bronsysteem : verkrijgen access token (dmv backend account)
+        Bron->Bronsysteem : verkrijgen access token
     end opt
-    Bron->Bronsysteem : gegevensverzoek met access token
+    Bron->Bronsysteem : gegevensverzoek
     activate Bronsysteem
-    Bronsysteem-->Bronsysteem: log request
+    Bronsysteem-->Bronsysteem: toestemming check\nen log request
     Bronsysteem->Bron: fhir resources (DocumentReference Bundle)
     deactivate Bronsysteem
+    opt als knooppunt voor meerdere bronnen
+      Bron->Bron: Toevoegen bron metadata
+    end opt
     Bron-->Zorgviewer: Bundle met ""[[StructureDefinition-DocumentReference.html DocumentReference]]""
     deactivate Bron
     group **TOEKOMST**: specialisme bij documenten loop
@@ -52,12 +55,15 @@ note right Zorgviewer
 end note
 activate Bron
 opt als token verlopen
-    Bron->Bronsysteem : verkrijgen access token (dmv backend account)
+    Bron->Bronsysteem : verkrijgen access token
 end opt
-Bron->Bronsysteem : gegevensverzoek met access token
+Bron->Bronsysteem : gegevensverzoek
 activate Bronsysteem
-Bronsysteem-->Bronsysteem: log request
+Bronsysteem-->Bronsysteem: toestemming check\nen log request
 Bronsysteem->Bron: Binary
+opt als knooppunt voor meerdere bronnen
+    Bron->Bron: Toevoegen bron metadata
+end opt
 deactivate Bronsysteem
 Bron-->Zorgviewer: Binary
 deactivate Bron

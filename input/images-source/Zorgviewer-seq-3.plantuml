@@ -8,11 +8,12 @@ participant Logging
 participant Behandelplan
 box "Andere zorgaanbieder"
 participant "Bronsysteem ontsluiting" as Bron
+participant Authenticatie
 participant Bronsysteem
 end box
 
 activate Zorgviewer
-Zorgverlener->Zorgviewer: ..vervolg bepalen zorgaanbieders..
+Zorgverlener->Zorgviewer: ..vervolg bepalen\nzorgaanbieders..
 Zorgviewer->Logging: log gebeurtenis, zie [[StructureDefinition-AuditEvent.html AuditEvent]]
 Zorgviewer->Behandelplan: Bepalen minimale dataset\n""<behandelplan-base>/PlanDefinition?name=BgZ2017""
 note right Zorgviewer
@@ -27,13 +28,10 @@ loop voor iedere zorgaanbieder
   activate Zorgviewer
   Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base>/Patient?identifier=<BSN>""
   activate Bron
-  Bron->Bronsysteem : verkrijgen access token (na discovery)\ninclusief zorgviewer user organisatie tbv logging
+  Bron->Authenticatie : verkrijgen access token [[design.html#bevragen-bronsysteem-summary-table zie tabel]]
   note right Bron
     auth_token bij access token request:
-    { "iss": "...",
-      "sub": "...",
-      "exp": "...",
-      ...
+    { ...
       "subject_name": "Int Arts",
       "subject_role": [ 
           { 
@@ -43,15 +41,15 @@ loop voor iedere zorgaanbieder
           } 
         ],
       (optioneel) "subject_organization": "UMCG",
-      "subject_organization_id": "urn:oid:2.16.840.1.113883.2.4.3.8",
-      ... }
-    ... zie tabel
+      "subject_organization_id": "urn:oid:2.16.840.1.113883.2.4.3.8" }
   end note
   Bron->Bronsysteem : Patient request
   activate Bronsysteem
-  Bronsysteem-->Bronsysteem: log request
+  Bronsysteem-->Bronsysteem: toestemming controle\nen log request
   Bronsysteem-->Bron : Patient resource
-  note right Bron
+  opt als knooppunt voor meerdere bronnen
+    Bron->Bron: Toevoegen bron metadata\nadhv [[CodeSystem-bronsysteem-zorgaanbieder.html bronsysteem-zorgaanbieder]]
+    note right Bron
 "meta": {
     "extension": [ {
         "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
@@ -60,44 +58,37 @@ loop voor iedere zorgaanbieder
 }
 - of -
 via Patient.managingOrganization.identifier
-  end note
+    end note
+  end opt
   deactivate Bronsysteem
   Bron-->Zorgviewer : ""[[StructureDefinition-Patient.html Patient]]""
   deactivate Bron
   loop gegevensverzoeken
-    Zorgviewer->Zorgviewer: formuleren gegevensverzoek(request) adhv Behandelplan Data Requirements\n""PlanDefinition.action[0].output[].type""\nen ""PlanDefinition.action[0].output[].codeFilter""
+    Zorgviewer->Zorgviewer: formuleren gegevensverzoek (request)\nadhv Behandelplan Data Requirements\n""PlanDefinition.action[0].output[].type""\nen ""PlanDefinition.action[0].output[].codeFilter""
     activate Zorgviewer
     Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/<resource>?patient=<patient_fhir_id>&<filter>""
     activate Bron
     opt als token verlopen
-      Bron->Bronsysteem : verkrijgen access token (dmv backend account)
+      Bron->Authenticatie : verkrijgen access token (zie stap #7)
     end opt
-    Bron->Bronsysteem : gegevensverzoek (per zib) met access token
-    note right Bron
-        HTTP-Header X-ZVLogging-Id toevoegen
-        ... zie tabel
-    end note
+    Bron->Bronsysteem : gegevensverzoek (per zib)
     activate Bronsysteem
-    Bronsysteem-->Bronsysteem: log request
+    Bronsysteem-->Bronsysteem: toestemming controle\nlog request
     Bronsysteem->Bron: fhir resources (Bundle) bij de zib
     deactivate Bronsysteem
-    Bron->Bron: Toevoegen meta-tag voor deze bron\nadhv Patient.managingOrganization of geconfigureerd adhv [[CodeSystem-bronsysteem-zorgaanbieder.html bronsysteem-zorgaanbieder]].
-    note right Bron
-"meta": {
-    "extension": [ {
-        "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
-        "valueUri": "uri:oid:2.16.840.1.113883.2.4.3.8"
-    } ]
-}
-    end note
+    opt als knooppunt voor meerdere bronnen
+      Bron->Bron: Toevoegen bron metadata (zie stap #11)
+    end opt
     Bron-->Zorgviewer: fhir resources (Bundle) bij de zib
     deactivate Bron
     deactivate Zorgviewer
-    Zorgviewer->Zorgviewer: **TOEKOMST**: ontdubbelen en conflicten detectie
-    note right of Zorgviewer
-      Zorgviewer invulling van [[https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard BgZ]] 
-      paragrafen 3.2.9.1 Ontdubbelen en 3.2.9.2 Duplicaatdetectie
-    end note
+    group **TOEKOMST**
+      Zorgviewer->Zorgviewer: ontdubbelen en conflicten detectie
+      note right of Zorgviewer
+        Zorgviewer invulling van [[https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard BgZ]] 
+        paragrafen 3.2.9.1 Ontdubbelen en 3.2.9.2 Duplicaatdetectie
+      end note
+    end group
   end
   deactivate Zorgviewer
 end
