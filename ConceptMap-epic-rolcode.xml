@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="epic-rolcode"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Mapping from (not specified) to (not specified)</p><p>ACTIVE. Published on 2024-03-20 18:23:37+0000 by RIVO-NN HL7NL (RIVO-NN: <a href="https://rivo-noord.nl">https://rivo-noord.nl</a>, HL7NL: <a href="https://hl7.nl">https://hl7.nl</a>). </p><div><p>Deze ConceptMap representeert de mapping tussen de Epic Practitioner.qualifier SER#6000 naar een SNOMED-CT rolcode.</p>
+</div><br/><p><b>Group 1</b>Mapping from <a href="CodeSystem-SCT.html">SNOMED CT</a> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>11 (Arts)</td><td><a href="http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>309343006 (Medical doctor)</td></tr></table></div>
+  </text>
+  <url value="http://hl7.nl/fhir/zorgviewer/ConceptMap/epic-rolcode"/>
+  <version value="0.24.0"/>
+  <name value="epictorolcode"/>
+  <title value="Epic Practitioner.qualifier to SNOMED-CT rolcode Mapping"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-03-20T18:23:37+00:00"/>
+  <publisher value="RIVO-NN HL7NL"/>
+  <contact>
+    <name value="RIVO-NN"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://rivo-noord.nl"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="HL7NL"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://hl7.nl"/>
+    </telecom>
+  </contact>
+  <description value="Deze ConceptMap representeert de mapping tussen de Epic Practitioner.qualifier SER#6000 naar een SNOMED-CT rolcode."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="NL"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <element>
+      <code value="11"/>
+      <display value="Arts"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="309343006"/>
+        <display value="Medical doctor"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -40,8 +40,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"9"}
-    h3,h4,h5,h6{--heading-prefix:"9"}</style>
+    <style type="text/css">h2{--heading-prefix:"10"}
+    h3,h4,h5,h6{--heading-prefix:"10"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
           <!-- Placeholder for child template header declarations -->
@@ -112,6 +112,9 @@
 		<ul class="dropdown-menu">
 			<li>
 				<a href="design.html">Design</a>
+			</li>
+			<li>
+				<a href="design2.html">Design 2024</a>
 			</li>
 			<li>
 				<a href="design-background.html">Design Achtergrond</a>
@@ -192,7 +195,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <p>De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal worden gerealiseerd door een generieke FHIR-Store in te richten. Deze verzameling noemen we de Zorgviewer Services. Later kunnen die worden vervangen door nationale alternatieven. Bij onderstaande tijdelijke oplossingen worden de gegevens als FHIR resources opgeslagen in die Zorgviewer Services FHIR-Store.</p>
 
-<h3 id="terminology"><a name="l359">​</a><a href="CapabilityStatement-Terminology.html">Terminology</a></h3>
+<h3 id="terminology"><a name="l365">​</a><a href="CapabilityStatement-Terminology.html">Terminology</a></h3>
 
 <ul>
   <li>Doel: Nederlandse Terminology Service (<a href="https://nictiz.nl/wat-we-doen/activiteiten/terminologie/de-nationale-terminologieserver/">NTS Nictiz</a>)</li>
@@ -200,12 +203,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Tijdelijk: CodeSystem en ValueSets in deze IG.</li>
 </ul>
 
+<h4 id="bevragen-terminologie">Bevragen terminologie</h4>
+
+<p><em>TODO sequence diagram uitwerken</em>
+Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.</p>
+
+<p><strong>Van toepassing zijnde standaarden en documentatie</strong>:</p>
+<ul>
+  <li><a href="https://hl7.org/fhir/STU3/terminology-service.html">FHIR Terminology Service</a></li>
+</ul>
+
 <h3 id="toestemming--patientindex"><a href="CapabilityStatement-Toestemming.html">Toestemming / PatientIndex</a></h3>
 
 <ul>
   <li>Doel: landelijke MITZ open vraag</li>
   <li>Inhoud: Toestemmingen van een patient (Consents)</li>
-  <li><a name="l390">​</a>Tijdelijk: Vullen <a href="StructureDefinition-ToestemmingConsent">Toestemming Consent</a> dmv afvangen HL7 v2 toestemming berichten.</li>
+  <li><a name="l416">​</a>Tijdelijk: Vullen <a href="StructureDefinition-ToestemmingConsent">Toestemming Consent</a> dmv afvangen HL7 v2 toestemming berichten.</li>
 </ul>
 
 <h3 id="zorgverlener-directory"><a href="CapabilityStatement-ZorgverlenerDirectory.html">Zorgverlener Directory</a></h3>
@@ -270,7 +283,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.24.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Mar 19, 2024 08:53+0000">2024-03-19</span>
+          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.24.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Mar 20, 2024 18:23+0000">2024-03-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

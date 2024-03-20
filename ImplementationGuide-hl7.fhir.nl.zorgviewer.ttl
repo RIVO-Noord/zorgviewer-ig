@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "zorgviewer-ig"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-03-19T08:53:44+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-03-20T18:23:37+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -63,7 +63,7 @@
   ] ) ; # 
   fhir:package ( [
      fhir:id [ fhir:v "group-zs" ] ;
-     fhir:name [ fhir:v "Zorgviewer Services" ] ;
+     fhir:name [ fhir:v "Zorgviewer Services Content" ] ;
      fhir:description [ fhir:v "Zie [Zorgviewer Services pagina](zorgviewer-services.html) voor details." ] ;
      fhir:resource ( [
        fhir:extension ( [
@@ -72,6 +72,7 @@
        ] ) ;
        fhir:example [ fhir:v "true"^^xsd:boolean ] ;
        fhir:name [ fhir:v "Organization UMCG" ] ;
+       fhir:description [ fhir:v "Deze instance bevat de organization identifiers voor het UMCG." ] ;
        fhir:source [
          a fhir:Reference ;
          fhir:link <http://hl7.nl/fhir/zorgviewer/Organization/UMCG> ;
@@ -88,6 +89,7 @@
        ] ) ;
        fhir:example [ fhir:v "true"^^xsd:boolean ] ;
        fhir:name [ fhir:v "Organization Tjongerschans" ] ;
+       fhir:description [ fhir:v "Deze instance bevat de organization identifiers voor het Tjongerschans." ] ;
        fhir:source [
          a fhir:Reference ;
          fhir:link <http://hl7.nl/fhir/zorgviewer/Organization/Tjongerschans> ;
@@ -104,6 +106,7 @@
        ] ) ;
        fhir:example [ fhir:v "true"^^xsd:boolean ] ;
        fhir:name [ fhir:v "Organization MCL" ] ;
+       fhir:description [ fhir:v "Deze instance bevat de organization identifiers voor het MCL." ] ;
        fhir:source [
          a fhir:Reference ;
          fhir:link <http://hl7.nl/fhir/zorgviewer/Organization/MCL> ;
@@ -120,6 +123,7 @@
        ] ) ;
        fhir:example [ fhir:v "true"^^xsd:boolean ] ;
        fhir:name [ fhir:v "Organization VIPLive" ] ;
+       fhir:description [ fhir:v "Deze instance bevat de identifiers voor VIPLive." ] ;
        fhir:source [
          a fhir:Reference ;
          fhir:link <http://hl7.nl/fhir/zorgviewer/Organization/VIPLive> ;
@@ -167,6 +171,10 @@
      ] [
        fhir:source [ fhir:v "design.html"^^xsd:anyURI ] ;
        fhir:title [ fhir:v "Design" ] ;
+       fhir:kind [ fhir:v "resource" ]
+     ] [
+       fhir:source [ fhir:v "design2.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Design 2024" ] ;
        fhir:kind [ fhir:v "resource" ]
      ] [
        fhir:source [ fhir:v "design-background.html"^^xsd:anyURI ] ;

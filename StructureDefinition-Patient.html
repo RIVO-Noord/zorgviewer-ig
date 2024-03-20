@@ -1,42 +1,38 @@
-<!-- get modelType -->
-
-
-
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<!-- get modelType --><?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>Patient - RIVO-Noord Zorgviewer MVP2 Implementation Guide v0.24.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link href="fhir.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="fhir.css"/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
 
-    <!-- Project extras -->
-    <link href="assets/css/project.css" rel="stylesheet"/>
-    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
-    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="assets/css/prism.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
-    <link href="assets/css/rivo.css" rel="stylesheet"/>
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/rivo.css"/>
 
-    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    <![endif] -->
 
-    <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
@@ -44,21 +40,19 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"16.23"}
-    h3,h4,h5,h6{--heading-prefix:"16.23"}</style>
-    <div id="segment-header" class="segment">  <!-- segment-header -->
-      <div class="container">  <!-- container -->
-        <!-- Placeholder for child template header declarations -->
+    <style type="text/css">h2{--heading-prefix:"17.23"}
+    h3,h4,h5,h6{--heading-prefix:"17.23"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
 
 <div id="project-nav">
-    <a id="project-logo" no-external="true" href="https://rivo-noord.nl"><img height="50"
-            alt="Visit the RIVO-Noord website" src="assets/images/rivonoord-logo.png" /> </a>
+    <a no-external="true" id="project-logo" href="https://rivo-noord.nl"><img src="assets/images/rivonoord-logo.png" alt="Visit the RIVO-Noord website" height="50"/> </a>
 </div>
 
 <div id="family-nav">
-    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
-    <a id="family-logo" no-external="true" href="https://hl7.nl"><img height="50" alt="Visit the HL7 NL website"
-            src="assets/images/HL7nl_Logo.png" /> </a>
+    <a no-external="true" id="hl7-search-lnk" href="searchform.html"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+    <a no-external="true" id="family-logo" href="https://hl7.nl"><img src="assets/images/HL7nl_Logo.png" alt="Visit the HL7 NL website" height="50"/> </a>
 </div>
 
 
@@ -69,35 +63,35 @@
 
 
 
-  <img alt="Netherlands flag" src="assets/images/nld.svg" height="16" title="Netherlands"/>
+  <img src="assets/images/nld.svg" alt="Netherlands flag" title="Netherlands" height="16"/>
 
 
             </span>
           </p>
         </div>
-      </div> <!-- /container -->
-    </div>  <!-- /segment-header -->
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">  <!-- container -->
-        <!-- HEADER CONTENT -->
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-          <!--status-bar-->
+            <!-- status-bar -->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+            <a href="http://hl7.org/fhir/STU3/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+              <ul class="nav navbar-nav">
   <li><a href="index.html">Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
   <li class="dropdown">
-		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requirements &#8964;</a>
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Requirements ⌄</a>
 		<ul class="dropdown-menu">
 			<li>
 				<a href="conformance.html">Uitgangspunten en Requirements</a>
@@ -114,10 +108,13 @@
 		</ul>
 	</li>
   <li class="dropdown">
-		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Design ⌄</a>
 		<ul class="dropdown-menu">
 			<li>
 				<a href="design.html">Design</a>
+			</li>
+			<li>
+				<a href="design2.html">Design 2024</a>
 			</li>
 			<li>
 				<a href="design-background.html">Design Achtergrond</a>
@@ -138,31 +135,31 @@
   <li><a href="changes.html">Change Log</a></li>
 </ul>      
 
-            </div>  <!-- /.nav-collapse -->
-          </div>  <!-- /.container -->
-        </nav>  <!-- /.navbar -->
-      <!-- /HEADER CONTENT -->
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-navbar -->
-    <!--status-bar-->
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
 
-    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Patient</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>Patient</b></li>
 
         </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">  <!-- segment-content -->
-      <div class="container">  <!-- container -->
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer MVP2 Implementation Guide - Local Development build (v0.24.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+    <!-- ReleaseHeader --><p id="publish-box">RIVO-Noord Zorgviewer MVP2 Implementation Guide - Local Development build (v0.24.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   
 
 
@@ -243,10 +240,10 @@
   <table class="colsd">
 
     <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient"/></span>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient<button data-clipboard-text="http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient" title="Click to copy URL" class="btn-copy"></button></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.24.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient|0.24.0"/></span>
+      <span class="copy-text">0.24.0<button data-clipboard-text="http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient|0.24.0" title="Click to copy versioned URL" class="btn-copy"></button></span>
       </td>
     </tr>
 
@@ -262,7 +259,7 @@
         
           Draft
           
-            as of 2024-03-19
+            as of 2024-03-20
           
         
       </td>
@@ -284,12 +281,12 @@
 
 
 
-<!-- insert intro if present -->
+  <!-- insert intro if present -->
 
 
 
 
-<div style="display:inline-block" markdown="1">
+<div markdown="1" style="display:inline-block">
 
 <blockquote class="stu-note">
   <p>Dit Profiel is het resultaat van de vergelijking tussen de zib2017 FHIR Profiel en de implementaties in Epic en Chipsoft.
@@ -366,7 +363,7 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p><em>Optioneel:</em> Elke entry van een search response Bundle bevat een referentie naar de bijbehorende Patient (<code class="language-plaintext highlighter-rouge">&lt;resource&gt;.subject|patient</code>). Elke patient heeft een <code class="language-plaintext highlighter-rouge">Patient.managingOrganization</code> en in de gerefereerde <code class="language-plaintext highlighter-rouge">Organization.identifier</code> staat vervolgens o.a. de OID van het bronsysyeem. Of je gebruikt de identifiers om een volledige Organization op te zoeken in het <a href="zorgviewer-services.html#adressering">adresboek</a> en zie inhoud <a href="artifacts.html#zorgviewer-services">hier</a>.</p>
+<p><a name="l627">​</a><em>Optioneel:</em> Elke entry van een search response Bundle bevat een referentie naar de bijbehorende Patient (<code class="language-plaintext highlighter-rouge">&lt;resource&gt;.subject|patient</code>). Elke patient heeft een <code class="language-plaintext highlighter-rouge">Patient.managingOrganization</code> en in de gerefereerde <code class="language-plaintext highlighter-rouge">Organization.identifier</code> staat vervolgens o.a. de OID van het bronsysyeem. Of je gebruikt de identifiers om een volledige Organization op te zoeken in het <a href="zorgviewer-services.html#adressering">adresboek</a> en zie inhoud <a href="artifacts.html#zorgviewer-services">hier</a>.</p>
 
 </div>
 
@@ -379,7 +376,7 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 </ul>
 
 
-  <!-- no uri -->
+    <!-- no uri -->
   <a name="profile"> </a>
   <h3 id="profile">Formal Views of Profile Content</h3>
   <p>
@@ -397,14 +394,14 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
         <a href="#tabs-snap">Snapshot Table</a>
       </li>
 
-<!--      <li>
+  <!-- <li>
         <a href="#tabs-xml">Pseudo-XML</a>
-      </li>-->
+      </li> -->
 
 
-<!--      <li>
+  <!-- <li>
         <a href="#tabs-json">Pseudo-JSON</a>
-      </li>-->
+      </li> -->
 
 
       <li>
@@ -429,14 +426,14 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="af"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Patient-definitions.html#diff_Patient.managingOrganization">managingOrganization</a><a name="Patient.managingOrganization"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/references.html">Reference</a>(<a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/organization.html">Organization</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Organization that is the custodian of the patient record</span></td></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
           <a name="tx"> </a>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
@@ -533,28 +530,28 @@ NOTE: FHIR core defines the AD-use extension to further specify the postal addre
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aqb"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Patient-definitions.html#key_Patient.link.other" title="The other patient resource that the link refers to.">other</a><a name="Patient.link.other"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/references.html">Reference</a>(<a href="http://hl7.org/fhir/STU3/patient.html">Patient</a> | <a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson</a>)</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The other patient or related person resource that the link refers to</td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aqc"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Patient-definitions.html#key_Patient.link.type" title="The type of link between this patient resource and another patient resource.">type</a><a name="Patient.link.type"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">replaced-by | replaces | refer | seealso - type of link<br/><span style="font-weight:bold">Binding: </span><a href="http://hl7.org/fhir/STU3/valueset-link-type.html" title="http://hl7.org/fhir/ValueSet/link-type">LinkType</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set.">required</a>): The type of link between this patient resource and another patient resource.<br/><br/></td></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
-<tr><td>Patient.extension:nationality.extension:code.valueCodeableConcept:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="Indicates the country of citizenship."><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000">NationaliteitCodelijst</a> (a valid code from <code>urn:oid:2.16.840.1.113883.2.4.4.16.32</code>)<div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000"></button></div></td></tr>
-<tr><td>Patient.extension:legalStatus.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000">JuridischeStatusCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000"></button></div></td></tr>
-<tr><td>Patient.extension:lifeStance.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="LevensovertuigingCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000">LevensovertuigingCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000"></button></div></td></tr>
-<tr><td>Patient.identifier:BSN.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.extension:humannameAssemblyOrder.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code that represents the preferred display order of the components of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-assembly-order.html">HumanNameAssemblyOrder</a><div><code>http://hl7.org/fhir/ValueSet/name-assembly-order</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-assembly-order"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The use of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.gender.extension:GeslachtCodelijst.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="GeslachtCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000">GeslachtCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000"></button></div></td></tr>
-<tr><td>Patient.animal.species</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The species of an animal."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-species.html">AnimalSpecies</a><div><code>http://hl7.org/fhir/ValueSet/animal-species</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-species"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.link.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The type of link between this patient resource and another patient resource."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-link-type.html">LinkType</a><div><code>http://hl7.org/fhir/ValueSet/link-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.extension:nationality.extension:code.valueCodeableConcept:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="Indicates the country of citizenship."><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000">NationaliteitCodelijst</a> (a valid code from <code>urn:oid:2.16.840.1.113883.2.4.4.16.32</code>)<div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.extension:legalStatus.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000">JuridischeStatusCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.extension:lifeStance.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="LevensovertuigingCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000">LevensovertuigingCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.identifier:BSN.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.name.extension:humannameAssemblyOrder.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code that represents the preferred display order of the components of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-assembly-order.html">HumanNameAssemblyOrder</a><div><code>http://hl7.org/fhir/ValueSet/name-assembly-order</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-assembly-order" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The use of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.gender.extension:GeslachtCodelijst.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="GeslachtCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000">GeslachtCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.animal.species</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The species of an animal."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-species.html">AnimalSpecies</a><div><code>http://hl7.org/fhir/ValueSet/animal-species</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-species" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.link.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The type of link between this patient resource and another patient resource."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-link-type.html">LinkType</a><div><code>http://hl7.org/fhir/ValueSet/link-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
 </table>
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
@@ -889,7 +886,7 @@ The ISO-639-1 alpha 2 code in lower case for the language, optionally followed b
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a28.d"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Patient-definitions.html#Patient.link.other" title="The other patient resource that the link refers to.">other</a><a name="Patient.link.other"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/references.html">Reference</a>(<a href="http://hl7.org/fhir/STU3/patient.html">Patient</a> | <a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The other patient or related person resource that the link refers to</td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="a28.e"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Patient-definitions.html#Patient.link.type" title="The type of link between this patient resource and another patient resource.">type</a><a name="Patient.link.type"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">replaced-by | replaces | refer | seealso - type of link<br/><span style="font-weight:bold">Binding: </span><a href="http://hl7.org/fhir/STU3/valueset-link-type.html" title="http://hl7.org/fhir/ValueSet/link-type">LinkType</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set.">required</a>): The type of link between this patient resource and another patient resource.<br/><br/></td></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
@@ -909,30 +906,30 @@ The ISO-639-1 alpha 2 code in lower case for the language, optionally followed b
     </td>
   </tr>
 </table>
-<div><code>http://hl7.org/fhir/ValueSet/languages</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/languages"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.extension:nationality.extension:code.valueCodeableConcept:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="Indicates the country of citizenship."><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000">NationaliteitCodelijst</a> (a valid code from <code>urn:oid:2.16.840.1.113883.2.4.4.16.32</code>)<div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000"></button></div></td></tr>
-<tr><td>Patient.extension:legalStatus.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000">JuridischeStatusCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000"></button></div></td></tr>
-<tr><td>Patient.extension:lifeStance.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="LevensovertuigingCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000">LevensovertuigingCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000"></button></div></td></tr>
-<tr><td>Patient.identifier:BSN.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.identifier:BSN.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.extension:humannameAssemblyOrder.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code that represents the preferred display order of the components of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-assembly-order.html">HumanNameAssemblyOrder</a><div><code>http://hl7.org/fhir/ValueSet/name-assembly-order</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-assembly-order"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The use of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.given.extension:iso21090EnQualifier.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-part-qualifier.html">EntityNamePartQualifier</a><div><code>http://hl7.org/fhir/ValueSet/name-part-qualifier</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-part-qualifier"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.gender.extension:GeslachtCodelijst.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="GeslachtCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000">GeslachtCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000"></button></div></td></tr>
-<tr><td>Patient.maritalStatus</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000">BurgerlijkeStaatCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000"></button></div></td></tr>
-<tr><td>Patient.contact.relationship</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="The nature of the relationship between a patient and a contact person for that patient."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/v2/0131/index.html">v2 Contact Role</a><div><code>http://hl7.org/fhir/ValueSet/v2-0131</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/v2-0131"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.contact.relationship:relationship</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000">RelatieCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000"></button></div></td></tr>
-<tr><td>Patient.contact.relationship:role</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000">RolCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000"></button></div></td></tr>
-<tr><td>Patient.contact.name.extension:humannameAssemblyOrder.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code that represents the preferred display order of the components of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-assembly-order.html">HumanNameAssemblyOrder</a><div><code>http://hl7.org/fhir/ValueSet/name-assembly-order</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-assembly-order"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.contact.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The use of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.contact.name.given.extension:iso21090EnQualifier.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-part-qualifier.html">EntityNamePartQualifier</a><div><code>http://hl7.org/fhir/ValueSet/name-part-qualifier</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-part-qualifier"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.contact.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The gender of a person used for administrative purposes."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.animal.species</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The species of an animal."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-species.html">AnimalSpecies</a><div><code>http://hl7.org/fhir/ValueSet/animal-species</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-species"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.animal.breed</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The breed of an animal."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-breeds.html">AnimalBreeds</a><div><code>http://hl7.org/fhir/ValueSet/animal-breeds</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-breeds"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.animal.genderStatus</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The state of the animal's reproductive organs."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-genderstatus.html">GenderStatus</a><div><code>http://hl7.org/fhir/ValueSet/animal-genderstatus</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-genderstatus"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.communication.extension:languageProficiency.extension:type.value[x]:valueCoding</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/v3/LanguageAbilityMode/vs.html">v3 Code System LanguageAbilityMode</a><div><code>http://hl7.org/fhir/ValueSet/v3-LanguageAbilityMode</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/v3-LanguageAbilityMode"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.communication.extension:languageProficiency.extension:level.value[x]:valueCoding</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/v3/LanguageAbilityProficiency/vs.html">v3 Code System LanguageAbilityProficiency</a><div><code>http://hl7.org/fhir/ValueSet/v3-LanguageAbilityProficiency</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/v3-LanguageAbilityProficiency"></button></div><div>from the FHIR Standard</div></td></tr>
+<div><code>http://hl7.org/fhir/ValueSet/languages</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.extension:nationality.extension:code.valueCodeableConcept:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="Indicates the country of citizenship."><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000">NationaliteitCodelijst</a> (a valid code from <code>urn:oid:2.16.840.1.113883.2.4.4.16.32</code>)<div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.extension:legalStatus.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000">JuridischeStatusCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.extension:lifeStance.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="LevensovertuigingCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000">LevensovertuigingCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.identifier:BSN.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.identifier:BSN.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.name.extension:humannameAssemblyOrder.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code that represents the preferred display order of the components of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-assembly-order.html">HumanNameAssemblyOrder</a><div><code>http://hl7.org/fhir/ValueSet/name-assembly-order</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-assembly-order" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The use of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.name.given.extension:iso21090EnQualifier.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-part-qualifier.html">EntityNamePartQualifier</a><div><code>http://hl7.org/fhir/ValueSet/name-part-qualifier</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-part-qualifier" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.gender.extension:GeslachtCodelijst.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="GeslachtCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000">GeslachtCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.maritalStatus</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000">BurgerlijkeStaatCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.contact.relationship</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="The nature of the relationship between a patient and a contact person for that patient."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/v2/0131/index.html">v2 Contact Role</a><div><code>http://hl7.org/fhir/ValueSet/v2-0131</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/v2-0131" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.contact.relationship:relationship</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000">RelatieCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.contact.relationship:role</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000">RolCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.contact.name.extension:humannameAssemblyOrder.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code that represents the preferred display order of the components of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-assembly-order.html">HumanNameAssemblyOrder</a><div><code>http://hl7.org/fhir/ValueSet/name-assembly-order</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-assembly-order" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.contact.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The use of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.contact.name.given.extension:iso21090EnQualifier.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-part-qualifier.html">EntityNamePartQualifier</a><div><code>http://hl7.org/fhir/ValueSet/name-part-qualifier</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-part-qualifier" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.contact.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The gender of a person used for administrative purposes."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.animal.species</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The species of an animal."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-species.html">AnimalSpecies</a><div><code>http://hl7.org/fhir/ValueSet/animal-species</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-species" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.animal.breed</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The breed of an animal."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-breeds.html">AnimalBreeds</a><div><code>http://hl7.org/fhir/ValueSet/animal-breeds</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-breeds" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.animal.genderStatus</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The state of the animal's reproductive organs."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-genderstatus.html">GenderStatus</a><div><code>http://hl7.org/fhir/ValueSet/animal-genderstatus</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-genderstatus" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.communication.extension:languageProficiency.extension:type.value[x]:valueCoding</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/v3/LanguageAbilityMode/vs.html">v3 Code System LanguageAbilityMode</a><div><code>http://hl7.org/fhir/ValueSet/v3-LanguageAbilityMode</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/v3-LanguageAbilityMode" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.communication.extension:languageProficiency.extension:level.value[x]:valueCoding</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/v3/LanguageAbilityProficiency/vs.html">v3 Code System LanguageAbilityProficiency</a><div><code>http://hl7.org/fhir/ValueSet/v3-LanguageAbilityProficiency</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/v3-LanguageAbilityProficiency" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
 <tr><td>Patient.communication.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-languages.html">Common Languages</a><table class="grid">
   <tr>
     <td style="font-size: 11px">
@@ -949,16 +946,16 @@ The ISO-639-1 alpha 2 code in lower case for the language, optionally followed b
     </td>
   </tr>
 </table>
-<div><code>http://hl7.org/fhir/ValueSet/languages</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/languages"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.link.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The type of link between this patient resource and another patient resource."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-link-type.html">LinkType</a><div><code>http://hl7.org/fhir/ValueSet/link-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type"></button></div><div>from the FHIR Standard</div></td></tr>
+<div><code>http://hl7.org/fhir/ValueSet/languages</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.link.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The type of link between this patient resource and another patient resource."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-link-type.html">LinkType</a><div><code>http://hl7.org/fhir/ValueSet/link-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
 </table>
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
@@ -982,7 +979,7 @@ The ISO-639-1 alpha 2 code in lower case for the language, optionally followed b
       </div>
     </div>
 
-<!--    <a name="tabs-xml"> </a>
+  <!-- <a name="tabs-xml"> </a>
     <div id="tabs-xml">
       <div id="xml">
         <div id="xml-inner">
@@ -990,10 +987,10 @@ The ISO-639-1 alpha 2 code in lower case for the language, optionally followed b
 
         </div>
       </div>
-    </div>-->
+    </div> -->
 
 
-<!--    <a name="tabs-json"> </a>
+  <!-- <a name="tabs-json"> </a>
     <div id="tabs-json">
       <div id="json">
         <div id="json-inner">
@@ -1274,7 +1271,7 @@ The ISO-639-1 alpha 2 code in lower case for the language, optionally followed b
 
         </div>
       </div>
-    </div>-->
+    </div> -->
 
 
     <a name="tabs-summ"> </a>
@@ -1309,14 +1306,14 @@ Summary
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ae"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Patient-definitions.html#diff_Patient.deceased[x]">deceased[x]</a><a name="Patient.deceased_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a><span style="opacity: 0.5">, </span><a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">DeathIndicator/DateOfDeath</span></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="af"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Patient-definitions.html#diff_Patient.managingOrganization">managingOrganization</a><a name="Patient.managingOrganization"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/references.html">Reference</a>(<a style="opacity: 0.5" href="http://hl7.org/fhir/STU3/organization.html">Organization</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Organization that is the custodian of the patient record</span></td></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
@@ -1413,28 +1410,28 @@ NOTE: FHIR core defines the AD-use extension to further specify the postal addre
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aqb"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Patient-definitions.html#key_Patient.link.other" title="The other patient resource that the link refers to.">other</a><a name="Patient.link.other"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/references.html">Reference</a>(<a href="http://hl7.org/fhir/STU3/patient.html">Patient</a> | <a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson</a>)</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The other patient or related person resource that the link refers to</td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aqc"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Patient-definitions.html#key_Patient.link.type" title="The type of link between this patient resource and another patient resource.">type</a><a name="Patient.link.type"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">replaced-by | replaces | refer | seealso - type of link<br/><span style="font-weight:bold">Binding: </span><a href="http://hl7.org/fhir/STU3/valueset-link-type.html" title="http://hl7.org/fhir/ValueSet/link-type">LinkType</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set.">required</a>): The type of link between this patient resource and another patient resource.<br/><br/></td></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
-<tr><td>Patient.extension:nationality.extension:code.valueCodeableConcept:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="Indicates the country of citizenship."><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000">NationaliteitCodelijst</a> (a valid code from <code>urn:oid:2.16.840.1.113883.2.4.4.16.32</code>)<div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000"></button></div></td></tr>
-<tr><td>Patient.extension:legalStatus.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000">JuridischeStatusCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000"></button></div></td></tr>
-<tr><td>Patient.extension:lifeStance.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="LevensovertuigingCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000">LevensovertuigingCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000"></button></div></td></tr>
-<tr><td>Patient.identifier:BSN.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.extension:humannameAssemblyOrder.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code that represents the preferred display order of the components of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-assembly-order.html">HumanNameAssemblyOrder</a><div><code>http://hl7.org/fhir/ValueSet/name-assembly-order</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-assembly-order"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The use of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.gender.extension:GeslachtCodelijst.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="GeslachtCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000">GeslachtCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000"></button></div></td></tr>
-<tr><td>Patient.animal.species</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The species of an animal."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-species.html">AnimalSpecies</a><div><code>http://hl7.org/fhir/ValueSet/animal-species</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-species"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.link.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The type of link between this patient resource and another patient resource."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-link-type.html">LinkType</a><div><code>http://hl7.org/fhir/ValueSet/link-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.extension:nationality.extension:code.valueCodeableConcept:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="Indicates the country of citizenship."><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000">NationaliteitCodelijst</a> (a valid code from <code>urn:oid:2.16.840.1.113883.2.4.4.16.32</code>)<div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.extension:legalStatus.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000">JuridischeStatusCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.extension:lifeStance.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="LevensovertuigingCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000">LevensovertuigingCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.identifier:BSN.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.name.extension:humannameAssemblyOrder.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code that represents the preferred display order of the components of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-assembly-order.html">HumanNameAssemblyOrder</a><div><code>http://hl7.org/fhir/ValueSet/name-assembly-order</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-assembly-order" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The use of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.gender.extension:GeslachtCodelijst.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="GeslachtCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000">GeslachtCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.animal.species</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The species of an animal."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-species.html">AnimalSpecies</a><div><code>http://hl7.org/fhir/ValueSet/animal-species</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-species" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.link.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The type of link between this patient resource and another patient resource."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-link-type.html">LinkType</a><div><code>http://hl7.org/fhir/ValueSet/link-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
 </table>
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
@@ -1769,7 +1766,7 @@ The ISO-639-1 alpha 2 code in lower case for the language, optionally followed b
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a28.d"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Patient-definitions.html#Patient.link.other" title="The other patient resource that the link refers to.">other</a><a name="Patient.link.other"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/references.html">Reference</a>(<a href="http://hl7.org/fhir/STU3/patient.html">Patient</a> | <a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The other patient or related person resource that the link refers to</td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="a28.e"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Patient-definitions.html#Patient.link.type" title="The type of link between this patient resource and another patient resource.">type</a><a name="Patient.link.type"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">replaced-by | replaces | refer | seealso - type of link<br/><span style="font-weight:bold">Binding: </span><a href="http://hl7.org/fhir/STU3/valueset-link-type.html" title="http://hl7.org/fhir/ValueSet/link-type">LinkType</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set.">required</a>): The type of link between this patient resource and another patient resource.<br/><br/></td></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
@@ -1789,30 +1786,30 @@ The ISO-639-1 alpha 2 code in lower case for the language, optionally followed b
     </td>
   </tr>
 </table>
-<div><code>http://hl7.org/fhir/ValueSet/languages</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/languages"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.extension:nationality.extension:code.valueCodeableConcept:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="Indicates the country of citizenship."><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000">NationaliteitCodelijst</a> (a valid code from <code>urn:oid:2.16.840.1.113883.2.4.4.16.32</code>)<div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000"></button></div></td></tr>
-<tr><td>Patient.extension:legalStatus.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000">JuridischeStatusCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000"></button></div></td></tr>
-<tr><td>Patient.extension:lifeStance.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="LevensovertuigingCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000">LevensovertuigingCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000"></button></div></td></tr>
-<tr><td>Patient.identifier:BSN.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.identifier:BSN.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.extension:humannameAssemblyOrder.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code that represents the preferred display order of the components of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-assembly-order.html">HumanNameAssemblyOrder</a><div><code>http://hl7.org/fhir/ValueSet/name-assembly-order</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-assembly-order"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The use of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.name.given.extension:iso21090EnQualifier.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-part-qualifier.html">EntityNamePartQualifier</a><div><code>http://hl7.org/fhir/ValueSet/name-part-qualifier</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-part-qualifier"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.gender.extension:GeslachtCodelijst.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="GeslachtCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000">GeslachtCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000"></button></div></td></tr>
-<tr><td>Patient.maritalStatus</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000">BurgerlijkeStaatCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000"></button></div></td></tr>
-<tr><td>Patient.contact.relationship</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="The nature of the relationship between a patient and a contact person for that patient."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/v2/0131/index.html">v2 Contact Role</a><div><code>http://hl7.org/fhir/ValueSet/v2-0131</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/v2-0131"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.contact.relationship:relationship</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000">RelatieCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000"></button></div></td></tr>
-<tr><td>Patient.contact.relationship:role</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000">RolCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000"></button></div></td></tr>
-<tr><td>Patient.contact.name.extension:humannameAssemblyOrder.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code that represents the preferred display order of the components of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-assembly-order.html">HumanNameAssemblyOrder</a><div><code>http://hl7.org/fhir/ValueSet/name-assembly-order</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-assembly-order"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.contact.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The use of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.contact.name.given.extension:iso21090EnQualifier.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-part-qualifier.html">EntityNamePartQualifier</a><div><code>http://hl7.org/fhir/ValueSet/name-part-qualifier</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/name-part-qualifier"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.contact.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The gender of a person used for administrative purposes."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.animal.species</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The species of an animal."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-species.html">AnimalSpecies</a><div><code>http://hl7.org/fhir/ValueSet/animal-species</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-species"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.animal.breed</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The breed of an animal."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-breeds.html">AnimalBreeds</a><div><code>http://hl7.org/fhir/ValueSet/animal-breeds</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-breeds"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.animal.genderStatus</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The state of the animal's reproductive organs."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-genderstatus.html">GenderStatus</a><div><code>http://hl7.org/fhir/ValueSet/animal-genderstatus</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-genderstatus"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.communication.extension:languageProficiency.extension:type.value[x]:valueCoding</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/v3/LanguageAbilityMode/vs.html">v3 Code System LanguageAbilityMode</a><div><code>http://hl7.org/fhir/ValueSet/v3-LanguageAbilityMode</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/v3-LanguageAbilityMode"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.communication.extension:languageProficiency.extension:level.value[x]:valueCoding</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/v3/LanguageAbilityProficiency/vs.html">v3 Code System LanguageAbilityProficiency</a><div><code>http://hl7.org/fhir/ValueSet/v3-LanguageAbilityProficiency</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/v3-LanguageAbilityProficiency"></button></div><div>from the FHIR Standard</div></td></tr>
+<div><code>http://hl7.org/fhir/ValueSet/languages</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.extension:nationality.extension:code.valueCodeableConcept:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="Indicates the country of citizenship."><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000">NationaliteitCodelijst</a> (a valid code from <code>urn:oid:2.16.840.1.113883.2.4.4.16.32</code>)<div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.extension:legalStatus.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000">JuridischeStatusCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.extension:lifeStance.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="LevensovertuigingCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000">LevensovertuigingCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.5.1--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.identifier:BSN.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.identifier:BSN.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.name.extension:humannameAssemblyOrder.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code that represents the preferred display order of the components of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-assembly-order.html">HumanNameAssemblyOrder</a><div><code>http://hl7.org/fhir/ValueSet/name-assembly-order</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-assembly-order" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The use of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.name.given.extension:iso21090EnQualifier.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-part-qualifier.html">EntityNamePartQualifier</a><div><code>http://hl7.org/fhir/ValueSet/name-part-qualifier</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-part-qualifier" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.gender.extension:GeslachtCodelijst.value[x]:valueCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="GeslachtCodelijst"><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000">GeslachtCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.maritalStatus</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000">BurgerlijkeStaatCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.contact.relationship</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="The nature of the relationship between a patient and a contact person for that patient."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/v2/0131/index.html">v2 Contact Role</a><div><code>http://hl7.org/fhir/ValueSet/v2-0131</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/v2-0131" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.contact.relationship:relationship</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000">RelatieCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.contact.relationship:role</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000">RolCodelijst</a><div><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000" title="Click to copy URL" class="btn-copy"></button></div></td></tr>
+<tr><td>Patient.contact.name.extension:humannameAssemblyOrder.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code that represents the preferred display order of the components of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-assembly-order.html">HumanNameAssemblyOrder</a><div><code>http://hl7.org/fhir/ValueSet/name-assembly-order</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-assembly-order" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.contact.name.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The use of a human name"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-use.html">NameUse</a><div><code>http://hl7.org/fhir/ValueSet/name-use</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-use" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.contact.name.given.extension:iso21090EnQualifier.valueCode:valueCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type"><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-name-part-qualifier.html">EntityNamePartQualifier</a><div><code>http://hl7.org/fhir/ValueSet/name-part-qualifier</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/name-part-qualifier" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.contact.gender</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The gender of a person used for administrative purposes."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><div><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.animal.species</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The species of an animal."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-species.html">AnimalSpecies</a><div><code>http://hl7.org/fhir/ValueSet/animal-species</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-species" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.animal.breed</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The breed of an animal."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-breeds.html">AnimalBreeds</a><div><code>http://hl7.org/fhir/ValueSet/animal-breeds</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-breeds" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.animal.genderStatus</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The state of the animal's reproductive organs."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-animal-genderstatus.html">GenderStatus</a><div><code>http://hl7.org/fhir/ValueSet/animal-genderstatus</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-genderstatus" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.communication.extension:languageProficiency.extension:type.value[x]:valueCoding</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/v3/LanguageAbilityMode/vs.html">v3 Code System LanguageAbilityMode</a><div><code>http://hl7.org/fhir/ValueSet/v3-LanguageAbilityMode</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/v3-LanguageAbilityMode" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.communication.extension:languageProficiency.extension:level.value[x]:valueCoding</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/v3/LanguageAbilityProficiency/vs.html">v3 Code System LanguageAbilityProficiency</a><div><code>http://hl7.org/fhir/ValueSet/v3-LanguageAbilityProficiency</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/v3-LanguageAbilityProficiency" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
 <tr><td>Patient.communication.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-languages.html">Common Languages</a><table class="grid">
   <tr>
     <td style="font-size: 11px">
@@ -1829,16 +1826,16 @@ The ISO-639-1 alpha 2 code in lower case for the language, optionally followed b
     </td>
   </tr>
 </table>
-<div><code>http://hl7.org/fhir/ValueSet/languages</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/languages"></button></div><div>from the FHIR Standard</div></td></tr>
-<tr><td>Patient.link.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The type of link between this patient resource and another patient resource."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-link-type.html">LinkType</a><div><code>http://hl7.org/fhir/ValueSet/link-type</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type"></button></div><div>from the FHIR Standard</div></td></tr>
+<div><code>http://hl7.org/fhir/ValueSet/languages</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
+<tr><td>Patient.link.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The type of link between this patient resource and another patient resource."><a style="opacity: 1.0" href="http://hl7.org/fhir/STU3/valueset-link-type.html">LinkType</a><div><code>http://hl7.org/fhir/ValueSet/link-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type" title="Click to copy URL" class="btn-copy"></button></div><div>from the FHIR Standard</div></td></tr>
 </table>
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
@@ -1861,7 +1858,7 @@ The ISO-639-1 alpha 2 code in lower case for the language, optionally followed b
         </div>
       </div>
 
-      <!--<div id="all-xml">
+        <!-- <div id="all-xml">
         <p>
           <b>XML Template</b>
         </p>
@@ -1869,10 +1866,10 @@ The ISO-639-1 alpha 2 code in lower case for the language, optionally followed b
           <p><span style="color: maroon; font-weight: bold">yet to be done: Xml template</span></p>
 
         </div>
-      </div>-->
+      </div> -->
 
 
-      <!--<div id="all-json">
+        <!-- <div id="all-json">
         <p>
           <b>JSON Template</b>
         </p>
@@ -2153,7 +2150,7 @@ The ISO-639-1 alpha 2 code in lower case for the language, optionally followed b
   }
 
         </div>
-      </div>-->
+      </div> -->
 
 
       <div id="all-summ">
@@ -2169,27 +2166,27 @@ Summary
       </div>
     </div>
   </div>
-  <p>&#160;</p>
+  <p>&nbsp;</p>
   <p>Other representations of profile: <a href="StructureDefinition-Patient.csv">CSV</a>, <a href="StructureDefinition-Patient.xlsx">Excel</a>, <a href="StructureDefinition-Patient.sch">Schematron</a>
  
   </p>
 
   
 
-<!-- insert notes if present -->
+  <!-- insert notes if present -->
 
 
 
 
 </div>
 
-        </div>  <!-- /inner-wrapper -->
-      </div>  <!-- /row -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-content -->
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
 
-  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
 
   <script type="text/javascript">
     try {
@@ -2222,12 +2219,12 @@ Summary
     });
   </script>
   <a name="bottom"> </a>
-  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container">  <!-- container -->
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.24.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Mar 19, 2024 08:53+0000">2024-03-19</span>
+          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.24.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Mar 20, 2024 18:23+0000">2024-03-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -2236,36 +2233,35 @@ Summary
                 
           </span>
         </p>
-      </div>  <!-- /inner-wrapper -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-footer -->
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
-    <div class="container">  <!-- container -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
   
-  <!-- JS and analytics only. -->
-  <!-- Bootstrap core JavaScript
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
   <script>anchors.options.visible = 'hover'
 anchors.add()</script>
   
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
+  <!-- feedback form - Google forms -->
+  <!-- v0.1, 2021-01-09 -->
 
 
 
-<!-- / feedback form  -->
+  <!-- / feedback form -->
 
-  <!-- Analytics Below
+    <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
-
