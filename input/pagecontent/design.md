@@ -1,11 +1,11 @@
 <style>table, td, th { border: 1px solid black; padding:5px; }</style>
 
-Deze pagina beschrijft de interacties tussen de bouwblokken. 
+Deze pagina beschrijft de interacties tussen de bouwblokken voor het opstarten van de zorgviewer en het ontsluiten van de bronsystemen. 
 Dit is de startpagina voor het bouwteam.
 
 ### Actors
 
-Scope is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge), en Topicus VIPlive (bij Dokter Drenthe aangesloten partijen).
+Scope MVP2 is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge), en Topicus VIPlive (bij Dokter Drenthe aangesloten partijen).
 
 ### IHE System Actors
 
@@ -121,14 +121,6 @@ Met de Zorgviewer MVP2 zullen we een toestemming realiseren volgens de afspraken
 <div>
 {% include Zorgviewer-seq-2.svg %}
 </div>
-
-### Bevragen terminologie
-
-*TODO*
-Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
-
-**Van toepassing zijnde standaarden en documentatie**:
-* [FHIR Terminology Service](https://hl7.org/fhir/STU3/terminology-service.html)
 
 ### Bevragen bronsystemen zorgaanbieders
 
