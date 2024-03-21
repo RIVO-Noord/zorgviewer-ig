@@ -1,427 +1,440 @@
 {
-    "resourceType": "ImplementationGuide",
-    "id": "hl7.fhir.nl.zorgviewer-ig",
-    "url": "http://hl7.nl/fhir/zorgviewer/ImplementationGuide/zorgviewer-ig",
-    "version": "0.24.0",
-    "name": "zorgviewer-ig",
-    "title": "RIVO-Noord Zorgviewer MVP2 Implementation Guide",
-    "status": "draft",
-    "experimental": false,
-    "publisher": "RIVO-NN HL7NL",
-    "contact" : [ {
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.nl.zorgviewer-ig",
+  "url": "http://hl7.nl/fhir/zorgviewer/ImplementationGuide/zorgviewer-ig",
+  "version": "0.24.0",
+  "name": "zorgviewer-ig",
+  "title": "RIVO-Noord Zorgviewer MVP2 Implementation Guide",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "RIVO-NN HL7NL",
+  "contact": [
+    {
       "name": "RIVO-NN",
-      "telecom" : [ {
-        "system" : "url",
-        "value" : "https://rivo-noord.nl"
-      } ]
-    }, {
-      "name" : "HL7NL",
-      "telecom" : [ {
-        "system" : "url",
-        "value" : "https://hl7.nl"
-      } ]      
-    } ],
-    "description": "A brief description of what MyIG is about (probably the same text as in your readme)",
-    "jurisdiction" : [{
-      "coding" : [{
-        "system" : "urn:iso:std:iso:3166",
-        "code" : "NL"
-      }]
-    }],
-    "packageId": "hl7.fhir.nl.zorgviewer",
-    "fhirVersion": [ "3.0.2" ],
-    "dependsOn": [
-      {
-        "uri": "https://simplifier.net/packages/hl7.terminology.r3/5.3.0",
-        "packageId": "hl7.terminology.r3",
-        "version": "5.3.0"
-      },
-      {
-        "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.18",
-        "packageId": "nictiz.fhir.nl.stu3.zib2017",
-        "version": "2.2.18"
-      }
-    ],
-    "definition": {
-      "grouping": [
+      "telecom": [
         {
-          "id": "group-zs",
-          "name": "Zorgviewer Services Content",
-          "description": "Zie [Zorgviewer Services pagina](zorgviewer-services.html) voor details."
+          "system": "url",
+          "value": "https://rivo-noord.nl"
         }
-      ],
-      "resource": [
+      ]
+    },
+    {
+      "name": "HL7NL",
+      "telecom": [
         {
-          "reference": {
-            "reference": "Organization/UMCG"
-          },
-          "description": "Deze instance bevat de organization identifiers voor het UMCG.",
-          "name": "Organization UMCG",
-          "groupingId": "group-zs"
-        },
-        {
-          "reference": {
-            "reference": "Organization/Tjongerschans"
-          },
-          "name": "Organization Tjongerschans",
-          "description": "Deze instance bevat de organization identifiers voor het Tjongerschans.",
-          "groupingId": "group-zs"
-        },
-        {
-          "reference": {
-            "reference": "Organization/MCL"
-          },
-          "description": "Deze instance bevat de organization identifiers voor het MCL.",
-          "name": "Organization MCL",
-          "groupingId": "group-zs"
-        },
-        {
-          "reference": {
-            "reference": "Organization/VIPLive"
-          },
-          "description": "Deze instance bevat de identifiers voor VIPLive.",
-          "name": "Organization VIPLive",
-          "groupingId": "group-zs"
-        },
-        {
-          "reference": {
-            "reference": "Endpoint/UMCG"
-          },
-          "description": "Dit is een voorbeeld Epic Endpoint voor UMCG.",
-          "name": "Epic UMCG Endpoint Example",
-          "groupingId": "group-zs"
-        },
-        {
-          "reference": {
-            "reference": "Patient/eXxP1o8ZlOz21F6HXS9puLA3"
-          },
-          "description": "Dit is een Patient voorbeeld uit Epic.",
-          "name": "Epic Patient Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient"
-        },
-        {
-          "reference": {
-            "reference": "Condition/e-ZZJzEApAU6z8DStznS9pQ3"
-          },
-          "description": "Dit is een Probleem voorbeeld uit Epic.",
-          "name": "Epic Condition Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition"
-        },
-        {
-          "reference": {
-            "reference": "Condition/eod0yZoGGXEapUI7nJwX4tA3"
-          },
-          "description": "Dit is een Probleem voorbeeld uit Epic met een overzicht notitie.",
-          "name": "Epic Condition Example met overzicht notitie",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition"
-        },
-        {
-          "reference": {
-            "reference": "Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3"
-          },
-          "description": "Dit is een Zorgverlener voorbeeld uit Epic.",
-          "name": "Epic Practitioner Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner"
-        },
-        {
-          "reference": {
-            "reference": "Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT"
-          },
-          "description": "Dit is een Zorgverlener voorbeeld uit Epic waarin qualifier is vertaald van Epic SER 6000 code naar SNOMED CT.",
-          "name": "Epic Practitioner Example met SNOMED CT",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner"
-        },
-        {
-          "reference": {
-            "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1"
-          },
-          "description": "Dit is een Patient voorbeeld uit Chipsoft.",
-          "name": "Chipsoft Patient Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient"
-        },
-        {
-          "reference": {
-            "reference": "Consent/81eacbcf-6d60-436a-a78f-e2962839a42f"
-          },
-          "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Chipsoft.",
-          "name": "Chipsoft TreatmentDirective Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/TreatmentDirective"
-        },
-        {
-          "reference": {
-            "reference": "Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3"
-          },
-          "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Epic.",
-          "name": "Epic TreatmentDirective Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/TreatmentDirective"
-        },
-        {
-          "reference": {
-            "reference": "Consent/190c12af-49d4-4553-8009-c816ab622a3e"
-          },
-          "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Topicus.",
-          "name": "Topicus TreatmentDirective Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/TreatmentDirective"
-        },
-        {
-          "reference": {
-            "reference": "Consent/2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449"
-          },
-          "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Chipsoft.",
-          "name": "Chipsoft AdvanceDirective Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AdvanceDirective"
-        },
-        {
-          "reference": {
-            "reference": "Consent/eCSfaTk2.C2TeVxgQk.zOgw3"
-          },
-          "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Epic.",
-          "name": "Epic AdvanceDirective Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AdvanceDirective"
-        },
-        {
-          "reference": {
-            "reference": "Consent/eGuoY.m8DiRaUvsn.5w5Etg3"
-          },
-          "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Epic.",
-          "name": "Epic AdvanceDirective Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AdvanceDirective"
-        },
-        {
-          "reference": {
-            "reference": "Practitioner/b5160776-43dc-43e1-9bb7-a6e3edf8e63d"
-          },
-          "description": "Dit is een Zorgverlener voorbeeld uit Chipsoft.",
-          "name": "Chipsoft Practitioner Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner"
-        },
-        {
-          "reference": {
-            "reference": "Condition/a20d2048-e1b7-467d-8bb5-28142af195d6"
-          },
-          "description": "Dit is een Probleem voorbeeld uit Chipsoft.",
-          "name": "Chipsoft Condition Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition"
-        },
-        {
-          "reference": {
-            "reference": "PlanDefinition/BgZ2017"
-          },
-          "description": "Deze PlanDefinition bevat de (data) definitie van de BgZ 2017. Dit is de basis view voor alle zorgverleners.",
-          "name": "PlanDefinition BgZ 2017"
-        },
-        {
-          "reference": {
-            "reference": "Organization/eXovwVA3zYl3U3fBH8mdkxw3"
-          },
-          "description": "Dit is een Organisatie voorbeeld uit Epic.",
-          "name": "Epic Organization Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization"
-        },
-        {
-          "reference": {
-            "reference": "DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi"
-          },
-          "description": "Dit is een Document Verwijzing voorbeeld uit Epic.",
-          "name": "Epic DocumentReference Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/DocumentReference"
-        },
-        {
-          "reference": {
-            "reference": "Procedure/2.16.840.1.113883.2.4.3.124.7.47519.41230000001716"
-          },
-          "description": "Dit is een Verrichting voorbeeld uit Chipsoft.",
-          "name": "Chipsoft Procedure Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure"
-        },
-        {
-          "reference": {
-            "reference": "Procedure/flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4"
-          },
-          "description": "Dit is een Verrichting voorbeeld uit Epic.",
-          "name": "Epic Procedure Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure"
-        },
-        {
-          "reference": {
-            "reference": "Procedure/VPwS1rhM16bYvo-c52ce7kwRKeEaUOJaDIeHsOSNJzFTQLcTN5Lcg7N50uR5v1Z4"
-          },
-          "description": "Dit is een Verrichting voorbeeld uit Epic (Surgical History).",
-          "name": "Epic Procedure (Surgical History) Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure"
-        },
-        {
-          "reference": {
-            "reference": "Flag/ac907bbc-89bd-45db-ab23-fdb11dd01a78"
-          },
-          "description": "Dit is een Alert voorbeeld uit Chipsoft.",
-          "name": "Chipsoft Alert Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Flag"
-        },
-        {
-          "reference": {
-            "reference": "Flag/fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4"
-          },
-          "description": "Dit is een Alert voorbeeld uit Epic.",
-          "name": "Epic Alert Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Flag"
-        },
-        {
-          "reference": {
-            "reference": "Observation/f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4"
-          },
-          "description": "Dit is een Lab-uitslag voorbeeld uit Epic.",
-          "name": "Epic Lab-uitslag Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/LaboratoryTestResult"
-        },
-        {
-          "reference": {
-            "reference": "Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3"
-          },
-          "description": "Dit is een Lab-uitslag voorbeeld uit Epic.",
-          "name": "Epic Lab-uitslag Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/LaboratoryTestResult"
-        },
-        {
-          "reference": {
-            "reference": "Observation/39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C"
-          },
-          "description": "Dit is een Lab-uitslag voorbeeld uit Chipsoft.",
-          "name": "Chipsoft Lab-uitslag Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/LaboratoryTestResult"
-        },
-        {
-          "reference": {
-            "reference": "Specimen/edAE6aGl0-InKRnWJAWRiChE4AhLNTRTlNIiljUcUA-I3"
-          },
-          "description": "Dit is een Specimen voorbeeld uit Epic.",
-          "name": "Epic Specimen Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Specimen"
-        },
-        {
-          "reference": {
-            "reference": "Specimen/exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3"
-          },
-          "description": "Dit is een Specimen voorbeeld uit Epic.",
-          "name": "Epic Specimen Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Specimen"
-        },
-        {
-          "reference": {
-            "reference": "Specimen/35648ae9-a74d-4800-9f15-4e436ebd12c8"
-          },
-          "description": "Dit is een Specimen voorbeeld uit Chipsoft.",
-          "name": "Chipsoft Specimen Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Specimen"
-        },
-        {
-          "reference": {
-            "reference": "AuditEvent/example-auditevent-zorgviewer"
-          },
-          "description": "Dit is een AuditEvent voorbeeld uit de Zorgviewer.",
-          "name": "Zorgviewer AuditEvent Example",
-          "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AuditEvent"
-        }
-      ],
-      "page": {
-        "nameUrl": "index.html",
-        "generation": "markdown",
-        "title": "Home Page",
-        "page": [
-          {
-            "nameUrl": "conformance.html",
-            "generation": "markdown",
-            "title": "Conformance"
-          },
-          {
-            "nameUrl": "nen-normen.html",
-            "generation": "markdown",
-            "title": "EGIZ NEN Normen Conformiteit"
-          },
-          {
-            "nameUrl": "datasets.html",
-            "generation": "markdown",
-            "title": "Datasets"
-          },
-          {
-            "nameUrl": "must-support.html",
-            "generation": "markdown",
-            "title": "Must Support"
-          },
-          {
-            "nameUrl": "design.html",
-            "generation": "markdown",
-            "title": "Design"
-          },
-          {
-            "nameUrl": "design2.html",
-            "generation": "markdown",
-            "title": "Design 2024"
-          },
-          {
-            "nameUrl": "design-background.html",
-            "generation": "markdown",
-            "title": "Design Achtergrond"
-          },
-          {
-            "nameUrl": "security-design.html",
-            "generation": "markdown",
-            "title": "Security Design"
-          },
-          {
-            "nameUrl": "zorgviewer-services.html",
-            "generation": "markdown",
-            "title": "Zorgviewer Services"
-          },
-          {
-            "nameUrl": "downloads.html",
-            "generation": "markdown",
-            "title": "Useful Downloads"
-          },
-          {
-            "nameUrl": "testing.html",
-            "generation": "markdown",
-            "title": "Testing"
-          },
-          {
-            "nameUrl": "checklists.html",
-            "generation": "markdown",
-            "title": "Checklists & Aansluiten"
-          },
-          {
-            "nameUrl": "changes.html",
-            "generation": "markdown",
-            "title": "IG Change History"
-          },
-          {
-            "nameUrl": "copyrights.html",
-            "generation": "markdown",
-            "title": "Copyrights"
-          },
-          {
-            "nameUrl": "searchform.html",
-            "generation": "markdown",
-            "title": "Search Form"
-          }
-        ]
-      },
-      "parameter": [
-        {
-          "code" : "releaselabel",
-          "value": "CI build"
-        },
-        {
-          "code" : "copyrightyear",
-          "value": "2023+"
-        },
-        {
-          "code" : "excludettl",
-          "value" : "true"
-        },
-        {
-          "code" : "display-warnings",
-          "value" : "true"
+          "system": "url",
+          "value": "https://hl7.nl"
         }
       ]
     }
+  ],
+  "description": "A brief description of what MyIG is about (probably the same text as in your readme)",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "NL"
+        }
+      ]
+    }
+  ],
+  "packageId": "hl7.fhir.nl.zorgviewer",
+  "fhirVersion": [
+    "3.0.2"
+  ],
+  "dependsOn": [
+    {
+      "uri": "https://simplifier.net/packages/hl7.terminology.r3/5.3.0",
+      "packageId": "hl7.terminology.r3",
+      "version": "5.3.0"
+    },
+    {
+      "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.18",
+      "packageId": "nictiz.fhir.nl.stu3.zib2017",
+      "version": "2.2.18"
+    }
+  ],
+  "definition": {
+    "grouping": [
+      {
+        "id": "group-zs",
+        "name": "Zorgviewer Services Content",
+        "description": "Zie [Zorgviewer Services pagina](zorgviewer-services.html) voor details."
+      }
+    ],
+    "resource": [
+      {
+        "reference": {
+          "reference": "Organization/UMCG"
+        },
+        "description": "Deze instance bevat de organization identifiers voor het UMCG.",
+        "name": "Organization UMCG",
+        "groupingId": "group-zs"
+      },
+      {
+        "reference": {
+          "reference": "Organization/Tjongerschans"
+        },
+        "name": "Organization Tjongerschans",
+        "description": "Deze instance bevat de organization identifiers voor het Tjongerschans.",
+        "groupingId": "group-zs"
+      },
+      {
+        "reference": {
+          "reference": "Organization/MCL"
+        },
+        "description": "Deze instance bevat de organization identifiers voor het MCL.",
+        "name": "Organization MCL",
+        "groupingId": "group-zs"
+      },
+      {
+        "reference": {
+          "reference": "Organization/VIPLive"
+        },
+        "description": "Deze instance bevat de identifiers voor VIPLive.",
+        "name": "Organization VIPLive",
+        "groupingId": "group-zs"
+      },
+      {
+        "reference": {
+          "reference": "Endpoint/UMCG"
+        },
+        "description": "Dit is een voorbeeld Epic Endpoint voor UMCG.",
+        "name": "Epic UMCG Endpoint Example",
+        "groupingId": "group-zs"
+      },
+      {
+        "reference": {
+          "reference": "Patient/eXxP1o8ZlOz21F6HXS9puLA3"
+        },
+        "description": "Dit is een Patient voorbeeld uit Epic.",
+        "name": "Epic Patient Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient"
+      },
+      {
+        "reference": {
+          "reference": "Condition/e-ZZJzEApAU6z8DStznS9pQ3"
+        },
+        "description": "Dit is een Probleem voorbeeld uit Epic.",
+        "name": "Epic Condition Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition"
+      },
+      {
+        "reference": {
+          "reference": "Condition/eod0yZoGGXEapUI7nJwX4tA3"
+        },
+        "description": "Dit is een Probleem voorbeeld uit Epic met een overzicht notitie.",
+        "name": "Epic Condition Example met overzicht notitie",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3"
+        },
+        "description": "Dit is een Zorgverlener voorbeeld uit Epic.",
+        "name": "Epic Practitioner Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT"
+        },
+        "description": "Dit is een Zorgverlener voorbeeld uit Epic waarin qualifier is vertaald van Epic SER 6000 code naar SNOMED CT.",
+        "name": "Epic Practitioner Example met SNOMED CT",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner"
+      },
+      {
+        "reference": {
+          "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1"
+        },
+        "description": "Dit is een Patient voorbeeld uit Chipsoft.",
+        "name": "Chipsoft Patient Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient"
+      },
+      {
+        "reference": {
+          "reference": "Consent/81eacbcf-6d60-436a-a78f-e2962839a42f"
+        },
+        "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Chipsoft.",
+        "name": "Chipsoft TreatmentDirective Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/TreatmentDirective"
+      },
+      {
+        "reference": {
+          "reference": "Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3"
+        },
+        "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Epic.",
+        "name": "Epic TreatmentDirective Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/TreatmentDirective"
+      },
+      {
+        "reference": {
+          "reference": "Consent/190c12af-49d4-4553-8009-c816ab622a3e"
+        },
+        "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Topicus.",
+        "name": "Topicus TreatmentDirective Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/TreatmentDirective"
+      },
+      {
+        "reference": {
+          "reference": "Consent/2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449"
+        },
+        "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Chipsoft.",
+        "name": "Chipsoft AdvanceDirective Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AdvanceDirective"
+      },
+      {
+        "reference": {
+          "reference": "Consent/eCSfaTk2.C2TeVxgQk.zOgw3"
+        },
+        "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Epic.",
+        "name": "Epic AdvanceDirective Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AdvanceDirective"
+      },
+      {
+        "reference": {
+          "reference": "Consent/eGuoY.m8DiRaUvsn.5w5Etg3"
+        },
+        "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Epic.",
+        "name": "Epic AdvanceDirective Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AdvanceDirective"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/b5160776-43dc-43e1-9bb7-a6e3edf8e63d"
+        },
+        "description": "Dit is een Zorgverlener voorbeeld uit Chipsoft.",
+        "name": "Chipsoft Practitioner Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner"
+      },
+      {
+        "reference": {
+          "reference": "Condition/a20d2048-e1b7-467d-8bb5-28142af195d6"
+        },
+        "description": "Dit is een Probleem voorbeeld uit Chipsoft.",
+        "name": "Chipsoft Condition Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition"
+      },
+      {
+        "reference": {
+          "reference": "PlanDefinition/BgZ2017"
+        },
+        "description": "Deze PlanDefinition bevat de (data) definitie van de BgZ 2017. Dit is de basis view voor alle zorgverleners.",
+        "name": "PlanDefinition BgZ 2017"
+      },
+      {
+        "reference": {
+          "reference": "Organization/eXovwVA3zYl3U3fBH8mdkxw3"
+        },
+        "description": "Dit is een Organisatie voorbeeld uit Epic.",
+        "name": "Epic Organization Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization"
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi"
+        },
+        "description": "Dit is een Document Verwijzing voorbeeld uit Epic.",
+        "name": "Epic DocumentReference Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/DocumentReference"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/2.16.840.1.113883.2.4.3.124.7.47519.41230000001716"
+        },
+        "description": "Dit is een Verrichting voorbeeld uit Chipsoft.",
+        "name": "Chipsoft Procedure Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4"
+        },
+        "description": "Dit is een Verrichting voorbeeld uit Epic.",
+        "name": "Epic Procedure Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/VPwS1rhM16bYvo-c52ce7kwRKeEaUOJaDIeHsOSNJzFTQLcTN5Lcg7N50uR5v1Z4"
+        },
+        "description": "Dit is een Verrichting voorbeeld uit Epic (Surgical History).",
+        "name": "Epic Procedure (Surgical History) Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure"
+      },
+      {
+        "reference": {
+          "reference": "Flag/ac907bbc-89bd-45db-ab23-fdb11dd01a78"
+        },
+        "description": "Dit is een Alert voorbeeld uit Chipsoft.",
+        "name": "Chipsoft Alert Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Flag"
+      },
+      {
+        "reference": {
+          "reference": "Flag/fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4"
+        },
+        "description": "Dit is een Alert voorbeeld uit Epic.",
+        "name": "Epic Alert Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Flag"
+      },
+      {
+        "reference": {
+          "reference": "Observation/f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4"
+        },
+        "description": "Dit is een Lab-uitslag voorbeeld uit Epic.",
+        "name": "Epic Lab-uitslag Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/LaboratoryTestResult"
+      },
+      {
+        "reference": {
+          "reference": "Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3"
+        },
+        "description": "Dit is een Lab-uitslag voorbeeld uit Epic.",
+        "name": "Epic Lab-uitslag Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/LaboratoryTestResult"
+      },
+      {
+        "reference": {
+          "reference": "Observation/39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C"
+        },
+        "description": "Dit is een Lab-uitslag voorbeeld uit Chipsoft.",
+        "name": "Chipsoft Lab-uitslag Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/LaboratoryTestResult"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/edAE6aGl0-InKRnWJAWRiChE4AhLNTRTlNIiljUcUA-I3"
+        },
+        "description": "Dit is een Specimen voorbeeld uit Epic.",
+        "name": "Epic Specimen Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Specimen"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3"
+        },
+        "description": "Dit is een Specimen voorbeeld uit Epic.",
+        "name": "Epic Specimen Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Specimen"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/35648ae9-a74d-4800-9f15-4e436ebd12c8"
+        },
+        "description": "Dit is een Specimen voorbeeld uit Chipsoft.",
+        "name": "Chipsoft Specimen Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Specimen"
+      },
+      {
+        "reference": {
+          "reference": "AuditEvent/example-auditevent-zorgviewer"
+        },
+        "description": "Dit is een AuditEvent voorbeeld uit de Zorgviewer.",
+        "name": "Zorgviewer AuditEvent Example",
+        "exampleCanonical": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AuditEvent"
+      }
+    ],
+    "page": {
+      "nameUrl": "index.html",
+      "generation": "markdown",
+      "title": "Home Page",
+      "page": [
+        {
+          "nameUrl": "conformance.html",
+          "generation": "markdown",
+          "title": "Conformance"
+        },
+        {
+          "nameUrl": "nen-normen.html",
+          "generation": "markdown",
+          "title": "EGIZ NEN Normen Conformiteit"
+        },
+        {
+          "nameUrl": "datasets.html",
+          "generation": "markdown",
+          "title": "Datasets"
+        },
+        {
+          "nameUrl": "must-support.html",
+          "generation": "markdown",
+          "title": "Must Support"
+        },
+        {
+          "nameUrl": "design.html",
+          "generation": "markdown",
+          "title": "Design"
+        },
+        {
+          "nameUrl": "design2.html",
+          "generation": "markdown",
+          "title": "Design 2024"
+        },
+        {
+          "nameUrl": "design-background.html",
+          "generation": "markdown",
+          "title": "Design Achtergrond"
+        },
+        {
+          "nameUrl": "security-design.html",
+          "generation": "markdown",
+          "title": "Security Design"
+        },
+        {
+          "nameUrl": "zorgviewer-services.html",
+          "generation": "markdown",
+          "title": "Zorgviewer Services"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "generation": "markdown",
+          "title": "Useful Downloads"
+        },
+        {
+          "nameUrl": "testing.html",
+          "generation": "markdown",
+          "title": "Testing"
+        },
+        {
+          "nameUrl": "checklists.html",
+          "generation": "markdown",
+          "title": "Checklists & Aansluiten"
+        },
+        {
+          "nameUrl": "changes.html",
+          "generation": "markdown",
+          "title": "IG Change History"
+        },
+        {
+          "nameUrl": "copyrights.html",
+          "generation": "markdown",
+          "title": "Copyrights"
+        },
+        {
+          "nameUrl": "searchform.html",
+          "generation": "markdown",
+          "title": "Search Form"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "releaselabel",
+        "value": "CI build"
+      },
+      {
+        "code": "copyrightyear",
+        "value": "2023+"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "display-warnings",
+        "value": "true"
+      }
+    ]
   }
+}

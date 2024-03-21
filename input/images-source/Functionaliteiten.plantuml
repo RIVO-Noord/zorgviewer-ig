@@ -1,35 +1,37 @@
 @startuml
 
-skinparam nodesep 1
+skinparam nodesep 2
 skinparam ranksep 1
 
+!include <archimate/Archimate>
+
 package "Zorgviewer" {
- (Patient\nbanner)
- (Weergave\ngegevens)
- (Sorteren)
- (Conflicten\nattenderen)
- (Ontdubbelen\ngegevens)
- (Filtering obv\nBehandelplan)
+  Application_Function(af1, "Patient\nbanner")
+  Application_Function(af2, "Weergave\ngegevens")
+  Application_Function(af3, "Sorteren")
+  Application_Function(af4, "Conflicten\nattenderen")
+  Application_Function(af5, "Ontdubbelen\ngegevens")
+  Application_Function(af6, "Filtering obv\nBehandelplan")
 }
 
 package "Zorgviewer Host" {
- (Opstart\nZorgviewer)
- (Stelt\nidentity vast)
- (Controle\nbehandelrelatie)
- (Patient\nselectie)
- (Zorgverlener\ngegevens)
- (Zorgverlener\nrollen)
+  Application_Function(af7, "Opstart\nZorgviewer")
+  Application_Function(af8, "Stelt\nidentity vast")
+  Application_Function(af9, "Controle\nbehandelrelatie")
+  Application_Function(af10, "Patient\nselectie")
+  Application_Function(af11, "Zorgverlener\ngegevens")
+  Application_Function(af12, "Zorgverlener\nrollen")
 }
 
 cloud {
  package "Behandelplan" {
-  (Behandelplannen\nadhv diagnose)
-  (Relevante gegevens\nadhv zorgpad)
-  (Relevante gegevens\nadhv rol)
+   Application_Function(af13, "Behandelplannen\nadhv diagnose")
+   Application_Function(af14, "Relevante gegevens\nadhv zorgpad")
+   Application_Function(af15, "Relevante gegevens\nadhv rol")
  }
  package "Toestemming & Patientindex" {
-  (Toegestane\nbronsystemen patient)
-  (Bronsystemen\nendpoints)
+   Application_Function(af16, "Toegestane\nbronsystemen patient")
+   Application_Function(af17, "Bronsystemen\nendpoints")
  }
 }
 
