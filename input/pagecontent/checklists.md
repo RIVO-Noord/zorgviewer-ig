@@ -143,7 +143,8 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 	* 5.2.2 Knop is dan alleen beschikbaar wanneer iemand in een (poli)klinisch contact van een patiënt kan
 
 * 5.3 Controleren van de "unmasked BSN" setting
-	* Open de juiste Shared Security Class (ECL) en controleer of item 20511 gevuld is met een record 'SNN' met item 20512 gevuld met 'data is masked only in printing (masking code)' [3]
+	* Open de juiste Shared Security Class (ECL). Zie hiervoor het EMP record item 20800.
+	* Controleer of item 20511 gevuld is met een record 'SNN' met item 20512 gevuld met 'data is masked only in printing (masking code)' [3]
 
 **Stap 6: Testen van de volledige bouw**
 
