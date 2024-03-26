@@ -480,6 +480,42 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  <a href="https://gal
   </li>
 </ul>
 
+<p><strong><em>Toegang tot data regelen met Break-The-Glass (BTG)</em></strong></p>
+<ul>
+  <li>5.4 De bouw van BTG bestaat uit het maken van de regel (CER), de extensie (LPP) en de Security Policy Check (HAC)
+    <ul>
+      <li>
+        <p>5.4.1 Maak een regel (CER):
+  Wanneer deze regel waar is, dan krijgt de gebruiker GEEN toegang tot de gegevens
+  <em>Logica:</em> Op maat: (1 and (2 or 3))
+  | Nr | Eigenschap | Operator | Waarde |
+  |–|–|–|–|
+  | 1 | Constant &gt; User &gt; C_User Role | = |  <GEMAAKTE BACKGROUND="" USER=""> Checklist stap 3.1 |
+  | 2 | Patient &gt; C_Patient Verification &gt; C_PT_VRX | &lt;&gt; | Geverifieerd [1] |
+  | 3 | Patient &gt; CE - Has Prospective Auth | &lt;&gt; | Ja [1] |
+  Foutmelding "1"</GEMAAKTE></p>
+      </li>
+      <li>5.4.2 Maak een extensie (LPP)
+        <ul>
+          <li>Type (i30) = BTG Check [89]</li>
+          <li>Code (i100)= $$chkRule^HUBTGCK9(“ID VAN GEMAAKTE CER”)</li>
+          <li>Code template (i1000) = CHECK: USE RULE TO EVALUATE BTG [606558]</li>
+          <li>Parameters (Related i1000)= Naam [RULEID] (i1010) &amp; Waarde [ID VAN GEMAAKTE CER] (i1020)</li>
+        </ul>
+      </li>
+      <li>5.4.3 Maak een Security Policy Check (HAC)
+        <ul>
+          <li>Released (i40) = Uiteindelijk releasen -&gt; Yes [2]</li>
+          <li>Check level (i55) = Patient</li>
+          <li>View list (i105) = FHIR</li>
+          <li>Extensions to run (i110) = ID VAN GEMAAKTE LPP</li>
+          <li>Success type (i120) = Inappropriate [1]</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 <p><strong>Stap 6: Testen van de volledige bouw</strong></p>
 
 <h3 id="chipsoft-huizen">Chipsoft huizen</h3>
@@ -557,7 +593,7 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  <a href="https://gal
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.24.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Mar 26, 2024 07:52+0000">2024-03-26</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.24.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Mar 26, 2024 09:40+0000">2024-03-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
