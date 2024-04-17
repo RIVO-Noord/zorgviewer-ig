@@ -303,7 +303,7 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 <ul>
   <li><a href="https://www.vektis.nl/agb-register/zoeken">Vektiz AGB Register zoeken</a></li>
   <li><a href="https://www.vektis.nl/agb-register/onderneming-06020101">Vektiz AGB Register UMCG</a></li>
-  <li><a href="https://www.hl7.nl/component/phocadownload/category/13-oid.html">HL7 NL OID Register</a></li>
+  <li><a href="https://hl7.nl/actuele-hl7-nl-oid-register.html">HL7 NL OID Register</a></li>
 </ul>
 
 <h3 id="requests">Requests</h3>
@@ -318,7 +318,7 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 
 <h3 id="bronsysteem-herkennen">Bronsysteem herkennen</h3>
 
-<p>De <em>Zorgviewer-backend</em> of <em>Ontsluiten bronsysteem</em> <strong>MOET</strong> na bevragen van het bronsysteem aan elk resultaat resource een meta-tag toevoegen met de VEKTIS AGB-Z code of de HL7 NL OID van de zorgaanbieder. Dit wordt vervolgens gebruikt in de “Bron” kolom in de Zorgviewer-frontend. N.B. We gebruiken hier een pre-adopt van de FHIR R4 Meta.source.</p>
+<p>De <em>Zorgviewer-backend</em> of <em>Ontsluiten bronsysteem</em> <strong>MOET</strong> na bevragen van het bronsysteem aan elk resultaat resource een meta-tag toevoegen met de <a href="https://www.vektis.nl/agb-register/zoeken">VEKTIS AGB-Z code</a> of de <a href="https://hl7.nl/actuele-hl7-nl-oid-register.html">HL7 NL OID</a> van de zorgaanbieder. Dit wordt vervolgens gebruikt in de “Bron” kolom in de Zorgviewer-frontend. N.B. We gebruiken hier een pre-adopt van de FHIR R4 Meta.source.</p>
 
 <p>Toevoegen aan elke response, dus per resource (bij een read) of per Bundle (bij een search):</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -329,7 +329,7 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p><a name="l548">​</a><em>Optioneel:</em> Elke entry van een search response Bundle bevat een referentie naar de bijbehorende Patient (<code class="language-plaintext highlighter-rouge">&lt;resource&gt;.subject|patient</code>). Elke patient heeft een <code class="language-plaintext highlighter-rouge">Patient.managingOrganization</code> en in de gerefereerde <code class="language-plaintext highlighter-rouge">Organization.identifier</code> staat vervolgens o.a. de OID van het bronsysyeem. Of je gebruikt de identifiers om een volledige Organization op te zoeken in het <a href="zorgviewer-services.html#adressering">adresboek</a> en zie inhoud <a href="artifacts.html#zorgviewer-services">hier</a>.</p>
+<p><a name="l554">​</a><em>Optioneel:</em> Elke entry van een search response Bundle bevat een referentie naar de bijbehorende Patient (<code class="language-plaintext highlighter-rouge">&lt;resource&gt;.subject|patient</code>). Elke patient heeft een <code class="language-plaintext highlighter-rouge">Patient.managingOrganization</code> en in de gerefereerde <code class="language-plaintext highlighter-rouge">Organization.identifier</code> staat vervolgens o.a. de OID van het bronsysyeem. Of je gebruikt de identifiers om een volledige Organization op te zoeken in het <a href="zorgviewer-services.html#adressering">adresboek</a> en zie inhoud <a href="artifacts.html#zorgviewer-services">hier</a>.</p>
 
 
 </div>
@@ -2598,7 +2598,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.24.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Apr 17, 2024 15:46+0000">2024-04-17</span>
+          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.24.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Apr 17, 2024 15:52+0000">2024-04-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
