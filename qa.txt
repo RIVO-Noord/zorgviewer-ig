@@ -1,10 +1,10 @@
 zorgviewer-ig : Validation Results
 =========================================
 
-err = 136, warn = 83, info = 92
+err = 137, warn = 84, info = 92
 IG Publisher Version: 1.6.5
-Generated Wed Apr 17 15:56:26 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#0.24.0 (canonical = http://hl7.nl/fhir/zorgviewer)
- Build Errors : 11 / 2 / 0
+Generated Wed Apr 17 16:06:44 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#0.24.0 (canonical = http://hl7.nl/fhir/zorgviewer)
+ Build Errors : 11 / 3 / 0
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Chipsoft : 2 / 0 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Epic : 3 / 1 / 4
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective2-Epic : 3 / 1 / 4
@@ -67,6 +67,7 @@ Generated Wed Apr 17 15:56:26 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgv
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ConceptMap-patient-toestemming : 0 / 7 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Endpoint-UMCG : 0 / 0 / 2
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-MCL : 0 / 0 / 2
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-OZGDelfzicht : 1 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-Tjongerschans : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-UMCG : 0 / 0 / 2
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-VIPLive : 0 / 0 / 1
@@ -79,6 +80,7 @@ Generated Wed Apr 17 15:56:26 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgv
 == n/a ==
 WARNING: ImplementationGuide.dependency[0].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 WARNING: ImplementationGuide.dependency[1].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/OZGDelfzicht.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/output/StructureDefinition-AdvanceDirective.html#/html/body/div/div/div/div/div/div/p/a at Line 370, column 630: The link 'artifacts.html#zorgviewer-services' for "hier" cannot be resolved (valid targets: [terminology-value-sets, project-nav, publish-box, segment-post-footer, hl7-search-lnk, family-logo, top, example-example-instances, stripe, segment-footer, behavior-capability-statements, segment-content, terminology-concept-maps, zorgviewer-services-content, project-logo, structures-extension-definitions, segment-header, bottom, structures-resource-profiles, family-nav, ig-status, artifacts-summary, 1, 2, terminology-code-systems, 3, 4, knowledge-artifacts-plan-definitions, 5, 6, 7, 8, 9, segment-navbar, segment-breadcrumb])
 ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/output/StructureDefinition-Condition.html#/html/body/div/div/div/div/div/div/p/a at Line 419, column 630: The link 'artifacts.html#zorgviewer-services' for "hier" cannot be resolved (valid targets: [terminology-value-sets, project-nav, publish-box, segment-post-footer, hl7-search-lnk, family-logo, top, example-example-instances, stripe, segment-footer, behavior-capability-statements, segment-content, terminology-concept-maps, zorgviewer-services-content, project-logo, structures-extension-definitions, segment-header, bottom, structures-resource-profiles, family-nav, ig-status, artifacts-summary, 1, 2, terminology-code-systems, 3, 4, knowledge-artifacts-plan-definitions, 5, 6, 7, 8, 9, segment-navbar, segment-breadcrumb])
 ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/output/StructureDefinition-DocumentReference.html#/html/body/div/div/div/div/div/div/p/a at Line 413, column 630: The link 'artifacts.html#zorgviewer-services' for "hier" cannot be resolved (valid targets: [terminology-value-sets, project-nav, publish-box, segment-post-footer, hl7-search-lnk, family-logo, top, example-example-instances, stripe, segment-footer, behavior-capability-statements, segment-content, terminology-concept-maps, zorgviewer-services-content, project-logo, structures-extension-definitions, segment-header, bottom, structures-resource-profiles, family-nav, ig-status, artifacts-summary, 1, 2, terminology-code-systems, 3, 4, knowledge-artifacts-plan-definitions, 5, 6, 7, 8, 9, segment-navbar, segment-breadcrumb])
@@ -454,6 +456,8 @@ WARNING: ConceptMap/patient-toestemming: ConceptMap.group[0]: No Target Code Sys
 INFORMATION: Endpoint/UMCG: Endpoint.payloadType[0]: Reference to draft CodeSystem http://hl7.org/fhir/resource-types|3.0.2
 == input/resources/Organization-MCL.json ==
 INFORMATION: Organization/MCL: Organization.identifier[2]: This element does not match any known slice defined in the profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.24.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== input/resources/Organization-OZGDelfzicht.json ==
+ERROR: Organization/OZGDelfzicht: Organization: Constraint failed: zv-org-1: 'Organization AGB SHALL be present.'
 == input/resources/Organization-Tjongerschans.json ==
 == input/resources/Organization-UMCG.json ==
 INFORMATION: Organization/UMCG: Organization.identifier[2]: This element does not match any known slice defined in the profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Organization|0.24.0 (this may not be a problem, but you should check that it's not intended to match a slice)
