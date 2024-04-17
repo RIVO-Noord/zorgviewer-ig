@@ -6,7 +6,7 @@
     "name": "behandelaanwijzing2017to2020",
     "title": "Behandelaanwijzing 2017 BehandelingAanwijzing2 2020 Mapping",
     "status": "active",
-    "experimental": true,
+    "experimental": false,
     "description": "Deze ConceptMap representeert de mapping tussen de BehandelingAanwijzing 2017 en de BehandelAanwijzing2 2020.",
     "jurisdiction" : [{
       "coding" : [{
@@ -22,38 +22,62 @@
         "target": "2.16.840.1.113883.2.4.3.11.60.40.3.2.2",
         "element": [
           {
-            "code": "Beperkingen",
+            "code": "NL-CM:2.1.5",
+            "display": "Beperkingen",
             "target": [
               {
-                "code": "SpecificatieAnders",
+                "code": "NL-CM:2.2.4",
+                "display": "SpecificatieAnders",
                 "equivalence": "equivalent"
               }
             ]
           },
           {
-            "code": "BeginDatum",
+            "code": "NL-CM:2.1.6",
+            "display": "BeginDatum",
             "target": [
               {
-                "code": "MeestRecenteBespreekdatum",
+                "code": "NL-CM:2.2.5",
+                "display": "MeestRecenteBespreekdatum",
                 "equivalence": "equal"
               }
             ]
           },
           {
-            "code": "EindDatum",
+            "code": "NL-CM:2.1.7",
+            "display": "EindDatum",
             "target": [
               {
-                "code": "DatumBeeindigd",
+                "code": "NL-CM:2.2.6",
+                "display": "DatumBeeindigd",
                 "equivalence": "equivalent"
               }
             ]
           },
           {
-            "code": "Toelichting",
+            "code": "NL-CM:2.1.15",
+            "display": "Toelichting",
             "target": [
               {
-                "code": "Toelichting",
+                "code": "NL-CM:2.2.13",
+                "display": "Toelichting",
                 "equivalence": "equal"
+              }
+            ]
+          },
+          {
+            "code": "NL-CM:2.1.11",
+            "display": "GeverifieerdBij",
+            "target": [
+              {
+                "code": "NL-CM:2.2.10",
+                "display": "AfspraakPartij/Patient",
+                "equivalence": "equivalent"
+              },
+              {
+                "code": "NL-CM:2.2.11",
+                "display": "Vertegenwoordiger::Contactpersoon",
+                "equivalence": "equivalent"
               }
             ]
           }

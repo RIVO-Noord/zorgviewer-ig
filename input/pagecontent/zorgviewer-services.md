@@ -6,6 +6,14 @@ De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal w
 * Inhoud: Vertalingen (ValueSet, CodeSystem, ConceptMap)
 * Tijdelijk: CodeSystem en ValueSets in deze IG.
 
+#### Bevragen terminologie
+
+*TODO sequence diagram uitwerken*
+Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
+
+**Van toepassing zijnde standaarden en documentatie**:
+* [FHIR Terminology Service](https://hl7.org/fhir/STU3/terminology-service.html)
+
 ### [Toestemming / PatientIndex](CapabilityStatement-Toestemming.html)
 
 * Doel: landelijke MITZ open vraag

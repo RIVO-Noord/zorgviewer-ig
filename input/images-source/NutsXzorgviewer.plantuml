@@ -1,0 +1,160 @@
+@startuml
+hide footbox
+autonumber
+
+box Opvrager
+    actor Zorgverlener
+    box "Zorgaanbieder eigen systeem"
+      participant "Zorgviewer\nHost" as Host
+      participant Authenticatie
+      participant "Eigen\nbronsysteem" as EBron
+        end box
+
+    !pragma teoz true
+    box "Zorgviewer" #SpringGreen
+        participant "Zorgviewer\nFrontend" as ZVFE
+        participant "Zorgviewer\nBackend" as ZVBE
+        participant "Zorgviewer Nuts Node" as ZVNode
+    end box
+    participant "Mitz Localisatie" as MitzLocalisatie
+end box
+
+participant Adressering
+
+box "Andere zorgaanbieder bronsysteem\n(meerdere)"
+  participant "Toestemming\n~MITZ" as Toestemming
+  box "Bronhouder ontsluiting" #orange
+      participant "API Security" as AOBron
+      participant "Bronsysteem Nuts Node" as BronNode
+  end box
+  participant "Bronsysteem" as ABron
+end box
+
+note over Host
+  CHECK: Zorgaanbieder is deelnermer RIVO-Noord
+  CHECK: Zorgaanbieder staat in [[https://www.nen.nl/certificatie-en-keurmerken-nen-7510 NEN 7510 register]]
+end note
+note over Adressering
+    Addresering wordt nu
+    voorzien door de Nuts nodes
+end note
+
+== Start Zorgviewer Host ==
+
+Zorgverlener->Host: start EPD
+activate Zorgverlener
+activate Host
+Zorgverlener->Host: inloggen met lokale identiteit
+Host->Authenticatie
+activate Authenticatie
+Authenticatie ->x Authenticatie
+note left
+  CHECK: authenticatie
+end note
+deactivate Authenticatie
+Zorgverlener->Host: selecteer patient
+Host ->x Host
+note left
+  CHECK: behandelrelatie
+end note
+
+...
+
+== Start Zorgviewer ==
+
+Zorgverlener->Host: start Zorgviewer
+Host ->x Host
+note left
+  CHECK: op basis van security context
+    "knop" wel of niet tonen
+end note
+Host->ZVFE: start met context
+activate ZVFE
+ZVFE ->x ZVFE
+note left
+  CHECK: whitelist
+  CHECK: token validatie
+end note
+ZVFE<->Authenticatie: authenticatie handshake
+note left
+  CHECK: applicatie
+end note
+destroy Authenticatie
+
+== Huidige patient en gebruiker ==
+
+group (OPT) als niet al in context
+  ZVFE-->ZVBE: opvragen huidige gebruiker\nen patient details
+  activate ZVBE
+  ZVBE-->EBron: (OPT) opvragen gebruiker\nen patient details
+  note left
+    CHECK: access token
+    CHECK: client certificate
+  end note
+  destroy EBron
+end
+ZVFE->ZVFE: toon gebruiker en patient\nidentiteit details
+
+== Netwerk identieit aanmaken ==
+
+ZVBE -> ZVNode: signing session starten
+activate ZVNode
+ZVNode -> ZVNode : Render EmployeeIdentity
+note left
+  Zorginstelling verklaard de identiteit van de gebruiker
+  De gebruik bevestigt deze.
+end note
+Zorgverlener -> ZVNode : bevestigen identiteit
+deactivate ZVNode
+ZVBE -> ZVNode: ophalen EmployeeIdentity
+
+== Patient dossier ==
+
+ZVBE->MitzLocalisatie: vraag bronhouders voor patient op
+note right
+  ~MITZ Open autorisatievraag
+end note
+destroy Toestemming
+ZVBE->ZVNode: vraag endpoints op van organizaties\nobv de toestemmingen
+note right
+  Endpoints uit Nuts node
+end note
+destroy Adressering
+loop Voor ieder endpoint
+  ZVBE -> BronNode : verkrijg access_token mbv EmployeeIdentity
+  ZVBE->AOBron: opvragen gegevens
+  activate AOBron
+  AOBron ->x AOBron
+  note left
+    CHECK: ip/ACL
+  end note
+  AOBron -> BronNode : valideer access_token
+  destroy BronNode
+  note right
+    CHECK: access token
+    CHECK: opvrager identiteit
+    CHECK: EmployeeIdentity
+  end note
+  AOBron->ABron: opvragen gegevens
+  activate ABron
+  ABron ->x ABron
+  note left
+    CHECK: ip/ACL
+    CHECK: backend token
+    CHECK: client certificate
+  end note
+  ABron->Toestemming: ~MITZ Gesloten autorisatie vraag
+  ABron ->x ABron
+  note left
+    CHECK: vraag gesteld zonder MITZ toestemming
+  end note
+  ABron-->AOBron: gegevens
+  deactivate ABron
+  AOBron-->ZVBE: gegevens
+  deactivate AOBron
+end
+ZVBE-->ZVFE: toon geaggregeerde gegevens
+deactivate ZVBE
+deactivate ZVFE
+
+@enduml

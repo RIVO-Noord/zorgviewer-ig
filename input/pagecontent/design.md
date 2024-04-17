@@ -1,11 +1,11 @@
 <style>table, td, th { border: 1px solid black; padding:5px; }</style>
 
-Deze pagina beschrijft de interacties tussen de systemen. 
+Deze pagina beschrijft de interacties tussen de bouwblokken voor het opstarten van de zorgviewer en het ontsluiten van de bronsystemen. 
 Dit is de startpagina voor het bouwteam.
 
 ### Actors
 
-Scope is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge), en Topicus VIPlive (bij Dokter Drenthe aangesloten partijen).
+Scope MVP2 is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge), en Topicus VIPlive (bij Dokter Drenthe aangesloten partijen).
 
 ### IHE System Actors
 
@@ -122,14 +122,6 @@ Met de Zorgviewer MVP2 zullen we een toestemming realiseren volgens de afspraken
 {% include Zorgviewer-seq-2.svg %}
 </div>
 
-### Bevragen terminologie
-
-*TODO*
-Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
-
-**Van toepassing zijnde standaarden en documentatie**:
-* [FHIR Terminology Service](https://hl7.org/fhir/STU3/terminology-service.html)
-
 ### Bevragen bronsystemen zorgaanbieders
 
 **Van toepassing zijnde standaarden en documentatie**:
@@ -175,7 +167,7 @@ Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende orga
 
 Tbv het correleren van de Zorgviewer logging met de logging van een Bronsysteem dient een `X-Correlation-Id` HTTP Header (per sessie) en een `X-Request-Id` HTTP Header (per request) te worden toegevoegd aan ieder request aan het Bronsysteem. Deze kan dan door het Bronsysteem gelogd worden, zodat de logging in de Zorgviewer kan worden gekoppeld aan de logging in het Bronsysteem.
 Epic ondersteunt dit nu d.m.v. key-value pairs in de `AORTA-ID` HTTP-Header, zie [Epic Nova](https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072).
-Voorbeeld voor Epic HTTP-Header van "L. Arts uit Tjongerschans": `AORTA-ID: req=1b9d6bCd-bBf; usr=larts; rol=62247001; org=2.16.528.1.1007.3.3.15123`. N.B. zonder de sessionId, want de maximale lengte is 128 characters.
+Voorbeeld voor Epic HTTP-Header van "L. Arts uit Tjongerschans": `AORTA-ID: rid:1b9d6bCd-bBf;cid:yA8UM8fHmhde;usr:larts;rol:62247001;org:2.16.528.1.1007.3.3.15123`. N.B. maximale lengte is 128 characters.
 Voor de Request- en Correlation-ID's kan de [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) 12 tekens gebruikt.
 
 Voorbeeld van de headers:
@@ -241,8 +233,8 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 | Practitioner Role | X-ZV-Subject-Role | auth_token.user_role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | auth_token.subject_role en HTTP-Header AORTA-ID rol | `code=62247001 display=huisarts system=SNOMED CT` | Practitioner.qualification[system=sct] |
 | Practitioner Name |   |   | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials + professional.family_name | auth_token.subject_name | `L. Arts` | Practitioner.name |
 | Organization OID | X-ZV-Subject-Organization-Id | auth_token.sub | urn:oasis:names:tc:xspa:1.0:subject:organization-id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | auth_token.subject_organization_id en HTTP-Header AORTA-ID org | `2.16.528.1.1007.3.3.15123` | Practitioner.meta[extension=source] |
-| Correlation ID | X-Correlation-Id |   | &#8656; | &#8656; | nvt | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `H54f_8b9d6bC` | nvt |
-| Request ID | X-Request-Id |   | &#8656; | &#8656; | HTTP-Header AORTA-ID req | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `1b9d6bCd-bBf` | nvt |
+| Correlation ID | X-Correlation-Id |   | &#8656; | &#8656; | HTTP-Header AORTA-ID cid | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `H54f_8b9d6bC` | nvt |
+| Request ID | X-Request-Id |   | &#8656; | &#8656; | HTTP-Header AORTA-ID rid | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `1b9d6bCd-bBf` | nvt |
 | Context | X-ZV-Context |   | &#8656; | &#8656; | &#8656; | zie boven |   |
 
 

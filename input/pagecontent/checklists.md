@@ -142,6 +142,37 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 	* 5.2.1 Plaats de knop in de patiëntencontext en respecteer hierbij eigen Break-the-Glass regels
 	* 5.2.2 Knop is dan alleen beschikbaar wanneer iemand in een (poli)klinisch contact van een patiënt kan
 
+* 5.3 Controleren van de "unmasked BSN" setting
+	* Open de juiste Shared Security Class (ECL). Zie hiervoor het EMP record item 20800.
+	* Controleer of item 20511 gevuld is met een record 'SNN' met item 20512 gevuld met 'data is masked only in printing (masking code)' [3]
+
+***Toegang tot data regelen met Break-The-Glass (BTG)***
+* 5.4 De bouw van BTG bestaat uit het maken van de regel (CER), de extensie (LPP) en de Security Policy Check (HAC)
+	* 5.4.1 Maak een regel (CER):
+	Wanneer deze regel waar is, dan krijgt de gebruiker GEEN toegang tot de gegevens
+	*Logica:* Op maat: (1 and (2 or 3))
+
+| Nr | Eigenschap | Operator | Waarde |
+| --- | --- | --- | --- |
+| 1 | Constant > User > C_User Role | = |  <GEMAAKTE BACKGROUND USER> Checklist stap 3.1 |
+| 2 | Patient > C_Patient Verification > C_PT_VRX | <> | Geverifieerd [1] |
+| 3 | Patient > CE - Has Prospective Auth | <> | Ja [1] |
+	Foutmelding "1"
+
+	* 5.4.2 Maak een extensie (LPP)
+		* Type (i30) = BTG Check [89]
+		* Code (i100)= $$chkRule^HUBTGCK9("ID VAN GEMAAKTE CER")
+		* Code template (i1000) = CHECK: USE RULE TO EVALUATE BTG [606558]
+		* Parameters (Related i1000)= Naam [RULEID] (i1010) & Waarde [ID VAN GEMAAKTE CER] (i1020)
+
+	* 5.4.3 Maak een Security Policy Check (HAC)
+		* Released (i40) = Uiteindelijk releasen -> Yes [2]
+		* Check level (i55) = Patient
+		* View list (i105) = FHIR
+		* Extensions to run (i110) = ID VAN GEMAAKTE LPP
+		* Success type (i120) = Inappropriate [1]
+
+
 **Stap 6: Testen van de volledige bouw**
 
 ### Chipsoft huizen

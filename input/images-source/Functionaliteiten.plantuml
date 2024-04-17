@@ -1,36 +1,37 @@
 @startuml
 
-'left to right direction
-skinparam nodesep 1
+skinparam nodesep 2
 skinparam ranksep 1
 
+!include <archimate/Archimate>
+
 package "Zorgviewer" {
- (Patient banner)
- (Weergave gegevens)
- (Sorteren)
- (Conflicten attenderen)
- (Ontdubbelen gegevens)
- (Filtering obv Behandelplan)
+  Application_Function(af1, "Patient\nbanner")
+  Application_Function(af2, "Weergave\ngegevens")
+  Application_Function(af3, "Sorteren")
+  Application_Function(af4, "Conflicten\nattenderen")
+  Application_Function(af5, "Ontdubbelen\ngegevens")
+  Application_Function(af6, "Filtering obv\nBehandelplan")
 }
 
-package "Epic, Chipsoft, Topicus, Zorgviewer Los" <<Zorgviewer Host>> {
- (Opstart Zorgviewer)
- (Stelt identity vast)
- (Controle behandelrelatie)
- (Patient selectie)
- (Zorgverlener gegevens)
- (Zorgverlener rollen)
+package "Zorgviewer Host" {
+  Application_Function(af7, "Opstart\nZorgviewer")
+  Application_Function(af8, "Stelt\nidentity vast")
+  Application_Function(af9, "Controle\nbehandelrelatie")
+  Application_Function(af10, "Patient\nselectie")
+  Application_Function(af11, "Zorgverlener\ngegevens")
+  Application_Function(af12, "Zorgverlener\nrollen")
 }
 
 cloud {
  package "Behandelplan" {
-  (Behandelplannen adhv diagnose)
-  (Relevante gegevens adhv zorgpad)
-  (Relevante gegevens adhv rol)
+   Application_Function(af13, "Behandelplannen\nadhv diagnose")
+   Application_Function(af14, "Relevante gegevens\nadhv zorgpad")
+   Application_Function(af15, "Relevante gegevens\nadhv rol")
  }
  package "Toestemming & Patientindex" {
-  (Toegestane bronsystemen patient)
-  (Bronsystemen endpoints)
+   Application_Function(af16, "Toegestane\nbronsystemen patient")
+   Application_Function(af17, "Bronsystemen\nendpoints")
  }
 }
 
