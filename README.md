@@ -81,6 +81,22 @@ N.B. Alleen nodig als de [GitHub Snapshot Publish Workflow](.github/workflows/pu
 @> az storage blob upload-batch --overwrite -s /app/output -d '$web' --connection-string "..."
 ```
 
+## Toevoegen publicatie aan de internationale Implementation Guide Registry
+
+### Instructies 
+- https://registry.fhir.org/submit
+- https://github.com/FHIR/ig-registry/blob/master/README.md
+
+### package-feeds.json 
+Zorgt voor opname van de package in de 2 package registers:
+- packages.fhir.org -> https://simplifier.net/packages
+- http://packages2.fhir.org/packages/catalog
+
+### fhir-ig-list.json
+Zorgt voor beschikbaar komen in de searches:
+- https://fhir.org/guides/registry/ (yes, vanaf 3-mei-2024)
+- https://registry.fhir.org/ (hier nog niet 3-mei-2024)
+
 ## Some usefull resources
 
 * Base standards
