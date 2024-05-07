@@ -150,14 +150,17 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 * 5.4 De bouw van BTG bestaat uit het maken van de regel (CER), de extensie (LPP) en de Security Policy Check (HAC)
 	* 5.4.1 Maak een regel (CER):
 	Wanneer deze regel waar is, dan krijgt de gebruiker GEEN toegang tot de gegevens
-	*Logica:* Op maat: (1 and (2 or 3))
+
+*Logica:* Op maat: (1 and (2 or 3))
 
 | Nr | Eigenschap | Operator | Waarde |
 |--|--|--|--|
 | 1 | Constant > User > C_User Role | = |  <GEMAAKTE BACKGROUND USER> Checklist stap 3.1 |
-| 2 | Patient > C_Patient Verification > C_PT_VRX | <> | Geverifieerd [1] |
-| 3 | Patient > CE - Has Prospective Auth | <> | Ja [1] |
-	Foutmelding 1
+| 2 | Patient > C_Patient Verification > C_PT_VRX | <> | Geverifieerd 1 |
+| 3 | Patient > CE - Has Prospective Auth | <> | Ja 1 |
+<br/>7 Use edge browser: 1|
+
+Foutmelding 1
 
 	* 5.4.2 Maak een extensie (LPP)
 		* Type (i30) = BTG Check [89]
