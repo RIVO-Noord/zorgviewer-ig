@@ -198,6 +198,14 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 #### Opstarten van de Zorgviewer vanuit eigen EPD
 1. ...
 
+### Nexus huizen
+
+#### Ontsluiten bronsysteem 
+1. ...
+
+#### Opstarten van de Zorgviewer vanuit eigen EPD
+1. ...
+
 ### Verbinding en TLS Certificaten
 
 1. [NCSC ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS)](https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1)

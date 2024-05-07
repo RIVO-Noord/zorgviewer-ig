@@ -24,21 +24,21 @@ Kolom definities:
     </tr>
     <tr>
       <td>Datum</td>
-      <td><samp>.indexed</samp></td>
+      <td><samp>.context.period.start</samp></td>
       <td><code>dateTime</code></td>
       <td><i>nvt</i></td>
       <td>N.B. tijd is GMT, dus omzetten naar CET.​</td>
     </tr>
     <tr>
       <td>Beschrijving</td>
-      <td><samp>.description:string ​</samp></td>
+      <td><samp>.description​</samp> of <samp>.type.text<samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
       <td></td>
     </tr>
     <tr>
       <td>Auteur</td>
-      <td><samp>.author.display​</samp></td>
+      <td><samp>.author.display</samp> of <samp>.context.practiceSetting.text​</samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
       <td></td>
