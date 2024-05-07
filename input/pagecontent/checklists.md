@@ -156,24 +156,22 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 | Nr | Eigenschap | Operator | Waarde |
 |--|--|--|--|
 | 1 | Constant > User > C_User Role | = |  <GEMAAKTE BACKGROUND USER> Checklist stap 3.1 |
-| 2 | Patient > C_Patient Verification > C_PT_VRX | <> | Geverifieerd 1 |
-| 3 | Patient > CE - Has Prospective Auth | <> | Ja 1 |
-<br/>7 Use edge browser: 1|
-
+| 2 | Patient > C_Patient Verification > C_PT_VRX | <> | Geverifieerd [1] |
+| 3 | Patient > CE - Has Prospective Auth | <> | Ja [1] |
+<br/>
 Foutmelding 1
 
-	* 5.4.2 Maak een extensie (LPP)
-		* Type (i30) = BTG Check [89]
-		* Code (i100)= $$chkRule^HUBTGCK9("ID VAN GEMAAKTE CER")
-		* Code template (i1000) = CHECK: USE RULE TO EVALUATE BTG [606558]
-		* Parameters (Related i1000)= Naam [RULEID] (i1010) & Waarde [ID VAN GEMAAKTE CER] (i1020)
-
-	* 5.4.3 Maak een Security Policy Check (HAC)
-		* Released (i40) = Uiteindelijk releasen -> Yes [2]
-		* Check level (i55) = Patient
-		* View list (i105) = FHIR
-		* Extensions to run (i110) = ID VAN GEMAAKTE LPP
-		* Success type (i120) = Inappropriate [1]
+* 5.4.2 Maak een extensie (LPP)
+	* Type (i30) = BTG Check [89]
+	* Code (i100)= $$chkRule^HUBTGCK9("ID VAN GEMAAKTE CER")
+	* Code template (i1000) = CHECK: USE RULE TO EVALUATE BTG [606558]
+	* Parameters (Related i1000)= Naam [RULEID] (i1010) & Waarde [ID VAN GEMAAKTE CER] (i1020)
+* 5.4.3 Maak een Security Policy Check (HAC)
+	* Released (i40) = Uiteindelijk releasen -> Yes [2]
+	* Check level (i55) = Patient
+	* View list (i105) = FHIR
+	* Extensions to run (i110) = ID VAN GEMAAKTE LPP
+	* Success type (i120) = Inappropriate [1]
 
 
 **Stap 6: Testen van de volledige bouw**
