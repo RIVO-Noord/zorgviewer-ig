@@ -158,7 +158,8 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 | 1 | Constant > User > C_User Role | = |  <GEMAAKTE BACKGROUND USER> Checklist stap 3.1 |
 | 2 | Patient > C_Patient Verification > C_PT_VRX | <> | Geverifieerd [1] |
 | 3 | Patient > CE - Has Prospective Auth | <> | Ja [1] |
-<br/>
+
+
 Foutmelding 1
 
 * 5.4.2 Maak een extensie (LPP)
