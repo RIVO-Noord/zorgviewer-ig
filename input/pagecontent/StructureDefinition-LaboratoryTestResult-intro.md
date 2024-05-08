@@ -48,7 +48,7 @@ Kolom definities:
       <td><code>.interpretation.code</code><br/><code>"AA"</code>: uitroepteken icon, kritiek<br/>
       <code>"281302008" of "H"</code>: pijl omhoog, boven de bovengrens<br/>
       <code>"281300000" of "L"</code>: pijl naar beneden, onder de ondergrens<br/>
-      N.B. Resistent, Intermediar en Sensitief vanuit de standaard zijn niet van toepassing op de klinische chemie. Epic: Indien lab-order geannuleerd, dan wordt deze kolom gevuld met GEANNULEERD. Dit is voor nu akkoord bevonden door stuurgroep Zorgviewer.</td>
+      N.B. Resistent, Intermediar en Sensitief vanuit de standaard zijn niet van toepassing op de klinische chemie. <br/><br/><b>Epic:</b> Indien lab-order geannuleerd, dan wordt deze kolom gevuld met <code>"GEANNULEERD"</code>. Dit is voor nu akkoord bevonden door stuurgroep Zorgviewer.</td>
     </tr>
     <tr>
       <td>Onder- en bovengrens</td>
@@ -69,7 +69,7 @@ Kolom definities:
       <td><samp>.status</samp></td>
       <td><code>code</code></td>
       <td>ResultaatStatus</td>
-      <td>Epic: Indien lab-order geannuleerd, dan krijgt dit alsnog de status Definitief met een Testuitslag van GEANNULEERD. Dit is voor nu akkoord bevonden door stuurgroep Zorgviewer.</td>
+      <td><b>Epic:</b> Indien lab-order geannuleerd, dan krijgt dit alsnog de status Definitief met een Testuitslag van <code>"GEANNULEERD"</code>. Dit is voor nu akkoord bevonden door stuurgroep Zorgviewer.</td>
       <td>​</td>
     </tr>
     <tr style="background-color:#8faadc; color:white">
