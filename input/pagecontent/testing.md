@@ -1,3 +1,5 @@
+Zie in de FHIR specificaties: [Testing FHIR](https://hl7.org/fhir/STU3/testing.html)
+
 ### Sandboxes
 
 * [Official HL7 Logica Sandbox](https://www.logicahealth.org/)
