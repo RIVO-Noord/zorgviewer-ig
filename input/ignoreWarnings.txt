@@ -3,6 +3,9 @@
 Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/jurisdiction|3.0.2
 Unable to validate code without using server%
 
+# Epic known issue
+Invalid Resource id: Too long%
+
 # Terminology server issue?
 Error performing tx3 operation 'validate-code: Cannot invoke "java.util.List.iterator()" because "headers" is null' (parameters = "")
 The code provided (nl-NL) could not be validated against the maximum value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|3.0.2), (error = Error performing tx3 operation 'validate-code: Cannot invoke "java.util.List.iterator()" because "headers" is null' (parameters = ""))
@@ -10,13 +13,13 @@ The code provided (nl-NL) could not be validated against the maximum value set '
 # FHIR core example issue
 if identifier.system is 'urn:ietf:rfc:3986', then the identifier.value must be a full URI (e.g. start with a scheme), not 'Local eCMS identifier'
 
-# ICD-10-NL; not loaded in international terminology server
-Unknown Code (http://hl7.org/fhir/sid/icd-10-nl#%
+# Probably Dutch code; not in international terminology server
+Unknown code%
 
-# Epic internal Code Systems; not loaded in international terminology server
+# Epic internal Code System; not in international terminology server
 Code System URI 'urn:oid:1.2.840.114350.1.13.%
 
-# Zib Code Systems; not loaded in international terminology server
+# Zib Code System; not in international terminology server
 %urn:oid:2.16.840.1.113883.2.4.3.11.60.40.%
 Unable to check whether the code is in the value set http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.%
 Wrong Display Name%
@@ -26,6 +29,8 @@ A code with no system has no defined meaning. A system should be provided
 
 # Known issue in zibs2017 profiles
 %launches straight into slicing without the slicing being set up properly first%
+%is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Condition]%
+Error in constraint 'zib-LaboratoryTestResult-Observation-1'%
 
 # Local copies
 Conformance resource%
