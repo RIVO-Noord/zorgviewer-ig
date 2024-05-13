@@ -1,3 +1,5 @@
+Zie in de FHIR specificaties: [Testing FHIR](https://hl7.org/fhir/STU3/testing.html)
+
 ### Sandboxes
 
 * [Official HL7 Logica Sandbox](https://www.logicahealth.org/)
@@ -36,6 +38,12 @@ Get the latest FHIR Validator.
 
 Run the FHIR Validator on the example Patients against the Zorgviewer profile and Dutch(nl) SNOMED CT.
 ```
-> java -jar validator_cli.jar -version 3.0.2 -ig input/resources -ig ~/.fhir/packages/nictiz.fhir.nl.stu3.zib2017#2.2.8/package/ -sct nl -profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient input/examples/Patient-JFictief.json
-> java -jar validator_cli.jar -version 3.0.2 -ig input/resources -ig ~/.fhir/packages/nictiz.fhir.nl.stu3.zib2017#2.2.8/package/ -sct nl -profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient input/examples/Patient-Chipsoft.json
+> java -jar validator_cli.jar -version 3.0.2 -ig ~/.fhir/packages/hl7.fhir.nl.zorgviewer#dev/package/ -ig ~/.fhir/packages/nictiz.fhir.nl.stu3.zib2017#2.2.18/package/ -sct nl -profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient input/examples/Patient-JFictief.json
+> java -jar validator_cli.jar -version 3.0.2 -ig input/resources -ig ~/.fhir/packages/nictiz.fhir.nl.stu3.zib2017#2.2.18/package/ -sct nl -profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient input/examples/Patient-Chipsoft.json
+```
+
+Run the FHIR Validator on your example output against the Zorgviewer IG and Dutch(nl) SNOMED CT and produce friendly HTML.
+```
+> java -jar validator_cli.jar -version 3.0.2 -ig ~/.fhir/packages/hl7.fhir.nl.zorgviewer#dev/package/ -ig ~/.fhir/packages/nictiz.fhir.nl.stu3.zib2017#2.2.18/package/ -sct nl -language nl -html-output validation.html 20240417\ PDFA\ 3.0.38\ NEXUS\ DocumentReference.json 
+> open validation.html in your favorite browser
 ```
