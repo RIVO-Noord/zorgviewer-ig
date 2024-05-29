@@ -15,16 +15,18 @@ Inzage in het zorgnetwerk van een patiënt/cliënt binnen het zorgdomein.
 ### Afleiden uit beschikbare informatie
 
 In onderstaande tabel staat een overzicht van gegevens die mogelijk het zorg team voor een patient vormen. Zowel de bron in de zib als de bron in FHIR, waar soms meer in staat dan in de zib.
-De laatste kolommen geeft per systeem aan of dit systeem het gegeven verwerkt/bevat/toont ('-' = nvt, '0' = verwerkt dit gegeven niet, '1' verwerkt en toont dit gegeven)
+De laatste 4 kolommen (Zorgviewer, Epic, Zorgplatform, Nexus) geeft per systeem aan of het gegeven (Zorgverlener, Zorginstelling, Datums) verwerkt/bevat/toont.
+
+Legenda: '-' = nvt, '0' = verwerkt dit gegeven niet, '1' verwerkt en toont dit gegeven, '?' = nog uitzoeken
 
 <table border="1" cellspacing="0" cellpadding="0"><colgroup><col width="99"/><col width="99"/><col width="99"/><col width="99"/><col width="99"/><col width="99"/><col width="99"/><col width="99"/></colgroup>
 <tr><th>Zib / FHIR</th>
 <th>Zorgverlener</th>
 <th>Zorginstelling</th>
 <th>Datums</th>
-<th>ZV</th>
+<th>Zorgviewer</th>
 <th>Epic</th>
-<th>ZP</th>
+<th>Zorgplatform</th>
 <th>Nexus</th></tr>
 <tr><td>Patient / Patient</td>
 <td></td>
