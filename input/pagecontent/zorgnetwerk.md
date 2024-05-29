@@ -112,5 +112,3 @@ UMCGheeft ook nog afdeling als 2de locatie! 
 <td>111</td>
 <td>111</td></tr>
 </table>
-
-https://umcgonline.sharepoint.com/sites/RegioIVoverleg-NetwerkzorgarchitectuurOverleg/_layouts/15/Doc.aspx?sourcedoc={abc16798-923b-4b40-8437-399c6865ee70}&action=edit&wd=target%28Architectuur%20Uitwerkingen.one%7Cdf904506-6f83-482b-9892-f063935a28f3%2FZorgviewer%202024%7Ce0798ba7-dee0-45e9-9e2e-1789ed3bc165%2F%29&wdorigin=703
