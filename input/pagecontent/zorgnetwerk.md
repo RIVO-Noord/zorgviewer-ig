@@ -19,7 +19,7 @@ De laatste 4 kolommen (Zorgviewer, Epic, Zorgplatform, Nexus) geeft per systeem 
 
 Legenda: '-' = nvt, '0' = verwerkt dit gegeven niet, '1' verwerkt en toont dit gegeven, '?' = nog uitzoeken
 
-<table border="1" cellspacing="0" cellpadding="0"><colgroup><col width="99"/><col width="99"/><col width="99"/><col width="99"/><col width="99"/><col width="99"/><col width="99"/><col width="99"/></colgroup>
+<table border="1">
 <tr><th>Zib / FHIR</th>
 <th>Zorgverlener</th>
 <th>Zorginstelling</th>
