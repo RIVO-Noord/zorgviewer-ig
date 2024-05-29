@@ -56,18 +56,18 @@ Kolom definities:
   </thead>
   <tbody>
     <tr>
-      <td>correspondence Correspondentie</td>
+      <td>correspondence<br/>Correspondentie</td>
       <td>Healthcare communication Document (56444-3)</td>
       <td>Correspondentie, Patiëntenbrief, Verwijsbrief, Poliklinische brief, Artsenbrief</td>
     </tr>
     <tr>
-      <td>imaging-result Imaging result</td>
+      <td>imaging-result<br/>Imaging result</td>
       <td>Procedure note (28570-0)</td>
       <td>Radiologie verslag</td>
     </tr>
     <tr>
-      <td>clinical-note Notitie</td>
-      <td>Epic clinical-note(s) types from https://vendorservices.epic.com/Sandbox/Index?api=865:
+      <td>clinical-note<br/>Notitie</td>
+      <td>Epic clinical-note(s) types from https://vendorservices.epic.com/Sandbox/Index?api=865
         <ul><li>Discharge Documentation (18842-5)</li>
         <li>Consultation (11488-4)</li>
         <li>History & Physical (34117-2)</li>
