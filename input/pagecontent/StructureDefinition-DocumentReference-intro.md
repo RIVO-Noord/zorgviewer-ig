@@ -31,7 +31,7 @@ Kolom definities:
     </tr>
     <tr>
       <td>Beschrijving</td>
-      <td><samp>.description​</samp> of <samp>.type.text</samp></td>
+      <td><samp>.description​</samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
       <td>Tijdelijk voor Zorgplatform: gebruik <code>content.attachment.title</code> voor de beschrijving van documenten inclusief het strippen van de <code>.pdf</code>extensie</td>
