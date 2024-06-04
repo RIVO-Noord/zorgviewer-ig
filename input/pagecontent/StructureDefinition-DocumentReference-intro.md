@@ -34,13 +34,15 @@ Kolom definities:
       <td><samp>.description​</samp> of <samp>.type.text</samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
+      <td>Tijdelijk voor Zorgplatform: gebruik <code>content.attachment.title</code> voor de beschrijving van documenten inclusief het strippen van de <code>.pdf</code>extensie</td>
       <td></td>
     </tr>
     <tr>
       <td>Auteur</td>
-      <td><samp>.author.display</samp> of <samp>.context.practiceSetting.text​</samp></td>
+      <td><samp>.author.display</samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
+      <td>Tijdelijk voor Zorgplatform: indien <code>.author.display</code> is gevuld met een IOD, dan wordt het veld gevuld met <code>Auteur niet bekend</code></td>
       <td></td>
     </tr> 
   </tbody>
