@@ -3,6 +3,8 @@
 
 Welkom op de implementatiegids van de Zorgviewer. In deze implementatiegids wordt ingegaan op de use-cases en de functionele en technische invulling hiervan. Op de [website van het Regionaal InformatieVoorzieningsOverleg Noord Nederland](http://rivo-noord.nl) kun je meer informatie vinden over de organisatie rondom de Zorgviewer. Op deze website kun je ook meer achtergrond informatie vinden over de [Zorgviewer](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/).
 
+[Deze video](https://www.youtube.com/watch?v=3C2ol2i4w9s) vertelt je in een notendop wat de Zorgviewer is!
+
 #### Leeswijzer implementatiegids
 
 De implementatiegids bestaat uit een aantal tabbladen. Elk tabblad geeft tekst en uitleg over het bepaalde onderdeel.
@@ -12,6 +14,10 @@ De implementatiegids bestaat uit een aantal tabbladen. Elk tabblad geeft tekst e
 - [NEN Conformiteit](nen-normen.html) = de NEN normen van toepassing bij de ontwikkeling van de Zorgviewer.
 - [Datasets](datasets.html) = content van praktijkvoorbeelden (use-cases) voor het inzetten van de Zorgviewer
 - [Must Support](must-support.html) = ...
+
+##### Tabblad: RAO #####
+Dit tabblad is voor de aanvullingen vanuit het Regionaal Architecten Overleg vanuit RIVO
+- [Inzage Zorgnetwerk](zorgnetwerk.html) = overzicht hoe de verschillende systemen acteren rondom de patiënt met als perspectief 'de Zorgviewer'
 
 ##### Tabblad: Design #####
 - [Design](design.html) = startpagina bouwteam met het ontwerp van de Zorgviewer
@@ -56,6 +62,12 @@ De implementatiegids bestaat uit een aantal tabbladen. Elk tabblad geeft tekst e
 1. Verrichtingen
 1. Behandelaanwijzingingen
 1. Laboratorium uitslagen
+1. Alert / waarschuwingen
+1. Allergieën en intoleranties
+1. Medicatie overzicht
+1. Vaccinaties
+1. Overzicht geplande afspraken
+
 
 ### Bouwblokken
 
