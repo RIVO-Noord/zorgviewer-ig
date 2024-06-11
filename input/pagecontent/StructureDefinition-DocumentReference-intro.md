@@ -24,23 +24,27 @@ Kolom definities:
     </tr>
     <tr>
       <td>Datum</td>
-      <td><samp>.context.period.start</samp></td>
+      <td><samp>.context.period.start</samp> of <samp>.indexed</samp> indien <samp>.context.period.start</samp> leeg is</td>
       <td><code>dateTime</code></td>
       <td><i>nvt</i></td>
-      <td>N.B. tijd is GMT, dus omzetten naar CET.​</td>
+      <td>N.B. tijd is GMT, dus omzetten naar CET. 
+      
+  Ter info: indien datum uit ​<samp>.indexed</samp> komt, wordt deze gemarkeerd met een icoontje (i) </td>
     </tr>
     <tr>
       <td>Beschrijving</td>
-      <td><samp>.description​</samp> of <samp>.type.text</samp></td>
+      <td><samp>.description​</samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
+      <td>Tijdelijk voor Zorgplatform: gebruik <code>content.attachment.title</code> voor de beschrijving van documenten inclusief het strippen van de <code>.pdf</code>extensie</td>
       <td></td>
     </tr>
     <tr>
       <td>Auteur</td>
-      <td><samp>.author.display</samp> of <samp>.context.practiceSetting.text​</samp></td>
+      <td><samp>.author.display</samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
+      <td>Tijdelijk voor Zorgplatform: indien <code>.author.display</code> is gevuld met een IOD, dan wordt het veld gevuld met <code>Auteur niet bekend</code></td>
       <td></td>
     </tr> 
   </tbody>
