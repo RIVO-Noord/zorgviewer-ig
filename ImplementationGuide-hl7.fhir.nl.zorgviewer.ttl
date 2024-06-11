@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "zorgviewer-ig"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-06-11T07:37:23+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-06-11T15:37:54+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -153,41 +153,51 @@
      fhir:title [ fhir:v "Home Page" ] ;
      fhir:kind [ fhir:v "resource" ] ;
      fhir:page ( [
-       fhir:source [ fhir:v "conformance.html"^^xsd:anyURI ] ;
+       fhir:source [ fhir:v "0requirements.html"^^xsd:anyURI ] ;
        fhir:title [ fhir:v "Conformance" ] ;
-       fhir:kind [ fhir:v "resource" ]
+       fhir:kind [ fhir:v "resource" ] ;
+       fhir:page ( [
+         fhir:source [ fhir:v "conformance.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Conformance" ] ;
+         fhir:kind [ fhir:v "resource" ]
+       ] [
+         fhir:source [ fhir:v "nen-normen.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "EGIZ NEN Normen Conformiteit" ] ;
+         fhir:kind [ fhir:v "resource" ]
+       ] [
+         fhir:source [ fhir:v "datasets.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Datasets" ] ;
+         fhir:kind [ fhir:v "resource" ]
+       ] [
+         fhir:source [ fhir:v "must-support.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Must Support" ] ;
+         fhir:kind [ fhir:v "resource" ]
+       ] )
      ] [
-       fhir:source [ fhir:v "nen-normen.html"^^xsd:anyURI ] ;
-       fhir:title [ fhir:v "EGIZ NEN Normen Conformiteit" ] ;
-       fhir:kind [ fhir:v "resource" ]
-     ] [
-       fhir:source [ fhir:v "datasets.html"^^xsd:anyURI ] ;
-       fhir:title [ fhir:v "Datasets" ] ;
-       fhir:kind [ fhir:v "resource" ]
-     ] [
-       fhir:source [ fhir:v "must-support.html"^^xsd:anyURI ] ;
-       fhir:title [ fhir:v "Must Support" ] ;
-       fhir:kind [ fhir:v "resource" ]
-     ] [
-       fhir:source [ fhir:v "design.html"^^xsd:anyURI ] ;
+       fhir:source [ fhir:v "0design.html"^^xsd:anyURI ] ;
        fhir:title [ fhir:v "Design" ] ;
-       fhir:kind [ fhir:v "resource" ]
-     ] [
-       fhir:source [ fhir:v "design2.html"^^xsd:anyURI ] ;
-       fhir:title [ fhir:v "Design 2024" ] ;
-       fhir:kind [ fhir:v "resource" ]
-     ] [
-       fhir:source [ fhir:v "design-background.html"^^xsd:anyURI ] ;
-       fhir:title [ fhir:v "Design Achtergrond" ] ;
-       fhir:kind [ fhir:v "resource" ]
-     ] [
-       fhir:source [ fhir:v "security-design.html"^^xsd:anyURI ] ;
-       fhir:title [ fhir:v "Security Design" ] ;
-       fhir:kind [ fhir:v "resource" ]
-     ] [
-       fhir:source [ fhir:v "zorgviewer-services.html"^^xsd:anyURI ] ;
-       fhir:title [ fhir:v "Zorgviewer Services" ] ;
-       fhir:kind [ fhir:v "resource" ]
+       fhir:kind [ fhir:v "resource" ] ;
+       fhir:page ( [
+         fhir:source [ fhir:v "design.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Design" ] ;
+         fhir:kind [ fhir:v "resource" ]
+       ] [
+         fhir:source [ fhir:v "design2.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Design 2024" ] ;
+         fhir:kind [ fhir:v "resource" ]
+       ] [
+         fhir:source [ fhir:v "design-background.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Design Achtergrond" ] ;
+         fhir:kind [ fhir:v "resource" ]
+       ] [
+         fhir:source [ fhir:v "security-design.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Security Design" ] ;
+         fhir:kind [ fhir:v "resource" ]
+       ] [
+         fhir:source [ fhir:v "zorgviewer-services.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Zorgviewer Services" ] ;
+         fhir:kind [ fhir:v "resource" ]
+       ] )
      ] [
        fhir:source [ fhir:v "downloads.html"^^xsd:anyURI ] ;
        fhir:title [ fhir:v "Useful Downloads" ] ;
@@ -197,13 +207,27 @@
        fhir:title [ fhir:v "Testing" ] ;
        fhir:kind [ fhir:v "resource" ]
      ] [
-       fhir:source [ fhir:v "zorgnetwerk.html"^^xsd:anyURI ] ;
-       fhir:title [ fhir:v "Zorgnetwerk" ] ;
-       fhir:kind [ fhir:v "resource" ]
+       fhir:source [ fhir:v "0rao.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "RAO" ] ;
+       fhir:kind [ fhir:v "resource" ] ;
+       fhir:page ( [
+         fhir:source [ fhir:v "zorgnetwerk.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Zorgnetwerk" ] ;
+         fhir:kind [ fhir:v "resource" ]
+       ] )
      ] [
-       fhir:source [ fhir:v "checklists.html"^^xsd:anyURI ] ;
+       fhir:source [ fhir:v "0checklists.html"^^xsd:anyURI ] ;
        fhir:title [ fhir:v "Checklists & Aansluiten" ] ;
-       fhir:kind [ fhir:v "resource" ]
+       fhir:kind [ fhir:v "resource" ] ;
+       fhir:page ( [
+         fhir:source [ fhir:v "checklists.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Checklists & Aansluiten" ] ;
+         fhir:kind [ fhir:v "resource" ]
+       ] [
+         fhir:source [ fhir:v "thermometer.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Aansluit Thermometer" ] ;
+         fhir:kind [ fhir:v "resource" ]
+       ] )
      ] [
        fhir:source [ fhir:v "changes.html"^^xsd:anyURI ] ;
        fhir:title [ fhir:v "IG Change History" ] ;
