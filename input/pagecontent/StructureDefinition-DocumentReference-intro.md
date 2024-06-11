@@ -24,10 +24,12 @@ Kolom definities:
     </tr>
     <tr>
       <td>Datum</td>
-      <td><samp>.context.period.start</samp></td>
+      <td><samp>.context.period.start</samp> of <samp>.indexed</samp> indien <samp>.context.period.start</samp> leeg is</td>
       <td><code>dateTime</code></td>
       <td><i>nvt</i></td>
-      <td>N.B. tijd is GMT, dus omzetten naar CET.​</td>
+      <td>N.B. tijd is GMT, dus omzetten naar CET. 
+      
+  Ter info: indien datum uit ​<samp>.indexed</samp> komt, wordt deze gemarkeerd met een icoontje (i) </td>
     </tr>
     <tr>
       <td>Beschrijving</td>
