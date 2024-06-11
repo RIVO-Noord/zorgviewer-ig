@@ -9,27 +9,32 @@ Welkom op de implementatiegids van de Zorgviewer. In deze implementatiegids word
 
 De implementatiegids bestaat uit een aantal tabbladen. Elk tabblad geeft tekst en uitleg over het bepaalde onderdeel.
 
-##### Tabblad: Requirements #####
-- [Uitgangspunten en Requirements](conformance.html) = uitleg over de uitgangspunten, principes en de uiteindelijke requirements (eisen en wensen) van architectuur en onze gebruikers.
-- [NEN Conformiteit](nen-normen.html) = de NEN normen van toepassing bij de ontwikkeling van de Zorgviewer.
-- [Datasets](datasets.html) = content van praktijkvoorbeelden (use-cases) voor het inzetten van de Zorgviewer
-- [Must Support](must-support.html) = ...
+##### Tabblad: Requirements
 
-##### Tabblad: RAO #####
+- [Uitgangspunten en Requirements](conformance.html) = uitleg over de uitgangspunten, principes en de uiteindelijke requirements (eisen en wensen) van architectuur en onze gebruikers
+- [NEN Conformiteit](nen-normen.html) = de NEN normen van toepassing bij de ontwikkeling van de Zorgviewer
+- [Datasets](datasets.html) = content van praktijkvoorbeelden (use-cases) voor het inzetten van de Zorgviewer
+- [Must Support](must-support.html) = bevat de specifieke interpretatie van "Must Support" in deze FHIR implementatie gids, zie ook [Must Support in de FHIR standaard](https://hl7.org/fhir/STU3/profiling.html#mustsupport)
+
+##### Tabblad: RAO
+
 Dit tabblad is voor de aanvullingen vanuit het Regionaal Architecten Overleg vanuit RIVO
 - [Inzage Zorgnetwerk](zorgnetwerk.html) = overzicht hoe de verschillende systemen acteren rondom de patiënt met als perspectief 'de Zorgviewer'
 
-##### Tabblad: Design #####
+##### Tabblad: Design
+
 - [Design](design.html) = startpagina bouwteam met het ontwerp van de Zorgviewer
 - [Design 2024](design2.html) = startpagina bouwteam met het ontwerp van de Zorgviewer in de 2e fase (2024)
-- [Design Achtergrond](design-background.html) = deze pagina beschrijft de verschillende manieren van inzet Zorgviewer.
+- [Design Achtergrond](design-background.html) = deze pagina beschrijft de verschillende manieren van inzet Zorgviewer
 
-##### Tabblad: Artifact Index #####
+##### Tabblad: Artifact Index
+
 - [Artifact index](artifacts.html) = beschrijving van onder andere de FHIR resources. Deze pagina kan gebruikt worden om de details van de FHIR resources in te zien met een aantal voorbeelden vanuit de verschillende organisaties
 
-##### Tabblad: Checklist & Aansluiten #####
+##### Tabblad: Checklist & Aansluiten
+
 - [Checklists](checklists.html) = startpagina voor aansluiten van nieuwe zorgaanbieders
-- [Thermometer](..) = dit wordt gebruikt in gesprekken met nieuwe leveranciers en bevat een aantal vragen die elke keer aan bod komen bij een nieuwe aansluiting
+- [Thermometer](thermometer.html) = dit wordt gebruikt in gesprekken met nieuwe leveranciers en bevat een aantal vragen die elke keer aan bod komen bij een nieuwe aansluiting
 
 ### Historie Zorgviewer
 
