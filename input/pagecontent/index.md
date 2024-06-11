@@ -1,9 +1,31 @@
 
 ### Introduction
 
-Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/).
+Welkom op de implementatiegids van de Zorgviewer. In deze implementatiegids wordt ingegaan op de use-cases en de functionele en technische invulling hiervan. Op de [website van het Regionaal InformatieVoorzieningsOverleg Noord Nederland](http://rivo-noord.nl) kun je meer informatie vinden over de organisatie rondom de Zorgviewer. Op deze website kun je ook meer achtergrond informatie vinden over de [Zorgviewer](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/).
 
-### Historie
+#### Leeswijzer implementatiegids
+
+De implementatiegids bestaat uit een aantal tabbladen. Elk tabblad geeft tekst en uitleg over het bepaalde onderdeel.
+
+##### Tabblad: Requirements #####
+- [Uitgangspunten en Requirements](conformance.html) = uitleg over de uitgangspunten, principes en de uiteindelijke requirements (eisen en wensen) van architectuur en onze gebruikers.
+- [NEN Conformiteit](nen-normen.html) = de NEN normen van toepassing bij de ontwikkeling van de Zorgviewer.
+- [Datasets](datasets.html) = content van praktijkvoorbeelden (use-cases) voor het inzetten van de Zorgviewer
+- [Must Support](must-support.html) = ...
+
+##### Tabblad: Design #####
+- [Design](design.html) = startpagina bouwteam met het ontwerp van de Zorgviewer
+- [Design 2024](design2.html) = startpagina bouwteam met het ontwerp van de Zorgviewer in de 2e fase (2024)
+- [Design Achtergrond](design-background.html) = deze pagina beschrijft de verschillende manieren van inzet Zorgviewer.
+
+##### Tabblad: Artifact Index #####
+- [Artifact index](artifacts.html) = beschrijving van onder andere de FHIR resources. Deze pagina kan gebruikt worden om de details van de FHIR resources in te zien met een aantal voorbeelden vanuit de verschillende organisaties
+
+##### Tabblad: Checklist & Aansluiten #####
+- [Checklists](checklists.html) = startpagina voor aansluiten van nieuwe zorgaanbieders
+- [Thermometer](..) = dit wordt gebruikt in gesprekken met nieuwe leveranciers en bevat een aantal vragen die elke keer aan bod komen bij een nieuwe aansluiting
+
+### Historie Zorgviewer
 
 | | |
 | --- | --- |
@@ -71,17 +93,10 @@ Hierna volgt een schema met functionaliteiten per bouwblok.
 {% include Functionaliteiten.svg width="60%" %}
 </div>
 
-#### Leeswijzer implementatiegids
-
-- [Datasets](datasets.html) = content van praktijkvoorbeelden
-- [Design](design.html) = startpagina bouwteam
-- [Artifact index](artifacts.html) = beschrijving van onder andere de FHIR resources
-- [Checklists](checklists.html) = startpagina voor aansluiten van nieuwe zorgaanbieders
-
-##### Bijbehorende Zibs zoeken van een FHIR resource 
+#### Bijbehorende Zibs zoeken van een FHIR resource 
 
 * In onderstaande voorbeeld staat "This structure is derived from Zib Problem", deze link gaat naar de volledige zib op Simplifier.net. Op deze site staat onder het tabblad ‘Mappings’ bovenaan in de tabel de directe link naar de zib op zibs.nl.
-* Ook in de link onder het kopje ‘Type’, in dit geval ‘Zib Prolem’ gaat de link naar Simplifier.net. Het ‘Overview’ tabblad is de FHIR-representatie van de Zib. Daarin zitten de Mappings terug naar de Zib. 
+* Ook in de link onder het kopje ‘Type’, in dit geval ‘Zib Problem’ gaat de link naar Simplifier.net. Het ‘Overview’ tabblad is de FHIR-representatie van de Zib. Daarin zitten de Mappings terug naar de Zib. 
 *  In de kolom "Description" staat de naam van het element in de Zib. Via bovenstaande links naar Simplifier.net staat in de kolom ‘Mappings’ de uitgebreide beschrijving.
 <div>
 {% include img.html img="leeswijzer-fhir-resources-en-zibs.png" width="70%" %}
