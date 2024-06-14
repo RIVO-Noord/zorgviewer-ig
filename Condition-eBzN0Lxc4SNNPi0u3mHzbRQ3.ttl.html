@@ -1,0 +1,330 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>null - TTL Representation - RIVO-Noord Zorgviewer Implementation Guide v0.27.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/rivo.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"10.71"}
+    h3,h4,h5,h6{--heading-prefix:"10.71"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://rivo-noord.nl"><img height="50"
+            alt="Visit the RIVO-Noord website" src="assets/images/rivonoord-logo.png" /> </a>
+</div>
+
+<div id="family-nav">
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+    <a id="family-logo" no-external="true" href="https://hl7.nl"><img height="50" alt="Visit the HL7 NL website"
+            src="assets/images/HL7nl_Logo.png" /> </a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">RIVO-Noord Zorgviewer Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.27.0 - CI build
+
+
+
+  <img alt="Netherlands flag" src="assets/images/nld.svg" height="16" title="Netherlands"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requirements &#8964;</a>
+		<ul class="dropdown-menu">
+			<li><a href="conformance.html">Uitgangspunten en Requirements</a></li>
+			<li><a href="nen-normen.html">NEN Normen Conformiteit</a></li>
+			<li><a href="datasets.html">Datasets</a></li>
+			<li><a href="must-support.html">Must Support</a></li>
+		</ul>
+	</li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">RAO &#8964;</a>
+		<ul class="dropdown-menu">
+			<li><a href="zorgnetwerk.html">Inzage Zorgnetwerk</a></li>
+		</ul>
+	</li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
+		<ul class="dropdown-menu">
+			<li><a href="design.html">Design</a></li>
+			<li><a href="design2.html">Design 2024</a></li>
+			<li><a href="design-background.html">Design Achtergrond</a></li>
+			<li><a href="security-design.html">Security Design</a></li>
+			<li><a href="zorgviewer-services.html">Zorgviewer Services</a></li>
+		</ul>
+	</li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Checklists &amp; Aansluiten &#8964;</a>
+		<ul class="dropdown-menu">
+		  <li><a href="checklists.html">Checklists &amp; Aansluiten</a></li>
+		  <li><a href="thermometer.html">Aansluit Thermometer</a></li>
+		  <li><a href="testing.html">Testing</a></li>
+		</ul>
+  </li>
+  <li><a href="copyrights.html">Copyrights</a></li>
+  <li><a href="changes.html">Change Log</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b></b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 9" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v0.27.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Condition-eBzN0Lxc4SNNPi0u3mHzbRQ3.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Condition-eBzN0Lxc4SNNPi0u3mHzbRQ3.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Condition-eBzN0Lxc4SNNPi0u3mHzbRQ3.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: null - TTL Representation</h2>
+
+
+<p><a href="Condition-eBzN0Lxc4SNNPi0u3mHzbRQ3.ttl" no-download="true">Raw ttl</a> | <a href="Condition-eBzN0Lxc4SNNPi0u3mHzbRQ3.ttl" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix loinc: &lt;https://loinc.org/rdf/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix sct: &lt;http://snomed.info/id/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:Condition ;
+  <a href="http://hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
+  <a href="http://hl7.org/fhir/STU3/condition.html#Condition.id">fhir:id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:v</a> &quot;eBzN0Lxc4SNNPi0u3mHzbRQ3&quot;] ; # 
+  <a href="http://hl7.org/fhir/STU3/condition.html#Condition.meta">fhir:meta</a> [
+    ( <a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">fhir:profile</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://nictiz.nl/fhir/StructureDefinition/zib-Problem&quot;^^xsd:anyURI ] )
+  ] ; # 
+  <a href="http://hl7.org/fhir/STU3/condition.html#Condition.text">fhir:text</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Condition &lt;/b&gt;&lt;a name=\&quot;eBzN0Lxc4SNNPi0u3mHzbRQ3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hceBzN0Lxc4SNNPi0u3mHzbRQ3\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;ResourceCondition &amp;quot;eBzN0Lxc4SNNPi0u3mHzbRQ3&amp;quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=http://nictiz.nl/fhir/StructureDefinition/zib-Problem\&quot;&gt;HCIM Problem&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;clinicalStatus&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: Problem List Item &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://hl7.org/fhir/STU3/codesystem-condition-category.html\&quot;&gt;Condition Category Codes&lt;/a&gt;#problem-list-item)&lt;/span&gt;, Health Concern &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://loinc.org/\&quot;&gt;LOINC&lt;/a&gt;#75310-3 &amp;quot;Health concerns&amp;quot;; extension-codes#health-concern)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;severity&lt;/b&gt;: laag &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; ()&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: diabetes mellitus &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/5.3.0/CodeSystem-ICD10dut.html\&quot;&gt;ICD10, Dutch Translation&lt;/a&gt;#E14.9; &lt;a href=\&quot;https://browser.ihtsdotools.org/\&quot;&gt;SNOMED CT&lt;/a&gt;#73211009)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eQ9RflZDe3mcy49MflqNUKQ3\&quot;&gt;https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eQ9RflZDe3mcy49MflqNUKQ3: Beacon, LEEUW.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;onset&lt;/b&gt;: 2021-03-19 --&amp;gt; 2021-03-19&lt;/p&gt;&lt;p&gt;&lt;b&gt;assertedDate&lt;/b&gt;: 2021-03-19&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ; # 
+  <a href="http://hl7.org/fhir/STU3/condition.html#Condition.clinicalStatus">fhir:clinicalStatus</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;active&quot;] ; # 
+  <a href="http://hl7.org/fhir/STU3/condition.html#Condition.category">fhir:category</a> ( [
+    ( <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/condition-category&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;problem-list-item&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Problem List Item&quot; ]     ] ) ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Problem List Item&quot; ]
+  ] [
+    ( <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+a loinc:75310-3 ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://loinc.org&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;75310-3&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Health concerns&quot; ]     ] [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://argonautwiki.hl7.org/extension-codes&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;health-concern&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Health Concern&quot; ]     ] ) ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Health Concern&quot; ]
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/STU3/condition.html#Condition.severity">fhir:severity</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;laag&quot; ]
+  ] ; # 
+  <a href="http://hl7.org/fhir/STU3/condition.html#Condition.code">fhir:code</a> [
+    ( <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/sid/icd-10-nl&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;E14.9&quot; ]     ] [
+a sct:73211009 ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;73211009&quot; ]     ] ) ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;diabetes mellitus&quot; ]
+  ] ; # 
+  <a href="http://hl7.org/fhir/STU3/condition.html#Condition.subject">fhir:subject</a> [
+<a href="http://hl7.org/fhir/STU3/rdf.html#reference">fhir:link</a> &lt;https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eQ9RflZDe3mcy49MflqNUKQ3&gt; ;
+<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eQ9RflZDe3mcy49MflqNUKQ3&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Beacon, LEEUW.&quot; ]
+  ] ; # 
+  <a href="http://hl7.org/fhir/STU3/condition.html#Condition.onset[x]">fhir:onset</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Period">a</a> fhir:Period ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.start">fhir:start</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2021-03-19&quot;^^xsd:date ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.end">fhir:end</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2021-03-19&quot;^^xsd:date ]
+  ] ; # 
+  <a href="http://hl7.org/fhir/STU3/condition.html#Condition.assertedDate">fhir:assertedDate</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2021-03-19&quot;^^xsd:date] . # 
+
+</code></pre>
+
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#0.27.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Jun 14, 2024 08:44+0000">2024-06-14</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
