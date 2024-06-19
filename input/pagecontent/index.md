@@ -40,12 +40,13 @@ Dit tabblad is voor de aanvullingen vanuit het Regionaal Architecten Overleg van
 
 | | |
 | --- | --- |
-| 2020 | [Netwerkzorg Architectuur 1.0](https://jimdo-storage.global.ssl.fastly.net/file/a647b7db-1537-4f74-a4c0-b56066ae9d07/Netwerkzorgarchitectuur%201.0.pdf) vastgesteld
-| 2021-nov | Zorgviewer Prototype middels [dHealthLab](https://dhealth.nl/) Clinical Connectathon Netwerkzorg |
-| 2022 | [Supernova Zorgviewer MVP1](https://www.salesforce.com/nl/blog/2022/05/supernova.html) |
+| tbd | *Connectathon Behandelplan (met HL7 NL?)* |
+| 2025-feb | Zorgviewer - uitbreiding met Nexus en NEDAP |
+| 2024-mrt | Zorgviewer - eerste beperkte live gang met Chipsoft, Epic en VIPlive |
 | 2023 tot 2024-apr | [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/) |
-| 2024-mrt | Zorgviewer 2024 |
-| tbd | *Connectathon Behandelplan (HL7 NL en dHealthLab)* |
+| 2022 | [Supernova Zorgviewer MVP1](https://www.salesforce.com/nl/blog/2022/05/supernova.html) |
+| 2021-nov | Zorgviewer Prototype middels [dHealthLab](https://dhealth.nl/) Clinical Connectathon Netwerkzorg |
+| 2020 | [Netwerkzorg Architectuur 1.0](https://jimdo-storage.global.ssl.fastly.net/file/a647b7db-1537-4f74-a4c0-b56066ae9d07/Netwerkzorgarchitectuur%201.0.pdf) vastgesteld
 
 ### Milestones
 
