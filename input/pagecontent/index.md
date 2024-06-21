@@ -1,18 +1,52 @@
 
 ### Introduction
 
-Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/).
+Welkom op de implementatiegids van de Zorgviewer. In deze implementatiegids wordt ingegaan op de use-cases en de functionele en technische invulling hiervan. Op de [website van het Regionaal InformatieVoorzieningsOverleg Noord Nederland](http://rivo-noord.nl) kun je meer informatie vinden over de organisatie rondom de Zorgviewer. Op deze website kun je ook meer achtergrond informatie vinden over de [Zorgviewer](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/).
 
-### Historie
+[Deze video](https://www.youtube.com/watch?v=3C2ol2i4w9s) vertelt je in een notendop wat de Zorgviewer is!
+
+#### Leeswijzer implementatiegids
+
+De implementatiegids bestaat uit een aantal tabbladen. Elk tabblad geeft tekst en uitleg over het bepaalde onderdeel.
+
+##### Tabblad: Requirements
+
+- [Uitgangspunten en Requirements](conformance.html) = uitleg over de uitgangspunten, principes en de uiteindelijke requirements (eisen en wensen) van architectuur en onze gebruikers
+- [NEN Conformiteit](nen-normen.html) = de NEN normen van toepassing bij de ontwikkeling van de Zorgviewer
+- [Datasets](datasets.html) = content van praktijkvoorbeelden (use-cases) voor het inzetten van de Zorgviewer
+- [Must Support](must-support.html) = bevat de specifieke interpretatie van "Must Support" in deze FHIR implementatie gids, zie ook [Must Support in de FHIR standaard](https://hl7.org/fhir/STU3/profiling.html#mustsupport)
+
+##### Tabblad: RAO
+
+Dit tabblad is voor de aanvullingen vanuit het Regionaal Architecten Overleg vanuit RIVO
+- [Inzage Zorgnetwerk](zorgnetwerk.html) = overzicht hoe de verschillende systemen acteren rondom de patiënt met als perspectief 'de Zorgviewer'
+
+##### Tabblad: Design
+
+- [Design](design.html) = startpagina bouwteam met het ontwerp van de Zorgviewer
+- [Design 2024](design2.html) = startpagina bouwteam met het ontwerp van de Zorgviewer in de 2e fase (2024)
+- [Design Achtergrond](design-background.html) = deze pagina beschrijft de verschillende manieren van inzet Zorgviewer
+
+##### Tabblad: Artifact Index
+
+- [Artifact index](artifacts.html) = beschrijving van onder andere de FHIR resources. Deze pagina kan gebruikt worden om de details van de FHIR resources in te zien met een aantal voorbeelden vanuit de verschillende organisaties
+
+##### Tabblad: Checklist & Aansluiten
+
+- [Checklists](checklists.html) = startpagina voor aansluiten van nieuwe zorgaanbieders
+- [Thermometer](thermometer.html) = dit wordt gebruikt in gesprekken met nieuwe leveranciers en bevat een aantal vragen die elke keer aan bod komen bij een nieuwe aansluiting
+
+### Historie Zorgviewer
 
 | | |
 | --- | --- |
-| 2020 | [Netwerkzorg Architectuur 1.0](https://jimdo-storage.global.ssl.fastly.net/file/a647b7db-1537-4f74-a4c0-b56066ae9d07/Netwerkzorgarchitectuur%201.0.pdf) vastgesteld
-| 2021-nov | Zorgviewer Prototype middels [dHealthLab](https://dhealth.nl/) Clinical Connectathon Netwerkzorg |
-| 2022 | [Supernova Zorgviewer MVP1](https://www.salesforce.com/nl/blog/2022/05/supernova.html) |
+| tbd | *Connectathon Behandelplan (met HL7 NL?)* |
+| 2025-feb | Zorgviewer - uitbreiding met Nexus en NEDAP |
+| 2024-mrt | Zorgviewer - eerste beperkte live gang met Chipsoft, Epic en VIPlive |
 | 2023 tot 2024-apr | [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/) |
-| 2024-mrt | Zorgviewer 2024 |
-| tbd | *Connectathon Behandelplan (HL7 NL en dHealthLab)* |
+| 2022 | [Supernova Zorgviewer MVP1](https://www.salesforce.com/nl/blog/2022/05/supernova.html) |
+| 2021-nov | Zorgviewer Prototype middels [dHealthLab](https://dhealth.nl/) Clinical Connectathon Netwerkzorg |
+| 2020 | [Netwerkzorg Architectuur 1.0](https://jimdo-storage.global.ssl.fastly.net/file/a647b7db-1537-4f74-a4c0-b56066ae9d07/Netwerkzorgarchitectuur%201.0.pdf) vastgesteld
 
 ### Milestones
 
@@ -34,6 +68,12 @@ Zie [RIVO NN](http://rivo-noord.nl) en met name [RIVO-Noord Zorgviewer MVP2 Proj
 1. Verrichtingen
 1. Behandelaanwijzingingen
 1. Laboratorium uitslagen
+1. Alert / waarschuwingen
+1. Allergieën en intoleranties
+1. Medicatie overzicht
+1. Vaccinaties
+1. Overzicht geplande afspraken
+
 
 ### Bouwblokken
 
@@ -71,17 +111,10 @@ Hierna volgt een schema met functionaliteiten per bouwblok.
 {% include Functionaliteiten.svg width="60%" %}
 </div>
 
-#### Leeswijzer implementatiegids
-
-- [Datasets](datasets.html) = content van praktijkvoorbeelden
-- [Design](design.html) = startpagina bouwteam
-- [Artifact index](artifacts.html) = beschrijving van onder andere de FHIR resources
-- [Checklists](checklists.html) = startpagina voor aansluiten van nieuwe zorgaanbieders
-
-##### Bijbehorende Zibs zoeken van een FHIR resource 
+#### Bijbehorende Zibs zoeken van een FHIR resource 
 
 * In onderstaande voorbeeld staat "This structure is derived from Zib Problem", deze link gaat naar de volledige zib op Simplifier.net. Op deze site staat onder het tabblad ‘Mappings’ bovenaan in de tabel de directe link naar de zib op zibs.nl.
-* Ook in de link onder het kopje ‘Type’, in dit geval ‘Zib Prolem’ gaat de link naar Simplifier.net. Het ‘Overview’ tabblad is de FHIR-representatie van de Zib. Daarin zitten de Mappings terug naar de Zib. 
+* Ook in de link onder het kopje ‘Type’, in dit geval ‘Zib Problem’ gaat de link naar Simplifier.net. Het ‘Overview’ tabblad is de FHIR-representatie van de Zib. Daarin zitten de Mappings terug naar de Zib. 
 *  In de kolom "Description" staat de naam van het element in de Zib. Via bovenstaande links naar Simplifier.net staat in de kolom ‘Mappings’ de uitgebreide beschrijving.
 <div>
 {% include img.html img="leeswijzer-fhir-resources-en-zibs.png" width="70%" %}

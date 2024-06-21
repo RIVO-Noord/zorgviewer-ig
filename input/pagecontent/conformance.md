@@ -179,12 +179,12 @@ Er zijn meerdere niveau's van autorisatie, namelijk:
 
 ### Technische Requirements
 
-1. Alle implementaties dienen zich te houden aan [Postel's law, Robustness principle](http://www.healthintersections.com.au/?p=2403)
+1. Alle implementaties dienen zich te houden aan **Postel's law, Robustness principle** [Grahame Grieve](http://www.healthintersections.com.au/?p=2403) of [Mark Kramer](https://lightmyfhir.org/2016/05/25/postels-law-and-fhir-profiles/)
 1. Niet valideren tegen de profiles at-runtime, alleen bij aansluit (zelf) certificeren aan de hand van de [CapabilityStatements](artifacts.html#1) in deze implementatiegids.
 
 ### EHR-S FM Requirements Mapping
 
-Het EHR-S FM is ...
+Het HL7 EHR System Functional Model is een referentie lijst van functies die mogelijk in een EPD Systeem (EHR-S) beschikbaar zijn.
 
 * Bronsysteem Ontsluiting 
     * Alles onder [TI.5 Standards-Based Interoperability](https://vdzel.home.xs4all.nl/ehrsfm-fhir-r5/Requirements-EHRSFMR2.1-TI.5.html)

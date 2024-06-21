@@ -4,21 +4,13 @@
 * [Official Snapshot laatste release](https://implementatiegids.zorgviewer.nl/) of [Snapshot Release](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/snapshot/)
 * [HL7 FHIR CI Build](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/) of [RIVO CI Build](https://rivo-noord.github.io/zorgviewer-ig/)
 * [Releases](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/)
-* [Web-based editor](https://github.dev/RIVO-Noord/zorgviewer-ig/)
+* [Web-based VS Code](https://github.dev/RIVO-Noord/zorgviewer-ig/)
 * [Auto-IG build dashboard](https://fhir.github.io/auto-ig-builder/)
 
 ## Validate resources
 ```
 (initial) > curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o validator_cli.jar
 > java -jar validator_cli.jar -version 3.0.2 input/resources -ig input/resources -ig nictiz.fhir.nl.stu3.zib2017
-```
-
-## (optional) Create IG builder Docker
-```
-> docker run --name=zv -it -v "$(pwd)":/app ubuntu:latest /bin/bash
-@> apt update
-@> apt install jekyll graphviz
-@> dpkg -i jdk-21_linux-x64_bin.deb
 ```
 
 ## To build the IG (need minimal version 1.2.31 dd 1-feb-2023 ivm zib2017 package fix)
@@ -34,9 +26,15 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
   --data '{"ref": "refs/heads/snapshot", "repository": {"full_name": "RIVO-Noord/zorgviewer-ig"}}'
 ```
 
-## Werkwijze Publiceren vanuit git
+## Stappen publiceren IG vanuit git
 
-1. Nieuwe release in master
+1. (optioneel) bouw lokaal de IG en check output
+```
+> docker run --name=zv -it -v "$(pwd)":/app ubuntu:latest /bin/bash
+@> apt update
+@> apt install jekyll graphviz
+@> dpkg -i jdk-21_linux-x64_bin.deb
+```
 1. Werk de ``changes.md`` bij
 1. ``> git commit -a; git push``
 1. Create tag "0.M.R-sprintX" - op github web-UI klik op: 
@@ -56,12 +54,13 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
 > git checkout snapshot
 > git merge 0.M.R-sprintX
 ```
-1. Zet release label in zorgviewer-ig.json op "sprintX".
+1. Zet release label in zorgviewer-ig.json op "sprintX"
 ```
 > vi input/zorgviewer-ig.json
 > git commit -a
 > git push
 ```
+1. Update versions and dates in input/images/package-feed.xml
 1. En werk verder in de master branch
 1. Update input/zorgviewer-ig.json version naar volgende minor "0.M+1.0"
 

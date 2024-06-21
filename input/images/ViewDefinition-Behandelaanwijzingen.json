@@ -1,0 +1,36 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Behandelaanwijzingen",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "resource.period.start",
+          "name": "Datum"
+        },
+        {
+          "path": "resource.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.text",
+          "name": "Behandeling"
+        },
+        {
+          "path": "resource.modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.display",
+          "name": "Behandeling toegestaan"
+        },
+        {
+          "path": "resource.except.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions').value",
+          "name": "Beperkingen"
+        },
+        {
+          "path": "resource.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification').extension.where(url='VerifiedWith').valueCodeableConcept.text.join(' ')",
+          "name": "Geverifieerd bij"
+        },
+        {
+          "path": "resource.status",
+          "name": "status"
+        }
+      ],
+      "forEach": "entry"
+    }
+  ]
+}
