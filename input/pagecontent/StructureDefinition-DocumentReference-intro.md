@@ -37,7 +37,6 @@ Kolom definities:
       <td><code>string</code></td>
       <td><i>nvt</i></td>
       <td>Tijdelijk voor Zorgplatform: gebruik <code>content.attachment.title</code> voor de beschrijving van documenten inclusief het strippen van de <code>.pdf</code>extensie</td>
-      <td></td>
     </tr>
     <tr>
       <td>Auteur</td>
@@ -45,7 +44,6 @@ Kolom definities:
       <td><code>string</code></td>
       <td><i>nvt</i></td>
       <td>Tijdelijk voor Zorgplatform: indien <code>.author.display</code> is gevuld met een OID, dan wordt het veld gevuld met <code>Auteur niet bekend</code></td>
-      <td></td>
     </tr> 
     <tr style="background-color:gray; color:white">
       <td>MimeType (voor filtering op pdf)</td>
@@ -53,7 +51,6 @@ Kolom definities:
       <td><code>string</code></td>
       <td><i>nvt</i></td>
       <td>Alleen <code>application/pdf</code> tonen</td>
-      <td></td>
     </tr> 
   </tbody>
 </table>
