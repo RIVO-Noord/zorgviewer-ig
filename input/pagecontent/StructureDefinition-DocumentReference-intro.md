@@ -47,6 +47,14 @@ Kolom definities:
       <td>Tijdelijk voor Zorgplatform: indien <code>.author.display</code> is gevuld met een OID, dan wordt het veld gevuld met <code>Auteur niet bekend</code></td>
       <td></td>
     </tr> 
+    <tr style="background-color:gray; color:white">
+      <td>MimeType (voor filtering op pdf)</td>
+      <td><samp>.content.attachment.contentType</samp></td>
+      <td><code>string</code></td>
+      <td><i>nvt</i></td>
+      <td>Alleen <code>application/pdf</code> tonen</td>
+      <td></td>
+    </tr> 
   </tbody>
 </table>
 

@@ -1,0 +1,36 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-DocumentReference",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "resource.context.period.start",
+          "name": "Datum1"
+        },
+        {
+          "path": "resource.indexed",
+          "name": "Datum2"
+        },
+        {
+          "path": "resource.desctiption",
+          "name": "Beschrijving1"
+        },
+        {
+          "path": "resource.content.attachment.title",
+          "name": "Beschrijving2"
+        },
+        {
+          "path": "resource.author.display",
+          "name": "Auteur"
+        },
+        {
+          "path": "resource.content.attachment.contentType",
+          "name": "MimeType (voor filteren op pdf)"
+        }
+      ],
+      "forEach": "entry"
+    }
+  ]
+}
