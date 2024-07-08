@@ -48,9 +48,10 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 @> java -jar publisher.jar -ig ig.ini
 ```
 
-### Tag een Releas
+### Tag een Release
 
-1. Werk de ``changes.md`` bij (TODO: beschrijven Michael)
+1. Werk ``input/pagecontent/changes.md`` bij (TODO: beschrijven Michael)
+1. Werk ``input/images/package-feed.xml`` bij (datum, versie, IG publisher versie TODO: beschrijven Michael)
 1. ``> git commit -a; git push``
 1. Create tag "1.M.R-sprintX" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
   1. tags
