@@ -6,20 +6,20 @@
     {
       "column": [
         {
-          "path": "resource.context.period.start",
-          "name": "Datum1"
+          "path": "iif(exists(resource.context.period.start),resource.context.period.start,resource.indexed+'(i)')",
+          "name": "Datum"
         },
         {
-          "path": "resource.indexed",
-          "name": "Datum2"
+          "path": "resource.type.coding[0].code",
+          "name": "Type"
         },
         {
-          "path": "resource.desctiption",
-          "name": "Beschrijving1"
+          "path": "resource.class.coding.code",
+          "name": "Class"
         },
         {
-          "path": "resource.content.attachment.title",
-          "name": "Beschrijving2"
+          "path": "iif(exists(resource.description),resource.description,resource.content.attachment.title)",
+          "name": "Beschrijving"
         },
         {
           "path": "resource.author.display",
