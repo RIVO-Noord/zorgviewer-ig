@@ -44,14 +44,21 @@ Kolom definities:
       <td><code>string</code></td>
       <td><i>nvt</i></td>
       <td>Tijdelijk voor Zorgplatform: indien <code>.author.display</code> is gevuld met een OID, dan wordt het veld gevuld met <code>Auteur niet bekend</code></td>
-    </tr> 
+    </tr>
+    <tr>
+      <td>Specialisme</td>
+      <td><samp>.context.practiceSetting.text</samp></td>
+      <td><code>string</code></td>
+      <td><i>nvt</i></td>
+      <td>Tijdelijk voor Zorgplatform: indien <code>.context.practiceSetting.text</code> is gevuld met een OID, dan wordt het veld gevuld met <code>.context.practiceSetting.coding.code (SCT)</code></td>
+    </tr>
     <tr style="background-color:gray; color:white">
       <td>MimeType (voor filtering op pdf)</td>
       <td><samp>.content.attachment.contentType</samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
       <td>Alleen <code>application/pdf</code> tonen</td>
-    </tr> 
+    </tr>
   </tbody>
 </table>
 
@@ -61,13 +68,18 @@ Kolom definities:
   <thead>
     <th>class (higher level grouping)</th>
     <th>type (http://loinc.org)</th>
-    <th>descriptions</th>
+    <th>type descriptions</th>
   </thead>
   <tbody>
     <tr>
       <td>correspondence<br/>Correspondentie</td>
       <td>Healthcare communication Document (56444-3)</td>
       <td>Correspondentie, Patiëntenbrief, Verwijsbrief, Poliklinische brief, Artsenbrief</td>
+    </tr>
+    <tr>  
+      <td>CS: Brief (51852-2)<br/>CS: Hospital Letter (68609-7)</td>
+      <td>CS: Brief (51852-2)<br/>CS: Hospital Letter (68609-7)</td>
+      <td>{OID?}</td>
     </tr>
     <tr>
       <td>imaging-result<br/>Imaging result</td>
