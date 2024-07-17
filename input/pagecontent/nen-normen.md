@@ -1,5 +1,9 @@
 Op deze pagine beschrijven we de conformiteit met de verschillende NEN normen als gevolg van de [Wet EGIZ](https://www.gegevensuitwisselingindezorg.nl/gegevensuitwisseling/uitleg-over-de-wet) en bijbehorende [NEN-Normen](https://www.nen-egiz.nl/overzicht-normen/) van toepassing op de Zorgviewer.
 
+### Samenhang van alle EGIZ normen
+
+[<img src="https://connect.nen.nl/Scripts/Sunburst/Sunburst_small.png"/>](https://connect.nen.nl/standard/sunburst?infoOn=319920&backRNR=3703744)
+
 ### Normen voor specifieke gegevensuitwisselingen
 
 * [NEN 7540:2022](https://www.nen.nl/nen-7540-2022-ontw-nl-302516) 
