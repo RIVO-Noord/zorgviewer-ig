@@ -1,0 +1,97 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/AllergyIntolerance/2.16.840.1.113883.2.4.3.124.7.48765.212340000000820> a fhir:AllergyIntolerance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "2.16.840.1.113883.2.4.3.124.7.48765.212340000000820"] ; # 
+  fhir:meta [
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Allergy resource:</h3><ul><li><p><strong>Patient:</strong> &#x27;Test Gestructureerd Vipp&#x27;</p></li><li><p><strong>Clinical status:</strong> &#x27;Active&#x27;</p></li><li><p><strong>Verification status:</strong> &#x27;Unconfirmed&#x27;</p></li><li><p><strong>Onset:</strong> &#x27;12-11-2019 14:02&#x2B;0100&#x27;</p></li><li><p><strong>Category:</strong> &#x27;Propensity to adverse reactions to drug&#x27;</p></li><li><p><strong>Criticality:</strong> &#x27;Mild&#x27;</p></li><li><p><strong>Code:</strong> &#x27;ALLE NSAID&#x27;S (INCL. SALICYLATEN)&#x27;</p></li><li><table><thead><tr><th>Reaction</th><th>Manifestation</th></tr></thead><tbody><tr><td>Reaction 1</td><td>Other;</td></tr></tbody></table></li></ul></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.124.7.48765.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "12340000000820" ]
+  ] ) ; # 
+  fhir:clinicalStatus [
+     fhir:v "active" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/code-specification"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/v3/ActStatus"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "active" ] ;
+           fhir:display [ fhir:v "Active" ]
+         ] ) ;
+         fhir:text [ fhir:v "Actief" ]
+       ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [ fhir:v "unconfirmed"] ; # 
+  fhir:category ( [
+     fhir:v "medication" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/code-specification"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:419511003 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "419511003" ] ;
+           fhir:display [ fhir:v "Propensity to adverse reactions to drug" ]
+         ] ) ;
+         fhir:text [ fhir:v "Medicijn" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:criticality [
+     fhir:v "low" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/code-specification"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:255604002 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "255604002" ] ;
+           fhir:display [ fhir:v "Mild" ]
+         ] ) ;
+         fhir:text [ fhir:v "Licht" ]
+       ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.4.1.902.122"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "000039" ] ;
+       fhir:display [ fhir:v "ALLE NSAID'S (INCL. SALICYLATEN)" ]
+     ] ) ;
+     fhir:text [ fhir:v "ALLE NSAID'S (INCL. SALICYLATEN)" ]
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://hl7.nl/fhir/zorgviewer/Patient/12A188A91ED05B87A4335425414F9FBAA6F4462C378D533A8F019C0F20712D36> ;
+     fhir:reference [ fhir:v "Patient/12A188A91ED05B87A4335425414F9FBAA6F4462C378D533A8F019C0F20712D36" ] ;
+     fhir:display [ fhir:v "Test Gestructureerd Vipp" ]
+  ] ; # 
+  fhir:onset [ fhir:v "2019-11-12"^^xsd:date] ; # 
+  fhir:reaction ( [
+     fhir:manifestation ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/v3/NullFlavor"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "OTH" ] ;
+         fhir:display [ fhir:v "other" ]
+       ] ) ;
+       fhir:text [ fhir:v "Huiduitslag" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

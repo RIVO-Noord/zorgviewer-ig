@@ -24,6 +24,12 @@
         "title": "TreatmentDirective"
       }
     ],
+    "AllergyIntolerance": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AllergyIntolerance",
+        "title": "AllergyIntolerance"
+      }
+    ],
     "AuditEvent": [
       {
         "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AuditEvent",
@@ -242,6 +248,10 @@
       "Patient.communication"
     ],
     "http://nictiz.nl/fhir/StructureDefinition/code-specification": [
+      "AllergyIntolerance.category",
+      "AllergyIntolerance.clinicalStatus",
+      "AllergyIntolerance.criticality",
+      "AllergyIntolerance.reaction.severity",
       "Condition.clinicalStatus",
       "Condition.verificationStatus",
       "Observation.status",
@@ -259,6 +269,9 @@
       "Specimen.collection.collected[x]"
     ],
     "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference": [
+      "AllergyIntolerance.asserter",
+      "AllergyIntolerance.note.author[x]",
+      "AllergyIntolerance.recorder",
       "Condition.asserter",
       "Consent.actor.reference",
       "Consent.consentingParty",
