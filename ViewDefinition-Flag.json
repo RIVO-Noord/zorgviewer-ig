@@ -1,0 +1,24 @@
+{
+    "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+    "resource": "Bundle",
+    "id": "ViewDefinition-DocumentReference",
+    "select": [
+      {
+        "column": [
+          {
+            "path": "resource.period.start",
+            "name": "Period"
+          },
+          {
+            "path": "resource.category.text",
+            "name": "Categorie"
+          },
+          {
+            "path": "resource.code.text",
+            "name": "Voor"
+          }
+        ],
+        "forEach": "entry.where(resource.resourceType = 'Flag')"
+      }
+    ]
+  }
