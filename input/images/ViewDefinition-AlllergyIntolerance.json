@@ -1,22 +1,26 @@
 {
     "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
     "resource": "Bundle",
-    "id": "ViewDefinition-DocumentReference",
+    "id": "ViewDefinition-AllergyIntolerance",
     "select": [
       {
         "column": [
           {
-            "path": "resource.category",
-            "name": "Categorie"
+            "path": "resource.period.start",
+            "name": "Datum"
+          },
+          {
+            "path": "resource.code.text",
+            "name": "Voor"
           },
           {
             "path": "resource.criticality",
             "name": "Ernst"
           },
           {
-            "path": "resource.code.text",
-            "name": "Voor"
-          }
+            "path": "resource.category",
+            "name": "Categorie"
+          },
         ],
         "forEach": "entry.where(resource.resourceType = 'AllergyIntolerance')"
       }

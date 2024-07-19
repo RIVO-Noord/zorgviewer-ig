@@ -1,0 +1,37 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AllergyIntolerance",
+    "name": "AllergyIntolerance",
+    "title": "AllergyIntolerance",
+    "status": "draft",
+    "description": "AllergyIntolerance",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Flag",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "AllergyIntolerance.category.text",
+                "path": "AllergyIntolerance.category.text",
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.criticality.text",
+                "path": "AllergyIntolerance.criticality.text",
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.code.text",
+                "path": "AllergyIntolerance.code.text",
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.period.start",
+                "path": "AllergyIntolerance.period.start",
+                "mustSupport": true
+            }
+        ]
+    }
+}
