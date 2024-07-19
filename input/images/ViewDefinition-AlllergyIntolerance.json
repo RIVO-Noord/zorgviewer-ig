@@ -6,7 +6,7 @@
       {
         "column": [
           {
-            "path": "resource.period.start",
+            "path": "iif(exists(resource.onsetPeriod.start),resource.onsetPeriod.start,resource.onsetDateTime)",
             "name": "Datum"
           },
           {
@@ -20,7 +20,7 @@
           {
             "path": "resource.category",
             "name": "Categorie"
-          },
+          }
         ],
         "forEach": "entry.where(resource.resourceType = 'AllergyIntolerance')"
       }
