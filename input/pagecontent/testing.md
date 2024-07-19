@@ -28,8 +28,10 @@ Zie in de FHIR specificaties: [Testing FHIR](https://hl7.org/fhir/STU3/testing.h
 Een tool om een FHIR response als tabel te tonen. Op basis van de "FHIR Path"s in de "Kolom definities" secties van de Profiles in deze implementatie gids kan je eenvoudig van test FHIR response snel als tabel zien. 
 
 * [SQL-on-FHIR](https://fhirpath-lab.azurewebsites.net/sqlonfhir/)
+* [ViewDefinition voor Alerts](ViewDefinition-Flag.json)
+* [ViewDefinition voor Allergieen](ViewDefinition-AllergyIntolerance.json)
 * [ViewDefinition voor Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
-* [ViewDefinition voor DocumentReference](ViewDefinition-DocumentReference.json)
+* [ViewDefinition voor Correspondentie](ViewDefinition-DocumentReference.json)
 
 ### FHIR Validator Web
 
