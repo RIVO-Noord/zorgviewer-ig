@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Flag/354CD8791FE7BB1CF7AAC44891171ECB671D9E91> a fhir:Flag ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "354CD8791FE7BB1CF7AAC44891171ECB671D9E91"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-04-17T10:10:38.386+02:00"^^xsd:dateTime ] ;
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Alert"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Flag. typeCode-SUBJ: Xxx-Helleman, J (M). id: 354CD8791FE7BB1CF7AAC44891171ECB671D9E91 (urn:oid:2.16.840.1.113883.2.4.3.148.1.1), Category: <span title=\"Waarschuwing (74018-3 - LOINC)\">Waarschuwing</span>, Status: status-active</caption>\n                     <tbody>\n                        <tr>\n                           <th>Category</th>\n                           <td>\n                              <span title=\"Waarschuwing (74018-3 - LOINC)\">Waarschuwing</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>code</th>\n                           <td>\n                              <span title=\"LET OP!!!!!\r\nDeze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5. Graag GEEN wijzigingen doorvoeren!!!\r\nAlvast dank namens squad12 (OTH - v3/NullFlavor)\">LET OP!!!!!\r\nDeze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5. Graag GEEN wijzigingen doorvoeren!!!\r\nAlvast dank namens squad12</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Period</th>\n                           <td>FromNoTo 16 May 2022</td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.148.1.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "354CD8791FE7BB1CF7AAC44891171ECB671D9E91" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:category [
+     fhir:coding ( [
+       a loinc:74018-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "74018-3" ] ;
+       fhir:display [ fhir:v "Waarschuwing" ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/v3/NullFlavor"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "OTH" ] ;
+       fhir:display [ fhir:v "LET OP!!!!!\r\nDeze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5. Graag GEEN wijzigingen doorvoeren!!!\r\nAlvast dank namens squad12" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://example.org/Patient/330073> ;
+     fhir:reference [ fhir:v "https://example.org/Patient/330073" ] ;
+     fhir:display [ fhir:v "Xxx-Helleman, J (M)" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-05-16"^^xsd:date ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

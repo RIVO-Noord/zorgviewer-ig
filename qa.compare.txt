@@ -1,22 +1,25 @@
 zorgviewer-ig : Validation Results
 =========================================
 
-err = 135, warn = 60, info = 94
+err = 134, warn = 61, info = 94
 $--
 Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http://hl7.nl/fhir/zorgviewer)
  Build Errors : 16 / 3 / 0
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Chipsoft : 2 / 0 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Epic : 2 / 1 / 5
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective2-Epic : 2 / 1 / 5
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AllergyIntolerance-Chipsoft : 2 / 0 / 4
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AllergyIntolerance-Epic : 3 / 0 / 4
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AllergyIntolerance-Chipsoft : 1 / 0 / 4
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AllergyIntolerance-Epic : 2 / 0 / 4
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AllergyIntolerance-Nexus : 0 / 6 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AuditEvent-Zorgviewer : 0 / 1 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Condition-Chipsoft : 0 / 3 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Condition-Epic : 6 / 3 / 4
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Condition-Epic-note : 6 / 8 / 4
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Condition-Nexus : 1 / 6 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/DocumentReference-Epic : 3 / 0 / 4
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Flag-Chipsoft : 0 / 0 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Flag-Epic : 0 / 3 / 3
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Flag-Nexus : 0 / 2 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/LaboratoryTestResult-Chipsoft : 1 / 5 / 6
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/LaboratoryTestResult-Epic : 1 / 3 / 11
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/LaboratoryTestResult2-Epic : 2 / 4 / 9
@@ -114,12 +117,11 @@ ERROR: Consent/eCSfaTk2.C2TeVxgQk.zOgw3: Consent.category[1].coding[0]: A defini
 == input/examples/AllergyIntolerance-Chipsoft.json ==
 INFORMATION: AllergyIntolerance/2.16.840.1.113883.2.4.3.124.7.48765.212340000000820: AllergyIntolerance.code.coding[0].system: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.1.902.122' could not be found, so the code cannot be validated
 ERROR: AllergyIntolerance/2.16.840.1.113883.2.4.3.124.7.48765.212340000000820: AllergyIntolerance.code.coding[0]: The code provided (urn:oid:2.16.840.1.113883.2.4.4.1.902.122#000039) was not found in the value set 'VeroorzakendeStofThesaurus122Codelijst' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.15--20171231000000|2017-12-31T00:00:00), and a code from this value set is required: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.1.902.122' could not be found, so the code cannot be validated
-ERROR: AllergyIntolerance/2.16.840.1.113883.2.4.3.124.7.48765.212340000000820: AllergyIntolerance.patient: Unable to resolve resource with reference 'Patient/12A188A91ED05B87A4335425414F9FBAA6F4462C378D533A8F019C0F20712D36'
 == input/examples/AllergyIntolerance-Epic.json ==
 ERROR: AllergyIntolerance/eot677ioPb4frLYJYyuabIg3: AllergyIntolerance.onset.ofType(Period): This element does not match any known slice  defined in the profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/AllergyIntolerance|1.2.0 and slicing is CLOSED: AllergyIntolerance.onset.ofType(Period): Does not match slice 'onsetDateTime' (discriminator: ($this is dateTime))
-ERROR: AllergyIntolerance/eot677ioPb4frLYJYyuabIg3: AllergyIntolerance.patient: Unable to resolve resource with reference 'https://icf.prd.epd.umcg.intra/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3'
 ERROR: AllergyIntolerance/eot677ioPb4frLYJYyuabIg3: AllergyIntolerance.reaction[0].manifestation[0]: No code provided, and a code is required from the value set 'SymptoomCodelijst' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.5--20171231000000|2017-12-31T00:00:00)
 INFORMATION: AllergyIntolerance/eot677ioPb4frLYJYyuabIg3: AllergyIntolerance.onset.ofType(Period): This element does not match any known slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance|3.0.7 (this may not be a problem, but you should check that it's not intended to match a slice)
+== input/examples/AllergyIntolerance-Nexus.json ==
 == input/examples/AuditEvent-Zorgviewer.json ==
 WARNING: AuditEvent/example-auditevent-zorgviewer: AuditEvent.agent[0].role[0].coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
 == input/examples/Condition-Chipsoft.json ==
@@ -149,6 +151,9 @@ WARNING: Condition/eod0yZoGGXEapUI7nJwX4tA3: Condition.note[0].text: value shoul
 WARNING: Condition/eod0yZoGGXEapUI7nJwX4tA3: Condition: Constraint failed: zv-con-2: 'Use either Condition.abatementDateTime or Condition.abatementPeriod for the resolved timestamp'
 ERROR: Condition/eod0yZoGGXEapUI7nJwX4tA3: Condition.onset.ofType(Period): This element does not match any known slice  defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-Problem|3.0.6 and slicing is CLOSED: Condition.onset.ofType(Period): Does not match slice 'onsetDateTime' (discriminator: ($this is dateTime))
 ERROR: Condition/eod0yZoGGXEapUI7nJwX4tA3: Condition.onset.ofType(Period): The Profile 'http://nictiz.nl/fhir/StructureDefinition/zib-Problem|3.0.6' definition allows for the type dateTime but found type Period
+== input/examples/Condition-Nexus.json ==
+ERROR: Condition/771: Condition.code.coding[0].code: Unknown code '31641000146105' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201'
+WARNING: Condition/771: Condition: Constraint failed: zv-con-2: 'Use either Condition.abatementDateTime or Condition.abatementPeriod for the resolved timestamp'
 == input/examples/DocumentReference-Epic.json ==
 ERROR: DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi: DocumentReference: DocumentReference.docStatus: max allowed = 0, but found 1 (from http://hl7.nl/fhir/zorgviewer/StructureDefinition/DocumentReference|1.2.0)
 ERROR: DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi: DocumentReference: DocumentReference.created: max allowed = 0, but found 1 (from http://hl7.nl/fhir/zorgviewer/StructureDefinition/DocumentReference|1.2.0)
@@ -160,6 +165,7 @@ INFORMATION: DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6
 == input/examples/Flag-Epic.json ==
 WARNING: Flag/fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4: Flag.category.coding[0].system: A definition for CodeSystem 'http://open.epic.com/FHIR/StructureDefinition/flag-category' could not be found, so the code cannot be validated
 WARNING: Flag/fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4: Flag.code.coding[0].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.2.7.4.698084.10375' could not be found, so the code cannot be validated
+== input/examples/Flag-Nexus.json ==
 == input/examples/LaboratoryTestResult-Chipsoft.json ==
 INFORMATION: Observation/39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C: Observation.category[1]: This element does not match any known slice defined in the profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/LaboratoryTestResult|1.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: Observation/39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C: Observation.category[0].coding[0].code: Unknown code '49581000146104' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201'

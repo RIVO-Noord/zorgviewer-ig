@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="41"/>
+  <meta>
+    <lastUpdated value="2024-04-17T09:59:44.301+02:00"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+                  <table>
+                     <caption>AllergyIntolerance. typeCode-RCT: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.5.41 (urn:ietf:rfc:3986), Status: status-active / status-confirmed</caption>
+                     <tbody>
+                        <tr>
+                           <th>code</th>
+                           <td>
+                              <span title="Bijengif (16224591000119103 - SNOMED CT)">Bijengif</span>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th>Onset</th>
+                           <td>8 November 2008</td>
+                        </tr>
+                        <tr>
+                           <th>Reaction</th>
+                           <td>
+                              <ul>
+                                 <li>
+                                    <div>
+                                       <span title="Ernstig (24484000 - SNOMED CT)">Ernstig</span>
+                                    </div>
+                                    <div>
+                                       <span title="Misselijk en braken (16932000 - SNOMED CT)">Misselijk en braken</span>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+  </text>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.5.41"/>
+  </identifier>
+  <clinicalStatus value="active">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActStatus"/>
+          <code value="active"/>
+          <display value="Actief"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </clinicalStatus>
+  <verificationStatus value="confirmed"/>
+  <criticality value="high">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="24484000"/>
+          <display value="Ernstig"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </criticality>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="16224591000119103"/>
+      <display value="Bijengif"/>
+    </coding>
+  </code>
+  <patient>
+    <reference value="https://example.org/Patient/330073"/>
+    <display value="Xxx-Helleman, J (M)"/>
+  </patient>
+  <onsetDateTime value="2008-11-08"/>
+  <reaction id="41">
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="16932000"/>
+        <display value="Misselijk en braken"/>
+      </coding>
+    </manifestation>
+    <severity value="severe">
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="24484000"/>
+            <display value="Ernstig"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </severity>
+  </reaction>
+</AllergyIntolerance>

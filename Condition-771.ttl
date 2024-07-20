@@ -1,0 +1,100 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Condition/771> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "771"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-04-17T10:01:44.145+02:00"^^xsd:dateTime ] ;
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Problem"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Condition. typeCode-SUBJ: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.26.771 (urn:ietf:rfc:3986), Category: <span title=\"Diagnose (282291009 - SNOMED CT)\">Diagnose</span>, Status: status-inactive / status-unknown</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Gevallen op kunstijsbaan</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>code</th>\n                           <td>\n                              <span title=\"fractuur van pols (31641000146105 - SNOMED CT)\">fractuur van pols</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Onset</th>\n                           <td>2001</td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.26.771" ]
+  ] ) ; # 
+  fhir:clinicalStatus [
+     fhir:v "inactive" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/code-specification"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:73425007 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "73425007" ] ;
+           fhir:display [ fhir:v "Niet actueel" ]
+         ] )
+       ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:v "unknown" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/code-specification"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/v3/NullFlavor"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "UNK" ] ;
+           fhir:display [ fhir:v "Onbekend" ]
+         ] )
+       ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:282291009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "282291009" ] ;
+       fhir:display [ fhir:v "Diagnose" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:31641000146105 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "31641000146105" ] ;
+       fhir:display [ fhir:v "fractuur van pols" ]
+     ] )
+  ] ; # 
+  fhir:bodySite ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:24028007 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "24028007" ] ;
+           fhir:display [ fhir:v "rechts" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:coding ( [
+       a sct:361289009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "361289009" ] ;
+       fhir:display [ fhir:v "pols" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <https://example.org/Patient/330073> ;
+     fhir:reference [ fhir:v "https://example.org/Patient/330073" ] ;
+     fhir:display [ fhir:v "Xxx-Helleman, J (M)" ]
+  ] ; # 
+  fhir:onset [ fhir:v "2001"^^xsd:gYear] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Gevallen op kunstijsbaan" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

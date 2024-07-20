@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="771"/>
+  <meta>
+    <lastUpdated value="2024-04-17T10:01:44.145+02:00"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+                  <table>
+                     <caption>Condition. typeCode-SUBJ: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.26.771 (urn:ietf:rfc:3986), Category: <span title="Diagnose (282291009 - SNOMED CT)">Diagnose</span>, Status: status-inactive / status-unknown</caption>
+                     <tfoot>
+                        <tr>
+                           <td colspan="2">Gevallen op kunstijsbaan</td>
+                        </tr>
+                     </tfoot>
+                     <tbody>
+                        <tr>
+                           <th>code</th>
+                           <td>
+                              <span title="fractuur van pols (31641000146105 - SNOMED CT)">fractuur van pols</span>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th>Onset</th>
+                           <td>2001</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+  </text>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.26.771"/>
+  </identifier>
+  <clinicalStatus value="inactive">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="73425007"/>
+          <display value="Niet actueel"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </clinicalStatus>
+  <verificationStatus value="unknown">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+          <code value="UNK"/>
+          <display value="Onbekend"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="282291009"/>
+      <display value="Diagnose"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="31641000146105"/>
+      <display value="fractuur van pols"/>
+    </coding>
+  </code>
+  <bodySite>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="24028007"/>
+          <display value="rechts"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="361289009"/>
+      <display value="pols"/>
+    </coding>
+  </bodySite>
+  <subject>
+    <reference value="https://example.org/Patient/330073"/>
+    <display value="Xxx-Helleman, J (M)"/>
+  </subject>
+  <onsetDateTime value="2001"/>
+  <note>
+    <text value="Gevallen op kunstijsbaan"/>
+  </note>
+</Condition>

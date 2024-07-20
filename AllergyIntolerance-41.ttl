@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/AllergyIntolerance/41> a fhir:AllergyIntolerance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "41"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-04-17T09:59:44.301+02:00"^^xsd:dateTime ] ;
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>AllergyIntolerance. typeCode-RCT: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.5.41 (urn:ietf:rfc:3986), Status: status-active / status-confirmed</caption>\n                     <tbody>\n                        <tr>\n                           <th>code</th>\n                           <td>\n                              <span title=\"Bijengif (16224591000119103 - SNOMED CT)\">Bijengif</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Onset</th>\n                           <td>8 November 2008</td>\n                        </tr>\n                        <tr>\n                           <th>Reaction</th>\n                           <td>\n                              <ul>\n                                 <li>\n                                    <div>\n                                       <span title=\"Ernstig (24484000 - SNOMED CT)\">Ernstig</span>\n                                    </div>\n                                    <div>\n                                       <span title=\"Misselijk en braken (16932000 - SNOMED CT)\">Misselijk en braken</span>\n                                    </div>\n                                 </li>\n                              </ul>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.5.41" ]
+  ] ) ; # 
+  fhir:clinicalStatus [
+     fhir:v "active" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/code-specification"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActStatus"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "active" ] ;
+           fhir:display [ fhir:v "Actief" ]
+         ] )
+       ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [ fhir:v "confirmed"] ; # 
+  fhir:criticality [
+     fhir:v "high" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/code-specification"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:24484000 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "24484000" ] ;
+           fhir:display [ fhir:v "Ernstig" ]
+         ] )
+       ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:16224591000119103 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "16224591000119103" ] ;
+       fhir:display [ fhir:v "Bijengif" ]
+     ] )
+  ] ; # 
+  fhir:patient [
+     fhir:link <https://example.org/Patient/330073> ;
+     fhir:reference [ fhir:v "https://example.org/Patient/330073" ] ;
+     fhir:display [ fhir:v "Xxx-Helleman, J (M)" ]
+  ] ; # 
+  fhir:onset [ fhir:v "2008-11-08"^^xsd:date] ; # 
+  fhir:reaction ( [
+     fhir:id [ fhir:v "41" ] ;
+     fhir:manifestation ( [
+       fhir:coding ( [
+         a sct:16932000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "16932000" ] ;
+         fhir:display [ fhir:v "Misselijk en braken" ]
+       ] )
+     ] ) ;
+     fhir:severity [
+       fhir:v "severe" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/code-specification"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             a sct:24484000 ;
+             fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "24484000" ] ;
+             fhir:display [ fhir:v "Ernstig" ]
+           ] )
+         ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
