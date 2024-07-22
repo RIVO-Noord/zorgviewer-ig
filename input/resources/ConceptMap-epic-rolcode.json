@@ -4,10 +4,10 @@
     "url": "http://hl7.nl/fhir/zorgviewer/ConceptMap/epic-rolcode",
     "version": "0.1.0",
     "name": "epictorolcode",
-    "title": "Epic qualifier & role to SNOMED-CT rolcode Mapping",
+    "title": "Epic qualifier & role to SNOMED-CT Mapping",
     "status": "active",
     "experimental": false,
-    "description": "Deze ConceptMap representeert de mapping tussen de Epic Practitioner.qualifier SER#6000 naar een SNOMED-CT rolcode.",
+    "description": "Deze ConceptMap representeert de mapping tussen de Epic Practitioner.qualifier SER#6000 naar een SNOMED-CT code.",
     "jurisdiction" : [{
       "coding" : [{
         "system" : "urn:iso:std:iso:3166",
@@ -15,24 +15,6 @@
       }]
     }],
     "group": [
-      {
-        "source": "urn:oid:1.2.840.114350.1.13.485.3.7.4.836982.6000",
-        "sourveVersion": "UMCG Epic",
-        "target": "http://snomed.info/sct",
-        "element": [
-          {
-            "code": "11",
-            "display": "Arts",
-            "target": [
-              {
-                "code": "309343006",
-                "display": "Medical doctor",
-                "equivalence": "equal"
-              }
-            ]
-          }
-        ]
-      },
       {
         "source": "urn:oid:1.2.840.114350.1.13.485.3.7.10.836982.1040",
         "sourveVersion": "UMCG Epic",
