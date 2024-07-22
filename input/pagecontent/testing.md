@@ -29,7 +29,7 @@ Een tool om een FHIR response als tabel te tonen. Op basis van de "FHIR Path"s i
 
 * [SQL-on-FHIR](https://fhirpath-lab.azurewebsites.net/sqlonfhir/)
 * [ViewDefinition voor Alerts](ViewDefinition-Flag.json)
-* [ViewDefinition voor Allergieen](ViewDefinition-AllergyIntolerance.json)
+* [ViewDefinition voor Allergieën en Intoleranties](ViewDefinition-AllergyIntolerance.json)
 * [ViewDefinition voor Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
 * [ViewDefinition voor Correspondentie](ViewDefinition-DocumentReference.json)
 
