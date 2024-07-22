@@ -1,0 +1,70 @@
+{
+    "resourceType": "Practitioner",
+    "id": "67d36d4c-bc18-4c5d-8fb5-609f6a17451e",
+    "meta": {
+      "lastUpdated": "2024-04-17T11:47:54.606+02:00",
+      "profile": [
+        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"
+      ]
+    },
+    "text": {
+      "status": "extensions",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <div>id 0100000000 (AGB-Z), id urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.37.8017 (urn:ietf:rfc:3986), <span title=\"Name assembly order: HumanNameAssemblyOrder-NL1\">Vaste Huisarts 1</span>\n                  </div>\n                  <div>\n                     <a href=\"tel:+31434073576\">+31434073576</a> (2.16.840.1.113883.2.4.3.11.60.40.4.22.1-LL addressUse_WP), <a href=\"mailto:huisarts@huisarts.nl\">huisarts@huisarts.nl</a> (Email addressUse_WP)</div>\n               </div>"
+    },
+    "identifier": [
+      {
+        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+        "value": "0100000000"
+      },
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.37.8017"
+      }
+    ],
+    "name": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+            "valueCode": "NL1"
+          }
+        ],
+        "text": "Vaste Huisarts 1",
+        "family": "Vaste Huisarts 1",
+        "_family": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+              "valueString": "Vaste Huisarts 1"
+            }
+          ]
+        }
+      }
+    ],
+    "telecom": [
+      {
+        "extension": [
+          {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
+                  "code": "LL",
+                  "display": "Vast telefoonnummer"
+                }
+              ]
+            }
+          }
+        ],
+        "system": "phone",
+        "value": "+31434073576",
+        "use": "work"
+      },
+      {
+        "system": "email",
+        "value": "huisarts@huisarts.nl",
+        "use": "work"
+      }
+    ]
+  }

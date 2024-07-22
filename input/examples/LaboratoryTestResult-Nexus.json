@@ -1,0 +1,103 @@
+{
+    "resourceType": "Observation",
+    "id": "3009316",
+    "meta": {
+      "lastUpdated": "2024-04-17T11:57:34.749+02:00",
+      "profile": [
+        "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"
+      ]
+    },
+    "text": {
+      "status": "extensions",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Observation. id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.18.3009316 (urn:ietf:rfc:3986), Category: <span title=\"Laboratory (49581000146104 - SNOMED CT)\">Laboratory</span>, <span title=\"Klinische chemie (275711006 - SNOMED CT)\">Klinische chemie</span>, Status: status-final</caption>\n                     <tbody>\n                        <tr>\n                           <th>Effective Time</th>\n                           <td>14:47:00, 13 March 2023</td>\n                        </tr>\n                        <tr>\n                           <th>Specimen</th>\n                           <td>Materiaal: Bloed</td>\n                        </tr>\n                        <tr>\n                           <th>Related</th>\n                           <td>Observation/a3d4d0c9-6ff0-414e-a50c-f5180105fef7</td>\n                        </tr>\n                        <tr>\n                           <th>code</th>\n                           <th>Value</th>\n                        </tr>\n                        <tr>\n                           <td/>\n                           <td/>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+    },
+    "contained": [
+      {
+        "resourceType": "ProcedureRequest",
+        "id": "1",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/ProcedureRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "UNK",
+              "display": "unknown"
+            }
+          ]
+        },
+        "requester": {
+          "agent": {
+            "reference": "Practitioner/729",
+            "display": "Jutte"
+          }
+        }
+      }
+    ],
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.18.3009316"
+      }
+    ],
+    "basedOn": [
+      {
+        "reference": "#1",
+        "display": "ProcedureRequest"
+      }
+    ],
+    "status": "final",
+    "_status": {
+      "extension": [
+        {
+          "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.16.1",
+                "code": "final",
+                "display": "Definitief"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "49581000146104",
+            "display": "Laboratory"
+          }
+        ]
+      },
+      {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "275711006",
+            "display": "Klinische chemie"
+          }
+        ]
+      }
+    ],
+    "effectiveDateTime": "2023-03-13T14:47:00+01:00",
+    "specimen": {
+      "reference": "Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635",
+      "display": "Materiaal: Bloed"
+    },
+    "related": [
+      {
+        "target": {
+          "reference": "Observation/a3d4d0c9-6ff0-414e-a50c-f5180105fef7"
+        }
+      }
+    ]
+  }

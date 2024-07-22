@@ -1,0 +1,87 @@
+{
+    "resourceType": "Specimen",
+    "id": "291f7eb1-c4ff-49fb-94a8-0500c19b7635",
+    "meta": {
+      "lastUpdated": "2024-04-17T11:57:34.781+02:00",
+      "profile": [
+        "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen"
+      ]
+    },
+    "text": {
+      "status": "extensions",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Specimen. id: 9877</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Monster bij LaboratoriumUitslag (LaboratoryTestResult) [bgz-patA-labresult2]</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>type</th>\n                           <td>\n                              <span title=\"Bloed (87612001 - SNOMED CT)\">Bloed</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Received</th>\n                           <td>08:30:00, 13 March 2023</td>\n                        </tr>\n                        <tr>\n                           <th>Collection</th>\n                           <td>Quantity5.23 08:00:00, 13 March 2023<div>Method: <span title=\"venapunctie voor bloedtest (28520004 - SNOMED CT)\">venapunctie voor bloedtest</span>\n                              </div>\n                              <div>\n                                 <span title=\"gehele regio van elleboog (76248009 - SNOMED CT)\">gehele regio van elleboog</span> \n                                 <span title=\"rechts (24028007 - SNOMED CT)\">rechts</span>\n                              </div>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Container</th>\n                           <td>\n                              <div>type: <span title=\"container voor bloed- of weefselopslag of -kweek (700957004 - SNOMED CT)\">container voor bloed- of weefselopslag of -kweek</span>\n                              </div>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+    },
+    "identifier": [
+      {
+        "value": "9877"
+      }
+    ],
+    "type": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "87612001",
+          "display": "Bloed"
+        }
+      ]
+    },
+    "receivedTime": "2023-03-13T08:30:00+01:00",
+    "collection": {
+      "collectedDateTime": "2023-03-13T08:00:00+01:00",
+      "quantity": {
+        "value": 5.23,
+        "system": "http://unitsofmeasure.org"
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "28520004",
+            "display": "venapunctie voor bloedtest"
+          }
+        ]
+      },
+      "bodySite": {
+        "extension": [
+          {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "24028007",
+                  "display": "rechts"
+                }
+              ]
+            }
+          }
+        ],
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "76248009",
+            "display": "gehele regio van elleboog"
+          }
+        ]
+      }
+    },
+    "container": [
+      {
+        "id": "2",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "700957004",
+              "display": "container voor bloed- of weefselopslag of -kweek"
+            }
+          ]
+        }
+      }
+    ],
+    "note": [
+      {
+        "text": "Monster bij LaboratoriumUitslag (LaboratoryTestResult) [bgz-patA-labresult2]"
+      }
+    ]
+  }
