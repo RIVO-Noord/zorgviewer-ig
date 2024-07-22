@@ -1,9 +1,9 @@
 zorgviewer-ig : Validation Results
 =========================================
 
-err = 161, warn = 67, info = 115
+err = 161, warn = 69, info = 115
 IG Publisher Version: 1.6.18
-Generated Mon Jul 22 09:02:40 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#1.2.0 (canonical = http://hl7.nl/fhir/zorgviewer)
+Generated Mon Jul 22 09:19:02 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#1.2.0 (canonical = http://hl7.nl/fhir/zorgviewer)
  Build Errors : 17 / 3 / 0
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Chipsoft : 2 / 0 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Epic : 2 / 1 / 5
@@ -77,7 +77,7 @@ Generated Mon Jul 22 09:02:40 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgv
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-SCT : 2 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/CodeSystem-bronsysteem-zorgaanbieder : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ConceptMap-behandelaanwijzing-2017-2020 : 0 / 9 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ConceptMap-epic-rolcode : 2 / 4 / 3
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ConceptMap-epic-rolcode : 2 / 6 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ConceptMap-patient-toestemming : 0 / 7 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Endpoint-UMCG : 0 / 0 / 2
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-MCL : 0 / 0 / 2
@@ -503,6 +503,8 @@ ERROR: ConceptMap.group[0]: Unrecognized property 'sourveVersion'
 ERROR: ConceptMap.group[1]: Unrecognized property 'sourveVersion'
 WARNING: ConceptMap/epic-rolcode: ConceptMap.group[0].element[0].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
 WARNING: ConceptMap/epic-rolcode: ConceptMap.group[1].element[0].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
+WARNING: ConceptMap/epic-rolcode: ConceptMap.group[1].element[1].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
+WARNING: ConceptMap/epic-rolcode: ConceptMap.group[1].element[2].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
 WARNING: ConceptMap/epic-rolcode: ConceptMap.group[0].source: The Source Code System urn:oid:1.2.840.114350.1.13.485.3.7.4.836982.6000 is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
 INFORMATION: ConceptMap/epic-rolcode: ConceptMap.group[0].target: Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
 WARNING: ConceptMap/epic-rolcode: ConceptMap.group[1].source: The Source Code System urn:oid:1.2.840.114350.1.13.485.3.7.10.836982.1040 is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
