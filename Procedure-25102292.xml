@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="25102292"/>
+  <meta>
+    <lastUpdated value="2024-04-17T11:49:15.508+02:00"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+                  <table>
+                     <caption>Procedure. typeCode-SUBJ: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.31.25102292 (urn:ietf:rfc:3986), Category: <span title="Surgical procedure (387713003 - SNOMED CT)">Surgical procedure</span>, Status: status-completed<span style="display: block;">typeCode-PRF: Boonstra</span>
+                        <span style="display: block;">typeCode-PRF: VIPP NEXUS Ziekenhuis</span>
+                     </caption>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <span title="Prothese implantatie kniegewricht. (038663 - 2.16.840.1.113883.2.4.3.27.15.5)">Prothese implantatie kniegewricht.</span>
+                           </td>
+                           <td>
+                              <div>Performed: FromNoTo 6 May 2012</div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th>Based On</th>
+                           <td>ProcedureRequest</td>
+                        </tr>
+                        <tr>
+                           <th>Body Site</th>
+                           <td>
+                              <span title="structuur van kniegewricht (lichaamsstructuur) (49076000 - SNOMED CT)">structuur van kniegewricht (lichaamsstructuur)</span> 
+                              <span title="links (7771000 - SNOMED CT)">links</span>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th>typeCode-RSON</th>
+                           <td>artropathie</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+  </text>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.31.25102292"/>
+  </identifier>
+  <basedOn>
+    <reference value="ProcedureRequest/45d3945c-dcbd-4587-90f9-fa30245adced"/>
+    <display value="ProcedureRequest"/>
+  </basedOn>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="387713003"/>
+      <display value="Surgical procedure"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.3.27.15.5"/>
+      <code value="038663"/>
+      <display value="Prothese implantatie kniegewricht."/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/330073"/>
+    <display value="Xxx-Helleman, J (M)"/>
+  </subject>
+  <performedPeriod>
+    <start value="2012-05-06"/>
+  </performedPeriod>
+  <performer>
+    <actor>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+        <valueReference>
+          <reference value="PractitionerRole/406"/>
+          <display value="Boonstra"/>
+        </valueReference>
+      </extension>
+      <reference value="Practitioner/406"/>
+      <display value="Boonstra"/>
+    </actor>
+  </performer>
+  <performer>
+    <actor>
+      <reference value="Organization/4107EC15F3AA846EA912B85ABBA115644166D760"/>
+      <display value="VIPP NEXUS Ziekenhuis"/>
+    </actor>
+  </performer>
+  <reasonReference>
+    <reference value="Condition/830"/>
+    <display value="artropathie"/>
+  </reasonReference>
+  <bodySite>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="7771000"/>
+          <display value="links"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="49076000"/>
+      <display value="structuur van kniegewricht (lichaamsstructuur)"/>
+    </coding>
+  </bodySite>
+</Procedure>

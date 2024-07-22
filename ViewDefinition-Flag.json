@@ -1,24 +1,24 @@
 {
-    "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
-    "resource": "Bundle",
-    "id": "ViewDefinition-Flag",
-    "select": [
-      {
-        "column": [
-          {
-            "path": "resource.period.start",
-            "name": "Period"
-          },
-          {
-            "path": "resource.category.text",
-            "name": "Categorie"
-          },
-          {
-            "path": "resource.code.text",
-            "name": "Voor"
-          }
-        ],
-        "forEach": "entry.where(resource.resourceType = 'Flag')"
-      }
-    ]
-  }
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Flag",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "resource.period.start",
+          "name": "Datum"
+        },
+        {
+          "path": "iif(exists(resource.category.text),resource.category.text,resource.category.coding.display)",
+          "name": "Categorie"
+        },
+        {
+          "path": "iif(exists(resource.code.text),resource.code.text,resource.code.coding.display)",
+          "name": "Voor"
+        }
+      ],
+      "forEach": "entry.where(resource.resourceType = 'Flag')"
+    }
+  ]
+}

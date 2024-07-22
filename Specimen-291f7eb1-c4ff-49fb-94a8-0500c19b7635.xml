@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="291f7eb1-c4ff-49fb-94a8-0500c19b7635"/>
+  <meta>
+    <lastUpdated value="2024-04-17T11:57:34.781+02:00"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+                  <table>
+                     <caption>Specimen. id: 9877</caption>
+                     <tfoot>
+                        <tr>
+                           <td colspan="2">Monster bij LaboratoriumUitslag (LaboratoryTestResult) [bgz-patA-labresult2]</td>
+                        </tr>
+                     </tfoot>
+                     <tbody>
+                        <tr>
+                           <th>type</th>
+                           <td>
+                              <span title="Bloed (87612001 - SNOMED CT)">Bloed</span>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th>Received</th>
+                           <td>08:30:00, 13 March 2023</td>
+                        </tr>
+                        <tr>
+                           <th>Collection</th>
+                           <td>Quantity5.23 08:00:00, 13 March 2023<div>Method: <span title="venapunctie voor bloedtest (28520004 - SNOMED CT)">venapunctie voor bloedtest</span>
+                              </div>
+                              <div>
+                                 <span title="gehele regio van elleboog (76248009 - SNOMED CT)">gehele regio van elleboog</span> 
+                                 <span title="rechts (24028007 - SNOMED CT)">rechts</span>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th>Container</th>
+                           <td>
+                              <div>type: <span title="container voor bloed- of weefselopslag of -kweek (700957004 - SNOMED CT)">container voor bloed- of weefselopslag of -kweek</span>
+                              </div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+  </text>
+  <identifier>
+    <value value="9877"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="87612001"/>
+      <display value="Bloed"/>
+    </coding>
+  </type>
+  <receivedTime value="2023-03-13T08:30:00+01:00"/>
+  <collection>
+    <collectedDateTime value="2023-03-13T08:00:00+01:00"/>
+    <quantity>
+      <value value="5.23"/>
+      <system value="http://unitsofmeasure.org"/>
+    </quantity>
+    <method>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="28520004"/>
+        <display value="venapunctie voor bloedtest"/>
+      </coding>
+    </method>
+    <bodySite>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="24028007"/>
+            <display value="rechts"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="76248009"/>
+        <display value="gehele regio van elleboog"/>
+      </coding>
+    </bodySite>
+  </collection>
+  <container id="2">
+    <type>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="700957004"/>
+        <display value="container voor bloed- of weefselopslag of -kweek"/>
+      </coding>
+    </type>
+  </container>
+  <note>
+    <text value="Monster bij LaboratoriumUitslag (LaboratoryTestResult) [bgz-patA-labresult2]"/>
+  </note>
+</Specimen>

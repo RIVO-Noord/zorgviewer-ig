@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Consent xmlns="http://hl7.org/fhir">
+  <id value="21"/>
+  <meta>
+    <lastUpdated value="2024-04-17T10:04:24.612+02:00"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+                  <table>
+                     <caption>Consent. typeCode-RCT: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.6.21 (urn:ietf:rfc:3986), Category: <span title="Behandelingsinstructies (artefact opnemen) (11291000146105 - SNOMED CT)">Behandelingsinstructies (artefact opnemen)</span>, Status: status-active</caption>
+                     <tfoot>
+                        <tr>
+                           <td colspan="2">testje</td>
+                        </tr>
+                     </tfoot>
+                     <tbody>
+                        <tr>
+                           <th>Consent Period</th>
+                           <td>FromNoTo 5 May 2023</td>
+                        </tr>
+                        <tr>
+                           <th>Created</th>
+                           <td>11:40:11, 9 April 2018</td>
+                        </tr>
+                        <tr>
+                           <th>Verified</th>
+                           <td>boolean-true - 5 May 2023 - <span title="Gevolmachtigde (8601000146109 - SNOMED CT)">Gevolmachtigde</span>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th>
+                              <span title="Kunstmatige beademing (40617009 - SNOMED CT)">Kunstmatige beademing</span>
+                           </th>
+                           <td>
+                              <span title="Behandeling niet toegestaan en/of wenselijk (NEE - 2.16.840.1.113883.2.4.3.11.60.40.4)">Behandeling niet toegestaan en/of wenselijk</span>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+  </text>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification">
+    <extension url="Verified">
+      <valueBoolean value="true"/>
+    </extension>
+    <extension url="VerifiedWith">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="8601000146109"/>
+          <display value="Gevolmachtigde"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="VerificationDate">
+      <valueDateTime value="2023-05-05"/>
+    </extension>
+  </extension>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+    <valueString value="testje"/>
+  </extension>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="40617009"/>
+        <display value="Kunstmatige beademing"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <modifierExtension url="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted">
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4"/>
+        <code value="NEE"/>
+        <display value="Behandeling niet toegestaan en/of wenselijk"/>
+      </coding>
+    </valueCodeableConcept>
+  </modifierExtension>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.6.21"/>
+  </identifier>
+  <status value="active"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="11291000146105"/>
+      <display value="Behandelingsinstructies (artefact opnemen)"/>
+    </coding>
+  </category>
+  <patient>
+    <reference value="Patient/330073"/>
+    <display value="Xxx-Helleman, J (M)"/>
+  </patient>
+  <period>
+    <start value="2023-05-05"/>
+  </period>
+  <dateTime value="2018-04-09T11:40:11+02:00"/>
+  <policy>
+    <uri value="http://wetten.overheid.nl/"/>
+  </policy>
+</Consent>

@@ -1,0 +1,103 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Procedure/25102292> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "25102292"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-04-17T11:49:15.508+02:00"^^xsd:dateTime ] ;
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Procedure. typeCode-SUBJ: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.31.25102292 (urn:ietf:rfc:3986), Category: <span title=\"Surgical procedure (387713003 - SNOMED CT)\">Surgical procedure</span>, Status: status-completed<span style=\"display: block;\">typeCode-PRF: Boonstra</span>\n                        <span style=\"display: block;\">typeCode-PRF: VIPP NEXUS Ziekenhuis</span>\n                     </caption>\n                     <tbody>\n                        <tr>\n                           <td>\n                              <span title=\"Prothese implantatie kniegewricht. (038663 - 2.16.840.1.113883.2.4.3.27.15.5)\">Prothese implantatie kniegewricht.</span>\n                           </td>\n                           <td>\n                              <div>Performed: FromNoTo 6 May 2012</div>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Based On</th>\n                           <td>ProcedureRequest</td>\n                        </tr>\n                        <tr>\n                           <th>Body Site</th>\n                           <td>\n                              <span title=\"structuur van kniegewricht (lichaamsstructuur) (49076000 - SNOMED CT)\">structuur van kniegewricht (lichaamsstructuur)</span> \n                              <span title=\"links (7771000 - SNOMED CT)\">links</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>typeCode-RSON</th>\n                           <td>artropathie</td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.31.25102292" ]
+  ] ) ; # 
+  fhir:basedOn ( [
+     fhir:link <http://hl7.nl/fhir/zorgviewer/ProcedureRequest/45d3945c-dcbd-4587-90f9-fa30245adced> ;
+     fhir:reference [ fhir:v "ProcedureRequest/45d3945c-dcbd-4587-90f9-fa30245adced" ] ;
+     fhir:display [ fhir:v "ProcedureRequest" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:category [
+     fhir:coding ( [
+       a sct:387713003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "387713003" ] ;
+       fhir:display [ fhir:v "Surgical procedure" ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.27.15.5"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "038663" ] ;
+       fhir:display [ fhir:v "Prothese implantatie kniegewricht." ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.nl/fhir/zorgviewer/Patient/330073> ;
+     fhir:reference [ fhir:v "Patient/330073" ] ;
+     fhir:display [ fhir:v "Xxx-Helleman, J (M)" ]
+  ] ; # 
+  fhir:performed [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2012-05-06"^^xsd:date ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:actor [
+       fhir:link <http://hl7.nl/fhir/zorgviewer/Practitioner/406> ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Reference ;
+           fhir:link <http://hl7.nl/fhir/zorgviewer/PractitionerRole/406> ;
+           fhir:reference [ fhir:v "PractitionerRole/406" ] ;
+           fhir:display [ fhir:v "Boonstra" ]
+         ]
+       ] ) ;
+       fhir:reference [ fhir:v "Practitioner/406" ] ;
+       fhir:display [ fhir:v "Boonstra" ]
+     ]
+  ] [
+     fhir:actor [
+       fhir:link <http://hl7.nl/fhir/zorgviewer/Organization/4107EC15F3AA846EA912B85ABBA115644166D760> ;
+       fhir:reference [ fhir:v "Organization/4107EC15F3AA846EA912B85ABBA115644166D760" ] ;
+       fhir:display [ fhir:v "VIPP NEXUS Ziekenhuis" ]
+     ]
+  ] ) ; # 
+  fhir:reasonReference ( [
+     fhir:link <http://hl7.nl/fhir/zorgviewer/Condition/830> ;
+     fhir:reference [ fhir:v "Condition/830" ] ;
+     fhir:display [ fhir:v "artropathie" ]
+  ] ) ; # 
+  fhir:bodySite ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:7771000 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "7771000" ] ;
+           fhir:display [ fhir:v "links" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:coding ( [
+       a sct:49076000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "49076000" ] ;
+       fhir:display [ fhir:v "structuur van kniegewricht (lichaamsstructuur)" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

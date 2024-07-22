@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Consent/162> a fhir:Consent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "162"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-04-17T10:02:48.916+02:00"^^xsd:dateTime ] ;
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Consent. typeCode-RCT: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.34.162 (urn:ietf:rfc:3986), Category: <span title=\"Wilsverklaring (artefact opnemen) (11341000146107 - SNOMED CT)\">Wilsverklaring (artefact opnemen)</span>, <span title=\"volmacht (VOL - 2.16.840.1.113883.2.4.3.11.60.40.4.14.1)\">volmacht</span>, Status: status-active</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Niet-reanimerenpenning</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>Created</th>\n                           <td>9 April 2018</td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/Comment"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Niet-reanimerenpenning" ]
+  ] ) ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.34.162" ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:11341000146107 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11341000146107" ] ;
+       fhir:display [ fhir:v "Wilsverklaring (artefact opnemen)" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "VOL" ] ;
+       fhir:display [ fhir:v "volmacht" ]
+     ] )
+  ] ) ; # 
+  fhir:patient [
+     fhir:link <http://hl7.nl/fhir/zorgviewer/Patient/330073> ;
+     fhir:reference [ fhir:v "Patient/330073" ] ;
+     fhir:display [ fhir:v "Xxx-Helleman, J (M)" ]
+  ] ; # 
+  fhir:dateTime [ fhir:v "2018-04-09"^^xsd:date] ; # 
+  fhir:policy ( [
+     fhir:uri [ fhir:v "http://wetten.overheid.nl/"^^xsd:anyURI ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

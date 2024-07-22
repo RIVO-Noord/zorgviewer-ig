@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Practitioner/67d36d4c-bc18-4c5d-8fb5-609f6a17451e> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "67d36d4c-bc18-4c5d-8fb5-609f6a17451e"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-04-17T11:47:54.606+02:00"^^xsd:dateTime ] ;
+     fhir:profile ( [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <div>id 0100000000 (AGB-Z), id urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.37.8017 (urn:ietf:rfc:3986), <span title=\"Name assembly order: HumanNameAssemblyOrder-NL1\">Vaste Huisarts 1</span>\n                  </div>\n                  <div>\n                     <a href=\"tel:+31434073576\">+31434073576</a> (2.16.840.1.113883.2.4.3.11.60.40.4.22.1-LL addressUse_WP), <a href=\"mailto:huisarts@huisarts.nl\">huisarts@huisarts.nl</a> (Email addressUse_WP)</div>\n               </div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://fhir.nl/fhir/NamingSystem/agb-z"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "0100000000" ]
+  ] [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.37.8017" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "NL1" ]
+     ] ) ;
+     fhir:text [ fhir:v "Vaste Huisarts 1" ] ;
+     fhir:family [
+       fhir:v "Vaste Huisarts 1" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-own-name"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Vaste Huisarts 1" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "LL" ] ;
+           fhir:display [ fhir:v "Vast telefoonnummer" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+31434073576" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "huisarts@huisarts.nl" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

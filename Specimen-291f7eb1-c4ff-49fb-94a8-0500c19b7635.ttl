@@ -1,0 +1,83 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635> a fhir:Specimen ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "291f7eb1-c4ff-49fb-94a8-0500c19b7635"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-04-17T11:57:34.781+02:00"^^xsd:dateTime ] ;
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Specimen. id: 9877</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Monster bij LaboratoriumUitslag (LaboratoryTestResult) [bgz-patA-labresult2]</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>type</th>\n                           <td>\n                              <span title=\"Bloed (87612001 - SNOMED CT)\">Bloed</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Received</th>\n                           <td>08:30:00, 13 March 2023</td>\n                        </tr>\n                        <tr>\n                           <th>Collection</th>\n                           <td>Quantity5.23 08:00:00, 13 March 2023<div>Method: <span title=\"venapunctie voor bloedtest (28520004 - SNOMED CT)\">venapunctie voor bloedtest</span>\n                              </div>\n                              <div>\n                                 <span title=\"gehele regio van elleboog (76248009 - SNOMED CT)\">gehele regio van elleboog</span> \n                                 <span title=\"rechts (24028007 - SNOMED CT)\">rechts</span>\n                              </div>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Container</th>\n                           <td>\n                              <div>type: <span title=\"container voor bloed- of weefselopslag of -kweek (700957004 - SNOMED CT)\">container voor bloed- of weefselopslag of -kweek</span>\n                              </div>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "9877" ]
+  ] ) ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:87612001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "87612001" ] ;
+       fhir:display [ fhir:v "Bloed" ]
+     ] )
+  ] ; # 
+  fhir:receivedTime [ fhir:v "2023-03-13T08:30:00+01:00"^^xsd:dateTime] ; # 
+  fhir:collection [
+     fhir:collected [ fhir:v "2023-03-13T08:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:quantity [
+       fhir:value [ fhir:v "5.23"^^xsd:decimal ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ]
+     ] ;
+     fhir:method [
+       fhir:coding ( [
+         a sct:28520004 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "28520004" ] ;
+         fhir:display [ fhir:v "venapunctie voor bloedtest" ]
+       ] )
+     ] ;
+     fhir:bodySite [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             a sct:24028007 ;
+             fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "24028007" ] ;
+             fhir:display [ fhir:v "rechts" ]
+           ] )
+         ]
+       ] ) ;
+       fhir:coding ( [
+         a sct:76248009 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "76248009" ] ;
+         fhir:display [ fhir:v "gehele regio van elleboog" ]
+       ] )
+     ]
+  ] ; # 
+  fhir:container ( [
+     fhir:id [ fhir:v "2" ] ;
+     fhir:type [
+       fhir:coding ( [
+         a sct:700957004 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "700957004" ] ;
+         fhir:display [ fhir:v "container voor bloed- of weefselopslag of -kweek" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Monster bij LaboratoriumUitslag (LaboratoryTestResult) [bgz-patA-labresult2]" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,95 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/Observation/3009316> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "3009316"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-04-17T11:57:34.749+02:00"^^xsd:dateTime ] ;
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Observation. id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.18.3009316 (urn:ietf:rfc:3986), Category: <span title=\"Laboratory (49581000146104 - SNOMED CT)\">Laboratory</span>, <span title=\"Klinische chemie (275711006 - SNOMED CT)\">Klinische chemie</span>, Status: status-final</caption>\n                     <tbody>\n                        <tr>\n                           <th>Effective Time</th>\n                           <td>14:47:00, 13 March 2023</td>\n                        </tr>\n                        <tr>\n                           <th>Specimen</th>\n                           <td>Materiaal: Bloed</td>\n                        </tr>\n                        <tr>\n                           <th>Related</th>\n                           <td>Observation/a3d4d0c9-6ff0-414e-a50c-f5180105fef7</td>\n                        </tr>\n                        <tr>\n                           <th>code</th>\n                           <th>Value</th>\n                        </tr>\n                        <tr>\n                           <td/>\n                           <td/>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+  ] ; # 
+  fhir:contained ( [
+     a fhir:ProcedureRequest ;
+     fhir:id [ fhir:v "1" ] ;
+     fhir:meta [
+       fhir:profile ( [ fhir:v "http://hl7.org/fhir/StructureDefinition/ProcedureRequest"^^xsd:anyURI ] )
+     ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:intent [ fhir:v "order" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:UNK ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UNK" ] ;
+         fhir:display [ fhir:v "unknown" ]
+       ] )
+     ] ;
+     fhir:requester [
+       fhir:agent [
+         fhir:link <http://hl7.nl/fhir/zorgviewer/Practitioner/729> ;
+         fhir:reference [ fhir:v "Practitioner/729" ] ;
+         fhir:display [ fhir:v "Jutte" ]
+       ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.18.3009316" ]
+  ] ) ; # 
+  fhir:basedOn ( [
+     fhir:reference [ fhir:v "#1" ] ;
+     fhir:display [ fhir:v "ProcedureRequest" ]
+  ] ) ; # 
+  fhir:status [
+     fhir:v "final" ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/code-specification"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.16.1"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "final" ] ;
+           fhir:display [ fhir:v "Definitief" ]
+         ] )
+       ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:49581000146104 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "49581000146104" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       a sct:275711006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "275711006" ] ;
+       fhir:display [ fhir:v "Klinische chemie" ]
+     ] )
+  ] ) ; # 
+  fhir:effective [ fhir:v "2023-03-13T14:47:00+01:00"^^xsd:dateTime] ; # 
+  fhir:specimen [
+     fhir:link <http://hl7.nl/fhir/zorgviewer/Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635> ;
+     fhir:reference [ fhir:v "Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635" ] ;
+     fhir:display [ fhir:v "Materiaal: Bloed" ]
+  ] ; # 
+  fhir:related ( [
+     fhir:target [
+       fhir:link <http://hl7.nl/fhir/zorgviewer/Observation/a3d4d0c9-6ff0-414e-a50c-f5180105fef7> ;
+       fhir:reference [ fhir:v "Observation/a3d4d0c9-6ff0-414e-a50c-f5180105fef7" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
