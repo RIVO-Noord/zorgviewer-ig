@@ -259,7 +259,7 @@
         
           Draft
           
-            as of 2024-07-22
+            as of 2024-07-24
           
         
       </td>
@@ -298,27 +298,28 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 
 <p><a href="https://zibs.nl/wiki/Zorgaanbieder-v3.1.1(2017NL)">ZIB Zorgaanbieder</a></p>
 
-<h3 id="zoeken-naar-codes">Zoeken naar codes</h3>
+<h3 id="zoeken-naar-identifiers">Zoeken naar identifiers</h3>
 
 <ul>
-  <li><a href="https://www.vektis.nl/agb-register/zoeken">Vektiz AGB Register zoeken</a></li>
+  <li><a href="https://www.vektis.nl/agb-register/zoeken">Vektiz AGB Register zoeken</a> system=http://fhir.nl/fhir/NamingSystem/agb-z</li>
   <li><a href="https://www.vektis.nl/agb-register/onderneming-06020101">Vektiz AGB Register UMCG</a></li>
-  <li><a href="https://hl7.nl/actuele-hl7-nl-oid-register.html">HL7 NL OID Register</a></li>
+  <li><a href="https://hl7.nl/actuele-hl7-nl-oid-register.html">HL7 NL OID Register</a> system=urn:oid:2.16.840.1.113883.2.4.3</li>
+  <li><a href="https://www.uziregister.nl/">URA - UZI Register Abonneenummer</a> system=2.16.528.1.1007.3.3</li>
 </ul>
 
 <h3 id="requests">Requests</h3>
 
 <ol>
   <li>
-    <p>Opvragen (search) naar organisatie op basis van de organisatie AGB of OID</p>
+    <p>Opvragen (search) naar organisatie op basis van de organisatie AGB, OID of URA</p>
 
-    <p><code class="language-plaintext highlighter-rouge">GET &lt;bronsysteem-ontsluiting-base/Organization?identifier=&lt;AGB|OID&gt;</code></p>
+    <p><code class="language-plaintext highlighter-rouge">GET &lt;bronsysteem-ontsluiting-base/Organization?identifier=&lt;AGB|URA|OID&gt;</code></p>
   </li>
 </ol>
 
 <h3 id="bronsysteem-herkennen">Bronsysteem herkennen</h3>
 
-<p>De <em>Zorgviewer-backend</em> of <em>Ontsluiten bronsysteem</em> <strong>MOET</strong> na bevragen van het bronsysteem aan elk resultaat resource een meta-tag toevoegen met de <a href="https://www.vektis.nl/agb-register/zoeken">VEKTIS AGB-Z code</a> of de <a href="https://hl7.nl/actuele-hl7-nl-oid-register.html">HL7 NL OID</a> van de zorgaanbieder. Dit wordt vervolgens gebruikt in de “Bron” kolom in de Zorgviewer-frontend. N.B. We gebruiken hier een pre-adopt van de FHIR R4 Meta.source.</p>
+<p>De <em>Zorgviewer-backend</em> of <em>Ontsluiten bronsysteem</em> <strong>MOET</strong> na bevragen van het bronsysteem aan elk resultaat resource een meta-tag toevoegen met de <a href="https://www.vektis.nl/agb-register/zoeken">VEKTIS AGB-Z code</a>, de <a href="https://hl7.nl/actuele-hl7-nl-oid-register.html">HL7 NL OID</a> of de <a href="https://www.uziregister.nl/">UZI Register Abonneenummer</a> van de zorgaanbieder (Zie <a href="StructureDefinition-Organization.html">Organization</a> voor voorbeelden en details.) Dit wordt vervolgens gebruikt in de “Bron” kolom in de Zorgviewer-frontend. N.B. We gebruiken hier een <em>pre-adopt</em> van de FHIR R4 <a href="StructureDefinition-extension-Meta.source.html">Meta.source</a>.</p>
 
 <p>Toevoegen aan elke response, dus per resource (bij een read) of per Bundle (bij een search):</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -329,7 +330,7 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p><em>Optioneel:</em> Elke entry van een search response Bundle bevat een referentie naar de bijbehorende Patient (<code class="language-plaintext highlighter-rouge">&lt;resource&gt;.subject|patient</code>). Elke patient heeft een <code class="language-plaintext highlighter-rouge">Patient.managingOrganization</code> en in de gerefereerde <code class="language-plaintext highlighter-rouge">Organization.identifier</code> staat vervolgens o.a. de OID van het bronsysyeem. Of je gebruikt de identifiers om een volledige Organization op te zoeken in het <a href="zorgviewer-services.html#adressering">adresboek</a> en zie inhoud <a href="artifacts.html#zorgviewer-services-content">hier</a>.</p>
+<p><em>Alternatief:</em> Elke entry van een search response Bundle bevat een referentie naar de bijbehorende Patient (<code class="language-plaintext highlighter-rouge">&lt;resource&gt;.subject|patient</code>). Elke patient heeft een <code class="language-plaintext highlighter-rouge">Patient.managingOrganization</code> en in de gerefereerde <code class="language-plaintext highlighter-rouge">Organization.identifier</code> staat vervolgens o.a. de OID van het bronsysyeem. Of je gebruikt de identifiers om een volledige Organization op te zoeken in het <a href="zorgviewer-services.html#adressering">adresboek</a> en zie inhoud <a href="artifacts.html#zorgviewer-services-content">hier</a>.</p>
 
 
 </div>
@@ -2583,7 +2584,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Mon, Jul 22, 2024 13:35+0000">2024-07-22</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Jul 24, 2024 07:45+0000">2024-07-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
