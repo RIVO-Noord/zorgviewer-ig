@@ -1,10 +1,10 @@
 zorgviewer-ig : Validation Results
 =========================================
 
-err = 163, warn = 66, info = 122
+err = 161, warn = 66, info = 122
 $--
 Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http://hl7.nl/fhir/zorgviewer)
- Build Errors : 6 / 3 / 0
+ Build Errors : 4 / 3 / 0
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Chipsoft : 2 / 0 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Epic : 2 / 1 / 5
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Nexus : 3 / 0 / 6
@@ -48,7 +48,7 @@ Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/TreatmentDirective-Nexus : 2 / 2 / 4
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/TreatmentDirective-Topicus : 1 / 2 / 4
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-AdvanceDirective : 2 / 0 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-AllergyIntolerance : 9 / 0 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-AllergyIntolerance : 7 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-AuditEvent : 0 / 1 / 2
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Condition : 4 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-DocumentReference : 0 / 0 / 1
@@ -96,10 +96,8 @@ Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http
 WARNING: ImplementationGuide.dependency[0].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 WARNING: ImplementationGuide.dependency[1].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/OZGDelfzicht.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/output/StructureDefinition-AllergyIntolerance.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 401, column 709: The link 'StructureDefinition-AllergyIntolerance-definitions.html#AllergyIntolerance.category.text' for "text" cannot be resolved (valid targets: 301 targets)
-ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/output/StructureDefinition-AllergyIntolerance.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 413, column 709: The link 'StructureDefinition-AllergyIntolerance-definitions.html#AllergyIntolerance.criticality.text' for "text" cannot be resolved (valid targets: 301 targets)
-ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/output/StructureDefinition-AllergyIntolerance.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 2228, column 709: The link 'StructureDefinition-AllergyIntolerance-definitions.html#AllergyIntolerance.category.text' for "text" cannot be resolved (valid targets: 301 targets)
-ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/output/StructureDefinition-AllergyIntolerance.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 2240, column 709: The link 'StructureDefinition-AllergyIntolerance-definitions.html#AllergyIntolerance.criticality.text' for "text" cannot be resolved (valid targets: 301 targets)
+ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/output/StructureDefinition-AllergyIntolerance.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 401, column 709: The link 'StructureDefinition-AllergyIntolerance-definitions.html#AllergyIntolerance.category.text' for "text" cannot be resolved (valid targets: 311 targets)
+ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/output/StructureDefinition-AllergyIntolerance.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 2294, column 709: The link 'StructureDefinition-AllergyIntolerance-definitions.html#AllergyIntolerance.category.text' for "text" cannot be resolved (valid targets: 311 targets)
 ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/output/zorgviewer-services.html#/html/body/div/div/div/div/div/h3/a at Line 194, column 23: The link 'CapabilityStatement-Terminology.html' for "Terminology" cannot be resolved
 ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/output/zorgviewer-services.html#/html/body/div/div/div/div/div/ul/li/a at Line 217, column 26: The link 'StructureDefinition-ToestemmingConsent' for "Toestemming Consent" cannot be resolved
 == input/examples/AdvanceDirective-Chipsoft.json ==
@@ -390,14 +388,12 @@ ERROR: StructureDefinition/AdvanceDirective: StructureDefinition.snapshot.elemen
 ERROR: StructureDefinition/AdvanceDirective: StructureDefinition.snapshot.element[14].pattern.ofType(CodeableConcept).coding[0].code: Unknown code '11341000146107' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201'
 == input/profiles/StructureDefinition-AllergyIntolerance.json ==
 ERROR: StructureDefinition.differential.element[2]: No match found for AllergyIntolerance.category.text in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: StructureDefinition.differential.element[4]: No match found for AllergyIntolerance.criticality.text in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: http://hl7.nl/fhir/zorgviewer/StructureDefinition/AllergyIntolerance: The profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/AllergyIntolerance has 2 elements in the differential (id: AllergyIntolerance.category.text, id: AllergyIntolerance.criticality.text) that don't have a matching element in the snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://hl7.nl/fhir/zorgviewer/StructureDefinition/AllergyIntolerance: The profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/AllergyIntolerance has 1 element in the differential (id: AllergyIntolerance.category.text) that don't have a matching element in the snapshot: check that the path and definitions are legal in the differential (including order)
 ERROR: StructureDefinition/AllergyIntolerance: StructureDefinition.snapshot.element[19]: The element AllergyIntolerance.clinicalStatus.value has no assigned types, and no content reference
 ERROR: StructureDefinition/AllergyIntolerance: StructureDefinition.snapshot.element[31]: The element AllergyIntolerance.category.value has no assigned types, and no content reference
 ERROR: StructureDefinition/AllergyIntolerance: StructureDefinition.snapshot.element[41]: The element AllergyIntolerance.criticality.value has no assigned types, and no content reference
-ERROR: StructureDefinition/AllergyIntolerance: StructureDefinition.snapshot.element[181]: The element AllergyIntolerance.reaction.severity.value has no assigned types, and no content reference
+ERROR: StructureDefinition/AllergyIntolerance: StructureDefinition.snapshot.element[185]: The element AllergyIntolerance.reaction.severity.value has no assigned types, and no content reference
 ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-AllergyIntolerance-definitions.html#AllergyIntolerance.category.text' at 'div/table/tr/td/a' for 'text' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-AllergyIntolerance-definitions.html#AllergyIntolerance.criticality.text' at 'div/table/tr/td/a' for 'text' does not resolve
 == input/profiles/StructureDefinition-AuditEvent.json ==
 INFORMATION: StructureDefinition/AuditEvent: StructureDefinition.snapshot.element[27].fixed.ofType(uri): The repeating element has a fixed. The fixed will apply to all the repeats (this has not been clear to all users)
 WARNING: StructureDefinition/AuditEvent: StructureDefinition.snapshot.element[27].fixed.ofType(uri): The repeating element has a fixed value for a primitive type. The DotNet validator will not apply this to all the repeats - this is an error

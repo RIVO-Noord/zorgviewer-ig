@@ -11,15 +11,19 @@
         },
         {
           "path": "iif(exists(resource.code.text),resource.code.text,resource.code.coding.display)",
-          "name": "Voor"
+          "name": "Stof"
+        },
+        {
+          "path": "resource.category",
+          "name": "Categorie"
         },
         {
           "path": "resource.reaction.severity",
           "name": "Ernst"
         },
         {
-          "path": "resource.category",
-          "name": "Categorie"
+          "path": "resource.reaction.manifestation.text",
+          "name": "Reacties"
         }
       ],
       "forEach": "entry.where(resource.resourceType = 'AllergyIntolerance')"
