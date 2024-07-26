@@ -1,0 +1,40 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-DocumentReference",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "iif(exists(resource.context.period.start),resource.context.period.start,resource.indexed+'(i)')",
+          "name": "Datum"
+        },
+        {
+          "path": "resource.type.coding[0].code",
+          "name": "Type"
+        },
+        {
+          "path": "resource.class.coding.code",
+          "name": "Class"
+        },
+        {
+          "path": "iif(exists(resource.description),resource.description,resource.content.attachment.title)",
+          "name": "Beschrijving"
+        },
+        {
+          "path": "resource.author.display",
+          "name": "Auteur"
+        },
+        {
+          "path": "resource.context.practiceSetting.text",
+          "name": "Specialisme"
+        },
+        {
+          "path": "resource.content.attachment.contentType",
+          "name": "MimeType (voor filteren op pdf)"
+        }
+      ],
+      "forEach": "entry"
+    }
+  ]
+}

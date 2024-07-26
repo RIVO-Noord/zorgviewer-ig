@@ -1,0 +1,109 @@
+{
+    "resourceType": "Condition",
+    "id": "771",
+    "meta": {
+        "lastUpdated": "2024-04-17T10:01:44.145+02:00",
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-Problem"
+        ]
+    },
+    "text": {
+        "status": "extensions",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Condition. typeCode-SUBJ: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.26.771 (urn:ietf:rfc:3986), Category: <span title=\"Diagnose (282291009 - SNOMED CT)\">Diagnose</span>, Status: status-inactive / status-unknown</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Gevallen op kunstijsbaan</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>code</th>\n                           <td>\n                              <span title=\"fractuur van pols (31641000146105 - SNOMED CT)\">fractuur van pols</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Onset</th>\n                           <td>2001</td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+    },
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.26.771"
+        }
+    ],
+    "clinicalStatus": "inactive",
+    "_clinicalStatus": {
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "73425007",
+                            "display": "Niet actueel"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "verificationStatus": "unknown",
+    "_verificationStatus": {
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/NullFlavor",
+                            "code": "UNK",
+                            "display": "Onbekend"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "282291009",
+                    "display": "Diagnose"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "31641000146105",
+                "display": "fractuur van pols"
+            }
+        ]
+    },
+    "bodySite": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "24028007",
+                                "display": "rechts"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "361289009",
+                    "display": "pols"
+                }
+            ]
+        }
+    ],
+    "subject": {
+        "reference": "https://example.org/Patient/330073",
+        "display": "Xxx-Helleman, J (M)"
+    },
+    "onsetDateTime": "2001",
+    "note": [
+        {
+            "text": "Gevallen op kunstijsbaan"
+        }
+    ]
+}

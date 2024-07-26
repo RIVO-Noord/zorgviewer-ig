@@ -1,0 +1,60 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AllergyIntolerance",
+    "name": "AllergyIntolerance",
+    "title": "AllergyIntolerance",
+    "status": "draft",
+    "description": "AllergyIntolerance",
+    "kind": "resource",
+    "abstract": false,
+    "type": "AllergyIntolerance",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "AllergyIntolerance.category",
+                "path": "AllergyIntolerance.category",
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.category.text",
+                "path": "AllergyIntolerance.category.text",
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.criticality",
+                "path": "AllergyIntolerance.criticality",
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.criticality.text",
+                "path": "AllergyIntolerance.criticality.text",
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.code",
+                "path": "AllergyIntolerance.code",
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.code.text",
+                "path": "AllergyIntolerance.code.text",
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.onset[x]",
+                "path": "AllergyIntolerance.onset[x]",
+                "type": [
+                    {
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "Period"
+                    }
+                ],
+                "mustSupport": true
+            }
+        ]
+    }
+}

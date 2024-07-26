@@ -28,31 +28,50 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
 
 ## Stappen publiceren IG vanuit git
 
-1. (optioneel) bouw lokaal de IG en check output
+### Lokaal
+
+1. (optioneel) maak de docker om de IG lokaal te bouwen
+Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?er=221886#jdk21-linux
 ```
-> docker run --name=zv -it -v "$(pwd)":/app ubuntu:latest /bin/bash
+> cd {zorgviewer-ig}
+> (Bash) docker run --name=zv -it -v "$(pwd)":/app ubuntu:latest /bin/bash
+> (Powershell) docker run --name=zv -it -v ${PWD}:/app ubuntu:latest /bin/bash
+@> cd /app
 @> apt update
 @> apt install jekyll graphviz
 @> dpkg -i jdk-21_linux-x64_bin.deb
 ```
-1. Werk de ``changes.md`` bij
+1. (optioneel) bouw lokaal de IG en check output
+```
+> (Bash) curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
+> (Powershell) Invoke-WebRequest -Uri "https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar" -OutFile "publisher.jar"
+@> java -jar publisher.jar -ig ig.ini
+```
+
+### Tag een Release
+
+1. Werk ``input/pagecontent/changes.md`` bij (TODO: beschrijven Michael)
+1. Werk ``input/images/package-feed.xml`` bij (datum, versie, IG publisher versie TODO: beschrijven Michael)
 1. ``> git commit -a; git push``
-1. Create tag "0.M.R-sprintX" - op github web-UI klik op: 
+1. Create tag "1.M.R-sprintX" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
   1. tags
   1. Releases
   1. Draft new release
-  1. Choose a tag: "0.M.R-sprintX"
+  1. Choose a tag: "1.M.R-sprintX"
   1. Create a new tag
-  1. Release title: "0.M.R-sprintX"
+  1. Release title: "1.M.R-sprintX"
   1. Description: "{devops link naar sprint}"
   1. Vink aan: Set as pre-release
   1. Publish release
-1. Publish via snapshot branch tbv review
+
+### Merge release naar Snapshot
+
+1. Publish naar implementatiegids.zorgviewer.nl via snapshot branch
 ```
 > cd <temp-folder>
 > git pull of git clone https://github.com/RIVO-Noord/zorgviewer-ig.git
 > git checkout snapshot
-> git merge 0.M.R-sprintX
+> git merge 1.M.R-sprintX
 ```
 1. Zet release label in zorgviewer-ig.json op "sprintX"
 ```
@@ -62,9 +81,9 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
 ```
 1. Update versions and dates in input/images/package-feed.xml
 1. En werk verder in de master branch
-1. Update input/zorgviewer-ig.json version naar volgende minor "0.M+1.0"
+1. Update input/zorgviewer-ig.json version naar volgende minor "1.M+1.0"
 
-## Handmatig publish implementatiegids.zorgviewer.nl
+### Handmatig publish implementatiegids.zorgviewer.nl
 
 N.B. Alleen nodig als de [GitHub Snapshot Publish Workflow](.github/workflows/publish.yml) niet werkt.
 

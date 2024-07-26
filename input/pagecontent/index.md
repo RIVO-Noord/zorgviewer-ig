@@ -115,10 +115,12 @@ Hierna volgt een schema met functionaliteiten per bouwblok.
 
 * In onderstaande voorbeeld staat "This structure is derived from Zib Problem", deze link gaat naar de volledige zib op Simplifier.net. Op deze site staat onder het tabblad ‘Mappings’ bovenaan in de tabel de directe link naar de zib op zibs.nl.
 * Ook in de link onder het kopje ‘Type’, in dit geval ‘Zib Problem’ gaat de link naar Simplifier.net. Het ‘Overview’ tabblad is de FHIR-representatie van de Zib. Daarin zitten de Mappings terug naar de Zib. 
-*  In de kolom "Description" staat de naam van het element in de Zib. Via bovenstaande links naar Simplifier.net staat in de kolom ‘Mappings’ de uitgebreide beschrijving.
+* In de kolom "Description" staat de naam van het element in de Zib. Via bovenstaande links naar Simplifier.net staat in de kolom ‘Mappings’ de uitgebreide beschrijving.
 <div>
 {% include img.html img="leeswijzer-fhir-resources-en-zibs.png" width="70%" %}
 </div>
+
+[Toelichting op het format](https://hl7.org/fhir/STU3/formats.html#table)
 
 ### Dependencies
 

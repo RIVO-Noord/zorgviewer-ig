@@ -55,10 +55,10 @@ Kolom definities:
     </tr>
     <tr>
       <td>Behandeling</td>
-      <td><samp>.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.text</samp></td>
+      <td><samp>.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.text, zie Toelichting voor de variaties per bronsysteem</samp></td>
       <td><code>string</code></td>
       <td></td>
-      <td></td>
+      <td>Epic: .extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.text met lange display; VIPLive: .extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.display in het Engels; ChipSoft: .extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.text korte display met hoofdletters</td>
     </tr>
     <tr>
       <td>Behandeling toegestaan</td>

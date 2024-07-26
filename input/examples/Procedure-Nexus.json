@@ -1,0 +1,106 @@
+{
+    "resourceType": "Procedure",
+    "id": "25102292",
+    "meta": {
+      "lastUpdated": "2024-04-17T11:49:15.508+02:00",
+      "profile": [
+        "http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"
+      ]
+    },
+    "text": {
+      "status": "extensions",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Procedure. typeCode-SUBJ: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.31.25102292 (urn:ietf:rfc:3986), Category: <span title=\"Surgical procedure (387713003 - SNOMED CT)\">Surgical procedure</span>, Status: status-completed<span style=\"display: block;\">typeCode-PRF: Boonstra</span>\n                        <span style=\"display: block;\">typeCode-PRF: VIPP NEXUS Ziekenhuis</span>\n                     </caption>\n                     <tbody>\n                        <tr>\n                           <td>\n                              <span title=\"Prothese implantatie kniegewricht. (038663 - 2.16.840.1.113883.2.4.3.27.15.5)\">Prothese implantatie kniegewricht.</span>\n                           </td>\n                           <td>\n                              <div>Performed: FromNoTo 6 May 2012</div>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Based On</th>\n                           <td>ProcedureRequest</td>\n                        </tr>\n                        <tr>\n                           <th>Body Site</th>\n                           <td>\n                              <span title=\"structuur van kniegewricht (lichaamsstructuur) (49076000 - SNOMED CT)\">structuur van kniegewricht (lichaamsstructuur)</span> \n                              <span title=\"links (7771000 - SNOMED CT)\">links</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>typeCode-RSON</th>\n                           <td>artropathie</td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+    },
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.31.25102292"
+      }
+    ],
+    "basedOn": [
+      {
+        "reference": "ProcedureRequest/45d3945c-dcbd-4587-90f9-fa30245adced",
+        "display": "ProcedureRequest"
+      }
+    ],
+    "status": "completed",
+    "category": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "387713003",
+          "display": "Surgical procedure"
+        }
+      ]
+    },
+    "code": {
+      "coding": [
+        {
+          "system": "urn:oid:2.16.840.1.113883.2.4.3.27.15.5",
+          "code": "038663",
+          "display": "Prothese implantatie kniegewricht."
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/330073",
+      "display": "Xxx-Helleman, J (M)"
+    },
+    "performedPeriod": {
+      "start": "2012-05-06"
+    },
+    "performer": [
+      {
+        "actor": {
+          "extension": [
+            {
+              "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+              "valueReference": {
+                "reference": "PractitionerRole/406",
+                "display": "Boonstra"
+              }
+            }
+          ],
+          "reference": "Practitioner/406",
+          "display": "Boonstra"
+        }
+      },
+      {
+        "actor": {
+          "reference": "Organization/4107EC15F3AA846EA912B85ABBA115644166D760",
+          "display": "VIPP NEXUS Ziekenhuis"
+        }
+      }
+    ],
+    "reasonReference": [
+      {
+        "reference": "Condition/830",
+        "display": "artropathie"
+      }
+    ],
+    "bodySite": [
+      {
+        "extension": [
+          {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "7771000",
+                  "display": "links"
+                }
+              ]
+            }
+          }
+        ],
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "49076000",
+            "display": "structuur van kniegewricht (lichaamsstructuur)"
+          }
+        ]
+      }
+    ]
+  }

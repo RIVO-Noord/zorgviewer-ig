@@ -1,0 +1,109 @@
+{
+    "resourceType": "AllergyIntolerance",
+    "id": "2.16.840.1.113883.2.4.3.124.7.48765.212340000000820",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance"
+        ]
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Allergy resource:</h3><ul><li><p><strong>Patient:</strong> &#x27;Test Gestructureerd Vipp&#x27;</p></li><li><p><strong>Clinical status:</strong> &#x27;Active&#x27;</p></li><li><p><strong>Verification status:</strong> &#x27;Unconfirmed&#x27;</p></li><li><p><strong>Onset:</strong> &#x27;12-11-2019 14:02&#x2B;0100&#x27;</p></li><li><p><strong>Category:</strong> &#x27;Propensity to adverse reactions to drug&#x27;</p></li><li><p><strong>Criticality:</strong> &#x27;Mild&#x27;</p></li><li><p><strong>Code:</strong> &#x27;ALLE NSAID&#x27;S (INCL. SALICYLATEN)&#x27;</p></li><li><table><thead><tr><th>Reaction</th><th>Manifestation</th></tr></thead><tbody><tr><td>Reaction 1</td><td>Other;</td></tr></tbody></table></li></ul></div>"
+    },
+    "identifier": [
+        {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.124.7.48765.2",
+            "value": "12340000000820"
+        }
+    ],
+    "clinicalStatus": "active",
+    "_clinicalStatus": {
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/ActStatus",
+                            "code": "active",
+                            "display": "Active"
+                        }
+                    ],
+                    "text": "Actief"
+                }
+            }
+        ]
+    },
+    "verificationStatus": "unconfirmed",
+    "category": [
+        "medication"
+    ],
+    "_category": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "419511003",
+                                "display": "Propensity to adverse reactions to drug"
+                            }
+                        ],
+                        "text": "Medicijn"
+                    }
+                }
+            ]
+        }
+    ],
+    "criticality": "low",
+    "_criticality": {
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "255604002",
+                            "display": "Mild"
+                        }
+                    ],
+                    "text": "Licht"
+                }
+            }
+        ]
+    },
+    "code": {
+        "coding": [
+            {
+                "system": "urn:oid:2.16.840.1.113883.2.4.4.1.902.122",
+                "code": "000039",
+                "display": "ALLE NSAID'S (INCL. SALICYLATEN)"
+            }
+        ],
+        "text": "ALLE NSAID'S (INCL. SALICYLATEN)"
+    },
+    "patient": {
+        "reference": "https://example.org/Patient/12A188A91ED05B87A4335425414F9FBAA6F4462C378D533A8F019C0F20712D36",
+        "display": "Test Gestructureerd Vipp"
+    },
+    "onsetDateTime": "2019-11-12",
+    "reaction": [
+        {
+            "manifestation": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/NullFlavor",
+                            "code": "OTH",
+                            "display": "other"
+                        }
+                    ],
+                    "text": "Huiduitslag"
+                }
+            ]
+        }
+    ]
+}
