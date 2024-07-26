@@ -13,3 +13,5 @@
 1. Opvragen (search) definities
 
     `GET <behandelplan-base>/Flag`
+
+{% include bronsysteem-herkennen.md %}

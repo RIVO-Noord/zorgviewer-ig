@@ -17,3 +17,5 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 1. Opvragen (search) definities
 
     `GET <behandelplan-base>/AllergyIntolerance`
+
+{% include bronsysteem-herkennen.md %}
