@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43"] ; # 
+  fhir:meta [
+     fhir:profile ( [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: PractitionerRole ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43</b></p><a name=\"ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43\"> </a><a name=\"hcewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43\"> </a><a name=\"ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43-nl-NL\"> </a><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=https://example.org/POC-OAUTH2/api/FHIR/STU3/Practitioner/e9D1EnWpBb3LBTjup8AaiR7RR9P0n7AVlal4dSqY9y3M3\">Schroder, CP., Arts</a></p><p><b>code</b>: <span title=\"Codes:{urn:oid:1.2.840.114350.1.13.485.3.7.10.836982.1040 1}\">Arts</span></p><p><b>specialty</b>: <span title=\"Codes:{urn:oid:1.2.840.114350.1.72.1.7.7.10.688867.4160 32}\">Interne geneeskunde</span>, <span title=\"Codes:{urn:oid:1.2.840.114350.1.72.1.7.7.10.688867.4160 99}\">Reumatologie</span></p></div>"
+  ] ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:practitioner [
+     fhir:link <https://example.org/POC-OAUTH2/api/FHIR/STU3/Practitioner/e9D1EnWpBb3LBTjup8AaiR7RR9P0n7AVlal4dSqY9y3M3> ;
+     fhir:reference [ fhir:v "https://example.org/POC-OAUTH2/api/FHIR/STU3/Practitioner/e9D1EnWpBb3LBTjup8AaiR7RR9P0n7AVlal4dSqY9y3M3" ] ;
+     fhir:display [ fhir:v "Schroder, CP., Arts" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.10.836982.1040"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1" ] ;
+       fhir:display [ fhir:v "Arts" ]
+     ] ) ;
+     fhir:text [ fhir:v "Arts" ]
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.72.1.7.7.10.688867.4160"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "32" ] ;
+       fhir:display [ fhir:v "Interne geneeskunde" ]
+     ] ) ;
+     fhir:text [ fhir:v "Interne geneeskunde" ]
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.72.1.7.7.10.688867.4160"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "99" ] ;
+       fhir:display [ fhir:v "Reumatologie" ]
+     ] ) ;
+     fhir:text [ fhir:v "Reumatologie" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

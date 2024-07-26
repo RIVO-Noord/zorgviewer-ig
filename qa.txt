@@ -1,9 +1,9 @@
 zorgviewer-ig : Validation Results
 =========================================
 
-err = 159, warn = 67, info = 115
+err = 163, warn = 66, info = 122
 IG Publisher Version: 1.6.18
-Generated Fri Jul 26 10:54:40 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#1.3.0 (canonical = http://hl7.nl/fhir/zorgviewer)
+Generated Fri Jul 26 11:33:55 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#1.3.0 (canonical = http://hl7.nl/fhir/zorgviewer)
  Build Errors : 6 / 3 / 0
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Chipsoft : 2 / 0 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Epic : 2 / 1 / 5
@@ -34,6 +34,7 @@ Generated Fri Jul 26 10:54:40 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgv
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Practitioner-Epic : 0 / 3 / 14
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Practitioner-Epic-SCT : 0 / 0 / 10
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Practitioner-Nexus : 1 / 1 / 6
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/PractitionerRole-Epic : 3 / 0 / 10
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Procedure-Chipsoft : 0 / 0 / 6
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Procedure-Epic : 0 / 5 / 4
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Procedure-Nexus : 5 / 2 / 8
@@ -58,7 +59,7 @@ Generated Fri Jul 26 10:54:40 UTC 2024. FHIR version 3.0.2 for hl7.fhir.nl.zorgv
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Patient : 25 / 34 / 13
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-PlanDefinition : 0 / 1 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Practitioner : 3 / 17 / 7
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-PractitionerRole : 3 / 16 / 7
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-PractitionerRole : 4 / 15 / 7
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Procedure : 1 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Specimen : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-ToestemmingConsent : 1 / 1 / 1
@@ -325,6 +326,17 @@ INFORMATION: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT: Practitioner.identifier[
 INFORMATION: Practitioner/67d36d4c-bc18-4c5d-8fb5-609f6a17451e: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Practitioner|1.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: Practitioner/67d36d4c-bc18-4c5d-8fb5-609f6a17451e: Practitioner.telecom[0].extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' could not be found, so the code cannot be validated (error because this is a required binding)
 INFORMATION: Practitioner/67d36d4c-bc18-4c5d-8fb5-609f6a17451e: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|2.0.7 (this may not be a problem, but you should check that it's not intended to match a slice)
+== input/examples/PractitionerRole-Epic.json ==
+ERROR: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole: PractitionerRole.specialty: max allowed = 1, but found 2 (from http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole|1.3.0)
+INFORMATION: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole.code[0].coding[0].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.10.836982.1040' could not be found, so the code cannot be validated
+INFORMATION: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole.specialty[0].coding[0].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.72.1.7.7.10.688867.4160' could not be found, so the code cannot be validated
+INFORMATION: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole.specialty[0].coding[0]: This element does not match any known slice defined in the profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole|1.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole.specialty[1].coding[0]: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.72.1.7.7.10.688867.4160' could not be found, so the code cannot be validated
+INFORMATION: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole.specialty[1].coding[0]: This element does not match any known slice defined in the profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole|1.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+ERROR: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole: Constraint failed: zv-prr-1: 'PractitionerRole Specialty COD016 Vektiz AGB medische specialismen code SHOULD be present.'
+ERROR: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole: PractitionerRole.specialty: max allowed = 1, but found 2 (from http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole|2.0.7)
+INFORMATION: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole.specialty[0].coding[0]: This element does not match any known slice defined in the profile http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole|2.0.7 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole.specialty[1].coding[0]: This element does not match any known slice defined in the profile http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole|2.0.7 (this may not be a problem, but you should check that it's not intended to match a slice)
 == input/examples/Procedure-Chipsoft.json ==
 INFORMATION: Procedure/2.16.840.1.113883.2.4.3.124.7.47519.41230000001716: Procedure.code.coding[0].system: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.120.5.3' could not be found, so the code cannot be validated
 INFORMATION: Procedure/2.16.840.1.113883.2.4.3.124.7.47519.41230000001716: Procedure.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure|1.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -440,10 +452,10 @@ ERROR: StructureDefinition/Practitioner: StructureDefinition.snapshot.element[39
 ERROR: StructureDefinition/Practitioner: StructureDefinition.snapshot.element[39].example[6].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' could not be found, so the code cannot be validated (error because this is a required binding)
 ERROR: StructureDefinition/Practitioner: StructureDefinition.snapshot.element[39].example[7].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' could not be found, so the code cannot be validated (error because this is a required binding)
 == input/profiles/StructureDefinition-PractitionerRole.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole'): The element PractitionerRole.specialty.coding is out of order (and maybe others after it)
 ERROR: StructureDefinition/PractitionerRole: StructureDefinition.snapshot.element[38].example[5].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' could not be found, so the code cannot be validated (error because this is a required binding)
 ERROR: StructureDefinition/PractitionerRole: StructureDefinition.snapshot.element[38].example[6].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' could not be found, so the code cannot be validated (error because this is a required binding)
 ERROR: StructureDefinition/PractitionerRole: StructureDefinition.snapshot.element[38].example[7].value.ofType(ContactPoint).extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' could not be found, so the code cannot be validated (error because this is a required binding)
-WARNING: StructureDefinition.where(url = 'http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole'): The Implementation Guide contains no examples for this profile
 == input/profiles/StructureDefinition-Procedure.json ==
 ERROR: StructureDefinition.snapshot.element[12]: The element Procedure.extension:procedureMethod.valueCodeableConcept:valueCodeableConcept launches straight into slicing without the slicing being set up properly first
 == input/profiles/StructureDefinition-Specimen.json ==
