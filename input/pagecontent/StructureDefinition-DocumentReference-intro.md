@@ -1,5 +1,9 @@
 {% include profile-note.md %}
 
+### View Definition
+
+* [ViewDefinition voor Correspondentie](ViewDefinition-DocumentReference.json)
+
 ### User-Interface guidance
 
 Een schets van het scherm met labels en sortering informatie:
