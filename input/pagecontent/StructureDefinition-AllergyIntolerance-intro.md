@@ -12,6 +12,11 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 
 * [ViewDefinition voor Allergieën en Intoleranties](ViewDefinition-AllergyIntolerance.json)
 
+### User-Interface guidance
+
+Een schets van het scherm met labels en sortering informatie
+<div style="clear:both;"><img src="UI-Schets-AllergiyIntolerances.png" class="figure-img img-responsive img-rounded center-block"></div>
+
 ### Request
 
 1. Opvragen (search) definities
