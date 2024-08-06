@@ -23,6 +23,10 @@ Vanuit de landelijke organisatie rondom palliatieve zorg is er een aanvulling no
 Op dit moment zijn alleen de Behandelwensen deel (de BehandelAanwijzing zib) in scope. Deze specificering van de zib BehandelAanwijzing is te vinden in dit [resource profile](#profile).
 </blockquote>
 
+### View Definition
+
+* [ViewDefinition voor Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
+
 ### User-Interface guidance
 **! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.**
 

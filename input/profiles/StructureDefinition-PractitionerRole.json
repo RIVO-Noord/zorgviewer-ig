@@ -3,7 +3,7 @@
     "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/PractitionerRole",
     "name": "PractitionerRole",
     "title": "PractitionerRole",
-    "status": "draft",
+    "status": "active",
     "description": "De rollen van de Zorgverlener",
     "kind": "resource",
     "abstract": false,
@@ -29,6 +29,12 @@
                 "id": "PractitionerRole.specialty.coding:SpecialtyAGB",
                 "path": "PractitionerRole.specialty.coding",
                 "sliceName": "SpecialtyAGB",
+                "mustSupport": true
+            },
+            {
+                "id": "PractitionerRole.code",
+                "path": "PractitionerRole.code",
+                "definition": "Zie [ConceptMap-epic-rolcode](ConceptMap-epic-rolcode.html)",
                 "mustSupport": true
             }
         ]

@@ -60,7 +60,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
   1. Choose a tag: "1.M.R-sprintX"
   1. Create a new tag
   1. Release title: "1.M.R-sprintX"
-  1. Description: "{devops link naar sprint}"
+  1. Description: "{github changes link}"
   1. Vink aan: Set as pre-release
   1. Publish release
 
@@ -79,7 +79,6 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 > git commit -a
 > git push
 ```
-1. Update versions and dates in input/images/package-feed.xml
 1. En werk verder in de master branch
 1. Update input/zorgviewer-ig.json version naar volgende minor "1.M+1.0"
 
