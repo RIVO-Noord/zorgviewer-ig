@@ -1,0 +1,36 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Procedure",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "resource.performedPeriod.start",
+          "name": "Datum"
+        },
+        {
+          "path": "iif(resource.code.text.empty(),resource.code.coding.display,resource.code.text)",
+          "name": "Verrichting"
+        },
+        {
+          "path": "resource.location.display",
+          "name": "Locatie"
+        },
+        {
+          "path": "resource.performer.actor.display.join('\n')",
+          "name": "Uitgevoerd door"
+        },
+        {
+          "path": "resource.code.coding",
+          "name": "Verrichtingcode"
+        },
+        {
+          "path": "resource.bodySite.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.text",
+          "name": "Lateraliteit"
+        }
+      ],
+      "forEach": "entry.where(resource.resourceType = 'Procedure')"
+    }
+  ]
+}

@@ -4,6 +4,10 @@
 
 [ZIB Verrichting](https://zibs.nl/wiki/Verrichting-v4.1(2017NL))
 
+### View Definition
+
+* [ViewDefinition voor Verrichtingen](ViewDefinition-Procedure.json)
+
 ### User-Interface guidance
 
 Een schets van het scherm met labels en sortering informatie
