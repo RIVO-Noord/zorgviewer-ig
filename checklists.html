@@ -261,7 +261,7 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard <a href="https
     </tr>
     <tr>
       <td>FHIR ID Generation Scheme:</td>
-      <td>Use Unconstrained FHIR ID’s</td>
+      <td>Use Unconstrained FHIR ID's</td>
     </tr>
     <tr>
       <td>Endpoint URI:</td>
@@ -320,7 +320,7 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard <a href="https
     </tr>
     <tr>
       <td>FHIR ID Generation Scheme:</td>
-      <td>Use Unconstrained FIHR ID’s</td>
+      <td>Use Unconstrained FIHR ID's</td>
     </tr>
     <tr>
       <td>Non-Production JWK Set URL:</td>
@@ -332,7 +332,7 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard <a href="https
     </tr>
     <tr>
       <td>Advanced:</td>
-      <td>* Enable on Sandbox: Disable<br />* Non-Production Client ID: Activate for Non-Production (production volgt in een later stadium)<br />* Ter info: deze waarschuwing kan genegeerd worden “Add Non-Production Credentials”</td>
+      <td>* Enable on Sandbox: Disable<br />* Non-Production Client ID: Activate for Non-Production (production volgt in een later stadium)<br />* Ter info: deze waarschuwing kan genegeerd worden "Add Non-Production Credentials"</td>
     </tr>
   </tbody>
 </table>
@@ -383,7 +383,7 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard <a href="https
   <li>3.2 <em>Moet nog aangevuld worden…</em> - FHIR endpoint (interconnect) &gt; client id koppelen aan emp (epic manual)
 Er moet een backend EMP worden aangemaakt, zie hiervoor de  <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100001068&amp;PrefDocID=97042">Epic Galaxy documentatie Backend System Integration</a></li>
   <li>3.3 Uitvoeren van de Epic Sherlock Checklist BgZ VIPP5 voor de zorginformatiebouwstenen in scope</li>
-  <li>3.4 Om te voorkomen dat onterecht een werkdiagnose (die wel in problemlijst mee komen) op “confirmed” worden gezet, moet de FHIR Profile Variabele (AIP) FHIR_NL_PROBLEM_SHOW_VERIFY_STATUS ingesteld worden op 0 (Nee)</li>
+  <li>3.4 Om te voorkomen dat onterecht een werkdiagnose (die wel in problemlijst mee komen) op "confirmed" worden gezet, moet de FHIR Profile Variabele (AIP) FHIR_NL_PROBLEM_SHOW_VERIFY_STATUS ingesteld worden op 0 (Nee)</li>
   <li>3.5 Ten behoeve van Audit Logging <a href="https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072">Epic Nova</a></li>
 </ul>
 
@@ -397,7 +397,7 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  <a href="https://gal
 
 <ul>
   <li>4.1.1 In Epic: Ga naar Documenttype administratie: mapping van het Toestemmingsformulier onder de DocType Group van Patiënttoestemming. Dit is ook afhankelijk van de specifieke inrichting en beleid van de eigen organisatie.</li>
-  <li>4.2 <em>Moet nog aangevuld worden…</em> - Interconnect config + interne url’s</li>
+  <li>4.2 <em>Moet nog aangevuld worden…</em> - Interconnect config + interne url's</li>
   <li>4.3 Ontsluiten van Frontend en Backend end-points via broker naar internet en vervolgens de Zorgviewer IP-reeks 20.160.170.124/31 in de ACL van de Firewall (etc) opnemen zodat de Zorgviewer kan communiceren (HTTPS) met de endpoints. Dit is ook afhankelijk van de eigen organisatie hoe de beveiliging ingeregeld dient te worden. Indien de organisatie met een IP filter wilt werken is bovenstaande nodig.</li>
   <li>4.4 Endpoint ontsluiten
     <ul>
@@ -406,8 +406,8 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  <a href="https://gal
   </li>
   <li>4.5 Aanleveren aan Zorgviewer volgende gegevens:
     <ul>
-      <li>Client ID’s</li>
-      <li>Backend (base en token) Endpoints externe URL’s backend</li>
+      <li>Client ID's</li>
+      <li>Backend (base en token) Endpoints externe URL's backend</li>
       <li>ISS URL frontend</li>
     </ul>
   </li>
@@ -468,10 +468,10 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  <a href="https://gal
       <li>5.2.2 Knop is dan alleen beschikbaar wanneer iemand in een (poli)klinisch contact van een patiënt kan</li>
     </ul>
   </li>
-  <li>5.3 Controleren van de “unmasked BSN” setting
+  <li>5.3 Controleren van de "unmasked BSN" setting
     <ul>
       <li>Open de juiste Shared Security Class (ECL). Zie hiervoor het EMP record item 20800.</li>
-      <li>Controleer of item 20511 gevuld is met een record ‘SNN’ met item 20512 gevuld met ‘data is masked only in printing (masking code)’ [3]</li>
+      <li>Controleer of item 20511 gevuld is met een record 'SNN' met item 20512 gevuld met 'data is masked only in printing (masking code)' [3]</li>
     </ul>
   </li>
 </ul>
@@ -525,7 +525,7 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  <a href="https://gal
   <li>5.4.2 Maak een extensie (LPP)
     <ul>
       <li>Type (i30) = BTG Check [89]</li>
-      <li>Code (i100)= $$chkRule^HUBTGCK9(“ID VAN GEMAAKTE CER”)</li>
+      <li>Code (i100)= $$chkRule^HUBTGCK9("ID VAN GEMAAKTE CER")</li>
       <li>Code template (i1000) = CHECK: USE RULE TO EVALUATE BTG [606558]</li>
       <li>Parameters (Related i1000)= Naam [RULEID] (i1010) &amp; Waarde [ID VAN GEMAAKTE CER] (i1020)</li>
     </ul>
@@ -549,7 +549,7 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  <a href="https://gal
 
 <ol>
   <li>Regel Zorgplatform contract, specifiek voor de BgZ en Documenten Services van de <a href="https://developer.zorgplatform.online/digital-care">Digital-Care API</a></li>
-  <li>OID’s voor Zorgplatform ontsluiting en HiX Webintegratie activiteitendefinities
+  <li>OID's voor Zorgplatform ontsluiting en HiX Webintegratie activiteitendefinities
     <ul>
       <li>2.16.840.1.113883.2.4.3.213.1.3 = Test Zorgviewer</li>
       <li>2.16.840.1.113883.2.4.3.213.1.2 = Acceptatie Zorgviewer</li>
@@ -624,7 +624,7 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  <a href="https://gal
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.4.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Aug 6, 2024 13:09+0000">2024-08-06</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.4.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Mon, Aug 19, 2024 08:48+0000">2024-08-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

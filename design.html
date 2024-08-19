@@ -213,8 +213,8 @@ Dit is de startpagina voor het bouwteam.</p>
   <li>Authorization Client, Result Aggregator - Zorgviewer bouwblok</li>
   <li>Authorization Server - Authenticatie bouwblok</li>
   <li>Provider Information Directory - Zorgverlener Registry bouwblok</li>
-  <li>Clinical Data Consumer “Raadpleger” - Zorgviewer bouwblok</li>
-  <li>Clinical Data Source “Beschikbaar steller” - Ontsluiten Bronsysteem bouwblok</li>
+  <li>Clinical Data Consumer "Raadpleger" - Zorgviewer bouwblok</li>
+  <li>Clinical Data Source "Beschikbaar steller" - Ontsluiten Bronsysteem bouwblok</li>
 </ul>
 
 <h3 id="sequence-diagrams">Sequence Diagrams</h3>
@@ -570,8 +570,8 @@ Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende orga
 
 <p>Tbv het correleren van de Zorgviewer logging met de logging van een Bronsysteem dient een <code class="language-plaintext highlighter-rouge">X-Correlation-Id</code> HTTP Header (per sessie) en een <code class="language-plaintext highlighter-rouge">X-Request-Id</code> HTTP Header (per request) te worden toegevoegd aan ieder request aan het Bronsysteem. Deze kan dan door het Bronsysteem gelogd worden, zodat de logging in de Zorgviewer kan worden gekoppeld aan de logging in het Bronsysteem.
 Epic ondersteunt dit nu d.m.v. key-value pairs in de <code class="language-plaintext highlighter-rouge">AORTA-ID</code> HTTP-Header, zie <a href="https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072">Epic Nova</a>.
-Voorbeeld voor Epic HTTP-Header van “L. Arts uit Tjongerschans”: <code class="language-plaintext highlighter-rouge">AORTA-ID: rid:1b9d6bCd-bBf;cid:yA8UM8fHmhde;usr:larts;rol:62247001;org:2.16.528.1.1007.3.3.15123</code>. N.B. maximale lengte is 128 characters.
-Voor de Request- en Correlation-ID’s kan de <a href="https://zelark.github.io/nano-id-cc/">NaN0-1D-12</a> 12 tekens gebruikt.</p>
+Voorbeeld voor Epic HTTP-Header van "L. Arts uit Tjongerschans": <code class="language-plaintext highlighter-rouge">AORTA-ID: rid:1b9d6bCd-bBf;cid:yA8UM8fHmhde;usr:larts;rol:62247001;org:2.16.528.1.1007.3.3.15123</code>. N.B. maximale lengte is 128 characters.
+Voor de Request- en Correlation-ID's kan de <a href="https://zelark.github.io/nano-id-cc/">NaN0-1D-12</a> 12 tekens gebruikt.</p>
 
 <p>Voorbeeld van de headers:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /fhir/Patient/123456789 HTTP/1.1
@@ -771,7 +771,7 @@ vbmVyLTcxNjE0NTAyIiwic3ViamVjdF9yb2xlIjoiMjIzMzY2MDA5In0.luhI3cpGGpoEIAtDi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.4.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Aug 6, 2024 13:09+0000">2024-08-06</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.4.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Mon, Aug 19, 2024 08:48+0000">2024-08-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
