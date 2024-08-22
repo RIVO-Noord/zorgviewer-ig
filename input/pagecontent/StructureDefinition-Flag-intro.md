@@ -17,6 +17,6 @@ Een schets van het scherm met labels en sortering informatie
 
 1. Opvragen (search) definities
 
-    `GET <behandelplan-base>/Flag`
+    `GET <ontsluiten-bronsysteem-base>/Flag?patient=<fhir_patient_id>`
 
 {% include bronsysteem-herkennen.md %}
