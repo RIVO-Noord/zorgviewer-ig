@@ -1,0 +1,32 @@
+{
+    "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+    "resource": "Bundle",
+    "id": "ViewDefinition-MedicationStatement",
+    "select": [
+      {
+        "column": [
+          {
+            "path": "resource.dateAsserted",
+            "name": "Datum"
+          },
+          {
+            "path": "resource.category.text",
+            "name": "Categorie"
+          },
+          {
+            "path": "resource.medicationReference.display",
+            "name": "Medicatie"
+          },
+          {
+            "path": "resource.dosage.route.text",
+            "name": "Toedieningsweg"
+          },
+          {
+            "path": "resource.dosage.text",
+            "name": "Instructies"
+          }
+        ],
+        "forEach": "entry.where(resource.resourceType = 'MedicationStatement')"
+      }
+    ]
+  }

@@ -20,10 +20,22 @@
                         "key": "zv-org-1",
                         "severity": "error",
                         "human": "Organization AGB SHALL be present.",
-                        "expression": "identifier.where(system='http://fhir.nl/fhir/NamingSystem/agb-z') or identifier.where(system='urn:oid:2.16.840.1.113883.2.4.6.1')",
-                        "xpath": "/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z' or /f:identifier/f:system='urn:oid:2.16.840.1.113883.2.4.6.1'"
+                        "expression": "identifier.where(system='http://fhir.nl/fhir/NamingSystem/agb-z')",
+                        "xpath": "/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z'"
                     }
                 ]
+            },
+            {
+                "id": "Organization.identifier:URA",
+                "path": "Organization.identifier",
+                "sliceName": "URA",
+                "mustSupport": true
+            },
+            {
+                "id": "Organization.identifier:URA.system",
+                "path": "Organization.identifier.system",
+                "min": 1,
+                "fixedUri": "http://fhir.nl/fhir/NamingSystem/ura"
             },
             {
                 "id": "Organization.identifier:AGB",

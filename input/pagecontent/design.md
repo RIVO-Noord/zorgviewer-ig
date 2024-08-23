@@ -125,7 +125,7 @@ Met de Zorgviewer MVP2 zullen we een toestemming realiseren volgens de afspraken
 ### Bevragen bronsystemen zorgaanbieders
 
 **Van toepassing zijnde standaarden en documentatie**:
-* [Bulk Data Access Backend Authentication](http://hl7.org/fhir/uv/bulkdata/authorization/index.html#obtaining-an-access-token)
+* [Bulk Data Access Backend Authentication](https://www.hl7.org/fhir/smart-app-launch/backend-services.html#obtain-access-token)
 * [IHE Internet User Authorization (IUA)](https://profiles.ihe.net/ITI/IUA/)
 * [MedMij BgZ 2017 FHIR](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
 * [TA Notified Pull / TWIIN TTA FHIR](https://twiin-afsprakenstelsel.scrollhelp.site/ta12/10-2-5-tta-fhir-authentication-authorization)
