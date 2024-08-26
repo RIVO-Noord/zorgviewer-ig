@@ -2,7 +2,7 @@
 
 ### Zorginformatiebouwsteen
 
-[ZIB Alert](https://zibs.nl/wiki/MedicatieGebruik2-v1.0.1(2017NL))
+[ZIB Medicatie Gebruik](https://zibs.nl/wiki/MedicatieGebruik2-v1.0.1(2017NL))
 
 ### View Definition
 

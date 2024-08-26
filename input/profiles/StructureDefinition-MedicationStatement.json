@@ -4,27 +4,37 @@
     "name": "MedicationUse",
     "title": "MedicationUse",
     "status": "active",
-    "description": "MedicationUse",
+    "description": "Medicatie Gebruik",
     "kind": "resource",
     "abstract": false,
-    "type": "MedicationUse",
+    "type": "MedicationStatement",
     "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse",
     "derivation": "constraint",
     "differential": {
         "element": [
             {
-                "id": "Flag.category.text",
-                "path": "Flag.category.text",
+                "id": "MedicationStatement.category.text",
+                "path": "MedicationStatement.category.text",
                 "mustSupport": true
             },
             {
-                "id": "Flag.code.text",
-                "path": "Flag.code.text",
+                "id": "MedicationStatement.medicationReference.display",
+                "path": "MedicationStatement.medicationReference.display",
                 "mustSupport": true
             },
             {
-                "id": "Flag.period.start",
-                "path": "Flag.period.start",
+                "id": "MedicationStatement.dateAsserted",
+                "path": "MedicationStatement.dateAsserted",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationStatement.dosage.text",
+                "path": "MedicationStatement.dosage.text",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationStatement.dosage.route.text",
+                "path": "MedicationStatement.dosage.route.text",
                 "mustSupport": true
             }
         ]
