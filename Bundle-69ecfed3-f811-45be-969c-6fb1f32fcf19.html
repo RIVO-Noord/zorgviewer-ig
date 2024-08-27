@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>null (Bundle) - RIVO-Noord Zorgviewer Implementation Guide v1.5.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/rivo.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"10.87"}
+    h3,h4,h5,h6{--heading-prefix:"10.87"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://rivo-noord.nl"><img height="50"
+            alt="Visit the RIVO-Noord website" src="assets/images/rivonoord-logo.png" /> </a>
+</div>
+
+<div id="family-nav">
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+    <a id="family-logo" no-external="true" href="https://hl7.nl"><img height="50" alt="Visit the HL7 NL website"
+            src="assets/images/HL7nl_Logo.png" /> </a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">RIVO-Noord Zorgviewer Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.5.0 - CI build
+
+
+
+  <img alt="Netherlands flag" src="assets/images/nld.svg" height="16" title="Netherlands"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requirements &#8964;</a>
+		<ul class="dropdown-menu">
+			<li><a href="conformance.html">Uitgangspunten en Requirements</a></li>
+			<li><a href="nen-normen.html">NEN Normen Conformiteit</a></li>
+			<li><a href="datasets.html">Datasets</a></li>
+			<li><a href="must-support.html">Must Support</a></li>
+		</ul>
+	</li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">RAO &#8964;</a>
+		<ul class="dropdown-menu">
+			<li><a href="zorgnetwerk.html">Inzage Zorgnetwerk</a></li>
+		</ul>
+	</li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
+		<ul class="dropdown-menu">
+			<li><a href="design.html">Design</a></li>
+			<li><a href="design2.html">Design 2024</a></li>
+			<li><a href="design-background.html">Design Achtergrond</a></li>
+			<li><a href="security-design.html">Security Design</a></li>
+			<li><a href="zorgviewer-services.html">Zorgviewer Services</a></li>
+		</ul>
+	</li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Checklists &amp; Aansluiten &#8964;</a>
+		<ul class="dropdown-menu">
+		  <li><a href="checklists.html">Checklists &amp; Aansluiten</a></li>
+		  <li><a href="thermometer.html">Aansluit Thermometer</a></li>
+		  <li><a href="testing.html">Testing</a></li>
+		</ul>
+  </li>
+  <li><a href="copyrights.html">Copyrights</a></li>
+  <li><a href="changes.html">Change Log</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>null (Bundle)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.5.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-69ecfed3-f811-45be-969c-6fb1f32fcf19.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-69ecfed3-f811-45be-969c-6fb1f32fcf19.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Bundle: null (Bundle)</h2>
+
+
+
+  
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div><p class="res-header-id"><b>Generated Narrative: Bundle 69ecfed3-f811-45be-969c-6fb1f32fcf19</b></p><a name="69ecfed3-f811-45be-969c-6fb1f32fcf19"> </a><a name="hc69ecfed3-f811-45be-969c-6fb1f32fcf19"> </a><a name="69ecfed3-f811-45be-969c-6fb1f32fcf19-und"> </a><p>Bundle 69ecfed3-f811-45be-969c-6fb1f32fcf19 of type searchset</p><a name="https-//api.zorgplatform.online/Flag/D71F2DC8E0EAEB7F55503D78CB4738A06F5865563476FCE606B19191FB7DC253"> </a><a name="Flag_D71F2DC8E0EAEB7F55503D78CB4738A06F5865563476FCE606B19191FB7DC253"> </a><a name="hcFlag_D71F2DC8E0EAEB7F55503D78CB4738A06F5865563476FCE606B19191FB7DC253"> </a><hr/><p>Entry 1 - fullUrl = https://api.zorgplatform.online/Flag/D71F2DC8E0EAEB7F55503D78CB4738A06F5865563476FCE606B19191FB7DC253</p><p>Search:Mode = match</p><p>Resource Flag:</p><blockquote><h3>Flag resource:</h3><ul><li><p><strong>Subject:</strong> 'Test de Patient A van Vipp'</p></li><li><p><strong>Status:</strong> 'Active'</p></li><li><p><strong>Category:</strong> 'condition'</p></li><table><thead><tr><th>Condition</th><th>Code</th><th>Onset date/time</th><th>Clinical status</th><th>Category</th><th>Comment</th></tr></thead><tbody><tr><td>Condition 1</td><td>Other</td><td>15-4-2019</td><td>Active</td><td>Other</td><td>BRMO bewezen dragerschap als opmerking</td></tr></tbody></table><li><p><strong>Period start:</strong> '15-4-2019'</p></li><li><p><strong>Author</strong> 'Practitioner author with last name 'Waar'.'</p></li></ul></blockquote><a name="https-//api.zorgplatform.online/Flag/967B84060E9B29AAD19A1C62F0C5048E31CE74BB1A9B4F743424BC349212335A"> </a><a name="Flag_967B84060E9B29AAD19A1C62F0C5048E31CE74BB1A9B4F743424BC349212335A"> </a><a name="hcFlag_967B84060E9B29AAD19A1C62F0C5048E31CE74BB1A9B4F743424BC349212335A"> </a><hr/><p>Entry 2 - fullUrl = https://api.zorgplatform.online/Flag/967B84060E9B29AAD19A1C62F0C5048E31CE74BB1A9B4F743424BC349212335A</p><p>Search:Mode = match</p><p>Resource Flag:</p><blockquote><h3>Flag resource:</h3><ul><li><p><strong>Subject:</strong> 'Test de Patient A van Vipp'</p></li><li><p><strong>Status:</strong> 'Active'</p></li><li><p><strong>Category:</strong> 'condition'</p></li><table><thead><tr><th>Condition</th><th>Code</th><th>Onset date/time</th><th>Clinical status</th><th>Category</th><th>Comment</th></tr></thead><tbody><tr><td>Condition 1</td><td>Other</td><td>19-7-2024</td><td>Active</td><td>Other</td><td>test mrsa opmerkingenveld</td></tr></tbody></table><li><p><strong>Period start:</strong> '19-7-2024'</p></li><li><p><strong>Author</strong> 'Practitioner author with last name 'Waar'.'</p></li></ul></blockquote><a name="https-//api.zorgplatform.online/Condition/b8db73b5-e568-417b-b467-29f680957b11"> </a><a name="Condition_b8db73b5-e568-417b-b467-29f680957b11"> </a><a name="hcCondition_b8db73b5-e568-417b-b467-29f680957b11"> </a><hr/><p>Entry 3 - fullUrl = https://api.zorgplatform.online/Condition/b8db73b5-e568-417b-b467-29f680957b11</p><p>Search:Mode = include</p><p>Resource Condition:</p><blockquote><h3>Condition resource:</h3><ul><li><p><strong>Subject:</strong> 'Test de Patient A van Vipp'</p></li><li><p><strong>Clinical status:</strong> 'Active'</p></li><li><p><strong>Verification status:</strong> 'Unknown'</p></li><li><p><strong>Category:</strong> 'Other'</p></li><li><p><strong>Code:</strong> 'Other'</p></li><li><p><strong>Onset date/time:</strong> '15-4-2019'</p></li><li><p><strong>Note:</strong> 'BRMO bewezen dragerschap als opmerking'</p></li></ul></blockquote><a name="https-//api.zorgplatform.online/Practitioner/1970F9F749294513ED4F32C0D15550035F705DDD637291A8E72E8728EF68151B"> </a><a name="Practitioner_1970F9F749294513ED4F32C0D15550035F705DDD637291A8E72E8728EF68151B"> </a><a name="hcPractitioner_1970F9F749294513ED4F32C0D15550035F705DDD637291A8E72E8728EF68151B"> </a><hr/><p>Entry 4 - fullUrl = https://api.zorgplatform.online/Practitioner/1970F9F749294513ED4F32C0D15550035F705DDD637291A8E72E8728EF68151B</p><p>Search:Mode = include</p><p>Resource Practitioner:</p><blockquote><h3>Practitioner resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/agb-z</td><td>03087495</td></tr><tr><td>http://fhir.nl/fhir/NamingSystem/big</td><td>19047575501</td></tr><tr><td>urn:oid:2.16.840.1.113883.2.4.3.124.7.75476.2</td><td>900003805075</td></tr></tbody></table></li><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>(K.) Waar</td><td/><td>Eigen geslachtsnaam</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Postbus 21020, 8900JA Leeuwarden (LEEUWARDEN)</td><td>Work</td><td>Werkadres</td><td/></tr></tbody></table></li></ul></blockquote><a name="https-//api.zorgplatform.online/Organization/2.16.840.1.113883.2.4.3.124.7.95364.690000380500090620903"> </a><a name="Organization_2.16.840.1.113883.2.4.3.124.7.95364.690000380500090620903"> </a><a name="hcOrganization_2.16.840.1.113883.2.4.3.124.7.95364.690000380500090620903"> </a><hr/><p>Entry 5 - fullUrl = https://api.zorgplatform.online/Organization/2.16.840.1.113883.2.4.3.124.7.95364.690000380500090620903</p><p>Search:Mode = include</p><p>Resource Organization:</p><blockquote><h3>Organization resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/agb-z</td><td>50009062</td></tr><tr><td>urn:oid:2.16.840.1.113883.2.4.3.124.7.95364.6</td><td>90000380500090620903</td></tr></tbody></table></li><li><p><strong>Name:</strong> 'L.V.F.'</p></li><li><p><strong>Contact information:</strong></p><table><thead><tr><th>System</th><th>Use</th><th>Additional information</th><th>Value</th></tr></thead><tbody><tr><td>Email</td><td/><td/><td>hixbeheer@tjongerschans.nl</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Jelsumerstraat 6, 8917EN Leeuwarden (LEEUWARDEN)</td><td>Work</td><td>Werkadres</td><td/></tr></tbody></table></li></ul></blockquote><a name="https-//api.zorgplatform.online/PractitionerRole/0E96C422AAE16D9B6C28ED32305FFBB829E2503785B9E1F0B31E00CFF68EB8CC"> </a><a name="PractitionerRole_0E96C422AAE16D9B6C28ED32305FFBB829E2503785B9E1F0B31E00CFF68EB8CC"> </a><a name="hcPractitionerRole_0E96C422AAE16D9B6C28ED32305FFBB829E2503785B9E1F0B31E00CFF68EB8CC"> </a><hr/><p>Entry 6 - fullUrl = https://api.zorgplatform.online/PractitionerRole/0E96C422AAE16D9B6C28ED32305FFBB829E2503785B9E1F0B31E00CFF68EB8CC</p><p>Search:Mode = include</p><p>Resource PractitionerRole:</p><blockquote><h3>PractitionerRole resource:</h3><ul><li><p><strong>Practitioner:</strong></p><table><thead><tr><th>Display</th><th>Reference</th></tr></thead><tbody><tr><td>K. Waar</td><td>1970F9F749294513ED4F32C0D15550035F705DDD637291A8E72E8728EF68151B</td></tr></tbody></table></li><li><p><strong>Organization:</strong></p><table><thead><tr><th>Display</th><th>Reference</th></tr></thead><tbody><tr><td>L.V.F.</td><td>2.16.840.1.113883.2.4.3.124.7.95364.690000380500090620903</td></tr></tbody></table></li><li><p><strong>Function:</strong></p><table><tbody><tr><td>Behandelend arts</td></tr></tbody></table></li><li><p><strong>Specialism:</strong> 'Medisch specialisten, medische microbiologie'</p></li></ul></blockquote><a name="https-//api.zorgplatform.online/Condition/359d2cc2-eb1c-4384-ac2a-e18dded1b6bc"> </a><a name="Condition_359d2cc2-eb1c-4384-ac2a-e18dded1b6bc"> </a><a name="hcCondition_359d2cc2-eb1c-4384-ac2a-e18dded1b6bc"> </a><hr/><p>Entry 7 - fullUrl = https://api.zorgplatform.online/Condition/359d2cc2-eb1c-4384-ac2a-e18dded1b6bc</p><p>Search:Mode = include</p><p>Resource Condition:</p><blockquote><h3>Condition resource:</h3><ul><li><p><strong>Subject:</strong> 'Test de Patient A van Vipp'</p></li><li><p><strong>Clinical status:</strong> 'Active'</p></li><li><p><strong>Verification status:</strong> 'Unknown'</p></li><li><p><strong>Category:</strong> 'Other'</p></li><li><p><strong>Code:</strong> 'Other'</p></li><li><p><strong>Onset date/time:</strong> '19-7-2024'</p></li><li><p><strong>Note:</strong> 'test mrsa opmerkingenveld'</p></li></ul></blockquote><a name="https-//api.zorgplatform.online/Patient/88384C001FDAFC29A3207DEA5E6BD22C01D53EBC60A844CA91761E6BE7008E32"> </a><a name="Patient_88384C001FDAFC29A3207DEA5E6BD22C01D53EBC60A844CA91761E6BE7008E32"> </a><a name="hcPatient_88384C001FDAFC29A3207DEA5E6BD22C01D53EBC60A844CA91761E6BE7008E32"> </a><hr/><p>Entry 8 - fullUrl = https://api.zorgplatform.online/Patient/88384C001FDAFC29A3207DEA5E6BD22C01D53EBC60A844CA91761E6BE7008E32</p><p>Search:Mode = include</p><p>Resource Patient:</p><blockquote><h3>Patient resource:</h3><ul><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>Test Testje (T.) de Patient A van Vipp</td><td/><td>Geslachtsnaam partner gevolgd door eigen geslachtsnaam</td></tr></tbody></table></li><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/bsn</td><td>900200078</td></tr><tr><td>urn:oid:2.16.840.1.113883.2.4.3.124.7.51851.4</td><td>90000380291148VI400</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Van Rijgersmapark 44, 84414PW Lemmer (Netherlands (the))</td><td>Home</td><td>Officieel adres</td><td/></tr><tr><td>Marktweg 104, 8444AC Heerenveen (HEERENVEEN)</td><td>Postal</td><td>Postadres</td><td>[2019-09-30, 2024-12-31]</td></tr></tbody></table></li><li><p><strong>Contact information:</strong></p><table><thead><tr><th>System</th><th>Use</th><th>Additional information</th><th>Value</th></tr></thead><tbody><tr><td>Phone</td><td/><td>Land Line</td><td>+31513685685</td></tr><tr><td>Phone</td><td>Mobile</td><td>Mobile Phone</td><td>+31600000000</td></tr><tr><td>Email</td><td>Home</td><td/><td>hixbeheer@tjongerschans.nl</td></tr></tbody></table></li><li><p><strong>Gender:</strong> 'Man'</p></li><li><p><strong>Birthdate:</strong> '1948-11-29'</p></li><li><p><strong>Deceased:</strong> 'No'</p></li><li><p><strong>Marital status:</strong> 'Gehuwd'</p></li><li><p><strong>Part of multiple birth:</strong> 'Yes'</p></li></ul></blockquote></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.5.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Aug 27, 2024 08:48+0000">2024-08-27</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

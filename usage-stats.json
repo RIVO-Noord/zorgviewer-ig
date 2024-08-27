@@ -117,6 +117,7 @@
   },
   "usage": {
     "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official": [
+      "Bundle.entry.resource.address",
       "Patient.address",
       "StructureDefinition.snapshot.element.example.valueAddress"
     ],
@@ -157,32 +158,38 @@
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/flag-detail": [
+      "Bundle.entry.resource",
       "Flag"
     ],
     "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order": [
+      "Bundle.entry.resource.name",
       "Patient.contact.name",
       "Patient.name",
       "Practitioner.name",
       "StructureDefinition.snapshot.element.example.valueHumanName"
     ],
     "http://hl7.org/fhir/StructureDefinition/humanname-own-name": [
+      "Bundle.entry.resource.name.family",
       "Patient.contact.name.family",
       "Patient.name.family",
       "Practitioner.name.family",
       "StructureDefinition.snapshot.element.example.valueHumanName.family"
     ],
     "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix": [
+      "Bundle.entry.resource.name.family",
       "Patient.contact.name.family",
       "Patient.name.family",
       "Practitioner.name.family"
     ],
     "http://hl7.org/fhir/StructureDefinition/humanname-partner-name": [
+      "Bundle.entry.resource.name.family",
       "Patient.contact.name.family",
       "Patient.name.family",
       "Practitioner.name.family",
       "StructureDefinition.snapshot.element.example.valueHumanName.family"
     ],
     "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix": [
+      "Bundle.entry.resource.name.family",
       "Patient.contact.name.family",
       "Patient.name.family",
       "Practitioner.name.family",
@@ -196,11 +203,13 @@
       "StructureDefinition.snapshot.element.example.valueAddress.line"
     ],
     "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber": [
+      "Bundle.entry.resource.address.line",
       "Patient.address.line",
       "Patient.contact.address.line",
       "StructureDefinition.snapshot.element.example.valueAddress.line"
     ],
     "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName": [
+      "Bundle.entry.resource.address.line",
       "Organization.address.line",
       "Patient.address.line",
       "Patient.contact.address.line",
@@ -212,6 +221,7 @@
       "StructureDefinition.snapshot.element.example.valueAddress.line"
     ],
     "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier": [
+      "Bundle.entry.resource.name.given",
       "Patient.contact.name.given",
       "Patient.name.given",
       "Practitioner.name.given",
@@ -261,6 +271,9 @@
       "AllergyIntolerance.clinicalStatus",
       "AllergyIntolerance.criticality",
       "AllergyIntolerance.reaction.severity",
+      "Bundle.entry.resource.address.country",
+      "Bundle.entry.resource.clinicalStatus",
+      "Bundle.entry.resource.gender",
       "Condition.clinicalStatus",
       "Condition.verificationStatus",
       "Observation.status",
@@ -281,6 +294,7 @@
       "AllergyIntolerance.asserter",
       "AllergyIntolerance.note.author[x]",
       "AllergyIntolerance.recorder",
+      "Bundle.entry.resource.author",
       "Condition.asserter",
       "Consent.actor.reference",
       "Consent.consentingParty",
@@ -293,6 +307,7 @@
       "Procedure.performer.actor"
     ],
     "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType": [
+      "Bundle.entry.resource.address",
       "Patient.address",
       "Patient.contact.address",
       "Practitioner.address",
@@ -302,6 +317,7 @@
       "Consent"
     ],
     "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType": [
+      "Bundle.entry.resource.telecom",
       "Patient.contact.telecom",
       "Patient.telecom",
       "Practitioner.telecom",
