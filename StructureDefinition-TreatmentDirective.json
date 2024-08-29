@@ -10,7 +10,7 @@
   "name" : "TreatmentDirective",
   "title" : "TreatmentDirective",
   "status" : "active",
-  "date" : "2024-08-27T08:48:41+00:00",
+  "date" : "2024-08-29T09:15:36+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -137,18 +137,6 @@
         "source" : "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "Entity. Role, or Act"
-      },
-      {
-        "identity" : "rim",
-        "map" : "FinancialConsent"
-      },
-      {
-        "identity" : "w5",
-        "map" : "infrastructure.information"
-      },
-      {
         "identity" : "hcim-treatmentdirective-v1.0.1-2015EN",
         "map" : "NL-CM:2.1.1",
         "comment" : "TreatmentInstruction"
@@ -162,6 +150,18 @@
         "identity" : "hcim-treatmentdirective-v3.1-2017EN",
         "map" : "NL-CM:2.1.1",
         "comment" : "TreatmentDirective"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Entity. Role, or Act"
+      },
+      {
+        "identity" : "rim",
+        "map" : "FinancialConsent"
+      },
+      {
+        "identity" : "w5",
+        "map" : "infrastructure.information"
       }]
     },
     {
@@ -1410,10 +1410,6 @@
         "targetProfile" : "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "N/A"
-      },
-      {
         "identity" : "hcim-treatmentdirective-v1.0.1-2015EN",
         "map" : "NL-CM:2.1.14",
         "comment" : "LivingWill - additional to .source"
@@ -1427,6 +1423,10 @@
         "identity" : "hcim-treatmentdirective-v3.1-2017EN",
         "map" : "NL-CM:2.1.14",
         "comment" : "AdvanceDirective - additional to .source"
+      },
+      {
+        "identity" : "rim",
+        "map" : "N/A"
       }]
     },
     {
@@ -1647,17 +1647,17 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.6",
+        "comment" : "IdentificationNumber"
+      },
+      {
         "identity" : "rim",
         "map" : ".id"
       },
       {
         "identity" : "w5",
         "map" : "id"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.6",
-        "comment" : "IdentificationNumber"
       }]
     },
     {
@@ -2125,17 +2125,17 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.11",
+        "comment" : "Subject"
+      },
+      {
         "identity" : "rim",
         "map" : "Role"
       },
       {
         "identity" : "w5",
         "map" : "who.focus"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.11",
-        "comment" : "Subject"
       }]
     },
     {
@@ -2239,14 +2239,6 @@
       "mustSupport" : true,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "DR.1"
-      },
-      {
-        "identity" : "rim",
-        "map" : "./low"
-      },
-      {
         "identity" : "hcim-treatmentdirective-v1.0.1-2015EN",
         "map" : "NL-CM:2.1.6",
         "comment" : "StartDate"
@@ -2260,6 +2252,14 @@
         "identity" : "hcim-treatmentdirective-v3.1-2017EN",
         "map" : "NL-CM:2.1.6",
         "comment" : "StartDate"
+      },
+      {
+        "identity" : "v2",
+        "map" : "DR.1"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./low"
       }]
     },
     {
@@ -2283,14 +2283,6 @@
       "condition" : ["per-1"],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "DR.2"
-      },
-      {
-        "identity" : "rim",
-        "map" : "./high"
-      },
-      {
         "identity" : "hcim-treatmentdirective-v1.0.1-2015EN",
         "map" : "NL-CM:2.1.7",
         "comment" : "EndDate"
@@ -2304,6 +2296,14 @@
         "identity" : "hcim-treatmentdirective-v3.1-2017EN",
         "map" : "NL-CM:2.1.7",
         "comment" : "EndDate"
+      },
+      {
+        "identity" : "v2",
+        "map" : "DR.2"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./high"
       }]
     },
     {
@@ -2324,17 +2324,17 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.14",
+        "comment" : "DateTime"
+      },
+      {
         "identity" : "rim",
         "map" : "FinancialConsent effectiveTime"
       },
       {
         "identity" : "w5",
         "map" : "when.recorded"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.14",
-        "comment" : "DateTime"
       }]
     },
     {
@@ -2369,13 +2369,13 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "w5",
-        "map" : "who.actor"
-      },
-      {
         "identity" : "hcim-basicelements-v1.0-2017EN",
         "map" : "NL-CM:0.0.7",
         "comment" : "Author"
+      },
+      {
+        "identity" : "w5",
+        "map" : "who.actor"
       }]
     },
     {

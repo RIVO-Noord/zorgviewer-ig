@@ -10,7 +10,7 @@
   "name" : "Alert",
   "title" : "Alert",
   "status" : "active",
-  "date" : "2024-08-27T08:48:41+00:00",
+  "date" : "2024-08-29T09:15:36+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -118,18 +118,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "Entity. Role, or Act"
-      },
-      {
-        "identity" : "rim",
-        "map" : "Observation[classCode=ISSUE, moodCode=EVN]"
-      },
-      {
-        "identity" : "w5",
-        "map" : "workflow.encounter"
-      },
-      {
         "identity" : "hcim-alert-v1.0-2015EN",
         "map" : "NL-CM:8.3.1",
         "comment" : "Alert"
@@ -143,6 +131,18 @@
         "identity" : "hcim-alert-v3.2-2017EN",
         "map" : "NL-CM:8.3.1",
         "comment" : "Alert"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Entity. Role, or Act"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Observation[classCode=ISSUE, moodCode=EVN]"
+      },
+      {
+        "identity" : "w5",
+        "map" : "workflow.encounter"
       }]
     },
     {
@@ -496,17 +496,17 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.6",
+        "comment" : "IdentificationNumber"
+      },
+      {
         "identity" : "rim",
         "map" : ".id"
       },
       {
         "identity" : "w5",
         "map" : "id"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.6",
-        "comment" : "IdentificationNumber"
       }]
     },
     {
@@ -583,14 +583,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".code"
-      },
-      {
-        "identity" : "w5",
-        "map" : "class"
-      },
-      {
         "identity" : "hcim-alert-v1.0-2015EN",
         "map" : "NL-CM:8.3.6",
         "comment" : "AlertType"
@@ -604,6 +596,14 @@
         "identity" : "hcim-alert-v3.2-2017EN",
         "map" : "NL-CM:8.3.6",
         "comment" : "AlertType"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".code"
+      },
+      {
+        "identity" : "w5",
+        "map" : "class"
       }]
     },
     {
@@ -760,14 +760,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".value"
-      },
-      {
-        "identity" : "w5",
-        "map" : "what"
-      },
-      {
         "identity" : "hcim-alert-v1.0-2015EN",
         "map" : "NL-CM:8.3.4",
         "comment" : "AlertName"
@@ -781,6 +773,14 @@
         "identity" : "hcim-alert-v3.2-2017EN",
         "map" : "NL-CM:8.3.4",
         "comment" : "AlertName"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".value"
+      },
+      {
+        "identity" : "w5",
+        "map" : "what"
       }]
     },
     {
@@ -1196,14 +1196,6 @@
       "mustSupport" : true,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "DR.1"
-      },
-      {
-        "identity" : "rim",
-        "map" : "./low"
-      },
-      {
         "identity" : "hcim-alert-v1.0-2015EN",
         "map" : "NL-CM:8.3.5",
         "comment" : "StartDateTime"
@@ -1217,6 +1209,14 @@
         "identity" : "hcim-alert-v3.2-2017EN",
         "map" : "NL-CM:8.3.5",
         "comment" : "StartDateTime"
+      },
+      {
+        "identity" : "v2",
+        "map" : "DR.1"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./low"
       }]
     },
     {
@@ -1300,17 +1300,17 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.7",
+        "comment" : "Author"
+      },
+      {
         "identity" : "rim",
         "map" : ".participation[typeCode=AUT].role"
       },
       {
         "identity" : "w5",
         "map" : "who.author"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.7",
-        "comment" : "Author"
       }]
     },
     {

@@ -10,7 +10,7 @@
   "name" : "Organization",
   "title" : "Organization",
   "status" : "active",
-  "date" : "2024-08-27T08:48:41+00:00",
+  "date" : "2024-08-29T09:15:36+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -169,6 +169,21 @@
         "xpath" : "/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z'"
       }],
       "mapping" : [{
+        "identity" : "hcim-healthcareprovider-v1.2-2015EN",
+        "map" : "NL-CM:17.2.1",
+        "comment" : "HealthcareProvider"
+      },
+      {
+        "identity" : "hcim-healthcareprovider-v3.0-2016EN",
+        "map" : "NL-CM:17.2.1",
+        "comment" : "HealthcareProvider"
+      },
+      {
+        "identity" : "hcim-healthcareprovider-v3.1.1-2017EN",
+        "map" : "NL-CM:17.2.1",
+        "comment" : "HealthcareProvider"
+      },
+      {
         "identity" : "rim",
         "map" : "Entity. Role, or Act"
       },
@@ -187,21 +202,6 @@
       {
         "identity" : "w5",
         "map" : "administrative.group"
-      },
-      {
-        "identity" : "hcim-healthcareprovider-v1.2-2015EN",
-        "map" : "NL-CM:17.2.1",
-        "comment" : "HealthcareProvider"
-      },
-      {
-        "identity" : "hcim-healthcareprovider-v3.0-2016EN",
-        "map" : "NL-CM:17.2.1",
-        "comment" : "HealthcareProvider"
-      },
-      {
-        "identity" : "hcim-healthcareprovider-v3.1.1-2017EN",
-        "map" : "NL-CM:17.2.1",
-        "comment" : "HealthcareProvider"
       }]
     },
     {
@@ -415,22 +415,6 @@
       "condition" : ["org-1"],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "XON.10 / XON.3"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".scopes[Role](classCode=IDENT)"
-      },
-      {
-        "identity" : "servd",
-        "map" : "./Identifiers"
-      },
-      {
-        "identity" : "w5",
-        "map" : "id"
-      },
-      {
         "identity" : "hcim-healthcareprovider-v1.2-2015EN",
         "map" : "NL-CM:17.2.2",
         "comment" : "HealthcareProviderIdentificationNumber"
@@ -449,6 +433,22 @@
         "identity" : "hcim-basicelements-v1.0-2017EN",
         "map" : "NL-CM:0.0.6",
         "comment" : "IdentificationNumber"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XON.10 / XON.3"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".scopes[Role](classCode=IDENT)"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./Identifiers"
+      },
+      {
+        "identity" : "w5",
+        "map" : "id"
       }]
     },
     {
@@ -1070,6 +1070,21 @@
       "condition" : ["org-1"],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-payer-v1.2-2015EN",
+        "map" : "NL-CM:1.1.7",
+        "comment" : "IdentificationNumber"
+      },
+      {
+        "identity" : "hcim-payer-v3.0-2016EN",
+        "map" : "NL-CM:1.1.7",
+        "comment" : "IdentificationNumber"
+      },
+      {
+        "identity" : "hcim-payer-v3.1-2017EN",
+        "map" : "NL-CM:1.1.7",
+        "comment" : "IdentificationNumber"
+      },
+      {
         "identity" : "v2",
         "map" : "XON.10 / XON.3"
       },
@@ -1084,21 +1099,6 @@
       {
         "identity" : "w5",
         "map" : "id"
-      },
-      {
-        "identity" : "hcim-payer-v1.2-2015EN",
-        "map" : "NL-CM:1.1.7",
-        "comment" : "IdentificationNumber"
-      },
-      {
-        "identity" : "hcim-payer-v3.0-2016EN",
-        "map" : "NL-CM:1.1.7",
-        "comment" : "IdentificationNumber"
-      },
-      {
-        "identity" : "hcim-payer-v3.1-2017EN",
-        "map" : "NL-CM:1.1.7",
-        "comment" : "IdentificationNumber"
       }]
     },
     {
@@ -1381,22 +1381,6 @@
       "mustSupport" : true,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "XON.10 / XON.3"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".scopes[Role](classCode=IDENT)"
-      },
-      {
-        "identity" : "servd",
-        "map" : "./Identifiers"
-      },
-      {
-        "identity" : "w5",
-        "map" : "id"
-      },
-      {
         "identity" : "hcim-healthcareprovider-v1.2-2015EN",
         "map" : "NL-CM:17.2.2",
         "comment" : "HealthcareProviderIdentificationNumber"
@@ -1415,6 +1399,22 @@
         "identity" : "hcim-basicelements-v1.0-2017EN",
         "map" : "NL-CM:0.0.6",
         "comment" : "IdentificationNumber"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XON.10 / XON.3"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".scopes[Role](classCode=IDENT)"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./Identifiers"
+      },
+      {
+        "identity" : "w5",
+        "map" : "id"
       }]
     },
     {
@@ -1792,6 +1792,21 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-healthcareprovider-v1.2-2015EN",
+        "map" : "NL-CM:17.2.4",
+        "comment" : "OrganizationType"
+      },
+      {
+        "identity" : "hcim-healthcareprovider-v3.0-2016EN",
+        "map" : "NL-CM:17.2.4",
+        "comment" : "OrganizationType"
+      },
+      {
+        "identity" : "hcim-healthcareprovider-v3.1.1-2017EN",
+        "map" : "NL-CM:17.2.4",
+        "comment" : "OrganizationType"
+      },
+      {
         "identity" : "v2",
         "map" : "No equivalent in v2"
       },
@@ -1806,21 +1821,6 @@
       {
         "identity" : "w5",
         "map" : "class"
-      },
-      {
-        "identity" : "hcim-healthcareprovider-v1.2-2015EN",
-        "map" : "NL-CM:17.2.4",
-        "comment" : "OrganizationType"
-      },
-      {
-        "identity" : "hcim-healthcareprovider-v3.0-2016EN",
-        "map" : "NL-CM:17.2.4",
-        "comment" : "OrganizationType"
-      },
-      {
-        "identity" : "hcim-healthcareprovider-v3.1.1-2017EN",
-        "map" : "NL-CM:17.2.4",
-        "comment" : "OrganizationType"
       }]
     },
     {
@@ -2177,6 +2177,21 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-healthcareprovider-v1.2-2015EN",
+        "map" : "NL-CM:17.2.7",
+        "comment" : "DepartmentSpecialty"
+      },
+      {
+        "identity" : "hcim-healthcareprovider-v3.0-2016EN",
+        "map" : "NL-CM:17.2.7",
+        "comment" : "DepartmentSpecialty"
+      },
+      {
+        "identity" : "hcim-healthcareprovider-v3.1.1-2017EN",
+        "map" : "NL-CM:17.2.7",
+        "comment" : "DepartmentSpecialty"
+      },
+      {
         "identity" : "v2",
         "map" : "No equivalent in v2"
       },
@@ -2191,21 +2206,6 @@
       {
         "identity" : "w5",
         "map" : "class"
-      },
-      {
-        "identity" : "hcim-healthcareprovider-v1.2-2015EN",
-        "map" : "NL-CM:17.2.7",
-        "comment" : "DepartmentSpecialty"
-      },
-      {
-        "identity" : "hcim-healthcareprovider-v3.0-2016EN",
-        "map" : "NL-CM:17.2.7",
-        "comment" : "DepartmentSpecialty"
-      },
-      {
-        "identity" : "hcim-healthcareprovider-v3.1.1-2017EN",
-        "map" : "NL-CM:17.2.7",
-        "comment" : "DepartmentSpecialty"
       }]
     },
     {
@@ -2556,18 +2556,6 @@
       "condition" : ["org-1"],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "XON.1"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".name"
-      },
-      {
-        "identity" : "servd",
-        "map" : ".PreferredName/Name"
-      },
-      {
         "identity" : "hcim-healthcareprovider-v1.2-2015EN",
         "map" : "NL-CM:17.2.3",
         "comment" : "OrganizationName"
@@ -2601,6 +2589,18 @@
         "identity" : "hcim-healthcareprovider-v3.1.1-2017EN",
         "map" : "NL-CM:17.2.8",
         "comment" : "OrganizationLocation"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XON.1"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".name"
+      },
+      {
+        "identity" : "servd",
+        "map" : ".PreferredName/Name"
       }]
     },
     {
@@ -2919,20 +2919,19 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Organization"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
+        "identity" : "hcim-healthcareprovider-v1.2-2015EN",
+        "map" : "NL-CM:17.2.6",
+        "comment" : "TelephoneE-mail"
       },
       {
-        "identity" : "v2",
-        "map" : "XTN"
+        "identity" : "hcim-healthcareprovider-v3.0-2016EN",
+        "map" : "NL-CM:17.2.6",
+        "comment" : "TelephoneE-mail"
       },
       {
-        "identity" : "rim",
-        "map" : "TEL"
-      },
-      {
-        "identity" : "servd",
-        "map" : "ContactPoint"
+        "identity" : "hcim-healthcareprovider-v3.1.1-2017EN",
+        "map" : "NL-CM:17.2.6",
+        "comment" : "ContactInformation"
       },
       {
         "identity" : "hcim-contactinformation-v2.0.1-2015EN",
@@ -2950,21 +2949,6 @@
         "comment" : "ContactInformation"
       },
       {
-        "identity" : "hcim-healthcareprovider-v1.2-2015EN",
-        "map" : "NL-CM:17.2.6",
-        "comment" : "TelephoneE-mail"
-      },
-      {
-        "identity" : "hcim-healthcareprovider-v3.0-2016EN",
-        "map" : "NL-CM:17.2.6",
-        "comment" : "TelephoneE-mail"
-      },
-      {
-        "identity" : "hcim-healthcareprovider-v3.1.1-2017EN",
-        "map" : "NL-CM:17.2.6",
-        "comment" : "ContactInformation"
-      },
-      {
         "identity" : "hcim-payer-v1.2-2015EN",
         "map" : "NL-CM:1.1.12",
         "comment" : "TelephoneE-mail"
@@ -2978,6 +2962,22 @@
         "identity" : "hcim-payer-v3.1-2017EN",
         "map" : "NL-CM:1.1.12",
         "comment" : "ContactInformation"
+      },
+      {
+        "identity" : "rim",
+        "map" : "n/a"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XTN"
+      },
+      {
+        "identity" : "rim",
+        "map" : "TEL"
+      },
+      {
+        "identity" : "servd",
+        "map" : "ContactPoint"
       }]
     },
     {
@@ -3106,37 +3106,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Organization"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "XAD"
-      },
-      {
-        "identity" : "rim",
-        "map" : "AD"
-      },
-      {
-        "identity" : "servd",
-        "map" : "Address"
-      },
-      {
-        "identity" : "hcim-address-v2.0.1-2015EN",
-        "map" : "NL-CM:0.1.4",
-        "comment" : "AddressInformation"
-      },
-      {
-        "identity" : "hcim-addressinformation-v3.0-2016EN",
-        "map" : "NL-CM:0.1.4",
-        "comment" : "AddressInformation"
-      },
-      {
-        "identity" : "hcim-addressinformation-v1.0-2017EN",
-        "map" : "NL-CM:20.5.1",
-        "comment" : "AddressInformation"
-      },
-      {
         "identity" : "hcim-healthcareprovider-v1.2-2015EN",
         "map" : "NL-CM:17.2.5",
         "comment" : "Address"
@@ -3165,6 +3134,37 @@
         "identity" : "hcim-payer-v3.1-2017EN",
         "map" : "NL-CM:1.1.17",
         "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-address-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.4",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-addressinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.4",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-addressinformation-v1.0-2017EN",
+        "map" : "NL-CM:20.5.1",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "rim",
+        "map" : "n/a"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XAD"
+      },
+      {
+        "identity" : "rim",
+        "map" : "AD"
+      },
+      {
+        "identity" : "servd",
+        "map" : "Address"
       }]
     },
     {

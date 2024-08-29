@@ -17,7 +17,7 @@
   <name value="Condition"/>
   <title value="Condition"/>
   <status value="active"/>
-  <date value="2024-08-27T08:48:41+00:00"/>
+  <date value="2024-08-29T09:15:36+00:00"/>
   <publisher value="RIVO-NN HL7NL"/>
   <contact>
     <name value="RIVO-NN"/>
@@ -169,26 +169,6 @@
         <xpath value="f:abatementDateTime or f:abatementPeriod"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="Entity. Role, or Act"/>
-      </mapping>
-      <mapping>
-        <identity value="sct-concept"/>
-        <map value="&lt; 243796009 |Situation with explicit context|:&#xA;246090004 |Associated finding| =&#xA;((&lt; 404684003 |Clinical finding| MINUS&#xA;&lt;&lt; 420134006 |Propensity to adverse reactions| MINUS &#xA;&lt;&lt; 473010000 |Hypersensitivity condition| MINUS &#xA;&lt;&lt; 79899007 |Drug interaction| MINUS&#xA;&lt;&lt; 69449002 |Drug action| MINUS &#xA;&lt;&lt; 441742003 |Evaluation finding| MINUS &#xA;&lt;&lt; 307824009 |Administrative status| MINUS &#xA;&lt;&lt; 385356007 |Tumor stage finding|) OR&#xA;&lt; 272379006 |Event|)"/>
-      </mapping>
-      <mapping>
-        <identity value="v2"/>
-        <map value="PPR message"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="Observation[classCode=OBS, moodCode=EVN, code=ASSERTION, value&lt;Diagnosis]"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="clinical.general"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
         <map value="NL-CM:5.1.1"/>
         <comment value="Concern"/>
@@ -212,6 +192,26 @@
         <identity value="hcim-problem-v4.1-2017EN"/>
         <map value="NL-CM:5.1.1"/>
         <comment value="Problem"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Entity. Role, or Act"/>
+      </mapping>
+      <mapping>
+        <identity value="sct-concept"/>
+        <map value="&lt; 243796009 |Situation with explicit context|:&#xA;246090004 |Associated finding| =&#xA;((&lt; 404684003 |Clinical finding| MINUS&#xA;&lt;&lt; 420134006 |Propensity to adverse reactions| MINUS &#xA;&lt;&lt; 473010000 |Hypersensitivity condition| MINUS &#xA;&lt;&lt; 79899007 |Drug interaction| MINUS&#xA;&lt;&lt; 69449002 |Drug action| MINUS &#xA;&lt;&lt; 441742003 |Evaluation finding| MINUS &#xA;&lt;&lt; 307824009 |Administrative status| MINUS &#xA;&lt;&lt; 385356007 |Tumor stage finding|) OR&#xA;&lt; 272379006 |Event|)"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PPR message"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Observation[classCode=OBS, moodCode=EVN, code=ASSERTION, value&lt;Diagnosis]"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="clinical.general"/>
       </mapping>
     </element>
     <element id="Condition.id">
@@ -406,17 +406,17 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.6"/>
+        <comment value="IdentificationNumber"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value=".id"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
         <map value="id"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.6"/>
-        <comment value="IdentificationNumber"/>
       </mapping>
     </element>
     <element id="Condition.clinicalStatus">
@@ -447,6 +447,21 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+        <map value="NL-CM:5.1.4"/>
+        <comment value="ProblemStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes) is available that maps ProblemStatusCodelist to the condition-clinical value set."/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-concernfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:5.1.4"/>
+        <comment value="ProblemStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes) is available that maps ProblemStatusCodelist to the condition-clinical value set."/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-problem-v4.1-2017EN"/>
+        <map value="NL-CM:5.1.4"/>
+        <comment value="ProblemStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes) is available that maps ProblemStatusCodelist to the condition-clinical value set."/>
+      </mapping>
+      <mapping>
         <identity value="sct-concept"/>
         <map value="&lt; 303105007 |Disease phases|"/>
       </mapping>
@@ -461,21 +476,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="status"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
-        <map value="NL-CM:5.1.4"/>
-        <comment value="ProblemStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes) is available that maps ProblemStatusCodelist to the condition-clinical value set."/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-concernfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:5.1.4"/>
-        <comment value="ProblemStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes) is available that maps ProblemStatusCodelist to the condition-clinical value set."/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-problem-v4.1-2017EN"/>
-        <map value="NL-CM:5.1.4"/>
-        <comment value="ProblemStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes) is available that maps ProblemStatusCodelist to the condition-clinical value set."/>
       </mapping>
     </element>
     <element id="Condition.clinicalStatus.id">
@@ -674,10 +674,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
         <map value="NL-CM:5.1.4"/>
         <comment value="ProblemStatus"/>
@@ -691,6 +687,10 @@
         <identity value="hcim-problem-v4.1-2017EN"/>
         <map value="NL-CM:5.1.4"/>
         <comment value="ProblemStatus. The relationship between the HCIM codes and the Resource codes is covered in the ConceptMaps: ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes and Condition-Clinical-Status-Codes-to-ProbleemStatusCodelijst"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
       </mapping>
     </element>
     <element id="Condition.clinicalStatus.value">
@@ -749,6 +749,11 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-problem-v4.1-2017EN"/>
+        <map value="NL-CM:5.1.10"/>
+        <comment value="VerificationStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/VerificatieStatusCodelijst-to-ConditionVerificationStatus) is available."/>
+      </mapping>
+      <mapping>
         <identity value="sct-concept"/>
         <map value="&lt; 410514004 |Finding context value|"/>
       </mapping>
@@ -767,11 +772,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="status"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-problem-v4.1-2017EN"/>
-        <map value="NL-CM:5.1.10"/>
-        <comment value="VerificationStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/VerificatieStatusCodelijst-to-ConditionVerificationStatus) is available."/>
       </mapping>
     </element>
     <element id="Condition.verificationStatus.id">
@@ -1032,6 +1032,21 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+        <map value="NL-CM:5.1.8"/>
+        <comment value="ProblemType"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-concernfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:5.1.8"/>
+        <comment value="ProblemType"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-problem-v4.1-2017EN"/>
+        <map value="NL-CM:5.1.8"/>
+        <comment value="ProblemType"/>
+      </mapping>
+      <mapping>
         <identity value="sct-concept"/>
         <map value="&lt; 404684003 |Clinical finding|"/>
       </mapping>
@@ -1046,21 +1061,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="class"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
-        <map value="NL-CM:5.1.8"/>
-        <comment value="ProblemType"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-concernfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:5.1.8"/>
-        <comment value="ProblemType"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-problem-v4.1-2017EN"/>
-        <map value="NL-CM:5.1.8"/>
-        <comment value="ProblemType"/>
       </mapping>
     </element>
     <element id="Condition.severity">
@@ -1135,6 +1135,21 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
+        <map value="NL-CM:5.1.3"/>
+        <comment value="ProblemName"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-concernfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:5.1.3"/>
+        <comment value="ProblemName"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-problem-v4.1-2017EN"/>
+        <map value="NL-CM:5.1.3"/>
+        <comment value="ProblemName"/>
+      </mapping>
+      <mapping>
         <identity value="sct-concept"/>
         <map value="code 246090004 |Associated finding| (&lt; 404684003 |Clinical finding| MINUS&#xA;&lt;&lt; 420134006 |Propensity to adverse reactions| MINUS &#xA;&lt;&lt; 473010000 |Hypersensitivity condition| MINUS &#xA;&lt;&lt; 79899007 |Drug interaction| MINUS&#xA;&lt;&lt; 69449002 |Drug action| MINUS &#xA;&lt;&lt; 441742003 |Evaluation finding| MINUS &#xA;&lt;&lt; 307824009 |Administrative status| MINUS &#xA;&lt;&lt; 385356007 |Tumor stage finding|) &#xA;OR &lt; 413350009 |Finding with explicit context|&#xA;OR &lt; 272379006 |Event|"/>
       </mapping>
@@ -1153,21 +1168,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="what"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
-        <map value="NL-CM:5.1.3"/>
-        <comment value="ProblemName"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-concernfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:5.1.3"/>
-        <comment value="ProblemName"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-problem-v4.1-2017EN"/>
-        <map value="NL-CM:5.1.3"/>
-        <comment value="ProblemName"/>
       </mapping>
     </element>
     <element id="Condition.code.id">
@@ -1309,6 +1309,11 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-problem-v4.1-2017EN"/>
+        <map value="NL-CM:5.1.11"/>
+        <comment value="ProblemAnatomicalLocation"/>
+      </mapping>
+      <mapping>
         <identity value="sct-concept"/>
         <map value="&lt; 442083009  |Anatomical or acquired body structure|"/>
       </mapping>
@@ -1319,11 +1324,6 @@
       <mapping>
         <identity value="sct-attr"/>
         <map value="363698007"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-problem-v4.1-2017EN"/>
-        <map value="NL-CM:5.1.11"/>
-        <comment value="ProblemAnatomicalLocation"/>
       </mapping>
     </element>
     <element id="Condition.bodySite.id">
@@ -1509,13 +1509,13 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-problem-v4.1-2017EN"/>
         <map value="NL-CM:5.1.12"/>
         <comment value="ProblemLaterality"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
       </mapping>
     </element>
     <element id="Condition.bodySite.coding">
@@ -1600,6 +1600,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.11"/>
+        <comment value="Subject"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="PID-3"/>
       </mapping>
@@ -1610,11 +1615,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="who.focus"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.11"/>
-        <comment value="Subject"/>
       </mapping>
     </element>
     <element id="Condition.context">
@@ -1709,18 +1709,6 @@
       </type>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="PRB-16"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".effectiveTime.low or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=&quot;age at onset&quot;].value"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="when.init"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-basicelements-v1.0-2017EN"/>
         <map value="NL-CM:0.0.14"/>
         <comment value="DateTime"/>
@@ -1739,6 +1727,18 @@
         <identity value="hcim-concernfortransfer-v3.0-2016EN"/>
         <map value="NL-CM:5.1.6"/>
         <comment value="ProblemStartDate"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PRB-16"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime.low or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=&quot;age at onset&quot;].value"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="when.init"/>
       </mapping>
     </element>
     <element id="Condition.abatement[x]">
@@ -1794,17 +1794,17 @@
       </type>
       <condition value="con-4"/>
       <mapping>
+        <identity value="hcim-problem-v4.1-2017EN"/>
+        <map value="NL-CM:5.1.9"/>
+        <comment value="ProblemEndDate"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value=".effectiveTime.high or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=&quot;age at remission&quot;].value or .inboundRelationship[typeCode=SUBJ]source[classCode=CONC, moodCode=EVN].status=completed"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
         <map value="when.done"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-problem-v4.1-2017EN"/>
-        <map value="NL-CM:5.1.9"/>
-        <comment value="ProblemEndDate"/>
       </mapping>
     </element>
     <element id="Condition.assertedDate">
@@ -1861,6 +1861,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.2"/>
+        <comment value="InformationSource"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="REL-7.1 identifier + REL-7.12 type code"/>
       </mapping>
@@ -1871,11 +1876,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="who.author"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.2"/>
-        <comment value="InformationSource"/>
       </mapping>
     </element>
     <element id="Condition.asserter.id">
@@ -2367,14 +2367,6 @@
       </type>
       <mustSupport value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="NTE child of PRB"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=&quot;annotation&quot;].value"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-concernfortransfer-v1.2-2015EN"/>
         <map value="NL-CM:5.1.5"/>
         <comment value="Explanation"/>
@@ -2388,6 +2380,14 @@
         <identity value="hcim-problem-v4.1-2017EN"/>
         <map value="NL-CM:5.1.5"/>
         <comment value="Comment"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NTE child of PRB"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=&quot;annotation&quot;].value"/>
       </mapping>
     </element>
   </snapshot>

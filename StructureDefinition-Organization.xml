@@ -18,7 +18,7 @@
   <name value="Organization"/>
   <title value="Organization"/>
   <status value="active"/>
-  <date value="2024-08-27T08:48:41+00:00"/>
+  <date value="2024-08-29T09:15:36+00:00"/>
   <publisher value="RIVO-NN HL7NL"/>
   <contact>
     <name value="RIVO-NN"/>
@@ -176,6 +176,21 @@
         <xpath value="/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z'"/>
       </constraint>
       <mapping>
+        <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
+        <map value="NL-CM:17.2.1"/>
+        <comment value="HealthcareProvider"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthcareprovider-v3.0-2016EN"/>
+        <map value="NL-CM:17.2.1"/>
+        <comment value="HealthcareProvider"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthcareprovider-v3.1.1-2017EN"/>
+        <map value="NL-CM:17.2.1"/>
+        <comment value="HealthcareProvider"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value="Entity. Role, or Act"/>
       </mapping>
@@ -194,21 +209,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="administrative.group"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
-        <map value="NL-CM:17.2.1"/>
-        <comment value="HealthcareProvider"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-healthcareprovider-v3.0-2016EN"/>
-        <map value="NL-CM:17.2.1"/>
-        <comment value="HealthcareProvider"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-healthcareprovider-v3.1.1-2017EN"/>
-        <map value="NL-CM:17.2.1"/>
-        <comment value="HealthcareProvider"/>
       </mapping>
     </element>
     <element id="Organization.id">
@@ -411,22 +411,6 @@
       <condition value="org-1"/>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="XON.10 / XON.3"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".scopes[Role](classCode=IDENT)"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="./Identifiers"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="id"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
         <map value="NL-CM:17.2.2"/>
         <comment value="HealthcareProviderIdentificationNumber"/>
@@ -445,6 +429,22 @@
         <identity value="hcim-basicelements-v1.0-2017EN"/>
         <map value="NL-CM:0.0.6"/>
         <comment value="IdentificationNumber"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XON.10 / XON.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scopes[Role](classCode=IDENT)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Identifiers"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="id"/>
       </mapping>
     </element>
     <element id="Organization.identifier:URA">
@@ -1043,6 +1043,21 @@
       <condition value="org-1"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-payer-v1.2-2015EN"/>
+        <map value="NL-CM:1.1.7"/>
+        <comment value="IdentificationNumber"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-payer-v3.0-2016EN"/>
+        <map value="NL-CM:1.1.7"/>
+        <comment value="IdentificationNumber"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-payer-v3.1-2017EN"/>
+        <map value="NL-CM:1.1.7"/>
+        <comment value="IdentificationNumber"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="XON.10 / XON.3"/>
       </mapping>
@@ -1057,21 +1072,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="id"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-payer-v1.2-2015EN"/>
-        <map value="NL-CM:1.1.7"/>
-        <comment value="IdentificationNumber"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-payer-v3.0-2016EN"/>
-        <map value="NL-CM:1.1.7"/>
-        <comment value="IdentificationNumber"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-payer-v3.1-2017EN"/>
-        <map value="NL-CM:1.1.7"/>
-        <comment value="IdentificationNumber"/>
       </mapping>
     </element>
     <element id="Organization.identifier:UZOVI.id">
@@ -1343,22 +1343,6 @@
       <mustSupport value="true"/>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="XON.10 / XON.3"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".scopes[Role](classCode=IDENT)"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="./Identifiers"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="id"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
         <map value="NL-CM:17.2.2"/>
         <comment value="HealthcareProviderIdentificationNumber"/>
@@ -1377,6 +1361,22 @@
         <identity value="hcim-basicelements-v1.0-2017EN"/>
         <map value="NL-CM:0.0.6"/>
         <comment value="IdentificationNumber"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XON.10 / XON.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scopes[Role](classCode=IDENT)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Identifiers"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="id"/>
       </mapping>
     </element>
     <element id="Organization.identifier:HL7NL.id">
@@ -1740,6 +1740,21 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
+        <map value="NL-CM:17.2.4"/>
+        <comment value="OrganizationType"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthcareprovider-v3.0-2016EN"/>
+        <map value="NL-CM:17.2.4"/>
+        <comment value="OrganizationType"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthcareprovider-v3.1.1-2017EN"/>
+        <map value="NL-CM:17.2.4"/>
+        <comment value="OrganizationType"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="No equivalent in v2"/>
       </mapping>
@@ -1754,21 +1769,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="class"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
-        <map value="NL-CM:17.2.4"/>
-        <comment value="OrganizationType"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-healthcareprovider-v3.0-2016EN"/>
-        <map value="NL-CM:17.2.4"/>
-        <comment value="OrganizationType"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-healthcareprovider-v3.1.1-2017EN"/>
-        <map value="NL-CM:17.2.4"/>
-        <comment value="OrganizationType"/>
       </mapping>
     </element>
     <element id="Organization.type:organizationType.id">
@@ -2111,6 +2111,21 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
+        <map value="NL-CM:17.2.7"/>
+        <comment value="DepartmentSpecialty"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthcareprovider-v3.0-2016EN"/>
+        <map value="NL-CM:17.2.7"/>
+        <comment value="DepartmentSpecialty"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-healthcareprovider-v3.1.1-2017EN"/>
+        <map value="NL-CM:17.2.7"/>
+        <comment value="DepartmentSpecialty"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="No equivalent in v2"/>
       </mapping>
@@ -2125,21 +2140,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="class"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
-        <map value="NL-CM:17.2.7"/>
-        <comment value="DepartmentSpecialty"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-healthcareprovider-v3.0-2016EN"/>
-        <map value="NL-CM:17.2.7"/>
-        <comment value="DepartmentSpecialty"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-healthcareprovider-v3.1.1-2017EN"/>
-        <map value="NL-CM:17.2.7"/>
-        <comment value="DepartmentSpecialty"/>
       </mapping>
     </element>
     <element id="Organization.type:departmentSpecialty.id">
@@ -2476,18 +2476,6 @@
       <condition value="org-1"/>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="XON.1"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".name"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value=".PreferredName/Name"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
         <map value="NL-CM:17.2.3"/>
         <comment value="OrganizationName"/>
@@ -2521,6 +2509,18 @@
         <identity value="hcim-healthcareprovider-v3.1.1-2017EN"/>
         <map value="NL-CM:17.2.8"/>
         <comment value="OrganizationLocation"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XON.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".name"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value=".PreferredName/Name"/>
       </mapping>
     </element>
     <element id="Organization.alias">
@@ -2825,20 +2825,19 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Organization"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
+        <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
+        <map value="NL-CM:17.2.6"/>
+        <comment value="TelephoneE-mail"/>
       </mapping>
       <mapping>
-        <identity value="v2"/>
-        <map value="XTN"/>
+        <identity value="hcim-healthcareprovider-v3.0-2016EN"/>
+        <map value="NL-CM:17.2.6"/>
+        <comment value="TelephoneE-mail"/>
       </mapping>
       <mapping>
-        <identity value="rim"/>
-        <map value="TEL"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="ContactPoint"/>
+        <identity value="hcim-healthcareprovider-v3.1.1-2017EN"/>
+        <map value="NL-CM:17.2.6"/>
+        <comment value="ContactInformation"/>
       </mapping>
       <mapping>
         <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
@@ -2856,21 +2855,6 @@
         <comment value="ContactInformation"/>
       </mapping>
       <mapping>
-        <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
-        <map value="NL-CM:17.2.6"/>
-        <comment value="TelephoneE-mail"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-healthcareprovider-v3.0-2016EN"/>
-        <map value="NL-CM:17.2.6"/>
-        <comment value="TelephoneE-mail"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-healthcareprovider-v3.1.1-2017EN"/>
-        <map value="NL-CM:17.2.6"/>
-        <comment value="ContactInformation"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-payer-v1.2-2015EN"/>
         <map value="NL-CM:1.1.12"/>
         <comment value="TelephoneE-mail"/>
@@ -2884,6 +2868,22 @@
         <identity value="hcim-payer-v3.1-2017EN"/>
         <map value="NL-CM:1.1.12"/>
         <comment value="ContactInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XTN"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="TEL"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="ContactPoint"/>
       </mapping>
     </element>
     <element id="Organization.address">
@@ -2999,37 +2999,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Organization"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="v2"/>
-        <map value="XAD"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="AD"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="Address"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-address-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.4"/>
-        <comment value="AddressInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-addressinformation-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.4"/>
-        <comment value="AddressInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-addressinformation-v1.0-2017EN"/>
-        <map value="NL-CM:20.5.1"/>
-        <comment value="AddressInformation"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
         <map value="NL-CM:17.2.5"/>
         <comment value="Address"/>
@@ -3058,6 +3027,37 @@
         <identity value="hcim-payer-v3.1-2017EN"/>
         <map value="NL-CM:1.1.17"/>
         <comment value="AddressInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-address-v2.0.1-2015EN"/>
+        <map value="NL-CM:0.1.4"/>
+        <comment value="AddressInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-addressinformation-v3.0-2016EN"/>
+        <map value="NL-CM:0.1.4"/>
+        <comment value="AddressInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-addressinformation-v1.0-2017EN"/>
+        <map value="NL-CM:20.5.1"/>
+        <comment value="AddressInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XAD"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="AD"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="Address"/>
       </mapping>
     </element>
     <element id="Organization.partOf">

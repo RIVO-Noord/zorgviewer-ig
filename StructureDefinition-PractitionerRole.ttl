@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PractitionerRole"] ; # 
   fhir:title [ fhir:v "PractitionerRole"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-08-27T08:48:41+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-29T09:15:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -348,6 +348,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
+         fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "PRD-7 (or XCN.1)" ]
        ] [
@@ -359,10 +363,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "id" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
-         fhir:comment [ fhir:v "IdentificationNumber" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.active" ] ;
@@ -463,9 +463,6 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".scoper" ]
-       ] [
          fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.1.6" ] ;
          fhir:comment [ fhir:v "HealthcareProvider" ]
@@ -477,6 +474,9 @@
          fhir:identity [ fhir:v "hcim-healthprofessional-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.1.6" ] ;
          fhir:comment [ fhir:v "HealthcareProvider" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".scoper" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.code" ] ;
@@ -551,15 +551,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "PRA-5" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".player.HealthCareProvider[@classCode = 'PROV'].code" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "./Specialty" ]
-       ] [
          fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.1.4" ] ;
          fhir:comment [ fhir:v "Specialty" ]
@@ -571,6 +562,15 @@
          fhir:identity [ fhir:v "hcim-healthprofessional-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.1.4" ] ;
          fhir:comment [ fhir:v "Specialty" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "PRA-5" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".player.HealthCareProvider[@classCode = 'PROV'].code" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "./Specialty" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty.id" ] ;
@@ -1501,17 +1501,17 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/ContactPoint"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
+         fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.1.8" ] ;
+         fhir:comment [ fhir:v "TelephoneEmail" ]
        ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XTN" ]
+         fhir:identity [ fhir:v "hcim-healthprofessional-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.1.8" ] ;
+         fhir:comment [ fhir:v "TelephoneEmail" ]
        ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "TEL" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "ContactPoint" ]
+         fhir:identity [ fhir:v "hcim-healthprofessional-v3.2-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.1.8" ] ;
+         fhir:comment [ fhir:v "ContactInformation" ]
        ] [
          fhir:identity [ fhir:v "hcim-contactinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.5" ] ;
@@ -1525,17 +1525,17 @@
          fhir:map [ fhir:v "NL-CM:20.6.1" ] ;
          fhir:comment [ fhir:v "ContactInformation" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.1.8" ] ;
-         fhir:comment [ fhir:v "TelephoneEmail" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthprofessional-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.1.8" ] ;
-         fhir:comment [ fhir:v "TelephoneEmail" ]
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XTN" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthprofessional-v3.2-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.1.8" ] ;
-         fhir:comment [ fhir:v "ContactInformation" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "TEL" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "ContactPoint" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.availableTime" ] ;

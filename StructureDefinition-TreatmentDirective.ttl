@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "TreatmentDirective"] ; # 
   fhir:title [ fhir:v "TreatmentDirective"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-08-27T08:48:41+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-29T09:15:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -132,15 +132,6 @@
          fhir:source [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "Entity. Role, or Act" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "FinancialConsent" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "infrastructure.information" ]
-       ] [
          fhir:identity [ fhir:v "hcim-treatmentdirective-v1.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:2.1.1" ] ;
          fhir:comment [ fhir:v "TreatmentInstruction" ]
@@ -152,6 +143,15 @@
          fhir:identity [ fhir:v "hcim-treatmentdirective-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:2.1.1" ] ;
          fhir:comment [ fhir:v "TreatmentDirective" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Entity. Role, or Act" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "FinancialConsent" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "infrastructure.information" ]
        ] )
      ] [
        fhir:id [ fhir:v "Consent.id" ] ;
@@ -1301,9 +1301,6 @@
          fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "N/A" ]
-       ] [
          fhir:identity [ fhir:v "hcim-treatmentdirective-v1.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:2.1.14" ] ;
          fhir:comment [ fhir:v "LivingWill - additional to .source" ]
@@ -1315,6 +1312,9 @@
          fhir:identity [ fhir:v "hcim-treatmentdirective-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:2.1.14" ] ;
          fhir:comment [ fhir:v "AdvanceDirective - additional to .source" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
        ] )
      ] [
        fhir:id [ fhir:v "Consent.modifierExtension" ] ;
@@ -1528,15 +1528,15 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
+         fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v ".id" ]
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "id" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
-         fhir:comment [ fhir:v "IdentificationNumber" ]
        ] )
      ] [
        fhir:id [ fhir:v "Consent.status" ] ;
@@ -1972,15 +1972,15 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.11" ] ;
+         fhir:comment [ fhir:v "Subject" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "Role" ]
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "who.focus" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.11" ] ;
-         fhir:comment [ fhir:v "Subject" ]
        ] )
      ] [
        fhir:id [ fhir:v "Consent.period" ] ;
@@ -2078,12 +2078,6 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "DR.1" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "./low" ]
-       ] [
          fhir:identity [ fhir:v "hcim-treatmentdirective-v1.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:2.1.6" ] ;
          fhir:comment [ fhir:v "StartDate" ]
@@ -2095,6 +2089,12 @@
          fhir:identity [ fhir:v "hcim-treatmentdirective-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:2.1.6" ] ;
          fhir:comment [ fhir:v "StartDate" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "DR.1" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./low" ]
        ] )
      ] [
        fhir:id [ fhir:v "Consent.period.end" ] ;
@@ -2117,12 +2117,6 @@
        fhir:condition ( [ fhir:v "per-1" ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "DR.2" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "./high" ]
-       ] [
          fhir:identity [ fhir:v "hcim-treatmentdirective-v1.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:2.1.7" ] ;
          fhir:comment [ fhir:v "EndDate" ]
@@ -2134,6 +2128,12 @@
          fhir:identity [ fhir:v "hcim-treatmentdirective-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:2.1.7" ] ;
          fhir:comment [ fhir:v "EndDate" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "DR.2" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./high" ]
        ] )
      ] [
        fhir:id [ fhir:v "Consent.dateTime" ] ;
@@ -2153,15 +2153,15 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.14" ] ;
+         fhir:comment [ fhir:v "DateTime" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "FinancialConsent effectiveTime" ]
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "when.recorded" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.14" ] ;
-         fhir:comment [ fhir:v "DateTime" ]
        ] )
      ] [
        fhir:id [ fhir:v "Consent.consentingParty" ] ;
@@ -2192,12 +2192,12 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "who.actor" ]
-       ] [
          fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.0.7" ] ;
          fhir:comment [ fhir:v "Author" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "who.actor" ]
        ] )
      ] [
        fhir:id [ fhir:v "Consent.consentingParty.id" ] ;

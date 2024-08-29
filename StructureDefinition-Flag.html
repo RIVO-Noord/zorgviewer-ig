@@ -260,7 +260,7 @@
         
           Active
           
-            as of 2024-08-27
+            as of 2024-08-29
           
         
       </td>
@@ -310,30 +310,69 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 <p>Een schets van het scherm met labels en sortering informatie</p>
 <div style="clear:both;"><img src="UI-Schets-Alerts.png" class="figure-img img-responsive img-rounded center-block" /></div>
 
-<h3 id="request">Request</h3>
+<p>Kolom definities:</p>
+<table class="grid">
+  <thead>
+    <th>Kolom label</th>
+    <th width="25%">FHIR Path</th>
+    <th>FHIR Type</th>
+    <th>Zib element</th>
+    <th>Toelichting of regels</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bron</td>
+      <td><samp>.meta.extension[system="http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"].valueUri</samp></td>
+      <td><code>string</code></td>
+      <td><i>nvt</i></td>
+      <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
+    </tr>
+    <tr>
+      <td>Datum</td>
+      <td><samp>.period.start</samp></td>
+      <td><code>dateTime</code></td>
+      <td>BeginDatumTijd</td>
+      <td>​</td>
+    </tr>
+    <tr>
+      <td>Categorie</td>
+      <td><samp>Flag.category.text</samp> of <samp>Condition.category[0].text</samp></td>
+      <td><code>string​</code></td>
+      <td>AlertNaam of Conditie::Probleem</td>
+      <td>Indien <samp>Condition.category[0].text</samp> null is wordt de <samp>Flag.code.text</samp> getoond</td>
+    </tr>
+    <tr>
+      <td>Voor</td>
+      <td><samp>FLag.code.text</samp> of <samp>Condition.code.text</samp></td>
+      <td><code>string​</code></td>
+      <td>AlertType</td>
+      <td>Indien <samp>Condition.code.text null is wordt de <samp>Flag.code.text</samp> getoond&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-<ol>
-  <li>
-    <p>Opvragen (search) definities</p>
+### Request
 
-    <p><code class="language-plaintext highlighter-rouge">GET &lt;ontsluiten-bronsysteem-base&gt;/Flag?patient=&lt;fhir_patient_id&gt;</code></p>
-  </li>
-</ol>
+1. Opvragen (search) definities
 
-<h3 id="bronsysteem-herkennen">Bronsysteem herkennen</h3>
+    `GET <ontsluiten-bronsysteem-base>/Flag?patient=<fhir_patient_id>`
 
-<p>De <em>Zorgviewer-backend</em> of <em>Ontsluiten bronsysteem</em> <strong>MOET</strong> na bevragen van het bronsysteem aan elk resultaat resource een meta-tag toevoegen met de AGB, OID of URA identifier van de zorgaanbieder (zie <a href="StructureDefinition-Organization.html">Organization</a> voor voorbeelden). Dit wordt vervolgens gebruikt in de "Bron" kolom in de Zorgviewer-frontend. N.B. We gebruiken hier een <em>pre-adopt</em> van de FHIR R4 <a href="StructureDefinition-extension-Meta.source.html">Meta.source</a>.</p>
+### Bronsysteem herkennen
 
-<p>Toevoegen aan elke response, dus per resource (bij een read) of per Bundle (bij een search):</p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"valueUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:oid:2.16.840.1.113883.2.4.3.8"</span><span class="w">
-    </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+De *Zorgviewer-backend* of *Ontsluiten bronsysteem* **MOET** na bevragen van het bronsysteem aan elk resultaat resource een meta-tag toevoegen met de AGB, OID of URA identifier van de zorgaanbieder (zie [Organization](StructureDefinition-Organization.html) voor voorbeelden). Dit wordt vervolgens gebruikt in de "Bron" kolom in de Zorgviewer-frontend. N.B. We gebruiken hier een *pre-adopt* van de FHIR R4 [Meta.source](StructureDefinition-extension-Meta.source.html).
 
-<p><em>Alternatief:</em> Elke entry van een search response Bundle bevat een referentie naar de bijbehorende Patient (<code class="language-plaintext highlighter-rouge">&lt;resource&gt;.subject|patient</code>). Elke patient heeft een <code class="language-plaintext highlighter-rouge">Patient.managingOrganization</code> en in de gerefereerde <code class="language-plaintext highlighter-rouge">Organization.identifier</code> staat vervolgens o.a. de OID van het bronsysyeem. Of je gebruikt de identifiers om een volledige Organization op te zoeken in het <a href="zorgviewer-services.html#adressering">adresboek</a> en zie inhoud <a href="artifacts.html#zorgviewer-services-content">hier</a>.</p>
+Toevoegen aan elke response, dus per resource (bij een read) of per Bundle (bij een search):
+```json
+"meta": {
+    "extension": [ {
+        "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
+        "valueUri": "urn:oid:2.16.840.1.113883.2.4.3.8"
+    } ]
+}
+```
+
+*Alternatief:* Elke entry van een search response Bundle bevat een referentie naar de bijbehorende Patient (``<resource>.subject|patient``). Elke patient heeft een ``Patient.managingOrganization`` en in de gerefereerde ``Organization.identifier`` staat vervolgens o.a. de OID van het bronsysyeem. Of je gebruikt de identifiers om een volledige Organization op te zoeken in het [adresboek](zorgviewer-services.html#adressering) en zie inhoud [hier](artifacts.html#zorgviewer-services-content).
+</resource></fhir_patient_id></ontsluiten-bronsysteem-base></samp></td></tr></tbody></table>
 
 </div>
 
@@ -1699,7 +1738,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.5.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Aug 27, 2024 08:48+0000">2024-08-27</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.5.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Thu, Aug 29, 2024 09:15+0000">2024-08-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

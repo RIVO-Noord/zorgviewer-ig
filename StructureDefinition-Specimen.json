@@ -10,7 +10,7 @@
   "name" : "Specimen",
   "title" : "Specimen",
   "status" : "active",
-  "date" : "2024-08-27T08:48:41+00:00",
+  "date" : "2024-08-29T09:15:36+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -121,18 +121,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "Entity. Role, or Act"
-      },
-      {
-        "identity" : "rim",
-        "map" : "Role[classCode=SPEC]"
-      },
-      {
-        "identity" : "w5",
-        "map" : "clinical.diagnostics"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.2",
         "comment" : "Specimen"
@@ -146,6 +134,18 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.2",
         "comment" : "Specimen"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Entity. Role, or Act"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Role[classCode=SPEC]"
+      },
+      {
+        "identity" : "w5",
+        "map" : "clinical.diagnostics"
       }]
     },
     {
@@ -351,18 +351,6 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "SPM-2"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".id"
-      },
-      {
-        "identity" : "w5",
-        "map" : "id"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.15",
         "comment" : "SpecimenNumber"
@@ -376,6 +364,18 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.15",
         "comment" : "SpecimenId"
+      },
+      {
+        "identity" : "v2",
+        "map" : "SPM-2"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".id"
+      },
+      {
+        "identity" : "w5",
+        "map" : "id"
       }]
     },
     {
@@ -474,18 +474,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "SPM-4 and possibly SPM-5"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".code"
-      },
-      {
-        "identity" : "w5",
-        "map" : "what"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.16",
         "comment" : "SpecimenMaterial"
@@ -499,6 +487,18 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.16",
         "comment" : "SpecimenMaterial"
+      },
+      {
+        "identity" : "v2",
+        "map" : "SPM-4 and possibly SPM-5"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".code"
+      },
+      {
+        "identity" : "w5",
+        "map" : "what"
       }]
     },
     {
@@ -652,17 +652,17 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.29",
+        "comment" : "SpecimenSource"
+      },
+      {
         "identity" : "rim",
         "map" : ".scoper  or  .scoper.playsRole"
       },
       {
         "identity" : "w5",
         "map" : "who.focus"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.29",
-        "comment" : "SpecimenSource"
       }]
     },
     {
@@ -683,6 +683,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.25",
+        "comment" : "ReceivedDateTime"
+      },
+      {
         "identity" : "v2",
         "map" : "SPM-18"
       },
@@ -693,11 +698,6 @@
       {
         "identity" : "w5",
         "map" : "when.done"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.25",
-        "comment" : "ReceivedDateTime"
       }]
     },
     {
@@ -722,13 +722,13 @@
         "targetProfile" : "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen-Isolate"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".scoper (if parent) .player.scopesRole[classCode=SPEC].player (if child)"
-      },
-      {
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.2",
         "comment" : "Specimen"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".scoper (if parent) .player.scopesRole[classCode=SPEC].player (if child)"
       }]
     },
     {
@@ -952,18 +952,6 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "SPM-17"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".effectiveTime"
-      },
-      {
-        "identity" : "w5",
-        "map" : "when.init"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.17",
         "comment" : "DrawingDateTime"
@@ -977,6 +965,18 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.17",
         "comment" : "CollectionDateTime"
+      },
+      {
+        "identity" : "v2",
+        "map" : "SPM-17"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".effectiveTime"
+      },
+      {
+        "identity" : "w5",
+        "map" : "when.init"
       }]
     },
     {
@@ -998,6 +998,16 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.24",
+        "comment" : "CollectionPeriod"
+      },
+      {
+        "identity" : "hcim-laboratorytestresult-v4.4-2019EN",
+        "map" : "NL-CM:13.1.24",
+        "comment" : "CollectionPeriod::TimeInterval Duration"
+      },
+      {
         "identity" : "v2",
         "map" : "SPM-17"
       },
@@ -1008,16 +1018,6 @@
       {
         "identity" : "w5",
         "map" : "when.init"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.24",
-        "comment" : "CollectionPeriod"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.4-2019EN",
-        "map" : "NL-CM:13.1.24",
-        "comment" : "CollectionPeriod::TimeInterval Duration"
       }]
     },
     {
@@ -1164,17 +1164,17 @@
         "profile" : "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
       }],
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.23",
+        "comment" : "CollectedVolume"
+      },
+      {
         "identity" : "v2",
         "map" : "SPM-12"
       },
       {
         "identity" : "rim",
         "map" : ".participation[typeCode=SBJ].role[classCode=SPEC].player.quantity"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.23",
-        "comment" : "CollectedVolume"
       }]
     },
     {
@@ -1200,14 +1200,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "SPM-7"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".methodCode"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.18",
         "comment" : "DrawingProcedure"
@@ -1221,6 +1213,14 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.18",
         "comment" : "CollectionMethod"
+      },
+      {
+        "identity" : "v2",
+        "map" : "SPM-7"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".methodCode"
       }]
     },
     {
@@ -1248,17 +1248,17 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.26",
+        "comment" : "AnatomicalLocation"
+      },
+      {
         "identity" : "v2",
         "map" : "SPM-8 and SPM-9"
       },
       {
         "identity" : "rim",
         "map" : ".targetSiteCode"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.26",
-        "comment" : "AnatomicalLocation"
       }]
     },
     {
@@ -1479,17 +1479,17 @@
         "profile" : "http://nictiz.nl/fhir/StructureDefinition/BodySite-Morphology"
       }],
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.28",
+        "comment" : "Morphology"
+      },
+      {
         "identity" : "rim",
         "map" : "n/a"
       },
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.28",
-        "comment" : "Morphology"
       }]
     },
     {
@@ -2004,17 +2004,17 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.20",
+        "comment" : "SpecimenNumberExtension"
+      },
+      {
         "identity" : "v2",
         "map" : "SAC-3"
       },
       {
         "identity" : "rim",
         "map" : ".id"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.20",
-        "comment" : "SpecimenNumberExtension"
       }]
     },
     {
@@ -2061,17 +2061,17 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.21",
+        "comment" : "ContainerType"
+      },
+      {
         "identity" : "v2",
         "map" : "SPM-27"
       },
       {
         "identity" : "rim",
         "map" : ".code"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.21",
-        "comment" : "ContainerType"
       }]
     },
     {
@@ -2180,14 +2180,6 @@
         "code" : "Annotation"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "OBX"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"annotation\"].value"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.19",
         "comment" : "Explanation"
@@ -2201,6 +2193,14 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.19",
         "comment" : "Comment"
+      },
+      {
+        "identity" : "v2",
+        "map" : "OBX"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"annotation\"].value"
       }]
     },
     {

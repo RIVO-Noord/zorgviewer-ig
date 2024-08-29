@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "LaboratoryTestResult"] ; # 
   fhir:title [ fhir:v "LaboratoryTestResult"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-08-27T08:48:41+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-29T09:15:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -146,6 +146,30 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Observation"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.1" ] ;
+         fhir:comment [ fhir:v "LaboratoryTestResult" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.1" ] ;
+         fhir:comment [ fhir:v "LaboratoryTestResult" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.1" ] ;
+         fhir:comment [ fhir:v "LaboratoryTestResult" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.3" ] ;
+         fhir:comment [ fhir:v "LaboratoryTest" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.3" ] ;
+         fhir:comment [ fhir:v "LaboratoryTest" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.3" ] ;
+         fhir:comment [ fhir:v "LaboratoryTest" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "Entity. Role, or Act" ]
        ] [
@@ -163,30 +187,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "clinical.diagnostics" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.1" ] ;
-         fhir:comment [ fhir:v "LaboratoryTestResult" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.1" ] ;
-         fhir:comment [ fhir:v "LaboratoryTestResult" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.1" ] ;
-         fhir:comment [ fhir:v "LaboratoryTestResult" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.3" ] ;
-         fhir:comment [ fhir:v "LaboratoryTest" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.3" ] ;
-         fhir:comment [ fhir:v "LaboratoryTest" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.3" ] ;
-         fhir:comment [ fhir:v "LaboratoryTest" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.id" ] ;
@@ -380,6 +380,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
+         fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "Event.identifier" ]
        ] [
@@ -391,10 +395,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "id" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
-         fhir:comment [ fhir:v "IdentificationNumber" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.basedOn" ] ;
@@ -435,6 +435,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.34" ] ;
+         fhir:comment [ fhir:v "Contains Requester::HealthProfessional" ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "Event.basedOn" ]
        ] [
@@ -443,10 +447,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v ".outboundRelationship[typeCode=FLFS].target" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.34" ] ;
-         fhir:comment [ fhir:v "Contains Requester::HealthProfessional" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.status" ] ;
@@ -1155,12 +1155,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".outboundRelationship[typeCode=\"COMP].target[classCode=\"LIST\", moodCode=\"EVN\"].code" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "class" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.7" ] ;
          fhir:comment [ fhir:v "ResultType" ]
@@ -1172,6 +1166,12 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.7" ] ;
          fhir:comment [ fhir:v "ResultType" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=\"COMP].target[classCode=\"LIST\", moodCode=\"EVN\"].code" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "class" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.code" ] ;
@@ -1206,24 +1206,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "workflow" ] ;
-         fhir:map [ fhir:v "Event.code" ]
-       ] [
-         fhir:identity [ fhir:v "sct-concept" ] ;
-         fhir:map [ fhir:v "< 363787002 |Observable entity| OR < 386053000 |Evaluation procedure|" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "OBX-3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "code" ]
-       ] [
-         fhir:identity [ fhir:v "sct-attr" ] ;
-         fhir:map [ fhir:v "116680003 |Is a|" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "what" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.4" ] ;
          fhir:comment [ fhir:v "Test" ]
@@ -1247,6 +1229,24 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.8" ] ;
          fhir:comment [ fhir:v "TestCode" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.code" ]
+       ] [
+         fhir:identity [ fhir:v "sct-concept" ] ;
+         fhir:map [ fhir:v "< 363787002 |Observable entity| OR < 386053000 |Evaluation procedure|" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "OBX-3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "code" ]
+       ] [
+         fhir:identity [ fhir:v "sct-attr" ] ;
+         fhir:map [ fhir:v "116680003 |Is a|" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "what" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.code.id" ] ;
@@ -1388,6 +1388,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.11" ] ;
+         fhir:comment [ fhir:v "Subject" ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "Event.subject" ]
        ] [
@@ -1399,10 +1403,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "who.focus" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.11" ] ;
-         fhir:comment [ fhir:v "Subject" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.context" ] ;
@@ -1470,22 +1470,6 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "workflow" ] ;
-         fhir:map [ fhir:v "Event.occurrence[x]" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "OBX-14, and/or OBX-19 after v2.4  (depends on who observation made)" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "effectiveTime" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "when.done" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.14" ] ;
-         fhir:comment [ fhir:v "DateTime" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.13" ] ;
          fhir:comment [ fhir:v "TestDateTime" ]
@@ -1497,6 +1481,22 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.13" ] ;
          fhir:comment [ fhir:v "TestDateTime" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.14" ] ;
+         fhir:comment [ fhir:v "DateTime" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.occurrence[x]" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "OBX-14, and/or OBX-19 after v2.4  (depends on who observation made)" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "effectiveTime" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "when.done" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.effective[x]:effectiveDateTime" ] ;
@@ -1520,22 +1520,6 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "workflow" ] ;
-         fhir:map [ fhir:v "Event.occurrence[x]" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "OBX-14, and/or OBX-19 after v2.4  (depends on who observation made)" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "effectiveTime" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "when.done" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.14" ] ;
-         fhir:comment [ fhir:v "DateTime" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.13" ] ;
          fhir:comment [ fhir:v "TestDateTime" ]
@@ -1547,6 +1531,22 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.13" ] ;
          fhir:comment [ fhir:v "TestDateTime" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.14" ] ;
+         fhir:comment [ fhir:v "DateTime" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.occurrence[x]" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "OBX-14, and/or OBX-19 after v2.4  (depends on who observation made)" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "effectiveTime" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "when.done" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.issued" ] ;
@@ -1603,6 +1603,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.7" ] ;
+         fhir:comment [ fhir:v "Author" ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "Event.performer" ]
        ] [
@@ -1614,10 +1618,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "who.actor" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.7" ] ;
-         fhir:comment [ fhir:v "Author" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.performer.id" ] ;
@@ -1783,6 +1783,18 @@
        fhir:condition ( [ fhir:v "obs-7" ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
+         fhir:comment [ fhir:v "TestResult" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
+         fhir:comment [ fhir:v "TestResult" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
+         fhir:comment [ fhir:v "TestResult" ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "Event.notDone, Event.notDoneReason  (maps to valeu[x] or dataAbsentReason)" ]
        ] [
@@ -1797,18 +1809,6 @@
        ] [
          fhir:identity [ fhir:v "sct-attr" ] ;
          fhir:map [ fhir:v "363714003 |Interprets|" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
-         fhir:comment [ fhir:v "TestResult" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
-         fhir:comment [ fhir:v "TestResult" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
-         fhir:comment [ fhir:v "TestResult" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.value[x]:valueQuantity" ] ;
@@ -1833,6 +1833,18 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
+         fhir:comment [ fhir:v "TestResult" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
+         fhir:comment [ fhir:v "TestResult" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
+         fhir:comment [ fhir:v "TestResult" ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "Event.notDone, Event.notDoneReason  (maps to valeu[x] or dataAbsentReason)" ]
        ] [
@@ -1847,18 +1859,6 @@
        ] [
          fhir:identity [ fhir:v "sct-attr" ] ;
          fhir:map [ fhir:v "363714003 |Interprets|" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
-         fhir:comment [ fhir:v "TestResult" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
-         fhir:comment [ fhir:v "TestResult" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
-         fhir:comment [ fhir:v "TestResult" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.value[x]:valueQuantity.id" ] ;
@@ -2678,15 +2678,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "C*E.1-8, C*E.10-22" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "union(., ./translation)" ]
-       ] [
-         fhir:identity [ fhir:v "orim" ] ;
-         fhir:map [ fhir:v "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.14" ] ;
          fhir:comment [ fhir:v "ResultFlags" ]
@@ -2698,6 +2689,15 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.14" ] ;
          fhir:comment [ fhir:v "ResultFlags - see ConceptMap 'HCIM InterpretatieVlaggenCodelijst to Observation Interpretation Codes'" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "C*E.1-8, C*E.10-22" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "union(., ./translation)" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.interpretation.coding:InterpretatieVlaggenCodelijst.id" ] ;
@@ -2941,15 +2941,6 @@
          fhir:code [ fhir:v "string"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "workflow" ] ;
-         fhir:map [ fhir:v "Event.note" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "NTE.3 (partner NTE to OBX, or sometimes another (child?) OBX)" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "subjectOf.observationEvent[code=\"annotation\"].value" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.5" ] ;
          fhir:comment [ fhir:v "Explanation" ]
@@ -2965,6 +2956,15 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.32" ] ;
          fhir:comment [ fhir:v "ResultInterpretation" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "Event.note" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "NTE.3 (partner NTE to OBX, or sometimes another (child?) OBX)" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "subjectOf.observationEvent[code=\"annotation\"].value" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.bodySite" ] ;
@@ -3036,12 +3036,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "OBX-17" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "methodCode" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.9" ] ;
          fhir:comment [ fhir:v "TestMethod" ]
@@ -3053,6 +3047,12 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.9" ] ;
          fhir:comment [ fhir:v "TestMethod" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "OBX-17" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "methodCode" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.specimen" ] ;
@@ -3074,18 +3074,6 @@
        ] ) ;
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "sct-concept" ] ;
-         fhir:map [ fhir:v "< 123038009 |Specimen|" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "SPM segment" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "participation[typeCode=SPC].specimen" ]
-       ] [
-         fhir:identity [ fhir:v "sct-attr" ] ;
-         fhir:map [ fhir:v "704319004 |Inherent in|" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.2" ] ;
          fhir:comment [ fhir:v "Specimen" ]
@@ -3097,6 +3085,18 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.2" ] ;
          fhir:comment [ fhir:v "Specimen" ]
+       ] [
+         fhir:identity [ fhir:v "sct-concept" ] ;
+         fhir:map [ fhir:v "< 123038009 |Specimen|" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "SPM segment" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "participation[typeCode=SPC].specimen" ]
+       ] [
+         fhir:identity [ fhir:v "sct-attr" ] ;
+         fhir:map [ fhir:v "704319004 |Inherent in|" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.device" ] ;
@@ -3251,12 +3251,6 @@
        ] ) ;
        fhir:condition ( [ fhir:v "obs-3" ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "OBX-7" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "value:IVL_PQ.low" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.12" ] ;
          fhir:comment [ fhir:v "LowerReferenceLimit" ]
@@ -3268,6 +3262,12 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.12" ] ;
          fhir:comment [ fhir:v "ReferenceRangeLowerLimit" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "OBX-7" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "value:IVL_PQ.low" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.referenceRange.low.id" ] ;
@@ -3482,12 +3482,6 @@
        ] ) ;
        fhir:condition ( [ fhir:v "obs-3" ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "OBX-7" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "value:IVL_PQ.high" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.11" ] ;
          fhir:comment [ fhir:v "UpperReferenceLimit" ]
@@ -3499,6 +3493,12 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.11" ] ;
          fhir:comment [ fhir:v "ReferenceRangeUpperLimit" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "OBX-7" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "value:IVL_PQ.high" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.referenceRange.high.id" ] ;
@@ -3844,12 +3844,6 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "Relationships established by OBX-4 usage" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "outBoundRelationship" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.33" ] ;
          fhir:comment [ fhir:v "RelatedResults" ]
@@ -3857,6 +3851,12 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.3" ] ;
          fhir:comment [ fhir:v "LaboratoryTest" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "Relationships established by OBX-4 usage" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "outBoundRelationship" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.related.id" ] ;
@@ -4013,12 +4013,6 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "containment by OBX-4?" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "outBoundRelationship[typeCode=COMP]" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.3" ] ;
          fhir:comment [ fhir:v "LaboratoryTest" ]
@@ -4030,6 +4024,12 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.3" ] ;
          fhir:comment [ fhir:v "LaboratoryTest" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "containment by OBX-4?" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "outBoundRelationship[typeCode=COMP]" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.component.id" ] ;
@@ -4123,18 +4123,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "sct-concept" ] ;
-         fhir:map [ fhir:v "< 363787002 |Observable entity| OR \r< 386053000 |Evaluation procedure|" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "OBX-3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "code" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "what" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.8" ] ;
          fhir:comment [ fhir:v "TestName" ]
@@ -4146,6 +4134,18 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.8" ] ;
          fhir:comment [ fhir:v "TestCode" ]
+       ] [
+         fhir:identity [ fhir:v "sct-concept" ] ;
+         fhir:map [ fhir:v "< 363787002 |Observable entity| OR \r< 386053000 |Evaluation procedure|" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "OBX-3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "code" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "what" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.component.value[x]" ] ;
@@ -4185,18 +4185,6 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "sct-concept" ] ;
-         fhir:map [ fhir:v "363714003 |Interprets| < 441742003 |Evaluation finding|" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "OBX.2, OBX.5, OBX.6" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "value" ]
-       ] [
-         fhir:identity [ fhir:v "sct-attr" ] ;
-         fhir:map [ fhir:v "363714003 |Interprets|" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
          fhir:comment [ fhir:v "TestResult" ]
@@ -4208,6 +4196,18 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.10" ] ;
          fhir:comment [ fhir:v "TestResult" ]
+       ] [
+         fhir:identity [ fhir:v "sct-concept" ] ;
+         fhir:map [ fhir:v "363714003 |Interprets| < 441742003 |Evaluation finding|" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "OBX.2, OBX.5, OBX.6" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "value" ]
+       ] [
+         fhir:identity [ fhir:v "sct-attr" ] ;
+         fhir:map [ fhir:v "363714003 |Interprets|" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.component.dataAbsentReason" ] ;
@@ -4275,18 +4275,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "sct-concept" ] ;
-         fhir:map [ fhir:v "< 260245000 |Findings values|" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "OBX-8" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "interpretationCode" ]
-       ] [
-         fhir:identity [ fhir:v "sct-attr" ] ;
-         fhir:map [ fhir:v "363713009 |Has interpretation|" ]
-       ] [
          fhir:identity [ fhir:v "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.14" ] ;
          fhir:comment [ fhir:v "ResultFlags" ]
@@ -4298,6 +4286,18 @@
          fhir:identity [ fhir:v "hcim-laboratorytestresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.1.14" ] ;
          fhir:comment [ fhir:v "ResultFlags" ]
+       ] [
+         fhir:identity [ fhir:v "sct-concept" ] ;
+         fhir:map [ fhir:v "< 260245000 |Findings values|" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "OBX-8" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "interpretationCode" ]
+       ] [
+         fhir:identity [ fhir:v "sct-attr" ] ;
+         fhir:map [ fhir:v "363713009 |Has interpretation|" ]
        ] )
      ] [
        fhir:id [ fhir:v "Observation.component.referenceRange" ] ;

@@ -10,7 +10,7 @@
   "name" : "PractitionerRole",
   "title" : "PractitionerRole",
   "status" : "active",
-  "date" : "2024-08-27T08:48:41+00:00",
+  "date" : "2024-08-29T09:15:36+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -373,6 +373,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.6",
+        "comment" : "IdentificationNumber"
+      },
+      {
         "identity" : "v2",
         "map" : "PRD-7 (or XCN.1)"
       },
@@ -387,11 +392,6 @@
       {
         "identity" : "w5",
         "map" : "id"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.6",
-        "comment" : "IdentificationNumber"
       }]
     },
     {
@@ -501,10 +501,6 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".scoper"
-      },
-      {
         "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
         "map" : "NL-CM:17.1.6",
         "comment" : "HealthcareProvider"
@@ -518,6 +514,10 @@
         "identity" : "hcim-healthprofessional-v3.2-2017EN",
         "map" : "NL-CM:17.1.6",
         "comment" : "HealthcareProvider"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".scoper"
       }]
     },
     {
@@ -592,18 +592,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "PRA-5"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".player.HealthCareProvider[@classCode = 'PROV'].code"
-      },
-      {
-        "identity" : "servd",
-        "map" : "./Specialty"
-      },
-      {
         "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
         "map" : "NL-CM:17.1.4",
         "comment" : "Specialty"
@@ -617,6 +605,18 @@
         "identity" : "hcim-healthprofessional-v3.2-2017EN",
         "map" : "NL-CM:17.1.4",
         "comment" : "Specialty"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PRA-5"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".player.HealthCareProvider[@classCode = 'PROV'].code"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./Specialty"
       }]
     },
     {
@@ -1588,20 +1588,19 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/ContactPoint"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
+        "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
+        "map" : "NL-CM:17.1.8",
+        "comment" : "TelephoneEmail"
       },
       {
-        "identity" : "v2",
-        "map" : "XTN"
+        "identity" : "hcim-healthprofessional-v3.0-2016EN",
+        "map" : "NL-CM:17.1.8",
+        "comment" : "TelephoneEmail"
       },
       {
-        "identity" : "rim",
-        "map" : "TEL"
-      },
-      {
-        "identity" : "servd",
-        "map" : "ContactPoint"
+        "identity" : "hcim-healthprofessional-v3.2-2017EN",
+        "map" : "NL-CM:17.1.8",
+        "comment" : "ContactInformation"
       },
       {
         "identity" : "hcim-contactinformation-v2.0.1-2015EN",
@@ -1619,19 +1618,20 @@
         "comment" : "ContactInformation"
       },
       {
-        "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
-        "map" : "NL-CM:17.1.8",
-        "comment" : "TelephoneEmail"
+        "identity" : "rim",
+        "map" : "n/a"
       },
       {
-        "identity" : "hcim-healthprofessional-v3.0-2016EN",
-        "map" : "NL-CM:17.1.8",
-        "comment" : "TelephoneEmail"
+        "identity" : "v2",
+        "map" : "XTN"
       },
       {
-        "identity" : "hcim-healthprofessional-v3.2-2017EN",
-        "map" : "NL-CM:17.1.8",
-        "comment" : "ContactInformation"
+        "identity" : "rim",
+        "map" : "TEL"
+      },
+      {
+        "identity" : "servd",
+        "map" : "ContactPoint"
       }]
     },
     {

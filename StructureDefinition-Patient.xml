@@ -18,7 +18,7 @@
   <name value="Patient"/>
   <title value="Patient"/>
   <status value="active"/>
-  <date value="2024-08-27T08:48:41+00:00"/>
+  <date value="2024-08-29T09:15:36+00:00"/>
   <publisher value="RIVO-NN HL7NL"/>
   <contact>
     <name value="RIVO-NN"/>
@@ -266,22 +266,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="Entity. Role, or Act"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="Patient[classCode=PAT]"/>
-      </mapping>
-      <mapping>
-        <identity value="cda"/>
-        <map value="ClinicalDocument.recordTarget.patientRole"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="administrative.individual"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-patient-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.1"/>
         <comment value="Patient"/>
@@ -325,6 +309,22 @@
         <identity value="hcim-basicelements-v1.0-2017EN"/>
         <map value="NL-CM:0.0.12"/>
         <comment value="Patient"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Entity. Role, or Act"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Patient[classCode=PAT]"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value="ClinicalDocument.recordTarget.patientRole"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="administrative.individual"/>
       </mapping>
     </element>
     <element id="Patient.id">
@@ -1641,13 +1641,13 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-lifestance-v3.1-2017EN"/>
         <map value="NL-CM:7.5.2"/>
         <comment value="LifeStance"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
       </mapping>
     </element>
     <element id="Patient.extension:lifeStance.value[x]:valueCodeableConcept.id">
@@ -2011,22 +2011,6 @@
       </type>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="PID-3"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="id"/>
-      </mapping>
-      <mapping>
-        <identity value="cda"/>
-        <map value=".id"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="id"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-patient-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.7"/>
         <comment value="PatientIdentificationNumber"/>
@@ -2045,6 +2029,22 @@
         <identity value="hcim-basicelements-v1.0-2017EN"/>
         <map value="NL-CM:0.0.6"/>
         <comment value="IdentificationNumber"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="id"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="id"/>
       </mapping>
     </element>
     <element id="Patient.identifier:BSN">
@@ -2461,42 +2461,6 @@
       </constraint>
       <mustSupport value="true"/>
       <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="v2"/>
-        <map value="XPN"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="EN (actually, PN)"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="ProviderName"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.6"/>
-        <comment value="NameInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-nameinformation-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.6"/>
-        <comment value="NameInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
-        <map value="NL-CM:20.4.1"/>
-        <comment value="NameInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="BRP"/>
-        <map value="02"/>
-        <comment value="Naam"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-patient-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.6"/>
         <comment value="NameInformation"/>
@@ -2525,6 +2489,42 @@
         <identity value="hcim-payer-v3.1-2017EN"/>
         <map value="NL-CM:1.1.5"/>
         <comment value="PayerName"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
+        <map value="NL-CM:0.1.6"/>
+        <comment value="NameInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-nameinformation-v3.0-2016EN"/>
+        <map value="NL-CM:0.1.6"/>
+        <comment value="NameInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
+        <map value="NL-CM:20.4.1"/>
+        <comment value="NameInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="BRP"/>
+        <map value="02"/>
+        <comment value="Naam"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XPN"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="EN (actually, PN)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="ProviderName"/>
       </mapping>
     </element>
     <element id="Patient.name.id">
@@ -2748,14 +2748,6 @@
       </type>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="implied by XPN.11"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="./formatted"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-payer-v1.2-2015EN"/>
         <map value="NL-CM:1.1.5"/>
         <comment value="PayerName"/>
@@ -2769,6 +2761,14 @@
         <identity value="hcim-payer-v3.1-2017EN"/>
         <map value="NL-CM:1.1.5"/>
         <comment value="PayerName"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="implied by XPN.11"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./formatted"/>
       </mapping>
     </element>
     <element id="Patient.name.family">
@@ -2876,14 +2876,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mapping>
-        <identity value="v2"/>
-        <map value="FN.2"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="ENXP where Qualifiers = (VV, R)"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.38"/>
         <comment value="Prefix"/>
@@ -2897,6 +2889,14 @@
         <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
         <map value="NL-CM:20.4.11"/>
         <comment value="Prefix"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="FN.2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="ENXP where Qualifiers = (VV, R)"/>
       </mapping>
     </element>
     <element id="Patient.name.family.extension:humannameOwnPrefix.id">
@@ -3027,14 +3027,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mapping>
-        <identity value="v2"/>
-        <map value="FN.3"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="ENXP where Qualifiers = (BR)"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.24"/>
         <comment value="LastName"/>
@@ -3048,6 +3040,14 @@
         <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
         <map value="NL-CM:20.4.10"/>
         <comment value="LastName"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="FN.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="ENXP where Qualifiers = (BR)"/>
       </mapping>
     </element>
     <element id="Patient.name.family.extension:humannameOwnName.id">
@@ -3178,14 +3178,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mapping>
-        <identity value="v2"/>
-        <map value="FN.4"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="ENXP where Qualifiers = (VV, SP)"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.39"/>
         <comment value="PartnerPrefix"/>
@@ -3199,6 +3191,14 @@
         <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
         <map value="NL-CM:20.4.9"/>
         <comment value="PartnerPrefix"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="FN.4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="ENXP where Qualifiers = (VV, SP)"/>
       </mapping>
     </element>
     <element id="Patient.name.family.extension:humannamePartnerPrefix.id">
@@ -3329,14 +3329,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mapping>
-        <identity value="v2"/>
-        <map value="FN.5"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="ENXP where Qualifiers = (SP)"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.25"/>
         <comment value="PartnerLastName"/>
@@ -3350,6 +3342,14 @@
         <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
         <map value="NL-CM:20.4.8"/>
         <comment value="PartnerLastName"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="FN.5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="ENXP where Qualifiers = (SP)"/>
       </mapping>
     </element>
     <element id="Patient.name.family.extension:humannamePartnerName.id">
@@ -3494,18 +3494,6 @@
       <orderMeaning value="Given Names appear in the correct order for presenting the name"/>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="XPN.2 + XPN.3"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="./part[partType = GIV]"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="./GivenNames"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.26"/>
         <comment value="FirstNames. Qualifier 'BR'"/>
@@ -3554,6 +3542,18 @@
         <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
         <map value="NL-CM:20.4.6"/>
         <comment value="GivenName. Qualifier 'CL'"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XPN.2 + XPN.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./part[partType = GIV]"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./GivenNames"/>
       </mapping>
     </element>
     <element id="Patient.name.given.id">
@@ -4118,37 +4118,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/ContactPoint"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="v2"/>
-        <map value="XTN"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="TEL"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="ContactPoint"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.5"/>
-        <comment value="ContactInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-contactinformation-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.5"/>
-        <comment value="ContactInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-contactinformation-v1.0-2017EN"/>
-        <map value="NL-CM:20.6.1"/>
-        <comment value="ContactInformation"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-patient-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.5"/>
         <comment value="ContactInformation"/>
@@ -4178,6 +4147,37 @@
         <map value="NL-CM:1.1.12"/>
         <comment value="ContactInformation"/>
       </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
+        <map value="NL-CM:0.1.5"/>
+        <comment value="ContactInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v3.0-2016EN"/>
+        <map value="NL-CM:0.1.5"/>
+        <comment value="ContactInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN"/>
+        <map value="NL-CM:20.6.1"/>
+        <comment value="ContactInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XTN"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="TEL"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="ContactPoint"/>
+      </mapping>
     </element>
     <element id="Patient.gender">
       <path value="Patient.gender"/>
@@ -4205,18 +4205,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="v2"/>
-        <map value="PID-8"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"/>
-      </mapping>
-      <mapping>
-        <identity value="cda"/>
-        <map value=".patient.administrativeGenderCode"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-patient-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.9"/>
         <comment value="Gender. Use FHIR Core ConceptMap for HCIM mapping: http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender"/>
@@ -4230,6 +4218,18 @@
         <identity value="hcim-patient-v3.1-2017EN"/>
         <map value="NL-CM:0.1.9"/>
         <comment value="Gender. Use FHIR Core ConceptMap for HCIM mapping: http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.administrativeGenderCode"/>
       </mapping>
     </element>
     <element id="Patient.gender.id">
@@ -4481,6 +4481,21 @@
       <mustSupport value="true"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-patient-v2.0.1-2015EN"/>
+        <map value="NL-CM:0.1.10"/>
+        <comment value="DateOfBirth"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-patient-v3.0-2016EN"/>
+        <map value="NL-CM:0.1.10"/>
+        <comment value="DateOfBirth"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-patient-v3.1-2017EN"/>
+        <map value="NL-CM:0.1.10"/>
+        <comment value="DateOfBirth"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="PID-7"/>
       </mapping>
@@ -4495,21 +4510,6 @@
       <mapping>
         <identity value="loinc"/>
         <map value="21112-8"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-patient-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.10"/>
-        <comment value="DateOfBirth"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-patient-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.10"/>
-        <comment value="DateOfBirth"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-patient-v3.1-2017EN"/>
-        <map value="NL-CM:0.1.10"/>
-        <comment value="DateOfBirth"/>
       </mapping>
     </element>
     <element id="Patient.deceased[x]">
@@ -4536,6 +4536,36 @@
       <isModifier value="true"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-patient-v2.0.1-2015EN"/>
+        <map value="NL-CM:0.1.32"/>
+        <comment value="DeathIndicator"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-patient-v3.0-2016EN"/>
+        <map value="NL-CM:0.1.32"/>
+        <comment value="DeathIndicator"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-patient-v3.1-2017EN"/>
+        <map value="NL-CM:0.1.32"/>
+        <comment value="DeathIndicator"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-patient-v2.0.1-2015EN"/>
+        <map value="NL-CM:0.1.33"/>
+        <comment value="DateOfDeath"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-patient-v3.0-2016EN"/>
+        <map value="NL-CM:0.1.33"/>
+        <comment value="DateOfDeath"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-patient-v3.1-2017EN"/>
+        <map value="NL-CM:0.1.33"/>
+        <comment value="DateOfDeath"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="PID-30  (bool) and PID-29 (datetime)"/>
       </mapping>
@@ -4546,36 +4576,6 @@
       <mapping>
         <identity value="cda"/>
         <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-patient-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.32"/>
-        <comment value="DeathIndicator"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-patient-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.32"/>
-        <comment value="DeathIndicator"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-patient-v3.1-2017EN"/>
-        <map value="NL-CM:0.1.32"/>
-        <comment value="DeathIndicator"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-patient-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.33"/>
-        <comment value="DateOfDeath"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-patient-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.33"/>
-        <comment value="DateOfDeath"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-patient-v3.1-2017EN"/>
-        <map value="NL-CM:0.1.33"/>
-        <comment value="DateOfDeath"/>
       </mapping>
     </element>
     <element id="Patient.address">
@@ -4683,37 +4683,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Patient"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="v2"/>
-        <map value="XAD"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="AD"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="Address"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-address-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.4"/>
-        <comment value="AddressInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-addressinformation-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.4"/>
-        <comment value="AddressInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-addressinformation-v1.0-2017EN"/>
-        <map value="NL-CM:20.5.1"/>
-        <comment value="AddressInformation"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-patient-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.4"/>
         <comment value="AddressInformation"/>
@@ -4743,6 +4712,37 @@
         <map value="NL-CM:1.1.17"/>
         <comment value="AddressInformation"/>
       </mapping>
+      <mapping>
+        <identity value="hcim-address-v2.0.1-2015EN"/>
+        <map value="NL-CM:0.1.4"/>
+        <comment value="AddressInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-addressinformation-v3.0-2016EN"/>
+        <map value="NL-CM:0.1.4"/>
+        <comment value="AddressInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-addressinformation-v1.0-2017EN"/>
+        <map value="NL-CM:20.5.1"/>
+        <comment value="AddressInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XAD"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="AD"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="Address"/>
+      </mapping>
     </element>
     <element id="Patient.maritalStatus">
       <path value="Patient.maritalStatus"/>
@@ -4766,18 +4766,6 @@
           <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000"/>
         </valueSetReference>
       </binding>
-      <mapping>
-        <identity value="v2"/>
-        <map value="PID-16"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="player[classCode=PSN]/maritalStatusCode"/>
-      </mapping>
-      <mapping>
-        <identity value="cda"/>
-        <map value=".patient.maritalStatusCode"/>
-      </mapping>
       <mapping>
         <identity value="hcim-maritalstatus-v1.2.1-2015EN"/>
         <map value="NL-CM:7.9.2"/>
@@ -4808,6 +4796,18 @@
         <map value="NL-CM:7.13.7"/>
         <comment value="FamilySituation"/>
       </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-16"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN]/maritalStatusCode"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.maritalStatusCode"/>
+      </mapping>
     </element>
     <element id="Patient.multipleBirth[x]">
       <path value="Patient.multipleBirth[x]"/>
@@ -4830,18 +4830,6 @@
         <code value="integer"/>
       </type>
       <mapping>
-        <identity value="v2"/>
-        <map value="PID-24 (bool), PID-25 (integer)"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd,  player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber"/>
-      </mapping>
-      <mapping>
-        <identity value="cda"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-patient-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.31"/>
         <comment value="MultipleBirthIndicator"/>
@@ -4855,6 +4843,18 @@
         <identity value="hcim-patient-v3.1-2017EN"/>
         <map value="NL-CM:0.1.31"/>
         <comment value="MultipleBirthIndicator"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-24 (bool), PID-25 (integer)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd,  player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value="n/a"/>
       </mapping>
     </element>
     <element id="Patient.photo">
@@ -4919,14 +4919,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Patient"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]"/>
-      </mapping>
-      <mapping>
-        <identity value="cda"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-contactperson-v1.2-2015EN"/>
         <map value="NL-CM:3.1.1"/>
         <comment value="Contact"/>
@@ -4940,6 +4932,14 @@
         <identity value="hcim-contactperson-v3.1-2017EN"/>
         <map value="NL-CM:3.1.1"/>
         <comment value="Contact"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value="n/a"/>
       </mapping>
     </element>
     <element id="Patient.contact.id">
@@ -5078,18 +5078,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="v2"/>
-        <map value="NK1-7, NK1-3"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="code"/>
-      </mapping>
-      <mapping>
-        <identity value="cda"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-contactperson-v1.2-2015EN"/>
         <map value="NL-CM:3.1.3"/>
         <comment value="Relationship"/>
@@ -5103,6 +5091,18 @@
         <identity value="hcim-contactperson-v3.1-2017EN"/>
         <map value="NL-CM:3.1.3"/>
         <comment value="Relationship"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-7, NK1-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value="n/a"/>
       </mapping>
     </element>
     <element id="Patient.contact.relationship:role">
@@ -5129,18 +5129,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="v2"/>
-        <map value="NK1-7, NK1-3"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="code"/>
-      </mapping>
-      <mapping>
-        <identity value="cda"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-contactperson-v1.2-2015EN"/>
         <map value="NL-CM:3.1.2"/>
         <comment value="Role"/>
@@ -5154,6 +5142,18 @@
         <identity value="hcim-contactperson-v3.1-2017EN"/>
         <map value="NL-CM:3.1.2"/>
         <comment value="Role"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-7, NK1-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value="n/a"/>
       </mapping>
     </element>
     <element id="Patient.contact.name">
@@ -5231,20 +5231,19 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Patient"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
+        <identity value="hcim-contactperson-v1.2-2015EN"/>
+        <map value="NL-CM:3.1.4"/>
+        <comment value="NameInformation"/>
       </mapping>
       <mapping>
-        <identity value="v2"/>
-        <map value="XPN"/>
+        <identity value="hcim-contactperson-v3.0-2016EN"/>
+        <map value="NL-CM:3.1.4"/>
+        <comment value="NameInformation"/>
       </mapping>
       <mapping>
-        <identity value="rim"/>
-        <map value="EN (actually, PN)"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="ProviderName"/>
+        <identity value="hcim-contactperson-v3.1-2017EN"/>
+        <map value="NL-CM:3.1.4"/>
+        <comment value="NameInformation"/>
       </mapping>
       <mapping>
         <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
@@ -5267,19 +5266,20 @@
         <comment value="Naam"/>
       </mapping>
       <mapping>
-        <identity value="hcim-contactperson-v1.2-2015EN"/>
-        <map value="NL-CM:3.1.4"/>
-        <comment value="NameInformation"/>
+        <identity value="rim"/>
+        <map value="n/a"/>
       </mapping>
       <mapping>
-        <identity value="hcim-contactperson-v3.0-2016EN"/>
-        <map value="NL-CM:3.1.4"/>
-        <comment value="NameInformation"/>
+        <identity value="v2"/>
+        <map value="XPN"/>
       </mapping>
       <mapping>
-        <identity value="hcim-contactperson-v3.1-2017EN"/>
-        <map value="NL-CM:3.1.4"/>
-        <comment value="NameInformation"/>
+        <identity value="rim"/>
+        <map value="EN (actually, PN)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="ProviderName"/>
       </mapping>
     </element>
     <element id="Patient.contact.name.id">
@@ -5503,14 +5503,6 @@
       </type>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="implied by XPN.11"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="./formatted"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-payer-v1.2-2015EN"/>
         <map value="NL-CM:1.1.5"/>
         <comment value="PayerName"/>
@@ -5524,6 +5516,14 @@
         <identity value="hcim-payer-v3.1-2017EN"/>
         <map value="NL-CM:1.1.5"/>
         <comment value="PayerName"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="implied by XPN.11"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./formatted"/>
       </mapping>
     </element>
     <element id="Patient.contact.name.family">
@@ -5631,14 +5631,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mapping>
-        <identity value="v2"/>
-        <map value="FN.2"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="ENXP where Qualifiers = (VV, R)"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.38"/>
         <comment value="Prefix"/>
@@ -5652,6 +5644,14 @@
         <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
         <map value="NL-CM:20.4.11"/>
         <comment value="Prefix"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="FN.2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="ENXP where Qualifiers = (VV, R)"/>
       </mapping>
     </element>
     <element id="Patient.contact.name.family.extension:humannameOwnPrefix.id">
@@ -5782,14 +5782,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mapping>
-        <identity value="v2"/>
-        <map value="FN.3"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="ENXP where Qualifiers = (BR)"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.24"/>
         <comment value="LastName"/>
@@ -5803,6 +5795,14 @@
         <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
         <map value="NL-CM:20.4.10"/>
         <comment value="LastName"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="FN.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="ENXP where Qualifiers = (BR)"/>
       </mapping>
     </element>
     <element id="Patient.contact.name.family.extension:humannameOwnName.id">
@@ -5933,14 +5933,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mapping>
-        <identity value="v2"/>
-        <map value="FN.4"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="ENXP where Qualifiers = (VV, SP)"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.39"/>
         <comment value="PartnerPrefix"/>
@@ -5954,6 +5946,14 @@
         <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
         <map value="NL-CM:20.4.9"/>
         <comment value="PartnerPrefix"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="FN.4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="ENXP where Qualifiers = (VV, SP)"/>
       </mapping>
     </element>
     <element id="Patient.contact.name.family.extension:humannamePartnerPrefix.id">
@@ -6084,14 +6084,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mapping>
-        <identity value="v2"/>
-        <map value="FN.5"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="ENXP where Qualifiers = (SP)"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.25"/>
         <comment value="PartnerLastName"/>
@@ -6105,6 +6097,14 @@
         <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
         <map value="NL-CM:20.4.8"/>
         <comment value="PartnerLastName"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="FN.5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="ENXP where Qualifiers = (SP)"/>
       </mapping>
     </element>
     <element id="Patient.contact.name.family.extension:humannamePartnerName.id">
@@ -6249,18 +6249,6 @@
       <orderMeaning value="Given Names appear in the correct order for presenting the name"/>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="XPN.2 + XPN.3"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="./part[partType = GIV]"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="./GivenNames"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.26"/>
         <comment value="FirstNames. Qualifier 'BR'"/>
@@ -6309,6 +6297,18 @@
         <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
         <map value="NL-CM:20.4.6"/>
         <comment value="GivenName. Qualifier 'CL'"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XPN.2 + XPN.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./part[partType = GIV]"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./GivenNames"/>
       </mapping>
     </element>
     <element id="Patient.contact.name.given.id">
@@ -6873,20 +6873,19 @@
         <source value="http://hl7.org/fhir/StructureDefinition/ContactPoint"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
+        <identity value="hcim-contactperson-v1.2-2015EN"/>
+        <map value="NL-CM:3.1.6"/>
+        <comment value="TelephoneEmail::ContactInformation"/>
       </mapping>
       <mapping>
-        <identity value="v2"/>
-        <map value="XTN"/>
+        <identity value="hcim-contactperson-v3.0-2016EN"/>
+        <map value="NL-CM:3.1.6"/>
+        <comment value="TelephoneEmail::ContactInformation"/>
       </mapping>
       <mapping>
-        <identity value="rim"/>
-        <map value="TEL"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="ContactPoint"/>
+        <identity value="hcim-contactperson-v3.1-2017EN"/>
+        <map value="NL-CM:3.1.6"/>
+        <comment value="ContactInformation"/>
       </mapping>
       <mapping>
         <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
@@ -6904,19 +6903,20 @@
         <comment value="ContactInformation"/>
       </mapping>
       <mapping>
-        <identity value="hcim-contactperson-v1.2-2015EN"/>
-        <map value="NL-CM:3.1.6"/>
-        <comment value="TelephoneEmail::ContactInformation"/>
+        <identity value="rim"/>
+        <map value="n/a"/>
       </mapping>
       <mapping>
-        <identity value="hcim-contactperson-v3.0-2016EN"/>
-        <map value="NL-CM:3.1.6"/>
-        <comment value="TelephoneEmail::ContactInformation"/>
+        <identity value="v2"/>
+        <map value="XTN"/>
       </mapping>
       <mapping>
-        <identity value="hcim-contactperson-v3.1-2017EN"/>
-        <map value="NL-CM:3.1.6"/>
-        <comment value="ContactInformation"/>
+        <identity value="rim"/>
+        <map value="TEL"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="ContactPoint"/>
       </mapping>
     </element>
     <element id="Patient.contact.address">
@@ -7024,20 +7024,19 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Patient"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
+        <identity value="hcim-contactperson-v1.2-2015EN"/>
+        <map value="NL-CM:3.1.5"/>
+        <comment value="AddressInformation"/>
       </mapping>
       <mapping>
-        <identity value="v2"/>
-        <map value="XAD"/>
+        <identity value="hcim-contactperson-v3.0-2016EN"/>
+        <map value="NL-CM:3.1.5"/>
+        <comment value="AddressInformation"/>
       </mapping>
       <mapping>
-        <identity value="rim"/>
-        <map value="AD"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="Address"/>
+        <identity value="hcim-contactperson-v3.1-2017EN"/>
+        <map value="NL-CM:3.1.5"/>
+        <comment value="AddressInformation"/>
       </mapping>
       <mapping>
         <identity value="hcim-address-v2.0.1-2015EN"/>
@@ -7055,19 +7054,20 @@
         <comment value="AddressInformation"/>
       </mapping>
       <mapping>
-        <identity value="hcim-contactperson-v1.2-2015EN"/>
-        <map value="NL-CM:3.1.5"/>
-        <comment value="AddressInformation"/>
+        <identity value="rim"/>
+        <map value="n/a"/>
       </mapping>
       <mapping>
-        <identity value="hcim-contactperson-v3.0-2016EN"/>
-        <map value="NL-CM:3.1.5"/>
-        <comment value="AddressInformation"/>
+        <identity value="v2"/>
+        <map value="XAD"/>
       </mapping>
       <mapping>
-        <identity value="hcim-contactperson-v3.1-2017EN"/>
-        <map value="NL-CM:3.1.5"/>
-        <comment value="AddressInformation"/>
+        <identity value="rim"/>
+        <map value="AD"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="Address"/>
       </mapping>
     </element>
     <element id="Patient.contact.gender">
@@ -7408,17 +7408,17 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
+        <identity value="hcim-languageproficiency-v3.1-2017EN"/>
+        <map value="NL-CM:7.12.1"/>
+        <comment value="LanguageProficiency"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value="LanguageCommunication"/>
       </mapping>
       <mapping>
         <identity value="cda"/>
         <map value="patient.languageCommunication"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-languageproficiency-v3.1-2017EN"/>
-        <map value="NL-CM:7.12.1"/>
-        <comment value="LanguageProficiency"/>
       </mapping>
     </element>
     <element id="Patient.communication.id">
@@ -8088,6 +8088,11 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-languageproficiency-v3.1-2017EN"/>
+        <map value="NL-CM:7.12.3"/>
+        <comment value="CommunicationLanguage"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="PID-15, LAN-2"/>
       </mapping>
@@ -8098,11 +8103,6 @@
       <mapping>
         <identity value="cda"/>
         <map value=".languageCode"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-languageproficiency-v3.1-2017EN"/>
-        <map value="NL-CM:7.12.3"/>
-        <comment value="CommunicationLanguage"/>
       </mapping>
     </element>
     <element id="Patient.communication.preferred">
@@ -8157,18 +8157,6 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
       </type>
       <mapping>
-        <identity value="v2"/>
-        <map value="PD1-4"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="subjectOf.CareEvent.performer.AssignedEntity"/>
-      </mapping>
-      <mapping>
-        <identity value="cda"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-healthcareprovider-v1.2-2015EN"/>
         <map value="NL-CM:17.2.1"/>
         <comment value="HealthcareProvider"/>
@@ -8197,6 +8185,18 @@
         <identity value="hcim-healthprofessional-v3.2-2017EN"/>
         <map value="NL-CM:17.1.1"/>
         <comment value="HealthProfessional"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PD1-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="subjectOf.CareEvent.performer.AssignedEntity"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value="n/a"/>
       </mapping>
     </element>
     <element id="Patient.generalPractitioner.id">

@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "Patient"] ; # 
   fhir:title [ fhir:v "Patient"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-08-27T08:48:41+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-29T09:15:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -228,18 +228,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "Entity. Role, or Act" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "Patient[classCode=PAT]" ]
-       ] [
-         fhir:identity [ fhir:v "cda" ] ;
-         fhir:map [ fhir:v "ClinicalDocument.recordTarget.patientRole" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "administrative.individual" ]
-       ] [
          fhir:identity [ fhir:v "hcim-patient-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.1" ] ;
          fhir:comment [ fhir:v "Patient" ]
@@ -275,6 +263,18 @@
          fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.0.12" ] ;
          fhir:comment [ fhir:v "Patient" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Entity. Role, or Act" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Patient[classCode=PAT]" ]
+       ] [
+         fhir:identity [ fhir:v "cda" ] ;
+         fhir:map [ fhir:v "ClinicalDocument.recordTarget.patientRole" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "administrative.individual" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.id" ] ;
@@ -1533,12 +1533,12 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "N/A" ]
-       ] [
          fhir:identity [ fhir:v "hcim-lifestance-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:7.5.2" ] ;
          fhir:comment [ fhir:v "LifeStance" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.extension:lifeStance.value[x]:valueCodeableConcept.id" ] ;
@@ -1887,18 +1887,6 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "PID-3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "id" ]
-       ] [
-         fhir:identity [ fhir:v "cda" ] ;
-         fhir:map [ fhir:v ".id" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "id" ]
-       ] [
          fhir:identity [ fhir:v "hcim-patient-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.7" ] ;
          fhir:comment [ fhir:v "PatientIdentificationNumber" ]
@@ -1914,6 +1902,18 @@
          fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
          fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "PID-3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "id" ]
+       ] [
+         fhir:identity [ fhir:v "cda" ] ;
+         fhir:map [ fhir:v ".id" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "id" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.identifier:BSN" ] ;
@@ -2322,34 +2322,6 @@
        ] ) ;
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XPN" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "EN (actually, PN)" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "ProviderName" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.6" ] ;
-         fhir:comment [ fhir:v "NameInformation" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-nameinformation-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.6" ] ;
-         fhir:comment [ fhir:v "NameInformation" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-nameinformation-v1.0.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:20.4.1" ] ;
-         fhir:comment [ fhir:v "NameInformation" ]
-       ] [
-         fhir:identity [ fhir:v "BRP" ] ;
-         fhir:map [ fhir:v "02" ] ;
-         fhir:comment [ fhir:v "Naam" ]
-       ] [
          fhir:identity [ fhir:v "hcim-patient-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.6" ] ;
          fhir:comment [ fhir:v "NameInformation" ]
@@ -2373,6 +2345,34 @@
          fhir:identity [ fhir:v "hcim-payer-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:1.1.5" ] ;
          fhir:comment [ fhir:v "PayerName" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.6" ] ;
+         fhir:comment [ fhir:v "NameInformation" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-nameinformation-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.6" ] ;
+         fhir:comment [ fhir:v "NameInformation" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-nameinformation-v1.0.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:20.4.1" ] ;
+         fhir:comment [ fhir:v "NameInformation" ]
+       ] [
+         fhir:identity [ fhir:v "BRP" ] ;
+         fhir:map [ fhir:v "02" ] ;
+         fhir:comment [ fhir:v "Naam" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XPN" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "EN (actually, PN)" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "ProviderName" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.name.id" ] ;
@@ -2599,12 +2599,6 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "implied by XPN.11" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "./formatted" ]
-       ] [
          fhir:identity [ fhir:v "hcim-payer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:1.1.5" ] ;
          fhir:comment [ fhir:v "PayerName" ]
@@ -2616,6 +2610,12 @@
          fhir:identity [ fhir:v "hcim-payer-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:1.1.5" ] ;
          fhir:comment [ fhir:v "PayerName" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "implied by XPN.11" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./formatted" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.name.family" ] ;
@@ -2719,12 +2719,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "FN.2" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "ENXP where Qualifiers = (VV, R)" ]
-       ] [
          fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.38" ] ;
          fhir:comment [ fhir:v "Prefix" ]
@@ -2736,6 +2730,12 @@
          fhir:identity [ fhir:v "hcim-nameinformation-v1.0.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:20.4.11" ] ;
          fhir:comment [ fhir:v "Prefix" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "FN.2" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "ENXP where Qualifiers = (VV, R)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.name.family.extension:humannameOwnPrefix.id" ] ;
@@ -2864,12 +2864,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "FN.3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "ENXP where Qualifiers = (BR)" ]
-       ] [
          fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.24" ] ;
          fhir:comment [ fhir:v "LastName" ]
@@ -2881,6 +2875,12 @@
          fhir:identity [ fhir:v "hcim-nameinformation-v1.0.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:20.4.10" ] ;
          fhir:comment [ fhir:v "LastName" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "FN.3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "ENXP where Qualifiers = (BR)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.name.family.extension:humannameOwnName.id" ] ;
@@ -3009,12 +3009,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "FN.4" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "ENXP where Qualifiers = (VV, SP)" ]
-       ] [
          fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.39" ] ;
          fhir:comment [ fhir:v "PartnerPrefix" ]
@@ -3026,6 +3020,12 @@
          fhir:identity [ fhir:v "hcim-nameinformation-v1.0.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:20.4.9" ] ;
          fhir:comment [ fhir:v "PartnerPrefix" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "FN.4" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "ENXP where Qualifiers = (VV, SP)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.name.family.extension:humannamePartnerPrefix.id" ] ;
@@ -3154,12 +3154,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "FN.5" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "ENXP where Qualifiers = (SP)" ]
-       ] [
          fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.25" ] ;
          fhir:comment [ fhir:v "PartnerLastName" ]
@@ -3171,6 +3165,12 @@
          fhir:identity [ fhir:v "hcim-nameinformation-v1.0.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:20.4.8" ] ;
          fhir:comment [ fhir:v "PartnerLastName" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "FN.5" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "ENXP where Qualifiers = (SP)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.name.family.extension:humannamePartnerName.id" ] ;
@@ -3311,15 +3311,6 @@
        fhir:orderMeaning [ fhir:v "Given Names appear in the correct order for presenting the name" ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XPN.2 + XPN.3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "./part[partType = GIV]" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "./GivenNames" ]
-       ] [
          fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.26" ] ;
          fhir:comment [ fhir:v "FirstNames. Qualifier 'BR'" ]
@@ -3359,6 +3350,15 @@
          fhir:identity [ fhir:v "hcim-nameinformation-v1.0.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:20.4.6" ] ;
          fhir:comment [ fhir:v "GivenName. Qualifier 'CL'" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XPN.2 + XPN.3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./part[partType = GIV]" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "./GivenNames" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.name.given.id" ] ;
@@ -3944,30 +3944,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/ContactPoint"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XTN" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "TEL" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "ContactPoint" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-contactinformation-v2.0.1-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.5" ] ;
-         fhir:comment [ fhir:v "ContactInformation" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-contactinformation-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.5" ] ;
-         fhir:comment [ fhir:v "ContactInformation" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-contactinformation-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:20.6.1" ] ;
-         fhir:comment [ fhir:v "ContactInformation" ]
-       ] [
          fhir:identity [ fhir:v "hcim-patient-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.5" ] ;
          fhir:comment [ fhir:v "ContactInformation" ]
@@ -3991,6 +3967,30 @@
          fhir:identity [ fhir:v "hcim-payer-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:1.1.12" ] ;
          fhir:comment [ fhir:v "ContactInformation" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-contactinformation-v2.0.1-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.5" ] ;
+         fhir:comment [ fhir:v "ContactInformation" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-contactinformation-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.5" ] ;
+         fhir:comment [ fhir:v "ContactInformation" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-contactinformation-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:20.6.1" ] ;
+         fhir:comment [ fhir:v "ContactInformation" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XTN" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "TEL" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "ContactPoint" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.gender" ] ;
@@ -4021,15 +4021,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "PID-8" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender" ]
-       ] [
-         fhir:identity [ fhir:v "cda" ] ;
-         fhir:map [ fhir:v ".patient.administrativeGenderCode" ]
-       ] [
          fhir:identity [ fhir:v "hcim-patient-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.9" ] ;
          fhir:comment [ fhir:v "Gender. Use FHIR Core ConceptMap for HCIM mapping: http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender" ]
@@ -4041,6 +4032,15 @@
          fhir:identity [ fhir:v "hcim-patient-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.9" ] ;
          fhir:comment [ fhir:v "Gender. Use FHIR Core ConceptMap for HCIM mapping: http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "PID-8" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender" ]
+       ] [
+         fhir:identity [ fhir:v "cda" ] ;
+         fhir:map [ fhir:v ".patient.administrativeGenderCode" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.gender.id" ] ;
@@ -4293,18 +4293,6 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "PID-7" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "player[classCode=PSN|ANM and determinerCode=INSTANCE]/birthTime" ]
-       ] [
-         fhir:identity [ fhir:v "cda" ] ;
-         fhir:map [ fhir:v ".patient.birthTime" ]
-       ] [
-         fhir:identity [ fhir:v "loinc" ] ;
-         fhir:map [ fhir:v "21112-8" ]
-       ] [
          fhir:identity [ fhir:v "hcim-patient-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.10" ] ;
          fhir:comment [ fhir:v "DateOfBirth" ]
@@ -4316,6 +4304,18 @@
          fhir:identity [ fhir:v "hcim-patient-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.10" ] ;
          fhir:comment [ fhir:v "DateOfBirth" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "PID-7" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "player[classCode=PSN|ANM and determinerCode=INSTANCE]/birthTime" ]
+       ] [
+         fhir:identity [ fhir:v "cda" ] ;
+         fhir:map [ fhir:v ".patient.birthTime" ]
+       ] [
+         fhir:identity [ fhir:v "loinc" ] ;
+         fhir:map [ fhir:v "21112-8" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.deceased[x]" ] ;
@@ -4341,6 +4341,30 @@
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-patient-v2.0.1-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.32" ] ;
+         fhir:comment [ fhir:v "DeathIndicator" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-patient-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.32" ] ;
+         fhir:comment [ fhir:v "DeathIndicator" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-patient-v3.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.32" ] ;
+         fhir:comment [ fhir:v "DeathIndicator" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-patient-v2.0.1-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.33" ] ;
+         fhir:comment [ fhir:v "DateOfDeath" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-patient-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.33" ] ;
+         fhir:comment [ fhir:v "DateOfDeath" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-patient-v3.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.33" ] ;
+         fhir:comment [ fhir:v "DateOfDeath" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "PID-30  (bool) and PID-29 (datetime)" ]
        ] [
@@ -4349,30 +4373,6 @@
        ] [
          fhir:identity [ fhir:v "cda" ] ;
          fhir:map [ fhir:v "n/a" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-patient-v2.0.1-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.32" ] ;
-         fhir:comment [ fhir:v "DeathIndicator" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-patient-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.32" ] ;
-         fhir:comment [ fhir:v "DeathIndicator" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-patient-v3.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.32" ] ;
-         fhir:comment [ fhir:v "DeathIndicator" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-patient-v2.0.1-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.33" ] ;
-         fhir:comment [ fhir:v "DateOfDeath" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-patient-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.33" ] ;
-         fhir:comment [ fhir:v "DateOfDeath" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-patient-v3.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.33" ] ;
-         fhir:comment [ fhir:v "DateOfDeath" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.address" ] ;
@@ -4486,30 +4486,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Patient"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XAD" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "AD" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "Address" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-address-v2.0.1-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-addressinformation-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-addressinformation-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:20.5.1" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
-       ] [
          fhir:identity [ fhir:v "hcim-patient-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
          fhir:comment [ fhir:v "AddressInformation" ]
@@ -4533,6 +4509,30 @@
          fhir:identity [ fhir:v "hcim-payer-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:1.1.17" ] ;
          fhir:comment [ fhir:v "AddressInformation" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-address-v2.0.1-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
+         fhir:comment [ fhir:v "AddressInformation" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-addressinformation-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
+         fhir:comment [ fhir:v "AddressInformation" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-addressinformation-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:20.5.1" ] ;
+         fhir:comment [ fhir:v "AddressInformation" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XAD" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "AD" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "Address" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.maritalStatus" ] ;
@@ -4560,15 +4560,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "PID-16" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "player[classCode=PSN]/maritalStatusCode" ]
-       ] [
-         fhir:identity [ fhir:v "cda" ] ;
-         fhir:map [ fhir:v ".patient.maritalStatusCode" ]
-       ] [
          fhir:identity [ fhir:v "hcim-maritalstatus-v1.2.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:7.9.2" ] ;
          fhir:comment [ fhir:v "MaritalStatus" ]
@@ -4592,6 +4583,15 @@
          fhir:identity [ fhir:v "hcim-familysituation-v3.0-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:7.13.7" ] ;
          fhir:comment [ fhir:v "FamilySituation" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "PID-16" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "player[classCode=PSN]/maritalStatusCode" ]
+       ] [
+         fhir:identity [ fhir:v "cda" ] ;
+         fhir:map [ fhir:v ".patient.maritalStatusCode" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.multipleBirth[x]" ] ;
@@ -4614,15 +4614,6 @@
          fhir:code [ fhir:v "integer"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "PID-24 (bool), PID-25 (integer)" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd,  player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber" ]
-       ] [
-         fhir:identity [ fhir:v "cda" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
          fhir:identity [ fhir:v "hcim-patient-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.31" ] ;
          fhir:comment [ fhir:v "MultipleBirthIndicator" ]
@@ -4634,6 +4625,15 @@
          fhir:identity [ fhir:v "hcim-patient-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.31" ] ;
          fhir:comment [ fhir:v "MultipleBirthIndicator" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "PID-24 (bool), PID-25 (integer)" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd,  player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber" ]
+       ] [
+         fhir:identity [ fhir:v "cda" ] ;
+         fhir:map [ fhir:v "n/a" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.photo" ] ;
@@ -4695,12 +4695,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Patient"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]" ]
-       ] [
-         fhir:identity [ fhir:v "cda" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
          fhir:identity [ fhir:v "hcim-contactperson-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:3.1.1" ] ;
          fhir:comment [ fhir:v "Contact" ]
@@ -4712,6 +4706,12 @@
          fhir:identity [ fhir:v "hcim-contactperson-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:3.1.1" ] ;
          fhir:comment [ fhir:v "Contact" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]" ]
+       ] [
+         fhir:identity [ fhir:v "cda" ] ;
+         fhir:map [ fhir:v "n/a" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.contact.id" ] ;
@@ -4850,15 +4850,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "NK1-7, NK1-3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "code" ]
-       ] [
-         fhir:identity [ fhir:v "cda" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
          fhir:identity [ fhir:v "hcim-contactperson-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:3.1.3" ] ;
          fhir:comment [ fhir:v "Relationship" ]
@@ -4870,6 +4861,15 @@
          fhir:identity [ fhir:v "hcim-contactperson-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:3.1.3" ] ;
          fhir:comment [ fhir:v "Relationship" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "NK1-7, NK1-3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "code" ]
+       ] [
+         fhir:identity [ fhir:v "cda" ] ;
+         fhir:map [ fhir:v "n/a" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.contact.relationship:role" ] ;
@@ -4898,15 +4898,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "NK1-7, NK1-3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "code" ]
-       ] [
-         fhir:identity [ fhir:v "cda" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
          fhir:identity [ fhir:v "hcim-contactperson-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:3.1.2" ] ;
          fhir:comment [ fhir:v "Role" ]
@@ -4918,6 +4909,15 @@
          fhir:identity [ fhir:v "hcim-contactperson-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:3.1.2" ] ;
          fhir:comment [ fhir:v "Role" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "NK1-7, NK1-3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "code" ]
+       ] [
+         fhir:identity [ fhir:v "cda" ] ;
+         fhir:map [ fhir:v "n/a" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.contact.name" ] ;
@@ -4999,17 +4999,17 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Patient"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
+         fhir:identity [ fhir:v "hcim-contactperson-v1.2-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:3.1.4" ] ;
+         fhir:comment [ fhir:v "NameInformation" ]
        ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XPN" ]
+         fhir:identity [ fhir:v "hcim-contactperson-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:3.1.4" ] ;
+         fhir:comment [ fhir:v "NameInformation" ]
        ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "EN (actually, PN)" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "ProviderName" ]
+         fhir:identity [ fhir:v "hcim-contactperson-v3.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:3.1.4" ] ;
+         fhir:comment [ fhir:v "NameInformation" ]
        ] [
          fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.6" ] ;
@@ -5027,17 +5027,17 @@
          fhir:map [ fhir:v "02" ] ;
          fhir:comment [ fhir:v "Naam" ]
        ] [
-         fhir:identity [ fhir:v "hcim-contactperson-v1.2-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:3.1.4" ] ;
-         fhir:comment [ fhir:v "NameInformation" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
        ] [
-         fhir:identity [ fhir:v "hcim-contactperson-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:3.1.4" ] ;
-         fhir:comment [ fhir:v "NameInformation" ]
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XPN" ]
        ] [
-         fhir:identity [ fhir:v "hcim-contactperson-v3.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:3.1.4" ] ;
-         fhir:comment [ fhir:v "NameInformation" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "EN (actually, PN)" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "ProviderName" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.contact.name.id" ] ;
@@ -5264,12 +5264,6 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "implied by XPN.11" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "./formatted" ]
-       ] [
          fhir:identity [ fhir:v "hcim-payer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:1.1.5" ] ;
          fhir:comment [ fhir:v "PayerName" ]
@@ -5281,6 +5275,12 @@
          fhir:identity [ fhir:v "hcim-payer-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:1.1.5" ] ;
          fhir:comment [ fhir:v "PayerName" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "implied by XPN.11" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./formatted" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.contact.name.family" ] ;
@@ -5384,12 +5384,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "FN.2" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "ENXP where Qualifiers = (VV, R)" ]
-       ] [
          fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.38" ] ;
          fhir:comment [ fhir:v "Prefix" ]
@@ -5401,6 +5395,12 @@
          fhir:identity [ fhir:v "hcim-nameinformation-v1.0.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:20.4.11" ] ;
          fhir:comment [ fhir:v "Prefix" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "FN.2" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "ENXP where Qualifiers = (VV, R)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.contact.name.family.extension:humannameOwnPrefix.id" ] ;
@@ -5529,12 +5529,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "FN.3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "ENXP where Qualifiers = (BR)" ]
-       ] [
          fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.24" ] ;
          fhir:comment [ fhir:v "LastName" ]
@@ -5546,6 +5540,12 @@
          fhir:identity [ fhir:v "hcim-nameinformation-v1.0.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:20.4.10" ] ;
          fhir:comment [ fhir:v "LastName" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "FN.3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "ENXP where Qualifiers = (BR)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.contact.name.family.extension:humannameOwnName.id" ] ;
@@ -5674,12 +5674,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "FN.4" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "ENXP where Qualifiers = (VV, SP)" ]
-       ] [
          fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.39" ] ;
          fhir:comment [ fhir:v "PartnerPrefix" ]
@@ -5691,6 +5685,12 @@
          fhir:identity [ fhir:v "hcim-nameinformation-v1.0.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:20.4.9" ] ;
          fhir:comment [ fhir:v "PartnerPrefix" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "FN.4" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "ENXP where Qualifiers = (VV, SP)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.contact.name.family.extension:humannamePartnerPrefix.id" ] ;
@@ -5819,12 +5819,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "FN.5" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "ENXP where Qualifiers = (SP)" ]
-       ] [
          fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.25" ] ;
          fhir:comment [ fhir:v "PartnerLastName" ]
@@ -5836,6 +5830,12 @@
          fhir:identity [ fhir:v "hcim-nameinformation-v1.0.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:20.4.8" ] ;
          fhir:comment [ fhir:v "PartnerLastName" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "FN.5" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "ENXP where Qualifiers = (SP)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.contact.name.family.extension:humannamePartnerName.id" ] ;
@@ -5976,15 +5976,6 @@
        fhir:orderMeaning [ fhir:v "Given Names appear in the correct order for presenting the name" ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XPN.2 + XPN.3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "./part[partType = GIV]" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "./GivenNames" ]
-       ] [
          fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.26" ] ;
          fhir:comment [ fhir:v "FirstNames. Qualifier 'BR'" ]
@@ -6024,6 +6015,15 @@
          fhir:identity [ fhir:v "hcim-nameinformation-v1.0.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:20.4.6" ] ;
          fhir:comment [ fhir:v "GivenName. Qualifier 'CL'" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XPN.2 + XPN.3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./part[partType = GIV]" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "./GivenNames" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.contact.name.given.id" ] ;
@@ -6609,17 +6609,17 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/ContactPoint"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
+         fhir:identity [ fhir:v "hcim-contactperson-v1.2-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:3.1.6" ] ;
+         fhir:comment [ fhir:v "TelephoneEmail::ContactInformation" ]
        ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XTN" ]
+         fhir:identity [ fhir:v "hcim-contactperson-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:3.1.6" ] ;
+         fhir:comment [ fhir:v "TelephoneEmail::ContactInformation" ]
        ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "TEL" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "ContactPoint" ]
+         fhir:identity [ fhir:v "hcim-contactperson-v3.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:3.1.6" ] ;
+         fhir:comment [ fhir:v "ContactInformation" ]
        ] [
          fhir:identity [ fhir:v "hcim-contactinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.5" ] ;
@@ -6633,17 +6633,17 @@
          fhir:map [ fhir:v "NL-CM:20.6.1" ] ;
          fhir:comment [ fhir:v "ContactInformation" ]
        ] [
-         fhir:identity [ fhir:v "hcim-contactperson-v1.2-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:3.1.6" ] ;
-         fhir:comment [ fhir:v "TelephoneEmail::ContactInformation" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
        ] [
-         fhir:identity [ fhir:v "hcim-contactperson-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:3.1.6" ] ;
-         fhir:comment [ fhir:v "TelephoneEmail::ContactInformation" ]
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XTN" ]
        ] [
-         fhir:identity [ fhir:v "hcim-contactperson-v3.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:3.1.6" ] ;
-         fhir:comment [ fhir:v "ContactInformation" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "TEL" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "ContactPoint" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.contact.address" ] ;
@@ -6757,17 +6757,17 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Patient"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
+         fhir:identity [ fhir:v "hcim-contactperson-v1.2-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:3.1.5" ] ;
+         fhir:comment [ fhir:v "AddressInformation" ]
        ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XAD" ]
+         fhir:identity [ fhir:v "hcim-contactperson-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:3.1.5" ] ;
+         fhir:comment [ fhir:v "AddressInformation" ]
        ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "AD" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "Address" ]
+         fhir:identity [ fhir:v "hcim-contactperson-v3.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:3.1.5" ] ;
+         fhir:comment [ fhir:v "AddressInformation" ]
        ] [
          fhir:identity [ fhir:v "hcim-address-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
@@ -6781,17 +6781,17 @@
          fhir:map [ fhir:v "NL-CM:20.5.1" ] ;
          fhir:comment [ fhir:v "AddressInformation" ]
        ] [
-         fhir:identity [ fhir:v "hcim-contactperson-v1.2-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:3.1.5" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
        ] [
-         fhir:identity [ fhir:v "hcim-contactperson-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:3.1.5" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XAD" ]
        ] [
-         fhir:identity [ fhir:v "hcim-contactperson-v3.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:3.1.5" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "AD" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "Address" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.contact.gender" ] ;
@@ -7129,15 +7129,15 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-languageproficiency-v3.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:7.12.1" ] ;
+         fhir:comment [ fhir:v "LanguageProficiency" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "LanguageCommunication" ]
        ] [
          fhir:identity [ fhir:v "cda" ] ;
          fhir:map [ fhir:v "patient.languageCommunication" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-languageproficiency-v3.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:7.12.1" ] ;
-         fhir:comment [ fhir:v "LanguageProficiency" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.communication.id" ] ;
@@ -7771,6 +7771,10 @@
          ]
        ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-languageproficiency-v3.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:7.12.3" ] ;
+         fhir:comment [ fhir:v "CommunicationLanguage" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "PID-15, LAN-2" ]
        ] [
@@ -7779,10 +7783,6 @@
        ] [
          fhir:identity [ fhir:v "cda" ] ;
          fhir:map [ fhir:v ".languageCode" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-languageproficiency-v3.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:7.12.3" ] ;
-         fhir:comment [ fhir:v "CommunicationLanguage" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.communication.preferred" ] ;
@@ -7833,15 +7833,6 @@
          fhir:targetProfile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "PD1-4" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "subjectOf.CareEvent.performer.AssignedEntity" ]
-       ] [
-         fhir:identity [ fhir:v "cda" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
          fhir:identity [ fhir:v "hcim-healthcareprovider-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.2.1" ] ;
          fhir:comment [ fhir:v "HealthcareProvider" ]
@@ -7865,6 +7856,15 @@
          fhir:identity [ fhir:v "hcim-healthprofessional-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.1.1" ] ;
          fhir:comment [ fhir:v "HealthProfessional" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "PD1-4" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "subjectOf.CareEvent.performer.AssignedEntity" ]
+       ] [
+         fhir:identity [ fhir:v "cda" ] ;
+         fhir:map [ fhir:v "n/a" ]
        ] )
      ] [
        fhir:id [ fhir:v "Patient.generalPractitioner.id" ] ;

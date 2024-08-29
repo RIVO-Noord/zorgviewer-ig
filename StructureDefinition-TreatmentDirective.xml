@@ -27,7 +27,7 @@
   <name value="TreatmentDirective"/>
   <title value="TreatmentDirective"/>
   <status value="active"/>
-  <date value="2024-08-27T08:48:41+00:00"/>
+  <date value="2024-08-29T09:15:36+00:00"/>
   <publisher value="RIVO-NN HL7NL"/>
   <contact>
     <name value="RIVO-NN"/>
@@ -153,18 +153,6 @@
         <source value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="Entity. Role, or Act"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="FinancialConsent"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="infrastructure.information"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-treatmentdirective-v1.0.1-2015EN"/>
         <map value="NL-CM:2.1.1"/>
         <comment value="TreatmentInstruction"/>
@@ -178,6 +166,18 @@
         <identity value="hcim-treatmentdirective-v3.1-2017EN"/>
         <map value="NL-CM:2.1.1"/>
         <comment value="TreatmentDirective"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Entity. Role, or Act"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="FinancialConsent"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="infrastructure.information"/>
       </mapping>
     </element>
     <element id="Consent.id">
@@ -1382,10 +1382,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"/>
       </type>
       <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-treatmentdirective-v1.0.1-2015EN"/>
         <map value="NL-CM:2.1.14"/>
         <comment value="LivingWill - additional to .source"/>
@@ -1399,6 +1395,10 @@
         <identity value="hcim-treatmentdirective-v3.1-2017EN"/>
         <map value="NL-CM:2.1.14"/>
         <comment value="AdvanceDirective - additional to .source"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
       </mapping>
     </element>
     <element id="Consent.modifierExtension">
@@ -1611,17 +1611,17 @@
       </example>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.6"/>
+        <comment value="IdentificationNumber"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value=".id"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
         <map value="id"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.6"/>
-        <comment value="IdentificationNumber"/>
       </mapping>
     </element>
     <element id="Consent.status">
@@ -2070,17 +2070,17 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.11"/>
+        <comment value="Subject"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value="Role"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
         <map value="who.focus"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.11"/>
-        <comment value="Subject"/>
       </mapping>
     </element>
     <element id="Consent.period">
@@ -2180,14 +2180,6 @@
       <mustSupport value="true"/>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="DR.1"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="./low"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-treatmentdirective-v1.0.1-2015EN"/>
         <map value="NL-CM:2.1.6"/>
         <comment value="StartDate"/>
@@ -2201,6 +2193,14 @@
         <identity value="hcim-treatmentdirective-v3.1-2017EN"/>
         <map value="NL-CM:2.1.6"/>
         <comment value="StartDate"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="DR.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./low"/>
       </mapping>
     </element>
     <element id="Consent.period.end">
@@ -2223,14 +2223,6 @@
       <condition value="per-1"/>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="DR.2"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="./high"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-treatmentdirective-v1.0.1-2015EN"/>
         <map value="NL-CM:2.1.7"/>
         <comment value="EndDate"/>
@@ -2244,6 +2236,14 @@
         <identity value="hcim-treatmentdirective-v3.1-2017EN"/>
         <map value="NL-CM:2.1.7"/>
         <comment value="EndDate"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="DR.2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./high"/>
       </mapping>
     </element>
     <element id="Consent.dateTime">
@@ -2263,17 +2263,17 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.14"/>
+        <comment value="DateTime"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value="FinancialConsent effectiveTime"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
         <map value="when.recorded"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.14"/>
-        <comment value="DateTime"/>
       </mapping>
     </element>
     <element id="Consent.consentingParty">
@@ -2307,13 +2307,13 @@
       </type>
       <isSummary value="true"/>
       <mapping>
-        <identity value="w5"/>
-        <map value="who.actor"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-basicelements-v1.0-2017EN"/>
         <map value="NL-CM:0.0.7"/>
         <comment value="Author"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="who.actor"/>
       </mapping>
     </element>
     <element id="Consent.consentingParty.id">

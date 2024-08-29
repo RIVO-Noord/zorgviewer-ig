@@ -15,7 +15,7 @@
   <name value="PractitionerRole"/>
   <title value="PractitionerRole"/>
   <status value="active"/>
-  <date value="2024-08-27T08:48:41+00:00"/>
+  <date value="2024-08-29T09:15:36+00:00"/>
   <publisher value="RIVO-NN HL7NL"/>
   <contact>
     <name value="RIVO-NN"/>
@@ -366,6 +366,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.6"/>
+        <comment value="IdentificationNumber"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="PRD-7 (or XCN.1)"/>
       </mapping>
@@ -380,11 +385,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="id"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.6"/>
-        <comment value="IdentificationNumber"/>
       </mapping>
     </element>
     <element id="PractitionerRole.active">
@@ -490,10 +490,6 @@
       </type>
       <isSummary value="true"/>
       <mapping>
-        <identity value="rim"/>
-        <map value=".scoper"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
         <map value="NL-CM:17.1.6"/>
         <comment value="HealthcareProvider"/>
@@ -507,6 +503,10 @@
         <identity value="hcim-healthprofessional-v3.2-2017EN"/>
         <map value="NL-CM:17.1.6"/>
         <comment value="HealthcareProvider"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scoper"/>
       </mapping>
     </element>
     <element id="PractitionerRole.code">
@@ -577,18 +577,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="v2"/>
-        <map value="PRA-5"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".player.HealthCareProvider[@classCode = 'PROV'].code"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="./Specialty"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
         <map value="NL-CM:17.1.4"/>
         <comment value="Specialty"/>
@@ -602,6 +590,18 @@
         <identity value="hcim-healthprofessional-v3.2-2017EN"/>
         <map value="NL-CM:17.1.4"/>
         <comment value="Specialty"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PRA-5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".player.HealthCareProvider[@classCode = 'PROV'].code"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Specialty"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty.id">
@@ -1533,20 +1533,19 @@
         <source value="http://hl7.org/fhir/StructureDefinition/ContactPoint"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
+        <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
+        <map value="NL-CM:17.1.8"/>
+        <comment value="TelephoneEmail"/>
       </mapping>
       <mapping>
-        <identity value="v2"/>
-        <map value="XTN"/>
+        <identity value="hcim-healthprofessional-v3.0-2016EN"/>
+        <map value="NL-CM:17.1.8"/>
+        <comment value="TelephoneEmail"/>
       </mapping>
       <mapping>
-        <identity value="rim"/>
-        <map value="TEL"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="ContactPoint"/>
+        <identity value="hcim-healthprofessional-v3.2-2017EN"/>
+        <map value="NL-CM:17.1.8"/>
+        <comment value="ContactInformation"/>
       </mapping>
       <mapping>
         <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
@@ -1564,19 +1563,20 @@
         <comment value="ContactInformation"/>
       </mapping>
       <mapping>
-        <identity value="hcim-healthprofessional-v1.2.1-2015EN"/>
-        <map value="NL-CM:17.1.8"/>
-        <comment value="TelephoneEmail"/>
+        <identity value="rim"/>
+        <map value="n/a"/>
       </mapping>
       <mapping>
-        <identity value="hcim-healthprofessional-v3.0-2016EN"/>
-        <map value="NL-CM:17.1.8"/>
-        <comment value="TelephoneEmail"/>
+        <identity value="v2"/>
+        <map value="XTN"/>
       </mapping>
       <mapping>
-        <identity value="hcim-healthprofessional-v3.2-2017EN"/>
-        <map value="NL-CM:17.1.8"/>
-        <comment value="ContactInformation"/>
+        <identity value="rim"/>
+        <map value="TEL"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="ContactPoint"/>
       </mapping>
     </element>
     <element id="PractitionerRole.availableTime">

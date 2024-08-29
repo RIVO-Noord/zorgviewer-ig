@@ -10,7 +10,7 @@
   "name" : "Practitioner",
   "title" : "Practitioner",
   "status" : "active",
-  "date" : "2024-08-27T08:48:41+00:00",
+  "date" : "2024-08-29T09:15:36+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -152,26 +152,6 @@
         "xpath" : "/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z' or /f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/big'"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "Entity. Role, or Act"
-      },
-      {
-        "identity" : "v2",
-        "map" : "PRD (as one example)"
-      },
-      {
-        "identity" : "rim",
-        "map" : "Role"
-      },
-      {
-        "identity" : "servd",
-        "map" : "Provider"
-      },
-      {
-        "identity" : "w5",
-        "map" : "administrative.individual"
-      },
-      {
         "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
         "map" : "NL-CM:17.1.1",
         "comment" : "HealthcareProvider"
@@ -195,6 +175,26 @@
         "identity" : "hcim-basicelements-v1.0-2017EN",
         "map" : "NL-CM:0.0.9",
         "comment" : "HealthProfessionalAsAuthor::HealthProfessional"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Entity. Role, or Act"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PRD (as one example)"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Role"
+      },
+      {
+        "identity" : "servd",
+        "map" : "Provider"
+      },
+      {
+        "identity" : "w5",
+        "map" : "administrative.individual"
       }]
     },
     {
@@ -408,22 +408,6 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "PRD-7 (or XCN.1)"
-      },
-      {
-        "identity" : "rim",
-        "map" : "./id"
-      },
-      {
-        "identity" : "servd",
-        "map" : "./Identifiers"
-      },
-      {
-        "identity" : "w5",
-        "map" : "id"
-      },
-      {
         "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
         "map" : "NL-CM:17.1.2",
         "comment" : "HealthcareProviderIdentificationNumber"
@@ -442,6 +426,22 @@
         "identity" : "hcim-basicelements-v1.0-2017EN",
         "map" : "NL-CM:0.0.6",
         "comment" : "IdentificationNumber"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PRD-7 (or XCN.1)"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./id"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./Identifiers"
+      },
+      {
+        "identity" : "w5",
+        "map" : "id"
       }]
     },
     {
@@ -1470,20 +1470,19 @@
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
+        "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
+        "map" : "NL-CM:17.1.3",
+        "comment" : "HealthcareProviderName"
       },
       {
-        "identity" : "v2",
-        "map" : "XPN"
+        "identity" : "hcim-healthprofessional-v3.0-2016EN",
+        "map" : "NL-CM:17.1.3",
+        "comment" : "HealthcareProviderName"
       },
       {
-        "identity" : "rim",
-        "map" : "EN (actually, PN)"
-      },
-      {
-        "identity" : "servd",
-        "map" : "ProviderName"
+        "identity" : "hcim-healthprofessional-v3.2-2017EN",
+        "map" : "NL-CM:17.1.3",
+        "comment" : "NameInformation"
       },
       {
         "identity" : "hcim-nameinformation-v2.0.1-2015EN",
@@ -1506,19 +1505,20 @@
         "comment" : "Naam"
       },
       {
-        "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
-        "map" : "NL-CM:17.1.3",
-        "comment" : "HealthcareProviderName"
+        "identity" : "rim",
+        "map" : "n/a"
       },
       {
-        "identity" : "hcim-healthprofessional-v3.0-2016EN",
-        "map" : "NL-CM:17.1.3",
-        "comment" : "HealthcareProviderName"
+        "identity" : "v2",
+        "map" : "XPN"
       },
       {
-        "identity" : "hcim-healthprofessional-v3.2-2017EN",
-        "map" : "NL-CM:17.1.3",
-        "comment" : "NameInformation"
+        "identity" : "rim",
+        "map" : "EN (actually, PN)"
+      },
+      {
+        "identity" : "servd",
+        "map" : "ProviderName"
       }]
     },
     {
@@ -1806,20 +1806,19 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/ContactPoint"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
+        "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
+        "map" : "NL-CM:17.1.8",
+        "comment" : "TelephoneEmail"
       },
       {
-        "identity" : "v2",
-        "map" : "XTN"
+        "identity" : "hcim-healthprofessional-v3.0-2016EN",
+        "map" : "NL-CM:17.1.8",
+        "comment" : "TelephoneEmail"
       },
       {
-        "identity" : "rim",
-        "map" : "TEL"
-      },
-      {
-        "identity" : "servd",
-        "map" : "ContactPoint"
+        "identity" : "hcim-healthprofessional-v3.2-2017EN",
+        "map" : "NL-CM:17.1.8",
+        "comment" : "ContactInformation"
       },
       {
         "identity" : "hcim-contactinformation-v2.0.1-2015EN",
@@ -1837,19 +1836,20 @@
         "comment" : "ContactInformation"
       },
       {
-        "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
-        "map" : "NL-CM:17.1.8",
-        "comment" : "TelephoneEmail"
+        "identity" : "rim",
+        "map" : "n/a"
       },
       {
-        "identity" : "hcim-healthprofessional-v3.0-2016EN",
-        "map" : "NL-CM:17.1.8",
-        "comment" : "TelephoneEmail"
+        "identity" : "v2",
+        "map" : "XTN"
       },
       {
-        "identity" : "hcim-healthprofessional-v3.2-2017EN",
-        "map" : "NL-CM:17.1.8",
-        "comment" : "ContactInformation"
+        "identity" : "rim",
+        "map" : "TEL"
+      },
+      {
+        "identity" : "servd",
+        "map" : "ContactPoint"
       }]
     },
     {
@@ -1970,20 +1970,19 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
+        "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
+        "map" : "NL-CM:17.1.7",
+        "comment" : "Address"
       },
       {
-        "identity" : "v2",
-        "map" : "XAD"
+        "identity" : "hcim-healthprofessional-v3.0-2016EN",
+        "map" : "NL-CM:17.1.7",
+        "comment" : "Address"
       },
       {
-        "identity" : "rim",
-        "map" : "AD"
-      },
-      {
-        "identity" : "servd",
-        "map" : "Address"
+        "identity" : "hcim-healthprofessional-v3.2-2017EN",
+        "map" : "NL-CM:17.1.7",
+        "comment" : "AddressInformation"
       },
       {
         "identity" : "hcim-address-v2.0.1-2015EN",
@@ -2001,19 +2000,20 @@
         "comment" : "AddressInformation"
       },
       {
-        "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
-        "map" : "NL-CM:17.1.7",
-        "comment" : "Address"
+        "identity" : "rim",
+        "map" : "n/a"
       },
       {
-        "identity" : "hcim-healthprofessional-v3.0-2016EN",
-        "map" : "NL-CM:17.1.7",
-        "comment" : "Address"
+        "identity" : "v2",
+        "map" : "XAD"
       },
       {
-        "identity" : "hcim-healthprofessional-v3.2-2017EN",
-        "map" : "NL-CM:17.1.7",
-        "comment" : "AddressInformation"
+        "identity" : "rim",
+        "map" : "AD"
+      },
+      {
+        "identity" : "servd",
+        "map" : "Address"
       }]
     },
     {

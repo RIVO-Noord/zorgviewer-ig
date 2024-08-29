@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "Practitioner"] ; # 
   fhir:title [ fhir:v "Practitioner"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-08-27T08:48:41+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-29T09:15:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -144,21 +144,6 @@
          fhir:xpath [ fhir:v "/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z' or /f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/big'" ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "Entity. Role, or Act" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "PRD (as one example)" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "Role" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "Provider" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "administrative.individual" ]
-       ] [
          fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.1.1" ] ;
          fhir:comment [ fhir:v "HealthcareProvider" ]
@@ -178,6 +163,21 @@
          fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.0.9" ] ;
          fhir:comment [ fhir:v "HealthProfessionalAsAuthor::HealthProfessional" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Entity. Role, or Act" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "PRD (as one example)" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Role" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "Provider" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "administrative.individual" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.id" ] ;
@@ -378,18 +378,6 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "PRD-7 (or XCN.1)" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "./id" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "./Identifiers" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "id" ]
-       ] [
          fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.1.2" ] ;
          fhir:comment [ fhir:v "HealthcareProviderIdentificationNumber" ]
@@ -405,6 +393,18 @@
          fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
          fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "PRD-7 (or XCN.1)" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./id" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "./Identifiers" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "id" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.identifier:UZI" ] ;
@@ -1365,17 +1365,17 @@
        ] ) ;
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
+         fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.1.3" ] ;
+         fhir:comment [ fhir:v "HealthcareProviderName" ]
        ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XPN" ]
+         fhir:identity [ fhir:v "hcim-healthprofessional-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.1.3" ] ;
+         fhir:comment [ fhir:v "HealthcareProviderName" ]
        ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "EN (actually, PN)" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "ProviderName" ]
+         fhir:identity [ fhir:v "hcim-healthprofessional-v3.2-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.1.3" ] ;
+         fhir:comment [ fhir:v "NameInformation" ]
        ] [
          fhir:identity [ fhir:v "hcim-nameinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.6" ] ;
@@ -1393,17 +1393,17 @@
          fhir:map [ fhir:v "02" ] ;
          fhir:comment [ fhir:v "Naam" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.1.3" ] ;
-         fhir:comment [ fhir:v "HealthcareProviderName" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthprofessional-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.1.3" ] ;
-         fhir:comment [ fhir:v "HealthcareProviderName" ]
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XPN" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthprofessional-v3.2-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.1.3" ] ;
-         fhir:comment [ fhir:v "NameInformation" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "EN (actually, PN)" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "ProviderName" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.telecom" ] ;
@@ -1702,17 +1702,17 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/ContactPoint"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
+         fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.1.8" ] ;
+         fhir:comment [ fhir:v "TelephoneEmail" ]
        ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XTN" ]
+         fhir:identity [ fhir:v "hcim-healthprofessional-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.1.8" ] ;
+         fhir:comment [ fhir:v "TelephoneEmail" ]
        ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "TEL" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "ContactPoint" ]
+         fhir:identity [ fhir:v "hcim-healthprofessional-v3.2-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.1.8" ] ;
+         fhir:comment [ fhir:v "ContactInformation" ]
        ] [
          fhir:identity [ fhir:v "hcim-contactinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.5" ] ;
@@ -1726,17 +1726,17 @@
          fhir:map [ fhir:v "NL-CM:20.6.1" ] ;
          fhir:comment [ fhir:v "ContactInformation" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.1.8" ] ;
-         fhir:comment [ fhir:v "TelephoneEmail" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthprofessional-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.1.8" ] ;
-         fhir:comment [ fhir:v "TelephoneEmail" ]
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XTN" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthprofessional-v3.2-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.1.8" ] ;
-         fhir:comment [ fhir:v "ContactInformation" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "TEL" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "ContactPoint" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.address" ] ;
@@ -1850,17 +1850,17 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Practitioner"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
+         fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.1.7" ] ;
+         fhir:comment [ fhir:v "Address" ]
        ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XAD" ]
+         fhir:identity [ fhir:v "hcim-healthprofessional-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.1.7" ] ;
+         fhir:comment [ fhir:v "Address" ]
        ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "AD" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "Address" ]
+         fhir:identity [ fhir:v "hcim-healthprofessional-v3.2-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.1.7" ] ;
+         fhir:comment [ fhir:v "AddressInformation" ]
        ] [
          fhir:identity [ fhir:v "hcim-address-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
@@ -1874,17 +1874,17 @@
          fhir:map [ fhir:v "NL-CM:20.5.1" ] ;
          fhir:comment [ fhir:v "AddressInformation" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.1.7" ] ;
-         fhir:comment [ fhir:v "Address" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthprofessional-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.1.7" ] ;
-         fhir:comment [ fhir:v "Address" ]
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XAD" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthprofessional-v3.2-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.1.7" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "AD" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "Address" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.gender" ] ;

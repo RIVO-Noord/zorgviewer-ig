@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "MedicationUse"] ; # 
   fhir:title [ fhir:v "MedicationUse"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-08-27T08:48:41+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-29T09:15:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -136,6 +136,10 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/MedicationStatement"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.11.21338" ] ;
+         fhir:comment [ fhir:v "MedicationUse" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "Entity. Role, or Act" ]
        ] [
@@ -147,10 +151,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "clinical.medication" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:9.11.21338" ] ;
-         fhir:comment [ fhir:v "MedicationUse" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.id" ] ;
@@ -339,15 +339,15 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.11.22492" ] ;
+         fhir:comment [ fhir:v "AsAgreedIndicator" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "n/a" ]
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:9.11.22492" ] ;
-         fhir:comment [ fhir:v "AsAgreedIndicator" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.extension:asAgreedIndicator.id" ] ;
@@ -547,15 +547,15 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.7" ] ;
+         fhir:comment [ fhir:v "Author" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "n/a" ]
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.7" ] ;
-         fhir:comment [ fhir:v "Author" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.extension:medicationTreatment" ] ;
@@ -593,15 +593,15 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "Medication-Process-v09" ] ;
+         fhir:map [ fhir:v "mp-dataelement900-22092" ] ;
+         fhir:comment [ fhir:v "Medicamenteuze behandeling" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "n/a" ]
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "Medication-Process-v09" ] ;
-         fhir:map [ fhir:v "mp-dataelement900-22092" ] ;
-         fhir:comment [ fhir:v "Medicamenteuze behandeling" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.extension:reasonForChangeOrDiscontinuationOfUse" ] ;
@@ -780,12 +780,12 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "N/A" ]
-       ] [
          fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:9.11.22493" ] ;
          fhir:comment [ fhir:v "Reden wijzigen of stoppen gebruik" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.modifierExtension" ] ;
@@ -867,6 +867,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
+         fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "…identifer" ]
        ] [
@@ -875,10 +879,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "id" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
-         fhir:comment [ fhir:v "IdentificationNumber" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.basedOn" ] ;
@@ -1007,6 +1007,10 @@
          ]
        ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.11.23132" ] ;
+         fhir:comment [ fhir:v "MedicationUseStopType. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/MedicationUseStopTypeCodeLijst-to-MedicationStatementStatus) is available that maps MedicationUseStopTypeCodeLijst to the MedicationStatementStatus value set." ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "…status" ]
        ] [
@@ -1015,10 +1019,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "status" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:9.11.23132" ] ;
-         fhir:comment [ fhir:v "MedicationUseStopType. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/MedicationUseStopTypeCodeLijst-to-MedicationStatementStatus) is available that maps MedicationUseStopTypeCodeLijst to the MedicationStatementStatus value set." ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.category" ] ;
@@ -1449,6 +1449,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.11.21339" ] ;
+         fhir:comment [ fhir:v "ProductUsed" ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "…code" ]
        ] [
@@ -1457,10 +1461,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "what" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:9.11.21339" ] ;
-         fhir:comment [ fhir:v "ProductUsed" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.medication[x]:medicationReference.id" ] ;
@@ -1635,6 +1635,14 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.11.22663" ] ;
+         fhir:comment [ fhir:v "PeriodOfUse" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.14" ] ;
+         fhir:comment [ fhir:v "DateTime" ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "…occurrence[x]" ]
        ] [
@@ -1643,14 +1651,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "when.done" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:9.11.22663" ] ;
-         fhir:comment [ fhir:v "PeriodOfUse" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.14" ] ;
-         fhir:comment [ fhir:v "DateTime" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.effective[x]:effectivePeriod.id" ] ;
@@ -1869,15 +1869,15 @@
        fhir:condition ( [ fhir:v "per-1" ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-timeinterval-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:20.3.2" ] ;
+         fhir:comment [ fhir:v "startDateTime" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "DR.1" ]
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "./low" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-timeinterval-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:20.3.2" ] ;
-         fhir:comment [ fhir:v "startDateTime" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.effective[x]:effectivePeriod.end" ] ;
@@ -1900,15 +1900,15 @@
        fhir:condition ( [ fhir:v "per-1" ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-timeinterval-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:20.3.3" ] ;
+         fhir:comment [ fhir:v "endDateTime" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "DR.2" ]
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "./high" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-timeinterval-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:20.3.3" ] ;
-         fhir:comment [ fhir:v "endDateTime" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.dateAsserted" ] ;
@@ -1933,15 +1933,15 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.11.22398" ] ;
+         fhir:comment [ fhir:v "MedicationUseDateTime" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v ".participation[typeCode=AUT].time" ]
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "when.recorded" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:9.11.22398" ] ;
-         fhir:comment [ fhir:v "MedicationUseDateTime" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.informationSource" ] ;
@@ -1970,15 +1970,15 @@
          fhir:targetProfile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-organization"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.2" ] ;
+         fhir:comment [ fhir:v "InformationSource" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v ".participation[typeCode=INF].role[classCode=PAT, or codes for Practioner or Related Person (if PAT is the informer, then syntax for self-reported =true)" ]
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "who.source" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.2" ] ;
-         fhir:comment [ fhir:v "InformationSource" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.informationSource.id" ] ;
@@ -2133,6 +2133,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.11" ] ;
+         fhir:comment [ fhir:v "Subject" ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "…subject" ]
        ] [
@@ -2144,10 +2148,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "who" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.11" ] ;
-         fhir:comment [ fhir:v "Subject" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.derivedFrom" ] ;
@@ -2207,15 +2207,15 @@
          ]
        ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.11.22399" ] ;
+         fhir:comment [ fhir:v "UseIndicator" ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "…notDone" ]
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v ".actionNegationInd" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:9.11.22399" ] ;
-         fhir:comment [ fhir:v "UseIndicator" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.reasonNotTaken" ] ;
@@ -2390,6 +2390,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.11.22491" ] ;
+         fhir:comment [ fhir:v "ReasonForUse" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "C*E.9. But note many systems use C*E.2 for this" ]
        ] [
@@ -2398,10 +2402,6 @@
        ] [
          fhir:identity [ fhir:v "orim" ] ;
          fhir:map [ fhir:v "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:9.11.22491" ] ;
-         fhir:comment [ fhir:v "ReasonForUse" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.reasonReference" ] ;
@@ -2450,15 +2450,15 @@
          fhir:code [ fhir:v "Annotation"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.11.21624" ] ;
+         fhir:comment [ fhir:v "Comment" ]
+       ] [
          fhir:identity [ fhir:v "workflow" ] ;
          fhir:map [ fhir:v "…note" ]
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v ".inboundRelationship[typeCode=SUBJ]/source[classCode=OBS,moodCode=EVN,code=\"annotation\"].value" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:9.11.21624" ] ;
-         fhir:comment [ fhir:v "Comment" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.dosage" ] ;
@@ -2488,19 +2488,19 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".outboundRelationship[typeCode=COMP].target[classCode=SBADM, moodCode=INT]" ]
+         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.11.22504" ] ;
+         fhir:comment [ fhir:v "InstructionsForUse" ]
        ] [
          fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:9.12.22504" ] ;
          fhir:comment [ fhir:v "InstructionsForUse" ]
        ] [
-         fhir:identity [ fhir:v "hcim-medicationuse2-v1.0.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:9.11.22504" ] ;
-         fhir:comment [ fhir:v "InstructionsForUse" ]
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=COMP].target[classCode=SBADM, moodCode=INT]" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.dosage.id" ] ;
@@ -2570,12 +2570,12 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".text" ]
-       ] [
          fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:9.12.22503" ] ;
          fhir:comment [ fhir:v "SequenceNumber" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".text" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.dosage.text" ] ;
@@ -2597,12 +2597,12 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".text" ]
-       ] [
          fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:9.12.9581" ] ;
          fhir:comment [ fhir:v "Description" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".text" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.dosage.additionalInstruction" ] ;
@@ -2635,12 +2635,12 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".text" ]
-       ] [
          fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:9.12.19944" ] ;
          fhir:comment [ fhir:v "AdditionalInstructions" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".text" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.dosage.patientInstruction" ] ;
@@ -2691,6 +2691,10 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.12.19948" ] ;
+         fhir:comment [ fhir:v "AdministeringSchedule" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "n/a" ]
        ] [
@@ -2699,10 +2703,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "QSET<TS> (GTS)" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:9.12.19948" ] ;
-         fhir:comment [ fhir:v "AdministeringSchedule" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.dosage.asNeeded[x]" ] ;
@@ -2779,9 +2779,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=\"as needed\"].value=boolean or codable concept" ]
-       ] [
          fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:9.12.22512" ] ;
          fhir:comment [ fhir:v "AsNeeded" ]
@@ -2789,6 +2786,9 @@
          fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:9.12.19945" ] ;
          fhir:comment [ fhir:v "Condition" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=\"as needed\"].value=boolean or codable concept" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.dosage.site" ] ;
@@ -2864,12 +2864,12 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".routeCode" ]
-       ] [
          fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:9.12.19941" ] ;
          fhir:comment [ fhir:v "RouteOfAdministration" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".routeCode" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.dosage.route.id" ] ;
@@ -3047,12 +3047,12 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".doseQuantity" ]
-       ] [
          fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:9.12.19940" ] ;
          fhir:comment [ fhir:v "Dose" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".doseQuantity" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.dosage.dose[x]:doseQuantity" ] ;
@@ -3277,12 +3277,12 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".maxDoseQuantity" ]
-       ] [
          fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:9.12.19946" ] ;
          fhir:comment [ fhir:v "MaximumDose" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".maxDoseQuantity" ]
        ] )
      ] [
        fhir:id [ fhir:v "MedicationStatement.dosage.maxDosePerPeriod.id" ] ;
@@ -3452,12 +3452,12 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".rateQuantity" ]
-       ] [
          fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:9.12.19942" ] ;
          fhir:comment [ fhir:v "AdministeringSpeed" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".rateQuantity" ]
        ] )
      ] )
   ] ; # 

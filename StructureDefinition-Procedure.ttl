@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "Procedure"] ; # 
   fhir:title [ fhir:v "Procedure"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-08-27T08:48:41+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-29T09:15:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -150,15 +150,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Procedure"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "Entity. Role, or Act" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "Procedure[moodCode=EVN]" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "clinical.general" ]
-       ] [
          fhir:identity [ fhir:v "hcim-procedurefortransfer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.1" ] ;
          fhir:comment [ fhir:v "Procedure" ]
@@ -170,6 +161,15 @@
          fhir:identity [ fhir:v "hcim-procedure-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.1" ] ;
          fhir:comment [ fhir:v "Procedure" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Entity. Role, or Act" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Procedure[moodCode=EVN]" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "clinical.general" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.id" ] ;
@@ -455,12 +455,12 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "N/A" ]
-       ] [
          fhir:identity [ fhir:v "hcim-procedure-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.12" ] ;
          fhir:comment [ fhir:v "ProcedureMethod" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.modifierExtension" ] ;
@@ -502,6 +502,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
+         fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "Some combination of ORC-2 / ORC-3 / OBR-2 / OBR-3 / IPC-1 / IPC-2 / IPC-3 / IPC-4" ]
        ] [
@@ -510,10 +514,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "id" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
-         fhir:comment [ fhir:v "IdentificationNumber" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.definition" ] ;
@@ -598,9 +598,6 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".outboundRelationship[typeCode=FLFS].target[classCode=(various e.g. PROC, OBS, PCPR, ACT,  moodCode=RQO].code" ]
-       ] [
          fhir:identity [ fhir:v "hcim-procedurefortransfer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.10" ] ;
          fhir:comment [ fhir:v "RequestedBy" ]
@@ -612,6 +609,9 @@
          fhir:identity [ fhir:v "hcim-procedure-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.10" ] ;
          fhir:comment [ fhir:v "Requester. The requester information is located in a referenced ProcedureRequest." ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=FLFS].target[classCode=(various e.g. PROC, OBS, PCPR, ACT,  moodCode=RQO].code" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.partOf" ] ;
@@ -817,15 +817,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "OBR-44/OBR-45" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".code" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "what" ]
-       ] [
          fhir:identity [ fhir:v "hcim-procedurefortransfer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.4" ] ;
          fhir:comment [ fhir:v "ProcedureType" ]
@@ -837,6 +828,15 @@
          fhir:identity [ fhir:v "hcim-procedure-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.4" ] ;
          fhir:comment [ fhir:v "ProcedureType" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "OBR-44/OBR-45" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".code" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "what" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.code.id" ] ;
@@ -1207,6 +1207,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.11" ] ;
+         fhir:comment [ fhir:v "Subject" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "PID-3" ]
        ] [
@@ -1215,10 +1219,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "who.focus" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.11" ] ;
-         fhir:comment [ fhir:v "Subject" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.context" ] ;
@@ -1276,6 +1276,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.14" ] ;
+         fhir:comment [ fhir:v "DateTime" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "OBR-7" ]
        ] [
@@ -1284,10 +1288,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "when.done" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.14" ] ;
-         fhir:comment [ fhir:v "DateTime" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.performed[x]:performedPeriod" ] ;
@@ -1386,12 +1386,6 @@
        fhir:condition ( [ fhir:v "per-1" ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "DR.1" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "./low" ]
-       ] [
          fhir:identity [ fhir:v "hcim-procedurefortransfer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.2" ] ;
          fhir:comment [ fhir:v "ProcedureStartDate" ]
@@ -1403,6 +1397,12 @@
          fhir:identity [ fhir:v "hcim-procedure-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.2" ] ;
          fhir:comment [ fhir:v "ProcedureStartDate" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "DR.1" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./low" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.performed[x]:performedPeriod.end" ] ;
@@ -1425,12 +1425,6 @@
        fhir:condition ( [ fhir:v "per-1" ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "DR.2" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "./high" ]
-       ] [
          fhir:identity [ fhir:v "hcim-procedurefortransfer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.3" ] ;
          fhir:comment [ fhir:v "ProcedureEndDate" ]
@@ -1442,6 +1436,12 @@
          fhir:identity [ fhir:v "hcim-procedure-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.3" ] ;
          fhir:comment [ fhir:v "ProcedureEndDate" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "DR.2" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./high" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.performer" ] ;
@@ -1470,9 +1470,6 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".participation[typeCode=PRF]" ]
-       ] [
          fhir:identity [ fhir:v "hcim-procedurefortransfer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.6" ] ;
          fhir:comment [ fhir:v "CarriedOutBy" ]
@@ -1496,6 +1493,9 @@
          fhir:identity [ fhir:v "hcim-procedure-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.5" ] ;
          fhir:comment [ fhir:v "Location" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".participation[typeCode=PRF]" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.performer.id" ] ;
@@ -1710,15 +1710,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "C*E.1-8, C*E.10-22" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "union(., ./translation)" ]
-       ] [
-         fhir:identity [ fhir:v "orim" ] ;
-         fhir:map [ fhir:v "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
-       ] [
          fhir:identity [ fhir:v "hcim-healthprofessional-v1.2.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.1.5" ] ;
          fhir:comment [ fhir:v "HealthcareProviderRole" ]
@@ -1730,6 +1721,15 @@
          fhir:identity [ fhir:v "hcim-healthprofessional-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.1.5" ] ;
          fhir:comment [ fhir:v "HealthProfessionalRole" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "C*E.1-8, C*E.10-22" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "union(., ./translation)" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.performer.role.text" ] ;
@@ -2150,12 +2150,6 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".reasonCode" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "why" ]
-       ] [
          fhir:identity [ fhir:v "hcim-procedurefortransfer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.9" ] ;
          fhir:comment [ fhir:v "Indication" ]
@@ -2167,6 +2161,12 @@
          fhir:identity [ fhir:v "hcim-procedure-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.9" ] ;
          fhir:comment [ fhir:v "Indication" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".reasonCode" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "why" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.bodySite" ] ;
@@ -2195,12 +2195,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "OBX-20" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".targetSiteCode" ]
-       ] [
          fhir:identity [ fhir:v "hcim-procedurefortransfer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.8" ] ;
          fhir:comment [ fhir:v "AnatomicalLocationOfTheProcedure" ]
@@ -2212,6 +2206,12 @@
          fhir:identity [ fhir:v "hcim-procedure-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.8" ] ;
          fhir:comment [ fhir:v "ProcedureAnatomicalLocation" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "OBX-20" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".targetSiteCode" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.bodySite.id" ] ;
@@ -2398,12 +2398,12 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "N/A" ]
-       ] [
          fhir:identity [ fhir:v "hcim-procedure-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.11" ] ;
          fhir:comment [ fhir:v "ProcedureLaterality" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.bodySite.coding" ] ;
@@ -2517,9 +2517,6 @@
          fhir:targetProfile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TextResult"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN]" ]
-       ] [
          fhir:identity [ fhir:v "hcim-textresultfortransfer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.2.1" ] ;
          fhir:comment [ fhir:v "TextResult" ]
@@ -2531,6 +2528,9 @@
          fhir:identity [ fhir:v "hcim-textresult-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:13.2.1" ] ;
          fhir:comment [ fhir:v "TextResult" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN]" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.complication" ] ;
@@ -2781,9 +2781,6 @@
          fhir:targetProfile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDeviceProduct"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".participation[typeCode=DEV].role[classCode=SDLOC]" ]
-       ] [
          fhir:identity [ fhir:v "hcim-procedurefortransfer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.7" ] ;
          fhir:comment [ fhir:v "Product" ]
@@ -2795,6 +2792,9 @@
          fhir:identity [ fhir:v "hcim-procedure-v4.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:14.1.7" ] ;
          fhir:comment [ fhir:v "MedicalDevice" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".participation[typeCode=DEV].role[classCode=SDLOC]" ]
        ] )
      ] [
        fhir:id [ fhir:v "Procedure.usedReference" ] ;

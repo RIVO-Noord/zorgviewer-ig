@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "AllergyIntolerance"] ; # 
   fhir:title [ fhir:v "AllergyIntolerance"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-08-27T08:48:41+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-29T09:15:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -133,15 +133,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "Entity. Role, or Act" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "Observation[classCode=OBS, moodCode=EVN]" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "clinical.general" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.1" ] ;
          fhir:comment [ fhir:v "AllergyIntolerance" ]
@@ -153,6 +144,15 @@
          fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.1" ] ;
          fhir:comment [ fhir:v "AllergyIntolerance" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Entity. Role, or Act" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Observation[classCode=OBS, moodCode=EVN]" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "clinical.general" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.id" ] ;
@@ -345,6 +345,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
+         fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "IAM-7" ]
        ] [
@@ -353,10 +357,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "id" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
-         fhir:comment [ fhir:v "IdentificationNumber" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.clinicalStatus" ] ;
@@ -387,15 +387,15 @@
          ]
        ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:8.2.5" ] ;
+         fhir:comment [ fhir:v "AllergyStatus. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&canonical=http://nictiz.nl/fhir/ConceptMap/AllergieStatusCodelijst-to-allergy-status" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "Observation ACT\n.inboundRelationship[typeCode=COMP].source[classCode=OBS, code=\"clinicalStatus\", moodCode=EVN].value" ]
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "status" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:8.2.5" ] ;
-         fhir:comment [ fhir:v "AllergyStatus. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&canonical=http://nictiz.nl/fhir/ConceptMap/AllergieStatusCodelijst-to-allergy-status" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.clinicalStatus.id" ] ;
@@ -674,15 +674,15 @@
          ]
        ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:8.2.5" ] ;
+         fhir:comment [ fhir:v "AllergyStatus (for Nullified only)" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "Observation ACT\n.inboundRelationship[typeCode=COMP].source[classCode=OBS, code=\"verificationStatus\", moodCode=EVN].value" ]
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "status" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:8.2.5" ] ;
-         fhir:comment [ fhir:v "AllergyStatus (for Nullified only)" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.type" ] ;
@@ -1317,15 +1317,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "AL1-3 / IAM-3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "substance/product:\r\r.participation[typeCode=CAGNT].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]\r\rnegated/excluded substance/product:\r\r.participation[typeCode=CAGNT, negationInd=true].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]\r\rpositive or negated/excluded condition/situation:\r\rObservation.code=ASSERTION; Observation.value" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "what" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.2" ] ;
          fhir:comment [ fhir:v "CausativeSubstance" ]
@@ -1337,6 +1328,15 @@
          fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.2" ] ;
          fhir:comment [ fhir:v "CausativeAgent" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "AL1-3 / IAM-3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "substance/product:\r\r.participation[typeCode=CAGNT].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]\r\rnegated/excluded substance/product:\r\r.participation[typeCode=CAGNT, negationInd=true].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]\r\rpositive or negated/excluded condition/situation:\r\rObservation.code=ASSERTION; Observation.value" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "what" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.code.id" ] ;
@@ -2619,6 +2619,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.11" ] ;
+         fhir:comment [ fhir:v "Subject" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "(PID-3)" ]
        ] [
@@ -2627,10 +2631,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "who.focus" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.11" ] ;
-         fhir:comment [ fhir:v "Subject" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.onset[x]" ] ;
@@ -2683,12 +2683,6 @@
          fhir:code [ fhir:v "dateTime"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "effectiveTime.low" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "when.init" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.6" ] ;
          fhir:comment [ fhir:v "StartDateTime" ]
@@ -2704,6 +2698,12 @@
          fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.0.14" ] ;
          fhir:comment [ fhir:v "DateTime" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "effectiveTime.low" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "when.init" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.assertedDate" ] ;
@@ -2751,15 +2751,15 @@
          fhir:targetProfile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-patient"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.7" ] ;
+         fhir:comment [ fhir:v "Author" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v ".participation[typeCode=AUT].role" ]
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "who.author" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.7" ] ;
-         fhir:comment [ fhir:v "Author" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.recorder.id" ] ;
@@ -2922,6 +2922,10 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.2" ] ;
+         fhir:comment [ fhir:v "InformationSource" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "IAM-14 (if patient) / IAM-18 (if practitioner)" ]
        ] [
@@ -2930,10 +2934,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "who.source" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.2" ] ;
-         fhir:comment [ fhir:v "InformationSource" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.asserter.id" ] ;
@@ -3088,9 +3088,6 @@
          fhir:code [ fhir:v "dateTime"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code <= CommonClinicalObservationType, value <= ObservationValue (Reaction Type)].effectiveTime" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.8" ] ;
          fhir:comment [ fhir:v "LastReactionDateTime" ]
@@ -3102,6 +3099,9 @@
          fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.8" ] ;
          fhir:comment [ fhir:v "LastReactionDateTime" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code <= CommonClinicalObservationType, value <= ObservationValue (Reaction Type)].effectiveTime" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.note" ] ;
@@ -3444,12 +3444,6 @@
          fhir:code [ fhir:v "string"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "Act.text" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.9" ] ;
          fhir:comment [ fhir:v "Explanation" ]
@@ -3461,6 +3455,12 @@
          fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.9" ] ;
          fhir:comment [ fhir:v "Comment" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Act.text" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.reaction" ] ;
@@ -3487,9 +3487,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code <= CommonClinicalObservationType, value <= ObservationValue (Reaction Type)]" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.10" ] ;
          fhir:comment [ fhir:v "Reaction" ]
@@ -3501,6 +3498,9 @@
          fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.10" ] ;
          fhir:comment [ fhir:v "Reaction" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code <= CommonClinicalObservationType, value <= ObservationValue (Reaction Type)]" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.reaction.id" ] ;
@@ -3597,9 +3597,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code <= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.12" ] ;
          fhir:comment [ fhir:v "SpecificSubstance" ]
@@ -3611,6 +3608,9 @@
          fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.12" ] ;
          fhir:comment [ fhir:v "SpecificSubstance" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code <= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.reaction.substance.id" ] ;
@@ -4900,12 +4900,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "AL1-5" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "code" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.11" ] ;
          fhir:comment [ fhir:v "Symptom" ]
@@ -4917,6 +4911,12 @@
          fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.11" ] ;
          fhir:comment [ fhir:v "Symptom" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "AL1-5" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "code" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.reaction.manifestation.id" ] ;
@@ -5046,9 +5046,6 @@
          fhir:code [ fhir:v "string"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "text" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.13" ] ;
          fhir:comment [ fhir:v "ReactionDescription" ]
@@ -5060,6 +5057,9 @@
          fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.13" ] ;
          fhir:comment [ fhir:v "ReactionDescription" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "text" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.reaction.onset" ] ;
@@ -5078,12 +5078,6 @@
          fhir:code [ fhir:v "dateTime"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "AL1-6" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "effectiveTime.low" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.17" ] ;
          fhir:comment [ fhir:v "ReactionTime" ]
@@ -5095,6 +5089,12 @@
          fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.17" ] ;
          fhir:comment [ fhir:v "ReactionTime" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "AL1-6" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "effectiveTime.low" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.reaction.severity" ] ;
@@ -5123,9 +5123,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=SEV, value <= SeverityObservation (Severity Level)]" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.14" ] ;
          fhir:comment [ fhir:v "Severity. See for details the ConceptMap http://nictiz.nl/fhir/ConceptMap/ErnstCodelijst-to-AllergyIntoleranceSeverity" ]
@@ -5137,6 +5134,9 @@
          fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.14" ] ;
          fhir:comment [ fhir:v "Severity. See for details the ConceptMap http://nictiz.nl/fhir/ConceptMap/ErnstCodelijst-to-AllergyIntoleranceSeverity" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=SEV, value <= SeverityObservation (Severity Level)]" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.reaction.severity.id" ] ;
@@ -5334,9 +5334,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "N/A" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.14" ] ;
          fhir:comment [ fhir:v "Severity" ]
@@ -5348,6 +5345,9 @@
          fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.14" ] ;
          fhir:comment [ fhir:v "Severity" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.reaction.severity.value" ] ;
@@ -5406,9 +5406,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code <= ExposureCode].routeCode" ]
-       ] [
          fhir:identity [ fhir:v "hcim-allergyintolerance-v1.0.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.15" ] ;
          fhir:comment [ fhir:v "MannerOfExposure" ]
@@ -5420,6 +5417,9 @@
          fhir:identity [ fhir:v "hcim-allergyintolerance-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.2.15" ] ;
          fhir:comment [ fhir:v "RouteOfExposure" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code <= ExposureCode].routeCode" ]
        ] )
      ] [
        fhir:id [ fhir:v "AllergyIntolerance.reaction.note" ] ;

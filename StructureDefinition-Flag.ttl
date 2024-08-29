@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "Alert"] ; # 
   fhir:title [ fhir:v "Alert"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-08-27T08:48:41+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-29T09:15:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -116,15 +116,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "Entity. Role, or Act" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "Observation[classCode=ISSUE, moodCode=EVN]" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "workflow.encounter" ]
-       ] [
          fhir:identity [ fhir:v "hcim-alert-v1.0-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.3.1" ] ;
          fhir:comment [ fhir:v "Alert" ]
@@ -136,6 +127,15 @@
          fhir:identity [ fhir:v "hcim-alert-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.3.1" ] ;
          fhir:comment [ fhir:v "Alert" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Entity. Role, or Act" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Observation[classCode=ISSUE, moodCode=EVN]" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "workflow.encounter" ]
        ] )
      ] [
        fhir:id [ fhir:v "Flag.id" ] ;
@@ -468,15 +468,15 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
+         fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v ".id" ]
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "id" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
-         fhir:comment [ fhir:v "IdentificationNumber" ]
        ] )
      ] [
        fhir:id [ fhir:v "Flag.status" ] ;
@@ -556,12 +556,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".code" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "class" ]
-       ] [
          fhir:identity [ fhir:v "hcim-alert-v1.0-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.3.6" ] ;
          fhir:comment [ fhir:v "AlertType" ]
@@ -573,6 +567,12 @@
          fhir:identity [ fhir:v "hcim-alert-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.3.6" ] ;
          fhir:comment [ fhir:v "AlertType" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".code" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "class" ]
        ] )
      ] [
        fhir:id [ fhir:v "Flag.category.id" ] ;
@@ -723,12 +723,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".value" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "what" ]
-       ] [
          fhir:identity [ fhir:v "hcim-alert-v1.0-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.3.4" ] ;
          fhir:comment [ fhir:v "AlertName" ]
@@ -740,6 +734,12 @@
          fhir:identity [ fhir:v "hcim-alert-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.3.4" ] ;
          fhir:comment [ fhir:v "AlertName" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".value" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "what" ]
        ] )
      ] [
        fhir:id [ fhir:v "Flag.code.id" ] ;
@@ -1125,12 +1125,6 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "DR.1" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "./low" ]
-       ] [
          fhir:identity [ fhir:v "hcim-alert-v1.0-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.3.5" ] ;
          fhir:comment [ fhir:v "StartDateTime" ]
@@ -1142,6 +1136,12 @@
          fhir:identity [ fhir:v "hcim-alert-v3.2-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:8.3.5" ] ;
          fhir:comment [ fhir:v "StartDateTime" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "DR.1" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./low" ]
        ] )
      ] [
        fhir:id [ fhir:v "Flag.period.end" ] ;
@@ -1218,15 +1218,15 @@
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.7" ] ;
+         fhir:comment [ fhir:v "Author" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v ".participation[typeCode=AUT].role" ]
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "who.author" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.0.7" ] ;
-         fhir:comment [ fhir:v "Author" ]
        ] )
      ] [
        fhir:id [ fhir:v "Flag.author.id" ] ;

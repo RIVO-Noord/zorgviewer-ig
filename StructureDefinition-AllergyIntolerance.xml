@@ -22,7 +22,7 @@
   <name value="AllergyIntolerance"/>
   <title value="AllergyIntolerance"/>
   <status value="active"/>
-  <date value="2024-08-27T08:48:41+00:00"/>
+  <date value="2024-08-29T09:15:36+00:00"/>
   <publisher value="RIVO-NN HL7NL"/>
   <contact>
     <name value="RIVO-NN"/>
@@ -152,18 +152,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="Entity. Role, or Act"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="Observation[classCode=OBS, moodCode=EVN]"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="clinical.general"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.1"/>
         <comment value="AllergyIntolerance"/>
@@ -177,6 +165,18 @@
         <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
         <map value="NL-CM:8.2.1"/>
         <comment value="AllergyIntolerance"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Entity. Role, or Act"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Observation[classCode=OBS, moodCode=EVN]"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="clinical.general"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.id">
@@ -371,6 +371,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.6"/>
+        <comment value="IdentificationNumber"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="IAM-7"/>
       </mapping>
@@ -381,11 +386,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="id"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.6"/>
-        <comment value="IdentificationNumber"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.clinicalStatus">
@@ -415,17 +415,17 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
+        <map value="NL-CM:8.2.5"/>
+        <comment value="AllergyStatus. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/AllergieStatusCodelijst-to-allergy-status"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value="Observation ACT&#xA;.inboundRelationship[typeCode=COMP].source[classCode=OBS, code=&quot;clinicalStatus&quot;, moodCode=EVN].value"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
         <map value="status"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
-        <map value="NL-CM:8.2.5"/>
-        <comment value="AllergyStatus. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/AllergieStatusCodelijst-to-allergy-status"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.clinicalStatus.id">
@@ -703,17 +703,17 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
+        <map value="NL-CM:8.2.5"/>
+        <comment value="AllergyStatus (for Nullified only)"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value="Observation ACT&#xA;.inboundRelationship[typeCode=COMP].source[classCode=OBS, code=&quot;verificationStatus&quot;, moodCode=EVN].value"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
         <map value="status"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
-        <map value="NL-CM:8.2.5"/>
-        <comment value="AllergyStatus (for Nullified only)"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.type">
@@ -1354,18 +1354,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="v2"/>
-        <map value="AL1-3 / IAM-3"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="substance/product:&#xD;&#xD;.participation[typeCode=CAGNT].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]&#xD;&#xD;negated/excluded substance/product:&#xD;&#xD;.participation[typeCode=CAGNT, negationInd=true].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]&#xD;&#xD;positive or negated/excluded condition/situation:&#xD;&#xD;Observation.code=ASSERTION; Observation.value"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="what"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.2"/>
         <comment value="CausativeSubstance"/>
@@ -1379,6 +1367,18 @@
         <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
         <map value="NL-CM:8.2.2"/>
         <comment value="CausativeAgent"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="AL1-3 / IAM-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="substance/product:&#xD;&#xD;.participation[typeCode=CAGNT].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]&#xD;&#xD;negated/excluded substance/product:&#xD;&#xD;.participation[typeCode=CAGNT, negationInd=true].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]&#xD;&#xD;positive or negated/excluded condition/situation:&#xD;&#xD;Observation.code=ASSERTION; Observation.value"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="what"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.code.id">
@@ -2716,6 +2716,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.11"/>
+        <comment value="Subject"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="(PID-3)"/>
       </mapping>
@@ -2726,11 +2731,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="who.focus"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.11"/>
-        <comment value="Subject"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.onset[x]">
@@ -2785,14 +2785,6 @@
         <code value="dateTime"/>
       </type>
       <mapping>
-        <identity value="rim"/>
-        <map value="effectiveTime.low"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="when.init"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.6"/>
         <comment value="StartDateTime"/>
@@ -2811,6 +2803,14 @@
         <identity value="hcim-basicelements-v1.0-2017EN"/>
         <map value="NL-CM:0.0.14"/>
         <comment value="DateTime"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="effectiveTime.low"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="when.init"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.assertedDate">
@@ -2862,17 +2862,17 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/>
       </type>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.7"/>
+        <comment value="Author"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value=".participation[typeCode=AUT].role"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
         <map value="who.author"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.7"/>
-        <comment value="Author"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.recorder.id">
@@ -3038,6 +3038,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.2"/>
+        <comment value="InformationSource"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="IAM-14 (if patient) / IAM-18 (if practitioner)"/>
       </mapping>
@@ -3048,11 +3053,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="who.source"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.2"/>
-        <comment value="InformationSource"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.asserter.id">
@@ -3207,10 +3207,6 @@
         <code value="dateTime"/>
       </type>
       <mapping>
-        <identity value="rim"/>
-        <map value="outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code &lt;= CommonClinicalObservationType, value &lt;= ObservationValue (Reaction Type)].effectiveTime"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.8"/>
         <comment value="LastReactionDateTime"/>
@@ -3224,6 +3220,10 @@
         <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
         <map value="NL-CM:8.2.8"/>
         <comment value="LastReactionDateTime"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code &lt;= CommonClinicalObservationType, value &lt;= ObservationValue (Reaction Type)].effectiveTime"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.note">
@@ -3576,14 +3576,6 @@
         <code value="string"/>
       </type>
       <mapping>
-        <identity value="v2"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="Act.text"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.9"/>
         <comment value="Explanation"/>
@@ -3597,6 +3589,14 @@
         <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
         <map value="NL-CM:8.2.9"/>
         <comment value="Comment"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction">
@@ -3623,10 +3623,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code &lt;= CommonClinicalObservationType, value &lt;= ObservationValue (Reaction Type)]"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.10"/>
         <comment value="Reaction"/>
@@ -3640,6 +3636,10 @@
         <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
         <map value="NL-CM:8.2.10"/>
         <comment value="Reaction"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code &lt;= CommonClinicalObservationType, value &lt;= ObservationValue (Reaction Type)]"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.id">
@@ -3736,10 +3736,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value="outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code &lt;= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.12"/>
         <comment value="SpecificSubstance"/>
@@ -3753,6 +3749,10 @@
         <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
         <map value="NL-CM:8.2.12"/>
         <comment value="SpecificSubstance"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code &lt;= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.substance.id">
@@ -5096,14 +5096,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="v2"/>
-        <map value="AL1-5"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="code"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.11"/>
         <comment value="Symptom"/>
@@ -5117,6 +5109,14 @@
         <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
         <map value="NL-CM:8.2.11"/>
         <comment value="Symptom"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="AL1-5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.manifestation.id">
@@ -5252,10 +5252,6 @@
         <code value="string"/>
       </type>
       <mapping>
-        <identity value="rim"/>
-        <map value="text"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.13"/>
         <comment value="ReactionDescription"/>
@@ -5269,6 +5265,10 @@
         <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
         <map value="NL-CM:8.2.13"/>
         <comment value="ReactionDescription"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="text"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.onset">
@@ -5287,14 +5287,6 @@
         <code value="dateTime"/>
       </type>
       <mapping>
-        <identity value="v2"/>
-        <map value="AL1-6"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="effectiveTime.low"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.17"/>
         <comment value="ReactionTime"/>
@@ -5308,6 +5300,14 @@
         <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
         <map value="NL-CM:8.2.17"/>
         <comment value="ReactionTime"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="AL1-6"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="effectiveTime.low"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.severity">
@@ -5334,10 +5334,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value="inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=SEV, value &lt;= SeverityObservation (Severity Level)]"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.14"/>
         <comment value="Severity. See for details the ConceptMap http://nictiz.nl/fhir/ConceptMap/ErnstCodelijst-to-AllergyIntoleranceSeverity"/>
@@ -5351,6 +5347,10 @@
         <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
         <map value="NL-CM:8.2.14"/>
         <comment value="Severity. See for details the ConceptMap http://nictiz.nl/fhir/ConceptMap/ErnstCodelijst-to-AllergyIntoleranceSeverity"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=SEV, value &lt;= SeverityObservation (Severity Level)]"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.severity.id">
@@ -5548,10 +5548,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.14"/>
         <comment value="Severity"/>
@@ -5565,6 +5561,10 @@
         <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
         <map value="NL-CM:8.2.14"/>
         <comment value="Severity"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.severity.value">
@@ -5619,10 +5619,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value="outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code &lt;= ExposureCode].routeCode"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-allergyintolerance-v1.0.2-2015EN"/>
         <map value="NL-CM:8.2.15"/>
         <comment value="MannerOfExposure"/>
@@ -5636,6 +5632,10 @@
         <identity value="hcim-allergyintolerance-v3.2-2017EN"/>
         <map value="NL-CM:8.2.15"/>
         <comment value="RouteOfExposure"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code &lt;= ExposureCode].routeCode"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.note">

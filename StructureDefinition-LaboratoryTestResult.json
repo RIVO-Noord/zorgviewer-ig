@@ -10,7 +10,7 @@
   "name" : "LaboratoryTestResult",
   "title" : "LaboratoryTestResult",
   "status" : "active",
-  "date" : "2024-08-27T08:48:41+00:00",
+  "date" : "2024-08-29T09:15:36+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -157,6 +157,36 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Observation"
       }],
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
+        "map" : "NL-CM:13.1.1",
+        "comment" : "LaboratoryTestResult"
+      },
+      {
+        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:13.1.1",
+        "comment" : "LaboratoryTestResult"
+      },
+      {
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.1",
+        "comment" : "LaboratoryTestResult"
+      },
+      {
+        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
+        "map" : "NL-CM:13.1.3",
+        "comment" : "LaboratoryTest"
+      },
+      {
+        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:13.1.3",
+        "comment" : "LaboratoryTest"
+      },
+      {
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.3",
+        "comment" : "LaboratoryTest"
+      },
+      {
         "identity" : "rim",
         "map" : "Entity. Role, or Act"
       },
@@ -179,36 +209,6 @@
       {
         "identity" : "w5",
         "map" : "clinical.diagnostics"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
-        "map" : "NL-CM:13.1.1",
-        "comment" : "LaboratoryTestResult"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:13.1.1",
-        "comment" : "LaboratoryTestResult"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.1",
-        "comment" : "LaboratoryTestResult"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
-        "map" : "NL-CM:13.1.3",
-        "comment" : "LaboratoryTest"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:13.1.3",
-        "comment" : "LaboratoryTest"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.3",
-        "comment" : "LaboratoryTest"
       }]
     },
     {
@@ -415,6 +415,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.6",
+        "comment" : "IdentificationNumber"
+      },
+      {
         "identity" : "workflow",
         "map" : "Event.identifier"
       },
@@ -429,11 +434,6 @@
       {
         "identity" : "w5",
         "map" : "id"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.6",
-        "comment" : "IdentificationNumber"
       }]
     },
     {
@@ -482,6 +482,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.34",
+        "comment" : "Contains Requester::HealthProfessional"
+      },
+      {
         "identity" : "workflow",
         "map" : "Event.basedOn"
       },
@@ -492,11 +497,6 @@
       {
         "identity" : "rim",
         "map" : ".outboundRelationship[typeCode=FLFS].target"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.34",
-        "comment" : "Contains Requester::HealthProfessional"
       }]
     },
     {
@@ -1244,14 +1244,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".outboundRelationship[typeCode=\"COMP].target[classCode=\"LIST\", moodCode=\"EVN\"].code"
-      },
-      {
-        "identity" : "w5",
-        "map" : "class"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.7",
         "comment" : "ResultType"
@@ -1265,6 +1257,14 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.7",
         "comment" : "ResultType"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=\"COMP].target[classCode=\"LIST\", moodCode=\"EVN\"].code"
+      },
+      {
+        "identity" : "w5",
+        "map" : "class"
       }]
     },
     {
@@ -1300,30 +1300,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "workflow",
-        "map" : "Event.code"
-      },
-      {
-        "identity" : "sct-concept",
-        "map" : "< 363787002 |Observable entity| OR < 386053000 |Evaluation procedure|"
-      },
-      {
-        "identity" : "v2",
-        "map" : "OBX-3"
-      },
-      {
-        "identity" : "rim",
-        "map" : "code"
-      },
-      {
-        "identity" : "sct-attr",
-        "map" : "116680003 |Is a|"
-      },
-      {
-        "identity" : "w5",
-        "map" : "what"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.4",
         "comment" : "Test"
@@ -1352,6 +1328,30 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.8",
         "comment" : "TestCode"
+      },
+      {
+        "identity" : "workflow",
+        "map" : "Event.code"
+      },
+      {
+        "identity" : "sct-concept",
+        "map" : "< 363787002 |Observable entity| OR < 386053000 |Evaluation procedure|"
+      },
+      {
+        "identity" : "v2",
+        "map" : "OBX-3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "code"
+      },
+      {
+        "identity" : "sct-attr",
+        "map" : "116680003 |Is a|"
+      },
+      {
+        "identity" : "w5",
+        "map" : "what"
       }]
     },
     {
@@ -1506,6 +1506,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.11",
+        "comment" : "Subject"
+      },
+      {
         "identity" : "workflow",
         "map" : "Event.subject"
       },
@@ -1520,11 +1525,6 @@
       {
         "identity" : "w5",
         "map" : "who.focus"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.11",
-        "comment" : "Subject"
       }]
     },
     {
@@ -1600,6 +1600,26 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
+        "map" : "NL-CM:13.1.13",
+        "comment" : "TestDateTime"
+      },
+      {
+        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:13.1.13",
+        "comment" : "TestDateTime"
+      },
+      {
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.13",
+        "comment" : "TestDateTime"
+      },
+      {
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.14",
+        "comment" : "DateTime"
+      },
+      {
         "identity" : "workflow",
         "map" : "Event.occurrence[x]"
       },
@@ -1614,26 +1634,6 @@
       {
         "identity" : "w5",
         "map" : "when.done"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.14",
-        "comment" : "DateTime"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
-        "map" : "NL-CM:13.1.13",
-        "comment" : "TestDateTime"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:13.1.13",
-        "comment" : "TestDateTime"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.13",
-        "comment" : "TestDateTime"
       }]
     },
     {
@@ -1659,6 +1659,26 @@
       "mustSupport" : true,
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
+        "map" : "NL-CM:13.1.13",
+        "comment" : "TestDateTime"
+      },
+      {
+        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:13.1.13",
+        "comment" : "TestDateTime"
+      },
+      {
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.13",
+        "comment" : "TestDateTime"
+      },
+      {
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.14",
+        "comment" : "DateTime"
+      },
+      {
         "identity" : "workflow",
         "map" : "Event.occurrence[x]"
       },
@@ -1673,26 +1693,6 @@
       {
         "identity" : "w5",
         "map" : "when.done"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.14",
-        "comment" : "DateTime"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
-        "map" : "NL-CM:13.1.13",
-        "comment" : "TestDateTime"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:13.1.13",
-        "comment" : "TestDateTime"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.13",
-        "comment" : "TestDateTime"
       }]
     },
     {
@@ -1756,6 +1756,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.7",
+        "comment" : "Author"
+      },
+      {
         "identity" : "workflow",
         "map" : "Event.performer"
       },
@@ -1770,11 +1775,6 @@
       {
         "identity" : "w5",
         "map" : "who.actor"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.7",
-        "comment" : "Author"
       }]
     },
     {
@@ -1948,6 +1948,21 @@
       "condition" : ["obs-7"],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
+        "map" : "NL-CM:13.1.10",
+        "comment" : "TestResult"
+      },
+      {
+        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:13.1.10",
+        "comment" : "TestResult"
+      },
+      {
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.10",
+        "comment" : "TestResult"
+      },
+      {
         "identity" : "workflow",
         "map" : "Event.notDone, Event.notDoneReason  (maps to valeu[x] or dataAbsentReason)"
       },
@@ -1966,21 +1981,6 @@
       {
         "identity" : "sct-attr",
         "map" : "363714003 |Interprets|"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
-        "map" : "NL-CM:13.1.10",
-        "comment" : "TestResult"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:13.1.10",
-        "comment" : "TestResult"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.10",
-        "comment" : "TestResult"
       }]
     },
     {
@@ -2006,6 +2006,21 @@
       "mustSupport" : true,
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
+        "map" : "NL-CM:13.1.10",
+        "comment" : "TestResult"
+      },
+      {
+        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:13.1.10",
+        "comment" : "TestResult"
+      },
+      {
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.10",
+        "comment" : "TestResult"
+      },
+      {
         "identity" : "workflow",
         "map" : "Event.notDone, Event.notDoneReason  (maps to valeu[x] or dataAbsentReason)"
       },
@@ -2024,21 +2039,6 @@
       {
         "identity" : "sct-attr",
         "map" : "363714003 |Interprets|"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
-        "map" : "NL-CM:13.1.10",
-        "comment" : "TestResult"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:13.1.10",
-        "comment" : "TestResult"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.10",
-        "comment" : "TestResult"
       }]
     },
     {
@@ -2914,18 +2914,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "C*E.1-8, C*E.10-22"
-      },
-      {
-        "identity" : "rim",
-        "map" : "union(., ./translation)"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.14",
         "comment" : "ResultFlags"
@@ -2939,6 +2927,18 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.14",
         "comment" : "ResultFlags - see ConceptMap 'HCIM InterpretatieVlaggenCodelijst to Observation Interpretation Codes'"
+      },
+      {
+        "identity" : "v2",
+        "map" : "C*E.1-8, C*E.10-22"
+      },
+      {
+        "identity" : "rim",
+        "map" : "union(., ./translation)"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
       }]
     },
     {
@@ -3205,18 +3205,6 @@
         "code" : "string"
       }],
       "mapping" : [{
-        "identity" : "workflow",
-        "map" : "Event.note"
-      },
-      {
-        "identity" : "v2",
-        "map" : "NTE.3 (partner NTE to OBX, or sometimes another (child?) OBX)"
-      },
-      {
-        "identity" : "rim",
-        "map" : "subjectOf.observationEvent[code=\"annotation\"].value"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.5",
         "comment" : "Explanation"
@@ -3235,6 +3223,18 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.32",
         "comment" : "ResultInterpretation"
+      },
+      {
+        "identity" : "workflow",
+        "map" : "Event.note"
+      },
+      {
+        "identity" : "v2",
+        "map" : "NTE.3 (partner NTE to OBX, or sometimes another (child?) OBX)"
+      },
+      {
+        "identity" : "rim",
+        "map" : "subjectOf.observationEvent[code=\"annotation\"].value"
       }]
     },
     {
@@ -3307,14 +3307,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "OBX-17"
-      },
-      {
-        "identity" : "rim",
-        "map" : "methodCode"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.9",
         "comment" : "TestMethod"
@@ -3328,6 +3320,14 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.9",
         "comment" : "TestMethod"
+      },
+      {
+        "identity" : "v2",
+        "map" : "OBX-17"
+      },
+      {
+        "identity" : "rim",
+        "map" : "methodCode"
       }]
     },
     {
@@ -3350,6 +3350,21 @@
       }],
       "mustSupport" : true,
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
+        "map" : "NL-CM:13.1.2",
+        "comment" : "Specimen"
+      },
+      {
+        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:13.1.2",
+        "comment" : "Specimen"
+      },
+      {
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.2",
+        "comment" : "Specimen"
+      },
+      {
         "identity" : "sct-concept",
         "map" : "< 123038009 |Specimen|"
       },
@@ -3364,21 +3379,6 @@
       {
         "identity" : "sct-attr",
         "map" : "704319004 |Inherent in|"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
-        "map" : "NL-CM:13.1.2",
-        "comment" : "Specimen"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:13.1.2",
-        "comment" : "Specimen"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.2",
-        "comment" : "Specimen"
       }]
     },
     {
@@ -3547,14 +3547,6 @@
       }],
       "condition" : ["obs-3"],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "OBX-7"
-      },
-      {
-        "identity" : "rim",
-        "map" : "value:IVL_PQ.low"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.12",
         "comment" : "LowerReferenceLimit"
@@ -3568,6 +3560,14 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.12",
         "comment" : "ReferenceRangeLowerLimit"
+      },
+      {
+        "identity" : "v2",
+        "map" : "OBX-7"
+      },
+      {
+        "identity" : "rim",
+        "map" : "value:IVL_PQ.low"
       }]
     },
     {
@@ -3794,14 +3794,6 @@
       }],
       "condition" : ["obs-3"],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "OBX-7"
-      },
-      {
-        "identity" : "rim",
-        "map" : "value:IVL_PQ.high"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.11",
         "comment" : "UpperReferenceLimit"
@@ -3815,6 +3807,14 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.11",
         "comment" : "ReferenceRangeUpperLimit"
+      },
+      {
+        "identity" : "v2",
+        "map" : "OBX-7"
+      },
+      {
+        "identity" : "rim",
+        "map" : "value:IVL_PQ.high"
       }]
     },
     {
@@ -4178,14 +4178,6 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "Relationships established by OBX-4 usage"
-      },
-      {
-        "identity" : "rim",
-        "map" : "outBoundRelationship"
-      },
-      {
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.33",
         "comment" : "RelatedResults"
@@ -4194,6 +4186,14 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.3",
         "comment" : "LaboratoryTest"
+      },
+      {
+        "identity" : "v2",
+        "map" : "Relationships established by OBX-4 usage"
+      },
+      {
+        "identity" : "rim",
+        "map" : "outBoundRelationship"
       }]
     },
     {
@@ -4360,14 +4360,6 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "containment by OBX-4?"
-      },
-      {
-        "identity" : "rim",
-        "map" : "outBoundRelationship[typeCode=COMP]"
-      },
-      {
         "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
         "map" : "NL-CM:13.1.3",
         "comment" : "LaboratoryTest"
@@ -4381,6 +4373,14 @@
         "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
         "map" : "NL-CM:13.1.3",
         "comment" : "LaboratoryTest"
+      },
+      {
+        "identity" : "v2",
+        "map" : "containment by OBX-4?"
+      },
+      {
+        "identity" : "rim",
+        "map" : "outBoundRelationship[typeCode=COMP]"
       }]
     },
     {
@@ -4479,6 +4479,21 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
+        "map" : "NL-CM:13.1.8",
+        "comment" : "TestName"
+      },
+      {
+        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:13.1.8",
+        "comment" : "TestName"
+      },
+      {
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.8",
+        "comment" : "TestCode"
+      },
+      {
         "identity" : "sct-concept",
         "map" : "< 363787002 |Observable entity| OR \r< 386053000 |Evaluation procedure|"
       },
@@ -4493,21 +4508,6 @@
       {
         "identity" : "w5",
         "map" : "what"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
-        "map" : "NL-CM:13.1.8",
-        "comment" : "TestName"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:13.1.8",
-        "comment" : "TestName"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.8",
-        "comment" : "TestCode"
       }]
     },
     {
@@ -4557,6 +4557,21 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
+        "map" : "NL-CM:13.1.10",
+        "comment" : "TestResult"
+      },
+      {
+        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:13.1.10",
+        "comment" : "TestResult"
+      },
+      {
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.10",
+        "comment" : "TestResult"
+      },
+      {
         "identity" : "sct-concept",
         "map" : "363714003 |Interprets| < 441742003 |Evaluation finding|"
       },
@@ -4571,21 +4586,6 @@
       {
         "identity" : "sct-attr",
         "map" : "363714003 |Interprets|"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
-        "map" : "NL-CM:13.1.10",
-        "comment" : "TestResult"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:13.1.10",
-        "comment" : "TestResult"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.10",
-        "comment" : "TestResult"
       }]
     },
     {
@@ -4653,6 +4653,21 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
+        "map" : "NL-CM:13.1.14",
+        "comment" : "ResultFlags"
+      },
+      {
+        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:13.1.14",
+        "comment" : "ResultFlags"
+      },
+      {
+        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
+        "map" : "NL-CM:13.1.14",
+        "comment" : "ResultFlags"
+      },
+      {
         "identity" : "sct-concept",
         "map" : "< 260245000 |Findings values|"
       },
@@ -4667,21 +4682,6 @@
       {
         "identity" : "sct-attr",
         "map" : "363713009 |Has interpretation|"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v1.2.2-2015EN",
-        "map" : "NL-CM:13.1.14",
-        "comment" : "ResultFlags"
-      },
-      {
-        "identity" : "hcim-laboratorytestresultfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:13.1.14",
-        "comment" : "ResultFlags"
-      },
-      {
-        "identity" : "hcim-laboratorytestresult-v4.1-2017EN",
-        "map" : "NL-CM:13.1.14",
-        "comment" : "ResultFlags"
       }]
     },
     {

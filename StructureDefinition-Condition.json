@@ -10,7 +10,7 @@
   "name" : "Condition",
   "title" : "Condition",
   "status" : "active",
-  "date" : "2024-08-27T08:48:41+00:00",
+  "date" : "2024-08-29T09:15:36+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -163,26 +163,6 @@
         "xpath" : "f:abatementDateTime or f:abatementPeriod"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "Entity. Role, or Act"
-      },
-      {
-        "identity" : "sct-concept",
-        "map" : "< 243796009 |Situation with explicit context|:\n246090004 |Associated finding| =\n((< 404684003 |Clinical finding| MINUS\n<< 420134006 |Propensity to adverse reactions| MINUS \n<< 473010000 |Hypersensitivity condition| MINUS \n<< 79899007 |Drug interaction| MINUS\n<< 69449002 |Drug action| MINUS \n<< 441742003 |Evaluation finding| MINUS \n<< 307824009 |Administrative status| MINUS \n<< 385356007 |Tumor stage finding|) OR\n< 272379006 |Event|)"
-      },
-      {
-        "identity" : "v2",
-        "map" : "PPR message"
-      },
-      {
-        "identity" : "rim",
-        "map" : "Observation[classCode=OBS, moodCode=EVN, code=ASSERTION, value<Diagnosis]"
-      },
-      {
-        "identity" : "w5",
-        "map" : "clinical.general"
-      },
-      {
         "identity" : "hcim-concernfortransfer-v1.2-2015EN",
         "map" : "NL-CM:5.1.1",
         "comment" : "Concern"
@@ -206,6 +186,26 @@
         "identity" : "hcim-problem-v4.1-2017EN",
         "map" : "NL-CM:5.1.1",
         "comment" : "Problem"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Entity. Role, or Act"
+      },
+      {
+        "identity" : "sct-concept",
+        "map" : "< 243796009 |Situation with explicit context|:\n246090004 |Associated finding| =\n((< 404684003 |Clinical finding| MINUS\n<< 420134006 |Propensity to adverse reactions| MINUS \n<< 473010000 |Hypersensitivity condition| MINUS \n<< 79899007 |Drug interaction| MINUS\n<< 69449002 |Drug action| MINUS \n<< 441742003 |Evaluation finding| MINUS \n<< 307824009 |Administrative status| MINUS \n<< 385356007 |Tumor stage finding|) OR\n< 272379006 |Event|)"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PPR message"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Observation[classCode=OBS, moodCode=EVN, code=ASSERTION, value<Diagnosis]"
+      },
+      {
+        "identity" : "w5",
+        "map" : "clinical.general"
       }]
     },
     {
@@ -411,17 +411,17 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.6",
+        "comment" : "IdentificationNumber"
+      },
+      {
         "identity" : "rim",
         "map" : ".id"
       },
       {
         "identity" : "w5",
         "map" : "id"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.6",
-        "comment" : "IdentificationNumber"
       }]
     },
     {
@@ -453,6 +453,21 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-concernfortransfer-v1.2-2015EN",
+        "map" : "NL-CM:5.1.4",
+        "comment" : "ProblemStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes) is available that maps ProblemStatusCodelist to the condition-clinical value set."
+      },
+      {
+        "identity" : "hcim-concernfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:5.1.4",
+        "comment" : "ProblemStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes) is available that maps ProblemStatusCodelist to the condition-clinical value set."
+      },
+      {
+        "identity" : "hcim-problem-v4.1-2017EN",
+        "map" : "NL-CM:5.1.4",
+        "comment" : "ProblemStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes) is available that maps ProblemStatusCodelist to the condition-clinical value set."
+      },
+      {
         "identity" : "sct-concept",
         "map" : "< 303105007 |Disease phases|"
       },
@@ -467,21 +482,6 @@
       {
         "identity" : "w5",
         "map" : "status"
-      },
-      {
-        "identity" : "hcim-concernfortransfer-v1.2-2015EN",
-        "map" : "NL-CM:5.1.4",
-        "comment" : "ProblemStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes) is available that maps ProblemStatusCodelist to the condition-clinical value set."
-      },
-      {
-        "identity" : "hcim-concernfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:5.1.4",
-        "comment" : "ProblemStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes) is available that maps ProblemStatusCodelist to the condition-clinical value set."
-      },
-      {
-        "identity" : "hcim-problem-v4.1-2017EN",
-        "map" : "NL-CM:5.1.4",
-        "comment" : "ProblemStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes) is available that maps ProblemStatusCodelist to the condition-clinical value set."
       }]
     },
     {
@@ -688,10 +688,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "N/A"
-      },
-      {
         "identity" : "hcim-concernfortransfer-v1.2-2015EN",
         "map" : "NL-CM:5.1.4",
         "comment" : "ProblemStatus"
@@ -705,6 +701,10 @@
         "identity" : "hcim-problem-v4.1-2017EN",
         "map" : "NL-CM:5.1.4",
         "comment" : "ProblemStatus. The relationship between the HCIM codes and the Resource codes is covered in the ConceptMaps: ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes and Condition-Clinical-Status-Codes-to-ProbleemStatusCodelijst"
+      },
+      {
+        "identity" : "rim",
+        "map" : "N/A"
       }]
     },
     {
@@ -769,6 +769,11 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-problem-v4.1-2017EN",
+        "map" : "NL-CM:5.1.10",
+        "comment" : "VerificationStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/VerificatieStatusCodelijst-to-ConditionVerificationStatus) is available."
+      },
+      {
         "identity" : "sct-concept",
         "map" : "< 410514004 |Finding context value|"
       },
@@ -787,11 +792,6 @@
       {
         "identity" : "w5",
         "map" : "status"
-      },
-      {
-        "identity" : "hcim-problem-v4.1-2017EN",
-        "map" : "NL-CM:5.1.10",
-        "comment" : "VerificationStatus. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/VerificatieStatusCodelijst-to-ConditionVerificationStatus) is available."
       }]
     },
     {
@@ -1066,6 +1066,21 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-concernfortransfer-v1.2-2015EN",
+        "map" : "NL-CM:5.1.8",
+        "comment" : "ProblemType"
+      },
+      {
+        "identity" : "hcim-concernfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:5.1.8",
+        "comment" : "ProblemType"
+      },
+      {
+        "identity" : "hcim-problem-v4.1-2017EN",
+        "map" : "NL-CM:5.1.8",
+        "comment" : "ProblemType"
+      },
+      {
         "identity" : "sct-concept",
         "map" : "< 404684003 |Clinical finding|"
       },
@@ -1080,21 +1095,6 @@
       {
         "identity" : "w5",
         "map" : "class"
-      },
-      {
-        "identity" : "hcim-concernfortransfer-v1.2-2015EN",
-        "map" : "NL-CM:5.1.8",
-        "comment" : "ProblemType"
-      },
-      {
-        "identity" : "hcim-concernfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:5.1.8",
-        "comment" : "ProblemType"
-      },
-      {
-        "identity" : "hcim-problem-v4.1-2017EN",
-        "map" : "NL-CM:5.1.8",
-        "comment" : "ProblemType"
       }]
     },
     {
@@ -1172,6 +1172,21 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-concernfortransfer-v1.2-2015EN",
+        "map" : "NL-CM:5.1.3",
+        "comment" : "ProblemName"
+      },
+      {
+        "identity" : "hcim-concernfortransfer-v3.0-2016EN",
+        "map" : "NL-CM:5.1.3",
+        "comment" : "ProblemName"
+      },
+      {
+        "identity" : "hcim-problem-v4.1-2017EN",
+        "map" : "NL-CM:5.1.3",
+        "comment" : "ProblemName"
+      },
+      {
         "identity" : "sct-concept",
         "map" : "code 246090004 |Associated finding| (< 404684003 |Clinical finding| MINUS\n<< 420134006 |Propensity to adverse reactions| MINUS \n<< 473010000 |Hypersensitivity condition| MINUS \n<< 79899007 |Drug interaction| MINUS\n<< 69449002 |Drug action| MINUS \n<< 441742003 |Evaluation finding| MINUS \n<< 307824009 |Administrative status| MINUS \n<< 385356007 |Tumor stage finding|) \nOR < 413350009 |Finding with explicit context|\nOR < 272379006 |Event|"
       },
@@ -1190,21 +1205,6 @@
       {
         "identity" : "w5",
         "map" : "what"
-      },
-      {
-        "identity" : "hcim-concernfortransfer-v1.2-2015EN",
-        "map" : "NL-CM:5.1.3",
-        "comment" : "ProblemName"
-      },
-      {
-        "identity" : "hcim-concernfortransfer-v3.0-2016EN",
-        "map" : "NL-CM:5.1.3",
-        "comment" : "ProblemName"
-      },
-      {
-        "identity" : "hcim-problem-v4.1-2017EN",
-        "map" : "NL-CM:5.1.3",
-        "comment" : "ProblemName"
       }]
     },
     {
@@ -1352,6 +1352,11 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-problem-v4.1-2017EN",
+        "map" : "NL-CM:5.1.11",
+        "comment" : "ProblemAnatomicalLocation"
+      },
+      {
         "identity" : "sct-concept",
         "map" : "< 442083009  |Anatomical or acquired body structure|"
       },
@@ -1362,11 +1367,6 @@
       {
         "identity" : "sct-attr",
         "map" : "363698007"
-      },
-      {
-        "identity" : "hcim-problem-v4.1-2017EN",
-        "map" : "NL-CM:5.1.11",
-        "comment" : "ProblemAnatomicalLocation"
       }]
     },
     {
@@ -1560,13 +1560,13 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "N/A"
-      },
-      {
         "identity" : "hcim-problem-v4.1-2017EN",
         "map" : "NL-CM:5.1.12",
         "comment" : "ProblemLaterality"
+      },
+      {
+        "identity" : "rim",
+        "map" : "N/A"
       }]
     },
     {
@@ -1655,6 +1655,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.11",
+        "comment" : "Subject"
+      },
+      {
         "identity" : "v2",
         "map" : "PID-3"
       },
@@ -1665,11 +1670,6 @@
       {
         "identity" : "w5",
         "map" : "who.focus"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.11",
-        "comment" : "Subject"
       }]
     },
     {
@@ -1767,18 +1767,6 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "PRB-16"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".effectiveTime.low or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"age at onset\"].value"
-      },
-      {
-        "identity" : "w5",
-        "map" : "when.init"
-      },
-      {
         "identity" : "hcim-basicelements-v1.0-2017EN",
         "map" : "NL-CM:0.0.14",
         "comment" : "DateTime"
@@ -1797,6 +1785,18 @@
         "identity" : "hcim-concernfortransfer-v3.0-2016EN",
         "map" : "NL-CM:5.1.6",
         "comment" : "ProblemStartDate"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PRB-16"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".effectiveTime.low or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"age at onset\"].value"
+      },
+      {
+        "identity" : "w5",
+        "map" : "when.init"
       }]
     },
     {
@@ -1854,17 +1854,17 @@
       }],
       "condition" : ["con-4"],
       "mapping" : [{
+        "identity" : "hcim-problem-v4.1-2017EN",
+        "map" : "NL-CM:5.1.9",
+        "comment" : "ProblemEndDate"
+      },
+      {
         "identity" : "rim",
         "map" : ".effectiveTime.high or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"age at remission\"].value or .inboundRelationship[typeCode=SUBJ]source[classCode=CONC, moodCode=EVN].status=completed"
       },
       {
         "identity" : "w5",
         "map" : "when.done"
-      },
-      {
-        "identity" : "hcim-problem-v4.1-2017EN",
-        "map" : "NL-CM:5.1.9",
-        "comment" : "ProblemEndDate"
       }]
     },
     {
@@ -1923,6 +1923,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.2",
+        "comment" : "InformationSource"
+      },
+      {
         "identity" : "v2",
         "map" : "REL-7.1 identifier + REL-7.12 type code"
       },
@@ -1933,11 +1938,6 @@
       {
         "identity" : "w5",
         "map" : "who.author"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.2",
-        "comment" : "InformationSource"
       }]
     },
     {
@@ -2451,14 +2451,6 @@
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "NTE child of PRB"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"annotation\"].value"
-      },
-      {
         "identity" : "hcim-concernfortransfer-v1.2-2015EN",
         "map" : "NL-CM:5.1.5",
         "comment" : "Explanation"
@@ -2472,6 +2464,14 @@
         "identity" : "hcim-problem-v4.1-2017EN",
         "map" : "NL-CM:5.1.5",
         "comment" : "Comment"
+      },
+      {
+        "identity" : "v2",
+        "map" : "NTE child of PRB"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"annotation\"].value"
       }]
     }]
   },

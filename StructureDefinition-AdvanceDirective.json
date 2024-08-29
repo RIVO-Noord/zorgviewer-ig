@@ -10,7 +10,7 @@
   "name" : "AdvanceDirective",
   "title" : "AdvanceDirective",
   "status" : "active",
-  "date" : "2024-08-27T08:48:41+00:00",
+  "date" : "2024-08-29T09:15:36+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -130,18 +130,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Consent"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "Entity. Role, or Act"
-      },
-      {
-        "identity" : "rim",
-        "map" : "FinancialConsent"
-      },
-      {
-        "identity" : "w5",
-        "map" : "infrastructure.information"
-      },
-      {
         "identity" : "hcim-advancedirective-v1.0-2015EN",
         "map" : "NL-CM:7.15.1",
         "comment" : "LivingWill"
@@ -155,6 +143,18 @@
         "identity" : "hcim-advancedirective-v3.1-2017EN",
         "map" : "NL-CM:7.15.1",
         "comment" : "AdvanceDirective"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Entity. Role, or Act"
+      },
+      {
+        "identity" : "rim",
+        "map" : "FinancialConsent"
+      },
+      {
+        "identity" : "w5",
+        "map" : "infrastructure.information"
       }]
     },
     {
@@ -354,14 +354,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
-        "identity" : "rim",
-        "map" : "N/A"
-      },
-      {
         "identity" : "hcim-advancedirective-v1.0-2015EN",
         "map" : "NL-CM:7.15.4",
         "comment" : "Disorder"
@@ -375,6 +367,14 @@
         "identity" : "hcim-advancedirective-v3.1-2017EN",
         "map" : "NL-CM:7.15.4",
         "comment" : "Disorder"
+      },
+      {
+        "identity" : "rim",
+        "map" : "n/a"
+      },
+      {
+        "identity" : "rim",
+        "map" : "N/A"
       }]
     },
     {
@@ -477,17 +477,17 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.6",
+        "comment" : "IdentificationNumber"
+      },
+      {
         "identity" : "rim",
         "map" : ".id"
       },
       {
         "identity" : "w5",
         "map" : "id"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.6",
-        "comment" : "IdentificationNumber"
       }]
     },
     {
@@ -972,14 +972,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "CNTRCT"
-      },
-      {
-        "identity" : "w5",
-        "map" : "class"
-      },
-      {
         "identity" : "hcim-advancedirective-v1.0-2015EN",
         "map" : "NL-CM:7.15.2",
         "comment" : "TypeOfLivingWill"
@@ -993,6 +985,14 @@
         "identity" : "hcim-advancedirective-v3.1-2017EN",
         "map" : "NL-CM:7.15.2",
         "comment" : "LivingWillType"
+      },
+      {
+        "identity" : "rim",
+        "map" : "CNTRCT"
+      },
+      {
+        "identity" : "w5",
+        "map" : "class"
       }]
     },
     {
@@ -1395,14 +1395,6 @@
       "mustSupport" : true,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "FinancialConsent effectiveTime"
-      },
-      {
-        "identity" : "w5",
-        "map" : "when.recorded"
-      },
-      {
         "identity" : "hcim-advancedirective-v1.0-2015EN",
         "map" : "NL-CM:7.15.7",
         "comment" : "LivingWillDate"
@@ -1421,6 +1413,14 @@
         "identity" : "hcim-basicelements-v1.0-2017EN",
         "map" : "NL-CM:0.0.14",
         "comment" : "DateTime"
+      },
+      {
+        "identity" : "rim",
+        "map" : "FinancialConsent effectiveTime"
+      },
+      {
+        "identity" : "w5",
+        "map" : "when.recorded"
       }]
     },
     {
@@ -1445,10 +1445,6 @@
       "mustSupport" : true,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "w5",
-        "map" : "who.actor"
-      },
-      {
         "identity" : "hcim-advancedirective-v1.0-2015EN",
         "map" : "NL-CM:7.15.3",
         "comment" : "Representative"
@@ -1462,6 +1458,10 @@
         "identity" : "hcim-advancedirective-v3.1-2017EN",
         "map" : "NL-CM:7.15.3",
         "comment" : "Representative"
+      },
+      {
+        "identity" : "w5",
+        "map" : "who.actor"
       }]
     },
     {

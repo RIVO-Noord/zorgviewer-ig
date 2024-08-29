@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "Organization"] ; # 
   fhir:title [ fhir:v "Organization"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-08-27T08:48:41+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-29T09:15:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -158,6 +158,18 @@
          fhir:xpath [ fhir:v "/f:identifier/f:system='http://fhir.nl/fhir/NamingSystem/agb-z'" ]
        ] ) ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-healthcareprovider-v1.2-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.2.1" ] ;
+         fhir:comment [ fhir:v "HealthcareProvider" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-healthcareprovider-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.2.1" ] ;
+         fhir:comment [ fhir:v "HealthcareProvider" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-healthcareprovider-v3.1.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.2.1" ] ;
+         fhir:comment [ fhir:v "HealthcareProvider" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "Entity. Role, or Act" ]
        ] [
@@ -172,18 +184,6 @@
        ] [
          fhir:identity [ fhir:v "w5" ] ;
          fhir:map [ fhir:v "administrative.group" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-healthcareprovider-v1.2-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.2.1" ] ;
-         fhir:comment [ fhir:v "HealthcareProvider" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-healthcareprovider-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.2.1" ] ;
-         fhir:comment [ fhir:v "HealthcareProvider" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-healthcareprovider-v3.1.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.2.1" ] ;
-         fhir:comment [ fhir:v "HealthcareProvider" ]
        ] )
      ] [
        fhir:id [ fhir:v "Organization.id" ] ;
@@ -384,18 +384,6 @@
        fhir:condition ( [ fhir:v "org-1" ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XON.10 / XON.3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".scopes[Role](classCode=IDENT)" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "./Identifiers" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "id" ]
-       ] [
          fhir:identity [ fhir:v "hcim-healthcareprovider-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.2.2" ] ;
          fhir:comment [ fhir:v "HealthcareProviderIdentificationNumber" ]
@@ -411,6 +399,18 @@
          fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
          fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XON.10 / XON.3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".scopes[Role](classCode=IDENT)" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "./Identifiers" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "id" ]
        ] )
      ] [
        fhir:id [ fhir:v "Organization.identifier:URA" ] ;
@@ -992,18 +992,6 @@
        fhir:condition ( [ fhir:v "org-1" ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XON.10 / XON.3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".scopes[Role](classCode=IDENT)" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "./Identifiers" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "id" ]
-       ] [
          fhir:identity [ fhir:v "hcim-payer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:1.1.7" ] ;
          fhir:comment [ fhir:v "IdentificationNumber" ]
@@ -1015,6 +1003,18 @@
          fhir:identity [ fhir:v "hcim-payer-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:1.1.7" ] ;
          fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XON.10 / XON.3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".scopes[Role](classCode=IDENT)" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "./Identifiers" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "id" ]
        ] )
      ] [
        fhir:id [ fhir:v "Organization.identifier:UZOVI.id" ] ;
@@ -1281,18 +1281,6 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XON.10 / XON.3" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".scopes[Role](classCode=IDENT)" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "./Identifiers" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "id" ]
-       ] [
          fhir:identity [ fhir:v "hcim-healthcareprovider-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.2.2" ] ;
          fhir:comment [ fhir:v "HealthcareProviderIdentificationNumber" ]
@@ -1308,6 +1296,18 @@
          fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
          fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XON.10 / XON.3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".scopes[Role](classCode=IDENT)" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "./Identifiers" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "id" ]
        ] )
      ] [
        fhir:id [ fhir:v "Organization.identifier:HL7NL.id" ] ;
@@ -1665,18 +1665,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "No equivalent in v2" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".code" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "class" ]
-       ] [
          fhir:identity [ fhir:v "hcim-healthcareprovider-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.2.4" ] ;
          fhir:comment [ fhir:v "OrganizationType" ]
@@ -1688,6 +1676,18 @@
          fhir:identity [ fhir:v "hcim-healthcareprovider-v3.1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.2.4" ] ;
          fhir:comment [ fhir:v "OrganizationType" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "No equivalent in v2" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".code" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "class" ]
        ] )
      ] [
        fhir:id [ fhir:v "Organization.type:organizationType.id" ] ;
@@ -2018,18 +2018,6 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "No equivalent in v2" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".code" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
-         fhir:identity [ fhir:v "w5" ] ;
-         fhir:map [ fhir:v "class" ]
-       ] [
          fhir:identity [ fhir:v "hcim-healthcareprovider-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.2.7" ] ;
          fhir:comment [ fhir:v "DepartmentSpecialty" ]
@@ -2041,6 +2029,18 @@
          fhir:identity [ fhir:v "hcim-healthcareprovider-v3.1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.2.7" ] ;
          fhir:comment [ fhir:v "DepartmentSpecialty" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "No equivalent in v2" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".code" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "class" ]
        ] )
      ] [
        fhir:id [ fhir:v "Organization.type:departmentSpecialty.id" ] ;
@@ -2363,15 +2363,6 @@
        fhir:condition ( [ fhir:v "org-1" ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XON.1" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v ".name" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v ".PreferredName/Name" ]
-       ] [
          fhir:identity [ fhir:v "hcim-healthcareprovider-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.2.3" ] ;
          fhir:comment [ fhir:v "OrganizationName" ]
@@ -2399,6 +2390,15 @@
          fhir:identity [ fhir:v "hcim-healthcareprovider-v3.1.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.2.8" ] ;
          fhir:comment [ fhir:v "OrganizationLocation" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XON.1" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".name" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v ".PreferredName/Name" ]
        ] )
      ] [
        fhir:id [ fhir:v "Organization.alias" ] ;
@@ -2726,17 +2726,17 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Organization"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
+         fhir:identity [ fhir:v "hcim-healthcareprovider-v1.2-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.2.6" ] ;
+         fhir:comment [ fhir:v "TelephoneE-mail" ]
        ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XTN" ]
+         fhir:identity [ fhir:v "hcim-healthcareprovider-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.2.6" ] ;
+         fhir:comment [ fhir:v "TelephoneE-mail" ]
        ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "TEL" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "ContactPoint" ]
+         fhir:identity [ fhir:v "hcim-healthcareprovider-v3.1.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:17.2.6" ] ;
+         fhir:comment [ fhir:v "ContactInformation" ]
        ] [
          fhir:identity [ fhir:v "hcim-contactinformation-v2.0.1-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:0.1.5" ] ;
@@ -2750,18 +2750,6 @@
          fhir:map [ fhir:v "NL-CM:20.6.1" ] ;
          fhir:comment [ fhir:v "ContactInformation" ]
        ] [
-         fhir:identity [ fhir:v "hcim-healthcareprovider-v1.2-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.2.6" ] ;
-         fhir:comment [ fhir:v "TelephoneE-mail" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-healthcareprovider-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.2.6" ] ;
-         fhir:comment [ fhir:v "TelephoneE-mail" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-healthcareprovider-v3.1.1-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:17.2.6" ] ;
-         fhir:comment [ fhir:v "ContactInformation" ]
-       ] [
          fhir:identity [ fhir:v "hcim-payer-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:1.1.12" ] ;
          fhir:comment [ fhir:v "TelephoneE-mail" ]
@@ -2773,6 +2761,18 @@
          fhir:identity [ fhir:v "hcim-payer-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:1.1.12" ] ;
          fhir:comment [ fhir:v "ContactInformation" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XTN" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "TEL" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "ContactPoint" ]
        ] )
      ] [
        fhir:id [ fhir:v "Organization.address" ] ;
@@ -2893,30 +2893,6 @@
          fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Organization"^^xsd:anyURI ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
-         fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XAD" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "AD" ]
-       ] [
-         fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "Address" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-address-v2.0.1-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-addressinformation-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-addressinformation-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:20.5.1" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
-       ] [
          fhir:identity [ fhir:v "hcim-healthcareprovider-v1.2-2015EN" ] ;
          fhir:map [ fhir:v "NL-CM:17.2.5" ] ;
          fhir:comment [ fhir:v "Address" ]
@@ -2940,6 +2916,30 @@
          fhir:identity [ fhir:v "hcim-payer-v3.1-2017EN" ] ;
          fhir:map [ fhir:v "NL-CM:1.1.17" ] ;
          fhir:comment [ fhir:v "AddressInformation" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-address-v2.0.1-2015EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
+         fhir:comment [ fhir:v "AddressInformation" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-addressinformation-v3.0-2016EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
+         fhir:comment [ fhir:v "AddressInformation" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-addressinformation-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:20.5.1" ] ;
+         fhir:comment [ fhir:v "AddressInformation" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "XAD" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "AD" ]
+       ] [
+         fhir:identity [ fhir:v "servd" ] ;
+         fhir:map [ fhir:v "Address" ]
        ] )
      ] [
        fhir:id [ fhir:v "Organization.partOf" ] ;

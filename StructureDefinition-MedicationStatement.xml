@@ -20,7 +20,7 @@
   <name value="MedicationUse"/>
   <title value="MedicationUse"/>
   <status value="active"/>
-  <date value="2024-08-27T08:48:41+00:00"/>
+  <date value="2024-08-29T09:15:36+00:00"/>
   <publisher value="RIVO-NN HL7NL"/>
   <contact>
     <name value="RIVO-NN"/>
@@ -150,6 +150,11 @@
         <source value="http://hl7.org/fhir/StructureDefinition/MedicationStatement"/>
       </constraint>
       <mapping>
+        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
+        <map value="NL-CM:9.11.21338"/>
+        <comment value="MedicationUse"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value="Entity. Role, or Act"/>
       </mapping>
@@ -164,11 +169,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="clinical.medication"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
-        <map value="NL-CM:9.11.21338"/>
-        <comment value="MedicationUse"/>
       </mapping>
     </element>
     <element id="MedicationStatement.id">
@@ -358,17 +358,17 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mapping>
+        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
+        <map value="NL-CM:9.11.22492"/>
+        <comment value="AsAgreedIndicator"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value="n/a"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
-        <map value="NL-CM:9.11.22492"/>
-        <comment value="AsAgreedIndicator"/>
       </mapping>
     </element>
     <element id="MedicationStatement.extension:asAgreedIndicator.id">
@@ -571,17 +571,17 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.7"/>
+        <comment value="Author"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value="n/a"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.7"/>
-        <comment value="Author"/>
       </mapping>
     </element>
     <element id="MedicationStatement.extension:medicationTreatment">
@@ -620,17 +620,17 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mapping>
+        <identity value="Medication-Process-v09"/>
+        <map value="mp-dataelement900-22092"/>
+        <comment value="Medicamenteuze behandeling"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value="n/a"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="Medication-Process-v09"/>
-        <map value="mp-dataelement900-22092"/>
-        <comment value="Medicamenteuze behandeling"/>
       </mapping>
     </element>
     <element id="MedicationStatement.extension:reasonForChangeOrDiscontinuationOfUse">
@@ -809,13 +809,13 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
         <map value="NL-CM:9.11.22493"/>
         <comment value="Reden wijzigen of stoppen gebruik"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
       </mapping>
     </element>
     <element id="MedicationStatement.modifierExtension">
@@ -898,6 +898,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.6"/>
+        <comment value="IdentificationNumber"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="…identifer"/>
       </mapping>
@@ -908,11 +913,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="id"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.6"/>
-        <comment value="IdentificationNumber"/>
       </mapping>
     </element>
     <element id="MedicationStatement.basedOn">
@@ -1050,6 +1050,11 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
+        <map value="NL-CM:9.11.23132"/>
+        <comment value="MedicationUseStopType. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/MedicationUseStopTypeCodeLijst-to-MedicationStatementStatus) is available that maps MedicationUseStopTypeCodeLijst to the MedicationStatementStatus value set."/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="…status"/>
       </mapping>
@@ -1060,11 +1065,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="status"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
-        <map value="NL-CM:9.11.23132"/>
-        <comment value="MedicationUseStopType. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/MedicationUseStopTypeCodeLijst-to-MedicationStatementStatus) is available that maps MedicationUseStopTypeCodeLijst to the MedicationStatementStatus value set."/>
       </mapping>
     </element>
     <element id="MedicationStatement.category">
@@ -1511,6 +1511,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
+        <map value="NL-CM:9.11.21339"/>
+        <comment value="ProductUsed"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="…code"/>
       </mapping>
@@ -1521,11 +1526,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="what"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
-        <map value="NL-CM:9.11.21339"/>
-        <comment value="ProductUsed"/>
       </mapping>
     </element>
     <element id="MedicationStatement.medication[x]:medicationReference.id">
@@ -1702,6 +1702,16 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
+        <map value="NL-CM:9.11.22663"/>
+        <comment value="PeriodOfUse"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.14"/>
+        <comment value="DateTime"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="…occurrence[x]"/>
       </mapping>
@@ -1712,16 +1722,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="when.done"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
-        <map value="NL-CM:9.11.22663"/>
-        <comment value="PeriodOfUse"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.14"/>
-        <comment value="DateTime"/>
       </mapping>
     </element>
     <element id="MedicationStatement.effective[x]:effectivePeriod.id">
@@ -1941,17 +1941,17 @@
       <condition value="per-1"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-timeinterval-v1.0-2017EN"/>
+        <map value="NL-CM:20.3.2"/>
+        <comment value="startDateTime"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="DR.1"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
         <map value="./low"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-timeinterval-v1.0-2017EN"/>
-        <map value="NL-CM:20.3.2"/>
-        <comment value="startDateTime"/>
       </mapping>
     </element>
     <element id="MedicationStatement.effective[x]:effectivePeriod.end">
@@ -1974,17 +1974,17 @@
       <condition value="per-1"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-timeinterval-v1.0-2017EN"/>
+        <map value="NL-CM:20.3.3"/>
+        <comment value="endDateTime"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="DR.2"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
         <map value="./high"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-timeinterval-v1.0-2017EN"/>
-        <map value="NL-CM:20.3.3"/>
-        <comment value="endDateTime"/>
       </mapping>
     </element>
     <element id="MedicationStatement.dateAsserted">
@@ -2009,17 +2009,17 @@
       <mustSupport value="true"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
+        <map value="NL-CM:9.11.22398"/>
+        <comment value="MedicationUseDateTime"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value=".participation[typeCode=AUT].time"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
         <map value="when.recorded"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
-        <map value="NL-CM:9.11.22398"/>
-        <comment value="MedicationUseDateTime"/>
       </mapping>
     </element>
     <element id="MedicationStatement.informationSource">
@@ -2051,17 +2051,17 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization"/>
       </type>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.2"/>
+        <comment value="InformationSource"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value=".participation[typeCode=INF].role[classCode=PAT, or codes for Practioner or Related Person (if PAT is the informer, then syntax for self-reported =true)"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
         <map value="who.source"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.2"/>
-        <comment value="InformationSource"/>
       </mapping>
     </element>
     <element id="MedicationStatement.informationSource.id">
@@ -2216,6 +2216,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.11"/>
+        <comment value="Subject"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="…subject"/>
       </mapping>
@@ -2230,11 +2235,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="who"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.11"/>
-        <comment value="Subject"/>
       </mapping>
     </element>
     <element id="MedicationStatement.derivedFrom">
@@ -2291,17 +2291,17 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
+        <map value="NL-CM:9.11.22399"/>
+        <comment value="UseIndicator"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="…notDone"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
         <map value=".actionNegationInd"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
-        <map value="NL-CM:9.11.22399"/>
-        <comment value="UseIndicator"/>
       </mapping>
     </element>
     <element id="MedicationStatement.reasonNotTaken">
@@ -2474,6 +2474,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
+        <map value="NL-CM:9.11.22491"/>
+        <comment value="ReasonForUse"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="C*E.9. But note many systems use C*E.2 for this"/>
       </mapping>
@@ -2484,11 +2489,6 @@
       <mapping>
         <identity value="orim"/>
         <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
-        <map value="NL-CM:9.11.22491"/>
-        <comment value="ReasonForUse"/>
       </mapping>
     </element>
     <element id="MedicationStatement.reasonReference">
@@ -2540,17 +2540,17 @@
         <code value="Annotation"/>
       </type>
       <mapping>
+        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
+        <map value="NL-CM:9.11.21624"/>
+        <comment value="Comment"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="…note"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
         <map value=".inboundRelationship[typeCode=SUBJ]/source[classCode=OBS,moodCode=EVN,code=&quot;annotation&quot;].value"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
-        <map value="NL-CM:9.11.21624"/>
-        <comment value="Comment"/>
       </mapping>
     </element>
     <element id="MedicationStatement.dosage">
@@ -2580,12 +2580,9 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".outboundRelationship[typeCode=COMP].target[classCode=SBADM, moodCode=INT]"/>
+        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
+        <map value="NL-CM:9.11.22504"/>
+        <comment value="InstructionsForUse"/>
       </mapping>
       <mapping>
         <identity value="hcim-instructionsforuse-v1.1-2017EN"/>
@@ -2593,9 +2590,12 @@
         <comment value="InstructionsForUse"/>
       </mapping>
       <mapping>
-        <identity value="hcim-medicationuse2-v1.0.1-2017EN"/>
-        <map value="NL-CM:9.11.22504"/>
-        <comment value="InstructionsForUse"/>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=COMP].target[classCode=SBADM, moodCode=INT]"/>
       </mapping>
     </element>
     <element id="MedicationStatement.dosage.id">
@@ -2666,13 +2666,13 @@
       </type>
       <isSummary value="true"/>
       <mapping>
-        <identity value="rim"/>
-        <map value=".text"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-instructionsforuse-v1.1-2017EN"/>
         <map value="NL-CM:9.12.22503"/>
         <comment value="SequenceNumber"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text"/>
       </mapping>
     </element>
     <element id="MedicationStatement.dosage.text">
@@ -2694,13 +2694,13 @@
       <mustSupport value="true"/>
       <isSummary value="true"/>
       <mapping>
-        <identity value="rim"/>
-        <map value=".text"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-instructionsforuse-v1.1-2017EN"/>
         <map value="NL-CM:9.12.9581"/>
         <comment value="Description"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text"/>
       </mapping>
     </element>
     <element id="MedicationStatement.dosage.additionalInstruction">
@@ -2730,13 +2730,13 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value=".text"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-instructionsforuse-v1.1-2017EN"/>
         <map value="NL-CM:9.12.19944"/>
         <comment value="AdditionalInstructions"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text"/>
       </mapping>
     </element>
     <element id="MedicationStatement.dosage.patientInstruction">
@@ -2787,6 +2787,11 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
+        <identity value="hcim-instructionsforuse-v1.1-2017EN"/>
+        <map value="NL-CM:9.12.19948"/>
+        <comment value="AdministeringSchedule"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value="n/a"/>
       </mapping>
@@ -2797,11 +2802,6 @@
       <mapping>
         <identity value="rim"/>
         <map value="QSET&lt;TS&gt; (GTS)"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-instructionsforuse-v1.1-2017EN"/>
-        <map value="NL-CM:9.12.19948"/>
-        <comment value="AdministeringSchedule"/>
       </mapping>
     </element>
     <element id="MedicationStatement.dosage.asNeeded[x]">
@@ -2873,10 +2873,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value=".outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=&quot;as needed&quot;].value=boolean or codable concept"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-instructionsforuse-v1.1-2017EN"/>
         <map value="NL-CM:9.12.22512"/>
         <comment value="AsNeeded"/>
@@ -2885,6 +2881,10 @@
         <identity value="hcim-instructionsforuse-v1.1-2017EN"/>
         <map value="NL-CM:9.12.19945"/>
         <comment value="Condition"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=&quot;as needed&quot;].value=boolean or codable concept"/>
       </mapping>
     </element>
     <element id="MedicationStatement.dosage.site">
@@ -2954,13 +2954,13 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value=".routeCode"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-instructionsforuse-v1.1-2017EN"/>
         <map value="NL-CM:9.12.19941"/>
         <comment value="RouteOfAdministration"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".routeCode"/>
       </mapping>
     </element>
     <element id="MedicationStatement.dosage.route.id">
@@ -3140,13 +3140,13 @@
       </type>
       <isSummary value="true"/>
       <mapping>
-        <identity value="rim"/>
-        <map value=".doseQuantity"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-instructionsforuse-v1.1-2017EN"/>
         <map value="NL-CM:9.12.19940"/>
         <comment value="Dose"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".doseQuantity"/>
       </mapping>
     </element>
     <element id="MedicationStatement.dosage.dose[x]:doseQuantity">
@@ -3373,13 +3373,13 @@
       </type>
       <isSummary value="true"/>
       <mapping>
-        <identity value="rim"/>
-        <map value=".maxDoseQuantity"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-instructionsforuse-v1.1-2017EN"/>
         <map value="NL-CM:9.12.19946"/>
         <comment value="MaximumDose"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".maxDoseQuantity"/>
       </mapping>
     </element>
     <element id="MedicationStatement.dosage.maxDosePerPeriod.id">
@@ -3551,13 +3551,13 @@
       </type>
       <isSummary value="true"/>
       <mapping>
-        <identity value="rim"/>
-        <map value=".rateQuantity"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-instructionsforuse-v1.1-2017EN"/>
         <map value="NL-CM:9.12.19942"/>
         <comment value="AdministeringSpeed"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".rateQuantity"/>
       </mapping>
     </element>
   </snapshot>

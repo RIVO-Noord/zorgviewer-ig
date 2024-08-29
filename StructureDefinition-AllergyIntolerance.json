@@ -10,7 +10,7 @@
   "name" : "AllergyIntolerance",
   "title" : "AllergyIntolerance",
   "status" : "active",
-  "date" : "2024-08-27T08:48:41+00:00",
+  "date" : "2024-08-29T09:15:36+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -141,18 +141,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "Entity. Role, or Act"
-      },
-      {
-        "identity" : "rim",
-        "map" : "Observation[classCode=OBS, moodCode=EVN]"
-      },
-      {
-        "identity" : "w5",
-        "map" : "clinical.general"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.1",
         "comment" : "AllergyIntolerance"
@@ -166,6 +154,18 @@
         "identity" : "hcim-allergyintolerance-v3.2-2017EN",
         "map" : "NL-CM:8.2.1",
         "comment" : "AllergyIntolerance"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Entity. Role, or Act"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Observation[classCode=OBS, moodCode=EVN]"
+      },
+      {
+        "identity" : "w5",
+        "map" : "clinical.general"
       }]
     },
     {
@@ -371,6 +371,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.6",
+        "comment" : "IdentificationNumber"
+      },
+      {
         "identity" : "v2",
         "map" : "IAM-7"
       },
@@ -381,11 +386,6 @@
       {
         "identity" : "w5",
         "map" : "id"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.6",
-        "comment" : "IdentificationNumber"
       }]
     },
     {
@@ -416,17 +416,17 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-allergyintolerance-v3.2-2017EN",
+        "map" : "NL-CM:8.2.5",
+        "comment" : "AllergyStatus. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&canonical=http://nictiz.nl/fhir/ConceptMap/AllergieStatusCodelijst-to-allergy-status"
+      },
+      {
         "identity" : "rim",
         "map" : "Observation ACT\n.inboundRelationship[typeCode=COMP].source[classCode=OBS, code=\"clinicalStatus\", moodCode=EVN].value"
       },
       {
         "identity" : "w5",
         "map" : "status"
-      },
-      {
-        "identity" : "hcim-allergyintolerance-v3.2-2017EN",
-        "map" : "NL-CM:8.2.5",
-        "comment" : "AllergyStatus. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&canonical=http://nictiz.nl/fhir/ConceptMap/AllergieStatusCodelijst-to-allergy-status"
       }]
     },
     {
@@ -719,17 +719,17 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-allergyintolerance-v3.2-2017EN",
+        "map" : "NL-CM:8.2.5",
+        "comment" : "AllergyStatus (for Nullified only)"
+      },
+      {
         "identity" : "rim",
         "map" : "Observation ACT\n.inboundRelationship[typeCode=COMP].source[classCode=OBS, code=\"verificationStatus\", moodCode=EVN].value"
       },
       {
         "identity" : "w5",
         "map" : "status"
-      },
-      {
-        "identity" : "hcim-allergyintolerance-v3.2-2017EN",
-        "map" : "NL-CM:8.2.5",
-        "comment" : "AllergyStatus (for Nullified only)"
       }]
     },
     {
@@ -1402,18 +1402,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "AL1-3 / IAM-3"
-      },
-      {
-        "identity" : "rim",
-        "map" : "substance/product:\r\r.participation[typeCode=CAGNT].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]\r\rnegated/excluded substance/product:\r\r.participation[typeCode=CAGNT, negationInd=true].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]\r\rpositive or negated/excluded condition/situation:\r\rObservation.code=ASSERTION; Observation.value"
-      },
-      {
-        "identity" : "w5",
-        "map" : "what"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.2",
         "comment" : "CausativeSubstance"
@@ -1427,6 +1415,18 @@
         "identity" : "hcim-allergyintolerance-v3.2-2017EN",
         "map" : "NL-CM:8.2.2",
         "comment" : "CausativeAgent"
+      },
+      {
+        "identity" : "v2",
+        "map" : "AL1-3 / IAM-3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "substance/product:\r\r.participation[typeCode=CAGNT].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]\r\rnegated/excluded substance/product:\r\r.participation[typeCode=CAGNT, negationInd=true].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]\r\rpositive or negated/excluded condition/situation:\r\rObservation.code=ASSERTION; Observation.value"
+      },
+      {
+        "identity" : "w5",
+        "map" : "what"
       }]
     },
     {
@@ -2815,6 +2815,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.11",
+        "comment" : "Subject"
+      },
+      {
         "identity" : "v2",
         "map" : "(PID-3)"
       },
@@ -2825,11 +2830,6 @@
       {
         "identity" : "w5",
         "map" : "who.focus"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.11",
-        "comment" : "Subject"
       }]
     },
     {
@@ -2886,14 +2886,6 @@
         "code" : "dateTime"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "effectiveTime.low"
-      },
-      {
-        "identity" : "w5",
-        "map" : "when.init"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.6",
         "comment" : "StartDateTime"
@@ -2912,6 +2904,14 @@
         "identity" : "hcim-basicelements-v1.0-2017EN",
         "map" : "NL-CM:0.0.14",
         "comment" : "DateTime"
+      },
+      {
+        "identity" : "rim",
+        "map" : "effectiveTime.low"
+      },
+      {
+        "identity" : "w5",
+        "map" : "when.init"
       }]
     },
     {
@@ -2965,17 +2965,17 @@
         "targetProfile" : "http://fhir.nl/fhir/StructureDefinition/nl-core-patient"
       }],
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.7",
+        "comment" : "Author"
+      },
+      {
         "identity" : "rim",
         "map" : ".participation[typeCode=AUT].role"
       },
       {
         "identity" : "w5",
         "map" : "who.author"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.7",
-        "comment" : "Author"
       }]
     },
     {
@@ -3149,6 +3149,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.2",
+        "comment" : "InformationSource"
+      },
+      {
         "identity" : "v2",
         "map" : "IAM-14 (if patient) / IAM-18 (if practitioner)"
       },
@@ -3159,11 +3164,6 @@
       {
         "identity" : "w5",
         "map" : "who.source"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.2",
-        "comment" : "InformationSource"
       }]
     },
     {
@@ -3326,10 +3326,6 @@
         "code" : "dateTime"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code <= CommonClinicalObservationType, value <= ObservationValue (Reaction Type)].effectiveTime"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.8",
         "comment" : "LastReactionDateTime"
@@ -3343,6 +3339,10 @@
         "identity" : "hcim-allergyintolerance-v3.2-2017EN",
         "map" : "NL-CM:8.2.8",
         "comment" : "LastReactionDateTime"
+      },
+      {
+        "identity" : "rim",
+        "map" : "outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code <= CommonClinicalObservationType, value <= ObservationValue (Reaction Type)].effectiveTime"
       }]
     },
     {
@@ -3710,14 +3710,6 @@
         "code" : "string"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "N/A"
-      },
-      {
-        "identity" : "rim",
-        "map" : "Act.text"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.9",
         "comment" : "Explanation"
@@ -3731,6 +3723,14 @@
         "identity" : "hcim-allergyintolerance-v3.2-2017EN",
         "map" : "NL-CM:8.2.9",
         "comment" : "Comment"
+      },
+      {
+        "identity" : "v2",
+        "map" : "N/A"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Act.text"
       }]
     },
     {
@@ -3758,10 +3758,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code <= CommonClinicalObservationType, value <= ObservationValue (Reaction Type)]"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.10",
         "comment" : "Reaction"
@@ -3775,6 +3771,10 @@
         "identity" : "hcim-allergyintolerance-v3.2-2017EN",
         "map" : "NL-CM:8.2.10",
         "comment" : "Reaction"
+      },
+      {
+        "identity" : "rim",
+        "map" : "outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code <= CommonClinicalObservationType, value <= ObservationValue (Reaction Type)]"
       }]
     },
     {
@@ -3876,10 +3876,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code <= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.12",
         "comment" : "SpecificSubstance"
@@ -3893,6 +3889,10 @@
         "identity" : "hcim-allergyintolerance-v3.2-2017EN",
         "map" : "NL-CM:8.2.12",
         "comment" : "SpecificSubstance"
+      },
+      {
+        "identity" : "rim",
+        "map" : "outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code <= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]"
       }]
     },
     {
@@ -5287,14 +5287,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "AL1-5"
-      },
-      {
-        "identity" : "rim",
-        "map" : "code"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.11",
         "comment" : "Symptom"
@@ -5308,6 +5300,14 @@
         "identity" : "hcim-allergyintolerance-v3.2-2017EN",
         "map" : "NL-CM:8.2.11",
         "comment" : "Symptom"
+      },
+      {
+        "identity" : "v2",
+        "map" : "AL1-5"
+      },
+      {
+        "identity" : "rim",
+        "map" : "code"
       }]
     },
     {
@@ -5449,10 +5449,6 @@
         "code" : "string"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "text"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.13",
         "comment" : "ReactionDescription"
@@ -5466,6 +5462,10 @@
         "identity" : "hcim-allergyintolerance-v3.2-2017EN",
         "map" : "NL-CM:8.2.13",
         "comment" : "ReactionDescription"
+      },
+      {
+        "identity" : "rim",
+        "map" : "text"
       }]
     },
     {
@@ -5485,14 +5485,6 @@
         "code" : "dateTime"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "AL1-6"
-      },
-      {
-        "identity" : "rim",
-        "map" : "effectiveTime.low"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.17",
         "comment" : "ReactionTime"
@@ -5506,6 +5498,14 @@
         "identity" : "hcim-allergyintolerance-v3.2-2017EN",
         "map" : "NL-CM:8.2.17",
         "comment" : "ReactionTime"
+      },
+      {
+        "identity" : "v2",
+        "map" : "AL1-6"
+      },
+      {
+        "identity" : "rim",
+        "map" : "effectiveTime.low"
       }]
     },
     {
@@ -5533,10 +5533,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=SEV, value <= SeverityObservation (Severity Level)]"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.14",
         "comment" : "Severity. See for details the ConceptMap http://nictiz.nl/fhir/ConceptMap/ErnstCodelijst-to-AllergyIntoleranceSeverity"
@@ -5550,6 +5546,10 @@
         "identity" : "hcim-allergyintolerance-v3.2-2017EN",
         "map" : "NL-CM:8.2.14",
         "comment" : "Severity. See for details the ConceptMap http://nictiz.nl/fhir/ConceptMap/ErnstCodelijst-to-AllergyIntoleranceSeverity"
+      },
+      {
+        "identity" : "rim",
+        "map" : "inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=SEV, value <= SeverityObservation (Severity Level)]"
       }]
     },
     {
@@ -5755,10 +5755,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "N/A"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.14",
         "comment" : "Severity"
@@ -5772,6 +5768,10 @@
         "identity" : "hcim-allergyintolerance-v3.2-2017EN",
         "map" : "NL-CM:8.2.14",
         "comment" : "Severity"
+      },
+      {
+        "identity" : "rim",
+        "map" : "N/A"
       }]
     },
     {
@@ -5832,10 +5832,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code <= ExposureCode].routeCode"
-      },
-      {
         "identity" : "hcim-allergyintolerance-v1.0.2-2015EN",
         "map" : "NL-CM:8.2.15",
         "comment" : "MannerOfExposure"
@@ -5849,6 +5845,10 @@
         "identity" : "hcim-allergyintolerance-v3.2-2017EN",
         "map" : "NL-CM:8.2.15",
         "comment" : "RouteOfExposure"
+      },
+      {
+        "identity" : "rim",
+        "map" : "outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code <= ExposureCode].routeCode"
       }]
     },
     {

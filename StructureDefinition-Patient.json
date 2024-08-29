@@ -10,7 +10,7 @@
   "name" : "Patient",
   "title" : "Patient",
   "status" : "active",
-  "date" : "2024-08-27T08:48:41+00:00",
+  "date" : "2024-08-29T09:15:36+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -259,22 +259,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "Entity. Role, or Act"
-      },
-      {
-        "identity" : "rim",
-        "map" : "Patient[classCode=PAT]"
-      },
-      {
-        "identity" : "cda",
-        "map" : "ClinicalDocument.recordTarget.patientRole"
-      },
-      {
-        "identity" : "w5",
-        "map" : "administrative.individual"
-      },
-      {
         "identity" : "hcim-patient-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.1",
         "comment" : "Patient"
@@ -318,6 +302,22 @@
         "identity" : "hcim-basicelements-v1.0-2017EN",
         "map" : "NL-CM:0.0.12",
         "comment" : "Patient"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Entity. Role, or Act"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Patient[classCode=PAT]"
+      },
+      {
+        "identity" : "cda",
+        "map" : "ClinicalDocument.recordTarget.patientRole"
+      },
+      {
+        "identity" : "w5",
+        "map" : "administrative.individual"
       }]
     },
     {
@@ -1684,13 +1684,13 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "N/A"
-      },
-      {
         "identity" : "hcim-lifestance-v3.1-2017EN",
         "map" : "NL-CM:7.5.2",
         "comment" : "LifeStance"
+      },
+      {
+        "identity" : "rim",
+        "map" : "N/A"
       }]
     },
     {
@@ -2069,22 +2069,6 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "PID-3"
-      },
-      {
-        "identity" : "rim",
-        "map" : "id"
-      },
-      {
-        "identity" : "cda",
-        "map" : ".id"
-      },
-      {
-        "identity" : "w5",
-        "map" : "id"
-      },
-      {
         "identity" : "hcim-patient-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.7",
         "comment" : "PatientIdentificationNumber"
@@ -2103,6 +2087,22 @@
         "identity" : "hcim-basicelements-v1.0-2017EN",
         "map" : "NL-CM:0.0.6",
         "comment" : "IdentificationNumber"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "id"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".id"
+      },
+      {
+        "identity" : "w5",
+        "map" : "id"
       }]
     },
     {
@@ -2540,42 +2540,6 @@
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "XPN"
-      },
-      {
-        "identity" : "rim",
-        "map" : "EN (actually, PN)"
-      },
-      {
-        "identity" : "servd",
-        "map" : "ProviderName"
-      },
-      {
-        "identity" : "hcim-nameinformation-v2.0.1-2015EN",
-        "map" : "NL-CM:0.1.6",
-        "comment" : "NameInformation"
-      },
-      {
-        "identity" : "hcim-nameinformation-v3.0-2016EN",
-        "map" : "NL-CM:0.1.6",
-        "comment" : "NameInformation"
-      },
-      {
-        "identity" : "hcim-nameinformation-v1.0.1-2017EN",
-        "map" : "NL-CM:20.4.1",
-        "comment" : "NameInformation"
-      },
-      {
-        "identity" : "BRP",
-        "map" : "02",
-        "comment" : "Naam"
-      },
-      {
         "identity" : "hcim-patient-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.6",
         "comment" : "NameInformation"
@@ -2604,6 +2568,42 @@
         "identity" : "hcim-payer-v3.1-2017EN",
         "map" : "NL-CM:1.1.5",
         "comment" : "PayerName"
+      },
+      {
+        "identity" : "hcim-nameinformation-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.6",
+        "comment" : "NameInformation"
+      },
+      {
+        "identity" : "hcim-nameinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.6",
+        "comment" : "NameInformation"
+      },
+      {
+        "identity" : "hcim-nameinformation-v1.0.1-2017EN",
+        "map" : "NL-CM:20.4.1",
+        "comment" : "NameInformation"
+      },
+      {
+        "identity" : "BRP",
+        "map" : "02",
+        "comment" : "Naam"
+      },
+      {
+        "identity" : "rim",
+        "map" : "n/a"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XPN"
+      },
+      {
+        "identity" : "rim",
+        "map" : "EN (actually, PN)"
+      },
+      {
+        "identity" : "servd",
+        "map" : "ProviderName"
       }]
     },
     {
@@ -2838,14 +2838,6 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "implied by XPN.11"
-      },
-      {
-        "identity" : "rim",
-        "map" : "./formatted"
-      },
-      {
         "identity" : "hcim-payer-v1.2-2015EN",
         "map" : "NL-CM:1.1.5",
         "comment" : "PayerName"
@@ -2859,6 +2851,14 @@
         "identity" : "hcim-payer-v3.1-2017EN",
         "map" : "NL-CM:1.1.5",
         "comment" : "PayerName"
+      },
+      {
+        "identity" : "v2",
+        "map" : "implied by XPN.11"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./formatted"
       }]
     },
     {
@@ -2970,14 +2970,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "FN.2"
-      },
-      {
-        "identity" : "rim",
-        "map" : "ENXP where Qualifiers = (VV, R)"
-      },
-      {
         "identity" : "hcim-nameinformation-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.38",
         "comment" : "Prefix"
@@ -2991,6 +2983,14 @@
         "identity" : "hcim-nameinformation-v1.0.1-2017EN",
         "map" : "NL-CM:20.4.11",
         "comment" : "Prefix"
+      },
+      {
+        "identity" : "v2",
+        "map" : "FN.2"
+      },
+      {
+        "identity" : "rim",
+        "map" : "ENXP where Qualifiers = (VV, R)"
       }]
     },
     {
@@ -3126,14 +3126,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "FN.3"
-      },
-      {
-        "identity" : "rim",
-        "map" : "ENXP where Qualifiers = (BR)"
-      },
-      {
         "identity" : "hcim-nameinformation-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.24",
         "comment" : "LastName"
@@ -3147,6 +3139,14 @@
         "identity" : "hcim-nameinformation-v1.0.1-2017EN",
         "map" : "NL-CM:20.4.10",
         "comment" : "LastName"
+      },
+      {
+        "identity" : "v2",
+        "map" : "FN.3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "ENXP where Qualifiers = (BR)"
       }]
     },
     {
@@ -3282,14 +3282,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "FN.4"
-      },
-      {
-        "identity" : "rim",
-        "map" : "ENXP where Qualifiers = (VV, SP)"
-      },
-      {
         "identity" : "hcim-nameinformation-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.39",
         "comment" : "PartnerPrefix"
@@ -3303,6 +3295,14 @@
         "identity" : "hcim-nameinformation-v1.0.1-2017EN",
         "map" : "NL-CM:20.4.9",
         "comment" : "PartnerPrefix"
+      },
+      {
+        "identity" : "v2",
+        "map" : "FN.4"
+      },
+      {
+        "identity" : "rim",
+        "map" : "ENXP where Qualifiers = (VV, SP)"
       }]
     },
     {
@@ -3438,14 +3438,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "FN.5"
-      },
-      {
-        "identity" : "rim",
-        "map" : "ENXP where Qualifiers = (SP)"
-      },
-      {
         "identity" : "hcim-nameinformation-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.25",
         "comment" : "PartnerLastName"
@@ -3459,6 +3451,14 @@
         "identity" : "hcim-nameinformation-v1.0.1-2017EN",
         "map" : "NL-CM:20.4.8",
         "comment" : "PartnerLastName"
+      },
+      {
+        "identity" : "v2",
+        "map" : "FN.5"
+      },
+      {
+        "identity" : "rim",
+        "map" : "ENXP where Qualifiers = (SP)"
       }]
     },
     {
@@ -3612,18 +3612,6 @@
       "orderMeaning" : "Given Names appear in the correct order for presenting the name",
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "XPN.2 + XPN.3"
-      },
-      {
-        "identity" : "rim",
-        "map" : "./part[partType = GIV]"
-      },
-      {
-        "identity" : "servd",
-        "map" : "./GivenNames"
-      },
-      {
         "identity" : "hcim-nameinformation-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.26",
         "comment" : "FirstNames. Qualifier 'BR'"
@@ -3672,6 +3660,18 @@
         "identity" : "hcim-nameinformation-v1.0.1-2017EN",
         "map" : "NL-CM:20.4.6",
         "comment" : "GivenName. Qualifier 'CL'"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XPN.2 + XPN.3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./part[partType = GIV]"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./GivenNames"
       }]
     },
     {
@@ -4264,37 +4264,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/ContactPoint"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "XTN"
-      },
-      {
-        "identity" : "rim",
-        "map" : "TEL"
-      },
-      {
-        "identity" : "servd",
-        "map" : "ContactPoint"
-      },
-      {
-        "identity" : "hcim-contactinformation-v2.0.1-2015EN",
-        "map" : "NL-CM:0.1.5",
-        "comment" : "ContactInformation"
-      },
-      {
-        "identity" : "hcim-contactinformation-v3.0-2016EN",
-        "map" : "NL-CM:0.1.5",
-        "comment" : "ContactInformation"
-      },
-      {
-        "identity" : "hcim-contactinformation-v1.0-2017EN",
-        "map" : "NL-CM:20.6.1",
-        "comment" : "ContactInformation"
-      },
-      {
         "identity" : "hcim-patient-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.5",
         "comment" : "ContactInformation"
@@ -4323,6 +4292,37 @@
         "identity" : "hcim-payer-v3.1-2017EN",
         "map" : "NL-CM:1.1.12",
         "comment" : "ContactInformation"
+      },
+      {
+        "identity" : "hcim-contactinformation-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.5",
+        "comment" : "ContactInformation"
+      },
+      {
+        "identity" : "hcim-contactinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.5",
+        "comment" : "ContactInformation"
+      },
+      {
+        "identity" : "hcim-contactinformation-v1.0-2017EN",
+        "map" : "NL-CM:20.6.1",
+        "comment" : "ContactInformation"
+      },
+      {
+        "identity" : "rim",
+        "map" : "n/a"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XTN"
+      },
+      {
+        "identity" : "rim",
+        "map" : "TEL"
+      },
+      {
+        "identity" : "servd",
+        "map" : "ContactPoint"
       }]
     },
     {
@@ -4352,18 +4352,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "PID-8"
-      },
-      {
-        "identity" : "rim",
-        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"
-      },
-      {
-        "identity" : "cda",
-        "map" : ".patient.administrativeGenderCode"
-      },
-      {
         "identity" : "hcim-patient-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.9",
         "comment" : "Gender. Use FHIR Core ConceptMap for HCIM mapping: http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender"
@@ -4377,6 +4365,18 @@
         "identity" : "hcim-patient-v3.1-2017EN",
         "map" : "NL-CM:0.1.9",
         "comment" : "Gender. Use FHIR Core ConceptMap for HCIM mapping: http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-8"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".patient.administrativeGenderCode"
       }]
     },
     {
@@ -4642,6 +4642,21 @@
       "mustSupport" : true,
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.10",
+        "comment" : "DateOfBirth"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.10",
+        "comment" : "DateOfBirth"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.10",
+        "comment" : "DateOfBirth"
+      },
+      {
         "identity" : "v2",
         "map" : "PID-7"
       },
@@ -4656,21 +4671,6 @@
       {
         "identity" : "loinc",
         "map" : "21112-8"
-      },
-      {
-        "identity" : "hcim-patient-v2.0.1-2015EN",
-        "map" : "NL-CM:0.1.10",
-        "comment" : "DateOfBirth"
-      },
-      {
-        "identity" : "hcim-patient-v3.0-2016EN",
-        "map" : "NL-CM:0.1.10",
-        "comment" : "DateOfBirth"
-      },
-      {
-        "identity" : "hcim-patient-v3.1-2017EN",
-        "map" : "NL-CM:0.1.10",
-        "comment" : "DateOfBirth"
       }]
     },
     {
@@ -4698,6 +4698,36 @@
       "isModifier" : true,
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.32",
+        "comment" : "DeathIndicator"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.32",
+        "comment" : "DeathIndicator"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.32",
+        "comment" : "DeathIndicator"
+      },
+      {
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.33",
+        "comment" : "DateOfDeath"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.33",
+        "comment" : "DateOfDeath"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.33",
+        "comment" : "DateOfDeath"
+      },
+      {
         "identity" : "v2",
         "map" : "PID-30  (bool) and PID-29 (datetime)"
       },
@@ -4708,36 +4738,6 @@
       {
         "identity" : "cda",
         "map" : "n/a"
-      },
-      {
-        "identity" : "hcim-patient-v2.0.1-2015EN",
-        "map" : "NL-CM:0.1.32",
-        "comment" : "DeathIndicator"
-      },
-      {
-        "identity" : "hcim-patient-v3.0-2016EN",
-        "map" : "NL-CM:0.1.32",
-        "comment" : "DeathIndicator"
-      },
-      {
-        "identity" : "hcim-patient-v3.1-2017EN",
-        "map" : "NL-CM:0.1.32",
-        "comment" : "DeathIndicator"
-      },
-      {
-        "identity" : "hcim-patient-v2.0.1-2015EN",
-        "map" : "NL-CM:0.1.33",
-        "comment" : "DateOfDeath"
-      },
-      {
-        "identity" : "hcim-patient-v3.0-2016EN",
-        "map" : "NL-CM:0.1.33",
-        "comment" : "DateOfDeath"
-      },
-      {
-        "identity" : "hcim-patient-v3.1-2017EN",
-        "map" : "NL-CM:0.1.33",
-        "comment" : "DateOfDeath"
       }]
     },
     {
@@ -4858,37 +4858,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Patient"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "XAD"
-      },
-      {
-        "identity" : "rim",
-        "map" : "AD"
-      },
-      {
-        "identity" : "servd",
-        "map" : "Address"
-      },
-      {
-        "identity" : "hcim-address-v2.0.1-2015EN",
-        "map" : "NL-CM:0.1.4",
-        "comment" : "AddressInformation"
-      },
-      {
-        "identity" : "hcim-addressinformation-v3.0-2016EN",
-        "map" : "NL-CM:0.1.4",
-        "comment" : "AddressInformation"
-      },
-      {
-        "identity" : "hcim-addressinformation-v1.0-2017EN",
-        "map" : "NL-CM:20.5.1",
-        "comment" : "AddressInformation"
-      },
-      {
         "identity" : "hcim-patient-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.4",
         "comment" : "AddressInformation"
@@ -4917,6 +4886,37 @@
         "identity" : "hcim-payer-v3.1-2017EN",
         "map" : "NL-CM:1.1.17",
         "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-address-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.4",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-addressinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.4",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-addressinformation-v1.0-2017EN",
+        "map" : "NL-CM:20.5.1",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "rim",
+        "map" : "n/a"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XAD"
+      },
+      {
+        "identity" : "rim",
+        "map" : "AD"
+      },
+      {
+        "identity" : "servd",
+        "map" : "Address"
       }]
     },
     {
@@ -4943,18 +4943,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "PID-16"
-      },
-      {
-        "identity" : "rim",
-        "map" : "player[classCode=PSN]/maritalStatusCode"
-      },
-      {
-        "identity" : "cda",
-        "map" : ".patient.maritalStatusCode"
-      },
-      {
         "identity" : "hcim-maritalstatus-v1.2.1-2015EN",
         "map" : "NL-CM:7.9.2",
         "comment" : "MaritalStatus"
@@ -4983,6 +4971,18 @@
         "identity" : "hcim-familysituation-v3.0-2017EN",
         "map" : "NL-CM:7.13.7",
         "comment" : "FamilySituation"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-16"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN]/maritalStatusCode"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".patient.maritalStatusCode"
       }]
     },
     {
@@ -5007,18 +5007,6 @@
         "code" : "integer"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "PID-24 (bool), PID-25 (integer)"
-      },
-      {
-        "identity" : "rim",
-        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd,  player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber"
-      },
-      {
-        "identity" : "cda",
-        "map" : "n/a"
-      },
-      {
         "identity" : "hcim-patient-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.31",
         "comment" : "MultipleBirthIndicator"
@@ -5032,6 +5020,18 @@
         "identity" : "hcim-patient-v3.1-2017EN",
         "map" : "NL-CM:0.1.31",
         "comment" : "MultipleBirthIndicator"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-24 (bool), PID-25 (integer)"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd,  player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
       }]
     },
     {
@@ -5098,14 +5098,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Patient"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]"
-      },
-      {
-        "identity" : "cda",
-        "map" : "n/a"
-      },
-      {
         "identity" : "hcim-contactperson-v1.2-2015EN",
         "map" : "NL-CM:3.1.1",
         "comment" : "Contact"
@@ -5119,6 +5111,14 @@
         "identity" : "hcim-contactperson-v3.1-2017EN",
         "map" : "NL-CM:3.1.1",
         "comment" : "Contact"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
       }]
     },
     {
@@ -5263,18 +5263,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "NK1-7, NK1-3"
-      },
-      {
-        "identity" : "rim",
-        "map" : "code"
-      },
-      {
-        "identity" : "cda",
-        "map" : "n/a"
-      },
-      {
         "identity" : "hcim-contactperson-v1.2-2015EN",
         "map" : "NL-CM:3.1.3",
         "comment" : "Relationship"
@@ -5288,6 +5276,18 @@
         "identity" : "hcim-contactperson-v3.1-2017EN",
         "map" : "NL-CM:3.1.3",
         "comment" : "Relationship"
+      },
+      {
+        "identity" : "v2",
+        "map" : "NK1-7, NK1-3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "code"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
       }]
     },
     {
@@ -5315,18 +5315,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "NK1-7, NK1-3"
-      },
-      {
-        "identity" : "rim",
-        "map" : "code"
-      },
-      {
-        "identity" : "cda",
-        "map" : "n/a"
-      },
-      {
         "identity" : "hcim-contactperson-v1.2-2015EN",
         "map" : "NL-CM:3.1.2",
         "comment" : "Role"
@@ -5340,6 +5328,18 @@
         "identity" : "hcim-contactperson-v3.1-2017EN",
         "map" : "NL-CM:3.1.2",
         "comment" : "Role"
+      },
+      {
+        "identity" : "v2",
+        "map" : "NK1-7, NK1-3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "code"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
       }]
     },
     {
@@ -5425,20 +5425,19 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Patient"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
+        "identity" : "hcim-contactperson-v1.2-2015EN",
+        "map" : "NL-CM:3.1.4",
+        "comment" : "NameInformation"
       },
       {
-        "identity" : "v2",
-        "map" : "XPN"
+        "identity" : "hcim-contactperson-v3.0-2016EN",
+        "map" : "NL-CM:3.1.4",
+        "comment" : "NameInformation"
       },
       {
-        "identity" : "rim",
-        "map" : "EN (actually, PN)"
-      },
-      {
-        "identity" : "servd",
-        "map" : "ProviderName"
+        "identity" : "hcim-contactperson-v3.1-2017EN",
+        "map" : "NL-CM:3.1.4",
+        "comment" : "NameInformation"
       },
       {
         "identity" : "hcim-nameinformation-v2.0.1-2015EN",
@@ -5461,19 +5460,20 @@
         "comment" : "Naam"
       },
       {
-        "identity" : "hcim-contactperson-v1.2-2015EN",
-        "map" : "NL-CM:3.1.4",
-        "comment" : "NameInformation"
+        "identity" : "rim",
+        "map" : "n/a"
       },
       {
-        "identity" : "hcim-contactperson-v3.0-2016EN",
-        "map" : "NL-CM:3.1.4",
-        "comment" : "NameInformation"
+        "identity" : "v2",
+        "map" : "XPN"
       },
       {
-        "identity" : "hcim-contactperson-v3.1-2017EN",
-        "map" : "NL-CM:3.1.4",
-        "comment" : "NameInformation"
+        "identity" : "rim",
+        "map" : "EN (actually, PN)"
+      },
+      {
+        "identity" : "servd",
+        "map" : "ProviderName"
       }]
     },
     {
@@ -5708,14 +5708,6 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "implied by XPN.11"
-      },
-      {
-        "identity" : "rim",
-        "map" : "./formatted"
-      },
-      {
         "identity" : "hcim-payer-v1.2-2015EN",
         "map" : "NL-CM:1.1.5",
         "comment" : "PayerName"
@@ -5729,6 +5721,14 @@
         "identity" : "hcim-payer-v3.1-2017EN",
         "map" : "NL-CM:1.1.5",
         "comment" : "PayerName"
+      },
+      {
+        "identity" : "v2",
+        "map" : "implied by XPN.11"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./formatted"
       }]
     },
     {
@@ -5840,14 +5840,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "FN.2"
-      },
-      {
-        "identity" : "rim",
-        "map" : "ENXP where Qualifiers = (VV, R)"
-      },
-      {
         "identity" : "hcim-nameinformation-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.38",
         "comment" : "Prefix"
@@ -5861,6 +5853,14 @@
         "identity" : "hcim-nameinformation-v1.0.1-2017EN",
         "map" : "NL-CM:20.4.11",
         "comment" : "Prefix"
+      },
+      {
+        "identity" : "v2",
+        "map" : "FN.2"
+      },
+      {
+        "identity" : "rim",
+        "map" : "ENXP where Qualifiers = (VV, R)"
       }]
     },
     {
@@ -5996,14 +5996,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "FN.3"
-      },
-      {
-        "identity" : "rim",
-        "map" : "ENXP where Qualifiers = (BR)"
-      },
-      {
         "identity" : "hcim-nameinformation-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.24",
         "comment" : "LastName"
@@ -6017,6 +6009,14 @@
         "identity" : "hcim-nameinformation-v1.0.1-2017EN",
         "map" : "NL-CM:20.4.10",
         "comment" : "LastName"
+      },
+      {
+        "identity" : "v2",
+        "map" : "FN.3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "ENXP where Qualifiers = (BR)"
       }]
     },
     {
@@ -6152,14 +6152,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "FN.4"
-      },
-      {
-        "identity" : "rim",
-        "map" : "ENXP where Qualifiers = (VV, SP)"
-      },
-      {
         "identity" : "hcim-nameinformation-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.39",
         "comment" : "PartnerPrefix"
@@ -6173,6 +6165,14 @@
         "identity" : "hcim-nameinformation-v1.0.1-2017EN",
         "map" : "NL-CM:20.4.9",
         "comment" : "PartnerPrefix"
+      },
+      {
+        "identity" : "v2",
+        "map" : "FN.4"
+      },
+      {
+        "identity" : "rim",
+        "map" : "ENXP where Qualifiers = (VV, SP)"
       }]
     },
     {
@@ -6308,14 +6308,6 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "FN.5"
-      },
-      {
-        "identity" : "rim",
-        "map" : "ENXP where Qualifiers = (SP)"
-      },
-      {
         "identity" : "hcim-nameinformation-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.25",
         "comment" : "PartnerLastName"
@@ -6329,6 +6321,14 @@
         "identity" : "hcim-nameinformation-v1.0.1-2017EN",
         "map" : "NL-CM:20.4.8",
         "comment" : "PartnerLastName"
+      },
+      {
+        "identity" : "v2",
+        "map" : "FN.5"
+      },
+      {
+        "identity" : "rim",
+        "map" : "ENXP where Qualifiers = (SP)"
       }]
     },
     {
@@ -6482,18 +6482,6 @@
       "orderMeaning" : "Given Names appear in the correct order for presenting the name",
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "XPN.2 + XPN.3"
-      },
-      {
-        "identity" : "rim",
-        "map" : "./part[partType = GIV]"
-      },
-      {
-        "identity" : "servd",
-        "map" : "./GivenNames"
-      },
-      {
         "identity" : "hcim-nameinformation-v2.0.1-2015EN",
         "map" : "NL-CM:0.1.26",
         "comment" : "FirstNames. Qualifier 'BR'"
@@ -6542,6 +6530,18 @@
         "identity" : "hcim-nameinformation-v1.0.1-2017EN",
         "map" : "NL-CM:20.4.6",
         "comment" : "GivenName. Qualifier 'CL'"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XPN.2 + XPN.3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./part[partType = GIV]"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./GivenNames"
       }]
     },
     {
@@ -7134,20 +7134,19 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/ContactPoint"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
+        "identity" : "hcim-contactperson-v1.2-2015EN",
+        "map" : "NL-CM:3.1.6",
+        "comment" : "TelephoneEmail::ContactInformation"
       },
       {
-        "identity" : "v2",
-        "map" : "XTN"
+        "identity" : "hcim-contactperson-v3.0-2016EN",
+        "map" : "NL-CM:3.1.6",
+        "comment" : "TelephoneEmail::ContactInformation"
       },
       {
-        "identity" : "rim",
-        "map" : "TEL"
-      },
-      {
-        "identity" : "servd",
-        "map" : "ContactPoint"
+        "identity" : "hcim-contactperson-v3.1-2017EN",
+        "map" : "NL-CM:3.1.6",
+        "comment" : "ContactInformation"
       },
       {
         "identity" : "hcim-contactinformation-v2.0.1-2015EN",
@@ -7165,19 +7164,20 @@
         "comment" : "ContactInformation"
       },
       {
-        "identity" : "hcim-contactperson-v1.2-2015EN",
-        "map" : "NL-CM:3.1.6",
-        "comment" : "TelephoneEmail::ContactInformation"
+        "identity" : "rim",
+        "map" : "n/a"
       },
       {
-        "identity" : "hcim-contactperson-v3.0-2016EN",
-        "map" : "NL-CM:3.1.6",
-        "comment" : "TelephoneEmail::ContactInformation"
+        "identity" : "v2",
+        "map" : "XTN"
       },
       {
-        "identity" : "hcim-contactperson-v3.1-2017EN",
-        "map" : "NL-CM:3.1.6",
-        "comment" : "ContactInformation"
+        "identity" : "rim",
+        "map" : "TEL"
+      },
+      {
+        "identity" : "servd",
+        "map" : "ContactPoint"
       }]
     },
     {
@@ -7298,20 +7298,19 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Patient"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
+        "identity" : "hcim-contactperson-v1.2-2015EN",
+        "map" : "NL-CM:3.1.5",
+        "comment" : "AddressInformation"
       },
       {
-        "identity" : "v2",
-        "map" : "XAD"
+        "identity" : "hcim-contactperson-v3.0-2016EN",
+        "map" : "NL-CM:3.1.5",
+        "comment" : "AddressInformation"
       },
       {
-        "identity" : "rim",
-        "map" : "AD"
-      },
-      {
-        "identity" : "servd",
-        "map" : "Address"
+        "identity" : "hcim-contactperson-v3.1-2017EN",
+        "map" : "NL-CM:3.1.5",
+        "comment" : "AddressInformation"
       },
       {
         "identity" : "hcim-address-v2.0.1-2015EN",
@@ -7329,19 +7328,20 @@
         "comment" : "AddressInformation"
       },
       {
-        "identity" : "hcim-contactperson-v1.2-2015EN",
-        "map" : "NL-CM:3.1.5",
-        "comment" : "AddressInformation"
+        "identity" : "rim",
+        "map" : "n/a"
       },
       {
-        "identity" : "hcim-contactperson-v3.0-2016EN",
-        "map" : "NL-CM:3.1.5",
-        "comment" : "AddressInformation"
+        "identity" : "v2",
+        "map" : "XAD"
       },
       {
-        "identity" : "hcim-contactperson-v3.1-2017EN",
-        "map" : "NL-CM:3.1.5",
-        "comment" : "AddressInformation"
+        "identity" : "rim",
+        "map" : "AD"
+      },
+      {
+        "identity" : "servd",
+        "map" : "Address"
       }]
     },
     {
@@ -7697,17 +7697,17 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
+        "identity" : "hcim-languageproficiency-v3.1-2017EN",
+        "map" : "NL-CM:7.12.1",
+        "comment" : "LanguageProficiency"
+      },
+      {
         "identity" : "rim",
         "map" : "LanguageCommunication"
       },
       {
         "identity" : "cda",
         "map" : "patient.languageCommunication"
-      },
-      {
-        "identity" : "hcim-languageproficiency-v3.1-2017EN",
-        "map" : "NL-CM:7.12.1",
-        "comment" : "LanguageProficiency"
       }]
     },
     {
@@ -8401,6 +8401,11 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-languageproficiency-v3.1-2017EN",
+        "map" : "NL-CM:7.12.3",
+        "comment" : "CommunicationLanguage"
+      },
+      {
         "identity" : "v2",
         "map" : "PID-15, LAN-2"
       },
@@ -8411,11 +8416,6 @@
       {
         "identity" : "cda",
         "map" : ".languageCode"
-      },
-      {
-        "identity" : "hcim-languageproficiency-v3.1-2017EN",
-        "map" : "NL-CM:7.12.3",
-        "comment" : "CommunicationLanguage"
       }]
     },
     {
@@ -8472,18 +8472,6 @@
         "targetProfile" : "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"
       }],
       "mapping" : [{
-        "identity" : "v2",
-        "map" : "PD1-4"
-      },
-      {
-        "identity" : "rim",
-        "map" : "subjectOf.CareEvent.performer.AssignedEntity"
-      },
-      {
-        "identity" : "cda",
-        "map" : "n/a"
-      },
-      {
         "identity" : "hcim-healthcareprovider-v1.2-2015EN",
         "map" : "NL-CM:17.2.1",
         "comment" : "HealthcareProvider"
@@ -8512,6 +8500,18 @@
         "identity" : "hcim-healthprofessional-v3.2-2017EN",
         "map" : "NL-CM:17.1.1",
         "comment" : "HealthProfessional"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PD1-4"
+      },
+      {
+        "identity" : "rim",
+        "map" : "subjectOf.CareEvent.performer.AssignedEntity"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
       }]
     },
     {

@@ -10,7 +10,7 @@
   "name" : "MedicationUse",
   "title" : "MedicationUse",
   "status" : "active",
-  "date" : "2024-08-27T08:48:41+00:00",
+  "date" : "2024-08-29T09:15:36+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -141,6 +141,11 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/MedicationStatement"
       }],
       "mapping" : [{
+        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
+        "map" : "NL-CM:9.11.21338",
+        "comment" : "MedicationUse"
+      },
+      {
         "identity" : "rim",
         "map" : "Entity. Role, or Act"
       },
@@ -155,11 +160,6 @@
       {
         "identity" : "w5",
         "map" : "clinical.medication"
-      },
-      {
-        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
-        "map" : "NL-CM:9.11.21338",
-        "comment" : "MedicationUse"
       }]
     },
     {
@@ -359,17 +359,17 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
+        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
+        "map" : "NL-CM:9.11.22492",
+        "comment" : "AsAgreedIndicator"
+      },
+      {
         "identity" : "rim",
         "map" : "n/a"
       },
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
-        "map" : "NL-CM:9.11.22492",
-        "comment" : "AsAgreedIndicator"
       }]
     },
     {
@@ -579,17 +579,17 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.7",
+        "comment" : "Author"
+      },
+      {
         "identity" : "rim",
         "map" : "n/a"
       },
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.7",
-        "comment" : "Author"
       }]
     },
     {
@@ -629,17 +629,17 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
+        "identity" : "Medication-Process-v09",
+        "map" : "mp-dataelement900-22092",
+        "comment" : "Medicamenteuze behandeling"
+      },
+      {
         "identity" : "rim",
         "map" : "n/a"
       },
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "Medication-Process-v09",
-        "map" : "mp-dataelement900-22092",
-        "comment" : "Medicamenteuze behandeling"
       }]
     },
     {
@@ -824,13 +824,13 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "N/A"
-      },
-      {
         "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
         "map" : "NL-CM:9.11.22493",
         "comment" : "Reden wijzigen of stoppen gebruik"
+      },
+      {
+        "identity" : "rim",
+        "map" : "N/A"
       }]
     },
     {
@@ -916,6 +916,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.6",
+        "comment" : "IdentificationNumber"
+      },
+      {
         "identity" : "workflow",
         "map" : "…identifer"
       },
@@ -926,11 +931,6 @@
       {
         "identity" : "w5",
         "map" : "id"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.6",
-        "comment" : "IdentificationNumber"
       }]
     },
     {
@@ -1072,6 +1072,11 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
+        "map" : "NL-CM:9.11.23132",
+        "comment" : "MedicationUseStopType. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/MedicationUseStopTypeCodeLijst-to-MedicationStatementStatus) is available that maps MedicationUseStopTypeCodeLijst to the MedicationStatementStatus value set."
+      },
+      {
         "identity" : "workflow",
         "map" : "…status"
       },
@@ -1082,11 +1087,6 @@
       {
         "identity" : "w5",
         "map" : "status"
-      },
-      {
-        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
-        "map" : "NL-CM:9.11.23132",
-        "comment" : "MedicationUseStopType. A ConceptMap (http://nictiz.nl/fhir/ConceptMap/MedicationUseStopTypeCodeLijst-to-MedicationStatementStatus) is available that maps MedicationUseStopTypeCodeLijst to the MedicationStatementStatus value set."
       }]
     },
     {
@@ -1551,6 +1551,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
+        "map" : "NL-CM:9.11.21339",
+        "comment" : "ProductUsed"
+      },
+      {
         "identity" : "workflow",
         "map" : "…code"
       },
@@ -1561,11 +1566,6 @@
       {
         "identity" : "w5",
         "map" : "what"
-      },
-      {
-        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
-        "map" : "NL-CM:9.11.21339",
-        "comment" : "ProductUsed"
       }]
     },
     {
@@ -1750,6 +1750,16 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
+        "map" : "NL-CM:9.11.22663",
+        "comment" : "PeriodOfUse"
+      },
+      {
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.14",
+        "comment" : "DateTime"
+      },
+      {
         "identity" : "workflow",
         "map" : "…occurrence[x]"
       },
@@ -1760,16 +1770,6 @@
       {
         "identity" : "w5",
         "map" : "when.done"
-      },
-      {
-        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
-        "map" : "NL-CM:9.11.22663",
-        "comment" : "PeriodOfUse"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.14",
-        "comment" : "DateTime"
       }]
     },
     {
@@ -1998,17 +1998,17 @@
       "condition" : ["per-1"],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-timeinterval-v1.0-2017EN",
+        "map" : "NL-CM:20.3.2",
+        "comment" : "startDateTime"
+      },
+      {
         "identity" : "v2",
         "map" : "DR.1"
       },
       {
         "identity" : "rim",
         "map" : "./low"
-      },
-      {
-        "identity" : "hcim-timeinterval-v1.0-2017EN",
-        "map" : "NL-CM:20.3.2",
-        "comment" : "startDateTime"
       }]
     },
     {
@@ -2032,17 +2032,17 @@
       "condition" : ["per-1"],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-timeinterval-v1.0-2017EN",
+        "map" : "NL-CM:20.3.3",
+        "comment" : "endDateTime"
+      },
+      {
         "identity" : "v2",
         "map" : "DR.2"
       },
       {
         "identity" : "rim",
         "map" : "./high"
-      },
-      {
-        "identity" : "hcim-timeinterval-v1.0-2017EN",
-        "map" : "NL-CM:20.3.3",
-        "comment" : "endDateTime"
       }]
     },
     {
@@ -2068,17 +2068,17 @@
       "mustSupport" : true,
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
+        "map" : "NL-CM:9.11.22398",
+        "comment" : "MedicationUseDateTime"
+      },
+      {
         "identity" : "rim",
         "map" : ".participation[typeCode=AUT].time"
       },
       {
         "identity" : "w5",
         "map" : "when.recorded"
-      },
-      {
-        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
-        "map" : "NL-CM:9.11.22398",
-        "comment" : "MedicationUseDateTime"
       }]
     },
     {
@@ -2111,17 +2111,17 @@
         "targetProfile" : "http://fhir.nl/fhir/StructureDefinition/nl-core-organization"
       }],
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.2",
+        "comment" : "InformationSource"
+      },
+      {
         "identity" : "rim",
         "map" : ".participation[typeCode=INF].role[classCode=PAT, or codes for Practioner or Related Person (if PAT is the informer, then syntax for self-reported =true)"
       },
       {
         "identity" : "w5",
         "map" : "who.source"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.2",
-        "comment" : "InformationSource"
       }]
     },
     {
@@ -2284,6 +2284,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.11",
+        "comment" : "Subject"
+      },
+      {
         "identity" : "workflow",
         "map" : "…subject"
       },
@@ -2298,11 +2303,6 @@
       {
         "identity" : "w5",
         "map" : "who"
-      },
-      {
-        "identity" : "hcim-basicelements-v1.0-2017EN",
-        "map" : "NL-CM:0.0.11",
-        "comment" : "Subject"
       }]
     },
     {
@@ -2362,17 +2362,17 @@
         }
       },
       "mapping" : [{
+        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
+        "map" : "NL-CM:9.11.22399",
+        "comment" : "UseIndicator"
+      },
+      {
         "identity" : "workflow",
         "map" : "…notDone"
       },
       {
         "identity" : "rim",
         "map" : ".actionNegationInd"
-      },
-      {
-        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
-        "map" : "NL-CM:9.11.22399",
-        "comment" : "UseIndicator"
       }]
     },
     {
@@ -2554,6 +2554,11 @@
       }],
       "isSummary" : true,
       "mapping" : [{
+        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
+        "map" : "NL-CM:9.11.22491",
+        "comment" : "ReasonForUse"
+      },
+      {
         "identity" : "v2",
         "map" : "C*E.9. But note many systems use C*E.2 for this"
       },
@@ -2564,11 +2569,6 @@
       {
         "identity" : "orim",
         "map" : "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
-      },
-      {
-        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
-        "map" : "NL-CM:9.11.22491",
-        "comment" : "ReasonForUse"
       }]
     },
     {
@@ -2622,17 +2622,17 @@
         "code" : "Annotation"
       }],
       "mapping" : [{
+        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
+        "map" : "NL-CM:9.11.21624",
+        "comment" : "Comment"
+      },
+      {
         "identity" : "workflow",
         "map" : "…note"
       },
       {
         "identity" : "rim",
         "map" : ".inboundRelationship[typeCode=SUBJ]/source[classCode=OBS,moodCode=EVN,code=\"annotation\"].value"
-      },
-      {
-        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
-        "map" : "NL-CM:9.11.21624",
-        "comment" : "Comment"
       }]
     },
     {
@@ -2663,12 +2663,9 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".outboundRelationship[typeCode=COMP].target[classCode=SBADM, moodCode=INT]"
+        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
+        "map" : "NL-CM:9.11.22504",
+        "comment" : "InstructionsForUse"
       },
       {
         "identity" : "hcim-instructionsforuse-v1.1-2017EN",
@@ -2676,9 +2673,12 @@
         "comment" : "InstructionsForUse"
       },
       {
-        "identity" : "hcim-medicationuse2-v1.0.1-2017EN",
-        "map" : "NL-CM:9.11.22504",
-        "comment" : "InstructionsForUse"
+        "identity" : "rim",
+        "map" : "n/a"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=COMP].target[classCode=SBADM, moodCode=INT]"
       }]
     },
     {
@@ -2752,13 +2752,13 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".text"
-      },
-      {
         "identity" : "hcim-instructionsforuse-v1.1-2017EN",
         "map" : "NL-CM:9.12.22503",
         "comment" : "SequenceNumber"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".text"
       }]
     },
     {
@@ -2781,13 +2781,13 @@
       "mustSupport" : true,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".text"
-      },
-      {
         "identity" : "hcim-instructionsforuse-v1.1-2017EN",
         "map" : "NL-CM:9.12.9581",
         "comment" : "Description"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".text"
       }]
     },
     {
@@ -2819,13 +2819,13 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".text"
-      },
-      {
         "identity" : "hcim-instructionsforuse-v1.1-2017EN",
         "map" : "NL-CM:9.12.19944",
         "comment" : "AdditionalInstructions"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".text"
       }]
     },
     {
@@ -2878,6 +2878,11 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.19948",
+        "comment" : "AdministeringSchedule"
+      },
+      {
         "identity" : "rim",
         "map" : "n/a"
       },
@@ -2888,11 +2893,6 @@
       {
         "identity" : "rim",
         "map" : "QSET<TS> (GTS)"
-      },
-      {
-        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
-        "map" : "NL-CM:9.12.19948",
-        "comment" : "AdministeringSchedule"
       }]
     },
     {
@@ -2968,10 +2968,6 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=\"as needed\"].value=boolean or codable concept"
-      },
-      {
         "identity" : "hcim-instructionsforuse-v1.1-2017EN",
         "map" : "NL-CM:9.12.22512",
         "comment" : "AsNeeded"
@@ -2980,6 +2976,10 @@
         "identity" : "hcim-instructionsforuse-v1.1-2017EN",
         "map" : "NL-CM:9.12.19945",
         "comment" : "Condition"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=\"as needed\"].value=boolean or codable concept"
       }]
     },
     {
@@ -3052,13 +3052,13 @@
         }
       },
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".routeCode"
-      },
-      {
         "identity" : "hcim-instructionsforuse-v1.1-2017EN",
         "map" : "NL-CM:9.12.19941",
         "comment" : "RouteOfAdministration"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".routeCode"
       }]
     },
     {
@@ -3246,13 +3246,13 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".doseQuantity"
-      },
-      {
         "identity" : "hcim-instructionsforuse-v1.1-2017EN",
         "map" : "NL-CM:9.12.19940",
         "comment" : "Dose"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".doseQuantity"
       }]
     },
     {
@@ -3486,13 +3486,13 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".maxDoseQuantity"
-      },
-      {
         "identity" : "hcim-instructionsforuse-v1.1-2017EN",
         "map" : "NL-CM:9.12.19946",
         "comment" : "MaximumDose"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".maxDoseQuantity"
       }]
     },
     {
@@ -3671,13 +3671,13 @@
       }],
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "rim",
-        "map" : ".rateQuantity"
-      },
-      {
         "identity" : "hcim-instructionsforuse-v1.1-2017EN",
         "map" : "NL-CM:9.12.19942",
         "comment" : "AdministeringSpeed"
+      },
+      {
+        "identity" : "rim",
+        "map" : ".rateQuantity"
       }]
     }]
   },

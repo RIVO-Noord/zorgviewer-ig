@@ -30,7 +30,7 @@
   <name value="LaboratoryTestResult"/>
   <title value="LaboratoryTestResult"/>
   <status value="active"/>
-  <date value="2024-08-27T08:48:41+00:00"/>
+  <date value="2024-08-29T09:15:36+00:00"/>
   <publisher value="RIVO-NN HL7NL"/>
   <contact>
     <name value="RIVO-NN"/>
@@ -176,6 +176,36 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Observation"/>
       </constraint>
       <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
+        <map value="NL-CM:13.1.1"/>
+        <comment value="LaboratoryTestResult"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:13.1.1"/>
+        <comment value="LaboratoryTestResult"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
+        <map value="NL-CM:13.1.1"/>
+        <comment value="LaboratoryTestResult"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
+        <map value="NL-CM:13.1.3"/>
+        <comment value="LaboratoryTest"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:13.1.3"/>
+        <comment value="LaboratoryTest"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
+        <map value="NL-CM:13.1.3"/>
+        <comment value="LaboratoryTest"/>
+      </mapping>
+      <mapping>
         <identity value="rim"/>
         <map value="Entity. Role, or Act"/>
       </mapping>
@@ -198,36 +228,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="clinical.diagnostics"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
-        <map value="NL-CM:13.1.1"/>
-        <comment value="LaboratoryTestResult"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:13.1.1"/>
-        <comment value="LaboratoryTestResult"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
-        <map value="NL-CM:13.1.1"/>
-        <comment value="LaboratoryTestResult"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
-        <map value="NL-CM:13.1.3"/>
-        <comment value="LaboratoryTest"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:13.1.3"/>
-        <comment value="LaboratoryTest"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
-        <map value="NL-CM:13.1.3"/>
-        <comment value="LaboratoryTest"/>
       </mapping>
     </element>
     <element id="Observation.id">
@@ -423,6 +423,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.6"/>
+        <comment value="IdentificationNumber"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="Event.identifier"/>
       </mapping>
@@ -437,11 +442,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="id"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.6"/>
-        <comment value="IdentificationNumber"/>
       </mapping>
     </element>
     <element id="Observation.basedOn">
@@ -489,6 +489,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
+        <map value="NL-CM:13.1.34"/>
+        <comment value="Contains Requester::HealthProfessional"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="Event.basedOn"/>
       </mapping>
@@ -499,11 +504,6 @@
       <mapping>
         <identity value="rim"/>
         <map value=".outboundRelationship[typeCode=FLFS].target"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
-        <map value="NL-CM:13.1.34"/>
-        <comment value="Contains Requester::HealthProfessional"/>
       </mapping>
     </element>
     <element id="Observation.status">
@@ -1217,14 +1217,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="class"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
         <map value="NL-CM:13.1.7"/>
         <comment value="ResultType"/>
@@ -1238,6 +1230,14 @@
         <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
         <map value="NL-CM:13.1.7"/>
         <comment value="ResultType"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="class"/>
       </mapping>
     </element>
     <element id="Observation.code">
@@ -1271,30 +1271,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="workflow"/>
-        <map value="Event.code"/>
-      </mapping>
-      <mapping>
-        <identity value="sct-concept"/>
-        <map value="&lt; 363787002 |Observable entity| OR &lt; 386053000 |Evaluation procedure|"/>
-      </mapping>
-      <mapping>
-        <identity value="v2"/>
-        <map value="OBX-3"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="code"/>
-      </mapping>
-      <mapping>
-        <identity value="sct-attr"/>
-        <map value="116680003 |Is a|"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="what"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
         <map value="NL-CM:13.1.4"/>
         <comment value="Test"/>
@@ -1323,6 +1299,30 @@
         <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
         <map value="NL-CM:13.1.8"/>
         <comment value="TestCode"/>
+      </mapping>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.code"/>
+      </mapping>
+      <mapping>
+        <identity value="sct-concept"/>
+        <map value="&lt; 363787002 |Observable entity| OR &lt; 386053000 |Evaluation procedure|"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+      <mapping>
+        <identity value="sct-attr"/>
+        <map value="116680003 |Is a|"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="what"/>
       </mapping>
     </element>
     <element id="Observation.code.id">
@@ -1471,6 +1471,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.11"/>
+        <comment value="Subject"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="Event.subject"/>
       </mapping>
@@ -1485,11 +1490,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="who.focus"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.11"/>
-        <comment value="Subject"/>
       </mapping>
     </element>
     <element id="Observation.context">
@@ -1563,6 +1563,26 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
+        <map value="NL-CM:13.1.13"/>
+        <comment value="TestDateTime"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:13.1.13"/>
+        <comment value="TestDateTime"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
+        <map value="NL-CM:13.1.13"/>
+        <comment value="TestDateTime"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.14"/>
+        <comment value="DateTime"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="Event.occurrence[x]"/>
       </mapping>
@@ -1577,26 +1597,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="when.done"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.14"/>
-        <comment value="DateTime"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
-        <map value="NL-CM:13.1.13"/>
-        <comment value="TestDateTime"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:13.1.13"/>
-        <comment value="TestDateTime"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
-        <map value="NL-CM:13.1.13"/>
-        <comment value="TestDateTime"/>
       </mapping>
     </element>
     <element id="Observation.effective[x]:effectiveDateTime">
@@ -1621,6 +1621,26 @@
       <mustSupport value="true"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
+        <map value="NL-CM:13.1.13"/>
+        <comment value="TestDateTime"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:13.1.13"/>
+        <comment value="TestDateTime"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
+        <map value="NL-CM:13.1.13"/>
+        <comment value="TestDateTime"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.14"/>
+        <comment value="DateTime"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="Event.occurrence[x]"/>
       </mapping>
@@ -1635,26 +1655,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="when.done"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.14"/>
-        <comment value="DateTime"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
-        <map value="NL-CM:13.1.13"/>
-        <comment value="TestDateTime"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:13.1.13"/>
-        <comment value="TestDateTime"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
-        <map value="NL-CM:13.1.13"/>
-        <comment value="TestDateTime"/>
       </mapping>
     </element>
     <element id="Observation.issued">
@@ -1716,6 +1716,11 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-basicelements-v1.0-2017EN"/>
+        <map value="NL-CM:0.0.7"/>
+        <comment value="Author"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="Event.performer"/>
       </mapping>
@@ -1730,11 +1735,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="who.actor"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN"/>
-        <map value="NL-CM:0.0.7"/>
-        <comment value="Author"/>
       </mapping>
     </element>
     <element id="Observation.performer.id">
@@ -1900,6 +1900,21 @@
       <condition value="obs-7"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
+        <map value="NL-CM:13.1.10"/>
+        <comment value="TestResult"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:13.1.10"/>
+        <comment value="TestResult"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
+        <map value="NL-CM:13.1.10"/>
+        <comment value="TestResult"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="Event.notDone, Event.notDoneReason  (maps to valeu[x] or dataAbsentReason)"/>
       </mapping>
@@ -1918,21 +1933,6 @@
       <mapping>
         <identity value="sct-attr"/>
         <map value="363714003 |Interprets|"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
-        <map value="NL-CM:13.1.10"/>
-        <comment value="TestResult"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:13.1.10"/>
-        <comment value="TestResult"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
-        <map value="NL-CM:13.1.10"/>
-        <comment value="TestResult"/>
       </mapping>
     </element>
     <element id="Observation.value[x]:valueQuantity">
@@ -1957,6 +1957,21 @@
       <mustSupport value="true"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
+        <map value="NL-CM:13.1.10"/>
+        <comment value="TestResult"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:13.1.10"/>
+        <comment value="TestResult"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
+        <map value="NL-CM:13.1.10"/>
+        <comment value="TestResult"/>
+      </mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="Event.notDone, Event.notDoneReason  (maps to valeu[x] or dataAbsentReason)"/>
       </mapping>
@@ -1975,21 +1990,6 @@
       <mapping>
         <identity value="sct-attr"/>
         <map value="363714003 |Interprets|"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
-        <map value="NL-CM:13.1.10"/>
-        <comment value="TestResult"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:13.1.10"/>
-        <comment value="TestResult"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
-        <map value="NL-CM:13.1.10"/>
-        <comment value="TestResult"/>
       </mapping>
     </element>
     <element id="Observation.value[x]:valueQuantity.id">
@@ -2831,18 +2831,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="v2"/>
-        <map value="C*E.1-8, C*E.10-22"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="union(., ./translation)"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
         <map value="NL-CM:13.1.14"/>
         <comment value="ResultFlags"/>
@@ -2856,6 +2844,18 @@
         <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
         <map value="NL-CM:13.1.14"/>
         <comment value="ResultFlags - see ConceptMap 'HCIM InterpretatieVlaggenCodelijst to Observation Interpretation Codes'"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.1-8, C*E.10-22"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="union(., ./translation)"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
       </mapping>
     </element>
     <element id="Observation.interpretation.coding:InterpretatieVlaggenCodelijst.id">
@@ -3111,18 +3111,6 @@
         <code value="string"/>
       </type>
       <mapping>
-        <identity value="workflow"/>
-        <map value="Event.note"/>
-      </mapping>
-      <mapping>
-        <identity value="v2"/>
-        <map value="NTE.3 (partner NTE to OBX, or sometimes another (child?) OBX)"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="subjectOf.observationEvent[code=&quot;annotation&quot;].value"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
         <map value="NL-CM:13.1.5"/>
         <comment value="Explanation"/>
@@ -3141,6 +3129,18 @@
         <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
         <map value="NL-CM:13.1.32"/>
         <comment value="ResultInterpretation"/>
+      </mapping>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.note"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NTE.3 (partner NTE to OBX, or sometimes another (child?) OBX)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="subjectOf.observationEvent[code=&quot;annotation&quot;].value"/>
       </mapping>
     </element>
     <element id="Observation.bodySite">
@@ -3210,14 +3210,6 @@
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="v2"/>
-        <map value="OBX-17"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="methodCode"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
         <map value="NL-CM:13.1.9"/>
         <comment value="TestMethod"/>
@@ -3231,6 +3223,14 @@
         <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
         <map value="NL-CM:13.1.9"/>
         <comment value="TestMethod"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX-17"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="methodCode"/>
       </mapping>
     </element>
     <element id="Observation.specimen">
@@ -3252,6 +3252,21 @@
       </type>
       <mustSupport value="true"/>
       <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
+        <map value="NL-CM:13.1.2"/>
+        <comment value="Specimen"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:13.1.2"/>
+        <comment value="Specimen"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
+        <map value="NL-CM:13.1.2"/>
+        <comment value="Specimen"/>
+      </mapping>
+      <mapping>
         <identity value="sct-concept"/>
         <map value="&lt; 123038009 |Specimen|"/>
       </mapping>
@@ -3266,21 +3281,6 @@
       <mapping>
         <identity value="sct-attr"/>
         <map value="704319004 |Inherent in|"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
-        <map value="NL-CM:13.1.2"/>
-        <comment value="Specimen"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:13.1.2"/>
-        <comment value="Specimen"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
-        <map value="NL-CM:13.1.2"/>
-        <comment value="Specimen"/>
       </mapping>
     </element>
     <element id="Observation.device">
@@ -3443,14 +3443,6 @@
       </type>
       <condition value="obs-3"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="OBX-7"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="value:IVL_PQ.low"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
         <map value="NL-CM:13.1.12"/>
         <comment value="LowerReferenceLimit"/>
@@ -3464,6 +3456,14 @@
         <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
         <map value="NL-CM:13.1.12"/>
         <comment value="ReferenceRangeLowerLimit"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX-7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="value:IVL_PQ.low"/>
       </mapping>
     </element>
     <element id="Observation.referenceRange.low.id">
@@ -3680,14 +3680,6 @@
       </type>
       <condition value="obs-3"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="OBX-7"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="value:IVL_PQ.high"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
         <map value="NL-CM:13.1.11"/>
         <comment value="UpperReferenceLimit"/>
@@ -3701,6 +3693,14 @@
         <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
         <map value="NL-CM:13.1.11"/>
         <comment value="ReferenceRangeUpperLimit"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX-7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="value:IVL_PQ.high"/>
       </mapping>
     </element>
     <element id="Observation.referenceRange.high.id">
@@ -4048,14 +4048,6 @@
       </constraint>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="Relationships established by OBX-4 usage"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="outBoundRelationship"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
         <map value="NL-CM:13.1.33"/>
         <comment value="RelatedResults"/>
@@ -4064,6 +4056,14 @@
         <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
         <map value="NL-CM:13.1.3"/>
         <comment value="LaboratoryTest"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="Relationships established by OBX-4 usage"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outBoundRelationship"/>
       </mapping>
     </element>
     <element id="Observation.related.id">
@@ -4223,14 +4223,6 @@
       </constraint>
       <isSummary value="true"/>
       <mapping>
-        <identity value="v2"/>
-        <map value="containment by OBX-4?"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="outBoundRelationship[typeCode=COMP]"/>
-      </mapping>
-      <mapping>
         <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
         <map value="NL-CM:13.1.3"/>
         <comment value="LaboratoryTest"/>
@@ -4244,6 +4236,14 @@
         <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
         <map value="NL-CM:13.1.3"/>
         <comment value="LaboratoryTest"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="containment by OBX-4?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outBoundRelationship[typeCode=COMP]"/>
       </mapping>
     </element>
     <element id="Observation.component.id">
@@ -4338,6 +4338,21 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
+        <map value="NL-CM:13.1.8"/>
+        <comment value="TestName"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:13.1.8"/>
+        <comment value="TestName"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
+        <map value="NL-CM:13.1.8"/>
+        <comment value="TestCode"/>
+      </mapping>
+      <mapping>
         <identity value="sct-concept"/>
         <map value="&lt; 363787002 |Observable entity| OR &#xD;&lt; 386053000 |Evaluation procedure|"/>
       </mapping>
@@ -4352,21 +4367,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="what"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
-        <map value="NL-CM:13.1.8"/>
-        <comment value="TestName"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:13.1.8"/>
-        <comment value="TestName"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
-        <map value="NL-CM:13.1.8"/>
-        <comment value="TestCode"/>
       </mapping>
     </element>
     <element id="Observation.component.value[x]">
@@ -4415,6 +4415,21 @@
       </type>
       <isSummary value="true"/>
       <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
+        <map value="NL-CM:13.1.10"/>
+        <comment value="TestResult"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:13.1.10"/>
+        <comment value="TestResult"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
+        <map value="NL-CM:13.1.10"/>
+        <comment value="TestResult"/>
+      </mapping>
+      <mapping>
         <identity value="sct-concept"/>
         <map value="363714003 |Interprets| &lt; 441742003 |Evaluation finding|"/>
       </mapping>
@@ -4429,21 +4444,6 @@
       <mapping>
         <identity value="sct-attr"/>
         <map value="363714003 |Interprets|"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
-        <map value="NL-CM:13.1.10"/>
-        <comment value="TestResult"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:13.1.10"/>
-        <comment value="TestResult"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
-        <map value="NL-CM:13.1.10"/>
-        <comment value="TestResult"/>
       </mapping>
     </element>
     <element id="Observation.component.dataAbsentReason">
@@ -4508,6 +4508,21 @@
         </valueSetReference>
       </binding>
       <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
+        <map value="NL-CM:13.1.14"/>
+        <comment value="ResultFlags"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
+        <map value="NL-CM:13.1.14"/>
+        <comment value="ResultFlags"/>
+      </mapping>
+      <mapping>
+        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
+        <map value="NL-CM:13.1.14"/>
+        <comment value="ResultFlags"/>
+      </mapping>
+      <mapping>
         <identity value="sct-concept"/>
         <map value="&lt; 260245000 |Findings values|"/>
       </mapping>
@@ -4522,21 +4537,6 @@
       <mapping>
         <identity value="sct-attr"/>
         <map value="363713009 |Has interpretation|"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v1.2.2-2015EN"/>
-        <map value="NL-CM:13.1.14"/>
-        <comment value="ResultFlags"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresultfortransfer-v3.0-2016EN"/>
-        <map value="NL-CM:13.1.14"/>
-        <comment value="ResultFlags"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-laboratorytestresult-v4.1-2017EN"/>
-        <map value="NL-CM:13.1.14"/>
-        <comment value="ResultFlags"/>
       </mapping>
     </element>
     <element id="Observation.component.referenceRange">
