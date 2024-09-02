@@ -49,7 +49,7 @@ Kolom definities:
       <td><samp>FLag.code.text</samp> of <samp>Condition.code.text</samp></td>
       <td><code>string​</code></td>
       <td>AlertType</td>
-      <td>Indien <samp>Condition.code.text null is wordt de <samp>Flag.code.text</samp> getoond</td>
+      <td>Indien <samp>Condition.code.text null is wordt de <samp>Flag.code.text</samp> getoond </td>
     </tr>
   </tbody>
 </table>
