@@ -10,12 +10,16 @@
           "name": "Datum"
         },
         {
-          "path": "iif(exists(resource.code.text),resource.code.text,resource.code.coding.display)",
-          "name": "Stof"
+          "path": "resource.clinicalStatus",
+          "name": "Klinische status"
         },
         {
           "path": "resource.category",
           "name": "Categorie"
+        },
+        {
+          "path": "iif(exists(resource.code.text),resource.code.text,resource.code.coding.display)",
+          "name": "Stof"
         },
         {
           "path": "resource.reaction.severity",
