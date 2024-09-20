@@ -39,14 +39,14 @@ Kolom definities:
     </tr>
     <tr>
       <td>Categorie</td>
-      <td><samp>Flag.category.text</samp> of <samp>Condition.category[0].text</samp></td>
+      <td><samp>.category.text</samp> of <samp>Condition.category[0].text</samp></td>
       <td><code>string​</code></td>
       <td>AlertNaam of Conditie::Probleem</td>
       <td>Indien <samp>Condition.category[0].text</samp> null is wordt de <samp>Flag.category.text</samp> getoond</td>
     </tr>
     <tr>
       <td>Voor</td>
-      <td><samp>Flag.code.text</samp> of <samp>Condition.code.text</samp></td>
+      <td><samp>.code.text</samp> of <samp>Condition.code.text</samp></td>
       <td><code>string​</code></td>
       <td>AlertType</td>
       <td>Indien <samp>Condition.code.text</samp> null is wordt de <samp>Flag.code.text</samp> getoond </td>
