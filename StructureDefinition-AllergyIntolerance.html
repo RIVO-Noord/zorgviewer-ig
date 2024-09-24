@@ -311,8 +311,75 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 
 <h3 id="user-interface-guidance">User-Interface guidance</h3>
 
-<p>Een schets van het scherm met labels en sortering informatie</p>
-<div style="clear:both;"><img src="UI-Schets-AllergiyIntolerances.png" class="figure-img img-responsive img-rounded center-block" /></div>
+<table>
+  <thead>
+    <tr>
+      <th>Kolomnaam</th>
+      <th>FHIR Path</th>
+      <th>FHIR Type</th>
+      <th>Zib element</th>
+      <th>Toelichting of regels</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bron</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Datum</td>
+      <td>.onsetPeriod.start</td>
+      <td>dateTime</td>
+      <td>BeginDatumTijd</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Stof</td>
+      <td>.code.text</td>
+      <td>code</td>
+      <td>VeroorzakendeStof</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Toelichting</td>
+      <td>.note.extension('http://nictiz.nl/fhir/StructureDefinition/note')</td>
+      <td>string</td>
+      <td>Toelichting</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Ernst</td>
+      <td>._criticality.extension[system="http://nictiz.nl/fhir/StructureDefinition/code-specification"].Text Of indien geen extensie aanwezig: .criticality</td>
+      <td>code</td>
+      <td>MateVanKritiek</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Reactie</td>
+      <td>.reaction.manifestation.text</td>
+      <td> </td>
+      <td>Reactie Symptoom</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Categorie</td>
+      <td>._category.extension[system=” http://nictiz.nl/fhir/StructureDefinition/code-specification"].Text of indien geen extensie aanwezig: .category</td>
+      <td>code[]</td>
+      <td>AllergieCategorie</td>
+      <td>Hebt meerdere opties die tegelijk getoond kunnen worden</td>
+    </tr>
+    <tr>
+      <td>Klinische status</td>
+      <td>._clinicalStatus.extension[system=" http://nictiz.nl/fhir/StructureDefinition/code-specification "].Text of indien geen extensie aanwezig: .clinicalStatus</td>
+      <td>code</td>
+      <td>AllergieStatus</td>
+      <td>‘Actief’, ‘Niet meer aanwezig’, ‘Achterhaald’. ‘Foutief’ status wordt niet getoond in de Zorgviewer (wordt uitgefilterd). Indien geen extensie aanwezig, dan worden de waarden als volgt gemapped: Active -&gt; Actief; InActive -&gt; Achterhaald; Resolved -&gt; Niet meer aanwezig</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="request">Request</h3>
 
@@ -4339,7 +4406,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.5.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Sep 24, 2024 14:49+0000">2024-09-24</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.5.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Sep 24, 2024 14:50+0000">2024-09-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
