@@ -301,13 +301,13 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 
 <h3 id="user-interface-guidance">User-Interface guidance</h3>
 
-<p>|Kolomnaam|Zib element|FHIR-path|Informatie|
-|–|–|–|–|
-|Bron|nvt|.meta.extension[system="http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"].valueUri|  |
-|Datum|BeginDatumTijd|.period.start|  |
-|Voor|AlertNaam of Conditie::Probleem|Flag.code.text of Condition.code.text|  |
-|Categorie|AlertType|Flag.category.text of Condition.category[0].text|  |
-|Status|nvt|.status|Mapping: ‘active’ naar ‘actueel’; ‘in-active’ naar ‘niet actueel’ Uitgefilterd: ‘entered-in-error’ wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.|</p>
+<p>|Kolomnaam|FHIR Path  |FHIR Type|Zib element  |Toelichting of regels  |
+|–|–|–|–|–|
+|Bron|.meta.extension[system="http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"].valueUri|string|nvt|  |
+|Datum|.period.start|dateTime|BeginDatumTijd|  |
+|Voor|Flag.code.text of resource.extension.where(url='http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text|string|AlertNaam of Conditie::Probleem| De resolve levert de bijbehorende Condition |
+|Categorie|Flag.category.text|string|AlertType|  |
+|Status|.status|code|nvt|Mapping: ‘active’ naar ‘actueel’; ‘in-active’ naar ‘niet actueel’ Uitgefilterd: ‘entered-in-error’ wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.|</p>
 <h3 id="request">Request</h3>
 
 <ol>
@@ -2031,7 +2031,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.5.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Mon, Sep 30, 2024 11:15+0000">2024-09-30</span>
+          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.5.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Mon, Sep 30, 2024 11:48+0000">2024-09-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
