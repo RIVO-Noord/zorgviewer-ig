@@ -10,13 +10,13 @@
 
 ### User-Interface guidance
 
-|Kolomnaam|Zib element|FHIR-path|Informatie|
-|--|--|--|--|
-|Bron|nvt|.meta.extension[system="http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"].valueUri|  |
-|Datum|BeginDatumTijd|.period.start|  |
-|Voor|AlertNaam of Conditie::Probleem|Flag.code.text of Condition.code.text|  |
-|Categorie|AlertType|Flag.category.text of Condition.category[0].text|  |
-|Status|nvt|.status|Mapping: ‘active’ naar ‘actueel’; ‘in-active’ naar ‘niet actueel’ Uitgefilterd: ‘entered-in-error’ wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.|
+|Kolomnaam|FHIR Path  |FHIR Type|Zib element  |Toelichting of regels  |
+|--|--|--|--|--|
+|Bron|.meta.extension[system="http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"].valueUri|string|nvt|  |
+|Datum|.period.start|dateTime|BeginDatumTijd|  |
+|Voor|Flag.code.text of resource.extension.where(url='http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text|string|AlertNaam of Conditie::Probleem| De resolve levert de bijbehorende Condition |
+|Categorie|Flag.category.text|string|AlertType|  |
+|Status|.status|code|nvt|Mapping: ‘active’ naar ‘actueel’; ‘in-active’ naar ‘niet actueel’ Uitgefilterd: ‘entered-in-error’ wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.|
 ### Request
 
 1. Opvragen (search) definities
