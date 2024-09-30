@@ -1,0 +1,42 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/MedicationStatement",
+    "name": "MedicationUse",
+    "title": "MedicationUse",
+    "status": "active",
+    "description": "Medicatie Gebruik",
+    "kind": "resource",
+    "abstract": false,
+    "type": "MedicationStatement",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "MedicationStatement.category.text",
+                "path": "MedicationStatement.category.text",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationStatement.medicationReference.display",
+                "path": "MedicationStatement.medicationReference.display",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationStatement.dateAsserted",
+                "path": "MedicationStatement.dateAsserted",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationStatement.dosage.text",
+                "path": "MedicationStatement.dosage.text",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationStatement.dosage.route.text",
+                "path": "MedicationStatement.dosage.route.text",
+                "mustSupport": true
+            }
+        ]
+    }
+}

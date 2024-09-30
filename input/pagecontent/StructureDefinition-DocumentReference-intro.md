@@ -6,9 +6,6 @@
 
 ### User-Interface guidance
 
-Een schets van het scherm met labels en sortering informatie:
-<div style="clear:both;"><img src="ui-documentref.png" class="figure-img img-responsive img-rounded center-block"></div>
-
 Kolom definities:
 <table class="grid">
   <thead>

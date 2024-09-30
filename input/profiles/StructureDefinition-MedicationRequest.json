@@ -1,0 +1,42 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/MedicationRequest",
+    "name": "MedicationAgreement",
+    "title": "MedicationAgreement",
+    "status": "active",
+    "description": "Medicatieafspraak",
+    "kind": "resource",
+    "abstract": false,
+    "type": "MedicationRequest",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "MedicationRequest.category.text",
+                "path": "MedicationRequest.category.text",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.medicationReference.display",
+                "path": "MedicationRequest.medicationReference.display",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.dateAsserted",
+                "path": "MedicationRequest.dateAsserted",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.dosage.text",
+                "path": "MedicationRequest.dosage.text",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.dosage.route.text",
+                "path": "MedicationRequest.dosage.route.text",
+                "mustSupport": true
+            }
+        ]
+    }
+}

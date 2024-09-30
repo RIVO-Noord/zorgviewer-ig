@@ -16,6 +16,10 @@
         {
           "path": "iif(exists(resource.code.text),resource.code.text,resource.code.coding.display)",
           "name": "Voor"
+        },
+        {
+          "path": "resource.extension.where(url='http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text",
+          "name": "Voor-detail"
         }
       ],
       "forEach": "entry.where(resource.resourceType = 'Flag')"

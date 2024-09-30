@@ -14,13 +14,21 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 
 ### User-Interface guidance
 
-Een schets van het scherm met labels en sortering informatie
-<div style="clear:both;"><img src="UI-Schets-AllergiyIntolerances.png" class="figure-img img-responsive img-rounded center-block"></div>
+|Kolomnaam|FHIR Path  |FHIR Type|Zib element  |Toelichting of regels  |
+|--|--|--|--|--|
+|Bron  |  |  |  | |
+|Datum  |.onsetPeriod.start  |dateTime  |BeginDatumTijd  ||
+|Stof  |.code.text  |code  |VeroorzakendeStof  | |
+|Toelichting  |.note.extension('http://nictiz.nl/fhir/StructureDefinition/note')  |string  |Toelichting  | |
+|Ernst  |.criticality.extension[system="http://nictiz.nl/fhir/StructureDefinition/code-specification"].text Of indien geen extensie aanwezig: .criticality |code  |MateVanKritiek  ||
+|Reactie  |.reaction.manifestation.text  |  |Reactie Symptoom  ||
+|Categorie|.category.extension[system=” http://nictiz.nl/fhir/StructureDefinition/code-specification"].text of indien geen extensie aanwezig: .category |code[]  |AllergieCategorie  |Hebt meerdere opties die tegelijk getoond kunnen worden|
+|Klinische status|.clinicalStatus.extension[system=" http://nictiz.nl/fhir/StructureDefinition/code-specification "].text of indien geen extensie aanwezig: .clinicalStatus|code  |AllergieStatus  |‘Actief’, ‘Niet meer aanwezig’, ‘Achterhaald’. ‘Foutief’ status wordt niet getoond in de Zorgviewer (wordt uitgefilterd). Indien geen extensie aanwezig, dan worden de waarden als volgt gemapped: Active -> Actief; InActive -> Achterhaald; Resolved -> Niet meer aanwezig|
 
 ### Request
 
 1. Opvragen (search) definities
 
-    `GET <behandelplan-base>/AllergyIntolerance`
+    `GET <ontsluiten-bronsysteem-base>/AllergyIntolerance/?patient=<fhir_patient_id>`
 
 {% include bronsysteem-herkennen.md %}

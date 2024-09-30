@@ -4,7 +4,7 @@
     "name": "AllergyIntolerance",
     "title": "AllergyIntolerance",
     "status": "active",
-    "description": "AllergyIntolerance",
+    "description": "Allergie & Intolerantie",
     "kind": "resource",
     "abstract": false,
     "type": "AllergyIntolerance",
@@ -13,18 +13,23 @@
     "differential": {
         "element": [
             {
+                "id": "AllergyIntolerance.clinicalStatus",
+                "path": "AllergyIntolerance.clinicalStatus",
+                "mustSupport": true
+            },
+            {
                 "id": "AllergyIntolerance.category",
                 "path": "AllergyIntolerance.category",
                 "mustSupport": true
             },
             {
-                "id": "AllergyIntolerance.category.text",
-                "path": "AllergyIntolerance.category.text",
+                "id": "AllergyIntolerance.code",
+                "path": "AllergyIntolerance.code",
                 "mustSupport": true
             },
             {
-                "id": "AllergyIntolerance.code",
-                "path": "AllergyIntolerance.code",
+                "id": "AllergyIntolerance.code.coding.display",
+                "path": "AllergyIntolerance.code.coding.display",
                 "mustSupport": true
             },
             {

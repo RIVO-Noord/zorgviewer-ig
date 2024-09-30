@@ -5,10 +5,6 @@
 [ZIB Wilsverklaring](https://zibs.nl/wiki/Wilsverklaring-v3.1(2017NL))
 
 ### User-Interface guidance
-**Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.**
-
-Een schets van het scherm met labels en sortering informatie
-<div style="clear:both;"><img src="UI-Schets-BehandelAanwijzingenWilsverklaring2.png" class="figure-img img-responsive img-rounded center-block"></div>
 
 Kolom definities:
 <table class="grid">
