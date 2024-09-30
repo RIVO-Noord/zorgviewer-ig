@@ -10,7 +10,7 @@
 
 ### User-Interface guidance
 
-|Kolomnaam|zib|FHIR-path|Informatie|
+|Kolomnaam|Zib element|FHIR-path|Informatie|
 |--|--|--|--|
 |Bron|nvt|.meta.extension[system="http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"].valueUri|  |
 |Datum|BeginDatumTijd|.period.start|  |
