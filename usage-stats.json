@@ -66,6 +66,12 @@
         "title": "LaboratoryTestResult"
       }
     ],
+    "MedicationRequest": [
+      {
+        "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/MedicationRequest",
+        "title": "MedicationAgreement"
+      }
+    ],
     "MedicationStatement": [
       {
         "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/MedicationStatement",
@@ -284,6 +290,9 @@
     "http://nictiz.nl/fhir/StructureDefinition/consent-additionalSources": [
       "Consent"
     ],
+    "http://nictiz.nl/fhir/StructureDefinition/extension-context-nl-core-episodeofcare": [
+      "MedicationRequest"
+    ],
     "http://nictiz.nl/fhir/StructureDefinition/patient-proficiency": [
       "Patient.communication"
     ],
@@ -301,6 +310,8 @@
       "Consent.except.actor.reference",
       "Flag.author",
       "Flag.subject",
+      "MedicationRequest.recorder",
+      "MedicationRequest.requester.agent",
       "MedicationStatement.informationSource",
       "Observation.performer",
       "Patient.generalPractitioner",
@@ -326,11 +337,22 @@
     "http://nictiz.nl/fhir/StructureDefinition/zib-LifeStance": [
       "Patient"
     ],
+    "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-AdditionalInformation": [
+      "MedicationRequest"
+    ],
     "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-MedicationTreatment": [
+      "MedicationRequest",
       "MedicationStatement"
     ],
+    "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse": [
+      "MedicationRequest"
+    ],
     "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-RepeatPeriodCyclicalSchedule": [
+      "MedicationRequest",
       "MedicationStatement"
+    ],
+    "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType": [
+      "MedicationRequest"
     ],
     "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-AsAgreedIndicator": [
       "MedicationStatement"
@@ -339,6 +361,7 @@
       "MedicationStatement"
     ],
     "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration": [
+      "MedicationRequest",
       "MedicationStatement.effective[x]"
     ],
     "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Prescriber": [

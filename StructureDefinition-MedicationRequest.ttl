@@ -1,0 +1,2969 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.nl/fhir/zorgviewer/StructureDefinition/MedicationRequest> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MedicationRequest"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: StructureDefinition MedicationRequest</b></p><a name=\"MedicationRequest\"> </a><a name=\"hcMedicationRequest\"> </a><a name=\"MedicationRequest-nl-NL\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"De logische naam van het element\">Naam</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informatie over het gebruik van het element\">Markeringen</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum en maximum # keren dat het element kan voorkomen in de instance\">Kard.</a></th><th style=\"width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Referentie naar het type van het element\">Type</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additionele informatie over het element\">Omschrijving &amp; constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-MedicationRequest-definitions.html#MedicationRequest\">MedicationRequest</a><a name=\"MedicationRequest\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement\">Zib MedicationAgreement</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">MedicationAgreement</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-MedicationRequest-definitions.html#MedicationRequest.dateAsserted\">dateAsserted</a><a name=\"MedicationRequest.dateAsserted\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"Dit element moet worden ondersteund\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-MedicationRequest-definitions.html#MedicationRequest.dosage\">dosage</a><a name=\"MedicationRequest.dosage\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-MedicationRequest-definitions.html#MedicationRequest.dosage.text\">text</a><a name=\"MedicationRequest.dosage.text\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"Dit element moet worden ondersteund\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck101.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-MedicationRequest-definitions.html#MedicationRequest.dosage.route\">route</a><a name=\"MedicationRequest.dosage.route\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-MedicationRequest-definitions.html#MedicationRequest.dosage.route.text\">text</a><a name=\"MedicationRequest.dosage.route.text\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"Dit element moet worden ondersteund\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-MedicationRequest-definitions.html#MedicationRequest.category\">category</a><a name=\"MedicationRequest.category\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-MedicationRequest-definitions.html#MedicationRequest.category.text\">text</a><a name=\"MedicationRequest.category.text\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"Dit element moet worden ondersteund\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5\" href=\"http://hl7.org/fhir/STU3/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Plain text representation of the concept</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-MedicationRequest-definitions.html#MedicationRequest.medicationReference\">medicationReference</a><a name=\"MedicationRequest.medicationReference\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-MedicationRequest-definitions.html#MedicationRequest.medicationReference.display\">display</a><a name=\"MedicationRequest.medicationReference.display\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"Dit element moet worden ondersteund\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5\" href=\"http://hl7.org/fhir/STU3/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Text alternative for the resource</span></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legenda voor dit formaat\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentatie voor dit formaat</a></td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/MedicationRequest"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.5.0"] ; # 
+  fhir:name [ fhir:v "MedicationAgreement"] ; # 
+  fhir:title [ fhir:v "MedicationAgreement"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-09-30T11:15:13+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "RIVO-NN" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://rivo-noord.nl" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "HL7NL" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://hl7.nl" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Medicatieafspraak"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NL" ]
+     ] )
+  ] ) ; # 
+  fhir:fhirVersion [ fhir:v "3.0.2"] ; # 
+  fhir:mapping ( [
+     fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+     fhir:uri [ fhir:v "https://zibs.nl/wiki/MedicationAgreement-v1.0(2017EN)"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "HCIM MedicationAgreement-v1.0(2017EN)" ]
+  ] [
+     fhir:identity [ fhir:v "hcim-instructionsforuse-v1.0-2017EN" ] ;
+     fhir:uri [ fhir:v "https://zibs.nl/wiki/InstructionsForUse-v1.0(2017EN)"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "HCIM InstructionsForUse-v1.0(2017EN)" ]
+  ] [
+     fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+     fhir:uri [ fhir:v "https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "HCIM BasicElements-v1.0(2017EN)" ]
+  ] [
+     fhir:identity [ fhir:v "Medication-Process-v09" ] ;
+     fhir:uri [ fhir:v "https://decor.nictiz.nl/medicatieproces/mp-html-20181220T121121/ds-2.16.840.1.113883.2.4.3.11.60.20.77.1.3-2016-06-01T000000.html"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "Medication Process v09" ] ;
+     fhir:comment [ fhir:v "Language of Medication Process is Dutch." ]
+  ] [
+     fhir:identity [ fhir:v "workflow" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/fhir/workflow"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "Workflow Mapping" ]
+  ] [
+     fhir:identity [ fhir:v "script10.6" ] ;
+     fhir:uri [ fhir:v "http://ncpdp.org/SCRIPT10_6"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "Mapping to NCPDP SCRIPT 10.6" ]
+  ] [
+     fhir:identity [ fhir:v "rim" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/v3"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "RIM Mapping" ]
+  ] [
+     fhir:identity [ fhir:v "w5" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/fhir/w5"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "W5 Mapping" ]
+  ] [
+     fhir:identity [ fhir:v "v2" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/v2"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "HL7 v2 Mapping" ]
+  ] ) ; # 
+  fhir:kind [ fhir:v "resource"] ; # 
+  fhir:abstract [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:type [ fhir:v "MedicationRequest"] ; # 
+  fhir:baseDefinition [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"^^xsd:anyURI] ; # 
+  fhir:derivation [ fhir:v "constraint"] ; # 
+  fhir:snapshot [
+     fhir:element ( [
+       fhir:id [ fhir:v "MedicationRequest" ] ;
+       fhir:path [ fhir:v "MedicationRequest" ] ;
+       fhir:short [ fhir:v "MedicationAgreement" ] ;
+       fhir:definition [ fhir:v "A medication agreement is a prescriber’s proposal for a patient to use medication. An agreement to discontinue the use of medication is also a medication agreement." ] ;
+       fhir:alias ( [ fhir:v "Prescription" ] [ fhir:v "Order" ] [ fhir:v "Medicatieafspraak" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "dom-2" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "If the resource is contained in another resource, it SHALL NOT contain nested Resources" ] ;
+         fhir:expression [ fhir:v "contained.contained.empty()" ] ;
+         fhir:xpath [ fhir:v "not(parent::f:contained and f:contained)" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ]
+       ] [
+         fhir:key [ fhir:v "dom-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "If the resource is contained in another resource, it SHALL NOT contain any narrative" ] ;
+         fhir:expression [ fhir:v "contained.text.empty()" ] ;
+         fhir:xpath [ fhir:v "not(parent::f:contained and f:text)" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ]
+       ] [
+         fhir:key [ fhir:v "dom-4" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated" ] ;
+         fhir:expression [ fhir:v "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()" ] ;
+         fhir:xpath [ fhir:v "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ]
+       ] [
+         fhir:key [ fhir:v "dom-3" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource" ] ;
+         fhir:expression [ fhir:v "contained.where(('#'+id in %resource.descendants().reference).not()).empty()" ] ;
+         fhir:xpath [ fhir:v "not(exists(for $id in f:contained/*/@id return $id[not(ancestor::f:contained/parent::*/descendant::f:reference/@value=concat('#', $id))]))" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.6.9580" ] ;
+         fhir:comment [ fhir:v "MedicationAgreement" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Entity. Role, or Act" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "..Request" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "CombinedMedicationRequest" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "clinical.medication" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.id" ] ;
+       fhir:path [ fhir:v "MedicationRequest.id" ] ;
+       fhir:short [ fhir:v "Logical id of this artifact" ] ;
+       fhir:definition [ fhir:v "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." ] ;
+       fhir:comment [ fhir:v "The only time that a resource does not have an id is when it is being submitted to the server using a create operation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Resource.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "id"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.meta" ] ;
+       fhir:path [ fhir:v "MedicationRequest.meta" ] ;
+       fhir:short [ fhir:v "Metadata about the resource" ] ;
+       fhir:definition [ fhir:v "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Resource.meta" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Meta"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.implicitRules" ] ;
+       fhir:path [ fhir:v "MedicationRequest.implicitRules" ] ;
+       fhir:short [ fhir:v "A set of rules under which this content was created" ] ;
+       fhir:definition [ fhir:v "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content." ] ;
+       fhir:comment [ fhir:v "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. \n\nThis element is labelled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Resource.implicitRules" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "uri"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.language" ] ;
+       fhir:path [ fhir:v "MedicationRequest.language" ] ;
+       fhir:short [ fhir:v "Language of the resource content" ] ;
+       fhir:definition [ fhir:v "The base language in which the resource is written." ] ;
+       fhir:comment [ fhir:v "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Resource.language" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "code"^^xsd:anyURI ]
+       ] ) ;
+       fhir:binding [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:Reference ;
+             fhir:link <http://hl7.org/fhir/ValueSet/all-languages> ;
+             fhir:reference [ fhir:v "http://hl7.org/fhir/ValueSet/all-languages" ]
+           ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Language" ]
+         ] ) ;
+         fhir:strength [ fhir:v "extensible" ] ;
+         fhir:description [ fhir:v "A human language." ] ;
+         fhir:valueSet [
+           a fhir:Reference ;
+           fhir:link <http://hl7.org/fhir/ValueSet/languages> ;
+           fhir:reference [ fhir:v "http://hl7.org/fhir/ValueSet/languages" ]
+         ]
+       ]
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.text" ] ;
+       fhir:path [ fhir:v "MedicationRequest.text" ] ;
+       fhir:short [ fhir:v "Text summary of the resource, for human interpretation" ] ;
+       fhir:definition [ fhir:v "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." ] ;
+       fhir:comment [ fhir:v "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded in formation is added later." ] ;
+       fhir:alias ( [ fhir:v "narrative" ] [ fhir:v "html" ] [ fhir:v "xhtml" ] [ fhir:v "display" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.text" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Narrative"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "dom-1" ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "Act.text?" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.contained" ] ;
+       fhir:path [ fhir:v "MedicationRequest.contained" ] ;
+       fhir:short [ fhir:v "Contained, inline Resources" ] ;
+       fhir:definition [ fhir:v "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope." ] ;
+       fhir:comment [ fhir:v "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again." ] ;
+       fhir:alias ( [ fhir:v "inline resources" ] [ fhir:v "anonymous resources" ] [ fhir:v "contained resources" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.contained" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Resource"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.extension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.extension" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "value" ] ;
+           fhir:path [ fhir:v "url" ]
+         ] ) ;
+         fhir:rules [ fhir:v "open" ]
+       ] ;
+       fhir:short [ fhir:v "Extension" ] ;
+       fhir:definition [ fhir:v "An Extension" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.extension:periodOfUse" ] ;
+       fhir:path [ fhir:v "MedicationRequest.extension" ] ;
+       fhir:sliceName [ fhir:v "periodOfUse" ] ;
+       fhir:short [ fhir:v "PeriodOfUse" ] ;
+       fhir:definition [ fhir:v "Start date: This is the time at which the agreement was to take effect (or took effect or will take effect). This is the time at which the instructions for use in this agreement start. In the case of an agreement to discontinue use, this is the start date of the original medication agreement. The end date indicates from when the medication is to be discontinued. \r\n\r\nEnd date: The time at which the period of use ends (or ended or will end). In the case of an agreement to discontinue use, this is the time at which the medication is to be discontinued. To avoid confusion between 'to' and 'up to', the submission of time is always mandatory for the end date.\r\n\r\nWith medication for an indefinite period only a start date is indicated." ] ;
+       fhir:comment [ fhir:v "According to the HCIM TimeInterval, a time interval is defined by either a start and end time, a start time and duration, or a duration and end time. As this HCIM is expressed by the periodOfUse and usageDuration extensions in this profile, this means that precisely two elements out of `.valuePeriod.start`, `.valuePeriod.end` (both in the periodOfUse extension) and `.valueDuration` (in the usageDuration extension) should be present in order to correctly represent the time interval in which the agreement is used (and in particular not all three elements)." ] ;
+       fhir:alias ( [ fhir:v "Gebruiksperiode" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
+         fhir:profile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
+       ] [
+         fhir:key [ fhir:v "ext-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Must have either extensions or value[x], not both" ] ;
+         fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
+         fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.6.19936" ] ;
+         fhir:comment [ fhir:v "PeriodOfUse" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.extension:usageDuration" ] ;
+       fhir:path [ fhir:v "MedicationRequest.extension" ] ;
+       fhir:sliceName [ fhir:v "usageDuration" ] ;
+       fhir:short [ fhir:v "Duration" ] ;
+       fhir:definition [ fhir:v "Duration: The intended duration of use. E.g. 5 days or 8 weeks. It is not allowed to indicate the duration in months, because different months have a variable duration in days." ] ;
+       fhir:comment [ fhir:v "According to the HCIM TimeInterval, a time interval is defined by either a start and end time, a start time and duration, or a duration and end time. As this HCIM is expressed by the periodOfUse and usageDuration extensions in this profile, this means that precisely two elements out of `.valuePeriod.start`, `.valuePeriod.end` (both in the periodOfUse extension) and `.valueDuration` (in the usageDuration extension) should be present in order to correctly represent the time interval in which the agreement is used (and in particular not all three elements)." ] ;
+       fhir:alias ( [ fhir:v "Duur" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
+         fhir:profile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
+       ] [
+         fhir:key [ fhir:v "ext-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Must have either extensions or value[x], not both" ] ;
+         fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
+         fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.6.19936" ] ;
+         fhir:comment [ fhir:v "PeriodOfUse" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.extension:additionalInformation" ] ;
+       fhir:path [ fhir:v "MedicationRequest.extension" ] ;
+       fhir:sliceName [ fhir:v "additionalInformation" ] ;
+       fhir:short [ fhir:v "MedicationAgreementAdditionalInformation" ] ;
+       fhir:definition [ fhir:v "Additional information includes details on the structure of the agreement made that are relevant for pharmacovigilance and fulfillment by the pharmacist. This can be used e.g. to indicate that there was a conscious decision to deviate from the norm or that the agreement is to be structured in a certain way." ] ;
+       fhir:comment [ fhir:v "When choosing a medicine, you can deviate from what is expected or from what the standard is. For example, when the hospital uses a different formulary than the community pharmacy. For reasons of efficiency, for example, one gastric acid inhibitor has been chosen in the hospital: pantoprazole.\r\nUpon admission, a patient with omeprazole is converted to pantoprazole for the duration of the stay. When discharged, the patient goes back to omeprazole.\r\nIt is clear that something can go wrong here and that the patient takes both omeprazole and pantoprazole when there is no intervention. In the hospital's medication agreement for pantoprazole a remark can be made about the deviation so that it is clear that pantoprazole is the substitute for omeprazole or that it should be used in addition to omeprazole.\r\nAnother example are the half strengths. The hospital sometimes stocks tablets with half the strength of the normal trade preparation (own production). Where the patient enters the hospital on 25 mg chlortalidone, half a tablet once a day, he receives 12.5 mg intramural chlortalidone, one tablet once a day. Then the nursing does not have to break tablets in this case. Here there is a risk that the patient will use the 25 mg again at home, but then a whole tablet at a time in stead of half a tablet. By means of an explanation in the medication agreement (Additional information) of the last chlortalidone 25 mg, it can be indicated whether this has been a intended increase." ] ;
+       fhir:alias ( [ fhir:v "MedicatieafspraakAanvullendeInformatie" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
+         fhir:profile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-AdditionalInformation"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
+       ] [
+         fhir:key [ fhir:v "ext-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Must have either extensions or value[x], not both" ] ;
+         fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
+         fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.6.23283" ] ;
+         fhir:comment [ fhir:v "MedicationAgreementAdditionalInformation" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.extension:additionalInformation.id" ] ;
+       fhir:path [ fhir:v "MedicationRequest.extension.id" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "xml:id (or equivalent in JSON)" ] ;
+       fhir:definition [ fhir:v "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.extension:additionalInformation.extension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.extension.extension" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "value" ] ;
+           fhir:path [ fhir:v "url" ]
+         ] ) ;
+         fhir:description [ fhir:v "Extensions are always sliced by (at least) url" ] ;
+         fhir:rules [ fhir:v "open" ]
+       ] ;
+       fhir:short [ fhir:v "Additional Content defined by implementations" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.extension:additionalInformation.url" ] ;
+       fhir:path [ fhir:v "MedicationRequest.extension.url" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "identifies the meaning of the extension" ] ;
+       fhir:definition [ fhir:v "Source of the definition for the extension code - a logical name or a URL." ] ;
+       fhir:comment [ fhir:v "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Extension.url" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "uri"^^xsd:anyURI ]
+       ] ) ;
+       fhir:fixed [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-AdditionalInformation"^^xsd:anyURI ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.extension:additionalInformation.value[x]" ] ;
+       fhir:path [ fhir:v "MedicationRequest.extension.value[x]" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "type" ] ;
+           fhir:path [ fhir:v "$this" ]
+         ] ) ;
+         fhir:ordered [ fhir:v "false"^^xsd:boolean ] ;
+         fhir:rules [ fhir:v "closed" ]
+       ] ;
+       fhir:short [ fhir:v "Value of extension" ] ;
+       fhir:definition [ fhir:v "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Extension.value[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.extension:additionalInformation.value[x]:valueCodeableConcept" ] ;
+       fhir:path [ fhir:v "MedicationRequest.extension.value[x]" ] ;
+       fhir:sliceName [ fhir:v "valueCodeableConcept" ] ;
+       fhir:short [ fhir:v "Value of extension" ] ;
+       fhir:definition [ fhir:v "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Extension.value[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ]
+       ] ) ;
+       fhir:example ( [
+         fhir:label [ fhir:v "Example of MedicationAgreementAdditionalInformation" ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.3.2050"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "1" ] ;
+             fhir:display [ fhir:v "Bewust hoge dosering" ]
+           ] )
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "extensible" ] ;
+         fhir:description [ fhir:v "MedicatieafspraakAanvullendeInformatieCodelijst" ] ;
+         fhir:valueSet [
+           a fhir:Reference ;
+           fhir:link <http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.6.3--20171231000000> ;
+           fhir:reference [ fhir:v "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.6.3--20171231000000" ]
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.extension:medicationTreatment" ] ;
+       fhir:path [ fhir:v "MedicationRequest.extension" ] ;
+       fhir:sliceName [ fhir:v "medicationTreatment" ] ;
+       fhir:short [ fhir:v "Medication Treatment" ] ;
+       fhir:definition [ fhir:v "This extension is to describe which overarching medication treatment this information is part of. This is done by the use of an identifier of that medication treatment." ] ;
+       fhir:comment [ fhir:v "No HCIM concept is available for this element. Therefore a mapping to the relevant Medication Process data element is provided." ] ;
+       fhir:alias ( [ fhir:v "Medicamenteuze behandeling" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
+         fhir:profile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-MedicationTreatment"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
+       ] [
+         fhir:key [ fhir:v "ext-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Must have either extensions or value[x], not both" ] ;
+         fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
+         fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "Medication-Process-v09" ] ;
+         fhir:map [ fhir:v "mp-dataelement900-22092" ] ;
+         fhir:comment [ fhir:v "Medicamenteuze behandeling" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.extension:nl-core-episodeofcare" ] ;
+       fhir:path [ fhir:v "MedicationRequest.extension" ] ;
+       fhir:sliceName [ fhir:v "nl-core-episodeofcare" ] ;
+       fhir:short [ fhir:v "Optional Extensions Element" ] ;
+       fhir:definition [ fhir:v "Optional Extension Element - found in all resources." ] ;
+       fhir:comment [ fhir:v "It is recommended to use the nl-core-episodeofcare extension to reference nl-core-episodeofcare (EpisodeOfCare) instances rather than the `context` element, as this approach will be enforced in FHIR R4." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
+         fhir:profile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/extension-context-nl-core-episodeofcare"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
+       ] [
+         fhir:key [ fhir:v "ext-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Must have either extensions or value[x], not both" ] ;
+         fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
+         fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.modifierExtension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.modifierExtension" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "value" ] ;
+           fhir:path [ fhir:v "url" ]
+         ] ) ;
+         fhir:rules [ fhir:v "open" ]
+       ] ;
+       fhir:short [ fhir:v "Extension" ] ;
+       fhir:definition [ fhir:v "An Extension" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.modifierExtension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isModifier [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.modifierExtension:stopType" ] ;
+       fhir:path [ fhir:v "MedicationRequest.modifierExtension" ] ;
+       fhir:sliceName [ fhir:v "stopType" ] ;
+       fhir:label [ fhir:v "MedicatieafspraakStopType" ] ;
+       fhir:short [ fhir:v "StopType" ] ;
+       fhir:definition [ fhir:v "The manner in which (and indicator that) this medication is discontinued (temporarily or permanently)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.modifierExtension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
+         fhir:profile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
+       ] [
+         fhir:key [ fhir:v "ext-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Must have either extensions or value[x], not both" ] ;
+         fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
+         fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.6.19954" ] ;
+         fhir:comment [ fhir:v "MedicationAgreementStopType" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.modifierExtension:stopType.id" ] ;
+       fhir:path [ fhir:v "MedicationRequest.modifierExtension.id" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "xml:id (or equivalent in JSON)" ] ;
+       fhir:definition [ fhir:v "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.modifierExtension:stopType.extension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.modifierExtension.extension" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "value" ] ;
+           fhir:path [ fhir:v "url" ]
+         ] ) ;
+         fhir:description [ fhir:v "Extensions are always sliced by (at least) url" ] ;
+         fhir:rules [ fhir:v "open" ]
+       ] ;
+       fhir:short [ fhir:v "Additional Content defined by implementations" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.modifierExtension:stopType.url" ] ;
+       fhir:path [ fhir:v "MedicationRequest.modifierExtension.url" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "identifies the meaning of the extension" ] ;
+       fhir:definition [ fhir:v "Source of the definition for the extension code - a logical name or a URL." ] ;
+       fhir:comment [ fhir:v "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Extension.url" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "uri"^^xsd:anyURI ]
+       ] ) ;
+       fhir:fixed [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType"^^xsd:anyURI ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.modifierExtension:stopType.value[x]" ] ;
+       fhir:path [ fhir:v "MedicationRequest.modifierExtension.value[x]" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "type" ] ;
+           fhir:path [ fhir:v "$this" ]
+         ] ) ;
+         fhir:ordered [ fhir:v "false"^^xsd:boolean ] ;
+         fhir:rules [ fhir:v "closed" ]
+       ] ;
+       fhir:short [ fhir:v "Value of extension" ] ;
+       fhir:definition [ fhir:v "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Extension.value[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.modifierExtension:stopType.value[x]:valueCodeableConcept" ] ;
+       fhir:path [ fhir:v "MedicationRequest.modifierExtension.value[x]" ] ;
+       fhir:sliceName [ fhir:v "valueCodeableConcept" ] ;
+       fhir:short [ fhir:v "Value of extension" ] ;
+       fhir:definition [ fhir:v "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Extension.value[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:valueSet [
+           a fhir:Reference ;
+           fhir:link <http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.19--20160617101300> ;
+           fhir:reference [ fhir:v "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.19--20160617101300" ]
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.modifierExtension:repeatPeriodCyclicalSchedule" ] ;
+       fhir:path [ fhir:v "MedicationRequest.modifierExtension" ] ;
+       fhir:sliceName [ fhir:v "repeatPeriodCyclicalSchedule" ] ;
+       fhir:label [ fhir:v "HerhaalperiodeCyclischSchema" ] ;
+       fhir:short [ fhir:v "RepeatPeriodCyclicalSchedule" ] ;
+       fhir:definition [ fhir:v "The repeated period in a cyclical schedule (of one or more dosing instructions). A cyclic schedule is noted in days, the corresponding dosing duration is also in days.\r\n\r\nExamples of a cyclical schedule: contraceptive pill (21 days, 1 pill 1x a day, then skip for 7 days, repeat), repeat period here is 28 days.\r\nRepeatPeriodCyclicalSchedule" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DomainResource.modifierExtension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
+         fhir:profile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-RepeatPeriodCyclicalSchedule"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
+       ] [
+         fhir:key [ fhir:v "ext-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Must have either extensions or value[x], not both" ] ;
+         fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
+         fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-instructionsforuse-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.12.22505" ] ;
+         fhir:comment [ fhir:v "RepeatPeriodCyclicalSchedule" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.identifier" ] ;
+       fhir:path [ fhir:v "MedicationRequest.identifier" ] ;
+       fhir:short [ fhir:v "External ids for this request" ] ;
+       fhir:definition [ fhir:v "This records identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. For example a re-imbursement system might issue its own id for each prescription that is created.  This is particularly important where FHIR only provides part of an entire workflow process where records must be tracked through an entire system." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.identifier" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Identifier"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.6" ] ;
+         fhir:comment [ fhir:v "IdentificationNumber" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…identifer" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Header/PrescriberOrderNumber" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "ORC-2-Placer Order Number / ORC-3-Filler Order Number" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".id" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "id" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.definition" ] ;
+       fhir:path [ fhir:v "MedicationRequest.definition" ] ;
+       fhir:short [ fhir:v "Protocol or definition" ] ;
+       fhir:definition [ fhir:v "Protocol or definition followed by this request." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.definition" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/ActivityDefinition"^^xsd:anyURI ]
+       ] [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/PlanDefinition"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…definition" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=DEFN].target[classCode=unspecified]" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.basedOn" ] ;
+       fhir:path [ fhir:v "MedicationRequest.basedOn" ] ;
+       fhir:short [ fhir:v "What request fulfills" ] ;
+       fhir:definition [ fhir:v "A plan or request that is fulfilled in whole or in part by this medication request." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.basedOn" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/CarePlan"^^xsd:anyURI ]
+       ] [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/MedicationRequest"^^xsd:anyURI ]
+       ] [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/ProcedureRequest"^^xsd:anyURI ]
+       ] [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/ReferralRequest"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…basedOn" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=FLFS].target[classCode=SBADM or PROC or PCPR or OBS, moodCode=RQO orPLAN or PRP]" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.groupIdentifier" ] ;
+       fhir:path [ fhir:v "MedicationRequest.groupIdentifier" ] ;
+       fhir:short [ fhir:v "Composite request this is part of" ] ;
+       fhir:definition [ fhir:v "A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition or prescription." ] ;
+       fhir:requirements [ fhir:v "Requests are linked either by a \"basedOn\" relationship (i.e. one request is fulfilling another) or by having a common requisition. Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.groupIdentifier" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Identifier"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…groupIdentifier" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship(typeCode=COMP].target[classCode=SBADM, moodCode=INT].id" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.status" ] ;
+       fhir:path [ fhir:v "MedicationRequest.status" ] ;
+       fhir:short [ fhir:v "active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown" ] ;
+       fhir:definition [ fhir:v "A code specifying the current state of the order.  Generally this will be active or completed state." ] ;
+       fhir:comment [ fhir:v "This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.status" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "code"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:binding [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "MedicationRequestStatus" ]
+         ] ) ;
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:description [ fhir:v "A coded concept specifying the state of the prescribing event. Describes the lifecycle of the prescription" ] ;
+         fhir:valueSet [
+           a fhir:Reference ;
+           fhir:link <http://hl7.org/fhir/ValueSet/medication-request-status> ;
+           fhir:reference [ fhir:v "http://hl7.org/fhir/ValueSet/medication-request-status" ]
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…status" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "no mapping" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".statusCode" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "status" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.intent" ] ;
+       fhir:path [ fhir:v "MedicationRequest.intent" ] ;
+       fhir:short [ fhir:v "proposal | plan | order | instance-order" ] ;
+       fhir:definition [ fhir:v "Whether the request is a proposal, plan, or an original order." ] ;
+       fhir:comment [ fhir:v "It is expected that the type of requester will be restricted for different stages of a MedicationRequest.  For example, Proposals can be created by a patient, relatedPerson, Practitioner or Device.  Plans can be created by Practitioners, Patients, RelatedPersons and Devices.  Original orders can be created by a Practitioner only.\r\rAn instance-order is an instantiation of a request or order and may be used to populate Medication Administration Record.\n\nThis element is labeled as a modifier because the intent alters when and how the resource is actually applicable." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.intent" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "code"^^xsd:anyURI ]
+       ] ) ;
+       fhir:fixed [ fhir:v "order" ] ;
+       fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:binding [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "MedicationRequestIntent" ]
+         ] ) ;
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:description [ fhir:v "The kind of medication order" ] ;
+         fhir:valueSet [
+           a fhir:Reference ;
+           fhir:link <http://hl7.org/fhir/ValueSet/medication-request-intent> ;
+           fhir:reference [ fhir:v "http://hl7.org/fhir/ValueSet/medication-request-intent" ]
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…intent" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".moodCode (nuances beyond PRP/PLAN/RQO would need to be elsewhere)" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "class" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category" ] ;
+       fhir:path [ fhir:v "MedicationRequest.category" ] ;
+       fhir:short [ fhir:v "Type of medication usage" ] ;
+       fhir:definition [ fhir:v "Indicates the type of medication order and where the medication is expected to be consumed or administered." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.category" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ]
+       ] ) ;
+       fhir:binding [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "MedicationRequestCategory" ]
+         ] ) ;
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "A coded concept identifying where the medication ordered is expected to be consumed or administered" ] ;
+         fhir:valueSet [
+           a fhir:Reference ;
+           fhir:link <http://hl7.org/fhir/ValueSet/medication-request-category> ;
+           fhir:reference [ fhir:v "http://hl7.org/fhir/ValueSet/medication-request-category" ]
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/MedicationPrescribed/Directions\r\ror \r\rMessage/Body/NewRx/MedicationPrescribed/StructuredSIG" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".inboundRelationship[typeCode=COMP].source[classCode=OBS, moodCode=EVN, code=\"type of medication usage\"].value" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "class" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.id" ] ;
+       fhir:path [ fhir:v "MedicationRequest.category.id" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "xml:id (or equivalent in JSON)" ] ;
+       fhir:definition [ fhir:v "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.extension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.category.extension" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "value" ] ;
+           fhir:path [ fhir:v "url" ]
+         ] ) ;
+         fhir:description [ fhir:v "Extensions are always sliced by (at least) url" ] ;
+         fhir:rules [ fhir:v "open" ]
+       ] ;
+       fhir:short [ fhir:v "Additional Content defined by implementations" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.coding" ] ;
+       fhir:path [ fhir:v "MedicationRequest.category.coding" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "value" ] ;
+           fhir:path [ fhir:v "code" ]
+         ] ) ;
+         fhir:rules [ fhir:v "open" ]
+       ] ;
+       fhir:short [ fhir:v "Code defined by a terminology system" ] ;
+       fhir:definition [ fhir:v "A reference to a code defined by a terminology system." ] ;
+       fhir:comment [ fhir:v "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." ] ;
+       fhir:requirements [ fhir:v "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "CodeableConcept.coding" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Coding"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "C*E.1-8, C*E.10-22" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "union(., ./translation)" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.coding:medicationAgreementCode" ] ;
+       fhir:path [ fhir:v "MedicationRequest.category.coding" ] ;
+       fhir:sliceName [ fhir:v "medicationAgreementCode" ] ;
+       fhir:short [ fhir:v "MedicationAgreementCode" ] ;
+       fhir:definition [ fhir:v "Category SNOMED code used for indexing/retrieval of the HCIM MedicationAgreement. The SNOMED code 16076005 for this resource is stated in the Medication Process v09." ] ;
+       fhir:comment [ fhir:v "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." ] ;
+       fhir:requirements [ fhir:v "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "CodeableConcept.coding" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Coding"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "C*E.1-8, C*E.10-22" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "union(., ./translation)" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.coding:medicationAgreementCode.id" ] ;
+       fhir:path [ fhir:v "MedicationRequest.category.coding.id" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "xml:id (or equivalent in JSON)" ] ;
+       fhir:definition [ fhir:v "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.coding:medicationAgreementCode.extension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.category.coding.extension" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "value" ] ;
+           fhir:path [ fhir:v "url" ]
+         ] ) ;
+         fhir:description [ fhir:v "Extensions are always sliced by (at least) url" ] ;
+         fhir:rules [ fhir:v "open" ]
+       ] ;
+       fhir:short [ fhir:v "Additional Content defined by implementations" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.coding:medicationAgreementCode.system" ] ;
+       fhir:path [ fhir:v "MedicationRequest.category.coding.system" ] ;
+       fhir:short [ fhir:v "Identity of the terminology system" ] ;
+       fhir:definition [ fhir:v "The identification of the code system that defines the meaning of the symbol in the code." ] ;
+       fhir:comment [ fhir:v "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously." ] ;
+       fhir:requirements [ fhir:v "Need to be unambiguous about the source of the definition of the symbol." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Coding.system" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "uri"^^xsd:anyURI ]
+       ] ) ;
+       fhir:fixed [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "C*E.3" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./codeSystem" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.coding:medicationAgreementCode.version" ] ;
+       fhir:path [ fhir:v "MedicationRequest.category.coding.version" ] ;
+       fhir:short [ fhir:v "Version of the system - if relevant" ] ;
+       fhir:definition [ fhir:v "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
+       fhir:comment [ fhir:v "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Coding.version" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "C*E.7" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./codeSystemVersion" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.coding:medicationAgreementCode.code" ] ;
+       fhir:path [ fhir:v "MedicationRequest.category.coding.code" ] ;
+       fhir:short [ fhir:v "Symbol in syntax defined by the system" ] ;
+       fhir:definition [ fhir:v "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
+       fhir:requirements [ fhir:v "Need to refer to a particular code in the system." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Coding.code" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "code"^^xsd:anyURI ]
+       ] ) ;
+       fhir:fixed [ fhir:v "16076005" ] ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "C*E.1" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./code" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.coding:medicationAgreementCode.display" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true"^^xsd:boolean ]
+       ] ) ;
+       fhir:path [ fhir:v "MedicationRequest.category.coding.display" ] ;
+       fhir:short [ fhir:v "Representation defined by the system" ] ;
+       fhir:definition [ fhir:v "A representation of the meaning of the code in the system, following the rules of the system." ] ;
+       fhir:requirements [ fhir:v "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Coding.display" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "C*E.2 - but note this is not well followed" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "CV.displayName" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.coding:medicationAgreementCode.userSelected" ] ;
+       fhir:path [ fhir:v "MedicationRequest.category.coding.userSelected" ] ;
+       fhir:short [ fhir:v "If this coding was chosen directly by the user" ] ;
+       fhir:definition [ fhir:v "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." ] ;
+       fhir:comment [ fhir:v "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." ] ;
+       fhir:requirements [ fhir:v "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Coding.userSelected" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "boolean"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "Sometimes implied by being first" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "CD.codingRationale" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.text" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true"^^xsd:boolean ]
+       ] ) ;
+       fhir:path [ fhir:v "MedicationRequest.category.text" ] ;
+       fhir:short [ fhir:v "Plain text representation of the concept" ] ;
+       fhir:definition [ fhir:v "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." ] ;
+       fhir:comment [ fhir:v "Very often the text is the same as a displayName of one of the codings." ] ;
+       fhir:requirements [ fhir:v "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "CodeableConcept.text" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "C*E.9. But note many systems use C*E.2 for this" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "./originalText[mediaType/code=\"text/plain\"]/data" ]
+       ] [
+         fhir:identity [ fhir:v "orim" ] ;
+         fhir:map [ fhir:v "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.priority" ] ;
+       fhir:path [ fhir:v "MedicationRequest.priority" ] ;
+       fhir:short [ fhir:v "routine | urgent | stat | asap" ] ;
+       fhir:definition [ fhir:v "Indicates how quickly the Medication Request should be addressed with respect to other requests." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.priority" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "code"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:binding [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "MedicationRequestPriority" ]
+         ] ) ;
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:description [ fhir:v "Identifies the level of importance to be assigned to actioning the request" ] ;
+         fhir:valueSet [
+           a fhir:Reference ;
+           fhir:link <http://hl7.org/fhir/ValueSet/medication-request-priority> ;
+           fhir:reference [ fhir:v "http://hl7.org/fhir/ValueSet/medication-request-priority" ]
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…priority" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".priorityCode" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "grade" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.medication[x]" ] ;
+       fhir:path [ fhir:v "MedicationRequest.medication[x]" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "type" ] ;
+           fhir:path [ fhir:v "$this" ]
+         ] ) ;
+         fhir:ordered [ fhir:v "false"^^xsd:boolean ] ;
+         fhir:rules [ fhir:v "closed" ]
+       ] ;
+       fhir:short [ fhir:v "Medication to be taken" ] ;
+       fhir:definition [ fhir:v "Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications." ] ;
+       fhir:comment [ fhir:v "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number or if the medication is compounded or extemporaneously prepared, then you must reference the Medication resource. ." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.medication[x]" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…code" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/MedicationPrescribed\r\rMedication.code.coding.code = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCode\r\rMedication.code.coding.system = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCodeQualifier\r\rMedication.code.coding.display = Message/Body/NewRx/MedicationPrescribed/DrugDescription" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "RXE-2-Give Code / RXO-1-Requested Give Code / RXC-2-Component Code" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "consumable.administrableMedication" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "what" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.medication[x]:medicationReference" ] ;
+       fhir:path [ fhir:v "MedicationRequest.medication[x]" ] ;
+       fhir:sliceName [ fhir:v "medicationReference" ] ;
+       fhir:short [ fhir:v "AgreedMedicine" ] ;
+       fhir:definition [ fhir:v "The medicine agreed upon to be used." ] ;
+       fhir:alias ( [ fhir:v "Afgesprokengeneesmiddel" ] ) ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.medication[x]" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Product"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.6.19925" ] ;
+         fhir:comment [ fhir:v "AgreedMedicine" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…code" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/MedicationPrescribed\r\rMedication.code.coding.code = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCode\r\rMedication.code.coding.system = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCodeQualifier\r\rMedication.code.coding.display = Message/Body/NewRx/MedicationPrescribed/DrugDescription" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "RXE-2-Give Code / RXO-1-Requested Give Code / RXC-2-Component Code" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "consumable.administrableMedication" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "what" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.medication[x]:medicationReference.id" ] ;
+       fhir:path [ fhir:v "MedicationRequest.medication[x].id" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "xml:id (or equivalent in JSON)" ] ;
+       fhir:definition [ fhir:v "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.medication[x]:medicationReference.extension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.medication[x].extension" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "value" ] ;
+           fhir:path [ fhir:v "url" ]
+         ] ) ;
+         fhir:description [ fhir:v "Extensions are always sliced by (at least) url" ] ;
+         fhir:rules [ fhir:v "open" ]
+       ] ;
+       fhir:short [ fhir:v "Additional Content defined by implementations" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.medication[x]:medicationReference.reference" ] ;
+       fhir:path [ fhir:v "MedicationRequest.medication[x].reference" ] ;
+       fhir:short [ fhir:v "Literal reference, Relative, internal or absolute URL" ] ;
+       fhir:definition [ fhir:v "A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." ] ;
+       fhir:comment [ fhir:v "Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure \"/[type]/[id]\" then it should be assumed that the reference is to a FHIR RESTful server." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Reference.reference" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "ref-1" ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.medication[x]:medicationReference.identifier" ] ;
+       fhir:path [ fhir:v "MedicationRequest.medication[x].identifier" ] ;
+       fhir:short [ fhir:v "Logical reference, when literal reference is not known" ] ;
+       fhir:definition [ fhir:v "An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." ] ;
+       fhir:comment [ fhir:v "When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. \n\nWhen both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference\n\nApplications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Reference.identifier" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Identifier"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".identifier" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.medication[x]:medicationReference.display" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true"^^xsd:boolean ]
+       ] ) ;
+       fhir:path [ fhir:v "MedicationRequest.medication[x].display" ] ;
+       fhir:short [ fhir:v "Text alternative for the resource" ] ;
+       fhir:definition [ fhir:v "Plain text narrative that identifies the resource in addition to the resource reference." ] ;
+       fhir:comment [ fhir:v "This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Reference.display" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.subject" ] ;
+       fhir:path [ fhir:v "MedicationRequest.subject" ] ;
+       fhir:short [ fhir:v "Who or group medication request is for" ] ;
+       fhir:definition [ fhir:v "A link to a resource representing the person or set of individuals to whom the medication will be given." ] ;
+       fhir:comment [ fhir:v "The subject on a medication request is mandatory.  For the secondary use case where the actual subject is not provided, there still must be an anonymized subject specified." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.subject" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-patient"^^xsd:anyURI ]
+       ] [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/Group"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.11" ] ;
+         fhir:comment [ fhir:v "Subject" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…subject" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/Patient\r\r(need detail to link to specific patient … Patient.Identification in SCRIPT)" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "PID-3-Patient ID List" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".participation[typeCode=AUT].role" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "who.focus" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.context" ] ;
+       fhir:path [ fhir:v "MedicationRequest.context" ] ;
+       fhir:short [ fhir:v "Created during encounter/admission/stay" ] ;
+       fhir:definition [ fhir:v "A link to an encounter, or episode of care, that identifies the particular occurrence or set occurrences of contact between patient and health care provider." ] ;
+       fhir:comment [ fhir:v "It is recommended to use the nl-core-episodeofcare extension to reference nl-core-episodeofcare (EpisodeOfCare) instances rather than the `context` element, as this approach will be enforced in FHIR R4." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.context" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Encounter"^^xsd:anyURI ]
+       ] [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-episodeofcare"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…context" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "no mapping" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "PV1-19-Visit Number" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN, code=\"type of encounter or episode\"]" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "context" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.supportingInformation" ] ;
+       fhir:path [ fhir:v "MedicationRequest.supportingInformation" ] ;
+       fhir:short [ fhir:v "Information to support ordering of the medication" ] ;
+       fhir:definition [ fhir:v "Include additional information (for example, patient height and weight) that supports the ordering of the medication." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.supportingInformation" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/Resource"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=PERT].target[A_SupportingClinicalStatement CMET minimal with many different choices of classCodes(ORG, ENC, PROC, SPLY, SBADM, OBS) and each of the act class codes draws from one or more of the following moodCodes (EVN, DEF, INT PRMS, RQO, PRP, APT, ARQ, GOL)]" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "context" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.authoredOn" ] ;
+       fhir:path [ fhir:v "MedicationRequest.authoredOn" ] ;
+       fhir:short [ fhir:v "MedicationAgreementDateTime" ] ;
+       fhir:definition [ fhir:v "The time at which the agreement was made. \r\n \r\nAppointment date + time are required (order of the appointments must be clear in cases with multiple appointments on one day)" ] ;
+       fhir:alias ( [ fhir:v "Afspraakdatum" ] ) ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.authoredOn" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "dateTime"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.6.19757" ] ;
+         fhir:comment [ fhir:v "MedicationAgreementDateTime" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…authoredOn" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/MedicationPrescribed/WrittenDate" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "RXE-32-Original Order Date/Time / ORC-9-Date/Time of Transaction" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "author.time" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "when.recorded" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.requester" ] ;
+       fhir:path [ fhir:v "MedicationRequest.requester" ] ;
+       fhir:short [ fhir:v "Prescriber" ] ;
+       fhir:definition [ fhir:v "The health professional that entered the medication agreement with the patient." ] ;
+       fhir:comment [ fhir:v "Note that in FHIR STU3, there is an agent Reference type PractitionerRole missing. PractitionerRole, contrary to Practitioner, allows for specialism and organization. This issue has been fixed in FHIR R4. For FHIR STU3, you can use the practitionerrole-reference extension on requester.agent." ] ;
+       fhir:alias ( [ fhir:v "Voorschrijver" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.requester" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "BackboneElement"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
+       ] [
+         fhir:key [ fhir:v "mps-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "onBehalfOf can only be specified if agent is practitioner or device" ] ;
+         fhir:expression [ fhir:v "(agent.resolve().empty()) or (agent.resolve() is Device) or (agent.resolve() is Practitioner) or onBehalfOf.exists().not()" ] ;
+         fhir:xpath [ fhir:v "contains(f:agent/f:reference/@value, '/Practitioner/') or contains(f:agent/f:reference/@value, '/Device/') or not(exists(f:onBehalfOf))" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/MedicationRequest"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.6.1030" ] ;
+         fhir:comment [ fhir:v "Prescriber" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.7" ] ;
+         fhir:comment [ fhir:v "Author" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…requester" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".participation[typeCode=AUT].role" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "who.author" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.requester.id" ] ;
+       fhir:path [ fhir:v "MedicationRequest.requester.id" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "xml:id (or equivalent in JSON)" ] ;
+       fhir:definition [ fhir:v "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.requester.extension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.requester.extension" ] ;
+       fhir:short [ fhir:v "Additional Content defined by implementations" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.requester.modifierExtension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.requester.modifierExtension" ] ;
+       fhir:short [ fhir:v "Extensions that cannot be ignored" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] [ fhir:v "modifiers" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "BackboneElement.modifierExtension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.requester.agent" ] ;
+       fhir:path [ fhir:v "MedicationRequest.requester.agent" ] ;
+       fhir:short [ fhir:v "Who ordered the initial medication(s)" ] ;
+       fhir:definition [ fhir:v "The healthcare professional responsible for authorizing the initial prescription." ] ;
+       fhir:comment [ fhir:v "The health professional's speciality, role, and organization are captured and communicated through the PractitionerRole Resource based on the nl-core-practitionerrole profile." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.requester.agent" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"^^xsd:anyURI ]
+       ] [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-organization"^^xsd:anyURI ]
+       ] [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-patient"^^xsd:anyURI ]
+       ] [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"^^xsd:anyURI ]
+       ] [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/Device"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "….agent" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/Prescriber\r\r(need detail to link to specific prescriber … Prescriber.Identification in SCRIPT)" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "RXE-13-Ordering Provider's DEA Number / RXO-14-Ordering Provider's DEA Number / RXE-14-Pharmacist/Treatment Supplier's Verifier ID / RXO-15-Pharmacist/Treatment Supplier's Verifier ID / ORC-12-Ordering Provider / PRT-5-Participation Person: PRT-4-Participation='OP' (all but last deprecated)" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".player" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.requester.agent.id" ] ;
+       fhir:path [ fhir:v "MedicationRequest.requester.agent.id" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "xml:id (or equivalent in JSON)" ] ;
+       fhir:definition [ fhir:v "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.requester.agent.extension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.requester.agent.extension" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "value" ] ;
+           fhir:path [ fhir:v "url" ]
+         ] ) ;
+         fhir:description [ fhir:v "Extensions are always sliced by (at least) url" ] ;
+         fhir:rules [ fhir:v "open" ]
+       ] ;
+       fhir:short [ fhir:v "Extension" ] ;
+       fhir:definition [ fhir:v "An Extension" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.requester.agent.extension:practitionerRole" ] ;
+       fhir:path [ fhir:v "MedicationRequest.requester.agent.extension" ] ;
+       fhir:sliceName [ fhir:v "practitionerRole" ] ;
+       fhir:short [ fhir:v "Optional Extensions Element" ] ;
+       fhir:definition [ fhir:v "Optional Extension Element - found in all resources." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
+         fhir:profile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.requester.agent.reference" ] ;
+       fhir:path [ fhir:v "MedicationRequest.requester.agent.reference" ] ;
+       fhir:short [ fhir:v "Literal reference, Relative, internal or absolute URL" ] ;
+       fhir:definition [ fhir:v "A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." ] ;
+       fhir:comment [ fhir:v "Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure \"/[type]/[id]\" then it should be assumed that the reference is to a FHIR RESTful server." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Reference.reference" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "ref-1" ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.requester.agent.identifier" ] ;
+       fhir:path [ fhir:v "MedicationRequest.requester.agent.identifier" ] ;
+       fhir:short [ fhir:v "Logical reference, when literal reference is not known" ] ;
+       fhir:definition [ fhir:v "An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." ] ;
+       fhir:comment [ fhir:v "When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. \n\nWhen both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference\n\nApplications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Reference.identifier" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Identifier"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".identifier" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.requester.agent.display" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true"^^xsd:boolean ]
+       ] ) ;
+       fhir:path [ fhir:v "MedicationRequest.requester.agent.display" ] ;
+       fhir:short [ fhir:v "Text alternative for the resource" ] ;
+       fhir:definition [ fhir:v "Plain text narrative that identifies the resource in addition to the resource reference." ] ;
+       fhir:comment [ fhir:v "This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Reference.display" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.requester.onBehalfOf" ] ;
+       fhir:path [ fhir:v "MedicationRequest.requester.onBehalfOf" ] ;
+       fhir:short [ fhir:v "Organization agent is acting for" ] ;
+       fhir:definition [ fhir:v "The organization the device or practitioner was acting on behalf of." ] ;
+       fhir:requirements [ fhir:v "Practitioners and Devices can be associated with multiple organizations. This element indicates which organization they were acting on behalf of when authoring the request." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.requester.onBehalfOf" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-organization"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "mps-1" ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "….onBehalfOf" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".scoper" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.recorder" ] ;
+       fhir:path [ fhir:v "MedicationRequest.recorder" ] ;
+       fhir:short [ fhir:v "Person who entered the request" ] ;
+       fhir:definition [ fhir:v "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.recorder" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".participation[typeCode=TRANS].role[classCode=ASSIGNED].code (HealthcareProviderType)" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "who" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.recorder.id" ] ;
+       fhir:path [ fhir:v "MedicationRequest.recorder.id" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "xml:id (or equivalent in JSON)" ] ;
+       fhir:definition [ fhir:v "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.recorder.extension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.recorder.extension" ] ;
+       fhir:slicing [
+         fhir:discriminator ( [
+           fhir:type [ fhir:v "value" ] ;
+           fhir:path [ fhir:v "url" ]
+         ] ) ;
+         fhir:description [ fhir:v "Extensions are always sliced by (at least) url" ] ;
+         fhir:rules [ fhir:v "open" ]
+       ] ;
+       fhir:short [ fhir:v "Extension" ] ;
+       fhir:definition [ fhir:v "An Extension" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.recorder.extension:practitionerRole" ] ;
+       fhir:path [ fhir:v "MedicationRequest.recorder.extension" ] ;
+       fhir:sliceName [ fhir:v "practitionerRole" ] ;
+       fhir:short [ fhir:v "Optional Extensions Element" ] ;
+       fhir:definition [ fhir:v "Optional Extension Element - found in all resources." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
+         fhir:profile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.recorder.reference" ] ;
+       fhir:path [ fhir:v "MedicationRequest.recorder.reference" ] ;
+       fhir:short [ fhir:v "Literal reference, Relative, internal or absolute URL" ] ;
+       fhir:definition [ fhir:v "A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." ] ;
+       fhir:comment [ fhir:v "Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure \"/[type]/[id]\" then it should be assumed that the reference is to a FHIR RESTful server." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Reference.reference" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "ref-1" ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.recorder.identifier" ] ;
+       fhir:path [ fhir:v "MedicationRequest.recorder.identifier" ] ;
+       fhir:short [ fhir:v "Logical reference, when literal reference is not known" ] ;
+       fhir:definition [ fhir:v "An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." ] ;
+       fhir:comment [ fhir:v "When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. \n\nWhen both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference\n\nApplications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Reference.identifier" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Identifier"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".identifier" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.recorder.display" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true"^^xsd:boolean ]
+       ] ) ;
+       fhir:path [ fhir:v "MedicationRequest.recorder.display" ] ;
+       fhir:short [ fhir:v "Text alternative for the resource" ] ;
+       fhir:definition [ fhir:v "Plain text narrative that identifies the resource in addition to the resource reference." ] ;
+       fhir:comment [ fhir:v "This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Reference.display" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.reasonCode" ] ;
+       fhir:path [ fhir:v "MedicationRequest.reasonCode" ] ;
+       fhir:short [ fhir:v "ReasonMedicationAgreement" ] ;
+       fhir:definition [ fhir:v "Reason for this agreement. This can be the reason to start, change or stop the medication treatment." ] ;
+       fhir:comment [ fhir:v "This could be a diagnosis code. If a full condition record exists or additional detail is needed, use reasonReference." ] ;
+       fhir:alias ( [ fhir:v "RedenMedicatieafspraak" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.reasonCode" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "extensible" ] ;
+         fhir:description [ fhir:v "RedenWijzigenOfStakenCodelijst" ] ;
+         fhir:valueSet [
+           a fhir:Reference ;
+           fhir:link <http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.6.2--20171231000000> ;
+           fhir:reference [ fhir:v "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.6.2--20171231000000" ]
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.6.22094" ] ;
+         fhir:comment [ fhir:v "RedenMedicatieafspraak" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…reasonCode" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/MedicationPrescribed/Diagnosis/Primary/Value" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "ORC-16-Order Control Code Reason /RXE-27-Give Indication/RXO-20-Indication / RXD-21-Indication / RXG-22-Indication / RXA-19-Indication" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "reason.observation.reasonCode" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "why" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.reasonReference" ] ;
+       fhir:path [ fhir:v "MedicationRequest.reasonReference" ] ;
+       fhir:short [ fhir:v "PrescriptionReason" ] ;
+       fhir:definition [ fhir:v "The medical reason for the prescription or for use of the medication. This can be used to enter a medical indication which was the direct cause for prescription or for use of the medication in question. \r\n\r\nIt can concern every type of problem (or condition) of the patient, almost all diagnoses, complaints or symptoms. \r\n\r\nPlease note: The BST401T file of the G standard contains a “special reference” to indicate that “exchange of the reason for prescription is essential”." ] ;
+       fhir:comment [ fhir:v "This is a reference to a condition or observation that is the reason for the medication order.  If only a code exists, use reasonCode." ] ;
+       fhir:alias ( [ fhir:v "RedenVanVoorschrijven" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.reasonReference" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/Observation"^^xsd:anyURI ]
+       ] [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Problem"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.6.23133" ] ;
+         fhir:comment [ fhir:v "PrescriptionReason. Mapping for zib-Problem" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…reasonReference" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "no mapping" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "reason.observation[code=ASSERTION].value" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "why" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.note" ] ;
+       fhir:path [ fhir:v "MedicationRequest.note" ] ;
+       fhir:short [ fhir:v "Comment" ] ;
+       fhir:definition [ fhir:v "Explanation for the medication agreement. \r\n \r\nThis explanation can contain e.g. information on why a prescriber makes a medication agreement that deviates from the norm." ] ;
+       fhir:alias ( [ fhir:v "Toelichting" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.note" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Annotation"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.6.22273" ] ;
+         fhir:comment [ fhir:v "Comment" ]
+       ] [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…note" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/MedicationPrescribed/Note" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".inboundRelationship[typeCode=SUBJ]/source[classCode=OBS,moodCode=EVN,code=\"annotation\"].value" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dosageInstruction" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dosageInstruction" ] ;
+       fhir:short [ fhir:v "InstructionsForUse" ] ;
+       fhir:definition [ fhir:v "Instructions for the use of the medication, e.g. dose and route of administration" ] ;
+       fhir:comment [ fhir:v "The wiki page https://informatiestandaarden.nictiz.nl/wiki/mp:V9.0_Voorbeelden_doseringen provides dosage instruction examples. These examples consists of functional data and their representation in FHIR and CDA." ] ;
+       fhir:alias ( [ fhir:v "Gebruiksinstructie" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.dosageInstruction" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Dosage"^^xsd:anyURI ] ;
+         fhir:profile [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse"^^xsd:anyURI ]
+       ] ) ;
+       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "hcim-medicationagreement-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.6.23240" ] ;
+         fhir:comment [ fhir:v "InstructionsForUse" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-basicelements-v1.0-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:0.0.14" ] ;
+         fhir:comment [ fhir:v "DateTime" ]
+       ] [
+         fhir:identity [ fhir:v "hcim-instructionsforuse-v1.1-2017EN" ] ;
+         fhir:map [ fhir:v "NL-CM:9.12.22504" ] ;
+         fhir:comment [ fhir:v "InstructionsForUse" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=COMP].target[classCode=SBADM, moodCode=INT]" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dispenseRequest" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dispenseRequest" ] ;
+       fhir:short [ fhir:v "Medication supply authorization" ] ;
+       fhir:definition [ fhir:v "Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.dispenseRequest" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "BackboneElement"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/MedicationPrescribed/ExpirationDate" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "component.supplyEvent" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dispenseRequest.id" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dispenseRequest.id" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "xml:id (or equivalent in JSON)" ] ;
+       fhir:definition [ fhir:v "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dispenseRequest.extension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dispenseRequest.extension" ] ;
+       fhir:short [ fhir:v "Additional Content defined by implementations" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dispenseRequest.modifierExtension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dispenseRequest.modifierExtension" ] ;
+       fhir:short [ fhir:v "Extensions that cannot be ignored" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] [ fhir:v "modifiers" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "BackboneElement.modifierExtension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dispenseRequest.validityPeriod" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dispenseRequest.validityPeriod" ] ;
+       fhir:short [ fhir:v "Time period supply is authorized for" ] ;
+       fhir:definition [ fhir:v "This indicates the validity period of a prescription (stale dating the Prescription)." ] ;
+       fhir:comment [ fhir:v "It reflects the prescribers' perspective for the validity of the prescription. Dispenses must not be made against the prescription outside of this period. The lower-bound of the Dispensing Window signifies the earliest date that the prescription can be filled for the first time. If an upper-bound is not specified then the Prescription is open-ended or will default to a stale-date based on regulations." ] ;
+       fhir:requirements [ fhir:v "Indicates when the Prescription becomes valid, and when it ceases to be a dispensable Prescription." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.dispenseRequest.validityPeriod" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Period"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/MedicationPrescribed/Refills" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "effectiveTime" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed" ] ;
+       fhir:short [ fhir:v "Number of refills authorized" ] ;
+       fhir:definition [ fhir:v "An integer indicating the number of times, in addition to the original dispense, (aka refills or repeats) that the patient can receive the prescribed medication. Usage Notes: This integer does not include the original order dispense. This means that if an order indicates dispense 30 tablets plus \"3 repeats\", then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets." ] ;
+       fhir:comment [ fhir:v "If displaying \"number of authorized fills\", add 1 to this number." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "positiveInt"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/MedicationPrescribed/Quantity" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "RXE-12-Number of Refills" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "repeatNumber" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dispenseRequest.quantity" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dispenseRequest.quantity" ] ;
+       fhir:short [ fhir:v "Amount of medication to supply per dispense" ] ;
+       fhir:definition [ fhir:v "The amount that is to be dispensed for one fill." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.dispenseRequest.quantity" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Quantity"^^xsd:anyURI ] ;
+         fhir:profile [ fhir:v "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/MedicationPrescribed/DaysSupply" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "RXD-4-Actual Dispense Amount / RXD-5.1-Actual Dispense Units.code / RXD-5.3-Actual Dispense Units.name of coding system" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "quantity" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dispenseRequest.expectedSupplyDuration" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dispenseRequest.expectedSupplyDuration" ] ;
+       fhir:short [ fhir:v "Number of days supply per dispense" ] ;
+       fhir:definition [ fhir:v "Identifies the period time over which the supplied product is expected to be used, or the length of time the dispense is expected to last." ] ;
+       fhir:comment [ fhir:v "In some situations, this attribute may be used instead of quantity to identify the amount supplied by how long it is expected to last, rather than the physical quantity issued, e.g. 90 days supply of medication (based on an ordered dosage) When possible, it is always better to specify quantity, as this tends to be more precise. expectedSupplyDuration will always be an estimate that can be influenced by external factors." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.dispenseRequest.expectedSupplyDuration" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Duration"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "Message/Body/NewRx/MedicationPrescribed/Substitutions" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "expectedUseTime" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dispenseRequest.performer" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dispenseRequest.performer" ] ;
+       fhir:short [ fhir:v "Intended dispenser" ] ;
+       fhir:definition [ fhir:v "Indicates the intended dispensing Organization specified by the prescriber." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.dispenseRequest.performer" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/Organization"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=COMP].target[classCode=SPLY, moodCode=RQO] .participation[typeCode=PRF].role[scoper.determinerCode=INSTANCE]" ]
+       ] [
+         fhir:identity [ fhir:v "w5" ] ;
+         fhir:map [ fhir:v "who" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.substitution" ] ;
+       fhir:path [ fhir:v "MedicationRequest.substitution" ] ;
+       fhir:short [ fhir:v "Any restrictions on medication substitution" ] ;
+       fhir:definition [ fhir:v "Indicates whether or not substitution can or should be part of the dispense. In some cases substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.substitution" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "BackboneElement"^^xsd:anyURI ]
+       ] ) ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "ele-1" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
+         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
+         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
+         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "specific values within Message/Body/NewRx/MedicationPrescribed/Substitutions" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "subjectOf.substitutionPersmission" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.substitution.id" ] ;
+       fhir:path [ fhir:v "MedicationRequest.substitution.id" ] ;
+       fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
+       fhir:short [ fhir:v "xml:id (or equivalent in JSON)" ] ;
+       fhir:definition [ fhir:v "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "string"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.substitution.extension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.substitution.extension" ] ;
+       fhir:short [ fhir:v "Additional Content defined by implementations" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Element.extension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.substitution.modifierExtension" ] ;
+       fhir:path [ fhir:v "MedicationRequest.substitution.modifierExtension" ] ;
+       fhir:short [ fhir:v "Extensions that cannot be ignored" ] ;
+       fhir:definition [ fhir:v "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ] ;
+       fhir:comment [ fhir:v "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:alias ( [ fhir:v "extensions" ] [ fhir:v "user content" ] [ fhir:v "modifiers" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "BackboneElement.modifierExtension" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Extension"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "N/A" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.substitution.allowed" ] ;
+       fhir:path [ fhir:v "MedicationRequest.substitution.allowed" ] ;
+       fhir:short [ fhir:v "Whether substitution is allowed or not" ] ;
+       fhir:definition [ fhir:v "True if the prescriber allows a different drug to be dispensed from what was prescribed." ] ;
+       fhir:comment [ fhir:v "This element is labeled as a modifer because whether substitution is allow or not cannot be ignored." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.substitution.allowed" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "boolean"^^xsd:anyURI ]
+       ] ) ;
+       fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "specific values within Message/Body/NewRx/MedicationPrescribed/Substitutions" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "RXO-9-Allow Substitutions / RXE-9-Substitution Status" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "code" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.substitution.reason" ] ;
+       fhir:path [ fhir:v "MedicationRequest.substitution.reason" ] ;
+       fhir:short [ fhir:v "Why should (not) substitution be made" ] ;
+       fhir:definition [ fhir:v "Indicates the reason for the substitution, or why substitution must or must not be performed." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.substitution.reason" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ]
+       ] ) ;
+       fhir:binding [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "MedicationIntendedSubstitutionReason" ]
+         ] ) ;
+         fhir:strength [ fhir:v "example" ] ;
+         fhir:description [ fhir:v "A coded concept describing the reason that a different medication should (or should not) be substituted from what was prescribed." ] ;
+         fhir:valueSet [
+           a fhir:Reference ;
+           fhir:link <http://hl7.org/fhir/ValueSet/v3-SubstanceAdminSubstitutionReason> ;
+           fhir:reference [ fhir:v "http://hl7.org/fhir/ValueSet/v3-SubstanceAdminSubstitutionReason" ]
+         ]
+       ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "not mapped" ]
+       ] [
+         fhir:identity [ fhir:v "v2" ] ;
+         fhir:map [ fhir:v "RXE-9 Substition status" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "reasonCode" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.priorPrescription" ] ;
+       fhir:path [ fhir:v "MedicationRequest.priorPrescription" ] ;
+       fhir:short [ fhir:v "An order/prescription that is being replaced" ] ;
+       fhir:definition [ fhir:v "A link to a resource representing an earlier order related order or prescription." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.priorPrescription" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/MedicationRequest"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…replaces" ]
+       ] [
+         fhir:identity [ fhir:v "script10.6" ] ;
+         fhir:map [ fhir:v "not mapped" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".outboundRelationship[typeCode=?RPLC or ?SUCC]/target[classCode=SBADM,moodCode=RQO]" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.detectedIssue" ] ;
+       fhir:path [ fhir:v "MedicationRequest.detectedIssue" ] ;
+       fhir:short [ fhir:v "Clinical Issue with action" ] ;
+       fhir:definition [ fhir:v "Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, duplicate therapy, dosage alert etc." ] ;
+       fhir:alias ( [ fhir:v "Contraindication" ] [ fhir:v "Drug Utilization Review (DUR)" ] [ fhir:v "Alert" ] ) ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.detectedIssue" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/DetectedIssue"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".inboundRelationship[typeCode=SUBJ]/source[classCode=ALRT,moodCode=EVN].value" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.eventHistory" ] ;
+       fhir:path [ fhir:v "MedicationRequest.eventHistory" ] ;
+       fhir:short [ fhir:v "A list of events of interest in the lifecycle" ] ;
+       fhir:definition [ fhir:v "Links to Provenance records for past versions of this resource or fulfilling request or event resources that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the resource." ] ;
+       fhir:comment [ fhir:v "This may not include provenances for all versions of the request – only those deemed “relevant” or important. This SHALL NOT include the Provenance associated with this current version of the resource. (If that provenance is deemed to be a “relevant” change, it will need to be added as part of a later update. Until then, it can be queried directly as the Provenance that points to this version using _revinclude All Provenances should have some historical version of this Request as their subject.)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "MedicationRequest.eventHistory" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile [ fhir:v "http://hl7.org/fhir/StructureDefinition/Provenance"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "workflow" ] ;
+         fhir:map [ fhir:v "…relevantHistory" ]
+       ] [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v ".inboundRelationship(typeCode=SUBJ].source[classCode=CACT, moodCode=EVN]" ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:differential [
+     fhir:element ( [
+       fhir:id [ fhir:v "MedicationRequest" ] ;
+       fhir:path [ fhir:v "MedicationRequest" ]
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dateAsserted" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dateAsserted" ] ;
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dosage.text" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dosage.text" ] ;
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.dosage.route.text" ] ;
+       fhir:path [ fhir:v "MedicationRequest.dosage.route.text" ] ;
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.category.text" ] ;
+       fhir:path [ fhir:v "MedicationRequest.category.text" ] ;
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:id [ fhir:v "MedicationRequest.medicationReference.display" ] ;
+       fhir:path [ fhir:v "MedicationRequest.medicationReference.display" ] ;
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/ValueSet/all-languages> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/languages> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/medication-request-status> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/medication-request-intent> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/medication-request-category> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/medication-request-priority> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/v3-SubstanceAdminSubstitutionReason> a fhir:ValueSet .
+
+# -------------------------------------------------------------------------------------
+
