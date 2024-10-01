@@ -33,8 +33,13 @@ end note
 Zorgviewer->Host: opvragen gebruiker gegevens\n""<zorgviewer-host-base>/Practitioner/<practitioner_fhir_id>""
 activate Host
 Host-->Zorgviewer: ""[[StructureDefinition-Practitioner.html Practitioner]]""
+deactivate Host
+Zorgviewer->Host: opvragen gebruiker rollen\n""<zorgviewer-host-base>/PractitionerRole?practitioner=<practitioner_fhir_id>""
+activate Host
+Host-->Zorgviewer: ""[[StructureDefinition-PractitionerRole.html PractitionerRole]]""
 note left Zorgviewer
- subject_role zit in Practitioner.qualification[system=SNOMED CT]
+ opt: ""[[ConceptMap-epic-rolcode.html ConceptMap]]"" gebruiken voor PractitionerRole.code
+ subject_role zit in Practitioner.code[system=SNOMED CT]
  subject_organization_id zit in Practitioner.meta[extension=source]
 end note
 deactivate Host
