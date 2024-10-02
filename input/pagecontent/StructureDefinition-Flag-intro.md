@@ -59,7 +59,7 @@
 
 ### Request
 
-1. Opvragen (search) definities
+1. Opvragen (search) alerts
 
     `GET <ontsluiten-bronsysteem-base>/Flag?patient=<fhir_patient_id>`
 
