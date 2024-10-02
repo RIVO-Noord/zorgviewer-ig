@@ -254,7 +254,7 @@
         
           Active
           
-            as of 2024-10-01
+            as of 2024-10-02
           
         
       </td>
@@ -319,22 +319,22 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
     </tr>
     <tr>
       <td>Datum</td>
-      <td><samp>.period.start</samp> of <samp>.onsetPeriod​</samp> (Epic)</td>
+      <td><samp>.period.start</samp></td>
       <td><code>dateTime</code></td>
       <td>BeginDatumTijd</td>
-      <td>​</td>
+      <td></td>
     </tr>
     <tr>
       <td>Voor</td>
-      <td><samp>Flag.code.text</samp> of <samp>resource.extension.where(url='http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text|string </samp> of <samp>Condition</samp></td>
-      <td><code>string​</code></td>
-      <td>AlertNaam</td>
+      <td><samp>.code.text of .extension.where(url='http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text</samp></td>
+      <td><code>string</code></td>
+      <td>AlertNaam of <i>geassosieerde</i> Conditie::Probleem</td>
       <td>De resolve levert de bijbehorende Condition</td>
     </tr>
     <tr>
       <td>Categorie</td>
-      <td><samp>Flag.category.text</samp></td>
-      <td><code>string​</code></td>
+      <td><samp>.category.text</samp></td>
+      <td><code>string</code></td>
       <td>AlertType</td>
       <td></td>
     </tr>
@@ -342,7 +342,7 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
       <td>Status</td>
       <td><samp>.status</samp></td>
       <td><code>code</code></td>
-      <td>nvt</td>
+      <td><i>nvt</i></td>
       <td>Mapping: ‘active’ naar ‘actueel’; ‘in-active’ naar ‘niet actueel’ Uitgefilterd: ‘entered-in-error’ wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.</td>
     </tr>
   </tbody>
@@ -352,7 +352,7 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 
 <ol>
   <li>
-    <p>Opvragen (search) definities</p>
+    <p>Opvragen (search) alerts</p>
 
     <p><code class="language-plaintext highlighter-rouge">GET &lt;ontsluiten-bronsysteem-base&gt;/Flag?patient=&lt;fhir_patient_id&gt;</code></p>
   </li>
@@ -438,7 +438,7 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Content/Rules for all slices</td></tr>
 
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aaa"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck124.png)" class="hierarchy"><a name="l870">​</a><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Flag-definitions.html#Flag.exension:ConcernReference" title="Slice ConcernReference">exension:ConcernReference</a><a name="d-Flag.exension.2"> </a></td>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aaa"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck124.png)" class="hierarchy"><a name="l863">​</a><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Flag-definitions.html#Flag.exension:ConcernReference" title="Slice ConcernReference">exension:ConcernReference</a><a name="d-Flag.exension.2"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/extension-flag-detail.html" title="Extension">detail</a></td>
@@ -1252,7 +1252,7 @@ Summary
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Content/Rules for all slices</td></tr>
 
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aaa"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck124.png)" class="hierarchy"><a name="l4180">​</a><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Flag-definitions.html#Flag.exension:ConcernReference" title="Slice ConcernReference">exension:ConcernReference</a><a name="da-Flag.exension.2"> </a></td>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aaa"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck124.png)" class="hierarchy"><a name="l4173">​</a><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Flag-definitions.html#Flag.exension:ConcernReference" title="Slice ConcernReference">exension:ConcernReference</a><a name="da-Flag.exension.2"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/extension-flag-detail.html" title="Extension">detail</a></td>
@@ -2071,7 +2071,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Oct 1, 2024 07:24+0000">2024-10-01</span>
+          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Oct 2, 2024 07:18+0000">2024-10-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

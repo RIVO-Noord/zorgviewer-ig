@@ -260,7 +260,7 @@
         
           Active
           
-            as of 2024-10-01
+            as of 2024-10-02
           
         
       </td>
@@ -311,70 +311,68 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 
 <h3 id="user-interface-guidance">User-Interface guidance</h3>
 
-<table>
+<table class="grid">
   <thead>
-    <tr>
-      <th>Kolomnaam</th>
-      <th>FHIR Path</th>
-      <th>FHIR Type</th>
-      <th>Zib element</th>
-      <th>Toelichting of regels</th>
-    </tr>
+    <th>Kolom label</th>
+    <th width="25%">FHIR Path</th>
+    <th>FHIR Type</th>
+    <th>Zib element</th>
+    <th>Toelichting of regels</th>
   </thead>
   <tbody>
     <tr>
       <td>Bron</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
+      <td><samp>.meta.extension[system="http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"].valueUri</samp></td>
+      <td><code>string</code></td>
+      <td><i>nvt</i></td>
+      <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
     </tr>
     <tr>
       <td>Datum</td>
-      <td>.onsetPeriod.start</td>
-      <td>dateTime</td>
+      <td><samp>.onsetPeriod.start</samp></td>
+      <td><code>dateTime</code></td>
       <td>BeginDatumTijd</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>Stof</td>
-      <td>.code.text</td>
-      <td>code</td>
+      <td><samp>.code.text</samp></td>
+      <td><code>string</code></td>
       <td>VeroorzakendeStof</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>Toelichting</td>
-      <td>.note.extension('http://nictiz.nl/fhir/StructureDefinition/note')</td>
-      <td>string</td>
+      <td><samp>.note.extension('http://nictiz.nl/fhir/StructureDefinition/note')</samp></td>
+      <td><code>string</code></td>
       <td>Toelichting</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>Ernst</td>
-      <td>.criticality.extension[system="http://nictiz.nl/fhir/StructureDefinition/code-specification"].text Of indien geen extensie aanwezig: .criticality</td>
-      <td>code</td>
+      <td><samp>.criticality.extension[system="http://nictiz.nl/fhir/StructureDefinition/code-specification"].text</samp> of indien geen extensie aanwezig <samp>.criticality</samp></td>
+      <td><code>string,code</code></td>
       <td>MateVanKritiek</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>Reactie</td>
-      <td>.reaction.manifestation.text</td>
-      <td> </td>
+      <td><samp>.reaction.manifestation.text</samp></td>
+      <td><code>string</code></td>
       <td>Reactie Symptoom</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>Categorie</td>
-      <td>.category.extension[system=” http://nictiz.nl/fhir/StructureDefinition/code-specification"].text of indien geen extensie aanwezig: .category</td>
-      <td>code[]</td>
+      <td><samp>.category.extension[system=” http://nictiz.nl/fhir/StructureDefinition/code-specification"].text</samp> of indien geen extensie aanwezig <samp>.category</samp></td>
+      <td><code>string,code</code></td>
       <td>AllergieCategorie</td>
       <td>Hebt meerdere opties die tegelijk getoond kunnen worden</td>
     </tr>
     <tr>
       <td>Klinische status</td>
-      <td>.clinicalStatus.extension[system=" http://nictiz.nl/fhir/StructureDefinition/code-specification "].text of indien geen extensie aanwezig: .clinicalStatus</td>
-      <td>code</td>
+      <td><samp>.clinicalStatus.extension[system=" http://nictiz.nl/fhir/StructureDefinition/code-specification "].text</samp> of indien geen extensie aanwezig <samp>.clinicalStatus</samp></td>
+      <td><code>string,code</code></td>
       <td>AllergieStatus</td>
       <td>‘Actief’, ‘Niet meer aanwezig’, ‘Achterhaald’. ‘Foutief’ status wordt niet getoond in de Zorgviewer (wordt uitgefilterd). Indien geen extensie aanwezig, dan worden de waarden als volgt gemapped: Active -&gt; Actief; InActive -&gt; Achterhaald; Resolved -&gt; Niet meer aanwezig</td>
     </tr>
@@ -385,7 +383,7 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 
 <ol>
   <li>
-    <p>Opvragen (search) definities</p>
+    <p>Opvragen (search) allergieen en intoleranties</p>
 
     <p><code class="language-plaintext highlighter-rouge">GET &lt;ontsluiten-bronsysteem-base&gt;/AllergyIntolerance/?patient=&lt;fhir_patient_id&gt;</code></p>
   </li>
@@ -4406,7 +4404,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Oct 1, 2024 07:24+0000">2024-10-01</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Oct 2, 2024 07:18+0000">2024-10-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
