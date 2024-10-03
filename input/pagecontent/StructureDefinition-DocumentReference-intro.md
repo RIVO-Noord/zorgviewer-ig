@@ -51,7 +51,7 @@ Kolom definities:
       <td><samp>.context.practiceSetting.text</samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
-      <td>Tijdelijk voor Zorgplatform: indien <code>.context.practiceSetting.text</code> is gevuld met een OID, dan wordt het veld gevuld met <code>.context.practiceSetting.coding.code (SCT)</code></td>
+      <td>Tijdelijk voor Zorgplatform: indien <code>.context.practiceSetting.text</code> is gevuld met een OID (startsWith('2.16.840.1.113883.)), dan wordt het veld gevuld met <code>.context.practiceSetting.coding.code</code> (een SNOMED CT code)</td>
     </tr>
     <tr style="background-color:gray; color:white">
       <td>MimeType (voor filtering op pdf)</td>
