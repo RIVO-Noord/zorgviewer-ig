@@ -1,10 +1,10 @@
 zorgviewer-ig : Validation Results
 =========================================
 
-err = 162, warn = 197, info = 112
+err = 164, warn = 196, info = 112
 $--
 Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http://hl7.nl/fhir/zorgviewer)
- Build Errors : 14 / 4 / 0
+ Build Errors : 14 / 5 / 0
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Chipsoft : 2 / 0 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Epic : 1 / 3 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/AdvanceDirective-Nexus : 3 / 1 / 5
@@ -52,7 +52,7 @@ Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-AllergyIntolerance : 4 / 2 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-AuditEvent : 0 / 7 / 2
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Condition : 4 / 4 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-DocumentReference : 0 / 5 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-DocumentReference : 0 / 3 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Endpoint : 0 / 3 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Flag : 4 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-LaboratoryTestResult : 3 / 10 / 1
@@ -91,6 +91,7 @@ Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-VIPLive : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/PlanDefinition-BgZ2017 : 0 / 2 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ValueSet-ACPTreatmentCodelist : 0 / 0 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ValueSet-DocumentLOINCCodelist : 2 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ValueSet-ProbleemNaamCodelist : 1 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/ValueSet-SubjectRoleCodelists : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/zorgviewer-ig : 0 / 4 / 1
@@ -98,6 +99,7 @@ Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http
 == n/a ==
 WARNING: ImplementationGuide.dependency[0].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 WARNING: ImplementationGuide.dependency[1].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/DocumentLOINCCodelist.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/OZGDelfzicht.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/69ecfed3-f811-45be-969c-6fb1f32fcf19.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/output/StructureDefinition-Flag.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 447, column 722: The link 'StructureDefinition-Flag-definitions.html#Flag.exension:ConcernReference' for "exension:ConcernReference" cannot be resolved (valid targets: 113 targets)
@@ -453,8 +455,6 @@ WARNING: StructureDefinition/Condition: StructureDefinition.snapshot.element[31]
 WARNING: StructureDefinition/Condition: StructureDefinition.snapshot.element[66].binding: The definition for the element 'Condition.stage.summary' binds to the value set 'http://hl7.org/fhir/ValueSet/condition-stage' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/Condition: StructureDefinition.snapshot.element[72].binding: The definition for the element 'Condition.evidence.code' binds to the value set 'http://hl7.org/fhir/ValueSet/manifestation-or-symptom' which is experimental, but this structure is not labeled as experimental
 == input/profiles/StructureDefinition-DocumentReference.json ==
-WARNING: StructureDefinition/DocumentReference: StructureDefinition.snapshot.element[13].binding: The definition for the element 'DocumentReference.type' binds to the value set 'http://hl7.org/fhir/ValueSet/c80-doc-typecodes' which is experimental, but this structure is not labeled as experimental
-WARNING: StructureDefinition/DocumentReference: StructureDefinition.snapshot.element[14].binding: The definition for the element 'DocumentReference.class' binds to the value set 'http://hl7.org/fhir/ValueSet/c80-doc-classcodes' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/DocumentReference: StructureDefinition.snapshot.element[28].binding: The definition for the element 'DocumentReference.securityLabel' binds to the value set 'http://hl7.org/fhir/ValueSet/security-labels' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/DocumentReference: StructureDefinition.snapshot.element[56].binding: The definition for the element 'DocumentReference.context.facilityType' binds to the value set 'http://hl7.org/fhir/ValueSet/c80-facilitycodes' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/DocumentReference: StructureDefinition.snapshot.element[57].binding: The definition for the element 'DocumentReference.context.practiceSetting' binds to the value set 'http://hl7.org/fhir/ValueSet/c80-practice-codes' which is experimental, but this structure is not labeled as experimental
@@ -662,6 +662,9 @@ INFORMATION: Organization/UMCG: Organization.identifier[2]: This element does no
 WARNING: PlanDefinition/BgZ2017: PlanDefinition.action[0].output[2].codeFilter[0].valueCoding[0]: A code with no system has no defined meaning, and it cannot be validated. A system should be provided
 WARNING: PlanDefinition/BgZ2017: PlanDefinition.action[0].output[2].codeFilter[0].valueCoding[1]: A code with no system has no defined meaning, and it cannot be validated. A system should be provided
 == input/resources/ValueSet-ACPTreatmentCodelist.json ==
+== input/resources/ValueSet-DocumentLOINCCodelist.json ==
+ERROR: ValueSet/DocumentLOINCCodelist: ValueSet: ValueSet.description: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/shareablevalueset)
+ERROR: ValueSet/DocumentLOINCCodelist: ValueSet: Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.description is mandatory, but it is not present
 == input/resources/ValueSet-ProbleemNaamCodelist.json ==
 ERROR: ValueSet.where(id = 'ProbleemNaamCodelist'): Error converting output stream to byte array
 == input/resources/ValueSet-SubjectRoleCodelists.json ==

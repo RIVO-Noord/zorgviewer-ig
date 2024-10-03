@@ -6,23 +6,23 @@
     {
       "column": [
         {
-          "path": "resource.period.start",
+          "path": "period.start",
           "name": "Datum"
         },
         {
-          "path": "iif(exists(resource.category.text),resource.category.text,resource.category.coding.display)",
+          "path": "iif(exists(category.text),category.text,category.coding.display)",
           "name": "Categorie"
         },
         {
-          "path": "iif(exists(resource.code.text),resource.code.text,resource.code.coding.display)",
+          "path": "iif(exists(code.text),code.text,code.coding.display)",
           "name": "Voor"
         },
         {
-          "path": "resource.extension.where(url='http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text",
+          "path": "extension.where(url='http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text",
           "name": "Voor-detail"
         }
       ],
-      "forEach": "entry.where(resource.resourceType = 'Flag')"
+      "forEach": "entry.resource.where(resourceType='Flag')"
     }
   ]
 }

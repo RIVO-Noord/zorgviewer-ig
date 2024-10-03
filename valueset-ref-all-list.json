@@ -787,6 +787,18 @@
       "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
     },
     {
+      "url" : "http://hl7.nl/fhir/zorgviewer/ValueSet/DocumentLOINCCodelist",
+      "version" : "1.6.0",
+      "status" : "active",
+      "name" : "DocumentLOINCCodelist",
+      "title" : "Document Class & Type waardelijst",
+      "description" : null,
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-DocumentReference.html" : "DocumentReference"
+    },
+    {
       "url" : "http://hl7.nl/fhir/zorgviewer/ValueSet/ProbleemNaamCodelist",
       "version" : "1.6.0",
       "status" : "active",
@@ -1235,34 +1247,6 @@
       "StructureDefinition-LaboratoryTestResult.html" : "LaboratoryTestResult"
     },
     {
-      "url" : "http://hl7.org/fhir/ValueSet/c80-doc-classcodes",
-      "version" : "20091109",
-      "status" : "active",
-      "name" : "Document Class Value Set",
-      "title" : null,
-      "description" : "This is the code specifying the high-level kind of document (e.g. Prescription, Discharge Summary, Report, etc.). The Document Class value set is reproduced from HITSP C80 Table 2-144 Document Class Value Set Definition. Note: Class code for documents comes from LOINC, and is based upon one of the following:The type of service described by the document. It is described at a very high level in Section 7.3 of the LOINC Manual. The type study performed. It was determined by identifying modalities for study reports. The section of the chart where the document is placed. It was determined from the SETs created for Claims Attachment requests.",
-      "systems" : ["http://loinc.org"],
-      "oids" : ["2.16.840.1.113883.3.88.12.80.46"],
-      "sources" : ["2.16.840.1.113883.3.88.12.80.46"],
-      "uses" : {
-      },
-      "StructureDefinition-DocumentReference.html" : "DocumentReference"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/c80-doc-typecodes",
-      "version" : "20091109",
-      "status" : "active",
-      "name" : "Document Type Value Set",
-      "title" : null,
-      "description" : "This is the code specifying the precise type of document (e.g. Pulmonary History and  Physical, Discharge Summary, Ultrasound Report, etc.). The Document Type value set includes all LOINC  values listed in HITSP C80 Table 2-144 Document Class Value Set Definition above used for Document Class,  and all LOINC values whose SCALE is DOC in the LOINC database.",
-      "systems" : ["http://loinc.org"],
-      "oids" : ["2.16.840.1.113883.3.88.12.80.47"],
-      "sources" : ["2.16.840.1.113883.3.88.12.80.47"],
-      "uses" : {
-      },
-      "StructureDefinition-DocumentReference.html" : "DocumentReference"
-    },
-    {
       "url" : "http://hl7.org/fhir/ValueSet/c80-facilitycodes",
       "version" : "20091109",
       "status" : "active",
@@ -1288,8 +1272,8 @@
       "sources" : ["2.16.840.1.113883.3.88.12.80.72"],
       "uses" : {
       },
-      "StructureDefinition-PractitionerRole.html" : "PractitionerRole",
-      "StructureDefinition-DocumentReference.html" : "DocumentReference"
+      "StructureDefinition-DocumentReference.html" : "DocumentReference",
+      "StructureDefinition-PractitionerRole.html" : "PractitionerRole"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
@@ -1345,9 +1329,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.152"],
       "uses" : {
       },
+      "StructureDefinition-Procedure.html" : "Procedure",
       "StructureDefinition-PlanDefinition.html" : "PlanDefinition",
-      "StructureDefinition-MedicationStatement.html" : "MedicationUse",
-      "StructureDefinition-Procedure.html" : "Procedure"
+      "StructureDefinition-MedicationStatement.html" : "MedicationUse"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
@@ -1403,9 +1387,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.737"],
       "uses" : {
       },
-      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective",
       "StructureDefinition-AdvanceDirective.html" : "AdvanceDirective",
-      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent"
+      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent",
+      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/consent-category",
@@ -1423,9 +1407,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.735"],
       "uses" : {
       },
-      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective",
       "StructureDefinition-AdvanceDirective.html" : "AdvanceDirective",
-      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent"
+      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent",
+      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/consent-content-class",
@@ -1444,9 +1428,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.745"],
       "uses" : {
       },
-      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective",
       "StructureDefinition-AdvanceDirective.html" : "AdvanceDirective",
-      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent"
+      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent",
+      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/consent-content-code",
@@ -1460,9 +1444,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.746"],
       "uses" : {
       },
-      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective",
       "StructureDefinition-AdvanceDirective.html" : "AdvanceDirective",
-      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent"
+      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent",
+      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/consent-data-meaning",
@@ -1476,9 +1460,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.743"],
       "uses" : {
       },
-      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective",
       "StructureDefinition-AdvanceDirective.html" : "AdvanceDirective",
-      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent"
+      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent",
+      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/consent-except-type",
@@ -1492,9 +1476,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.741"],
       "uses" : {
       },
-      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective",
       "StructureDefinition-AdvanceDirective.html" : "AdvanceDirective",
-      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent"
+      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent",
+      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/consent-state-codes",
@@ -1508,9 +1492,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.739"],
       "uses" : {
       },
-      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective",
       "StructureDefinition-AdvanceDirective.html" : "AdvanceDirective",
-      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent"
+      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent",
+      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/contactentity-type",
@@ -1804,25 +1788,25 @@
       "sources" : ["2.16.840.1.113883.4.642.3.891"],
       "uses" : {
       },
-      "StructureDefinition-Endpoint.html" : "Endpoint",
-      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective",
-      "StructureDefinition-MedicationRequest.html" : "MedicationAgreement",
-      "StructureDefinition-Procedure.html" : "Procedure",
-      "StructureDefinition-AdvanceDirective.html" : "AdvanceDirective",
-      "StructureDefinition-Practitioner.html" : "Practitioner",
-      "StructureDefinition-Specimen.html" : "Specimen",
-      "StructureDefinition-Flag.html" : "Alert",
-      "StructureDefinition-Organization.html" : "Organization",
-      "StructureDefinition-LaboratoryTestResult.html" : "LaboratoryTestResult",
-      "StructureDefinition-DocumentReference.html" : "DocumentReference",
-      "StructureDefinition-PlanDefinition.html" : "PlanDefinition",
-      "StructureDefinition-AuditEvent.html" : "AuditEvent",
-      "StructureDefinition-PractitionerRole.html" : "PractitionerRole",
-      "StructureDefinition-AllergyIntolerance.html" : "AllergyIntolerance",
-      "StructureDefinition-MedicationStatement.html" : "MedicationUse",
       "StructureDefinition-Patient.html" : "Patient",
+      "StructureDefinition-AdvanceDirective.html" : "AdvanceDirective",
+      "StructureDefinition-Organization.html" : "Organization",
+      "StructureDefinition-AuditEvent.html" : "AuditEvent",
+      "StructureDefinition-Condition.html" : "Condition",
+      "StructureDefinition-Specimen.html" : "Specimen",
+      "StructureDefinition-PractitionerRole.html" : "PractitionerRole",
+      "StructureDefinition-MedicationStatement.html" : "MedicationUse",
+      "StructureDefinition-Procedure.html" : "Procedure",
+      "StructureDefinition-LaboratoryTestResult.html" : "LaboratoryTestResult",
+      "StructureDefinition-Practitioner.html" : "Practitioner",
+      "StructureDefinition-PlanDefinition.html" : "PlanDefinition",
+      "StructureDefinition-AllergyIntolerance.html" : "AllergyIntolerance",
+      "StructureDefinition-DocumentReference.html" : "DocumentReference",
+      "StructureDefinition-Endpoint.html" : "Endpoint",
+      "StructureDefinition-Flag.html" : "Alert",
+      "StructureDefinition-MedicationRequest.html" : "MedicationAgreement",
       "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent",
-      "StructureDefinition-Condition.html" : "Condition"
+      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -2082,8 +2066,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.383"],
       "uses" : {
       },
-      "StructureDefinition-PlanDefinition.html" : "PlanDefinition",
-      "StructureDefinition-LaboratoryTestResult.html" : "LaboratoryTestResult"
+      "StructureDefinition-LaboratoryTestResult.html" : "LaboratoryTestResult",
+      "StructureDefinition-PlanDefinition.html" : "PlanDefinition"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
@@ -2383,11 +2367,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.46"],
       "uses" : {
       },
-      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective",
-      "StructureDefinition-AuditEvent.html" : "AuditEvent",
       "StructureDefinition-AdvanceDirective.html" : "AdvanceDirective",
+      "StructureDefinition-AuditEvent.html" : "AuditEvent",
+      "StructureDefinition-DocumentReference.html" : "DocumentReference",
       "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent",
-      "StructureDefinition-DocumentReference.html" : "DocumentReference"
+      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/security-role-type",
@@ -2407,10 +2391,10 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective",
-      "StructureDefinition-AuditEvent.html" : "AuditEvent",
       "StructureDefinition-AdvanceDirective.html" : "AdvanceDirective",
-      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent"
+      "StructureDefinition-AuditEvent.html" : "AuditEvent",
+      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent",
+      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/specimen-processing-procedure",
@@ -2542,10 +2526,10 @@
       "sources" : ["2.16.840.1.113883.1.11.20448"],
       "uses" : {
       },
-      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective",
-      "StructureDefinition-AuditEvent.html" : "AuditEvent",
       "StructureDefinition-AdvanceDirective.html" : "AdvanceDirective",
-      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent"
+      "StructureDefinition-AuditEvent.html" : "AuditEvent",
+      "StructureDefinition-ToestemmingConsent.html" : "ToestemmingConsent",
+      "StructureDefinition-TreatmentDirective.html" : "TreatmentDirective"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/v3-SubstanceAdminSubstitutionReason",
