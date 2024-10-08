@@ -15,7 +15,7 @@ Het RIVO-Noord Zorgviewer MVP2 Project wordt door een team vanuit het UMCG getro
 #### Historie Zorgviewer
 | | |
 | --- | --- |
-| 2023 tot heden | [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer/). Livegang met een beperkt aantal gebruikers (april 2024)|
+| 2023 tot heden | [RIVO-Noord Zorgviewer MVP2 Project](https://www.rivo-noord.nl/zorgviewer). Livegang met een beperkt aantal gebruikers (april 2024)|
 | 2022 | [Supernova Zorgviewer MVP1](https://www.salesforce.com/nl/blog/2022/05/supernova.html) |
 | 2021-nov | Zorgviewer Prototype middels [dHealthLab](https://dhealth.nl/) Clinical Connectathon Netwerkzorg |
 | 2020 | [Netwerkzorg Architectuur 1.0](https://jimdo-storage.global.ssl.fastly.net/file/a647b7db-1537-4f74-a4c0-b56066ae9d07/Netwerkzorgarchitectuur%201.0.pdf) vastgesteld
