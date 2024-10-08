@@ -33,6 +33,20 @@ Kolom definities:
   Ter info: indien datum uit ​<samp>.indexed</samp> komt, wordt deze gemarkeerd met een icoontje (i) </td>
     </tr>
     <tr>
+      <td>Type</td>
+      <td><samp>iif(type.text.startsWith('2.16.840.1.113883.'),type.coding[0].code,type.text)</samp></td>
+      <td><code>code</code></td>
+      <td><i>nvt</i></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Klasse</td>
+      <td><samp>iif(class.text.startsWith('2.16.840.1.113883.'),class.coding[0].code,class.text)</samp></td>
+      <td><code>code</code></td>
+      <td><i>nvt</i></td>
+      <td></td>
+    </tr>
+    <tr>
       <td>Beschrijving</td>
       <td><samp>.description​</samp></td>
       <td><code>string</code></td>
