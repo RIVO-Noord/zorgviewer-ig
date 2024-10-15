@@ -8,10 +8,6 @@
 
 * [ViewDefinition voor MedicationRequest](ViewDefinition-MedicationRequest.json)
 
-### User-Interface guidance
-
-Een schets van het scherm met labels en sortering informatie
-
 ### Request
 
 1. Opvragen (search) definities
