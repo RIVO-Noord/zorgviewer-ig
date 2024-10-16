@@ -44,7 +44,7 @@ Dit tabblad is voor de aanvullingen vanuit het Regionaal Architecten Overleg van
 <strong>Tabblad: Artifact Index</strong>
 - [Artifact index](artifacts.html) = beschrijving van onder andere de FHIR resources. Deze pagina wordt gebruikt om de details van de FHIR resources in te zien met een aantal voorbeelden vanuit de verschillende organisaties en systemen
 
-Bijbehorende Zibs zoeken vanuit een FHIR resource:
+    Bijbehorende Zibs zoeken vanuit een FHIR resource:
 
 * In onderstaande voorbeeld staat "This structure is derived from Zib Problem", deze link gaat naar de volledige zib op Simplifier.net. Op deze site staat onder het tabblad ‘Mappings’ bovenaan in de tabel de directe link naar de zib op zibs.nl.
 * Ook in de link onder het kopje ‘Type’, in dit geval ‘Zib Problem’ gaat de link naar Simplifier.net. Het ‘Overview’ tabblad is de FHIR-representatie van de Zib. Daarin zitten de Mappings terug naar de Zib. 
