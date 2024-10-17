@@ -6,27 +6,27 @@
       {
         "column": [
           {
-            "path": "resource.dateAsserted",
+            "path": "dateAsserted",
             "name": "Datum"
           },
           {
-            "path": "resource.category.text",
+            "path": "category.text",
             "name": "Categorie"
           },
           {
-            "path": "resource.medicationReference.display",
+            "path": "medicationReference.display",
             "name": "Medicatie"
           },
           {
-            "path": "resource.dosage.route.text",
+            "path": "dosage.route.text",
             "name": "Toedieningsweg"
           },
           {
-            "path": "resource.dosage.text",
+            "path": "dosage.text",
             "name": "Instructies"
           }
         ],
-        "forEach": "entry.where(resource.resourceType = 'MedicationStatement')"
+        "forEach": "entry.resource.where(resourceType='MedicationStatement')"
       }
     ]
   }

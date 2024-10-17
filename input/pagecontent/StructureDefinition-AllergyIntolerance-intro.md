@@ -14,20 +14,77 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 
 ### User-Interface guidance
 
-|Kolomnaam|FHIR Path  |FHIR Type|Zib element  |Toelichting of regels  |
-|--|--|--|--|--|
-|Bron  |  |  |  | |
-|Datum  |.onsetPeriod.start  |dateTime  |BeginDatumTijd  ||
-|Stof  |.code.text  |code  |VeroorzakendeStof  | |
-|Toelichting  |.note.extension('http://nictiz.nl/fhir/StructureDefinition/note')  |string  |Toelichting  | |
-|Ernst  |.criticality.extension[system="http://nictiz.nl/fhir/StructureDefinition/code-specification"].text Of indien geen extensie aanwezig: .criticality |code  |MateVanKritiek  ||
-|Reactie  |.reaction.manifestation.text  |  |Reactie Symptoom  ||
-|Categorie|.category.extension[system=” http://nictiz.nl/fhir/StructureDefinition/code-specification"].text of indien geen extensie aanwezig: .category |code[]  |AllergieCategorie  |Hebt meerdere opties die tegelijk getoond kunnen worden|
-|Klinische status|.clinicalStatus.extension[system=" http://nictiz.nl/fhir/StructureDefinition/code-specification "].text of indien geen extensie aanwezig: .clinicalStatus|code  |AllergieStatus  |‘Actief’, ‘Niet meer aanwezig’, ‘Achterhaald’. ‘Foutief’ status wordt niet getoond in de Zorgviewer (wordt uitgefilterd). Indien geen extensie aanwezig, dan worden de waarden als volgt gemapped: Active -> Actief; InActive -> Achterhaald; Resolved -> Niet meer aanwezig|
+<table class="grid">
+  <thead>
+    <th>Kolom label</th>
+    <th width="25%">FHIR Path</th>
+    <th>FHIR Type</th>
+    <th>Zib element</th>
+    <th>Toelichting of regels</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bron</td>
+      <td><samp>.meta.extension[system="http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"].valueUri</samp></td>
+      <td><code>string</code></td>
+      <td><i>nvt</i></td>
+      <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
+    </tr>
+    <tr>
+      <td>Datum</td>
+      <td><samp>.onsetPeriod.start</samp></td>
+      <td><code>dateTime</code></td>
+      <td>BeginDatumTijd</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Stof</td>
+      <td><samp>.code.text</samp></td>
+      <td><code>string</code></td>
+      <td>VeroorzakendeStof</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Toelichting</td>
+      <td><samp>.note.extension('http://nictiz.nl/fhir/StructureDefinition/note')</samp></td>
+      <td><code>string</code></td>
+      <td>Toelichting</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Ernst</td>
+      <td><samp>.criticality.extension[system="http://nictiz.nl/fhir/StructureDefinition/code-specification"].text</samp> of indien geen extensie aanwezig <samp>.criticality</samp></td>
+      <td><code>string,code</code></td>
+      <td>MateVanKritiek</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Reactie</td>
+      <td><samp>.reaction.manifestation.text</samp></td>
+      <td><code>string</code></td>
+      <td>Reactie Symptoom</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Categorie</td>
+      <td><samp>.category.extension[system=” http://nictiz.nl/fhir/StructureDefinition/code-specification"].text</samp> of indien geen extensie aanwezig <samp>.category</samp></td>
+      <td><code>string,code</code></td>
+      <td>AllergieCategorie</td>
+      <td>Hebt meerdere opties die tegelijk getoond kunnen worden</td>
+    </tr>
+    <tr>
+      <td>Klinische status</td>
+      <td><samp>.clinicalStatus.extension[system=" http://nictiz.nl/fhir/StructureDefinition/code-specification "].text</samp> of indien geen extensie aanwezig <samp>.clinicalStatus</samp></td>
+      <td><code>string,code</code></td>
+      <td>AllergieStatus</td>
+      <td>‘Actief’, ‘Niet meer aanwezig’, ‘Achterhaald’. ‘Foutief’ status wordt niet getoond in de Zorgviewer (wordt uitgefilterd). Indien geen extensie aanwezig, dan worden de waarden als volgt gemapped: Active -> Actief; InActive -> Achterhaald; Resolved -> Niet meer aanwezig</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Request
 
-1. Opvragen (search) definities
+1. Opvragen (search) allergieen en intoleranties
 
     `GET <ontsluiten-bronsysteem-base>/AllergyIntolerance/?patient=<fhir_patient_id>`
 
