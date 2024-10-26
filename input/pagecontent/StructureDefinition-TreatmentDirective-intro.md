@@ -72,7 +72,7 @@ Kolom definities:
       <td><samp>.modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.display</samp></td>
       <td><code>string</code></td>
       <td>BehandelingToegestaan</td>
-      <td>Zie UI schets voor icon mappings</td>
+      <td>Zie UI schets voor icon mapping. N.B. obv coding.code</td>
     </tr>
     <tr>
       <td>Beperkingen</td>
