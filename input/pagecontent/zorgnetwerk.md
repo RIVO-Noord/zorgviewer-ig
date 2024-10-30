@@ -1,4 +1,4 @@
-<div style="margin: 5px; padding: 10px; color: #3c763d; background-color: #dff0d8; border: 4px solid black;">
+<div class="dragon">
 <b>Dit is een RIVO Architecten Overleg onderwerp en uitwerking.</b>
 </div>
 
