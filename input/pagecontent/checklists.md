@@ -121,7 +121,7 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
       "meta": {
         "extension": [ {
             "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
-            "valueUri": "uri:oid:2.16.840.1.113883.2.4.3.8"
+            "valueUri": "urn:oid:2.16.840.1.113883.2.4.3.8"
         } ]
     } }
   } ]
