@@ -227,7 +227,7 @@
         
           Active
           
-            as of 2024-11-04
+            as of 2024-11-06
           
         
       </td>
@@ -419,6 +419,37 @@
  <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>reason.observation[code=ASSERTION].value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>.inboundRelationship[typeCode=SUBJ]/source[classCode=OBS,moodCode=EVN,code=&quot;annotation&quot;].value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;dosageInstruction</td><td>n/a, .outboundRelationship[typeCode=COMP].target[classCode=SBADM, moodCode=INT]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sequence</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;additionalInstruction</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;patientInstruction</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timing</td><td>n/a, QSET&lt;TS&gt; (GTS)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;asNeeded[x]</td><td>.outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=&quot;as needed&quot;].value=boolean or codable concept</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;asNeeded[x] (asNeededCodeableConcept)</td><td>.outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=&quot;as needed&quot;].value=boolean or codable concept</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;site</td><td>.approachSiteCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;route</td><td>.routeCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>union(., ./translation)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method</td><td>.doseQuantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dose[x]</td><td>.doseQuantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dose[x] (doseQuantity)</td><td>n/a, PQ, IVL&lt;PQ&gt;, MO, CO, depending on the values</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dose[x] (doseRange)</td><td>.doseQuantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;low</td><td>./low</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;high</td><td>./high</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxDosePerPeriod</td><td>.maxDoseQuantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numerator</td><td>.numerator</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;denominator</td><td>.denominator</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxDosePerAdministration</td><td>not supported</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxDosePerLifetime</td><td>not supported</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate[x]</td><td>.rateQuantity</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;dispenseRequest</td><td>component.supplyEvent</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
@@ -480,6 +511,16 @@
  <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;agent</td><td>RXE-13-Ordering Provider's DEA Number / RXO-14-Ordering Provider's DEA Number / RXE-14-Pharmacist/Treatment Supplier's Verifier ID / RXO-15-Pharmacist/Treatment Supplier's Verifier ID / ORC-12-Ordering Provider / PRT-5-Participation Person: PRT-4-Participation='OP' (all but last deprecated)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>ORC-16-Order Control Code Reason /RXE-27-Give Indication/RXO-20-Indication / RXD-21-Indication / RXG-22-Indication / RXA-19-Indication</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;dosageInstruction</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timing</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;route</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>C*E.1-8, C*E.10-22</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>C*E.9. But note many systems use C*E.2 for this</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dose[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dose[x] (doseQuantity)</td><td>SN (see also Range) or CQ</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dose[x] (doseRange)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;low</td><td>NR.1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;high</td><td>NR.2</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;dispenseRequest</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberOfRepeatsAllowed</td><td>RXE-12-Number of Refills</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quantity</td><td>RXD-4-Actual Dispense Amount / RXD-5.1-Actual Dispense Units.code / RXD-5.3-Actual Dispense Units.name of coding system</td> </tr>
@@ -513,7 +554,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.7.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Mon, Nov 4, 2024 07:59+0000">2024-11-04</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.7.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Nov 6, 2024 14:12+0000">2024-11-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

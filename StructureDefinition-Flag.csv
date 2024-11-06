@@ -23,12 +23,10 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 "Flag.extension","Flag.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
-"Flag.extension:ConcernReference","Flag.extension","ConcernReference","Conditie
-","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/flag-detail]]} {[]}
-","Condition","The patient’s health problem or condition that is the subject of the alert. This could involve a patient’s episode of care, problem, condition or diagnosis that is seen as a contraindication in prescribing medication or which has to be taken into account when shaping diagnostic and therapeutic policy. This can be in the patient’s own interest, or it can involve a problem or disorder that can make the patient a risk to their surroundings, such as an infection hazard. These are references to conditions included on the patient’s problem list.
-If there is a contraindication, the code system G-Standard Contraindications (Table 40) from the ProblemNameCodeList of the ConcernTransfer information model should be used.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+"Flag.extension:ConcernReference","Flag.extension","ConcernReference","","",0,1,"Y","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/flag-detail]]} {[]}
+","Resource with details for flag","Points to the Observation, AllergyIntolerance or other record that provides additional supporting information about this flag.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","NL-CM:8.3.3","NL-CM:8.3.3","NL-CM:8.3.3"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Flag.extension:ConcernReference.id","Flag.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Flag.extension:ConcernReference.extension","Flag.extension.extension","","extensions
