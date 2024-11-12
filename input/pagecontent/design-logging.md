@@ -1,12 +1,13 @@
 ### Gerelateerde Artifacts
 
-* [Logging](CapabilityStatement-Logging.html)
-* Opstart Zorgviewer ([AuditEvent](StructureDefinition-AuditEvent.html))
+* [Logging CapabilityStatement](CapabilityStatement-Logging.html)
+* [AuditEvent Profile](StructureDefinition-AuditEvent.html)
 
 ### Toevoegen Logging HTTP-Headers
 
 Tbv het correleren van de Zorgviewer logging met de logging van een Bronsysteem dient een `X-Correlation-Id` HTTP Header (per sessie) en een `X-Request-Id` HTTP Header (per request) te worden toegevoegd aan ieder request aan het Bronsysteem. Deze kan dan door het Bronsysteem gelogd worden, zodat de logging in de Zorgviewer kan worden gekoppeld aan de logging in het Bronsysteem.
 Epic ondersteunt dit nu d.m.v. key-value pairs in de `AORTA-ID` HTTP-Header, zie [Epic Nova](https://nova.epic.com/Search.aspx?CstID=2#SearchTerm=818072).
+
 Voorbeeld voor Epic HTTP-Header van "L. Arts uit Tjongerschans": `AORTA-ID: rid:1b9d6bCd-bBf;cid:yA8UM8fHmhde;usr:larts;rol:62247001;org:2.16.528.1.1007.3.3.15123`. N.B. maximale lengte is 128 characters.
 Voor de Request- en Correlation-ID's kan de [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) 12 tekens gebruikt.
 

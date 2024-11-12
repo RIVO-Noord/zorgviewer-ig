@@ -1,3 +1,5 @@
+<style>table, td, th { border: 1px solid black; padding:5px; }</style>
+
 ### Opstarten zorgviewer: Summary Table
 
 In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (SAML, SMART, FHIR).
