@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script src="assets/js/mermaid.js" type="text/javascript"></script>
     <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
-    <style type="text/css">h2{--heading-prefix:"3.5"}
-    h3,h4,h5,h6{--heading-prefix:"3.5"}</style>
+    <style type="text/css">h2{--heading-prefix:"3.7"}
+    h3,h4,h5,h6{--heading-prefix:"3.7"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
           <!-- Placeholder for child template header declarations -->
@@ -112,7 +112,7 @@
 			<li><a href="design.html">Design</a></li>
 			<li><a href="design2.html">Design 2024</a></li>
 			<li><a href="design-background.html">Design Achtergrond</a></li>
-			<li><a href="security-design.html">Security Design</a></li>
+			<li><a name="l219">​</a><a href="security-design.html">Security Design</a></li>
 			<li><a href="zorgviewer-services.html">Zorgviewer Services</a></li>
 		</ul>
 	</li>
@@ -183,14 +183,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#toestemming--patientindex" id="markdown-toc-toestemming--patientindex">Toestemming / PatientIndex</a></li>
   <li><a href="#zorgverlener-directory" id="markdown-toc-zorgverlener-directory">Zorgverlener Directory</a></li>
   <li><a href="#adressering" id="markdown-toc-adressering">Adressering</a></li>
-  <li><a href="#logging" id="markdown-toc-logging">Logging</a></li>
   <li><a href="#behandelplan" id="markdown-toc-behandelplan">Behandelplan</a></li>
 </ul>
 
 </div>
 <p>De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal worden gerealiseerd door een generieke FHIR-Store in te richten. Deze verzameling noemen we de Zorgviewer Services. Later kunnen die worden vervangen door nationale alternatieven. Bij onderstaande tijdelijke oplossingen worden de gegevens als FHIR resources opgeslagen in die Zorgviewer Services FHIR-Store.</p>
 
-<h3 id="terminology"><a name="l381">​</a><a href="CapabilityStatement-Terminology.html">Terminology</a></h3>
+<h3 id="terminology"><a name="l377">​</a><a href="CapabilityStatement-Terminology.html">Terminology</a></h3>
 
 <ul>
   <li>Doel: Nederlandse Terminology Service (<a href="https://nictiz.nl/wat-we-doen/activiteiten/terminologie/de-nationale-terminologieserver/">NTS Nictiz</a>)</li>
@@ -213,7 +212,7 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.</p>
 <ul>
   <li>Doel: landelijke MITZ open vraag</li>
   <li>Inhoud: Toestemmingen van een patient (Consents)</li>
-  <li><a name="l432">​</a>Tijdelijk: Vullen <a href="StructureDefinition-ToestemmingConsent">Toestemming Consent</a> dmv afvangen HL7 v2 toestemming berichten.</li>
+  <li><a name="l428">​</a>Tijdelijk: Vullen <a href="StructureDefinition-ToestemmingConsent">Toestemming Consent</a> dmv afvangen HL7 v2 toestemming berichten.</li>
 </ul>
 
 <h3 id="zorgverlener-directory"><a href="CapabilityStatement-ZorgverlenerDirectory.html">Zorgverlener Directory</a></h3>
@@ -242,12 +241,6 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.</p>
   <li>Tijdelijk: Maken Endpoints en Organizations adhv Zorgviewer aangesloten organisaties.</li>
 </ul>
 
-<h3 id="logging"><a href="CapabilityStatement-Logging.html">Logging</a></h3>
-
-<ul>
-  <li>Opstart Zorgviewer (<a href="StructureDefinition-AuditEvent.html">AuditEvent</a>)</li>
-</ul>
-
 <h3 id="behandelplan"><a href="CapabilityStatement-Behandelplan.html">Behandelplan</a></h3>
 
 <ul>
@@ -272,7 +265,7 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.8.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Nov 12, 2024 08:24+0000">2024-11-12</span>
+          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.8.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Nov 12, 2024 10:55+0000">2024-11-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

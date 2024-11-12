@@ -1,61 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>Artifacts Summary - RIVO-Noord Zorgviewer Implementation Guide v1.8.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link href="fhir.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="fhir.css"/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
 
-    <!-- Project extras -->
-    <link href="assets/css/project.css" rel="stylesheet"/>
-    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
-    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="assets/css/prism.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
-    <link href="assets/css/rivo.css" rel="stylesheet"/>
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/rivo.css"/>
 
-    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    <![endif] -->
 
-    <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"10"}
     h3,h4,h5,h6{--heading-prefix:"10.0"}</style>
-    <div id="segment-header" class="segment">  <!-- segment-header -->
-      <div class="container">  <!-- container -->
-        <!-- Placeholder for child template header declarations -->
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
 
 <div id="project-nav">
-    <a id="project-logo" no-external="true" href="https://rivo-noord.nl"><img height="50"
-            alt="Visit the RIVO-Noord website" src="assets/images/rivonoord-logo.png" /> </a>
+    <a no-external="true" id="project-logo" href="https://rivo-noord.nl"><img src="assets/images/rivonoord-logo.png" alt="Visit the RIVO-Noord website" height="50"/> </a>
 </div>
 
 <div id="family-nav">
-    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
-    <a id="family-logo" no-external="true" href="https://hl7.nl"><img height="50" alt="Visit the HL7 NL website"
-            src="assets/images/HL7nl_Logo.png" /> </a>
+    <a no-external="true" id="hl7-search-lnk" href="searchform.html"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+    <a no-external="true" id="family-logo" href="https://hl7.nl"><img src="assets/images/HL7nl_Logo.png" alt="Visit the HL7 NL website" height="50"/> </a>
 </div>
 
 
@@ -66,35 +64,35 @@
 
 
 
-  <img alt="Netherlands flag" src="assets/images/nld.svg" height="16" title="Netherlands"/>
+  <img src="assets/images/nld.svg" alt="Netherlands flag" title="Netherlands" height="16"/>
 
 
             </span>
           </p>
         </div>
-      </div> <!-- /container -->
-    </div>  <!-- /segment-header -->
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">  <!-- container -->
-        <!-- HEADER CONTENT -->
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-          <!--status-bar-->
+            <!-- status-bar -->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+            <a href="http://hl7.org/fhir/STU3/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+              <ul class="nav navbar-nav">
   <li><a href="index.html">Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
   <li class="dropdown">
-		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requirements &#8964;</a>
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Requirements ⌄</a>
 		<ul class="dropdown-menu">
 			<li><a href="conformance.html">Uitgangspunten en Requirements</a></li>
 			<li><a href="nen-normen.html">NEN Normen Conformiteit</a></li>
@@ -103,25 +101,25 @@
 		</ul>
 	</li>
   <li class="dropdown">
-		<a href="#" data-toggle="dropdown" class="dropdown-toggle">RAO &#8964;</a>
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">RAO ⌄</a>
 		<ul class="dropdown-menu">
 			<li><a href="zorgnetwerk.html">Inzage Zorgnetwerk</a></li>
 		</ul>
 	</li>
   <li class="dropdown">
-		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Design ⌄</a>
 		<ul class="dropdown-menu">
 			<li><a href="design.html">Design</a></li>
 			<li><a href="design2.html">Design 2024</a></li>
 			<li><a href="design-background.html">Design Achtergrond</a></li>
-			<li><a href="security-design.html">Security Design</a></li>
+			<li><a name="l219">​</a><a href="security-design.html">Security Design</a></li>
 			<li><a href="zorgviewer-services.html">Zorgviewer Services</a></li>
 		</ul>
 	</li>
   <li><a href="artifacts.html">Artifact Index</a></li>
   <li><a href="downloads.html">Downloads</a></li>
   <li class="dropdown">
-		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Checklists &amp; Aansluiten &#8964;</a>
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Checklists &amp; Aansluiten ⌄</a>
 		<ul class="dropdown-menu">
 		  <li><a href="checklists.html">Checklists &amp; Aansluiten</a></li>
 		  <li><a href="thermometer.html">Aansluit Thermometer</a></li>
@@ -132,26 +130,26 @@
   <li><a href="changes.html">Change Log</a></li>
 </ul>      
 
-            </div>  <!-- /.nav-collapse -->
-          </div>  <!-- /.container -->
-        </nav>  <!-- /.navbar -->
-      <!-- /HEADER CONTENT -->
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-navbar -->
-    <!--status-bar-->
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
 
-    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
 
         </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">  <!-- segment-content -->
-      <div class="container">  <!-- container -->
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
@@ -163,15 +161,12 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.8.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+    <!-- ReleaseHeader --><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.8.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>Artifacts Summary</h2>
   
   
   
-  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
-     xmlns:f="http://hl7.org/fhir"
-     xmlns:html="http://www.w3.org/1999/xhtml"
-     class="markdown-toc">
+    <!-- DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten --><div xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="http://hl7.org/fhir" class="markdown-toc">
    <p>Contents:</p>
    <ul>
       <li>
@@ -206,9 +201,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </li>
    </ul>
 </div>
-<div xmlns="http://www.w3.org/1999/xhtml"
-     xmlns:f="http://hl7.org/fhir"
-     xmlns:html="http://www.w3.org/1999/xhtml">
+<div xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="http://hl7.org/fhir">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
    <h3>Zorgviewer Services Content </h3>
@@ -226,8 +219,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Organization-Tjongerschans.html"
-                  title="Organization/Tjongerschans">Organization Tjongerschans</a>
+               <a href="Organization-Tjongerschans.html" title="Organization/Tjongerschans">Organization Tjongerschans</a>
             </td>
             <td>
 <p>Deze instance bevat de organization identifiers voor het Tjongerschans.</p>
@@ -267,8 +259,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="CapabilityStatement-Adressering.html"
-                  title="CapabilityStatement/Adressering">Adressering</a>
+               <a href="CapabilityStatement-Adressering.html" title="CapabilityStatement/Adressering">Adressering</a>
             </td>
             <td>
 <p>Deze CapabilityStatement beschrijft de minimale requirements voor het Adressering Bouwblok.</p>
@@ -276,8 +267,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CapabilityStatement-Behandelplan.html"
-                  title="CapabilityStatement/Behandelplan">Behandelplan</a>
+               <a href="CapabilityStatement-Behandelplan.html" title="CapabilityStatement/Behandelplan">Behandelplan</a>
             </td>
             <td>
 <p>Deze CapabilityStatement beschrijft de minimale requirements voor het Behandelplan Bouwblok.</p>
@@ -285,8 +275,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CapabilityStatement-Logging.html"
-                  title="CapabilityStatement/Logging">Logging</a>
+               <a href="CapabilityStatement-Logging.html" title="CapabilityStatement/Logging">Logging</a>
             </td>
             <td>
 <p>Deze CapabilityStatement beschrijft de minimale requirements voor het Logging Bouwblok.</p>
@@ -294,8 +283,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CapabilityStatement-OntsluitenBronsysteem.html"
-                  title="CapabilityStatement/OntsluitenBronsysteem">Ontsluiten Bronsysteem</a>
+               <a href="CapabilityStatement-OntsluitenBronsysteem.html" title="CapabilityStatement/OntsluitenBronsysteem">Ontsluiten Bronsysteem</a>
             </td>
             <td>
 <p>Deze CapabilityStatement beschrijft de minimale requirements voor het Ontsluiten Bronsysteem Bouwblok.</p>
@@ -303,8 +291,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CapabilityStatement-Terminologie.html"
-                  title="CapabilityStatement/Terminologie">Terminologie</a>
+               <a href="CapabilityStatement-Terminologie.html" title="CapabilityStatement/Terminologie">Terminologie</a>
             </td>
             <td>
 <p>Deze CapabilityStatement beschrijft de minimale requirements voor het Terminologie Bouwblok.</p>
@@ -312,8 +299,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CapabilityStatement-Toestemming.html"
-                  title="CapabilityStatement/Toestemming">Toestemming</a>
+               <a href="CapabilityStatement-Toestemming.html" title="CapabilityStatement/Toestemming">Toestemming</a>
             </td>
             <td>
 <p>Deze CapabilityStatement beschrijft de minimale requirements voor het Toestemming en Adressering Bouwblok.</p>
@@ -321,8 +307,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CapabilityStatement-ZorgverlenerDirectory.html"
-                  title="CapabilityStatement/ZorgverlenerDirectory">Zorgverlener Directory</a>
+               <a href="CapabilityStatement-ZorgverlenerDirectory.html" title="CapabilityStatement/ZorgverlenerDirectory">Zorgverlener Directory</a>
             </td>
             <td>
 <p>Deze CapabilityStatement beschrijft de minimale requirements voor het Zorgverlener Directory Bouwblok.</p>
@@ -330,8 +315,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CapabilityStatement-ZorgviewerHost.html"
-                  title="CapabilityStatement/ZorgviewerHost">Zorgviewer Host</a>
+               <a href="CapabilityStatement-ZorgviewerHost.html" title="CapabilityStatement/ZorgviewerHost">Zorgviewer Host</a>
             </td>
             <td>
 <p>Deze CapabilityStatement beschrijft de minimale requirements voor het Zorgviewer Host Bouwblok.</p>
@@ -363,8 +347,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-AdvanceDirective.html"
-                  title="StructureDefinition/AdvanceDirective">AdvanceDirective</a>
+               <a href="StructureDefinition-AdvanceDirective.html" title="StructureDefinition/AdvanceDirective">AdvanceDirective</a>
             </td>
             <td>
 <p>Wilsverklaring (Consent)</p>
@@ -380,8 +363,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-AllergyIntolerance.html"
-                  title="StructureDefinition/AllergyIntolerance">AllergyIntolerance</a>
+               <a href="StructureDefinition-AllergyIntolerance.html" title="StructureDefinition/AllergyIntolerance">AllergyIntolerance</a>
             </td>
             <td>
 <p>Allergie &amp; Intolerantie</p>
@@ -389,8 +371,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-AuditEvent.html"
-                  title="StructureDefinition/AuditEvent">AuditEvent</a>
+               <a href="StructureDefinition-AuditEvent.html" title="StructureDefinition/AuditEvent">AuditEvent</a>
             </td>
             <td>
 <p>AuditEvent</p>
@@ -398,8 +379,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-Condition.html"
-                  title="StructureDefinition/Condition">Condition</a>
+               <a href="StructureDefinition-Condition.html" title="StructureDefinition/Condition">Condition</a>
             </td>
             <td>
 <p>Problemen</p>
@@ -407,8 +387,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-DocumentReference.html"
-                  title="StructureDefinition/DocumentReference">DocumentReference</a>
+               <a href="StructureDefinition-DocumentReference.html" title="StructureDefinition/DocumentReference">DocumentReference</a>
             </td>
             <td>
 <p>Verwijzingen naar documenten</p>
@@ -416,8 +395,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-Endpoint.html"
-                  title="StructureDefinition/Endpoint">Endpoint</a>
+               <a href="StructureDefinition-Endpoint.html" title="StructureDefinition/Endpoint">Endpoint</a>
             </td>
             <td>
 <p>The minimal Endpoint for the Zorgviewer</p>
@@ -425,8 +403,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-LaboratoryTestResult.html"
-                  title="StructureDefinition/LaboratoryTestResult">LaboratoryTestResult</a>
+               <a href="StructureDefinition-LaboratoryTestResult.html" title="StructureDefinition/LaboratoryTestResult">LaboratoryTestResult</a>
             </td>
             <td>
 <p>Laboratorium Test Uitslagen</p>
@@ -434,8 +411,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-MedicationRequest.html"
-                  title="StructureDefinition/MedicationRequest">MedicationAgreement</a>
+               <a href="StructureDefinition-MedicationRequest.html" title="StructureDefinition/MedicationRequest">MedicationAgreement</a>
             </td>
             <td>
 <p>Medicatieafspraak</p>
@@ -443,8 +419,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-MedicationStatement.html"
-                  title="StructureDefinition/MedicationStatement">MedicationUse</a>
+               <a href="StructureDefinition-MedicationStatement.html" title="StructureDefinition/MedicationStatement">MedicationUse</a>
             </td>
             <td>
 <p>Medicatie Gebruik</p>
@@ -452,8 +427,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-Organization.html"
-                  title="StructureDefinition/Organization">Organization</a>
+               <a href="StructureDefinition-Organization.html" title="StructureDefinition/Organization">Organization</a>
             </td>
             <td>
 <p>Instelling of Organisatie</p>
@@ -461,8 +435,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-Patient.html"
-                  title="StructureDefinition/Patient">Patient</a>
+               <a href="StructureDefinition-Patient.html" title="StructureDefinition/Patient">Patient</a>
             </td>
             <td>
 <p>Patient</p>
@@ -470,8 +443,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-PlanDefinition.html"
-                  title="StructureDefinition/PlanDefinition">PlanDefinition</a>
+               <a href="StructureDefinition-PlanDefinition.html" title="StructureDefinition/PlanDefinition">PlanDefinition</a>
             </td>
             <td>
 <p>PlanDefinition voor het ondersteunen van filtering op basis van DataRequirements</p>
@@ -479,8 +451,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-Practitioner.html"
-                  title="StructureDefinition/Practitioner">Practitioner</a>
+               <a href="StructureDefinition-Practitioner.html" title="StructureDefinition/Practitioner">Practitioner</a>
             </td>
             <td>
 <p>Zorgverlener</p>
@@ -488,8 +459,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-PractitionerRole.html"
-                  title="StructureDefinition/PractitionerRole">PractitionerRole</a>
+               <a href="StructureDefinition-PractitionerRole.html" title="StructureDefinition/PractitionerRole">PractitionerRole</a>
             </td>
             <td>
 <p>De rollen van de Zorgverlener</p>
@@ -497,8 +467,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-Procedure.html"
-                  title="StructureDefinition/Procedure">Procedure</a>
+               <a href="StructureDefinition-Procedure.html" title="StructureDefinition/Procedure">Procedure</a>
             </td>
             <td>
 <p>Verrichtingen</p>
@@ -506,8 +475,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-Specimen.html"
-                  title="StructureDefinition/Specimen">Specimen</a>
+               <a href="StructureDefinition-Specimen.html" title="StructureDefinition/Specimen">Specimen</a>
             </td>
             <td>
 <p>Monster Materiaal</p>
@@ -515,8 +483,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-ToestemmingConsent.html"
-                  title="StructureDefinition/ToestemmingConsent">ToestemmingConsent</a>
+               <a href="StructureDefinition-ToestemmingConsent.html" title="StructureDefinition/ToestemmingConsent">ToestemmingConsent</a>
             </td>
             <td>
 <p>De registatie (Consent) dat de patient de RIVO-Noord policy voor toestemming van gegevensuitwisseling heeft geaccepteerd</p>
@@ -524,8 +491,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-TreatmentDirective.html"
-                  title="StructureDefinition/TreatmentDirective">TreatmentDirective</a>
+               <a href="StructureDefinition-TreatmentDirective.html" title="StructureDefinition/TreatmentDirective">TreatmentDirective</a>
             </td>
             <td>
 <p>Advanced Care Planning (ACP) Behandelaanwijzingen (Consent)</p>
@@ -541,8 +507,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-extension-Meta.source.html"
-                  title="StructureDefinition/extension-Meta.source">extension-Meta.source</a>
+               <a href="StructureDefinition-extension-Meta.source.html" title="StructureDefinition/extension-Meta.source">extension-Meta.source</a>
             </td>
             <td>
 <p>An extension to bring in Meta.source from R4.</p>
@@ -558,8 +523,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-ACPTreatmentCodelist.html"
-                  title="ValueSet/ACPTreatmentCodelist">ACP behandelingen waardelijst</a>
+               <a href="ValueSet-ACPTreatmentCodelist.html" title="ValueSet/ACPTreatmentCodelist">ACP behandelingen waardelijst</a>
             </td>
             <td>
 <p>Active Care Planning (ACP) behandelingen waardelijst</p>
@@ -567,8 +531,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-DocumentLOINCCodelist.html"
-                  title="ValueSet/DocumentLOINCCodelist">Document Class &amp; Type waardelijst</a>
+               <a href="ValueSet-DocumentLOINCCodelist.html" title="ValueSet/DocumentLOINCCodelist">Document Class &amp; Type waardelijst</a>
             </td>
             <td>
 <p>Docuemnt Class en Type LOINC codes die we vinden zonder display, zodat we wel een display in Nederlands kunnen tonen</p>
@@ -576,8 +539,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-SubjectRoleCodelist.html"
-                  title="ValueSet/SubjectRoleCodelist">Subject rol (beroepen) waardelijst</a>
+               <a href="ValueSet-SubjectRoleCodelist.html" title="ValueSet/SubjectRoleCodelist">Subject rol (beroepen) waardelijst</a>
             </td>
             <td>
 <p>Subject rol waardelijst. Deze rol is nodig voor autorisatie bij de bron</p>
@@ -585,8 +547,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-ProbleemNaamCodelist.html"
-                  title="ValueSet/ProbleemNaamCodelist">Zorgviewer probleem naam waardelijst</a>
+               <a href="ValueSet-ProbleemNaamCodelist.html" title="ValueSet/ProbleemNaamCodelist">Zorgviewer probleem naam waardelijst</a>
             </td>
             <td>
 <p>De Zorgviewer probleem naam waardelijst o.b.v. de DHD Diagnose Thesaurus (SNOMED CT en ICD-10-nl codes) en de ICPC-1 NL coderingen vanuit de huisartsen</p>
@@ -602,8 +563,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-bronsysteem-zorgaanbieder.html"
-                  title="CodeSystem/bronsysteem-zorgaanbieder">Bronsysteem Zorgaanbieder</a>
+               <a href="CodeSystem-bronsysteem-zorgaanbieder.html" title="CodeSystem/bronsysteem-zorgaanbieder">Bronsysteem Zorgaanbieder</a>
             </td>
             <td>
 <p>Bronsysteem Zorgaanbieder AGB-Z, OID and displays</p>
@@ -622,7 +582,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <a href="CodeSystem-ICPC-1-NL.html" title="CodeSystem/ICPC-1-NL">ICPC-1 NL</a>
             </td>
             <td>
-<p>Op basis van NHG-Tabel ICPC versie 10, april 2022 en ICPC-Thesaurus versie 2023 © NHG</p>
+<p>Op basis van NHG-Tabel ICPC versie 10, april 2022 en ICPC-Thesaurus versie 2023 &copy; NHG</p>
 </td>
          </tr>
          <tr>
@@ -643,8 +603,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="ConceptMap-behandelaanwijzing-2017-2020.html"
-                  title="ConceptMap/behandelaanwijzing-2017-2020">Behandelaanwijzing 2017 BehandelingAanwijzing2 2020 Mapping</a>
+               <a href="ConceptMap-behandelaanwijzing-2017-2020.html" title="ConceptMap/behandelaanwijzing-2017-2020">Behandelaanwijzing 2017 BehandelingAanwijzing2 2020 Mapping</a>
             </td>
             <td>
 <p>Deze ConceptMap representeert de mapping tussen de BehandelingAanwijzing 2017 en de BehandelAanwijzing2 2020.</p>
@@ -660,8 +619,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ConceptMap-patient-toestemming.html"
-                  title="ConceptMap/patient-toestemming">Patient Toestemming Mapping</a>
+               <a href="ConceptMap-patient-toestemming.html" title="ConceptMap/patient-toestemming">Patient Toestemming Mapping</a>
             </td>
             <td>
 <p>Deze ConceptMap representeert de mapping van een patient-toestemming HL7 v2 bericht (PID en CON segmenten) naar FHIR Concent Resource.</p>
@@ -677,8 +635,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="Consent-2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449.html"
-                  title="Consent/2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449">Chipsoft AdvanceDirective Example</a>
+               <a href="Consent-2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449.html" title="Consent/2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449">Chipsoft AdvanceDirective Example</a>
             </td>
             <td>
 <p>Dit is een Wilsverklaring (Consent) voorbeeld uit Chipsoft.</p>
@@ -686,8 +643,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Flag-ac907bbc-89bd-45db-ab23-fdb11dd01a78.html"
-                  title="Flag/ac907bbc-89bd-45db-ab23-fdb11dd01a78">Chipsoft Alert Example</a>
+               <a href="Flag-ac907bbc-89bd-45db-ab23-fdb11dd01a78.html" title="Flag/ac907bbc-89bd-45db-ab23-fdb11dd01a78">Chipsoft Alert Example</a>
             </td>
             <td>
 <p>Dit is een Alert voorbeeld uit Chipsoft.</p>
@@ -695,8 +651,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="AllergyIntolerance-2.16.840.1.113883.2.4.3.124.7.48765.212340000000820.html"
-                  title="AllergyIntolerance/2.16.840.1.113883.2.4.3.124.7.48765.212340000000820">Chipsoft AllergyIntolerance Example</a>
+               <a href="AllergyIntolerance-2.16.840.1.113883.2.4.3.124.7.48765.212340000000820.html" title="AllergyIntolerance/2.16.840.1.113883.2.4.3.124.7.48765.212340000000820">Chipsoft AllergyIntolerance Example</a>
             </td>
             <td>
 <p>Dit is een AllergyIntolerance voorbeeld uit Chipsoft.</p>
@@ -704,8 +659,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Condition-a20d2048-e1b7-467d-8bb5-28142af195d6.html"
-                  title="Condition/a20d2048-e1b7-467d-8bb5-28142af195d6">Chipsoft Condition Example</a>
+               <a href="Condition-a20d2048-e1b7-467d-8bb5-28142af195d6.html" title="Condition/a20d2048-e1b7-467d-8bb5-28142af195d6">Chipsoft Condition Example</a>
             </td>
             <td>
 <p>Dit is een Probleem voorbeeld uit Chipsoft.</p>
@@ -713,8 +667,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="DocumentReference-22aa9e3e-f72f-4f76-97c7-0f66c8f691f5.html"
-                  title="DocumentReference/22aa9e3e-f72f-4f76-97c7-0f66c8f691f5">Chipsoft DocumentReference Example</a>
+               <a href="DocumentReference-22aa9e3e-f72f-4f76-97c7-0f66c8f691f5.html" title="DocumentReference/22aa9e3e-f72f-4f76-97c7-0f66c8f691f5">Chipsoft DocumentReference Example</a>
             </td>
             <td>
 <p>Dit is een Document Verwijzing voorbeeld uit Chipsoft.</p>
@@ -722,8 +675,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Observation-39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C.html"
-                  title="Observation/39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C">Chipsoft Lab-uitslag Example</a>
+               <a href="Observation-39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C.html" title="Observation/39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C">Chipsoft Lab-uitslag Example</a>
             </td>
             <td>
 <p>Dit is een Lab-uitslag voorbeeld uit Chipsoft.</p>
@@ -731,8 +683,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Patient-9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1.html"
-                  title="Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1">Chipsoft Patient Example</a>
+               <a href="Patient-9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1.html" title="Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1">Chipsoft Patient Example</a>
             </td>
             <td>
 <p>Dit is een Patient voorbeeld uit Chipsoft.</p>
@@ -740,8 +691,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Practitioner-b5160776-43dc-43e1-9bb7-a6e3edf8e63d.html"
-                  title="Practitioner/b5160776-43dc-43e1-9bb7-a6e3edf8e63d">Chipsoft Practitioner Example</a>
+               <a href="Practitioner-b5160776-43dc-43e1-9bb7-a6e3edf8e63d.html" title="Practitioner/b5160776-43dc-43e1-9bb7-a6e3edf8e63d">Chipsoft Practitioner Example</a>
             </td>
             <td>
 <p>Dit is een Zorgverlener voorbeeld uit Chipsoft.</p>
@@ -749,8 +699,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Procedure-2.16.840.1.113883.2.4.3.124.7.47519.41230000001716.html"
-                  title="Procedure/2.16.840.1.113883.2.4.3.124.7.47519.41230000001716">Chipsoft Procedure Example</a>
+               <a href="Procedure-2.16.840.1.113883.2.4.3.124.7.47519.41230000001716.html" title="Procedure/2.16.840.1.113883.2.4.3.124.7.47519.41230000001716">Chipsoft Procedure Example</a>
             </td>
             <td>
 <p>Dit is een Verrichting voorbeeld uit Chipsoft.</p>
@@ -758,8 +707,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Specimen-35648ae9-a74d-4800-9f15-4e436ebd12c8.html"
-                  title="Specimen/35648ae9-a74d-4800-9f15-4e436ebd12c8">Chipsoft Specimen Example</a>
+               <a href="Specimen-35648ae9-a74d-4800-9f15-4e436ebd12c8.html" title="Specimen/35648ae9-a74d-4800-9f15-4e436ebd12c8">Chipsoft Specimen Example</a>
             </td>
             <td>
 <p>Dit is een Specimen voorbeeld uit Chipsoft.</p>
@@ -767,8 +715,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Consent-81eacbcf-6d60-436a-a78f-e2962839a42f.html"
-                  title="Consent/81eacbcf-6d60-436a-a78f-e2962839a42f">Chipsoft TreatmentDirective Example</a>
+               <a href="Consent-81eacbcf-6d60-436a-a78f-e2962839a42f.html" title="Consent/81eacbcf-6d60-436a-a78f-e2962839a42f">Chipsoft TreatmentDirective Example</a>
             </td>
             <td>
 <p>Dit is een Behandelaanwijzing (Consent) voorbeeld uit Chipsoft.</p>
@@ -776,8 +723,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Consent-eCSfaTk2.C2TeVxgQk.zOgw3.html"
-                  title="Consent/eCSfaTk2.C2TeVxgQk.zOgw3">Epic AdvanceDirective Example</a>
+               <a href="Consent-eCSfaTk2.C2TeVxgQk.zOgw3.html" title="Consent/eCSfaTk2.C2TeVxgQk.zOgw3">Epic AdvanceDirective Example</a>
             </td>
             <td>
 <p>Dit is een Wilsverklaring (Consent) voorbeeld uit Epic.</p>
@@ -785,8 +731,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Consent-eGuoY.m8DiRaUvsn.5w5Etg3.html"
-                  title="Consent/eGuoY.m8DiRaUvsn.5w5Etg3">Epic AdvanceDirective Example</a>
+               <a href="Consent-eGuoY.m8DiRaUvsn.5w5Etg3.html" title="Consent/eGuoY.m8DiRaUvsn.5w5Etg3">Epic AdvanceDirective Example</a>
             </td>
             <td>
 <p>Dit is een Wilsverklaring (Consent) voorbeeld uit Epic.</p>
@@ -794,8 +739,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Flag-fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4.html"
-                  title="Flag/fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4">Epic Alert Example</a>
+               <a href="Flag-fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4.html" title="Flag/fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4">Epic Alert Example</a>
             </td>
             <td>
 <p>Dit is een Alert voorbeeld uit Epic.</p>
@@ -803,8 +747,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="AllergyIntolerance-eot677ioPb4frLYJYyuabIg3.html"
-                  title="AllergyIntolerance/eot677ioPb4frLYJYyuabIg3">Epic AllergyIntolerance Example</a>
+               <a href="AllergyIntolerance-eot677ioPb4frLYJYyuabIg3.html" title="AllergyIntolerance/eot677ioPb4frLYJYyuabIg3">Epic AllergyIntolerance Example</a>
             </td>
             <td>
 <p>Dit is een AllergyIntolerance voorbeeld uit Epic.</p>
@@ -812,8 +755,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Condition-e-ZZJzEApAU6z8DStznS9pQ3.html"
-                  title="Condition/e-ZZJzEApAU6z8DStznS9pQ3">Epic Condition Example</a>
+               <a href="Condition-e-ZZJzEApAU6z8DStznS9pQ3.html" title="Condition/e-ZZJzEApAU6z8DStznS9pQ3">Epic Condition Example</a>
             </td>
             <td>
 <p>Dit is een Probleem voorbeeld uit Epic.</p>
@@ -821,8 +763,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Condition-eod0yZoGGXEapUI7nJwX4tA3.html"
-                  title="Condition/eod0yZoGGXEapUI7nJwX4tA3">Epic Condition Example met overzicht notitie</a>
+               <a href="Condition-eod0yZoGGXEapUI7nJwX4tA3.html" title="Condition/eod0yZoGGXEapUI7nJwX4tA3">Epic Condition Example met overzicht notitie</a>
             </td>
             <td>
 <p>Dit is een Probleem voorbeeld uit Epic met een overzicht notitie.</p>
@@ -830,8 +771,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="DocumentReference-esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi.html"
-                  title="DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi">Epic DocumentReference Example</a>
+               <a href="DocumentReference-esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi.html" title="DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi">Epic DocumentReference Example</a>
             </td>
             <td>
 <p>Dit is een Document Verwijzing voorbeeld uit Epic.</p>
@@ -839,8 +779,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Observation-eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3.html"
-                  title="Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3">Epic Lab-uitslag Example</a>
+               <a href="Observation-eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3.html" title="Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3">Epic Lab-uitslag Example</a>
             </td>
             <td>
 <p>Dit is een Lab-uitslag voorbeeld uit Epic.</p>
@@ -848,8 +787,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Observation-f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4.html"
-                  title="Observation/f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4">Epic Lab-uitslag Example</a>
+               <a href="Observation-f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4.html" title="Observation/f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4">Epic Lab-uitslag Example</a>
             </td>
             <td>
 <p>Dit is een Lab-uitslag voorbeeld uit Epic.</p>
@@ -857,8 +795,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Organization-eXovwVA3zYl3U3fBH8mdkxw3.html"
-                  title="Organization/eXovwVA3zYl3U3fBH8mdkxw3">Epic Organization Example</a>
+               <a href="Organization-eXovwVA3zYl3U3fBH8mdkxw3.html" title="Organization/eXovwVA3zYl3U3fBH8mdkxw3">Epic Organization Example</a>
             </td>
             <td>
 <p>Dit is een Organisatie voorbeeld uit Epic.</p>
@@ -866,8 +803,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Patient-eXxP1o8ZlOz21F6HXS9puLA3.html"
-                  title="Patient/eXxP1o8ZlOz21F6HXS9puLA3">Epic Patient Example</a>
+               <a href="Patient-eXxP1o8ZlOz21F6HXS9puLA3.html" title="Patient/eXxP1o8ZlOz21F6HXS9puLA3">Epic Patient Example</a>
             </td>
             <td>
 <p>Dit is een Patient voorbeeld uit Epic.</p>
@@ -875,8 +811,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Practitioner-e-fLnBq-lBzq8jPEBkxuqjA3.html"
-                  title="Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3">Epic Practitioner Example</a>
+               <a href="Practitioner-e-fLnBq-lBzq8jPEBkxuqjA3.html" title="Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3">Epic Practitioner Example</a>
             </td>
             <td>
 <p>Dit is een Zorgverlener voorbeeld uit Epic.</p>
@@ -884,8 +819,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Practitioner-e-fLnBq-lBzq8jPEBkxuqjA3-SCT.html"
-                  title="Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT">Epic Practitioner Example met SNOMED CT</a>
+               <a href="Practitioner-e-fLnBq-lBzq8jPEBkxuqjA3-SCT.html" title="Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT">Epic Practitioner Example met SNOMED CT</a>
             </td>
             <td>
 <p>Dit is een Zorgverlener voorbeeld uit Epic waarin qualifier is vertaald van Epic SER 6000 code naar SNOMED CT.</p>
@@ -893,8 +827,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="PractitionerRole-ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43.html"
-                  title="PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43">Epic PractitionerRole Example</a>
+               <a href="PractitionerRole-ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43.html" title="PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43">Epic PractitionerRole Example</a>
             </td>
             <td>
 <p>Dit is een PractitionerRole voorbeeld uit Epic.</p>
@@ -902,8 +835,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Procedure-VPwS1rhM16bYvo-c52ce7kwRKeEaUOJaDIeHsOSNJzFTQLcTN5Lcg7N50uR5v1Z4.html"
-                  title="Procedure/VPwS1rhM16bYvo-c52ce7kwRKeEaUOJaDIeHsOSNJzFTQLcTN5Lcg7N50uR5v1Z4">Epic Procedure (Surgical History) Example</a>
+               <a href="Procedure-VPwS1rhM16bYvo-c52ce7kwRKeEaUOJaDIeHsOSNJzFTQLcTN5Lcg7N50uR5v1Z4.html" title="Procedure/VPwS1rhM16bYvo-c52ce7kwRKeEaUOJaDIeHsOSNJzFTQLcTN5Lcg7N50uR5v1Z4">Epic Procedure (Surgical History) Example</a>
             </td>
             <td>
 <p>Dit is een Verrichting voorbeeld uit Epic (Surgical History).</p>
@@ -911,8 +843,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Procedure-flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4.html"
-                  title="Procedure/flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4">Epic Procedure Example</a>
+               <a href="Procedure-flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4.html" title="Procedure/flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4">Epic Procedure Example</a>
             </td>
             <td>
 <p>Dit is een Verrichting voorbeeld uit Epic.</p>
@@ -920,8 +851,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Specimen-edAE6aGl0-InKRnWJAWRiChE4AhLNTRTlNIiljUcUA-I3.html"
-                  title="Specimen/edAE6aGl0-InKRnWJAWRiChE4AhLNTRTlNIiljUcUA-I3">Epic Specimen Example</a>
+               <a href="Specimen-edAE6aGl0-InKRnWJAWRiChE4AhLNTRTlNIiljUcUA-I3.html" title="Specimen/edAE6aGl0-InKRnWJAWRiChE4AhLNTRTlNIiljUcUA-I3">Epic Specimen Example</a>
             </td>
             <td>
 <p>Dit is een Specimen voorbeeld uit Epic.</p>
@@ -929,8 +859,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Specimen-exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3.html"
-                  title="Specimen/exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3">Epic Specimen Example</a>
+               <a href="Specimen-exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3.html" title="Specimen/exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3">Epic Specimen Example</a>
             </td>
             <td>
 <p>Dit is een Specimen voorbeeld uit Epic.</p>
@@ -938,8 +867,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Consent-ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3.html"
-                  title="Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3">Epic TreatmentDirective Example</a>
+               <a href="Consent-ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3.html" title="Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3">Epic TreatmentDirective Example</a>
             </td>
             <td>
 <p>Dit is een Behandelaanwijzing (Consent) voorbeeld uit Epic.</p>
@@ -963,8 +891,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Flag-354CD8791FE7BB1CF7AAC44891171ECB671D9E91.html"
-                  title="Flag/354CD8791FE7BB1CF7AAC44891171ECB671D9E91">Nexus Alert Example</a>
+               <a href="Flag-354CD8791FE7BB1CF7AAC44891171ECB671D9E91.html" title="Flag/354CD8791FE7BB1CF7AAC44891171ECB671D9E91">Nexus Alert Example</a>
             </td>
             <td>
 <p>Dit is een Alert voorbeeld uit Nexus.</p>
@@ -1004,8 +931,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Practitioner-67d36d4c-bc18-4c5d-8fb5-609f6a17451e.html"
-                  title="Practitioner/67d36d4c-bc18-4c5d-8fb5-609f6a17451e">Nexus Practitioner Example</a>
+               <a href="Practitioner-67d36d4c-bc18-4c5d-8fb5-609f6a17451e.html" title="Practitioner/67d36d4c-bc18-4c5d-8fb5-609f6a17451e">Nexus Practitioner Example</a>
             </td>
             <td>
 <p>Dit is een Zorgverlener voorbeeld uit Nexus.</p>
@@ -1021,8 +947,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Specimen-291f7eb1-c4ff-49fb-94a8-0500c19b7635.html"
-                  title="Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635">Nexus Specimen Example</a>
+               <a href="Specimen-291f7eb1-c4ff-49fb-94a8-0500c19b7635.html" title="Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635">Nexus Specimen Example</a>
             </td>
             <td>
 <p>Dit is een Specimen voorbeeld uit Nexus.</p>
@@ -1038,8 +963,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Consent-190c12af-49d4-4553-8009-c816ab622a3e.html"
-                  title="Consent/190c12af-49d4-4553-8009-c816ab622a3e">Topicus TreatmentDirective Example</a>
+               <a href="Consent-190c12af-49d4-4553-8009-c816ab622a3e.html" title="Consent/190c12af-49d4-4553-8009-c816ab622a3e">Topicus TreatmentDirective Example</a>
             </td>
             <td>
 <p>Dit is een Behandelaanwijzing (Consent) voorbeeld uit Topicus.</p>
@@ -1047,8 +971,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="AuditEvent-example-auditevent-zorgviewer.html"
-                  title="AuditEvent/example-auditevent-zorgviewer">Zorgviewer AuditEvent Example</a>
+               <a href="AuditEvent-example-auditevent-zorgviewer.html" title="AuditEvent/example-auditevent-zorgviewer">Zorgviewer AuditEvent Example</a>
             </td>
             <td>
 <p>Dit is een AuditEvent voorbeeld uit de Zorgviewer.</p>
@@ -1064,8 +987,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="Bundle-69ecfed3-f811-45be-969c-6fb1f32fcf19.html"
-                  title="Bundle/69ecfed3-f811-45be-969c-6fb1f32fcf19">null (Bundle)</a>
+               <a href="Bundle-69ecfed3-f811-45be-969c-6fb1f32fcf19.html" title="Bundle/69ecfed3-f811-45be-969c-6fb1f32fcf19">null (Bundle)</a>
             </td>
          </tr>
       </tbody>
@@ -1073,22 +995,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 
 </div>
-        </div>  <!-- /inner-wrapper -->
-      </div>  <!-- /row -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-content -->
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
 
-  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
 
-  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
-  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container">  <!-- container -->
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.8.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Nov 12, 2024 08:24+0000">2024-11-12</span>
+          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.8.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Nov 12, 2024 10:55+0000">2024-11-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -1097,27 +1019,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                 
           </span>
         </p>
-      </div>  <!-- /inner-wrapper -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-footer -->
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
-    <div class="container">  <!-- container -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
 
-  <!-- JS and analytics only. -->
-  <!-- Bootstrap core JavaScript
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  <!-- Analytics Below
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
-
