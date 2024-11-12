@@ -1,59 +1,63 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
     <title>Epic Procedure Example - TTL Representation - RIVO-Noord Zorgviewer Implementation Guide v1.8.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link rel="stylesheet" href="fhir.css"/>
+    <link href="fhir.css" rel="stylesheet"/>
 
-      <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
 
-      <!-- Project extras -->
-    <link rel="stylesheet" href="assets/css/project.css"/>
-    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
-    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
-  	<link rel="stylesheet" href="assets/css/prism.css"/>
-      <!-- Placeholder for child template CSS declarations -->
-    <link rel="stylesheet" href="assets/css/rivo.css"/>
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/rivo.css" rel="stylesheet"/>
 
-    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
-      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- [if lt IE 9]>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif] -->
+    <![endif]-->
 
-      <!-- Favicons -->
-    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
-    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
-    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-    <script src="assets/js/mermaid.js" type="text/javascript"></script>
-    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"10.70"}
     h3,h4,h5,h6{--heading-prefix:"10.70"}</style>
-    <div id="segment-header" class="segment">    <!-- segment-header -->
-      <div class="container">    <!-- container -->
-          <!-- Placeholder for child template header declarations -->
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
 
 <div id="project-nav">
-    <a no-external="true" id="project-logo" href="https://rivo-noord.nl"><img src="assets/images/rivonoord-logo.png" alt="Visit the RIVO-Noord website" height="50"/> </a>
+    <a id="project-logo" no-external="true" href="https://rivo-noord.nl"><img height="50"
+            alt="Visit the RIVO-Noord website" src="assets/images/rivonoord-logo.png" /> </a>
 </div>
 
 <div id="family-nav">
-    <a no-external="true" id="hl7-search-lnk" href="searchform.html"><img src="assets/images/search.png" alt="Search FHIR"/></a>
-    <a no-external="true" id="family-logo" href="https://hl7.nl"><img src="assets/images/HL7nl_Logo.png" alt="Visit the HL7 NL website" height="50"/> </a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+    <a id="family-logo" no-external="true" href="https://hl7.nl"><img height="50" alt="Visit the HL7 NL website"
+            src="assets/images/HL7nl_Logo.png" /> </a>
 </div>
 
 
@@ -64,35 +68,35 @@
 
 
 
-  <img src="assets/images/nld.svg" alt="Netherlands flag" title="Netherlands" height="16"/>
+  <img alt="Netherlands flag" src="assets/images/nld.svg" height="16" title="Netherlands"/>
 
 
             </span>
           </p>
         </div>
-      </div>   <!-- /container -->
-    </div>    <!-- /segment-header -->
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">    <!-- container -->
-          <!-- HEADER CONTENT -->
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-            <!-- status-bar -->
+          <!--status-bar-->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a href="http://hl7.org/fhir/STU3/index.html" class="navbar-brand hidden">FHIR</a>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul class="nav navbar-nav">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
   <li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Requirements ⌄</a>
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requirements &#8964;</a>
 		<ul class="dropdown-menu">
 			<li><a href="conformance.html">Uitgangspunten en Requirements</a></li>
 			<li><a href="nen-normen.html">NEN Normen Conformiteit</a></li>
@@ -101,25 +105,27 @@
 		</ul>
 	</li>
   <li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">RAO ⌄</a>
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">RAO &#8964;</a>
 		<ul class="dropdown-menu">
 			<li><a href="zorgnetwerk.html">Inzage Zorgnetwerk</a></li>
 		</ul>
 	</li>
   <li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Design ⌄</a>
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
 		<ul class="dropdown-menu">
 			<li><a href="design.html">Design</a></li>
 			<li><a href="design2.html">Design 2024</a></li>
 			<li><a href="design-background.html">Design Achtergrond</a></li>
-			<li><a name="l219">​</a><a href="security-design.html">Security Design</a></li>
+			<li><a href="design-security.html">Security Design</a></li>
+			<li><a href="design-authenticatie.html">Authenticatie Bouwblok Design</a></li>
+			<li><a href="design-logging.html">Logging Bouwblok Design</a></li>
 			<li><a href="zorgviewer-services.html">Zorgviewer Services</a></li>
 		</ul>
 	</li>
   <li><a href="artifacts.html">Artifact Index</a></li>
   <li><a href="downloads.html">Downloads</a></li>
   <li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Checklists &amp; Aansluiten ⌄</a>
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Checklists &amp; Aansluiten &#8964;</a>
 		<ul class="dropdown-menu">
 		  <li><a href="checklists.html">Checklists &amp; Aansluiten</a></li>
 		  <li><a href="thermometer.html">Aansluit Thermometer</a></li>
@@ -130,31 +136,31 @@
   <li><a href="changes.html">Change Log</a></li>
 </ul>      
 
-            </div>    <!-- /.nav-collapse -->
-          </div>    <!-- /.container -->
-        </nav>    <!-- /.navbar -->
-        <!-- /HEADER CONTENT -->
-      </div>    <!-- /container -->
-    </div>    <!-- /segment-navbar -->
-      <!-- status-bar -->
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
 
-    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
-      <div class="container">    <!-- container -->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>Epic Procedure Example</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Epic Procedure Example</b></li>
 
         </ul>
-      </div>    <!-- /container -->
-    </div>    <!-- /segment-breadcrumb -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">    <!-- segment-content -->
-      <div class="container">    <!-- container -->
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-  <!-- ReleaseHeader --><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.8.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+<!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.8.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -197,14 +203,14 @@
 <h2 id="root">: Epic Procedure Example - TTL Representation</h2>
 
 
-<p><a href="Procedure-flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4.ttl" no-download="true">Raw ttl</a> | <a download="null" href="Procedure-flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4.ttl">Download</a></p>
+<p><a href="Procedure-flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4.ttl" no-download="true">Raw ttl</a> | <a href="Procedure-flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4.ttl" download>Download</a></p>
 
-    <!-- insert intro if present -->
+  <!-- insert intro if present -->
   
 
 
 
-  <pre style="white-space: pre; overflow: hidden" class="rdf"><code class="language-turtle">
+  <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -215,133 +221,133 @@
 
  a fhir:Procedure ;
   <a href="http://hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.id">fhir:id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:v</a> "flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4"] ; # 
+  <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.id">fhir:id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:v</a> &quot;flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4&quot;] ; # 
   <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.meta">fhir:meta</a> [
-    ( <a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">fhir:profile</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "http://nictiz.nl/fhir/StructureDefinition/zib-Procedure"^^xsd:anyURI ] )
+    ( <a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">fhir:profile</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://nictiz.nl/fhir/StructureDefinition/zib-Procedure&quot;^^xsd:anyURI ] )
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.text">fhir:text</a> [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "generated" ] ;
-fhir:div "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p class=\"res-header-id\"&gt;&lt;b&gt;Gegenereerde narrative: Procedure flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4&lt;/b&gt;&lt;/p&gt;&lt;a name=\"flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4\"&gt; &lt;/a&gt;&lt;a name=\"hcflS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4\"&gt; &lt;/a&gt;&lt;a name=\"flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4-nl-NL\"&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: ORL/1016&nbsp;(gebruik:&nbsp;usual,&nbsp;), EAP/220352&nbsp;(gebruik:&nbsp;usual,&nbsp;), OPE/51&nbsp;(gebruik:&nbsp;usual,&nbsp;)&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;notDone&lt;/b&gt;: false&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\"Codes:{http://snomed.info/sct 387713003}\"&gt;Surgical Procedures&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\"Codes:{http://snomed.info/sct 46866001}\"&gt;Gesloten repositie supra- of transcondylaire femur fractuur.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https:///example.org/Interconnect-nlsandbox/api/FHIR/STU3/Patient/eCyZ.JMxPOjgW6dUlD6yicw3\"&gt;XXX_Helleman, JOHAN&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;context&lt;/b&gt;: &lt;a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https:///example.org/Interconnect-nlsandbox/api/FHIR/STU3/Encounter/e9shSyMqVHucWYdmDqUsVSw3\"&gt;Chirurgie&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;performed&lt;/b&gt;: 2021-11-07 20:02:00+0000 --&amp;gt; 2021-11-07 20:34:00+0000&lt;/p&gt;&lt;h3&gt;Performers&lt;/h3&gt;&lt;table class=\"grid\"&gt;&lt;tr&gt;&lt;td style=\"display: none\"&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"display: none\"&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Practitioner/enWGnXwy3HowPfNBXikhNMA3\"&gt;MedMij Orthopedie, MD&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Location/eLOcA14iuQlB54UsL6eMacA3\"&gt;UMCG&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonReference&lt;/b&gt;: &lt;a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Condition/e-ZZJzEApAU6z8DStznS9pQ3\"&gt;fractuur van onderste extremiteit&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;bodySite&lt;/b&gt;: &lt;span title=\"Codes:{http://snomed.info/sct 287579007}, {urn:oid:1.2.840.114350.1.13.425.1.7.4.798276.2015 270}\"&gt;structuur van regio van rechter heup (lichaamsstructuur)&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Gegenereerde narrative: Procedure flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcflS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4-nl-NL\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: ORL/1016 (gebruik: usual, ), EAP/220352 (gebruik: usual, ), OPE/51 (gebruik: usual, )&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;notDone&lt;/b&gt;: false&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 387713003}\&quot;&gt;Surgical Procedures&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 46866001}\&quot;&gt;Gesloten repositie supra- of transcondylaire femur fractuur.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https:///example.org/Interconnect-nlsandbox/api/FHIR/STU3/Patient/eCyZ.JMxPOjgW6dUlD6yicw3\&quot;&gt;XXX_Helleman, JOHAN&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;context&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https:///example.org/Interconnect-nlsandbox/api/FHIR/STU3/Encounter/e9shSyMqVHucWYdmDqUsVSw3\&quot;&gt;Chirurgie&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;performed&lt;/b&gt;: 2021-11-07 20:02:00+0000 --&amp;gt; 2021-11-07 20:34:00+0000&lt;/p&gt;&lt;h3&gt;Performers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Practitioner/enWGnXwy3HowPfNBXikhNMA3\&quot;&gt;MedMij Orthopedie, MD&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Location/eLOcA14iuQlB54UsL6eMacA3\&quot;&gt;UMCG&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonReference&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Condition/e-ZZJzEApAU6z8DStznS9pQ3\&quot;&gt;fractuur van onderste extremiteit&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;bodySite&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 287579007}, {urn:oid:1.2.840.114350.1.13.425.1.7.4.798276.2015 270}\&quot;&gt;structuur van regio van rechter heup (lichaamsstructuur)&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&quot;
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.identifier">fhir:identifier</a> ( [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">fhir:use</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "usual" ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">fhir:use</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;usual&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "ORL" ]     ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "urn:oid:1.2.840.114350.1.13.425.1.7.2.798276"^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "1016" ]
+<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;ORL&quot; ]     ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.840.114350.1.13.425.1.7.2.798276&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;1016&quot; ]
   ] [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">fhir:use</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "usual" ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">fhir:use</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;usual&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "EAP" ]     ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "urn:oid:1.2.840.114350.1.13.425.1.7.2.696580"^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "220352" ]
+<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;EAP&quot; ]     ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.840.114350.1.13.425.1.7.2.696580&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;220352&quot; ]
   ] [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">fhir:use</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "usual" ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">fhir:use</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;usual&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "OPE" ]     ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "urn:oid:1.2.840.114350.1.13.425.1.7.2.798069"^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "51" ]
+<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;OPE&quot; ]     ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.840.114350.1.13.425.1.7.2.798069&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;51&quot; ]
   ] ) ; # 
-  <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "completed"] ; # 
-  <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.notDone">fhir:notDone</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:v</a> "false"^^xsd:boolean] ; # 
+  <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;completed&quot;] ; # 
+  <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.notDone">fhir:notDone</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:v</a> &quot;false&quot;^^xsd:boolean] ; # 
   <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.category">fhir:category</a> [
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
 a sct:387713003 ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "http://snomed.info/sct"^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "387713003" ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Surgical procedure" ]     ] ) ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Surgical Procedures" ]
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;387713003&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Surgical procedure&quot; ]     ] ) ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Surgical Procedures&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.code">fhir:code</a> [
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
 a sct:46866001 ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "http://snomed.info/sct"^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "46866001" ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Gesloten repositie supra- of transcondylaire femur fractuur." ]     ] ) ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Gesloten repositie supra- of transcondylaire femur fractuur." ]
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;46866001&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Gesloten repositie supra- of transcondylaire femur fractuur.&quot; ]     ] ) ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Gesloten repositie supra- of transcondylaire femur fractuur.&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.subject">fhir:subject</a> [
 <a href="http://hl7.org/fhir/STU3/rdf.html#reference">fhir:link</a> &lt;https:///example.org/Interconnect-nlsandbox/api/FHIR/STU3/Patient/eCyZ.JMxPOjgW6dUlD6yicw3&gt; ;
-<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "https:///example.org/Interconnect-nlsandbox/api/FHIR/STU3/Patient/eCyZ.JMxPOjgW6dUlD6yicw3" ] ;
-<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "XXX_Helleman, JOHAN" ]
+<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;https:///example.org/Interconnect-nlsandbox/api/FHIR/STU3/Patient/eCyZ.JMxPOjgW6dUlD6yicw3&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;XXX_Helleman, JOHAN&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.context">fhir:context</a> [
 <a href="http://hl7.org/fhir/STU3/rdf.html#reference">fhir:link</a> &lt;https:///example.org/Interconnect-nlsandbox/api/FHIR/STU3/Encounter/e9shSyMqVHucWYdmDqUsVSw3&gt; ;
-<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "https:///example.org/Interconnect-nlsandbox/api/FHIR/STU3/Encounter/e9shSyMqVHucWYdmDqUsVSw3" ] ;
+<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;https:///example.org/Interconnect-nlsandbox/api/FHIR/STU3/Encounter/e9shSyMqVHucWYdmDqUsVSw3&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.identifier">fhir:identifier</a> [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">fhir:use</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "usual" ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "urn:oid:1.2.840.114350.1.13.425.1.7.3.698084.8"^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "16066" ]     ] ;
-<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Chirurgie" ]
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">fhir:use</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;usual&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.840.114350.1.13.425.1.7.3.698084.8&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;16066&quot; ]     ] ;
+<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Chirurgie&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.performed[x]">fhir:performed</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Period">a</a> fhir:Period ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.start">fhir:start</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> "2021-11-07T20:02:00Z"^^xsd:dateTime ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.end">fhir:end</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> "2021-11-07T20:34:00Z"^^xsd:dateTime ]
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.start">fhir:start</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2021-11-07T20:02:00Z&quot;^^xsd:dateTime ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.end">fhir:end</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2021-11-07T20:34:00Z&quot;^^xsd:dateTime ]
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.performer">fhir:performer</a> ( [
 <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.performer.actor">fhir:actor</a> [
 <a href="http://hl7.org/fhir/STU3/rdf.html#reference">fhir:link</a> &lt;https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Practitioner/enWGnXwy3HowPfNBXikhNMA3&gt; ;
-<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Practitioner/enWGnXwy3HowPfNBXikhNMA3" ] ;
-<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "MedMij Orthopedie, MD" ]     ]
+<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Practitioner/enWGnXwy3HowPfNBXikhNMA3&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;MedMij Orthopedie, MD&quot; ]     ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.location">fhir:location</a> [
 <a href="http://hl7.org/fhir/STU3/rdf.html#reference">fhir:link</a> &lt;https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Location/eLOcA14iuQlB54UsL6eMacA3&gt; ;
-<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Location/eLOcA14iuQlB54UsL6eMacA3" ] ;
-<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "UMCG" ]
+<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Location/eLOcA14iuQlB54UsL6eMacA3&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;UMCG&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.reasonReference">fhir:reasonReference</a> ( [
 <a href="http://hl7.org/fhir/STU3/rdf.html#reference">fhir:link</a> &lt;https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Condition/e-ZZJzEApAU6z8DStznS9pQ3&gt; ;
-<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Condition/e-ZZJzEApAU6z8DStznS9pQ3" ] ;
-<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "fractuur van onderste extremiteit" ]
+<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;https://example.org/Interconnect-nlsandbox/api/FHIR/STU3/Condition/e-ZZJzEApAU6z8DStznS9pQ3&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;fractuur van onderste extremiteit&quot; ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/STU3/procedure.html#Procedure.bodySite">fhir:bodySite</a> ( [
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier"^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
         ( <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "urn:oid:1.2.840.114350.1.13.425.1.7.4.798276.2010"^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "2" ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Rechts" ]         ] ) ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Rechts" ]       ]     ] ) ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.840.114350.1.13.425.1.7.4.798276.2010&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;2&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Rechts&quot; ]         ] ) ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Rechts&quot; ]       ]     ] ) ;
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
 a sct:287579007 ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "http://snomed.info/sct"^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "287579007" ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "structuur van regio van rechter heup (lichaamsstructuur)" ]     ] [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "urn:oid:1.2.840.114350.1.13.425.1.7.4.798276.2015"^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "270" ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Hip" ]     ] ) ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "structuur van regio van rechter heup (lichaamsstructuur)" ]
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;287579007&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;structuur van regio van rechter heup (lichaamsstructuur)&quot; ]     ] [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.840.114350.1.13.425.1.7.4.798276.2015&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;270&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Hip&quot; ]     ] ) ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;structuur van regio van rechter heup (lichaamsstructuur)&quot; ]
   ] ) . # 
 
 </code></pre>
 
 
 
-    <!-- insert notes if present -->
+  <!-- insert notes if present -->
   
 
 
 
 </div>
-        </div>    <!-- /inner-wrapper -->
-      </div>    <!-- /row -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-content -->
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
 
-  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
-  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
-    <div class="container">    <!-- container -->
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.8.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Nov 12, 2024 11:26+0000">2024-11-12</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.8.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Nov 12, 2024 16:51+0000">2024-11-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -350,26 +356,27 @@ a sct:287579007 ;
                 
           </span>
         </p>
-      </div>    <!-- /inner-wrapper -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-footer -->
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
-    <div class="container">    <!-- container -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
 
-    <!-- JS and analytics only. -->
-    <!-- Bootstrap core JavaScript
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
   ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
-  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
-  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
-  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
-  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
-  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
-    <!-- Analytics Below
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
+
