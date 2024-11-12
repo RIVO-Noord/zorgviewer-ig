@@ -36,10 +36,6 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
     * Organisatie metadata ([Organization](StructureDefinition-Organization.html))
 * Tijdelijk: Maken Endpoints en Organizations adhv Zorgviewer aangesloten organisaties.
 
-### [Logging](CapabilityStatement-Logging.html)
-
-* Opstart Zorgviewer ([AuditEvent](StructureDefinition-AuditEvent.html))
-
 ### [Behandelplan](CapabilityStatement-Behandelplan.html)
 
 * Behandelplan details, workflow, beginnent met filters ([PlanDefinition](StructureDefinition-PlanDefinition.html), DataRequirements)

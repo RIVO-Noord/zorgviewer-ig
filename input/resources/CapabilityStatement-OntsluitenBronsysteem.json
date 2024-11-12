@@ -65,6 +65,10 @@
       "display": "zib-Alert"
     },
     {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance",
+      "display": "zib-AllergyIntolerance"
+    },
+    {
       "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation",
       "display": "zib-LaboratoryTestResult-Observation"
     },
@@ -356,6 +360,29 @@
           "type": "Flag",
           "profile": {
             "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Flag"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "AllergyIntolernace",
+          "profile": {
+            "reference": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AllergyIntolernace"
           },
           "interaction": [
             {
