@@ -6,27 +6,23 @@
       {
         "column": [
           {
-            "path": "dateAsserted",
+            "path": "authoredOn",
             "name": "Datum"
-          },
-          {
-            "path": "category.text",
-            "name": "Categorie"
           },
           {
             "path": "medicationReference.display",
             "name": "Medicatie"
           },
           {
-            "path": "dosage.route.text",
+            "path": "dosageInstruction.route.text",
             "name": "Toedieningsweg"
           },
           {
-            "path": "dosage.text",
+            "path": "dosageInstruction.text",
             "name": "Instructies"
           }
         ],
-        "forEach": "entry.resource.where(resourceType= MedicationRequest')"
+        "forEach": "entry.resource.where(resourceType='MedicationRequest')"
       }
     ]
   }

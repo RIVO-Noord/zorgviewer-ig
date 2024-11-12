@@ -6,11 +6,15 @@
     {
       "column": [
         {
+          "path": "resource.category.coding.display.join(' & ')",
+          "name": "Category"
+        },
+        {
           "path": "resource.period.start",
           "name": "Datum"
         },
         {
-          "path": "resource.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.text",
+          "path": "resource.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.coding[0].display",
           "name": "Behandeling"
         },
         {
@@ -22,12 +26,12 @@
           "name": "Beperkingen"
         },
         {
-          "path": "resource.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification').extension.where(url='VerifiedWith').valueCodeableConcept.text.join(' ')",
+          "path": "resource.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification').extension.where(url='VerifiedWith').valueCodeableConcept.text.join(' & ')",
           "name": "Geverifieerd bij"
         },
         {
           "path": "resource.status",
-          "name": "status"
+          "name": "(status)"
         }
       ],
       "forEach": "entry"
