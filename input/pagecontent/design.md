@@ -92,7 +92,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 |--|--|--|--|
 | Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
 | Practitioner ID | Subject/NameID | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
-| Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | ``SNOMED CT 62247001 huisarts`` | Practitioner.qualification[system=sct] |
+| Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | ``SNOMED CT 62247001 huisarts`` | PractitionerRole.code[system=sct] |
 | Patient BSN | urn:oasis:names:tc:xacml:1.0:resource:resource-id | ``999911120`` | Patient.identifier[system=bsn] |
 
 ### Opstarten zorgviewer: VIPlive
@@ -111,7 +111,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 |--|--|--|--|
 | Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | ``2.16.840.1.113883.2.4.3.164.2.1.2`` | Organization.identifier |
 | Practitioner ID | Subject/NameID | `177578` | Practitioner.identifier |
-| Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | `<Role code="62247001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT" displayName="huisarts" xmlns="urn:hl7-org:v3"/>` | Practitioner.qualification[system=sct] |
+| Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | `<Role code="62247001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT" displayName="huisarts" xmlns="urn:hl7-org:v3"/>` | PractitionerRole.code[system=sct] |
 | Practitioner Name | professional.initials | `L.` | Practitioner.name.given[extension=IN] |
 | Practitioner Name | professional.family_name | `Arts` | Practitioner.name.family |
 | Patient Name | client.initials | `J.` | Patient.name.given[extension=IN] |
