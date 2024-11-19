@@ -193,7 +193,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="opstarten-zorgviewer-summary-table">Opstarten zorgviewer: Summary Table</h3>
 
-<p>In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (SAML, SMART, FHIR).</p>
+<p>In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (SAML, SMART-on-FHIR, FHIR).</p>
 
 <table>
   <thead>
@@ -224,14 +224,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Practitioner.identifier</td>
     </tr>
     <tr>
-      <td>Practitioner Role</td>
-      <td>urn:oasis:names:tc:xacml:2.0:subject:role</td>
-      <td>urn:oasis:names:tc:xacml:2.0:subject:role</td>
-      <td>^^ / <em>zie FHIR Path</em></td>
-      <td><code class="language-plaintext highlighter-rouge">code=62247001 display=huisarts system=SNOMED CT</code></td>
-      <td>Practitioner.qualification[system=sct]</td>
-    </tr>
-    <tr>
       <td>Practitioner Name</td>
       <td>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name</td>
       <td>professional.initials</td>
@@ -246,6 +238,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>^^ / <em>zie FHIR Path</em></td>
       <td><code class="language-plaintext highlighter-rouge">Arts</code></td>
       <td>Practitioner.name.family</td>
+    </tr>
+    <tr>
+      <td>Practitioner Role</td>
+      <td>urn:oasis:names:tc:xacml:2.0:subject:role</td>
+      <td>urn:oasis:names:tc:xacml:2.0:subject:role</td>
+      <td>PractitionerRole read adhv token.practitioner</td>
+      <td><code class="language-plaintext highlighter-rouge">code=62247001 display=huisarts system=SNOMED CT</code></td>
+      <td>PractitionerRole.code[system=sct] n.b. via <a href="ConceptMap-epic-rolcode.html">ConceptMap-epic-rolcode</a></td>
     </tr>
     <tr>
       <td>Organization OID</td>
@@ -459,7 +459,7 @@ Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende orga
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.8.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Nov 12, 2024 16:51+0000">2024-11-12</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.8.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Nov 19, 2024 12:47+0000">2024-11-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
