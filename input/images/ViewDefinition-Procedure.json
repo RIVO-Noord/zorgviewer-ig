@@ -14,6 +14,10 @@
           "name": "Verrichting"
         },
         {
+          "path": "bodySite.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.text",
+          "name": "Lateraliteit"
+        },
+        {
           "path": "location.display",
           "name": "Locatie"
         },
@@ -22,12 +26,8 @@
           "name": "Uitgevoerd door"
         },
         {
-          "path": "code.coding",
-          "name": "Verrichtingcode"
-        },
-        {
-          "path": "bodySite.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.text",
-          "name": "Lateraliteit"
+          "path": "code.coding.system+'#'+code.coding.code+' '+code.coding.display",
+          "name": "(Verrichtingcode)"
         }
       ],
       "forEach": "entry.resource.where(resourceType='Procedure')"
