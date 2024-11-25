@@ -68,7 +68,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 
 1. Publish naar implementatiegids.zorgviewer.nl via snapshot branch
 ```
-> cd <temp-folder>
+> cd {temp-folder}
 > git pull of git clone https://github.com/RIVO-Noord/zorgviewer-ig.git
 > git checkout snapshot
 > git merge 1.M.R-sprintX

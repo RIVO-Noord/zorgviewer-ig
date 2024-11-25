@@ -21,10 +21,10 @@
     ],
     "action": [
         {
-            "label": "Raadplegen BgZ",
+            "label": "Raadplegen BgZ zibs en Correspondentie",
             "triggerDefinition": [ {
                 "type": "named-event",
-                "eventName": "Raadplegen BgZ"
+                "eventName": "Raadplegen BgZ zibs"
             } ],
             "output": [
                 {
@@ -54,19 +54,29 @@
                         "http://nictiz.nl/fhir/StructureDefinition/zib-Verrichting" ]
                 },
                 {
+                    "type": "Consent",
+                    "profile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AdvanceDirective",
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective" ]
+                },
+                {
+                    "type": "Consent",
+                    "profile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/TreatmentDirective",
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective" ]
+                },
+                {
+                    "type": "Flag",
+                    "profile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Flag",
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-Alert" ]
+                },
+                {
+                    "type": "AllergyIntolerance",
+                    "profile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AllergyIntolerance",
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance" ]
+                },
+                {
                     "type": "Observation",
-                    "profile": [ "http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse" ],
-                    "codeFilter": [
-                        {
-                            "path": "code",
-                            "valueCoding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "228366006"
-                                }
-                            ]
-                        }
-                    ]
+                    "profile": [ "http://hl7.nl/fhir/zorgviewer/StructureDefinition/LaboratoryTestResult",
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult" ]
                 }
             ]          
         }
