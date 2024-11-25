@@ -4,7 +4,8 @@
 
 |Versie|Datum|Changes|
 |---|---|---|
-|1.8.0-sprint46|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.7.0-sprint45...master)|
+|1.9.0-sprint47|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.8.0-sprint46...master)|
+|1.8.0-sprint46|25-nov-2024|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.7.0-sprint45...1.8.0-sprint46)|
 |1.7.0-sprint45|12-nov-2024|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.6.0-sprint43...1.7.0-sprint45)|
 |1.6.0-sprint43|17-okt-2024|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.5.0-sprint42...1.6.0-sprint43)|
 |1.5.0-sprint40,41,42|30-sep-2024|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.4.0-sprint39...sprint42)|
