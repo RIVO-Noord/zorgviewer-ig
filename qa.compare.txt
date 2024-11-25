@@ -1,7 +1,7 @@
 zorgviewer-ig : Validation Results
 =========================================
 
-err = 147, warn = 111, info = 112
+err = 147, warn = 112, info = 112
 $--
 Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http://hl7.nl/fhir/zorgviewer)
  Build Errors : 3 / 5 / 0
@@ -55,6 +55,7 @@ Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-DocumentReference : 0 / 3 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Endpoint : 0 / 3 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Flag : 1 / 1 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Immunization : 0 / 12 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-LaboratoryTestResult : 3 / 10 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-MedicationRequest : 0 / 6 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-MedicationStatement : 0 / 7 / 1
@@ -428,6 +429,8 @@ ERROR: StructureDefinition/Condition: StructureDefinition.snapshot.element[29]: 
 WARNING: StructureDefinition.where(url = 'http://hl7.nl/fhir/zorgviewer/StructureDefinition/Endpoint'): The Implementation Guide contains no examples for this profile
 == input/profiles/StructureDefinition-Flag.json ==
 ERROR: StructureDefinition.snapshot.element[12]: The element Flag.extension:ConcernReference.valueReference:valueReference launches straight into slicing without the slicing being set up properly first
+== input/profiles/StructureDefinition-Immunization.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.nl/fhir/zorgviewer/StructureDefinition/Immunization'): The Implementation Guide contains no examples for this profile
 == input/profiles/StructureDefinition-LaboratoryTestResult.json ==
 ERROR: StructureDefinition/LaboratoryTestResult: StructureDefinition.snapshot.element[22].pattern.ofType(CodeableConcept).coding[0].code: Unknown code '49581000146104' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240801'
 ERROR: StructureDefinition/LaboratoryTestResult: StructureDefinition.snapshot.element[20]: The element Observation.status.value has no assigned types, and no content reference
