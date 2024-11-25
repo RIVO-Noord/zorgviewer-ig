@@ -1,0 +1,37 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Immunization",
+    "name": "Vaccination",
+    "title": "Vaccination",
+    "status": "active",
+    "description": "Vaccinatie (Immunization)",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Immunization",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Immunization.vaccineCode.coding.display",
+                "path": "Immunization.vaccineCode.coding.display",
+                "mustSupport": true
+            },
+            {
+                "id": "Immunization.vaccineCode.text",
+                "path": "Immunization.vaccineCode.text",
+                "mustSupport": true
+            },
+            {
+                "id": "Immunization.date",
+                "path": "Immunization.date",
+                "mustSupport": true
+            },
+            {
+                "id": "Immunization.note.text",
+                "path": "Immunization.note.text",
+                "mustSupport": true
+            }
+        ]
+    }
+}

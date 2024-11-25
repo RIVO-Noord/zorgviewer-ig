@@ -1,0 +1,24 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Immunization",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "date",
+          "name": "Datum"
+        },
+        {
+          "path": "iif(exists(vaccineCode.text),vaccineCode.text,vaccineCode.coding.display)",
+          "name": "Product"
+        },
+        {
+          "path": "note.text",
+          "name": "Toelichting"
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Immunization')"
+    }
+  ]
+}
