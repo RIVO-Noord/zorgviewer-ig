@@ -52,7 +52,7 @@
 
 ### Request
 
-1. Opvragen (search) alerts
+1. Opvragen (search) vaccinaties
 
     `GET <ontsluiten-bronsysteem-base>/Immunization?patient=<fhir_patient_id>&status=completed`
 
