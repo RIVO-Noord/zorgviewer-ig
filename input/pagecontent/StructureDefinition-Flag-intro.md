@@ -8,8 +8,6 @@
 
 * [ViewDefinition voor Alerts](ViewDefinition-Flag.json)
 
-### User-Interface guidance
-
 <table class="grid">
   <thead>
     <th>Kolom label</th>

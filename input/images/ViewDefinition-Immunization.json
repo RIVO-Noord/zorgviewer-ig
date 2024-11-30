@@ -1,21 +1,36 @@
 {
   "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "status": "active",
   "resource": "Bundle",
   "id": "ViewDefinition-Immunization",
+  "profile": "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination",
   "select": [
     {
       "column": [
         {
+          "path": "meta.extension[system='http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source'].valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
           "path": "date",
-          "name": "Datum"
+          "name": "Datum",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "VaccinatieDatum" } ]
         },
         {
           "path": "iif(exists(vaccineCode.text),vaccineCode.text,vaccineCode.coding.display)",
-          "name": "Product"
+          "name": "Product",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "ProductCode" } ]
         },
         {
           "path": "note.text",
-          "name": "Toelichting"
+          "name": "Toelichting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Immunization')"

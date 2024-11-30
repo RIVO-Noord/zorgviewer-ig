@@ -8,8 +8,6 @@
 
 * [ViewDefinition voor Vaccinaties](ViewDefinition-Immunization.json)
 
-### User-Interface guidance
-
 <table class="grid">
   <thead>
     <th>Kolom label</th>

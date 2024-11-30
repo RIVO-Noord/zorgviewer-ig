@@ -1,25 +1,50 @@
 {
   "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "status": "active",
   "resource": "Bundle",
   "id": "ViewDefinition-Flag",
+  "profile": "http://nictiz.nl/fhir/StructureDefinition/zib-Alert",
   "select": [
     {
       "column": [
         {
-          "path": "period.start",
-          "name": "Datum"
+          "path": "meta.extension[system='http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source'].valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "iif(exists(category.text),category.text,category.coding.display)",
-          "name": "Categorie"
+          "path": "period.start",
+          "name": "Datum",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "BeginDatumTijd" } ]
         },
         {
           "path": "iif(exists(code.text),code.text,code.coding.display)",
-          "name": "Voor"
+          "name": "Voor",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "AlertNaam" } ]
         },
         {
           "path": "extension.where(url='http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text",
-          "name": "Voor-detail"
+          "name": "Voor-detail",
+          "description": "De resolve levert de bijbehorende Condition",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "Conditie::Probleem" } ]
+        },
+        {
+          "path": "iif(exists(category.text),category.text,category.coding.display)",
+          "name": "Categorie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "AlertType" } ]
+        },
+        {
+          "path": "status",
+          "name": "Status",
+          "description": "Mapping: ‘active’ naar ‘actueel’; ‘in-active’ naar ‘niet actueel’ Uitgefilterd: ‘entered-in-error’ wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Flag')"
