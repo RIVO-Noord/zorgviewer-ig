@@ -7,23 +7,33 @@
         "column": [
           {
             "path": "authoredOn",
-            "name": "Datum"
-          },
-          {
-            "path": "category.text",
-            "name": "Categorie"
+            "name": "Datum",
+            "type": "dateTime",
+            "tag": [ { "name": "Zib element", "value": "MedicationAgreementDateTime" } ]
           },
           {
             "path": "medicationReference.display",
-            "name": "Medicatie"
+            "name": "Medicatie",
+            "type": "string",
+            "tag": [ { "name": "Zib element", "value": "AgreedMedicine" } ]
           },
           {
             "path": "dosageInstruction.route.text",
-            "name": "Toedieningsweg"
+            "name": "Toedieningsweg",
+            "type": "string",
+            "tag": [ { "name": "Zib element", "value": "RouteOfAdministration" } ]
           },
           {
             "path": "dosageInstruction.text",
-            "name": "Instructies"
+            "name": "Instructies",
+            "type": "string",
+            "tag": [ { "name": "Zib element", "value": "InstructionsForUse" } ]
+          },
+          {
+            "path": "category.text",
+            "name": "Categorie",
+            "type": "string",
+            "tag": [ { "name": "Zib element", "value": "nvt" } ]  
           }
         ],
         "forEach": "entry.resource.where(resourceType='MedicationRequest')"
