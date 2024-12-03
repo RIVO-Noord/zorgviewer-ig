@@ -1,42 +1,42 @@
 {
-    "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
-    "resource": "Bundle",
-    "id": "ViewDefinition-MedicationRequest",
-    "select": [
-      {
-        "column": [
-          {
-            "path": "authoredOn",
-            "name": "Datum",
-            "type": "dateTime",
-            "tag": [ { "name": "Zib element", "value": "MedicationAgreementDateTime" } ]
-          },
-          {
-            "path": "medicationReference.display",
-            "name": "Medicatie",
-            "type": "string",
-            "tag": [ { "name": "Zib element", "value": "AgreedMedicine" } ]
-          },
-          {
-            "path": "dosageInstruction.route.text",
-            "name": "Toedieningsweg",
-            "type": "string",
-            "tag": [ { "name": "Zib element", "value": "RouteOfAdministration" } ]
-          },
-          {
-            "path": "dosageInstruction.text",
-            "name": "Instructies",
-            "type": "string",
-            "tag": [ { "name": "Zib element", "value": "InstructionsForUse" } ]
-          },
-          {
-            "path": "category.text",
-            "name": "Categorie",
-            "type": "string",
-            "tag": [ { "name": "Zib element", "value": "nvt" } ]  
-          }
-        ],
-        "forEach": "entry.resource.where(resourceType='MedicationRequest')"
-      }
-    ]
-  }
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-MedicationRequest",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "authoredOn",
+          "name": "Datum",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "MedicationAgreementDateTime" } ]
+        },
+        {
+          "path": "medicationReference.display",
+          "name": "Medicatie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "AgreedMedicine" } ]
+        },
+        {
+          "path": "dosageInstruction.route.text.toString()",
+          "name": "Toedieningsweg",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "RouteOfAdministration" } ]
+        },
+        {
+          "path": "dosageInstruction.text.toString()",
+          "name": "Instructies",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "InstructionsForUse" } ]
+        },
+        {
+          "path": "category.text",
+          "name": "Categorie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]  
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='MedicationRequest')"
+    }
+  ]
+}
