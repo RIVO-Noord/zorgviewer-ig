@@ -127,6 +127,6 @@ Zie het Excelbestand tab "classCode+decision tree" voor LOINC codes:
 
 1. Opvragen (search) alle documenten
 
-    `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>`
+    `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>&status=current`
 
 {% include bronsysteem-herkennen.md %}
