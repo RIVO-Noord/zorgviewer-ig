@@ -33,7 +33,7 @@
     </tr>
     <tr>
       <td>Voor</td>
-      <td><samp>.code.text of .extension.where(url='http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text</samp></td>
+      <td><samp>.code.text of .extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text</samp></td>
       <td><code>string</code></td>
       <td>AlertNaam of <i>geassosieerde</i> Conditie::Probleem</td>
       <td>De resolve levert de bijbehorende Condition</td>
