@@ -14,7 +14,7 @@
           "name": "Datum"
         },
         {
-          "path": "resource.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.coding[0].display",
+          "path": "resource.extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.coding[0].display",
           "name": "Behandeling"
         },
         {
@@ -22,11 +22,11 @@
           "name": "Behandeling toegestaan"
         },
         {
-          "path": "resource.except.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions').value",
+          "path": "resource.except.extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions').value",
           "name": "Beperkingen"
         },
         {
-          "path": "resource.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification').extension.where(url='VerifiedWith').valueCodeableConcept.text.join(' & ')",
+          "path": "resource.extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification').extension('VerifiedWith').valueCodeableConcept.text.join(' & ')",
           "name": "Geverifieerd bij"
         },
         {

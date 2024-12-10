@@ -18,7 +18,7 @@ Kolom definities:
   <tbody>
     <tr>
       <td>Bron</td>
-      <td><samp>.meta.extension[system="http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"].valueUri</samp></td>
+      <td><samp>.meta.extension("http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source").valueUri</samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
       <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
@@ -127,6 +127,6 @@ Zie het Excelbestand tab "classCode+decision tree" voor LOINC codes:
 
 1. Opvragen (search) alle documenten
 
-    `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>`
+    `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>&status=current`
 
 {% include bronsysteem-herkennen.md %}

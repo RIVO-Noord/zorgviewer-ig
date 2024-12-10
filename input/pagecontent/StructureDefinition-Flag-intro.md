@@ -8,8 +8,6 @@
 
 * [ViewDefinition voor Alerts](ViewDefinition-Flag.json)
 
-### User-Interface guidance
-
 <table class="grid">
   <thead>
     <th>Kolom label</th>
@@ -21,7 +19,7 @@
   <tbody>
     <tr>
       <td>Bron</td>
-      <td><samp>.meta.extension[system="http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"].valueUri</samp></td>
+      <td><samp>.meta.extension("http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source").valueUri</samp></td>
       <td><code>string</code></td>
       <td><i>nvt</i></td>
       <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
@@ -35,7 +33,7 @@
     </tr>
     <tr>
       <td>Voor</td>
-      <td><samp>.code.text of .extension.where(url='http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text</samp></td>
+      <td><samp>.code.text of .extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text</samp></td>
       <td><code>string</code></td>
       <td>AlertNaam of <i>geassosieerde</i> Conditie::Probleem</td>
       <td>De resolve levert de bijbehorende Condition</td>
@@ -56,6 +54,17 @@
     </tr>
   </tbody>
 </table>
+
+### Examples
+
+{% sql {
+  "query" : "select name as Name, Description, web from Resources where Type = 'Flag'",
+  "class" : "grid",
+  "columns" : [
+    { "name" : "Name", "type" : "link", "source" : "Name", "target" : "web"},
+    { "name" : "Description", "type" : "markdown", "source" : "Description"}
+  ]
+} %}
 
 ### Request
 

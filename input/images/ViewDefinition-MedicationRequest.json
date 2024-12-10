@@ -1,32 +1,49 @@
 {
-    "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
-    "resource": "Bundle",
-    "id": "ViewDefinition-MedicationRequest",
-    "select": [
-      {
-        "column": [
-          {
-            "path": "authoredOn",
-            "name": "Datum"
-          },
-          {
-            "path": "category.text",
-            "name": "Categorie"
-          },
-          {
-            "path": "medicationReference.display",
-            "name": "Medicatie"
-          },
-          {
-            "path": "dosageInstruction.route.text",
-            "name": "Toedieningsweg"
-          },
-          {
-            "path": "dosageInstruction.text",
-            "name": "Instructies"
-          }
-        ],
-        "forEach": "entry.resource.where(resourceType='MedicationRequest')"
-      }
-    ]
-  }
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-MedicationRequest",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "authoredOn",
+          "name": "Datum",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "MedicationAgreementDateTime" } ]
+        },
+        {
+          "path": "medicationReference.display",
+          "name": "Medicatie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "AgreedMedicine" } ]
+        },
+        {
+          "path": "dosageInstruction.route.text.toString()",
+          "name": "Toedieningsweg",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "RouteOfAdministration" } ]
+        },
+        {
+          "path": "dosageInstruction.text.toString()",
+          "name": "Instructies",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "InstructionsForUse" } ]
+        },
+        {
+          "path": "category.text",
+          "name": "Categorie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]  
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='MedicationRequest')"
+    }
+  ]
+}

@@ -6,24 +6,41 @@
       {
         "column": [
           {
-            "path": "dateAsserted",
-            "name": "Datum"
-          },
+            "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+            "name": "Bron",
+            "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+            "type": "string",
+            "tag": [ { "name": "Zib element", "value": "nvt" } ]
+          },  
           {
-            "path": "category.text",
-            "name": "Categorie"
+            "path": "dateAsserted",
+            "name": "Datum",
+            "type": "dateTime",
+            "tag": [ { "name": "Zib element", "value": "MedicationUseDateTime" } ]
           },
           {
             "path": "medicationReference.display",
-            "name": "Medicatie"
+            "name": "Medicatie",
+            "type": "string",
+            "tag": [ { "name": "Zib element", "value": "ProductUsed" } ]
           },
           {
             "path": "dosage.route.text",
-            "name": "Toedieningsweg"
+            "name": "Toedieningsweg",
+            "type": "string",
+            "tag": [ { "name": "Zib element", "value": "RouteOfAdministration" } ]
           },
           {
             "path": "dosage.text",
-            "name": "Instructies"
+            "name": "Instructies",
+            "type": "string",
+            "tag": [ { "name": "Zib element", "value": "InstructionsForUse" } ]
+          },
+          {
+            "path": "category.text",
+            "name": "Categorie",
+            "type": "string",
+            "tag": [ { "name": "Zib element", "value": "nvt" } ]
           }
         ],
         "forEach": "entry.resource.where(resourceType='MedicationStatement')"
