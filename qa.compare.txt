@@ -1,7 +1,7 @@
 zorgviewer-ig : Validation Results
 =========================================
 
-err = 147, warn = 112, info = 112
+err = 148, warn = 112, info = 112
 $--
 Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http://hl7.nl/fhir/zorgviewer)
  Build Errors : 6 / 5 / 0
@@ -17,7 +17,7 @@ Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Condition-Epic : 7 / 3 / 4
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Condition-Epic-note : 7 / 5 / 4
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Condition-Nexus : 2 / 6 / 3
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/DocumentReference-Chipsoft : 1 / 4 / 4
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/DocumentReference-Chipsoft : 2 / 3 / 4
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/DocumentReference-Epic : 3 / 3 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Flag-Chipsoft : 0 / 2 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Flag-Chipsoft-OTH : 8 / 7 / 30
@@ -166,6 +166,7 @@ ERROR: Condition/771: Condition.code: Error converting output stream to byte arr
 WARNING: Condition/771: Condition: Constraint failed: zv-con-2: 'Use either Condition.abatementDateTime or Condition.abatementPeriod for the resolved timestamp'
 ERROR: Condition/771: Condition.code.coding[0].code: Unknown code '31641000146105' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240801'
 == input/examples/DocumentReference-Chipsoft.json ==
+ERROR: DocumentReference/22aa9e3e-f72f-4f76-97c7-0f66c8f691f5: DocumentReference.securityLabel[0]: Error converting output stream to byte array
 ERROR: DocumentReference/22aa9e3e-f72f-4f76-97c7-0f66c8f691f5: DocumentReference.context.facilityType.coding[0].code: Unknown code 'V4' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240801'
 INFORMATION: DocumentReference/22aa9e3e-f72f-4f76-97c7-0f66c8f691f5: DocumentReference.context.facilityType.coding[0].code: Code V4 is not a valid SNOMED CT Term, and neither could it be parsed as an expression (Concept not found (next char = "V", in "V4") at character 1)
 == input/examples/DocumentReference-Epic.json ==

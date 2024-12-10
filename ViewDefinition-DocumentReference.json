@@ -6,6 +6,13 @@
     {
       "column": [
         {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
           "path": "iif(exists(context.period.start),context.period.start,indexed+'(i)')",
           "name": "Datum"
         },
