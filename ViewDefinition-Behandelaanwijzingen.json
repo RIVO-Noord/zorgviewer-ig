@@ -13,35 +13,35 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "resource.category.coding.display.join(' & ')",
+          "path": "category.coding.display.join(' & ')",
           "name": "Category"
         },
         {
-          "path": "resource.period.start",
+          "path": "period.start",
           "name": "Datum"
         },
         {
-          "path": "resource.extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.coding[0].display",
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.coding[0].display",
           "name": "Behandeling"
         },
         {
-          "path": "resource.modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.display",
+          "path": "modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.display",
           "name": "Behandeling toegestaan"
         },
         {
-          "path": "resource.except.extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions').value",
+          "path": "except.extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions').value",
           "name": "Beperkingen"
         },
         {
-          "path": "resource.extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification').extension('VerifiedWith').valueCodeableConcept.text.join(' & ')",
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification').extension('VerifiedWith').valueCodeableConcept.text.join(' & ')",
           "name": "Geverifieerd bij"
         },
         {
-          "path": "resource.status",
+          "path": "status",
           "name": "(status)"
         }
       ],
-      "forEach": "entry"
+      "forEach": "entry.resource"
     }
   ]
 }
