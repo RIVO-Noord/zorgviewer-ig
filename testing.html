@@ -46,6 +46,7 @@
     h3,h4,h5,h6{--heading-prefix:"6.3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 <div id="project-nav">
@@ -166,7 +167,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.10.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.nl/fhir/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.10.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhir.hl7.nl/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Testing</h2>
   
 
@@ -254,8 +255,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </code></pre></div></div>
 
 <p>Run the FHIR Validator on the example Patients against the Zorgviewer profile and Dutch(nl) SNOMED CT.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; java -jar validator_cli.jar -version 3.0.2 -ig ~/.fhir/packages/hl7.fhir.nl.zorgviewer#dev/package/ -ig ~/.fhir/packages/nictiz.fhir.nl.stu3.zib2017#2.2.18/package/ -sct nl -profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient input/examples/Patient-JFictief.json
-&gt; java -jar validator_cli.jar -version 3.0.2 -ig input/resources -ig ~/.fhir/packages/nictiz.fhir.nl.stu3.zib2017#2.2.18/package/ -sct nl -profile http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient input/examples/Patient-Chipsoft.json
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; java -jar validator_cli.jar -version 3.0.2 -ig ~/.fhir/packages/hl7.fhir.nl.zorgviewer#dev/package/ -ig ~/.fhir/packages/nictiz.fhir.nl.stu3.zib2017#2.2.18/package/ -sct nl -profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient input/examples/Patient-JFictief.json
+&gt; java -jar validator_cli.jar -version 3.0.2 -ig input/resources -ig ~/.fhir/packages/nictiz.fhir.nl.stu3.zib2017#2.2.18/package/ -sct nl -profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient input/examples/Patient-Chipsoft.json
 </code></pre></div></div>
 
 <p>Run the FHIR Validator on your example output against the Zorgviewer IG and Dutch(nl) SNOMED CT and produce friendly HTML.</p>
@@ -281,7 +282,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.10.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Dec 18, 2024 07:23+0000">2024-12-18</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.10.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Mon, Dec 23, 2024 09:34+0000">2024-12-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

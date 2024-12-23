@@ -5,19 +5,19 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.nl/fhir/zorgviewer/PlanDefinition/BgZ2017> a fhir:PlanDefinition ;
+<http://fhir.hl7.nl/zorgviewer/PlanDefinition/BgZ2017> a fhir:PlanDefinition ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "BgZ2017"] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b style=\"color: maroon\">Exception generating Narrative: unexpected non-end of element null::a  at line 103 column 50</b></p></div>"
   ] ; # 
-  fhir:url [ fhir:v "http://hl7.nl/fhir/zorgviewer/PlanDefinition/BgZ2017"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "http://fhir.hl7.nl/zorgviewer/PlanDefinition/BgZ2017"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.10.0"] ; # 
   fhir:name [ fhir:v "BgZ2017"] ; # 
   fhir:title [ fhir:v "BgZ 2017"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-18T07:23:17+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-23T09:34:32+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:usage [ fhir:v "Deze PlanDefinition bevat de (data) definitie van de BgZ 2017. Dit is de basis view voor alle zorgverleners."] ; # 
   fhir:jurisdiction ( [
@@ -54,13 +54,13 @@
      ] ) ;
      fhir:output ( [
        fhir:type [ fhir:v "Patient" ] ;
-       fhir:profile ( [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Patient"^^xsd:anyURI ] [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-patient"^^xsd:anyURI ] )
+       fhir:profile ( [ fhir:v "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient"^^xsd:anyURI ] [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-patient"^^xsd:anyURI ] )
      ] [
        fhir:type [ fhir:v "DocumentReference" ] ;
-       fhir:profile ( [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/DocumentReference"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/IHE.MHD.Minimal.DocumentReference"^^xsd:anyURI ] )
+       fhir:profile ( [ fhir:v "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DocumentReference"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/IHE.MHD.Minimal.DocumentReference"^^xsd:anyURI ] )
      ] [
        fhir:type [ fhir:v "Condition" ] ;
-       fhir:profile ( [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Condition"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Problem"^^xsd:anyURI ] ) ;
+       fhir:profile ( [ fhir:v "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Problem"^^xsd:anyURI ] ) ;
        fhir:codeFilter ( [
          fhir:path [ fhir:v "clinical-status" ] ;
          fhir:valueCoding ( [
@@ -71,22 +71,22 @@
        ] )
      ] [
        fhir:type [ fhir:v "Procedure" ] ;
-       fhir:profile ( [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Procedure"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Verrichting"^^xsd:anyURI ] )
+       fhir:profile ( [ fhir:v "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Procedure"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Verrichting"^^xsd:anyURI ] )
      ] [
        fhir:type [ fhir:v "Consent" ] ;
-       fhir:profile ( [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AdvanceDirective"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective"^^xsd:anyURI ] )
+       fhir:profile ( [ fhir:v "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AdvanceDirective"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective"^^xsd:anyURI ] )
      ] [
        fhir:type [ fhir:v "Consent" ] ;
-       fhir:profile ( [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/TreatmentDirective"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"^^xsd:anyURI ] )
+       fhir:profile ( [ fhir:v "http://fhir.hl7.nl/zorgviewer/StructureDefinition/TreatmentDirective"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"^^xsd:anyURI ] )
      ] [
        fhir:type [ fhir:v "Flag" ] ;
-       fhir:profile ( [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/Flag"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Alert"^^xsd:anyURI ] )
+       fhir:profile ( [ fhir:v "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Flag"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Alert"^^xsd:anyURI ] )
      ] [
        fhir:type [ fhir:v "AllergyIntolerance" ] ;
-       fhir:profile ( [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/AllergyIntolerance"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance"^^xsd:anyURI ] )
+       fhir:profile ( [ fhir:v "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AllergyIntolerance"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance"^^xsd:anyURI ] )
      ] [
        fhir:type [ fhir:v "Observation" ] ;
-       fhir:profile ( [ fhir:v "http://hl7.nl/fhir/zorgviewer/StructureDefinition/LaboratoryTestResult"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult"^^xsd:anyURI ] )
+       fhir:profile ( [ fhir:v "http://fhir.hl7.nl/zorgviewer/StructureDefinition/LaboratoryTestResult"^^xsd:anyURI ] [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult"^^xsd:anyURI ] )
      ] )
   ] ) . # 
 
