@@ -61,7 +61,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
   1. Create a new tag
   1. Release title: "1.M.R-sprintX"
   1. Description: generate release notes -> "{github changes link}"
-  1. Vink aan: Set as pre-release
+  1. Vink aan: Set as the latest release
   1. Publish release
 
 ### Merge release naar Snapshot
