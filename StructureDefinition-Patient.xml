@@ -18,7 +18,7 @@
   <name value="Patient"/>
   <title value="Patient"/>
   <status value="active"/>
-  <date value="2024-12-23T15:35:28+00:00"/>
+  <date value="2024-12-27T09:44:10+00:00"/>
   <publisher value="RIVO-NN HL7NL"/>
   <contact>
     <name value="RIVO-NN"/>
@@ -76,12 +76,6 @@
     <identity value="hcim-payer-v3.1-2017EN"/>
     <uri value="https://zibs.nl/wiki/Payer-v3.1(2017EN)"/>
     <name value="HCIM Payer-v3.1(2017EN)"/>
-  </mapping>
-  <mapping>
-    <identity value="hcim-contactinformation-v1.0-2017EN"/>
-    <uri value="https://zibs.nl/wiki/ContactInformation-v1.0(2017EN)"/>
-    <name value="HCIM ContactInformation-v1.0(2017EN)"/>
-    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs."/>
   </mapping>
   <mapping>
     <identity value="hcim-languageproficiency-v3.1-2017EN"/>
@@ -2371,8 +2365,8 @@
     <element id="Patient.name">
       <path value="Patient.name"/>
       <short value="NameInformation"/>
-      <definition value="A human's name with the ability to identify parts and usage."/>
-      <comment value="Dutch names require that certain name parts are separately communicable. For this reason, extensions are added onto the base HumanName element to mark the meaning of each part. A Dutch HumanName is still a proper FHIR HumanName; however, there might be an incompatibilty with the default FHIR mechanism for communicating given names. See the compatibility note below for more information.&#xD;&#xA;&#xD;&#xA;The extension elements cover birth name (NL: eigennaam / geslachtsnaam) and partner/spouse name. Both may have a prefix (NL: voorvoegsel). When a person marries, he or she may keep their own name, assume the partner name, append the partner name to their own name, or the other way around.&#xD;&#xA;&#xD;&#xA;**Incompatibility note**: It has come to light that this specification deviates from the way that the HumanName datatype is normally used. This will be fixed in a future release. However, current implementations should be aware of the special considerations regarding the use of this specification. &#xD;&#xA;&#xD;&#xA;The issue at hand is the way alternative representations of a name, like initials or a nickname, are communicated. Normally this is done using multiple HumanName instances, which are differentiated using the `.use` element. However, this specification allows for including all alternative representations in the _same_ HumanName instance, with the expectation that the extensions provide enough information for receiving systems to differentiate them. However, this means that contrary to the normal usage of this datatype, repetitions of `.given` names cannot be concatenated to get the full list of given names; the list might be a mix of full names, nicknames and initials.&#xD;&#xA;&#xD;&#xA;Since multiple implementations are based on this specification, sending systems are advised (but not required) to keep the approach with one HumanName instance, while receiving systems should be able to handle this one-instance approach. More specifically:&#xD;&#xA;&#xD;&#xA;* Sending and receiving systems SHOULD always use the specified extensions when using this datatype.&#xD;&#xA;* Sending systems are encouraged to populate the `.text` element to unambigiously communicate the person's name.&#xD;&#xA;* Sending systems are encouraged to send either the full given names or the initials, but not both. This alleviates the duplication of names in `.given`.&#xD;&#xA;* When a sending system uses the current one-instance approach for communicating multiple representations, `.use` MAY NOT be populated. After all, it is not possible to select a single `.use` when the instance contains different representations.&#xD;&#xA;* When a receiving system interprets the instance as the single-instance-multiple-representations approach, the `.given` names marked as initials SHOULD be interpreted as alternatives to the full given names. Note the underlying HCIM expects both the _list_ of full names and _list_ of initials to be a single string; there's no match for an initial to a full name. The instance SHOULD be regarded as using this approach when:&#xD;&#xA;  * They encounter a single instance&#xD;&#xA;  * And the `.use` element is absent&#xD;&#xA;  * And all the name parts are differentiated using the specified extensions&#xD;&#xA;* In any other circumstance, receiving systems SHOULD interpret the usage as the normal use.&#xD;&#xA;&#xD;&#xA;Example: miss Irma Jongeneel marries mister de Haas and assumes the name Irma Jongeneel-de Haas:&#xD;&#xA;&#xD;&#xA;* `.family` = &quot;Jongeneel-de Haas&quot;&#xD;&#xA;* `.given` = &quot;Irma&quot; (with `.given:iso21090EnQualifier` = _BR_)&#xD;&#xA;* `.family:humannameOwnName` = &quot;Jongeneel&quot;&#xD;&#xA;* `.family:humannamePartnerPrefix` = &quot;de &quot;&#xD;&#xA;* `.family:humannamePartnerName` = &quot;Haas&quot;"/>
+      <definition value="A name associated with the individual."/>
+      <comment value="A patient may have multiple names with different uses or applicable periods. For animals, the name is a &quot;HumanName&quot; in the sense that is assigned and used by humans and has the same patterns."/>
       <requirements value="Need to be able to track the patient by multiple names. Examples are your official name and a partner name."/>
       <alias value="Naamgegevens"/>
       <min value="1"/>
@@ -2386,62 +2380,6 @@
         <code value="HumanName"/>
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-humanname"/>
       </type>
-      <example>
-        <label value="Structured HumanName (preferred above unstructured)"/>
-        <valueHumanName>
-          <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
-            <valueCode value="NL4"/>
-          </extension>
-          <text value="Irma Jongeneel-de Haas"/>
-          <family value="Jongeneel-de Haas">
-            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-              <valueString value="Jongeneel"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
-              <valueString value="de"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
-              <valueString value="Haas"/>
-            </extension>
-          </family>
-          <given value="Irma">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
-              <valueCode value="CL"/>
-            </extension>
-          </given>
-        </valueHumanName>
-      </example>
-      <example>
-        <label value="Unstructured HumanName"/>
-        <valueHumanName>
-          <text value="Irma Jongeneel-de Haas"/>
-        </valueHumanName>
-      </example>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="nl-core-humanname-1"/>
-        <severity value="error"/>
-        <human value="if you specify a prefix for an own name then an own name is also expected"/>
-        <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()"/>
-        <xpath value="not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-own-prefix']) or f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-own-name']"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-      </constraint>
-      <constraint>
-        <key value="nl-core-humanname-2"/>
-        <severity value="error"/>
-        <human value="if you specify a voorvoegsel for a partner name then a partner name is also expected"/>
-        <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()"/>
-        <xpath value="not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix']) or f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-partner-name']"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-      </constraint>
       <constraint>
         <key value="zv-pat-1"/>
         <severity value="error"/>
@@ -2460,6 +2398,7 @@
         <xpath value="/f:name/f:text"/>
       </constraint>
       <mustSupport value="true"/>
+      <isSummary value="true"/>
       <mapping>
         <identity value="hcim-patient-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.6"/>
@@ -2491,40 +2430,16 @@
         <comment value="PayerName"/>
       </mapping>
       <mapping>
-        <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.6"/>
-        <comment value="NameInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-nameinformation-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.6"/>
-        <comment value="NameInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
-        <map value="NL-CM:20.4.1"/>
-        <comment value="NameInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="BRP"/>
-        <map value="02"/>
-        <comment value="Naam"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
         <identity value="v2"/>
-        <map value="XPN"/>
+        <map value="PID-5, PID-9"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
-        <map value="EN (actually, PN)"/>
+        <map value="name"/>
       </mapping>
       <mapping>
-        <identity value="servd"/>
-        <map value="ProviderName"/>
+        <identity value="cda"/>
+        <map value=".patient.name"/>
       </mapping>
     </element>
     <element id="Patient.name.id">
@@ -3848,11 +3763,10 @@
     </element>
     <element id="Patient.telecom">
       <path value="Patient.telecom"/>
-      <short value="ContactInformation"/>
+      <short value="A contact detail for the individual"/>
       <definition value="A contact detail for the individual. Note that there is no support for multiple use values like 'mobile business'."/>
       <comment value="A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address may not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone)."/>
       <requirements value="People have (primary) ways to contact them in some way such as phone, email."/>
-      <alias value="Contactgegevens"/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -3864,259 +3778,7 @@
         <code value="ContactPoint"/>
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint"/>
       </type>
-      <example>
-        <label value="Mobile business phone number. Note: the mobile nature stems from the number being an 06-* number."/>
-        <valueContactPoint>
-          <system value="phone"/>
-          <value value="+31611234567"/>
-          <use value="work"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Mobile phone number undetermined private/business. Note: the mobile nature stems from the number being an 06-* number."/>
-        <valueContactPoint>
-          <system value="phone"/>
-          <value value="+31611234567"/>
-          <use value="mobile"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Home Land Line"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
-                <code value="LL"/>
-                <display value="Land Line"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="phone"/>
-          <value value="..."/>
-          <use value="home"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Temporary Land Line"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
-                <code value="LL"/>
-                <display value="Land Line"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="phone"/>
-          <value value="..."/>
-          <use value="temp"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Work Land Line"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
-                <code value="LL"/>
-                <display value="Land Line"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="phone"/>
-          <value value="..."/>
-          <use value="work"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Home Fax"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
-                <code value="FAX"/>
-                <display value="Fax"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="fax"/>
-          <value value="..."/>
-          <use value="home"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Temporary Fax"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
-                <code value="FAX"/>
-                <display value="Fax"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="fax"/>
-          <value value="..."/>
-          <use value="temp"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Work Fax"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
-                <code value="FAX"/>
-                <display value="Fax"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="fax"/>
-          <value value="..."/>
-          <use value="work"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Home Mobile Phone"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="MC"/>
-                <display value="Mobile Phone"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="phone"/>
-          <value value="..."/>
-          <use value="home"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Temporary Mobile Phone"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="MC"/>
-                <display value="Mobile Phone"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="phone"/>
-          <value value="..."/>
-          <use value="temp"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Work Mobile Phone"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="MC"/>
-                <display value="Mobile Phone"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="phone"/>
-          <value value="..."/>
-          <use value="work"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Home Pager"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="PG"/>
-                <display value="Pager"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="pager"/>
-          <value value="..."/>
-          <use value="home"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Temporary Pager"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="PG"/>
-                <display value="Pager"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="pager"/>
-          <value value="..."/>
-          <use value="temp"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Work Pager"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="PG"/>
-                <display value="Pager"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="pager"/>
-          <value value="..."/>
-          <use value="work"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Private email address"/>
-        <valueContactPoint>
-          <system value="email"/>
-          <value value="giesput@myweb.nl"/>
-          <use value="home"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Work email address"/>
-        <valueContactPoint>
-          <system value="email"/>
-          <value value="example@workplace.nl"/>
-          <use value="work"/>
-        </valueContactPoint>
-      </example>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="cpt-2"/>
-        <severity value="error"/>
-        <human value="A system is required if a value is provided."/>
-        <expression value="value.empty() or system.exists()"/>
-        <xpath value="not(exists(f:value)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/ContactPoint"/>
-      </constraint>
+      <isSummary value="true"/>
       <mapping>
         <identity value="hcim-patient-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.5"/>
@@ -4148,35 +3810,16 @@
         <comment value="ContactInformation"/>
       </mapping>
       <mapping>
-        <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.5"/>
-        <comment value="ContactInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-contactinformation-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.5"/>
-        <comment value="ContactInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-contactinformation-v1.0-2017EN"/>
-        <map value="NL-CM:20.6.1"/>
-        <comment value="ContactInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
         <identity value="v2"/>
-        <map value="XTN"/>
+        <map value="PID-13, PID-14, PID-40"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
-        <map value="TEL"/>
+        <map value="telecom"/>
       </mapping>
       <mapping>
-        <identity value="servd"/>
-        <map value="ContactPoint"/>
+        <identity value="cda"/>
+        <map value=".telecom"/>
       </mapping>
     </element>
     <element id="Patient.gender">
@@ -4581,10 +4224,9 @@
     <element id="Patient.address">
       <path value="Patient.address"/>
       <short value="AddressInformation"/>
-      <definition value="This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.&#xD;&#xA;&#xD;&#xA;To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.&#xD;&#xA;&#xD;&#xA;**Separate address parts**&#xD;&#xA;&#xD;&#xA;The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.&#xD;&#xA;&#xD;&#xA;**Custom address types**&#xD;&#xA;&#xD;&#xA;The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps &lt;http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse&gt; and &lt;http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType&gt; as well). The HCIM code itself should also be included using the AddressType extension.&#xD;&#xA;&#xD;&#xA;| HCIM                              |` .ext:AddressType` | `.ext:official` | `.use` | `.type`    |&#xD;&#xA;|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|&#xD;&#xA;| Postal Address/Postadres          | _PST_              |                 |        | _postal_   |&#xD;&#xA;| Primary Home/Officieel adres      | _HP_               | true            | _home_ |            |&#xD;&#xA;| Visit Address/Woon-/verblijfadres | _PHYS_             |                 | _home_ | _physical_ |&#xD;&#xA;| Temporary Address/Tijdelijk adres | _TMP_              |                 | _temp_ |            |&#xD;&#xA;| Work Place/Werkadres              | _WP_               |                 | _work_ |            |&#xD;&#xA;| Vacation Home/Vakantie adres      | _HV_               |                 | _temp_ |            |&#xD;&#xA;&#xD;&#xA; If Address.type is _both_ then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.&#xD;&#xA;&#xD;&#xA;NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension."/>
-      <comment value="Note: address is for postal addresses, not physical locations."/>
+      <definition value="Addresses for the individual."/>
+      <comment value="Patient may have multiple addresses with different uses or applicable periods."/>
       <requirements value="May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification."/>
-      <alias value="AdresInformatie"/>
       <alias value="Adresgegevens"/>
       <min value="0"/>
       <max value="*"/>
@@ -4597,91 +4239,7 @@
         <code value="Address"/>
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address"/>
       </type>
-      <example>
-        <label value="Example of a Vacation Home address"/>
-        <valueAddress>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="HV"/>
-                <display value="Vakantie adres"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <use value="temp"/>
-          <line value="Binnenkant 12A Hoog">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-              <valueString value="Binnenkant"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-              <valueString value="12"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
-              <valueString value="A"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
-              <valueString value="Hoog"/>
-            </extension>
-          </line>
-          <city value="Amsterdam"/>
-          <state value="NH"/>
-          <postalCode value="1000AA"/>
-          <country value="NLD"/>
-        </valueAddress>
-      </example>
-      <example>
-        <label value="Example of a Primary Home address"/>
-        <valueAddress>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="HP"/>
-                <display value="Officieel adres"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <extension url="http://fhir.nl/fhir/StructureDefinition/nl-core-address-official">
-            <valueBoolean value="true"/>
-          </extension>
-          <use value="home"/>
-          <line value="Binnenkant to 10">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-              <valueString value="Binnenkant"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
-              <valueString value="to"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-              <valueString value="10"/>
-            </extension>
-          </line>
-          <city value="Amsterdam"/>
-          <state value="NH"/>
-          <postalCode value="1001AA"/>
-          <country value="NLD"/>
-        </valueAddress>
-      </example>
-      <condition value="ele-1"/>
-      <condition value="nl-streetname-if-official-and-other-line-parts"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="nl-streetname-if-official-and-other-line-parts"/>
-        <requirements value="This constraint checks conformance against the Dutch BRP constraints on address parts. However: when you only send postalCode + houseNumber which is enough for certain cases this may still be a valid address"/>
-        <severity value="error"/>
-        <human value="Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value"/>
-        <expression value="(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))"/>
-        <xpath value="not(.[f:extension[@url='http://fhir.nl/fhir/StructureDefinition/nl-core-address-official'][f:valueBoolean/@value='true']][f:line[empty(f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName'])][f:extension[@url=('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator')]]])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-      </constraint>
+      <isSummary value="true"/>
       <mapping>
         <identity value="hcim-patient-v2.0.1-2015EN"/>
         <map value="NL-CM:0.1.4"/>
@@ -4713,35 +4271,16 @@
         <comment value="AddressInformation"/>
       </mapping>
       <mapping>
-        <identity value="hcim-address-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.4"/>
-        <comment value="AddressInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-addressinformation-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.4"/>
-        <comment value="AddressInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-addressinformation-v1.0-2017EN"/>
-        <map value="NL-CM:20.5.1"/>
-        <comment value="AddressInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
         <identity value="v2"/>
-        <map value="XAD"/>
+        <map value="PID-11"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
-        <map value="AD"/>
+        <map value="addr"/>
       </mapping>
       <mapping>
-        <identity value="servd"/>
-        <map value="Address"/>
+        <identity value="cda"/>
+        <map value=".addr"/>
       </mapping>
     </element>
     <element id="Patient.maritalStatus">
@@ -5159,8 +4698,7 @@
     <element id="Patient.contact.name">
       <path value="Patient.contact.name"/>
       <short value="NameInformation"/>
-      <definition value="A human's name with the ability to identify parts and usage."/>
-      <comment value="Dutch names require that certain name parts are separately communicable. For this reason, extensions are added onto the base HumanName element to mark the meaning of each part. A Dutch HumanName is still a proper FHIR HumanName; however, there might be an incompatibilty with the default FHIR mechanism for communicating given names. See the compatibility note below for more information.&#xD;&#xA;&#xD;&#xA;The extension elements cover birth name (NL: eigennaam / geslachtsnaam) and partner/spouse name. Both may have a prefix (NL: voorvoegsel). When a person marries, he or she may keep their own name, assume the partner name, append the partner name to their own name, or the other way around.&#xD;&#xA;&#xD;&#xA;**Incompatibility note**: It has come to light that this specification deviates from the way that the HumanName datatype is normally used. This will be fixed in a future release. However, current implementations should be aware of the special considerations regarding the use of this specification. &#xD;&#xA;&#xD;&#xA;The issue at hand is the way alternative representations of a name, like initials or a nickname, are communicated. Normally this is done using multiple HumanName instances, which are differentiated using the `.use` element. However, this specification allows for including all alternative representations in the _same_ HumanName instance, with the expectation that the extensions provide enough information for receiving systems to differentiate them. However, this means that contrary to the normal usage of this datatype, repetitions of `.given` names cannot be concatenated to get the full list of given names; the list might be a mix of full names, nicknames and initials.&#xD;&#xA;&#xD;&#xA;Since multiple implementations are based on this specification, sending systems are advised (but not required) to keep the approach with one HumanName instance, while receiving systems should be able to handle this one-instance approach. More specifically:&#xD;&#xA;&#xD;&#xA;* Sending and receiving systems SHOULD always use the specified extensions when using this datatype.&#xD;&#xA;* Sending systems are encouraged to populate the `.text` element to unambigiously communicate the person's name.&#xD;&#xA;* Sending systems are encouraged to send either the full given names or the initials, but not both. This alleviates the duplication of names in `.given`.&#xD;&#xA;* When a sending system uses the current one-instance approach for communicating multiple representations, `.use` MAY NOT be populated. After all, it is not possible to select a single `.use` when the instance contains different representations.&#xD;&#xA;* When a receiving system interprets the instance as the single-instance-multiple-representations approach, the `.given` names marked as initials SHOULD be interpreted as alternatives to the full given names. Note the underlying HCIM expects both the _list_ of full names and _list_ of initials to be a single string; there's no match for an initial to a full name. The instance SHOULD be regarded as using this approach when:&#xD;&#xA;  * They encounter a single instance&#xD;&#xA;  * And the `.use` element is absent&#xD;&#xA;  * And all the name parts are differentiated using the specified extensions&#xD;&#xA;* In any other circumstance, receiving systems SHOULD interpret the usage as the normal use.&#xD;&#xA;&#xD;&#xA;Example: miss Irma Jongeneel marries mister de Haas and assumes the name Irma Jongeneel-de Haas:&#xD;&#xA;&#xD;&#xA;* `.family` = &quot;Jongeneel-de Haas&quot;&#xD;&#xA;* `.given` = &quot;Irma&quot; (with `.given:iso21090EnQualifier` = _BR_)&#xD;&#xA;* `.family:humannameOwnName` = &quot;Jongeneel&quot;&#xD;&#xA;* `.family:humannamePartnerPrefix` = &quot;de &quot;&#xD;&#xA;* `.family:humannamePartnerName` = &quot;Haas&quot;"/>
+      <definition value="A name associated with the contact person."/>
       <requirements value="Contact persons need to be identified by name, but it is uncommon to need details about multiple other names for that contact person."/>
       <alias value="Naamgegevens"/>
       <min value="0"/>
@@ -5174,62 +4712,6 @@
         <code value="HumanName"/>
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-humanname"/>
       </type>
-      <example>
-        <label value="Structured HumanName (preferred above unstructured)"/>
-        <valueHumanName>
-          <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
-            <valueCode value="NL4"/>
-          </extension>
-          <text value="Irma Jongeneel-de Haas"/>
-          <family value="Jongeneel-de Haas">
-            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-              <valueString value="Jongeneel"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
-              <valueString value="de"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
-              <valueString value="Haas"/>
-            </extension>
-          </family>
-          <given value="Irma">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
-              <valueCode value="CL"/>
-            </extension>
-          </given>
-        </valueHumanName>
-      </example>
-      <example>
-        <label value="Unstructured HumanName"/>
-        <valueHumanName>
-          <text value="Irma Jongeneel-de Haas"/>
-        </valueHumanName>
-      </example>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="nl-core-humanname-1"/>
-        <severity value="error"/>
-        <human value="if you specify a prefix for an own name then an own name is also expected"/>
-        <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()"/>
-        <xpath value="not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-own-prefix']) or f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-own-name']"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-      </constraint>
-      <constraint>
-        <key value="nl-core-humanname-2"/>
-        <severity value="error"/>
-        <human value="if you specify a voorvoegsel for a partner name then a partner name is also expected"/>
-        <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()"/>
-        <xpath value="not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix']) or f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-partner-name']"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-      </constraint>
       <mapping>
         <identity value="hcim-contactperson-v1.2-2015EN"/>
         <map value="NL-CM:3.1.4"/>
@@ -5246,40 +4728,16 @@
         <comment value="NameInformation"/>
       </mapping>
       <mapping>
-        <identity value="hcim-nameinformation-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.6"/>
-        <comment value="NameInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-nameinformation-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.6"/>
-        <comment value="NameInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-nameinformation-v1.0.1-2017EN"/>
-        <map value="NL-CM:20.4.1"/>
-        <comment value="NameInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="BRP"/>
-        <map value="02"/>
-        <comment value="Naam"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
         <identity value="v2"/>
-        <map value="XPN"/>
+        <map value="NK1-2"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
-        <map value="EN (actually, PN)"/>
+        <map value="name"/>
       </mapping>
       <mapping>
-        <identity value="servd"/>
-        <map value="ProviderName"/>
+        <identity value="cda"/>
+        <map value="n/a"/>
       </mapping>
     </element>
     <element id="Patient.contact.name.id">
@@ -6603,11 +6061,10 @@
     </element>
     <element id="Patient.contact.telecom">
       <path value="Patient.contact.telecom"/>
-      <short value="ContactInformation"/>
-      <definition value="Contact information includes a person's telephone numbers and email addresses. This datatype defines a common basis for expressing all contact information around the world, but adds extensions to express Dutch contacts specifically, according to the HCIM ContactInformation (v1.0, 2017). A Dutch ContactPoint still is a proper FHIR ContactPoint, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype. The table below explains how the HCIM concepts are mapped to the various FHIR elements. The HCIM code itself should also be included using the TelecomType extension.&#xD;&#xA;&#xD;&#xA;| HCIM                                               | `.ext:TelecomType` | `.system` | `.use`   |&#xD;&#xA;|----------------------------------------------------|:------------------:|:---------:|:--------:|&#xD;&#xA;| Primary Home Land Line                             | _LL_               | _phone_   | _home_   |&#xD;&#xA;| Temporary Land Line                                | _LL_               | _phone_   | _temp_   |&#xD;&#xA;| Primary Work Land Line                             | _LL_               | _phone_   | _work_   |&#xD;&#xA;|                                                    |                    |           |          |&#xD;&#xA;| Primary Home Fax                                   | _FAX_              | _fax_     | _home_   |&#xD;&#xA;| Temporary Fax                                      | _FAX_              | _fax_     | _temp_   |&#xD;&#xA;| Primary Work Fax                                   | _FAX_              | _fax_     | _work_   |&#xD;&#xA;|                                                    |                    |           |          |&#xD;&#xA;| Primary Home Mobile Phone                          | _MC_               | _phone_   | _home_   |&#xD;&#xA;| Temporary Mobile Phone                             | _MC_               | _phone_   | _temp_   |&#xD;&#xA;| Primary Work Mobile Phone                          | _MC_               | _phone_   | _work_   |&#xD;&#xA;|                                                    |                    |           |          |&#xD;&#xA;| Primary Home Pager                                 | _PG_               | _pager_   | _home_   |&#xD;&#xA;| Temporary Pager                                    | _PG_               | _pager_   | _temp_   |&#xD;&#xA;| Primary Work Pager                                 | _PG_               | _pager_   | _work_   |&#xD;&#xA;|                                                    |                    |           |          |&#xD;&#xA;| Private email address                              |                    | _email_   | _home_   |&#xD;&#xA;| Work email address                                 |                    | _email_   | _work_   |&#xD;&#xA;|                                                    |                    |           |          |&#xD;&#xA;| Mobile phone number undetermined private/business  |                    | _phone_   | _mobile_ |"/>
+      <short value="A contact detail for the person"/>
+      <definition value="A contact detail for the person, e.g. a telephone number or an email address."/>
       <comment value="Telecommunication data details (phone/email) is physically modeled in the HCIM Patient, which is why the telecommunication mappings appear to be coming from the HCIM Patient instead of the HCIM ContactPerson"/>
       <requirements value="People have (primary) ways to contact them in some way such as phone, email."/>
-      <alias value="Contactgegevens"/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -6619,259 +6076,6 @@
         <code value="ContactPoint"/>
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint"/>
       </type>
-      <example>
-        <label value="Mobile business phone number. Note: the mobile nature stems from the number being an 06-* number."/>
-        <valueContactPoint>
-          <system value="phone"/>
-          <value value="+31611234567"/>
-          <use value="work"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Mobile phone number undetermined private/business. Note: the mobile nature stems from the number being an 06-* number."/>
-        <valueContactPoint>
-          <system value="phone"/>
-          <value value="+31611234567"/>
-          <use value="mobile"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Home Land Line"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
-                <code value="LL"/>
-                <display value="Land Line"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="phone"/>
-          <value value="..."/>
-          <use value="home"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Temporary Land Line"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
-                <code value="LL"/>
-                <display value="Land Line"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="phone"/>
-          <value value="..."/>
-          <use value="temp"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Work Land Line"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
-                <code value="LL"/>
-                <display value="Land Line"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="phone"/>
-          <value value="..."/>
-          <use value="work"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Home Fax"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
-                <code value="FAX"/>
-                <display value="Fax"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="fax"/>
-          <value value="..."/>
-          <use value="home"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Temporary Fax"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
-                <code value="FAX"/>
-                <display value="Fax"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="fax"/>
-          <value value="..."/>
-          <use value="temp"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Work Fax"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
-                <code value="FAX"/>
-                <display value="Fax"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="fax"/>
-          <value value="..."/>
-          <use value="work"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Home Mobile Phone"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="MC"/>
-                <display value="Mobile Phone"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="phone"/>
-          <value value="..."/>
-          <use value="home"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Temporary Mobile Phone"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="MC"/>
-                <display value="Mobile Phone"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="phone"/>
-          <value value="..."/>
-          <use value="temp"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Work Mobile Phone"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="MC"/>
-                <display value="Mobile Phone"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="phone"/>
-          <value value="..."/>
-          <use value="work"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Home Pager"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="PG"/>
-                <display value="Pager"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="pager"/>
-          <value value="..."/>
-          <use value="home"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Temporary Pager"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="PG"/>
-                <display value="Pager"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="pager"/>
-          <value value="..."/>
-          <use value="temp"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Primary Work Pager"/>
-        <valueContactPoint>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="PG"/>
-                <display value="Pager"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <system value="pager"/>
-          <value value="..."/>
-          <use value="work"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Private email address"/>
-        <valueContactPoint>
-          <system value="email"/>
-          <value value="giesput@myweb.nl"/>
-          <use value="home"/>
-        </valueContactPoint>
-      </example>
-      <example>
-        <label value="Work email address"/>
-        <valueContactPoint>
-          <system value="email"/>
-          <value value="example@workplace.nl"/>
-          <use value="work"/>
-        </valueContactPoint>
-      </example>
-      <condition value="ele-1"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="cpt-2"/>
-        <severity value="error"/>
-        <human value="A system is required if a value is provided."/>
-        <expression value="value.empty() or system.exists()"/>
-        <xpath value="not(exists(f:value)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/ContactPoint"/>
-      </constraint>
       <mapping>
         <identity value="hcim-contactperson-v1.2-2015EN"/>
         <map value="NL-CM:3.1.6"/>
@@ -6888,44 +6092,23 @@
         <comment value="ContactInformation"/>
       </mapping>
       <mapping>
-        <identity value="hcim-contactinformation-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.5"/>
-        <comment value="ContactInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-contactinformation-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.5"/>
-        <comment value="ContactInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-contactinformation-v1.0-2017EN"/>
-        <map value="NL-CM:20.6.1"/>
-        <comment value="ContactInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
         <identity value="v2"/>
-        <map value="XTN"/>
+        <map value="NK1-5, NK1-6, NK1-40"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
-        <map value="TEL"/>
+        <map value="telecom"/>
       </mapping>
       <mapping>
-        <identity value="servd"/>
-        <map value="ContactPoint"/>
+        <identity value="cda"/>
+        <map value="n/a"/>
       </mapping>
     </element>
     <element id="Patient.contact.address">
       <path value="Patient.contact.address"/>
       <short value="AddressInformation"/>
-      <definition value="This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.&#xD;&#xA;&#xD;&#xA;To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.&#xD;&#xA;&#xD;&#xA;**Separate address parts**&#xD;&#xA;&#xD;&#xA;The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.&#xD;&#xA;&#xD;&#xA;**Custom address types**&#xD;&#xA;&#xD;&#xA;The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps &lt;http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse&gt; and &lt;http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType&gt; as well). The HCIM code itself should also be included using the AddressType extension.&#xD;&#xA;&#xD;&#xA;| HCIM                              |` .ext:AddressType` | `.ext:official` | `.use` | `.type`    |&#xD;&#xA;|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|&#xD;&#xA;| Postal Address/Postadres          | _PST_              |                 |        | _postal_   |&#xD;&#xA;| Primary Home/Officieel adres      | _HP_               | true            | _home_ |            |&#xD;&#xA;| Visit Address/Woon-/verblijfadres | _PHYS_             |                 | _home_ | _physical_ |&#xD;&#xA;| Temporary Address/Tijdelijk adres | _TMP_              |                 | _temp_ |            |&#xD;&#xA;| Work Place/Werkadres              | _WP_               |                 | _work_ |            |&#xD;&#xA;| Vacation Home/Vakantie adres      | _HV_               |                 | _temp_ |            |&#xD;&#xA;&#xD;&#xA; If Address.type is _both_ then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.&#xD;&#xA;&#xD;&#xA;NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension."/>
-      <comment value="Note: address is for postal addresses, not physical locations."/>
+      <definition value="Address for the contact person."/>
       <requirements value="Need to keep track where the contact person can be contacted per postal mail or visited."/>
-      <alias value="AdresInformatie"/>
       <alias value="Adresgegevens"/>
       <min value="0"/>
       <max value="1"/>
@@ -6938,91 +6121,6 @@
         <code value="Address"/>
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-address"/>
       </type>
-      <example>
-        <label value="Example of a Vacation Home address"/>
-        <valueAddress>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="HV"/>
-                <display value="Vakantie adres"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <use value="temp"/>
-          <line value="Binnenkant 12A Hoog">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-              <valueString value="Binnenkant"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-              <valueString value="12"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
-              <valueString value="A"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
-              <valueString value="Hoog"/>
-            </extension>
-          </line>
-          <city value="Amsterdam"/>
-          <state value="NH"/>
-          <postalCode value="1000AA"/>
-          <country value="NLD"/>
-        </valueAddress>
-      </example>
-      <example>
-        <label value="Example of a Primary Home address"/>
-        <valueAddress>
-          <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType">
-            <valueCodeableConcept>
-              <coding>
-                <system value="http://hl7.org/fhir/v3/AddressUse"/>
-                <code value="HP"/>
-                <display value="Officieel adres"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
-          <extension url="http://fhir.nl/fhir/StructureDefinition/nl-core-address-official">
-            <valueBoolean value="true"/>
-          </extension>
-          <use value="home"/>
-          <line value="Binnenkant to 10">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-              <valueString value="Binnenkant"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
-              <valueString value="to"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-              <valueString value="10"/>
-            </extension>
-          </line>
-          <city value="Amsterdam"/>
-          <state value="NH"/>
-          <postalCode value="1001AA"/>
-          <country value="NLD"/>
-        </valueAddress>
-      </example>
-      <condition value="ele-1"/>
-      <condition value="nl-streetname-if-official-and-other-line-parts"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() | (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <constraint>
-        <key value="nl-streetname-if-official-and-other-line-parts"/>
-        <requirements value="This constraint checks conformance against the Dutch BRP constraints on address parts. However: when you only send postalCode + houseNumber which is enough for certain cases this may still be a valid address"/>
-        <severity value="error"/>
-        <human value="Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value"/>
-        <expression value="(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))"/>
-        <xpath value="not(.[f:extension[@url='http://fhir.nl/fhir/StructureDefinition/nl-core-address-official'][f:valueBoolean/@value='true']][f:line[empty(f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName'])][f:extension[@url=('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator')]]])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-      </constraint>
       <mapping>
         <identity value="hcim-contactperson-v1.2-2015EN"/>
         <map value="NL-CM:3.1.5"/>
@@ -7039,35 +6137,16 @@
         <comment value="AddressInformation"/>
       </mapping>
       <mapping>
-        <identity value="hcim-address-v2.0.1-2015EN"/>
-        <map value="NL-CM:0.1.4"/>
-        <comment value="AddressInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-addressinformation-v3.0-2016EN"/>
-        <map value="NL-CM:0.1.4"/>
-        <comment value="AddressInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="hcim-addressinformation-v1.0-2017EN"/>
-        <map value="NL-CM:20.5.1"/>
-        <comment value="AddressInformation"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-      <mapping>
         <identity value="v2"/>
-        <map value="XAD"/>
+        <map value="NK1-4"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
-        <map value="AD"/>
+        <map value="addr"/>
       </mapping>
       <mapping>
-        <identity value="servd"/>
-        <map value="Address"/>
+        <identity value="cda"/>
+        <map value="n/a"/>
       </mapping>
     </element>
     <element id="Patient.contact.gender">

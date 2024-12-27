@@ -241,7 +241,7 @@
         
           Active
           
-            as of 2024-12-23
+            as of 2024-12-27
           
         
       </td>
@@ -414,67 +414,10 @@
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">0</span>..<span style="color:DarkGray">1</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#ismodifier">Is Modifier</a></td><td><span style="color:DarkGray">true</span> because <span style="color:DarkGray">No Modifier Reason provideed in previous versions of FHIR</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="color:DarkGray">Need to be able to mark a patient record as not to be used because it was created in error.</p>
 </td></tr><tr><td style="white-space: nowrap">Default Value</td><td><span style="color:DarkGray"><code>true</code></span></td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.name">  </a><span style="color: grey">66</span><b>. Patient.name</b><a href="#key_Patient.name" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p>A human's name with the ability to identify parts and usage.</p>
-<br/><div style="color:DarkGray;text-decoration:line-through"><p>A name associated with the individual.</p>
-</div></td></tr><tr><td style="white-space: nowrap">Short</td><td>NameInformation<span style="color:DarkGray;text-decoration:line-through">A name associated with the patient</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><p>Dutch names require that certain name parts are separately communicable. For this reason, extensions are added onto the base HumanName element to mark the meaning of each part. A Dutch HumanName is still a proper FHIR HumanName; however, there might be an incompatibilty with the default FHIR mechanism for communicating given names. See the compatibility note below for more information.</p>
-<p>The extension elements cover birth name (NL: eigennaam / geslachtsnaam) and partner/spouse name. Both may have a prefix (NL: voorvoegsel). When a person marries, he or she may keep their own name, assume the partner name, append the partner name to their own name, or the other way around.</p>
-<p><strong>Incompatibility note</strong>: It has come to light that this specification deviates from the way that the HumanName datatype is normally used. This will be fixed in a future release. However, current implementations should be aware of the special considerations regarding the use of this specification.</p>
-<p>The issue at hand is the way alternative representations of a name, like initials or a nickname, are communicated. Normally this is done using multiple HumanName instances, which are differentiated using the <code>.use</code> element. However, this specification allows for including all alternative representations in the <em>same</em> HumanName instance, with the expectation that the extensions provide enough information for receiving systems to differentiate them. However, this means that contrary to the normal usage of this datatype, repetitions of <code>.given</code> names cannot be concatenated to get the full list of given names; the list might be a mix of full names, nicknames and initials.</p>
-<p>Since multiple implementations are based on this specification, sending systems are advised (but not required) to keep the approach with one HumanName instance, while receiving systems should be able to handle this one-instance approach. More specifically:</p>
-<ul>
-<li>Sending and receiving systems SHOULD always use the specified extensions when using this datatype.</li>
-<li>Sending systems are encouraged to populate the <code>.text</code> element to unambigiously communicate the person's name.</li>
-<li>Sending systems are encouraged to send either the full given names or the initials, but not both. This alleviates the duplication of names in <code>.given</code>.</li>
-<li>When a sending system uses the current one-instance approach for communicating multiple representations, <code>.use</code> MAY NOT be populated. After all, it is not possible to select a single <code>.use</code> when the instance contains different representations.</li>
-<li>When a receiving system interprets the instance as the single-instance-multiple-representations approach, the <code>.given</code> names marked as initials SHOULD be interpreted as alternatives to the full given names. Note the underlying HCIM expects both the <em>list</em> of full names and <em>list</em> of initials to be a single string; there's no match for an initial to a full name. The instance SHOULD be regarded as using this approach when:</li>
-<li>They encounter a single instance</li>
-<li>And the <code>.use</code> element is absent</li>
-<li>And all the name parts are differentiated using the specified extensions</li>
-<li>In any other circumstance, receiving systems SHOULD interpret the usage as the normal use.</li>
-</ul>
-<p>Example: miss Irma Jongeneel marries mister de Haas and assumes the name Irma Jongeneel-de Haas:</p>
-<ul>
-<li><code>.family</code> = "Jongeneel-de Haas"</li>
-<li><code>.given</code> = "Irma" (with <code>.given:iso21090EnQualifier</code> = <em>BR</em>)</li>
-<li><code>.family:humannameOwnName</code> = "Jongeneel"</li>
-<li><code>.family:humannamePartnerPrefix</code> = "de "</li>
-<li><code>.family:humannamePartnerName</code> = "Haas"</li>
-</ul>
-<br/><div style="color:DarkGray;text-decoration:line-through"><p>A patient may have multiple names with different uses or applicable periods. For animals, the name is a "HumanName" in the sense that is assigned and used by humans and has the same patterns.</p>
-</div></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1<span style="color:DarkGray;text-decoration:line-through">0</span>..<span style="color:DarkGray">*</span><br/>This element is affected by the following invariants: ele-1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></span>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-humanname">nl-core-humanname</a>)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="color:DarkGray">Need to be able to track the patient by multiple names. Examples are your official name and a partner name.</p>
-</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Naamgegevens</td></tr><tr><td style="white-space: nowrap">Example</td><td>&lt;br/&gt;&lt;b&gt;Structured HumanName (preferred above unstructured)&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
-    "valueCode" : "NL4"
-  }],
-  "text" : "Irma Jongeneel-de Haas",
-  "family" : "Jongeneel-de Haas",
-  "_family" : {
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-      "valueString" : "Jongeneel"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
-      "valueString" : "de"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
-      "valueString" : "Haas"
-    }]
-  },
-  "given" : ["Irma"],
-  "_given" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
-      "valueCode" : "CL"
-    }]
-  }]
-}
-&lt;br/&gt;&lt;b&gt;Unstructured HumanName&lt;/b&gt;:{
-  "text" : "Irma Jongeneel-de Haas"
-}
-</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() | (children().count() &gt; id.count())</code>)<br/><b title="Formal Invariant Identifier">nl-core-humanname-1</b>: if you specify a prefix for an own name then an own name is also expected (<code>name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()</code>)<br/><b title="Formal Invariant Identifier">nl-core-humanname-2</b>: if you specify a voorvoegsel for a partner name then a partner name is also expected (<code>name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()</code>)<br/><b title="Formal Invariant Identifier">zv-pat-1</b>: Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present. (<code>(family.exists() or given.exists() or text.exists())</code>)<br/><b title="Formal Invariant Identifier">zv-pat-2</b>: To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present. (<code>text.exists()</code>)</td></tr>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.name">  </a><span style="color: grey">66</span><b>. Patient.name</b><a href="#key_Patient.name" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">A name associated with the individual.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>NameInformation<span style="color:DarkGray;text-decoration:line-through">A name associated with the patient</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="color:DarkGray">A patient may have multiple names with different uses or applicable periods. For animals, the name is a "HumanName" in the sense that is assigned and used by humans and has the same patterns.</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1<span style="color:DarkGray;text-decoration:line-through">0</span>..<span style="color:DarkGray">*</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></span>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-humanname">nl-core-humanname</a>)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="color:DarkGray">Need to be able to track the patient by multiple names. Examples are your official name and a partner name.</p>
+</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Naamgegevens</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">zv-pat-1</b>: Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present. (<code>(family.exists() or given.exists() or text.exists())</code>)<br/><b title="Formal Invariant Identifier">zv-pat-2</b>: To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present. (<code>text.exists()</code>)</td></tr>
 
 <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.name.extension:humannameAssemblyOrder">  </a><span style="color: grey">68</span><b>. Patient.name.extension:humannameAssemblyOrder</b><a href="#key_Patient.name.extension:humannameAssemblyOrder" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/profiling.html#slicing">Slice Name</a></td><td>humannameAssemblyOrder</td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">A code that represents the preferred display order of the components of this human name.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>Preferred display order of name parts</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/extensibility.html#Extension">Extension</a>(<a href="http://hl7.org/fhir/STU3/extension-humanname-assembly-order.html">assembly-order</a>) (Extension Type: <a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a>)</td></tr>
@@ -524,129 +467,35 @@
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">0</span>..<span style="color:DarkGray">1</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td>Choice of: <span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a></span>, <span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a></span></td></tr><tr><td style="white-space: nowrap">[x] Note</td><td>See<a href="http://hl7.org/fhir/STU3/formats.html#choice">Choice of Data Types</a>for further information about how to use [x]</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#ismodifier">Is Modifier</a></td><td><span style="color:DarkGray">true</span> because <span style="color:DarkGray">No Modifier Reason provideed in previous versions of FHIR</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr><tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Must Support Types</a></td><td>No must-support rules about the choice of types/profiles</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="color:DarkGray">The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.</p>
 </td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Overlijdensindicator/DatumOverlijden</td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.address">  </a><span style="color: grey">90</span><b>. Patient.address</b><a href="#key_Patient.address" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p>This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.</p>
-<p>To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.</p>
-<p><strong>Separate address parts</strong></p>
-<p>The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.</p>
-<p><strong>Custom address types</strong></p>
-<p>The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps &lt;http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse&gt; and &lt;http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType&gt; as well). The HCIM code itself should also be included using the AddressType extension.</p>
-<p>| HCIM                              |<code>.ext:AddressType</code> | <code>.ext:official</code> | <code>.use</code> | <code>.type</code>    |
-|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|
-| Postal Address/Postadres          | <em>PST</em>              |                 |        | <em>postal</em>   |
-| Primary Home/Officieel adres      | <em>HP</em>               | true            | <em>home</em> |            |
-| Visit Address/Woon-/verblijfadres | <em>PHYS</em>             |                 | <em>home</em> | <em>physical</em> |
-| Temporary Address/Tijdelijk adres | <em>TMP</em>              |                 | <em>temp</em> |            |
-| Work Place/Werkadres              | <em>WP</em>               |                 | <em>work</em> |            |
-| Vacation Home/Vakantie adres      | <em>HV</em>               |                 | <em>temp</em> |            |</p>
-<p>If Address.type is <em>both</em> then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.</p>
-<p>NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension.</p>
-<br/><div style="color:DarkGray;text-decoration:line-through"><p>Addresses for the individual.</p>
-</div></td></tr><tr><td style="white-space: nowrap">Short</td><td>AddressInformation<span style="color:DarkGray;text-decoration:line-through">Addresses for the individual</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><p>Note: address is for postal addresses, not physical locations.</p>
-<br/><div style="color:DarkGray;text-decoration:line-through"><p>Patient may have multiple addresses with different uses or applicable periods.</p>
-</div></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">0</span>..<span style="color:DarkGray">*</span><br/>This element is affected by the following invariants: ele-1, nl-streetname-if-official-and-other-line-parts</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/datatypes.html#Address">Address</a></span>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-address">nl-core-address</a>)</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="color:DarkGray">May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.</p>
-</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>AdresInformatie, Adresgegevens</td></tr><tr><td style="white-space: nowrap">Example</td><td>&lt;br/&gt;&lt;b&gt;Example of a Vacation Home address&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "HV",
-        "display" : "Vakantie adres"
-      }]
-    }
-  }],
-  "use" : "temp",
-  "line" : ["Binnenkant 12A Hoog"],
-  "_line" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-      "valueString" : "Binnenkant"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-      "valueString" : "12"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
-      "valueString" : "A"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
-      "valueString" : "Hoog"
-    }]
-  }],
-  "city" : "Amsterdam",
-  "state" : "NH",
-  "postalCode" : "1000AA",
-  "country" : "NLD"
-}
-&lt;br/&gt;&lt;b&gt;Example of a Primary Home address&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "HP",
-        "display" : "Officieel adres"
-      }]
-    }
-  },
-  {
-    "url" : "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official",
-    "valueBoolean" : true
-  }],
-  "use" : "home",
-  "line" : ["Binnenkant to 10"],
-  "_line" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-      "valueString" : "Binnenkant"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-      "valueString" : "to"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-      "valueString" : "10"
-    }]
-  }],
-  "city" : "Amsterdam",
-  "state" : "NH",
-  "postalCode" : "1001AA",
-  "country" : "NLD"
-}
-</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() | (children().count() &gt; id.count())</code>)<br/><b title="Formal Invariant Identifier">nl-streetname-if-official-and-other-line-parts</b>: Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value (<code>(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))</code>)</td></tr>
-
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.animal">  </a><span style="color: grey">92</span><b>. Patient.animal</b><a href="#key_Patient.animal" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">This patient is known to be an animal.</p>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.animal">  </a><span style="color: grey">90</span><b>. Patient.animal</b><a href="#key_Patient.animal" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">This patient is known to be an animal.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td><span style="color:DarkGray">This patient is known to be an animal (non-human)</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="color:DarkGray">The animal element is labeled "Is Modifier" since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject declared animal records.   The absense of the animal element does not imply that the patient is a human. If a system requires such a positive assertion that the patient is human, an extension will be required.  (Do not use a species of homo-sapiens in animal species, as this would incorrectly infer that the patient is an animal).</p>
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">0</span>..<span style="color:DarkGray">1</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#ismodifier">Is Modifier</a></td><td><span style="color:DarkGray">true</span> because <span style="color:DarkGray">No Modifier Reason provideed in previous versions of FHIR</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="color:DarkGray">Many clinical systems are extended to care for animal patients as well as human.</p>
 </td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() | (children().count() &gt; id.count())</code>)<br/><span style="color:DarkGray;text-decoration:line-through"><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (hasValue() | (children().count() &gt; id.count()))</span></td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.animal.modifierExtension">  </a><span style="color: grey">94</span><b>. Patient.animal.modifierExtension</b><a href="#key_Patient.animal.modifierExtension" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.animal.modifierExtension">  </a><span style="color: grey">92</span><b>. Patient.animal.modifierExtension</b><a href="#key_Patient.animal.modifierExtension" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td><span style="color:DarkGray">Extensions that cannot be ignored</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="color:DarkGray">There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">0</span>..<span style="color:DarkGray">*</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/extensibility.html#Extension">Extension</a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#ismodifier">Is Modifier</a></td><td><span style="color:DarkGray">true</span> because <span style="color:DarkGray">No Modifier Reason provideed in previous versions of FHIR</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td><span style="color:DarkGray">extensions</span>, <span style="color:DarkGray">user content</span>, <span style="color:DarkGray">modifiers</span></td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.animal.species">  </a><span style="color: grey">96</span><b>. Patient.animal.species</b><a href="#key_Patient.animal.species" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">Identifies the high level taxonomic categorization of the kind of animal.</p>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.animal.species">  </a><span style="color: grey">94</span><b>. Patient.animal.species</b><a href="#key_Patient.animal.species" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">Identifies the high level taxonomic categorization of the kind of animal.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td><span style="color:DarkGray">E.g. Dog, Cow</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="color:DarkGray">If the patient is non-human, at least a species SHALL be specified. Species SHALL be a widely recognised taxonomic classification.  It may or may not be Linnaean taxonomy and may or may not be at the level of species. If the level is finer than species--such as a breed code--the code system used SHALL allow inference of the species.  (The common example is that the word "Hereford" does not allow inference of the species Bos taurus, because there is a Hereford pig breed, but the SNOMED CT code for "Hereford Cattle Breed" does.).</p>
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">1</span>..<span style="color:DarkGray">1</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/terminologies.html">Binding</a></td><td><span><span style="color:DarkGray">For example codes, see </span> <a href="http://hl7.org/fhir/STU3/valueset-animal-species.html">AnimalSpecies</a><span style="color:DarkGray;text-decoration:line-through">http://hl7.org/fhir/ValueSet/animal-species</span><br/>(<a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a> to <span class="copy-text-inline"><code>http://hl7.org/fhir/ValueSet/animal-species</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/animal-species" title="Click to Copy URL" class="btn-copy"></button></span>)</span><br/><p style="color:DarkGray">The species of an animal.</p>
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="color:DarkGray">Need to know what kind of animal.</p>
 </td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.generalPractitioner">  </a><span style="color: grey">98</span><b>. Patient.generalPractitioner</b><a href="#key_Patient.generalPractitioner" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">Patient's nominated care provider.</p>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.generalPractitioner">  </a><span style="color: grey">96</span><b>. Patient.generalPractitioner</b><a href="#key_Patient.generalPractitioner" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">Patient's nominated care provider.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>GeneralPractitioner<span style="color:DarkGray;text-decoration:line-through">Patient's nominated primary care provider</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="color:DarkGray">This may be the primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disablity setting, or even organization that will provide people to perform the care provider roles.</p>
 <p style="color:DarkGray">It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources.</p>
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">0</span>..1<span style="color:DarkGray;text-decoration:line-through">*</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/references.html#Reference">Reference</a></span>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-organization">nl-core-organization</a>, <a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner">nl-core-practitioner</a>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner</a></span>)</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td><span style="color:DarkGray">careProvider</span>, Huisarts</td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.generalPractitioner.extension:practitionerRole">  </a><span style="color: grey">100</span><b>. Patient.generalPractitioner.extension:practitionerRole</b><a href="#key_Patient.generalPractitioner.extension:practitionerRole" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/profiling.html#slicing">Slice Name</a></td><td>practitionerRole</td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Optional Extension Element - found in all resources.</p>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.generalPractitioner.extension:practitionerRole">  </a><span style="color: grey">98</span><b>. Patient.generalPractitioner.extension:practitionerRole</b><a href="#key_Patient.generalPractitioner.extension:practitionerRole" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/profiling.html#slicing">Slice Name</a></td><td>practitionerRole</td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Optional Extension Element - found in all resources.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>Optional Extensions Element</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/extensibility.html#Extension">Extension</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">PractitionerRole Reference</a>) (Extension Type: <a href="http://hl7.org/fhir/STU3/references.html#Reference">Reference</a>)</td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.managingOrganization">  </a><span style="color: grey">102</span><b>. Patient.managingOrganization</b><a href="#key_Patient.managingOrganization" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">Organization that is the custodian of the patient record.</p>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.managingOrganization">  </a><span style="color: grey">100</span><b>. Patient.managingOrganization</b><a href="#key_Patient.managingOrganization" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">Organization that is the custodian of the patient record.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td><span style="color:DarkGray">Organization that is the custodian of the patient record</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="color:DarkGray">There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association).</p>
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">0</span>..<span style="color:DarkGray">1</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/references.html#Reference">Reference</a></span>(<span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></span>)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="color:DarkGray">Need to know who recognizes this patient record, manages and updates it.</p>
 </td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.link">  </a><span style="color: grey">104</span><b>. Patient.link</b><a href="#key_Patient.link" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">Link to another patient resource that concerns the same actual patient.</p>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.link">  </a><span style="color: grey">102</span><b>. Patient.link</b><a href="#key_Patient.link" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">Link to another patient resource that concerns the same actual patient.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td><span style="color:DarkGray">Link to another patient resource that concerns the same actual person</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="color:DarkGray">There is no assumption that linked patient records have mutual links.</p>
 <p style="color:DarkGray">This element is labelled as a modifier because it may not be the main Patient resource, and the referenced patient should be used instead of this Patient record. This is when the link.type value is 'replaced-by'.</p>
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">0</span>..<span style="color:DarkGray">*</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#ismodifier">Is Modifier</a></td><td><span style="color:DarkGray">true</span> because <span style="color:DarkGray">No Modifier Reason provideed in previous versions of FHIR</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="color:DarkGray">There are multiple usecases:</p>
@@ -655,15 +504,15 @@
 </ul>
 </td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() | (children().count() &gt; id.count())</code>)<br/><span style="color:DarkGray;text-decoration:line-through"><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (hasValue() | (children().count() &gt; id.count()))</span></td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.link.modifierExtension">  </a><span style="color: grey">106</span><b>. Patient.link.modifierExtension</b><a href="#key_Patient.link.modifierExtension" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.link.modifierExtension">  </a><span style="color: grey">104</span><b>. Patient.link.modifierExtension</b><a href="#key_Patient.link.modifierExtension" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td><span style="color:DarkGray">Extensions that cannot be ignored</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="color:DarkGray">There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">0</span>..<span style="color:DarkGray">*</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/extensibility.html#Extension">Extension</a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#ismodifier">Is Modifier</a></td><td><span style="color:DarkGray">true</span> because <span style="color:DarkGray">No Modifier Reason provideed in previous versions of FHIR</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td><span style="color:DarkGray">extensions</span>, <span style="color:DarkGray">user content</span>, <span style="color:DarkGray">modifiers</span></td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.link.other">  </a><span style="color: grey">108</span><b>. Patient.link.other</b><a href="#key_Patient.link.other" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">The other patient resource that the link refers to.</p>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.link.other">  </a><span style="color: grey">106</span><b>. Patient.link.other</b><a href="#key_Patient.link.other" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">The other patient resource that the link refers to.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td><span style="color:DarkGray">The other patient or related person resource that the link refers to</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="color:DarkGray">Referencing a RelatedPerson here removes the need to use a Person record to associate a Patient and RelatedPerson as the same individual.</p>
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">1</span>..<span style="color:DarkGray">1</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/references.html#Reference">Reference</a></span>(<span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/patient.html">Patient</a></span>, <span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson</a></span>)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.link.type">  </a><span style="color: grey">110</span><b>. Patient.link.type</b><a href="#key_Patient.link.type" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">The type of link between this patient resource and another patient resource.</p>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Patient.link.type">  </a><span style="color: grey">108</span><b>. Patient.link.type</b><a href="#key_Patient.link.type" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">The type of link between this patient resource and another patient resource.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td><span style="color:DarkGray">replaced-by | replaces | refer | seealso - type of link</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">1</span>..<span style="color:DarkGray">1</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/terminologies.html">Binding</a></td><td><span><span style="color:DarkGray">The codes SHALL be taken from </span> <a href="http://hl7.org/fhir/STU3/valueset-link-type.html">LinkType</a><span style="color:DarkGray;text-decoration:line-through">http://hl7.org/fhir/ValueSet/link-type</span><br/>(<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a> to <span class="copy-text-inline"><code>http://hl7.org/fhir/ValueSet/link-type</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type" title="Click to Copy URL" class="btn-copy"></button></span>)</span><br/><p style="color:DarkGray">The type of link between this patient resource and another patient resource.</p>
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr>
 
@@ -980,65 +829,10 @@
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true because No Modifier Reason provideed in previous versions of FHIR</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">Need to be able to mark a patient record as not to be used because it was created in error.</p>
 </td></tr><tr><td style="white-space: nowrap">Default Value</td><td><code>true</code></td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.name">  </a><span style="color: grey">140</span><b>. Patient.name</b><a href="#Patient.name" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">A human's name with the ability to identify parts and usage.</p>
-</td></tr><tr><td style="white-space: nowrap">Short</td><td>NameInformation</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">Dutch names require that certain name parts are separately communicable. For this reason, extensions are added onto the base HumanName element to mark the meaning of each part. A Dutch HumanName is still a proper FHIR HumanName; however, there might be an incompatibilty with the default FHIR mechanism for communicating given names. See the compatibility note below for more information.</p>
-<p style="font-size: 11px">The extension elements cover birth name (NL: eigennaam / geslachtsnaam) and partner/spouse name. Both may have a prefix (NL: voorvoegsel). When a person marries, he or she may keep their own name, assume the partner name, append the partner name to their own name, or the other way around.</p>
-<p style="font-size: 11px"><strong>Incompatibility note</strong>: It has come to light that this specification deviates from the way that the HumanName datatype is normally used. This will be fixed in a future release. However, current implementations should be aware of the special considerations regarding the use of this specification.</p>
-<p style="font-size: 11px">The issue at hand is the way alternative representations of a name, like initials or a nickname, are communicated. Normally this is done using multiple HumanName instances, which are differentiated using the <code>.use</code> element. However, this specification allows for including all alternative representations in the <em>same</em> HumanName instance, with the expectation that the extensions provide enough information for receiving systems to differentiate them. However, this means that contrary to the normal usage of this datatype, repetitions of <code>.given</code> names cannot be concatenated to get the full list of given names; the list might be a mix of full names, nicknames and initials.</p>
-<p style="font-size: 11px">Since multiple implementations are based on this specification, sending systems are advised (but not required) to keep the approach with one HumanName instance, while receiving systems should be able to handle this one-instance approach. More specifically:</p>
-<ul>
-<li style="font-size: 11px">Sending and receiving systems SHOULD always use the specified extensions when using this datatype.</li>
-<li style="font-size: 11px">Sending systems are encouraged to populate the <code>.text</code> element to unambigiously communicate the person's name.</li>
-<li style="font-size: 11px">Sending systems are encouraged to send either the full given names or the initials, but not both. This alleviates the duplication of names in <code>.given</code>.</li>
-<li style="font-size: 11px">When a sending system uses the current one-instance approach for communicating multiple representations, <code>.use</code> MAY NOT be populated. After all, it is not possible to select a single <code>.use</code> when the instance contains different representations.</li>
-<li style="font-size: 11px">When a receiving system interprets the instance as the single-instance-multiple-representations approach, the <code>.given</code> names marked as initials SHOULD be interpreted as alternatives to the full given names. Note the underlying HCIM expects both the <em>list</em> of full names and <em>list</em> of initials to be a single string; there's no match for an initial to a full name. The instance SHOULD be regarded as using this approach when:</li>
-<li style="font-size: 11px">They encounter a single instance</li>
-<li style="font-size: 11px">And the <code>.use</code> element is absent</li>
-<li style="font-size: 11px">And all the name parts are differentiated using the specified extensions</li>
-<li style="font-size: 11px">In any other circumstance, receiving systems SHOULD interpret the usage as the normal use.</li>
-</ul>
-<p style="font-size: 11px">Example: miss Irma Jongeneel marries mister de Haas and assumes the name Irma Jongeneel-de Haas:</p>
-<ul>
-<li style="font-size: 11px"><code>.family</code> = "Jongeneel-de Haas"</li>
-<li style="font-size: 11px"><code>.given</code> = "Irma" (with <code>.given:iso21090EnQualifier</code> = <em>BR</em>)</li>
-<li style="font-size: 11px"><code>.family:humannameOwnName</code> = "Jongeneel"</li>
-<li style="font-size: 11px"><code>.family:humannamePartnerPrefix</code> = "de "</li>
-<li style="font-size: 11px"><code>.family:humannamePartnerName</code> = "Haas"</li>
-</ul>
-</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..*<br/>This element is affected by the following invariants: ele-1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-humanname">nl-core-humanname</a>)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">Need to be able to track the patient by multiple names. Examples are your official name and a partner name.</p>
-</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Naamgegevens</td></tr><tr><td style="white-space: nowrap">Example</td><td>&lt;br/&gt;&lt;b&gt;Structured HumanName (preferred above unstructured)&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
-    "valueCode" : "NL4"
-  }],
-  "text" : "Irma Jongeneel-de Haas",
-  "family" : "Jongeneel-de Haas",
-  "_family" : {
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-      "valueString" : "Jongeneel"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
-      "valueString" : "de"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
-      "valueString" : "Haas"
-    }]
-  },
-  "given" : ["Irma"],
-  "_given" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
-      "valueCode" : "CL"
-    }]
-  }]
-}
-&lt;br/&gt;&lt;b&gt;Unstructured HumanName&lt;/b&gt;:{
-  "text" : "Irma Jongeneel-de Haas"
-}
-</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() | (children().count() &gt; id.count())</code>)<br/><b title="Formal Invariant Identifier">nl-core-humanname-1</b>: if you specify a prefix for an own name then an own name is also expected (<code>name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()</code>)<br/><b title="Formal Invariant Identifier">nl-core-humanname-2</b>: if you specify a voorvoegsel for a partner name then a partner name is also expected (<code>name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()</code>)<br/><b title="Formal Invariant Identifier">zv-pat-1</b>: Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present. (<code>(family.exists() or given.exists() or text.exists())</code>)<br/><b title="Formal Invariant Identifier">zv-pat-2</b>: To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present. (<code>text.exists()</code>)</td></tr>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.name">  </a><span style="color: grey">140</span><b>. Patient.name</b><a href="#Patient.name" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">A name associated with the individual.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>NameInformation</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">A patient may have multiple names with different uses or applicable periods. For animals, the name is a "HumanName" in the sense that is assigned and used by humans and has the same patterns.</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-humanname">nl-core-humanname</a>)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">Need to be able to track the patient by multiple names. Examples are your official name and a partner name.</p>
+</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Naamgegevens</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">zv-pat-1</b>: Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present. (<code>(family.exists() or given.exists() or text.exists())</code>)<br/><b title="Formal Invariant Identifier">zv-pat-2</b>: To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present. (<code>text.exists()</code>)</td></tr>
 
 <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.name.id">  </a><span style="color: grey">142</span><b>. Patient.name.id</b><a href="#Patient.name.id" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>xml:id (or equivalent in JSON)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr><tr><td style="white-space: nowrap">XML Format</td><td>In the XML format, this property is represented as an attribute.</td></tr>
@@ -1213,209 +1007,9 @@
 </td></tr>
 
 <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.telecom">  </a><span style="color: grey">232</span><b>. Patient.telecom</b><a href="#Patient.telecom" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">A contact detail for the individual. Note that there is no support for multiple use values like 'mobile business'.</p>
-</td></tr><tr><td style="white-space: nowrap">Short</td><td>ContactInformation</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address may not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).</p>
-</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..*<br/>This element is affected by the following invariants: ele-1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint">ContactPoint</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint">nl-core-contactpoint</a>)</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">People have (primary) ways to contact them in some way such as phone, email.</p>
-</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Contactgegevens</td></tr><tr><td style="white-space: nowrap">Example</td><td>&lt;br/&gt;&lt;b&gt;Mobile business phone number. Note: the mobile nature stems from the number being an 06-* number.&lt;/b&gt;:{
-  "system" : "phone",
-  "value" : "+31611234567",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Mobile phone number undetermined private/business. Note: the mobile nature stems from the number being an 06-* number.&lt;/b&gt;:{
-  "system" : "phone",
-  "value" : "+31611234567",
-  "use" : "mobile"
-}
-&lt;br/&gt;&lt;b&gt;Primary Home Land Line&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "LL",
-        "display" : "Land Line"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Temporary Land Line&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "LL",
-        "display" : "Land Line"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "temp"
-}
-&lt;br/&gt;&lt;b&gt;Primary Work Land Line&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "LL",
-        "display" : "Land Line"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Primary Home Fax&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "FAX",
-        "display" : "Fax"
-      }]
-    }
-  }],
-  "system" : "fax",
-  "value" : "...",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Temporary Fax&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "FAX",
-        "display" : "Fax"
-      }]
-    }
-  }],
-  "system" : "fax",
-  "value" : "...",
-  "use" : "temp"
-}
-&lt;br/&gt;&lt;b&gt;Primary Work Fax&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "FAX",
-        "display" : "Fax"
-      }]
-    }
-  }],
-  "system" : "fax",
-  "value" : "...",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Primary Home Mobile Phone&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "MC",
-        "display" : "Mobile Phone"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Temporary Mobile Phone&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "MC",
-        "display" : "Mobile Phone"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "temp"
-}
-&lt;br/&gt;&lt;b&gt;Primary Work Mobile Phone&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "MC",
-        "display" : "Mobile Phone"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Primary Home Pager&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "PG",
-        "display" : "Pager"
-      }]
-    }
-  }],
-  "system" : "pager",
-  "value" : "...",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Temporary Pager&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "PG",
-        "display" : "Pager"
-      }]
-    }
-  }],
-  "system" : "pager",
-  "value" : "...",
-  "use" : "temp"
-}
-&lt;br/&gt;&lt;b&gt;Primary Work Pager&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "PG",
-        "display" : "Pager"
-      }]
-    }
-  }],
-  "system" : "pager",
-  "value" : "...",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Private email address&lt;/b&gt;:{
-  "system" : "email",
-  "value" : "giesput@myweb.nl",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Work email address&lt;/b&gt;:{
-  "system" : "email",
-  "value" : "example@workplace.nl",
-  "use" : "work"
-}
-</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() | (children().count() &gt; id.count())</code>)<br/><b title="Formal Invariant Identifier">cpt-2</b>: A system is required if a value is provided. (<code>value.empty() or system.exists()</code>)</td></tr>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>A contact detail for the individual</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address may not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint">ContactPoint</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint">nl-core-contactpoint</a>)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">People have (primary) ways to contact them in some way such as phone, email.</p>
+</td></tr>
 
 <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.gender">  </a><span style="color: grey">234</span><b>. Patient.gender</b><a href="#Patient.gender" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>Gender</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">The gender may not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though the vast majority of systems and contexts only support M and F.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific gender aspect of interest (anatomical, chromosonal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosonal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overrideable error, not a "hard" error.</p>
@@ -1466,97 +1060,10 @@
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td>Choice of: <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a>, <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a></td></tr><tr><td style="white-space: nowrap">[x] Note</td><td>See<a href="http://hl7.org/fhir/STU3/formats.html#choice">Choice of Data Types</a>for further information about how to use [x]</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true because No Modifier Reason provideed in previous versions of FHIR</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr><tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Must Support Types</a></td><td>No must-support rules about the choice of types/profiles</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.</p>
 </td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Overlijdensindicator/DatumOverlijden</td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.address">  </a><span style="color: grey">258</span><b>. Patient.address</b><a href="#Patient.address" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.</p>
-<p style="font-size: 11px">To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.</p>
-<p style="font-size: 11px"><strong>Separate address parts</strong></p>
-<p style="font-size: 11px">The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.</p>
-<p style="font-size: 11px"><strong>Custom address types</strong></p>
-<p style="font-size: 11px">The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps &lt;http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse&gt; and &lt;http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType&gt; as well). The HCIM code itself should also be included using the AddressType extension.</p>
-<p style="font-size: 11px">| HCIM                              |<code>.ext:AddressType</code> | <code>.ext:official</code> | <code>.use</code> | <code>.type</code>    |
-|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|
-| Postal Address/Postadres          | <em>PST</em>              |                 |        | <em>postal</em>   |
-| Primary Home/Officieel adres      | <em>HP</em>               | true            | <em>home</em> |            |
-| Visit Address/Woon-/verblijfadres | <em>PHYS</em>             |                 | <em>home</em> | <em>physical</em> |
-| Temporary Address/Tijdelijk adres | <em>TMP</em>              |                 | <em>temp</em> |            |
-| Work Place/Werkadres              | <em>WP</em>               |                 | <em>work</em> |            |
-| Vacation Home/Vakantie adres      | <em>HV</em>               |                 | <em>temp</em> |            |</p>
-<p style="font-size: 11px">If Address.type is <em>both</em> then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.</p>
-<p style="font-size: 11px">NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension.</p>
-</td></tr><tr><td style="white-space: nowrap">Short</td><td>AddressInformation</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">Note: address is for postal addresses, not physical locations.</p>
-</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..*<br/>This element is affected by the following invariants: ele-1, nl-streetname-if-official-and-other-line-parts</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#Address">Address</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-address">nl-core-address</a>)</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.</p>
-</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>AdresInformatie, Adresgegevens</td></tr><tr><td style="white-space: nowrap">Example</td><td>&lt;br/&gt;&lt;b&gt;Example of a Vacation Home address&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "HV",
-        "display" : "Vakantie adres"
-      }]
-    }
-  }],
-  "use" : "temp",
-  "line" : ["Binnenkant 12A Hoog"],
-  "_line" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-      "valueString" : "Binnenkant"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-      "valueString" : "12"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
-      "valueString" : "A"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
-      "valueString" : "Hoog"
-    }]
-  }],
-  "city" : "Amsterdam",
-  "state" : "NH",
-  "postalCode" : "1000AA",
-  "country" : "NLD"
-}
-&lt;br/&gt;&lt;b&gt;Example of a Primary Home address&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "HP",
-        "display" : "Officieel adres"
-      }]
-    }
-  },
-  {
-    "url" : "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official",
-    "valueBoolean" : true
-  }],
-  "use" : "home",
-  "line" : ["Binnenkant to 10"],
-  "_line" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-      "valueString" : "Binnenkant"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-      "valueString" : "to"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-      "valueString" : "10"
-    }]
-  }],
-  "city" : "Amsterdam",
-  "state" : "NH",
-  "postalCode" : "1001AA",
-  "country" : "NLD"
-}
-</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() | (children().count() &gt; id.count())</code>)<br/><b title="Formal Invariant Identifier">nl-streetname-if-official-and-other-line-parts</b>: Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value (<code>(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))</code>)</td></tr>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.address">  </a><span style="color: grey">258</span><b>. Patient.address</b><a href="#Patient.address" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Addresses for the individual.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>AddressInformation</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">Patient may have multiple addresses with different uses or applicable periods.</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#Address">Address</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-address">nl-core-address</a>)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.</p>
+</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Adresgegevens</td></tr>
 
 <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.maritalStatus">  </a><span style="color: grey">260</span><b>. Patient.maritalStatus</b><a href="#Patient.maritalStatus" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">This field contains a patient's most recent marital (civil) status. A person’s marital status according to the terms and definition in the Dutch civil code.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>MaritalStatus</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/terminologies.html">Binding</a></td><td><span>Unless not suitable, these codes SHALL be taken from  <a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000">BurgerlijkeStaatCodelijst</a><br/>(<a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a> to <span class="copy-text-inline"><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000" title="Click to Copy URL" class="btn-copy"></button></span>)</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">Most, if not all systems capture it.</p>
@@ -1603,65 +1110,9 @@ If a bool value was provided for this tripplets examle, then all 3 patient recor
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>Role</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/terminologies.html">Binding</a></td><td><span>The codes SHALL be taken from  <a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000">RolCodelijst</a><br/>(<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a> to <span class="copy-text-inline"><code>http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000</code><button data-clipboard-text="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000" title="Click to Copy URL" class="btn-copy"></button></span>)</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">Used to determine which contact person is the most relevant to approach, depending on circumstances.</p>
 </td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Rol</td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.contact.name">  </a><span style="color: grey">280</span><b>. Patient.contact.name</b><a href="#Patient.contact.name" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">A human's name with the ability to identify parts and usage.</p>
-</td></tr><tr><td style="white-space: nowrap">Short</td><td>NameInformation</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">Dutch names require that certain name parts are separately communicable. For this reason, extensions are added onto the base HumanName element to mark the meaning of each part. A Dutch HumanName is still a proper FHIR HumanName; however, there might be an incompatibilty with the default FHIR mechanism for communicating given names. See the compatibility note below for more information.</p>
-<p style="font-size: 11px">The extension elements cover birth name (NL: eigennaam / geslachtsnaam) and partner/spouse name. Both may have a prefix (NL: voorvoegsel). When a person marries, he or she may keep their own name, assume the partner name, append the partner name to their own name, or the other way around.</p>
-<p style="font-size: 11px"><strong>Incompatibility note</strong>: It has come to light that this specification deviates from the way that the HumanName datatype is normally used. This will be fixed in a future release. However, current implementations should be aware of the special considerations regarding the use of this specification.</p>
-<p style="font-size: 11px">The issue at hand is the way alternative representations of a name, like initials or a nickname, are communicated. Normally this is done using multiple HumanName instances, which are differentiated using the <code>.use</code> element. However, this specification allows for including all alternative representations in the <em>same</em> HumanName instance, with the expectation that the extensions provide enough information for receiving systems to differentiate them. However, this means that contrary to the normal usage of this datatype, repetitions of <code>.given</code> names cannot be concatenated to get the full list of given names; the list might be a mix of full names, nicknames and initials.</p>
-<p style="font-size: 11px">Since multiple implementations are based on this specification, sending systems are advised (but not required) to keep the approach with one HumanName instance, while receiving systems should be able to handle this one-instance approach. More specifically:</p>
-<ul>
-<li style="font-size: 11px">Sending and receiving systems SHOULD always use the specified extensions when using this datatype.</li>
-<li style="font-size: 11px">Sending systems are encouraged to populate the <code>.text</code> element to unambigiously communicate the person's name.</li>
-<li style="font-size: 11px">Sending systems are encouraged to send either the full given names or the initials, but not both. This alleviates the duplication of names in <code>.given</code>.</li>
-<li style="font-size: 11px">When a sending system uses the current one-instance approach for communicating multiple representations, <code>.use</code> MAY NOT be populated. After all, it is not possible to select a single <code>.use</code> when the instance contains different representations.</li>
-<li style="font-size: 11px">When a receiving system interprets the instance as the single-instance-multiple-representations approach, the <code>.given</code> names marked as initials SHOULD be interpreted as alternatives to the full given names. Note the underlying HCIM expects both the <em>list</em> of full names and <em>list</em> of initials to be a single string; there's no match for an initial to a full name. The instance SHOULD be regarded as using this approach when:</li>
-<li style="font-size: 11px">They encounter a single instance</li>
-<li style="font-size: 11px">And the <code>.use</code> element is absent</li>
-<li style="font-size: 11px">And all the name parts are differentiated using the specified extensions</li>
-<li style="font-size: 11px">In any other circumstance, receiving systems SHOULD interpret the usage as the normal use.</li>
-</ul>
-<p style="font-size: 11px">Example: miss Irma Jongeneel marries mister de Haas and assumes the name Irma Jongeneel-de Haas:</p>
-<ul>
-<li style="font-size: 11px"><code>.family</code> = "Jongeneel-de Haas"</li>
-<li style="font-size: 11px"><code>.given</code> = "Irma" (with <code>.given:iso21090EnQualifier</code> = <em>BR</em>)</li>
-<li style="font-size: 11px"><code>.family:humannameOwnName</code> = "Jongeneel"</li>
-<li style="font-size: 11px"><code>.family:humannamePartnerPrefix</code> = "de "</li>
-<li style="font-size: 11px"><code>.family:humannamePartnerName</code> = "Haas"</li>
-</ul>
-</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1<br/>This element is affected by the following invariants: ele-1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-humanname">nl-core-humanname</a>)</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">Contact persons need to be identified by name, but it is uncommon to need details about multiple other names for that contact person.</p>
-</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Naamgegevens</td></tr><tr><td style="white-space: nowrap">Example</td><td>&lt;br/&gt;&lt;b&gt;Structured HumanName (preferred above unstructured)&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
-    "valueCode" : "NL4"
-  }],
-  "text" : "Irma Jongeneel-de Haas",
-  "family" : "Jongeneel-de Haas",
-  "_family" : {
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-      "valueString" : "Jongeneel"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
-      "valueString" : "de"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
-      "valueString" : "Haas"
-    }]
-  },
-  "given" : ["Irma"],
-  "_given" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
-      "valueCode" : "CL"
-    }]
-  }]
-}
-&lt;br/&gt;&lt;b&gt;Unstructured HumanName&lt;/b&gt;:{
-  "text" : "Irma Jongeneel-de Haas"
-}
-</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() | (children().count() &gt; id.count())</code>)<br/><b title="Formal Invariant Identifier">nl-core-humanname-1</b>: if you specify a prefix for an own name then an own name is also expected (<code>name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()</code>)<br/><b title="Formal Invariant Identifier">nl-core-humanname-2</b>: if you specify a voorvoegsel for a partner name then a partner name is also expected (<code>name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()</code>)</td></tr>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.contact.name">  </a><span style="color: grey">280</span><b>. Patient.contact.name</b><a href="#Patient.contact.name" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">A name associated with the contact person.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>NameInformation</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-humanname">nl-core-humanname</a>)</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">Contact persons need to be identified by name, but it is uncommon to need details about multiple other names for that contact person.</p>
+</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Naamgegevens</td></tr>
 
 <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.contact.name.id">  </a><span style="color: grey">282</span><b>. Patient.contact.name.id</b><a href="#Patient.contact.name.id" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>xml:id (or equivalent in JSON)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr><tr><td style="white-space: nowrap">XML Format</td><td>In the XML format, this property is represented as an attribute.</td></tr>
@@ -1835,324 +1286,14 @@ If a bool value was provided for this tripplets examle, then all 3 patient recor
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>Time period when name was/is in use</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#Period">Period</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">Allows names to be placed in historical context.</p>
 </td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.contact.telecom">  </a><span style="color: grey">372</span><b>. Patient.contact.telecom</b><a href="#Patient.contact.telecom" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Contact information includes a person's telephone numbers and email addresses. This datatype defines a common basis for expressing all contact information around the world, but adds extensions to express Dutch contacts specifically, according to the HCIM ContactInformation (v1.0, 2017). A Dutch ContactPoint still is a proper FHIR ContactPoint, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype. The table below explains how the HCIM concepts are mapped to the various FHIR elements. The HCIM code itself should also be included using the TelecomType extension.</p>
-<p style="font-size: 11px">| HCIM                                               | <code>.ext:TelecomType</code> | <code>.system</code> | <code>.use</code>   |
-|----------------------------------------------------|:------------------:|:---------:|:--------:|
-| Primary Home Land Line                             | <em>LL</em>               | <em>phone</em>   | <em>home</em>   |
-| Temporary Land Line                                | <em>LL</em>               | <em>phone</em>   | <em>temp</em>   |
-| Primary Work Land Line                             | <em>LL</em>               | <em>phone</em>   | <em>work</em>   |
-|                                                    |                    |           |          |
-| Primary Home Fax                                   | <em>FAX</em>              | <em>fax</em>     | <em>home</em>   |
-| Temporary Fax                                      | <em>FAX</em>              | <em>fax</em>     | <em>temp</em>   |
-| Primary Work Fax                                   | <em>FAX</em>              | <em>fax</em>     | <em>work</em>   |
-|                                                    |                    |           |          |
-| Primary Home Mobile Phone                          | <em>MC</em>               | <em>phone</em>   | <em>home</em>   |
-| Temporary Mobile Phone                             | <em>MC</em>               | <em>phone</em>   | <em>temp</em>   |
-| Primary Work Mobile Phone                          | <em>MC</em>               | <em>phone</em>   | <em>work</em>   |
-|                                                    |                    |           |          |
-| Primary Home Pager                                 | <em>PG</em>               | <em>pager</em>   | <em>home</em>   |
-| Temporary Pager                                    | <em>PG</em>               | <em>pager</em>   | <em>temp</em>   |
-| Primary Work Pager                                 | <em>PG</em>               | <em>pager</em>   | <em>work</em>   |
-|                                                    |                    |           |          |
-| Private email address                              |                    | <em>email</em>   | <em>home</em>   |
-| Work email address                                 |                    | <em>email</em>   | <em>work</em>   |
-|                                                    |                    |           |          |
-| Mobile phone number undetermined private/business  |                    | <em>phone</em>   | <em>mobile</em> |</p>
-</td></tr><tr><td style="white-space: nowrap">Short</td><td>ContactInformation</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">Telecommunication data details (phone/email) is physically modeled in the HCIM Patient, which is why the telecommunication mappings appear to be coming from the HCIM Patient instead of the HCIM ContactPerson</p>
-</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..*<br/>This element is affected by the following invariants: ele-1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint">ContactPoint</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint">nl-core-contactpoint</a>)</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">People have (primary) ways to contact them in some way such as phone, email.</p>
-</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Contactgegevens</td></tr><tr><td style="white-space: nowrap">Example</td><td>&lt;br/&gt;&lt;b&gt;Mobile business phone number. Note: the mobile nature stems from the number being an 06-* number.&lt;/b&gt;:{
-  "system" : "phone",
-  "value" : "+31611234567",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Mobile phone number undetermined private/business. Note: the mobile nature stems from the number being an 06-* number.&lt;/b&gt;:{
-  "system" : "phone",
-  "value" : "+31611234567",
-  "use" : "mobile"
-}
-&lt;br/&gt;&lt;b&gt;Primary Home Land Line&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "LL",
-        "display" : "Land Line"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Temporary Land Line&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "LL",
-        "display" : "Land Line"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "temp"
-}
-&lt;br/&gt;&lt;b&gt;Primary Work Land Line&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "LL",
-        "display" : "Land Line"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Primary Home Fax&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "FAX",
-        "display" : "Fax"
-      }]
-    }
-  }],
-  "system" : "fax",
-  "value" : "...",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Temporary Fax&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "FAX",
-        "display" : "Fax"
-      }]
-    }
-  }],
-  "system" : "fax",
-  "value" : "...",
-  "use" : "temp"
-}
-&lt;br/&gt;&lt;b&gt;Primary Work Fax&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "FAX",
-        "display" : "Fax"
-      }]
-    }
-  }],
-  "system" : "fax",
-  "value" : "...",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Primary Home Mobile Phone&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "MC",
-        "display" : "Mobile Phone"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Temporary Mobile Phone&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "MC",
-        "display" : "Mobile Phone"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "temp"
-}
-&lt;br/&gt;&lt;b&gt;Primary Work Mobile Phone&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "MC",
-        "display" : "Mobile Phone"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Primary Home Pager&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "PG",
-        "display" : "Pager"
-      }]
-    }
-  }],
-  "system" : "pager",
-  "value" : "...",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Temporary Pager&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "PG",
-        "display" : "Pager"
-      }]
-    }
-  }],
-  "system" : "pager",
-  "value" : "...",
-  "use" : "temp"
-}
-&lt;br/&gt;&lt;b&gt;Primary Work Pager&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "PG",
-        "display" : "Pager"
-      }]
-    }
-  }],
-  "system" : "pager",
-  "value" : "...",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Private email address&lt;/b&gt;:{
-  "system" : "email",
-  "value" : "giesput@myweb.nl",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Work email address&lt;/b&gt;:{
-  "system" : "email",
-  "value" : "example@workplace.nl",
-  "use" : "work"
-}
-</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() | (children().count() &gt; id.count())</code>)<br/><b title="Formal Invariant Identifier">cpt-2</b>: A system is required if a value is provided. (<code>value.empty() or system.exists()</code>)</td></tr>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.contact.telecom">  </a><span style="color: grey">372</span><b>. Patient.contact.telecom</b><a href="#Patient.contact.telecom" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">A contact detail for the person, e.g. a telephone number or an email address.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>A contact detail for the person</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">Telecommunication data details (phone/email) is physically modeled in the HCIM Patient, which is why the telecommunication mappings appear to be coming from the HCIM Patient instead of the HCIM ContactPerson</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint">ContactPoint</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint">nl-core-contactpoint</a>)</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">People have (primary) ways to contact them in some way such as phone, email.</p>
+</td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.contact.address">  </a><span style="color: grey">374</span><b>. Patient.contact.address</b><a href="#Patient.contact.address" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.</p>
-<p style="font-size: 11px">To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.</p>
-<p style="font-size: 11px"><strong>Separate address parts</strong></p>
-<p style="font-size: 11px">The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.</p>
-<p style="font-size: 11px"><strong>Custom address types</strong></p>
-<p style="font-size: 11px">The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps &lt;http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse&gt; and &lt;http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType&gt; as well). The HCIM code itself should also be included using the AddressType extension.</p>
-<p style="font-size: 11px">| HCIM                              |<code>.ext:AddressType</code> | <code>.ext:official</code> | <code>.use</code> | <code>.type</code>    |
-|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|
-| Postal Address/Postadres          | <em>PST</em>              |                 |        | <em>postal</em>   |
-| Primary Home/Officieel adres      | <em>HP</em>               | true            | <em>home</em> |            |
-| Visit Address/Woon-/verblijfadres | <em>PHYS</em>             |                 | <em>home</em> | <em>physical</em> |
-| Temporary Address/Tijdelijk adres | <em>TMP</em>              |                 | <em>temp</em> |            |
-| Work Place/Werkadres              | <em>WP</em>               |                 | <em>work</em> |            |
-| Vacation Home/Vakantie adres      | <em>HV</em>               |                 | <em>temp</em> |            |</p>
-<p style="font-size: 11px">If Address.type is <em>both</em> then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.</p>
-<p style="font-size: 11px">NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension.</p>
-</td></tr><tr><td style="white-space: nowrap">Short</td><td>AddressInformation</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">Note: address is for postal addresses, not physical locations.</p>
-</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1<br/>This element is affected by the following invariants: ele-1, nl-streetname-if-official-and-other-line-parts</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#Address">Address</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-address">nl-core-address</a>)</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">Need to keep track where the contact person can be contacted per postal mail or visited.</p>
-</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>AdresInformatie, Adresgegevens</td></tr><tr><td style="white-space: nowrap">Example</td><td>&lt;br/&gt;&lt;b&gt;Example of a Vacation Home address&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "HV",
-        "display" : "Vakantie adres"
-      }]
-    }
-  }],
-  "use" : "temp",
-  "line" : ["Binnenkant 12A Hoog"],
-  "_line" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-      "valueString" : "Binnenkant"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-      "valueString" : "12"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
-      "valueString" : "A"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
-      "valueString" : "Hoog"
-    }]
-  }],
-  "city" : "Amsterdam",
-  "state" : "NH",
-  "postalCode" : "1000AA",
-  "country" : "NLD"
-}
-&lt;br/&gt;&lt;b&gt;Example of a Primary Home address&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "HP",
-        "display" : "Officieel adres"
-      }]
-    }
-  },
-  {
-    "url" : "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official",
-    "valueBoolean" : true
-  }],
-  "use" : "home",
-  "line" : ["Binnenkant to 10"],
-  "_line" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-      "valueString" : "Binnenkant"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-      "valueString" : "to"
-    },
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-      "valueString" : "10"
-    }]
-  }],
-  "city" : "Amsterdam",
-  "state" : "NH",
-  "postalCode" : "1001AA",
-  "country" : "NLD"
-}
-</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() | (children().count() &gt; id.count())</code>)<br/><b title="Formal Invariant Identifier">nl-streetname-if-official-and-other-line-parts</b>: Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value (<code>(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))</code>)</td></tr>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.contact.address">  </a><span style="color: grey">374</span><b>. Patient.contact.address</b><a href="#Patient.contact.address" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Address for the contact person.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>AddressInformation</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#Address">Address</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-address">nl-core-address</a>)</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">Need to keep track where the contact person can be contacted per postal mail or visited.</p>
+</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Adresgegevens</td></tr>
 
 <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Patient.contact.gender">  </a><span style="color: grey">376</span><b>. Patient.contact.gender</b><a href="#Patient.contact.gender" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Administrative Gender - the gender that the contact person is considered to have for administration and record keeping purposes.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>male | female | other | unknown</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/terminologies.html">Binding</a></td><td><span>The codes SHALL be taken from  <a href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a><br/>(<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a> to <span class="copy-text-inline"><code>http://hl7.org/fhir/ValueSet/administrative-gender</code><button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender" title="Click to Copy URL" class="btn-copy"></button></span>)</span><br/><p>The gender of a person used for administrative purposes.</p>
@@ -2385,7 +1526,7 @@ If a bool value was provided for this tripplets examle, then all 3 patient recor
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.10.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Mon, Dec 23, 2024 15:35+0000">2024-12-23</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.10.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Dec 27, 2024 09:44+0000">2024-12-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

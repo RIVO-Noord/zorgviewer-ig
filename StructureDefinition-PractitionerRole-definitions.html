@@ -241,7 +241,7 @@
         
           Active
           
-            as of 2024-12-23
+            as of 2024-12-27
           
         
       </td>
@@ -500,231 +500,9 @@
 <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="PractitionerRole.healthcareService">  </a><span style="color: grey">74</span><b>. PractitionerRole.healthcareService</b><a href="#PractitionerRole.healthcareService" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">The list of healthcare services that this worker provides for this role's Organization/Location(s).</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>The list of healthcare services that this worker provides for this role's Organization/Location(s)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/references.html#Reference">Reference</a>(<a href="http://hl7.org/fhir/STU3/healthcareservice.html">HealthcareService</a>)</td></tr>
 
-<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="PractitionerRole.telecom">  </a><span style="color: grey">76</span><b>. PractitionerRole.telecom</b><a href="#PractitionerRole.telecom" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Contact information includes a person's telephone numbers and email addresses. This datatype defines a common basis for expressing all contact information around the world, but adds extensions to express Dutch contacts specifically, according to the HCIM ContactInformation (v1.0, 2017). A Dutch ContactPoint still is a proper FHIR ContactPoint, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype. The table below explains how the HCIM concepts are mapped to the various FHIR elements. The HCIM code itself should also be included using the TelecomType extension.</p>
-<p style="font-size: 11px">| HCIM                                               | <code>.ext:TelecomType</code> | <code>.system</code> | <code>.use</code>   |
-|----------------------------------------------------|:------------------:|:---------:|:--------:|
-| Primary Home Land Line                             | <em>LL</em>               | <em>phone</em>   | <em>home</em>   |
-| Temporary Land Line                                | <em>LL</em>               | <em>phone</em>   | <em>temp</em>   |
-| Primary Work Land Line                             | <em>LL</em>               | <em>phone</em>   | <em>work</em>   |
-|                                                    |                    |           |          |
-| Primary Home Fax                                   | <em>FAX</em>              | <em>fax</em>     | <em>home</em>   |
-| Temporary Fax                                      | <em>FAX</em>              | <em>fax</em>     | <em>temp</em>   |
-| Primary Work Fax                                   | <em>FAX</em>              | <em>fax</em>     | <em>work</em>   |
-|                                                    |                    |           |          |
-| Primary Home Mobile Phone                          | <em>MC</em>               | <em>phone</em>   | <em>home</em>   |
-| Temporary Mobile Phone                             | <em>MC</em>               | <em>phone</em>   | <em>temp</em>   |
-| Primary Work Mobile Phone                          | <em>MC</em>               | <em>phone</em>   | <em>work</em>   |
-|                                                    |                    |           |          |
-| Primary Home Pager                                 | <em>PG</em>               | <em>pager</em>   | <em>home</em>   |
-| Temporary Pager                                    | <em>PG</em>               | <em>pager</em>   | <em>temp</em>   |
-| Primary Work Pager                                 | <em>PG</em>               | <em>pager</em>   | <em>work</em>   |
-|                                                    |                    |           |          |
-| Private email address                              |                    | <em>email</em>   | <em>home</em>   |
-| Work email address                                 |                    | <em>email</em>   | <em>work</em>   |
-|                                                    |                    |           |          |
-| Mobile phone number undetermined private/business  |                    | <em>phone</em>   | <em>mobile</em> |</p>
-</td></tr><tr><td style="white-space: nowrap">Short</td><td>ContactInformation</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..*<br/>This element is affected by the following invariants: ele-1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint">ContactPoint</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint">nl-core-contactpoint</a>)</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">Often practitioners have a dedicated line for each location (or service) that they work at, and need to be able to define separate contact details for each of these.</p>
-</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td>Contactgegevens</td></tr><tr><td style="white-space: nowrap">Example</td><td>&lt;br/&gt;&lt;b&gt;Mobile business phone number. Note: the mobile nature stems from the number being an 06-* number.&lt;/b&gt;:{
-  "system" : "phone",
-  "value" : "+31611234567",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Mobile phone number undetermined private/business. Note: the mobile nature stems from the number being an 06-* number.&lt;/b&gt;:{
-  "system" : "phone",
-  "value" : "+31611234567",
-  "use" : "mobile"
-}
-&lt;br/&gt;&lt;b&gt;Primary Home Land Line&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "LL",
-        "display" : "Land Line"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Temporary Land Line&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "LL",
-        "display" : "Land Line"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "temp"
-}
-&lt;br/&gt;&lt;b&gt;Primary Work Land Line&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "LL",
-        "display" : "Land Line"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Primary Home Fax&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "FAX",
-        "display" : "Fax"
-      }]
-    }
-  }],
-  "system" : "fax",
-  "value" : "...",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Temporary Fax&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "FAX",
-        "display" : "Fax"
-      }]
-    }
-  }],
-  "system" : "fax",
-  "value" : "...",
-  "use" : "temp"
-}
-&lt;br/&gt;&lt;b&gt;Primary Work Fax&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-        "code" : "FAX",
-        "display" : "Fax"
-      }]
-    }
-  }],
-  "system" : "fax",
-  "value" : "...",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Primary Home Mobile Phone&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "MC",
-        "display" : "Mobile Phone"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Temporary Mobile Phone&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "MC",
-        "display" : "Mobile Phone"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "temp"
-}
-&lt;br/&gt;&lt;b&gt;Primary Work Mobile Phone&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "MC",
-        "display" : "Mobile Phone"
-      }]
-    }
-  }],
-  "system" : "phone",
-  "value" : "...",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Primary Home Pager&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "PG",
-        "display" : "Pager"
-      }]
-    }
-  }],
-  "system" : "pager",
-  "value" : "...",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Temporary Pager&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "PG",
-        "display" : "Pager"
-      }]
-    }
-  }],
-  "system" : "pager",
-  "value" : "...",
-  "use" : "temp"
-}
-&lt;br/&gt;&lt;b&gt;Primary Work Pager&lt;/b&gt;:{
-  "extension" : [{
-    "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://hl7.org/fhir/v3/AddressUse",
-        "code" : "PG",
-        "display" : "Pager"
-      }]
-    }
-  }],
-  "system" : "pager",
-  "value" : "...",
-  "use" : "work"
-}
-&lt;br/&gt;&lt;b&gt;Private email address&lt;/b&gt;:{
-  "system" : "email",
-  "value" : "giesput@myweb.nl",
-  "use" : "home"
-}
-&lt;br/&gt;&lt;b&gt;Work email address&lt;/b&gt;:{
-  "system" : "email",
-  "value" : "example@workplace.nl",
-  "use" : "work"
-}
-</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() | (children().count() &gt; id.count())</code>)<br/><b title="Formal Invariant Identifier">cpt-2</b>: A system is required if a value is provided. (<code>value.empty() or system.exists()</code>)</td></tr>
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="PractitionerRole.telecom">  </a><span style="color: grey">76</span><b>. PractitionerRole.telecom</b><a href="#PractitionerRole.telecom" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Contact details that are specific to the role/location/service.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Contact details that are specific to the role/location/service</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint">ContactPoint</a>(<a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint">nl-core-contactpoint</a>)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/STU3/search.html#summary">Summary</a></td><td>true</td></tr><tr><td style="white-space: nowrap">Requirements</td><td><p style="font-size: 11px">Often practitioners have a dedicated line for each location (or service) that they work at, and need to be able to define separate contact details for each of these.</p>
+</td></tr>
 
 <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="PractitionerRole.availableTime">  </a><span style="color: grey">78</span><b>. PractitionerRole.availableTime</b><a href="#PractitionerRole.availableTime" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">A collection of times that the Service Site is available.</p>
 </td></tr><tr><td style="white-space: nowrap">Short</td><td>Times the Service Site is available</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">More detailed availability information may be provided in associated Schedule/Slot resources.</p>
@@ -812,7 +590,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.10.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Mon, Dec 23, 2024 15:35+0000">2024-12-23</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.10.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Dec 27, 2024 09:44+0000">2024-12-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

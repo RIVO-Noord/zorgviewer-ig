@@ -10,7 +10,7 @@
   "name" : "Practitioner",
   "title" : "Practitioner",
   "status" : "active",
-  "date" : "2024-12-23T15:35:28+00:00",
+  "date" : "2024-12-27T09:44:10+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -40,12 +40,6 @@
     "name" : "HCIM HealthProfessional-v3.2(2017EN)"
   },
   {
-    "identity" : "hcim-contactinformation-v1.0-2017EN",
-    "uri" : "https://zibs.nl/wiki/ContactInformation-v1.0(2017EN)",
-    "name" : "HCIM ContactInformation-v1.0(2017EN)",
-    "comment" : "ContactInformation has become an independent information model as of release 2017 of the HCIMs."
-  },
-  {
     "identity" : "hcim-basicelements-v1.0-2017EN",
     "uri" : "https://zibs.nl/wiki/BasicElements-v1.0(2017EN)",
     "name" : "HCIM BasicElements-v1.0(2017EN)"
@@ -54,18 +48,6 @@
     "identity" : "hcim-healthprofessional-v3.0-2016EN",
     "uri" : "https://zibs.nl/wiki/HealthProfessional-v3.0(2016EN)",
     "name" : "HCIM HealthProfessional-v3.0(2016EN)"
-  },
-  {
-    "identity" : "hcim-contactinformation-v3.0-2016EN",
-    "uri" : "https://zibs.nl/wiki/Patient-v3.0(2016EN)",
-    "name" : "HCIM Patient-v3.0(2016EN)",
-    "comment" : "ContactInformation has become an independent information model as of release 2017 of the HCIMs"
-  },
-  {
-    "identity" : "hcim-contactinformation-v2.0.1-2015EN",
-    "uri" : "https://zibs.nl/wiki/Patient-v2.0.1(2015EN)",
-    "name" : "HCIM Patient-v2.0.1(2015EN)",
-    "comment" : "ContactInformation has become an independent information model as of release 2017 of the HCIMs"
   },
   {
     "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
@@ -1373,7 +1355,7 @@
       "path" : "Practitioner.name",
       "short" : "NameInformation",
       "definition" : "Health professional’s full name. If a health professional identification number is entered, it will be the name as listed in UZI, AGB or by the healthcare center.",
-      "comment" : "Dutch names require that certain name parts are separately communicable. For this reason, extensions are added onto the base HumanName element to mark the meaning of each part. A Dutch HumanName is still a proper FHIR HumanName; however, there might be an incompatibilty with the default FHIR mechanism for communicating given names. See the compatibility note below for more information.\r\n\r\nThe extension elements cover birth name (NL: eigennaam / geslachtsnaam) and partner/spouse name. Both may have a prefix (NL: voorvoegsel). When a person marries, he or she may keep their own name, assume the partner name, append the partner name to their own name, or the other way around.\r\n\r\n**Incompatibility note**: It has come to light that this specification deviates from the way that the HumanName datatype is normally used. This will be fixed in a future release. However, current implementations should be aware of the special considerations regarding the use of this specification. \r\n\r\nThe issue at hand is the way alternative representations of a name, like initials or a nickname, are communicated. Normally this is done using multiple HumanName instances, which are differentiated using the `.use` element. However, this specification allows for including all alternative representations in the _same_ HumanName instance, with the expectation that the extensions provide enough information for receiving systems to differentiate them. However, this means that contrary to the normal usage of this datatype, repetitions of `.given` names cannot be concatenated to get the full list of given names; the list might be a mix of full names, nicknames and initials.\r\n\r\nSince multiple implementations are based on this specification, sending systems are advised (but not required) to keep the approach with one HumanName instance, while receiving systems should be able to handle this one-instance approach. More specifically:\r\n\r\n* Sending and receiving systems SHOULD always use the specified extensions when using this datatype.\r\n* Sending systems are encouraged to populate the `.text` element to unambigiously communicate the person's name.\r\n* Sending systems are encouraged to send either the full given names or the initials, but not both. This alleviates the duplication of names in `.given`.\r\n* When a sending system uses the current one-instance approach for communicating multiple representations, `.use` MAY NOT be populated. After all, it is not possible to select a single `.use` when the instance contains different representations.\r\n* When a receiving system interprets the instance as the single-instance-multiple-representations approach, the `.given` names marked as initials SHOULD be interpreted as alternatives to the full given names. Note the underlying HCIM expects both the _list_ of full names and _list_ of initials to be a single string; there's no match for an initial to a full name. The instance SHOULD be regarded as using this approach when:\r\n  * They encounter a single instance\r\n  * And the `.use` element is absent\r\n  * And all the name parts are differentiated using the specified extensions\r\n* In any other circumstance, receiving systems SHOULD interpret the usage as the normal use.\r\n\r\nExample: miss Irma Jongeneel marries mister de Haas and assumes the name Irma Jongeneel-de Haas:\r\n\r\n* `.family` = \"Jongeneel-de Haas\"\r\n* `.given` = \"Irma\" (with `.given:iso21090EnQualifier` = _BR_)\r\n* `.family:humannameOwnName` = \"Jongeneel\"\r\n* `.family:humannamePartnerPrefix` = \"de \"\r\n* `.family:humannamePartnerName` = \"Haas\"",
+      "comment" : "The selection of the use property should ensure that there is a single usual name specified, and others use the nickname (alias), old, or other values as appropriate.\r\rIn general select the value to be used in the ResourceReference.display based on this:\r\r1. There is more than 1 name\r2. Use = usual\r3. Period is current to the date of the usage\r4. Use = official\r5. Other order as decided by internal business rules.",
       "requirements" : "The name(s) that a Practitioner is known by. Where there are multiple, the name that the practitioner is usually known as should be used in the display.",
       "alias" : ["Naamgegevens"],
       "min" : 1,
@@ -1387,70 +1369,7 @@
         "code" : "HumanName",
         "profile" : "http://fhir.nl/fhir/StructureDefinition/nl-core-humanname"
       }],
-      "example" : [{
-        "label" : "Structured HumanName (preferred above unstructured)",
-        "valueHumanName" : {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
-            "valueCode" : "NL4"
-          }],
-          "text" : "Irma Jongeneel-de Haas",
-          "family" : "Jongeneel-de Haas",
-          "_family" : {
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-              "valueString" : "Jongeneel"
-            },
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
-              "valueString" : "de"
-            },
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
-              "valueString" : "Haas"
-            }]
-          },
-          "given" : ["Irma"],
-          "_given" : [{
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
-              "valueCode" : "CL"
-            }]
-          }]
-        }
-      },
-      {
-        "label" : "Unstructured HumanName",
-        "valueHumanName" : {
-          "text" : "Irma Jongeneel-de Haas"
-        }
-      }],
-      "condition" : ["ele-1"],
       "constraint" : [{
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() | (children().count() > id.count())",
-        "xpath" : "@value|f:*|h:div",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      },
-      {
-        "key" : "nl-core-humanname-1",
-        "severity" : "error",
-        "human" : "if you specify a prefix for an own name then an own name is also expected",
-        "expression" : "name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()",
-        "xpath" : "not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-own-prefix']) or f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-own-name']",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
-      },
-      {
-        "key" : "nl-core-humanname-2",
-        "severity" : "error",
-        "human" : "if you specify a voorvoegsel for a partner name then a partner name is also expected",
-        "expression" : "name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()",
-        "xpath" : "not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix']) or f:extension[@url='http://hl7.org/fhir/StructureDefinition/humanname-partner-name']",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
-      },
-      {
         "key" : "zv-pra-1",
         "severity" : "error",
         "human" : "Either Practitioner.name.given and/or Practitioner.name.family and/or Practitioner.name.text SHALL be present.",
@@ -1469,6 +1388,7 @@
         "xpath" : "/f:name/f:text"
       }],
       "mustSupport" : true,
+      "isSummary" : true,
       "mapping" : [{
         "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
         "map" : "NL-CM:17.1.3",
@@ -1485,50 +1405,25 @@
         "comment" : "NameInformation"
       },
       {
-        "identity" : "hcim-nameinformation-v2.0.1-2015EN",
-        "map" : "NL-CM:0.1.6",
-        "comment" : "NameInformation"
-      },
-      {
-        "identity" : "hcim-nameinformation-v3.0-2016EN",
-        "map" : "NL-CM:0.1.6",
-        "comment" : "NameInformation"
-      },
-      {
-        "identity" : "hcim-nameinformation-v1.0.1-2017EN",
-        "map" : "NL-CM:20.4.1",
-        "comment" : "NameInformation"
-      },
-      {
-        "identity" : "BRP",
-        "map" : "02",
-        "comment" : "Naam"
-      },
-      {
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "XPN"
+        "map" : "XCN Components"
       },
       {
         "identity" : "rim",
-        "map" : "EN (actually, PN)"
+        "map" : "./name"
       },
       {
         "identity" : "servd",
-        "map" : "ProviderName"
+        "map" : "./PreferredName (GivenNames, FamilyName, TitleCode)"
       }]
     },
     {
       "id" : "Practitioner.telecom",
       "path" : "Practitioner.telecom",
-      "short" : "ContactInformation",
-      "definition" : "Contact information includes a person's telephone numbers and email addresses. This datatype defines a common basis for expressing all contact information around the world, but adds extensions to express Dutch contacts specifically, according to the HCIM ContactInformation (v1.0, 2017). A Dutch ContactPoint still is a proper FHIR ContactPoint, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype. The table below explains how the HCIM concepts are mapped to the various FHIR elements. The HCIM code itself should also be included using the TelecomType extension.\r\n\r\n| HCIM                                               | `.ext:TelecomType` | `.system` | `.use`   |\r\n|----------------------------------------------------|:------------------:|:---------:|:--------:|\r\n| Primary Home Land Line                             | _LL_               | _phone_   | _home_   |\r\n| Temporary Land Line                                | _LL_               | _phone_   | _temp_   |\r\n| Primary Work Land Line                             | _LL_               | _phone_   | _work_   |\r\n|                                                    |                    |           |          |\r\n| Primary Home Fax                                   | _FAX_              | _fax_     | _home_   |\r\n| Temporary Fax                                      | _FAX_              | _fax_     | _temp_   |\r\n| Primary Work Fax                                   | _FAX_              | _fax_     | _work_   |\r\n|                                                    |                    |           |          |\r\n| Primary Home Mobile Phone                          | _MC_               | _phone_   | _home_   |\r\n| Temporary Mobile Phone                             | _MC_               | _phone_   | _temp_   |\r\n| Primary Work Mobile Phone                          | _MC_               | _phone_   | _work_   |\r\n|                                                    |                    |           |          |\r\n| Primary Home Pager                                 | _PG_               | _pager_   | _home_   |\r\n| Temporary Pager                                    | _PG_               | _pager_   | _temp_   |\r\n| Primary Work Pager                                 | _PG_               | _pager_   | _work_   |\r\n|                                                    |                    |           |          |\r\n| Private email address                              |                    | _email_   | _home_   |\r\n| Work email address                                 |                    | _email_   | _work_   |\r\n|                                                    |                    |           |          |\r\n| Mobile phone number undetermined private/business  |                    | _phone_   | _mobile_ |",
+      "short" : "A contact detail for the practitioner (that apply to all roles)",
+      "definition" : "A contact detail for the practitioner, e.g. a telephone number or an email address.",
       "comment" : "Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification\r\rThese typically will have home numbers, or mobile numbers that are not role specific.",
       "requirements" : "Need to know how to reach a practitioner independent to any roles the practitioner may have.",
-      "alias" : ["Contactgegevens"],
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -1540,271 +1435,7 @@
         "code" : "ContactPoint",
         "profile" : "http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint"
       }],
-      "example" : [{
-        "label" : "Mobile business phone number. Note: the mobile nature stems from the number being an 06-* number.",
-        "valueContactPoint" : {
-          "system" : "phone",
-          "value" : "+31611234567",
-          "use" : "work"
-        }
-      },
-      {
-        "label" : "Mobile phone number undetermined private/business. Note: the mobile nature stems from the number being an 06-* number.",
-        "valueContactPoint" : {
-          "system" : "phone",
-          "value" : "+31611234567",
-          "use" : "mobile"
-        }
-      },
-      {
-        "label" : "Primary Home Land Line",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-                "code" : "LL",
-                "display" : "Land Line"
-              }]
-            }
-          }],
-          "system" : "phone",
-          "value" : "...",
-          "use" : "home"
-        }
-      },
-      {
-        "label" : "Temporary Land Line",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-                "code" : "LL",
-                "display" : "Land Line"
-              }]
-            }
-          }],
-          "system" : "phone",
-          "value" : "...",
-          "use" : "temp"
-        }
-      },
-      {
-        "label" : "Primary Work Land Line",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-                "code" : "LL",
-                "display" : "Land Line"
-              }]
-            }
-          }],
-          "system" : "phone",
-          "value" : "...",
-          "use" : "work"
-        }
-      },
-      {
-        "label" : "Primary Home Fax",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-                "code" : "FAX",
-                "display" : "Fax"
-              }]
-            }
-          }],
-          "system" : "fax",
-          "value" : "...",
-          "use" : "home"
-        }
-      },
-      {
-        "label" : "Temporary Fax",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-                "code" : "FAX",
-                "display" : "Fax"
-              }]
-            }
-          }],
-          "system" : "fax",
-          "value" : "...",
-          "use" : "temp"
-        }
-      },
-      {
-        "label" : "Primary Work Fax",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-                "code" : "FAX",
-                "display" : "Fax"
-              }]
-            }
-          }],
-          "system" : "fax",
-          "value" : "...",
-          "use" : "work"
-        }
-      },
-      {
-        "label" : "Primary Home Mobile Phone",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "MC",
-                "display" : "Mobile Phone"
-              }]
-            }
-          }],
-          "system" : "phone",
-          "value" : "...",
-          "use" : "home"
-        }
-      },
-      {
-        "label" : "Temporary Mobile Phone",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "MC",
-                "display" : "Mobile Phone"
-              }]
-            }
-          }],
-          "system" : "phone",
-          "value" : "...",
-          "use" : "temp"
-        }
-      },
-      {
-        "label" : "Primary Work Mobile Phone",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "MC",
-                "display" : "Mobile Phone"
-              }]
-            }
-          }],
-          "system" : "phone",
-          "value" : "...",
-          "use" : "work"
-        }
-      },
-      {
-        "label" : "Primary Home Pager",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "PG",
-                "display" : "Pager"
-              }]
-            }
-          }],
-          "system" : "pager",
-          "value" : "...",
-          "use" : "home"
-        }
-      },
-      {
-        "label" : "Temporary Pager",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "PG",
-                "display" : "Pager"
-              }]
-            }
-          }],
-          "system" : "pager",
-          "value" : "...",
-          "use" : "temp"
-        }
-      },
-      {
-        "label" : "Primary Work Pager",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "PG",
-                "display" : "Pager"
-              }]
-            }
-          }],
-          "system" : "pager",
-          "value" : "...",
-          "use" : "work"
-        }
-      },
-      {
-        "label" : "Private email address",
-        "valueContactPoint" : {
-          "system" : "email",
-          "value" : "giesput@myweb.nl",
-          "use" : "home"
-        }
-      },
-      {
-        "label" : "Work email address",
-        "valueContactPoint" : {
-          "system" : "email",
-          "value" : "example@workplace.nl",
-          "use" : "work"
-        }
-      }],
-      "condition" : ["ele-1"],
-      "constraint" : [{
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() | (children().count() > id.count())",
-        "xpath" : "@value|f:*|h:div",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      },
-      {
-        "key" : "cpt-2",
-        "severity" : "error",
-        "human" : "A system is required if a value is provided.",
-        "expression" : "value.empty() or system.exists()",
-        "xpath" : "not(exists(f:value)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/ContactPoint"
-      }],
+      "isSummary" : true,
       "mapping" : [{
         "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
         "map" : "NL-CM:17.1.8",
@@ -1821,46 +1452,26 @@
         "comment" : "ContactInformation"
       },
       {
-        "identity" : "hcim-contactinformation-v2.0.1-2015EN",
-        "map" : "NL-CM:0.1.5",
-        "comment" : "ContactInformation"
-      },
-      {
-        "identity" : "hcim-contactinformation-v3.0-2016EN",
-        "map" : "NL-CM:0.1.5",
-        "comment" : "ContactInformation"
-      },
-      {
-        "identity" : "hcim-contactinformation-v1.0-2017EN",
-        "map" : "NL-CM:20.6.1",
-        "comment" : "ContactInformation"
-      },
-      {
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "XTN"
+        "map" : "PRT-15, STF-10, ROL-12"
       },
       {
         "identity" : "rim",
-        "map" : "TEL"
+        "map" : "./telecom"
       },
       {
         "identity" : "servd",
-        "map" : "ContactPoint"
+        "map" : "./ContactPoints"
       }]
     },
     {
       "id" : "Practitioner.address",
       "path" : "Practitioner.address",
       "short" : "AddressInformation",
-      "definition" : "This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.\r\n\r\nTo have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.\r\n\r\n**Separate address parts**\r\n\r\nThe first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.\r\n\r\n**Custom address types**\r\n\r\nThe second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse> and <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType> as well). The HCIM code itself should also be included using the AddressType extension.\r\n\r\n| HCIM                              |` .ext:AddressType` | `.ext:official` | `.use` | `.type`    |\r\n|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|\r\n| Postal Address/Postadres          | _PST_              |                 |        | _postal_   |\r\n| Primary Home/Officieel adres      | _HP_               | true            | _home_ |            |\r\n| Visit Address/Woon-/verblijfadres | _PHYS_             |                 | _home_ | _physical_ |\r\n| Temporary Address/Tijdelijk adres | _TMP_              |                 | _temp_ |            |\r\n| Work Place/Werkadres              | _WP_               |                 | _work_ |            |\r\n| Vacation Home/Vakantie adres      | _HV_               |                 | _temp_ |            |\r\n\r\n If Address.type is _both_ then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.\r\n\r\nNOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension.",
-      "comment" : "Note: address is for postal addresses, not physical locations.",
+      "definition" : "Address(es) of the practitioner that are not role specific (typically home address). \rWork addresses are not typically entered in this property as they are usually role dependent.",
+      "comment" : "The PractitionerRole does not have an address value on it, as it is expected that the location property be used for this purpose (which has an address).",
       "requirements" : "The home/mailing address of the practitioner is often required for employee administration purposes, and also for some rostering services where the start point (practitioners home) can be used in calculations.",
-      "alias" : ["AdresInformatie",
-      "Adresgegevens"],
+      "alias" : ["Adresgegevens"],
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -1872,103 +1483,7 @@
         "code" : "Address",
         "profile" : "http://fhir.nl/fhir/StructureDefinition/nl-core-address"
       }],
-      "example" : [{
-        "label" : "Example of a Vacation Home address",
-        "valueAddress" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "HV",
-                "display" : "Vakantie adres"
-              }]
-            }
-          }],
-          "use" : "temp",
-          "line" : ["Binnenkant 12A Hoog"],
-          "_line" : [{
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-              "valueString" : "Binnenkant"
-            },
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-              "valueString" : "12"
-            },
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
-              "valueString" : "A"
-            },
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
-              "valueString" : "Hoog"
-            }]
-          }],
-          "city" : "Amsterdam",
-          "state" : "NH",
-          "postalCode" : "1000AA",
-          "country" : "NLD"
-        }
-      },
-      {
-        "label" : "Example of a Primary Home address",
-        "valueAddress" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "HP",
-                "display" : "Officieel adres"
-              }]
-            }
-          },
-          {
-            "url" : "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official",
-            "valueBoolean" : true
-          }],
-          "use" : "home",
-          "line" : ["Binnenkant to 10"],
-          "_line" : [{
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-              "valueString" : "Binnenkant"
-            },
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-              "valueString" : "to"
-            },
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-              "valueString" : "10"
-            }]
-          }],
-          "city" : "Amsterdam",
-          "state" : "NH",
-          "postalCode" : "1001AA",
-          "country" : "NLD"
-        }
-      }],
-      "condition" : ["ele-1",
-      "nl-streetname-if-official-and-other-line-parts"],
-      "constraint" : [{
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() | (children().count() > id.count())",
-        "xpath" : "@value|f:*|h:div",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      },
-      {
-        "key" : "nl-streetname-if-official-and-other-line-parts",
-        "requirements" : "This constraint checks conformance against the Dutch BRP constraints on address parts. However: when you only send postalCode + houseNumber which is enough for certain cases this may still be a valid address",
-        "severity" : "error",
-        "human" : "Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value",
-        "expression" : "(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))",
-        "xpath" : "not(.[f:extension[@url='http://fhir.nl/fhir/StructureDefinition/nl-core-address-official'][f:valueBoolean/@value='true']][f:line[empty(f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName'])][f:extension[@url=('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator')]]])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
-      }],
+      "isSummary" : true,
       "mapping" : [{
         "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
         "map" : "NL-CM:17.1.7",
@@ -1985,35 +1500,16 @@
         "comment" : "AddressInformation"
       },
       {
-        "identity" : "hcim-address-v2.0.1-2015EN",
-        "map" : "NL-CM:0.1.4",
-        "comment" : "AddressInformation"
-      },
-      {
-        "identity" : "hcim-addressinformation-v3.0-2016EN",
-        "map" : "NL-CM:0.1.4",
-        "comment" : "AddressInformation"
-      },
-      {
-        "identity" : "hcim-addressinformation-v1.0-2017EN",
-        "map" : "NL-CM:20.5.1",
-        "comment" : "AddressInformation"
-      },
-      {
-        "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
         "identity" : "v2",
-        "map" : "XAD"
+        "map" : "ORC-24, STF-11, ROL-11, PRT-14"
       },
       {
         "identity" : "rim",
-        "map" : "AD"
+        "map" : "./addr"
       },
       {
         "identity" : "servd",
-        "map" : "Address"
+        "map" : "./Addresses"
       }]
     },
     {

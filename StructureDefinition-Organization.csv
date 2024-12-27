@@ -218,93 +218,14 @@ user content","",0,*,"","","","Extension {[]} {[]}
 For searching knowing previous names that the organization was known by can be very useful.","","","","","","","",,,,,"",,,,"Organization.alias",0,*,"","",".name"
 "Organization.telecom","Organization.telecom","","Contactgegevens
 ","",0,*,"","","","ContactPoint {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint]]} {[]}
-","ContactInformation","Contact information includes a person's telephone numbers and email addresses. This datatype defines a common basis for expressing all contact information around the world, but adds extensions to express Dutch contacts specifically, according to the HCIM ContactInformation (v1.0, 2017). A Dutch ContactPoint still is a proper FHIR ContactPoint, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype. The table below explains how the HCIM concepts are mapped to the various FHIR elements. The HCIM code itself should also be included using the TelecomType extension.
-
-| HCIM                                               | `.ext:TelecomType` | `.system` | `.use`   |
-|----------------------------------------------------|:------------------:|:---------:|:--------:|
-| Primary Home Land Line                             | _LL_               | _phone_   | _home_   |
-| Temporary Land Line                                | _LL_               | _phone_   | _temp_   |
-| Primary Work Land Line                             | _LL_               | _phone_   | _work_   |
-|                                                    |                    |           |          |
-| Primary Home Fax                                   | _FAX_              | _fax_     | _home_   |
-| Temporary Fax                                      | _FAX_              | _fax_     | _temp_   |
-| Primary Work Fax                                   | _FAX_              | _fax_     | _work_   |
-|                                                    |                    |           |          |
-| Primary Home Mobile Phone                          | _MC_               | _phone_   | _home_   |
-| Temporary Mobile Phone                             | _MC_               | _phone_   | _temp_   |
-| Primary Work Mobile Phone                          | _MC_               | _phone_   | _work_   |
-|                                                    |                    |           |          |
-| Primary Home Pager                                 | _PG_               | _pager_   | _home_   |
-| Temporary Pager                                    | _PG_               | _pager_   | _temp_   |
-| Primary Work Pager                                 | _PG_               | _pager_   | _work_   |
-|                                                    |                    |           |          |
-| Private email address                              |                    | _email_   | _home_   |
-| Work email address                                 |                    | _email_   | _work_   |
-|                                                    |                    |           |          |
-| Mobile phone number undetermined private/business  |                    | _phone_   | _mobile_ |","The use code home is not to be used. Note that these contacts are not the contact details of people who are employed by or represent the organization, but official contacts for the organization itself.","Human contact for the organization.","","","","","<valueContactPoint xmlns=""http://hl7.org/fhir"">
-  <system value=""phone""/>
-  <value value=""+31611234567""/>
-  <use value=""work""/>
-</valueContactPoint>","","",,,,,"",,,,"Organization.telecom",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-cpt-2:A system is required if a value is provided. {value.empty() or system.exists()}org-3:The telecom of an organization can never be of use 'home' {where(use = 'home').empty()}","NL-CM:17.2.6","NL-CM:20.6.1","NL-CM:1.1.12","NL-CM:17.2.6","NL-CM:0.1.5","NL-CM:17.2.6","NL-CM:0.1.5","NL-CM:1.1.12","XTN","n/a","TEL","ContactPoint"
-"Organization.address","Organization.address","","AdresInformatie
-Adresgegevens","",0,*,"","","","Address {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-address]]} {[]}
-","AddressInformation","This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.
-
-To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.
-
-**Separate address parts**
-
-The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.
-
-**Custom address types**
-
-The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse> and <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType> as well). The HCIM code itself should also be included using the AddressType extension.
-
-| HCIM                              |` .ext:AddressType` | `.ext:official` | `.use` | `.type`    |
-|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|
-| Postal Address/Postadres          | _PST_              |                 |        | _postal_   |
-| Primary Home/Officieel adres      | _HP_               | true            | _home_ |            |
-| Visit Address/Woon-/verblijfadres | _PHYS_             |                 | _home_ | _physical_ |
-| Temporary Address/Tijdelijk adres | _TMP_              |                 | _temp_ |            |
-| Work Place/Werkadres              | _WP_               |                 | _work_ |            |
-| Vacation Home/Vakantie adres      | _HV_               |                 | _temp_ |            |
-
- If Address.type is _both_ then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.
-
-NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension.","Note: address is for postal addresses, not physical locations.","May need to keep track of the organization's addresses for contacting, billing or reporting requirements.","","","","","<valueAddress xmlns=""http://hl7.org/fhir"">
-  <extension url=""http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType"">
-    <valueCodeableConcept>
-      <coding>
-        <system value=""http://hl7.org/fhir/v3/AddressUse""/>
-        <code value=""HV""/>
-        <display value=""Vakantie adres""/>
-      </coding>
-    </valueCodeableConcept>
-  </extension>
-  <use value=""temp""/>
-  <line value=""Binnenkant 12A Hoog"">
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"">
-      <valueString value=""Binnenkant""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"">
-      <valueString value=""12""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix"">
-      <valueString value=""A""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID"">
-      <valueString value=""Hoog""/>
-    </extension>
-  </line>
-  <city value=""Amsterdam""/>
-  <state value=""NH""/>
-  <postalCode value=""1000AA""/>
-  <country value=""NLD""/>
-</valueAddress>","","",,,,,"",,,,"Organization.address",0,*,"ele-1
-nl-streetname-if-official-and-other-line-parts","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-nl-streetname-if-official-and-other-line-parts:Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value {(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))}org-2:An address of an organization can never be of use 'home' {where(use = 'home').empty()}","NL-CM:17.2.5","NL-CM:1.1.17","NL-CM:17.2.5","NL-CM:17.2.5","NL-CM:1.1.17","XAD","n/a","AD","Address"
+","ContactInformation","A contact detail for the organization.","The use code home is not to be used. Note that these contacts are not the contact details of people who are employed by or represent the organization, but official contacts for the organization itself.","Human contact for the organization.","","","","","","","",,,,,"",,,,"Organization.telecom",0,*,"org-3
+","org-3:The telecom of an organization can never be of use 'home' {where(use = 'home').empty()}
+","NL-CM:17.2.6","NL-CM:20.6.1","NL-CM:1.1.12","NL-CM:17.2.6","NL-CM:0.1.5","NL-CM:17.2.6","NL-CM:0.1.5","NL-CM:1.1.12","ORC-22?",".telecom","./ContactPoints"
+"Organization.address","Organization.address","","Adresgegevens
+","",0,*,"","","","Address {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-address]]} {[]}
+","AddressInformation","An address for the organization.","Organization may have multiple addresses with different uses or applicable periods. The use code home is not to be used.","May need to keep track of the organization's addresses for contacting, billing or reporting requirements.","","","","","","","",,,,,"",,,,"Organization.address",0,*,"org-2
+","org-2:An address of an organization can never be of use 'home' {where(use = 'home').empty()}
+","NL-CM:17.2.5","NL-CM:1.1.17","NL-CM:17.2.5","NL-CM:17.2.5","NL-CM:1.1.17","ORC-23?",".address","./PrimaryAddress and ./OtherAddresses"
 "Organization.partOf","Organization.partOf","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-organization]]}
 ","The organization of which this organization forms a part","The organization of which this organization forms a part.","","Need to be able to track the hierarchy of organizations within an organization.","","","","","","","",,,,,"",,,,"Organization.partOf",0,1,"","","No equivalent in HL7 v2",".playedBy[classCode=Part].scoper","n/a"
 "Organization.contact","Organization.contact","","","",0,*,"","","","BackboneElement {[]} {[]}

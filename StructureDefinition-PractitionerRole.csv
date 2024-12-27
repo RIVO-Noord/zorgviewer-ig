@@ -1,4 +1,4 @@
-"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: HCIM HealthProfessional-v3.2(2017EN)","Mapping: HCIM ContactInformation-v1.0(2017EN)","Mapping: HCIM BasicElements-v1.0(2017EN)","Mapping: HCIM HealthProfessional-v3.0(2016EN)","Mapping: HCIM Patient-v3.0(2016EN)","Mapping: HCIM HealthProfessional-v1.2.1(2015EN)","Mapping: HCIM Patient-v2.0.1(2015EN)","Mapping: HL7 v2 Mapping","Mapping: RIM Mapping","Mapping: ServD","Mapping: W5 Mapping"
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: HCIM HealthProfessional-v3.2(2017EN)","Mapping: HCIM BasicElements-v1.0(2017EN)","Mapping: HCIM HealthProfessional-v3.0(2016EN)","Mapping: HCIM HealthProfessional-v1.2.1(2015EN)","Mapping: HL7 v2 Mapping","Mapping: RIM Mapping","Mapping: ServD","Mapping: W5 Mapping"
 "PractitionerRole","PractitionerRole","","","",0,*,"","","","null {[]} {[]}
 ","Roles/organizations the practitioner is associated with","A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.","","","","","","","","","",,,,,"",,,,"PractitionerRole",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
 dom-1:If the resource is contained in another resource, it SHALL NOT contain any narrative {contained.text.empty()}dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource {contained.where(('#'+id in %resource.descendants().reference).not()).empty()}zv-prr-1:PractitionerRole Specialty COD016 Vektiz AGB medische specialismen code SHOULD be present. {identifier.where(system='urn:oid:2.16.840.1.113883.2.4.6.7')}","PRD (as one example)","Entity. Role, or Act","Role","ServiceSiteProvider","administrative.individual"
@@ -94,38 +94,8 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","The location(s) at which this practitioner provides care","The location(s) at which this practitioner provides care.","","","","","","","","","",,,,,"",,,,"PractitionerRole.location",0,*,"","",".performance.ActDefinitionOrEvent.ServiceDeliveryLocation[@classCode = 'SDLOC']","(ServD maps Practitioners and Organizations via another entity, so this concept is not available)<br/> However these are accessed via the Site.ServiceSite.ServiceSiteProvider record. (The Site has the location)","where"
 "PractitionerRole.healthcareService","PractitionerRole.healthcareService","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/HealthcareService]]}
 ","The list of healthcare services that this worker provides for this role's Organization/Location(s)","The list of healthcare services that this worker provides for this role's Organization/Location(s).","","","","","","","","","",,,,,"",,,,"PractitionerRole.healthcareService",0,*,"","","EDU-2 / AFF-3",".player.QualifiedEntity[@classCode = 'QUAL'].code"
-"PractitionerRole.telecom","PractitionerRole.telecom","","Contactgegevens
-","",0,*,"","","","ContactPoint {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint]]} {[]}
-","ContactInformation","Contact information includes a person's telephone numbers and email addresses. This datatype defines a common basis for expressing all contact information around the world, but adds extensions to express Dutch contacts specifically, according to the HCIM ContactInformation (v1.0, 2017). A Dutch ContactPoint still is a proper FHIR ContactPoint, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype. The table below explains how the HCIM concepts are mapped to the various FHIR elements. The HCIM code itself should also be included using the TelecomType extension.
-
-| HCIM                                               | `.ext:TelecomType` | `.system` | `.use`   |
-|----------------------------------------------------|:------------------:|:---------:|:--------:|
-| Primary Home Land Line                             | _LL_               | _phone_   | _home_   |
-| Temporary Land Line                                | _LL_               | _phone_   | _temp_   |
-| Primary Work Land Line                             | _LL_               | _phone_   | _work_   |
-|                                                    |                    |           |          |
-| Primary Home Fax                                   | _FAX_              | _fax_     | _home_   |
-| Temporary Fax                                      | _FAX_              | _fax_     | _temp_   |
-| Primary Work Fax                                   | _FAX_              | _fax_     | _work_   |
-|                                                    |                    |           |          |
-| Primary Home Mobile Phone                          | _MC_               | _phone_   | _home_   |
-| Temporary Mobile Phone                             | _MC_               | _phone_   | _temp_   |
-| Primary Work Mobile Phone                          | _MC_               | _phone_   | _work_   |
-|                                                    |                    |           |          |
-| Primary Home Pager                                 | _PG_               | _pager_   | _home_   |
-| Temporary Pager                                    | _PG_               | _pager_   | _temp_   |
-| Primary Work Pager                                 | _PG_               | _pager_   | _work_   |
-|                                                    |                    |           |          |
-| Private email address                              |                    | _email_   | _home_   |
-| Work email address                                 |                    | _email_   | _work_   |
-|                                                    |                    |           |          |
-| Mobile phone number undetermined private/business  |                    | _phone_   | _mobile_ |","","Often practitioners have a dedicated line for each location (or service) that they work at, and need to be able to define separate contact details for each of these.","","","","","<valueContactPoint xmlns=""http://hl7.org/fhir"">
-  <system value=""phone""/>
-  <value value=""+31611234567""/>
-  <use value=""work""/>
-</valueContactPoint>","","",,,,,"",,,,"PractitionerRole.telecom",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-cpt-2:A system is required if a value is provided. {value.empty() or system.exists()}","NL-CM:17.1.8","NL-CM:20.6.1","NL-CM:17.1.8","NL-CM:0.1.5","NL-CM:17.1.8","NL-CM:0.1.5","XTN","n/a","TEL","ContactPoint"
+"PractitionerRole.telecom","PractitionerRole.telecom","","","",0,*,"","","Y","ContactPoint {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint]]} {[]}
+","Contact details that are specific to the role/location/service","Contact details that are specific to the role/location/service.","","Often practitioners have a dedicated line for each location (or service) that they work at, and need to be able to define separate contact details for each of these.","","","","","","","",,,,,"",,,,"PractitionerRole.telecom",0,*,"","","NL-CM:17.1.8","NL-CM:17.1.8","NL-CM:17.1.8",".telecom"
 "PractitionerRole.availableTime","PractitionerRole.availableTime","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Times the Service Site is available","A collection of times that the Service Site is available.","More detailed availability information may be provided in associated Schedule/Slot resources.","","","","","","","","",,,,,"",,,,"PractitionerRole.availableTime",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ",".effectiveTime"

@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "Organization"] ; # 
   fhir:title [ fhir:v "Organization"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-12-23T15:35:28+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-27T09:44:10+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -2426,7 +2426,7 @@
        fhir:id [ fhir:v "Organization.telecom" ] ;
        fhir:path [ fhir:v "Organization.telecom" ] ;
        fhir:short [ fhir:v "ContactInformation" ] ;
-       fhir:definition [ fhir:v "Contact information includes a person's telephone numbers and email addresses. This datatype defines a common basis for expressing all contact information around the world, but adds extensions to express Dutch contacts specifically, according to the HCIM ContactInformation (v1.0, 2017). A Dutch ContactPoint still is a proper FHIR ContactPoint, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype. The table below explains how the HCIM concepts are mapped to the various FHIR elements. The HCIM code itself should also be included using the TelecomType extension.\r\n\r\n| HCIM                                               | `.ext:TelecomType` | `.system` | `.use`   |\r\n|----------------------------------------------------|:------------------:|:---------:|:--------:|\r\n| Primary Home Land Line                             | _LL_               | _phone_   | _home_   |\r\n| Temporary Land Line                                | _LL_               | _phone_   | _temp_   |\r\n| Primary Work Land Line                             | _LL_               | _phone_   | _work_   |\r\n|                                                    |                    |           |          |\r\n| Primary Home Fax                                   | _FAX_              | _fax_     | _home_   |\r\n| Temporary Fax                                      | _FAX_              | _fax_     | _temp_   |\r\n| Primary Work Fax                                   | _FAX_              | _fax_     | _work_   |\r\n|                                                    |                    |           |          |\r\n| Primary Home Mobile Phone                          | _MC_               | _phone_   | _home_   |\r\n| Temporary Mobile Phone                             | _MC_               | _phone_   | _temp_   |\r\n| Primary Work Mobile Phone                          | _MC_               | _phone_   | _work_   |\r\n|                                                    |                    |           |          |\r\n| Primary Home Pager                                 | _PG_               | _pager_   | _home_   |\r\n| Temporary Pager                                    | _PG_               | _pager_   | _temp_   |\r\n| Primary Work Pager                                 | _PG_               | _pager_   | _work_   |\r\n|                                                    |                    |           |          |\r\n| Private email address                              |                    | _email_   | _home_   |\r\n| Work email address                                 |                    | _email_   | _work_   |\r\n|                                                    |                    |           |          |\r\n| Mobile phone number undetermined private/business  |                    | _phone_   | _mobile_ |" ] ;
+       fhir:definition [ fhir:v "A contact detail for the organization." ] ;
        fhir:comment [ fhir:v "The use code home is not to be used. Note that these contacts are not the contact details of people who are employed by or represent the organization, but official contacts for the organization itself." ] ;
        fhir:requirements [ fhir:v "Human contact for the organization." ] ;
        fhir:alias ( [ fhir:v "Contactgegevens" ] ) ;
@@ -2441,283 +2441,8 @@
          fhir:code [ fhir:v "ContactPoint"^^xsd:anyURI ] ;
          fhir:profile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint"^^xsd:anyURI ]
        ] ) ;
-       fhir:example ( [
-         fhir:label [ fhir:v "Mobile business phone number. Note: the mobile nature stems from the number being an 06-* number." ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:system [ fhir:v "phone" ] ;
-           fhir:value [ fhir:v "+31611234567" ] ;
-           fhir:use [ fhir:v "work" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Mobile phone number undetermined private/business. Note: the mobile nature stems from the number being an 06-* number." ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:system [ fhir:v "phone" ] ;
-           fhir:value [ fhir:v "+31611234567" ] ;
-           fhir:use [ fhir:v "mobile" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Primary Home Land Line" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "LL" ] ;
-                 fhir:display [ fhir:v "Land Line" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:system [ fhir:v "phone" ] ;
-           fhir:value [ fhir:v "..." ] ;
-           fhir:use [ fhir:v "home" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Temporary Land Line" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "LL" ] ;
-                 fhir:display [ fhir:v "Land Line" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:system [ fhir:v "phone" ] ;
-           fhir:value [ fhir:v "..." ] ;
-           fhir:use [ fhir:v "temp" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Primary Work Land Line" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "LL" ] ;
-                 fhir:display [ fhir:v "Land Line" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:system [ fhir:v "phone" ] ;
-           fhir:value [ fhir:v "..." ] ;
-           fhir:use [ fhir:v "work" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Primary Home Fax" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "FAX" ] ;
-                 fhir:display [ fhir:v "Fax" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:system [ fhir:v "fax" ] ;
-           fhir:value [ fhir:v "..." ] ;
-           fhir:use [ fhir:v "home" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Temporary Fax" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "FAX" ] ;
-                 fhir:display [ fhir:v "Fax" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:system [ fhir:v "fax" ] ;
-           fhir:value [ fhir:v "..." ] ;
-           fhir:use [ fhir:v "temp" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Primary Work Fax" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "FAX" ] ;
-                 fhir:display [ fhir:v "Fax" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:system [ fhir:v "fax" ] ;
-           fhir:value [ fhir:v "..." ] ;
-           fhir:use [ fhir:v "work" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Primary Home Mobile Phone" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "http://hl7.org/fhir/v3/AddressUse"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "MC" ] ;
-                 fhir:display [ fhir:v "Mobile Phone" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:system [ fhir:v "phone" ] ;
-           fhir:value [ fhir:v "..." ] ;
-           fhir:use [ fhir:v "home" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Temporary Mobile Phone" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "http://hl7.org/fhir/v3/AddressUse"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "MC" ] ;
-                 fhir:display [ fhir:v "Mobile Phone" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:system [ fhir:v "phone" ] ;
-           fhir:value [ fhir:v "..." ] ;
-           fhir:use [ fhir:v "temp" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Primary Work Mobile Phone" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "http://hl7.org/fhir/v3/AddressUse"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "MC" ] ;
-                 fhir:display [ fhir:v "Mobile Phone" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:system [ fhir:v "phone" ] ;
-           fhir:value [ fhir:v "..." ] ;
-           fhir:use [ fhir:v "work" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Primary Home Pager" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "http://hl7.org/fhir/v3/AddressUse"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "PG" ] ;
-                 fhir:display [ fhir:v "Pager" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:system [ fhir:v "pager" ] ;
-           fhir:value [ fhir:v "..." ] ;
-           fhir:use [ fhir:v "home" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Temporary Pager" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "http://hl7.org/fhir/v3/AddressUse"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "PG" ] ;
-                 fhir:display [ fhir:v "Pager" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:system [ fhir:v "pager" ] ;
-           fhir:value [ fhir:v "..." ] ;
-           fhir:use [ fhir:v "temp" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Primary Work Pager" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "http://hl7.org/fhir/v3/AddressUse"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "PG" ] ;
-                 fhir:display [ fhir:v "Pager" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:system [ fhir:v "pager" ] ;
-           fhir:value [ fhir:v "..." ] ;
-           fhir:use [ fhir:v "work" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Private email address" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:system [ fhir:v "email" ] ;
-           fhir:value [ fhir:v "giesput@myweb.nl" ] ;
-           fhir:use [ fhir:v "home" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Work email address" ] ;
-         fhir:value [
-           a fhir:ContactPoint ;
-           fhir:system [ fhir:v "email" ] ;
-           fhir:value [ fhir:v "example@workplace.nl" ] ;
-           fhir:use [ fhir:v "work" ]
-         ]
-       ] ) ;
-       fhir:condition ( [ fhir:v "ele-1" ] ) ;
+       fhir:condition ( [ fhir:v "org-3" ] ) ;
        fhir:constraint ( [
-         fhir:key [ fhir:v "ele-1" ] ;
-         fhir:severity [ fhir:v "error" ] ;
-         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
-         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
-         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
-         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
-       ] [
-         fhir:key [ fhir:v "cpt-2" ] ;
-         fhir:severity [ fhir:v "error" ] ;
-         fhir:human [ fhir:v "A system is required if a value is provided." ] ;
-         fhir:expression [ fhir:v "value.empty() or system.exists()" ] ;
-         fhir:xpath [ fhir:v "not(exists(f:value)) or exists(f:system)" ] ;
-         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/ContactPoint"^^xsd:anyURI ]
-       ] [
          fhir:key [ fhir:v "org-3" ] ;
          fhir:severity [ fhir:v "error" ] ;
          fhir:human [ fhir:v "The telecom of an organization can never be of use 'home'" ] ;
@@ -2762,26 +2487,23 @@
          fhir:map [ fhir:v "NL-CM:1.1.12" ] ;
          fhir:comment [ fhir:v "ContactInformation" ]
        ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
          fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XTN" ]
+         fhir:map [ fhir:v "ORC-22?" ]
        ] [
          fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "TEL" ]
+         fhir:map [ fhir:v ".telecom" ]
        ] [
          fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "ContactPoint" ]
+         fhir:map [ fhir:v "./ContactPoints" ]
        ] )
      ] [
        fhir:id [ fhir:v "Organization.address" ] ;
        fhir:path [ fhir:v "Organization.address" ] ;
        fhir:short [ fhir:v "AddressInformation" ] ;
-       fhir:definition [ fhir:v "This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.\r\n\r\nTo have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.\r\n\r\n**Separate address parts**\r\n\r\nThe first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.\r\n\r\n**Custom address types**\r\n\r\nThe second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse> and <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType> as well). The HCIM code itself should also be included using the AddressType extension.\r\n\r\n| HCIM                              |` .ext:AddressType` | `.ext:official` | `.use` | `.type`    |\r\n|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|\r\n| Postal Address/Postadres          | _PST_              |                 |        | _postal_   |\r\n| Primary Home/Officieel adres      | _HP_               | true            | _home_ |            |\r\n| Visit Address/Woon-/verblijfadres | _PHYS_             |                 | _home_ | _physical_ |\r\n| Temporary Address/Tijdelijk adres | _TMP_              |                 | _temp_ |            |\r\n| Work Place/Werkadres              | _WP_               |                 | _work_ |            |\r\n| Vacation Home/Vakantie adres      | _HV_               |                 | _temp_ |            |\r\n\r\n If Address.type is _both_ then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.\r\n\r\nNOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension." ] ;
-       fhir:comment [ fhir:v "Note: address is for postal addresses, not physical locations." ] ;
+       fhir:definition [ fhir:v "An address for the organization." ] ;
+       fhir:comment [ fhir:v "Organization may have multiple addresses with different uses or applicable periods. The use code home is not to be used." ] ;
        fhir:requirements [ fhir:v "May need to keep track of the organization's addresses for contacting, billing or reporting requirements." ] ;
-       fhir:alias ( [ fhir:v "AdresInformatie" ] [ fhir:v "Adresgegevens" ] ) ;
+       fhir:alias ( [ fhir:v "Adresgegevens" ] ) ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "*" ] ;
        fhir:base [
@@ -2793,98 +2515,8 @@
          fhir:code [ fhir:v "Address"^^xsd:anyURI ] ;
          fhir:profile [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-address"^^xsd:anyURI ]
        ] ) ;
-       fhir:example ( [
-         fhir:label [ fhir:v "Example of a Vacation Home address" ] ;
-         fhir:value [
-           a fhir:Address ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "http://hl7.org/fhir/v3/AddressUse"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "HV" ] ;
-                 fhir:display [ fhir:v "Vakantie adres" ]
-               ] )
-             ]
-           ] ) ;
-           fhir:use [ fhir:v "temp" ] ;
-           fhir:line ( [
-             fhir:v "Binnenkant 12A Hoog" ;
-             fhir:extension ( [
-               fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"^^xsd:anyURI ] ;
-               fhir:value [ fhir:v "Binnenkant" ]
-             ] [
-               fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"^^xsd:anyURI ] ;
-               fhir:value [ fhir:v "12" ]
-             ] [
-               fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix"^^xsd:anyURI ] ;
-               fhir:value [ fhir:v "A" ]
-             ] [
-               fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID"^^xsd:anyURI ] ;
-               fhir:value [ fhir:v "Hoog" ]
-             ] )
-           ] ) ;
-           fhir:city [ fhir:v "Amsterdam" ] ;
-           fhir:state [ fhir:v "NH" ] ;
-           fhir:postalCode [ fhir:v "1000AA" ] ;
-           fhir:country [ fhir:v "NLD" ]
-         ]
-       ] [
-         fhir:label [ fhir:v "Example of a Primary Home address" ] ;
-         fhir:value [
-           a fhir:Address ;
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:CodeableConcept ;
-               fhir:coding ( [
-                 fhir:system [ fhir:v "http://hl7.org/fhir/v3/AddressUse"^^xsd:anyURI ] ;
-                 fhir:code [ fhir:v "HP" ] ;
-                 fhir:display [ fhir:v "Officieel adres" ]
-               ] )
-             ]
-           ] [
-             fhir:url [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "true"^^xsd:boolean ]
-           ] ) ;
-           fhir:use [ fhir:v "home" ] ;
-           fhir:line ( [
-             fhir:v "Binnenkant to 10" ;
-             fhir:extension ( [
-               fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"^^xsd:anyURI ] ;
-               fhir:value [ fhir:v "Binnenkant" ]
-             ] [
-               fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"^^xsd:anyURI ] ;
-               fhir:value [ fhir:v "to" ]
-             ] [
-               fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"^^xsd:anyURI ] ;
-               fhir:value [ fhir:v "10" ]
-             ] )
-           ] ) ;
-           fhir:city [ fhir:v "Amsterdam" ] ;
-           fhir:state [ fhir:v "NH" ] ;
-           fhir:postalCode [ fhir:v "1001AA" ] ;
-           fhir:country [ fhir:v "NLD" ]
-         ]
-       ] ) ;
-       fhir:condition ( [ fhir:v "ele-1" ] [ fhir:v "nl-streetname-if-official-and-other-line-parts" ] ) ;
+       fhir:condition ( [ fhir:v "org-2" ] ) ;
        fhir:constraint ( [
-         fhir:key [ fhir:v "ele-1" ] ;
-         fhir:severity [ fhir:v "error" ] ;
-         fhir:human [ fhir:v "All FHIR elements must have a @value or children" ] ;
-         fhir:expression [ fhir:v "hasValue() | (children().count() > id.count())" ] ;
-         fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
-         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ]
-       ] [
-         fhir:key [ fhir:v "nl-streetname-if-official-and-other-line-parts" ] ;
-         fhir:requirements [ fhir:v "This constraint checks conformance against the Dutch BRP constraints on address parts. However: when you only send postalCode + houseNumber which is enough for certain cases this may still be a valid address" ] ;
-         fhir:severity [ fhir:v "error" ] ;
-         fhir:human [ fhir:v "Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value" ] ;
-         fhir:expression [ fhir:v "(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))" ] ;
-         fhir:xpath [ fhir:v "not(.[f:extension[@url='http://fhir.nl/fhir/StructureDefinition/nl-core-address-official'][f:valueBoolean/@value='true']][f:line[empty(f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName'])][f:extension[@url=('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator')]]])" ] ;
-         fhir:source [ fhir:v "http://hl7.org/fhir/StructureDefinition/Organization"^^xsd:anyURI ]
-       ] [
          fhir:key [ fhir:v "org-2" ] ;
          fhir:severity [ fhir:v "error" ] ;
          fhir:human [ fhir:v "An address of an organization can never be of use 'home'" ] ;
@@ -2917,29 +2549,14 @@
          fhir:map [ fhir:v "NL-CM:1.1.17" ] ;
          fhir:comment [ fhir:v "AddressInformation" ]
        ] [
-         fhir:identity [ fhir:v "hcim-address-v2.0.1-2015EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-addressinformation-v3.0-2016EN" ] ;
-         fhir:map [ fhir:v "NL-CM:0.1.4" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
-       ] [
-         fhir:identity [ fhir:v "hcim-addressinformation-v1.0-2017EN" ] ;
-         fhir:map [ fhir:v "NL-CM:20.5.1" ] ;
-         fhir:comment [ fhir:v "AddressInformation" ]
-       ] [
-         fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "n/a" ]
-       ] [
          fhir:identity [ fhir:v "v2" ] ;
-         fhir:map [ fhir:v "XAD" ]
+         fhir:map [ fhir:v "ORC-23?" ]
        ] [
          fhir:identity [ fhir:v "rim" ] ;
-         fhir:map [ fhir:v "AD" ]
+         fhir:map [ fhir:v ".address" ]
        ] [
          fhir:identity [ fhir:v "servd" ] ;
-         fhir:map [ fhir:v "Address" ]
+         fhir:map [ fhir:v "./PrimaryAddress and ./OtherAddresses" ]
        ] )
      ] [
        fhir:id [ fhir:v "Organization.partOf" ] ;

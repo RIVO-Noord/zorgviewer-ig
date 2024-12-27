@@ -10,7 +10,7 @@
   "name" : "MedicationAgreement",
   "title" : "MedicationAgreement",
   "status" : "active",
-  "date" : "2024-12-23T15:35:28+00:00",
+  "date" : "2024-12-27T09:44:10+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -2626,10 +2626,9 @@
     {
       "id" : "MedicationRequest.dosageInstruction",
       "path" : "MedicationRequest.dosageInstruction",
-      "short" : "InstructionsForUse",
+      "short" : "How the medication should be taken",
       "definition" : "Instructions for the use of the medication, e.g. dose and route of administration",
-      "comment" : "The wiki page https://informatiestandaarden.nictiz.nl/wiki/mp:V9.0_Voorbeelden_doseringen provides dosage instruction examples. These examples consists of functional data and their representation in FHIR and CDA.",
-      "alias" : ["Gebruiksinstructie"],
+      "comment" : "There are examples where a medication request may include the option of an oral dose or an Intravenous or Intramuscular dose.  For example, \"Ondansetron 8mg orally or IV twice a day as needed for nausea\" or \"Compazine® (prochlorperazine) 5-10mg PO or 25mg PR bid prn nausea or vomiting\".  In these cases, two medication requests would be created that could be grouped together.  The decision on which dose and route of administration to use is based on the patient's condition at the time the dose is needed.",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -2640,15 +2639,6 @@
       "type" : [{
         "code" : "Dosage",
         "profile" : "http://nictiz.nl/fhir/StructureDefinition/zib-InstructionsForUse"
-      }],
-      "condition" : ["ele-1"],
-      "constraint" : [{
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() | (children().count() > id.count())",
-        "xpath" : "@value|f:*|h:div",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "hcim-medicationagreement-v1.0-2017EN",
@@ -2661,17 +2651,12 @@
         "comment" : "DateTime"
       },
       {
-        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
-        "map" : "NL-CM:9.12.22504",
-        "comment" : "InstructionsForUse"
+        "identity" : "workflow",
+        "map" : "…occurrence[x]"
       },
       {
         "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".outboundRelationship[typeCode=COMP].target[classCode=SBADM, moodCode=INT]"
+        "map" : "see dosageInstruction mapping"
       }]
     },
     {
@@ -2845,11 +2830,10 @@
     {
       "id" : "MedicationRequest.dosageInstruction.timing",
       "path" : "MedicationRequest.dosageInstruction.timing",
-      "short" : "AdministeringSchedule",
+      "short" : "When medication should be administered",
       "definition" : "Specifications of the times at which the medication is to be administered. This is indicated as follows:                  Time(s) (16:00) or indications (“before meals”) at which the medication is to be taken each day.                 A specific number of times the medication is to be taken each day (“3x a day“), indicated with the frequency                 A time interval between consecutive doses (“Every 2 hours”, “every 3 days”), indicated with the word Interval.                 Combined periods with an interval and duration (“1 daily for three out of four weeks: the pill schedule”)                                                   If a certain medication is not to be taken daily, the aforementioned can be combined with daily indications:                  One or more week days on which the medication is to be administered (e.g. “Monday, Wednesday, Friday”)                 ”3x a week”, “2x a month”.                                                   The specified administration “infinite” is automatically to be repeated until:                  The end date and time has been reached                 The total administration duration has been reached (14 days)                                                   A specific amount of administrations has been reached (“20 doses”, “one-time only”), to be entered in the NumberOfDoses concept.",
-      "comment" : "A timing schedule can be either a list of events - intervals on which the event occurs, or a single event with repeating criteria or just repeating criteria with no actual event.  When both event and a repeating specification are provided, the list of events should be understood as an interpretation of the information in the repeat structure.",
+      "comment" : "This attribute may not always be populated while the Dosage.text is expected to be populated.  If both are populated, then the Dosage.text should reflect the content of the Dosage.timing.",
       "requirements" : "The timing schedule for giving the medication to the patient. The Schedule data type allows many different expressions. For example: \"Every 8 hours\"; \"Three times a day\"; \"1/2 an hour before breakfast for 10 days from 23-Dec 2011:\"; \"15 Oct 2013, 17 Oct 2013 and 1 Nov 2013\".  Sometimes, a rate can imply duration when expressed as total volume / duration (e.g.  500mL/2 hours implies a duration of 2 hours).  However, when rate doesn't imply duration (e.g. 250mL/hour), then the timing.repeat.duration is needed to convey the infuse over time period.",
-      "alias" : ["Toedieningsschema"],
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -2861,31 +2845,10 @@
         "code" : "Timing",
         "profile" : "http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationSchedule"
       }],
-      "condition" : ["ele-1"],
-      "constraint" : [{
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() | (children().count() > id.count())",
-        "xpath" : "@value|f:*|h:div",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
+      "isSummary" : true,
       "mapping" : [{
-        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
-        "map" : "NL-CM:9.12.19948",
-        "comment" : "AdministeringSchedule"
-      },
-      {
         "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "N/A"
-      },
-      {
-        "identity" : "rim",
-        "map" : "QSET<TS> (GTS)"
+        "map" : ".effectiveTime"
       }]
     },
     {
@@ -3252,9 +3215,9 @@
       "id" : "MedicationRequest.dosageInstruction.dose[x]:doseQuantity",
       "path" : "MedicationRequest.dosageInstruction.dose[x]",
       "sliceName" : "doseQuantity",
-      "short" : "A fixed quantity (no comparator)",
-      "definition" : "The comparator is not used on a SimpleQuantity",
-      "comment" : "The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.",
+      "short" : "Amount of medication per dose",
+      "definition" : "Amount of medication per dose.",
+      "comment" : "Note that this specifies the quantity of the specified medication, not the quantity for each active ingredient(s). Each ingredient amount can be communicated in the Medication resource. For example, if one wants to communicate that a tablet was 375 mg, where the dose was one tablet, you can use the Medication resource to document that the tablet was comprised of 375 mg of drug XYZ. Alternatively if the dose was 375 mg, then you may only need to use the Medication resource to indicate this was a tablet. If the example were an IV such as dopamine and you wanted to communicate that 400mg of dopamine was mixed in 500 ml of some IV solution, then this would all be communicated in the Medication resource. If the administration is not intended to be instantaneous (rate is present or timing has a duration), this can be specified to convey the total amount to be administered over the period of time as indicated by the schedule e.g. 500 ml in dose, with timing used to convey that this should be done over 4 hours.",
       "requirements" : "The amount of therapeutic or other substance given at one administration event.",
       "min" : 0,
       "max" : "1",
@@ -3267,31 +3230,7 @@
         "code" : "Quantity",
         "profile" : "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
       }],
-      "condition" : ["ele-1"],
-      "constraint" : [{
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() | (children().count() > id.count())",
-        "xpath" : "@value|f:*|h:div",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      },
-      {
-        "key" : "qty-3",
-        "severity" : "error",
-        "human" : "If a code for the unit is present, the system SHALL also be present",
-        "expression" : "code.empty() or system.exists()",
-        "xpath" : "not(exists(f:code)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Quantity"
-      },
-      {
-        "key" : "sqty-1",
-        "severity" : "error",
-        "human" : "The comparator is not used on a SimpleQuantity",
-        "expression" : "comparator.empty()",
-        "xpath" : "not(exists(f:comparator))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Dosage"
-      }],
+      "isSummary" : true,
       "binding" : {
         "strength" : "required",
         "description" : "GstdTabel902",
@@ -3301,15 +3240,7 @@
       },
       "mapping" : [{
         "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "SN (see also Range) or CQ"
-      },
-      {
-        "identity" : "rim",
-        "map" : "PQ, IVL<PQ>, MO, CO, depending on the values"
+        "map" : ".doseQuantity"
       }]
     },
     {

@@ -10,7 +10,7 @@
   "name" : "PractitionerRole",
   "title" : "PractitionerRole",
   "status" : "active",
-  "date" : "2024-12-23T15:35:28+00:00",
+  "date" : "2024-12-27T09:44:10+00:00",
   "publisher" : "RIVO-NN HL7NL",
   "contact" : [{
     "name" : "RIVO-NN",
@@ -40,12 +40,6 @@
     "name" : "HCIM HealthProfessional-v3.2(2017EN)"
   },
   {
-    "identity" : "hcim-contactinformation-v1.0-2017EN",
-    "uri" : "https://zibs.nl/wiki/ContactInformation-v1.0(2017EN)",
-    "name" : "HCIM ContactInformation-v1.0(2017EN)",
-    "comment" : "ContactInformation has become an independent information model as of release 2017 of the HCIMs."
-  },
-  {
     "identity" : "hcim-basicelements-v1.0-2017EN",
     "uri" : "https://zibs.nl/wiki/BasicElements-v1.0(2017EN)",
     "name" : "HCIM BasicElements-v1.0(2017EN)"
@@ -56,21 +50,9 @@
     "name" : "HCIM HealthProfessional-v3.0(2016EN)"
   },
   {
-    "identity" : "hcim-contactinformation-v3.0-2016EN",
-    "uri" : "https://zibs.nl/wiki/Patient-v3.0(2016EN)",
-    "name" : "HCIM Patient-v3.0(2016EN)",
-    "comment" : "ContactInformation has become an independent information model as of release 2017 of the HCIMs."
-  },
-  {
     "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
     "uri" : "https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)",
     "name" : "HCIM HealthProfessional-v1.2.1(2015EN)"
-  },
-  {
-    "identity" : "hcim-contactinformation-v2.0.1-2015EN",
-    "uri" : "https://zibs.nl/wiki/Patient-v2.0.1(2015EN)",
-    "name" : "HCIM Patient-v2.0.1(2015EN)",
-    "comment" : "ContactInformation has become an independent information model as of release 2017 of the HCIMs."
   },
   {
     "identity" : "v2",
@@ -1307,10 +1289,9 @@
     {
       "id" : "PractitionerRole.telecom",
       "path" : "PractitionerRole.telecom",
-      "short" : "ContactInformation",
-      "definition" : "Contact information includes a person's telephone numbers and email addresses. This datatype defines a common basis for expressing all contact information around the world, but adds extensions to express Dutch contacts specifically, according to the HCIM ContactInformation (v1.0, 2017). A Dutch ContactPoint still is a proper FHIR ContactPoint, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype. The table below explains how the HCIM concepts are mapped to the various FHIR elements. The HCIM code itself should also be included using the TelecomType extension.\r\n\r\n| HCIM                                               | `.ext:TelecomType` | `.system` | `.use`   |\r\n|----------------------------------------------------|:------------------:|:---------:|:--------:|\r\n| Primary Home Land Line                             | _LL_               | _phone_   | _home_   |\r\n| Temporary Land Line                                | _LL_               | _phone_   | _temp_   |\r\n| Primary Work Land Line                             | _LL_               | _phone_   | _work_   |\r\n|                                                    |                    |           |          |\r\n| Primary Home Fax                                   | _FAX_              | _fax_     | _home_   |\r\n| Temporary Fax                                      | _FAX_              | _fax_     | _temp_   |\r\n| Primary Work Fax                                   | _FAX_              | _fax_     | _work_   |\r\n|                                                    |                    |           |          |\r\n| Primary Home Mobile Phone                          | _MC_               | _phone_   | _home_   |\r\n| Temporary Mobile Phone                             | _MC_               | _phone_   | _temp_   |\r\n| Primary Work Mobile Phone                          | _MC_               | _phone_   | _work_   |\r\n|                                                    |                    |           |          |\r\n| Primary Home Pager                                 | _PG_               | _pager_   | _home_   |\r\n| Temporary Pager                                    | _PG_               | _pager_   | _temp_   |\r\n| Primary Work Pager                                 | _PG_               | _pager_   | _work_   |\r\n|                                                    |                    |           |          |\r\n| Private email address                              |                    | _email_   | _home_   |\r\n| Work email address                                 |                    | _email_   | _work_   |\r\n|                                                    |                    |           |          |\r\n| Mobile phone number undetermined private/business  |                    | _phone_   | _mobile_ |",
+      "short" : "Contact details that are specific to the role/location/service",
+      "definition" : "Contact details that are specific to the role/location/service.",
       "requirements" : "Often practitioners have a dedicated line for each location (or service) that they work at, and need to be able to define separate contact details for each of these.",
-      "alias" : ["Contactgegevens"],
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -1322,271 +1303,7 @@
         "code" : "ContactPoint",
         "profile" : "http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint"
       }],
-      "example" : [{
-        "label" : "Mobile business phone number. Note: the mobile nature stems from the number being an 06-* number.",
-        "valueContactPoint" : {
-          "system" : "phone",
-          "value" : "+31611234567",
-          "use" : "work"
-        }
-      },
-      {
-        "label" : "Mobile phone number undetermined private/business. Note: the mobile nature stems from the number being an 06-* number.",
-        "valueContactPoint" : {
-          "system" : "phone",
-          "value" : "+31611234567",
-          "use" : "mobile"
-        }
-      },
-      {
-        "label" : "Primary Home Land Line",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-                "code" : "LL",
-                "display" : "Land Line"
-              }]
-            }
-          }],
-          "system" : "phone",
-          "value" : "...",
-          "use" : "home"
-        }
-      },
-      {
-        "label" : "Temporary Land Line",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-                "code" : "LL",
-                "display" : "Land Line"
-              }]
-            }
-          }],
-          "system" : "phone",
-          "value" : "...",
-          "use" : "temp"
-        }
-      },
-      {
-        "label" : "Primary Work Land Line",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-                "code" : "LL",
-                "display" : "Land Line"
-              }]
-            }
-          }],
-          "system" : "phone",
-          "value" : "...",
-          "use" : "work"
-        }
-      },
-      {
-        "label" : "Primary Home Fax",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-                "code" : "FAX",
-                "display" : "Fax"
-              }]
-            }
-          }],
-          "system" : "fax",
-          "value" : "...",
-          "use" : "home"
-        }
-      },
-      {
-        "label" : "Temporary Fax",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-                "code" : "FAX",
-                "display" : "Fax"
-              }]
-            }
-          }],
-          "system" : "fax",
-          "value" : "...",
-          "use" : "temp"
-        }
-      },
-      {
-        "label" : "Primary Work Fax",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1",
-                "code" : "FAX",
-                "display" : "Fax"
-              }]
-            }
-          }],
-          "system" : "fax",
-          "value" : "...",
-          "use" : "work"
-        }
-      },
-      {
-        "label" : "Primary Home Mobile Phone",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "MC",
-                "display" : "Mobile Phone"
-              }]
-            }
-          }],
-          "system" : "phone",
-          "value" : "...",
-          "use" : "home"
-        }
-      },
-      {
-        "label" : "Temporary Mobile Phone",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "MC",
-                "display" : "Mobile Phone"
-              }]
-            }
-          }],
-          "system" : "phone",
-          "value" : "...",
-          "use" : "temp"
-        }
-      },
-      {
-        "label" : "Primary Work Mobile Phone",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "MC",
-                "display" : "Mobile Phone"
-              }]
-            }
-          }],
-          "system" : "phone",
-          "value" : "...",
-          "use" : "work"
-        }
-      },
-      {
-        "label" : "Primary Home Pager",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "PG",
-                "display" : "Pager"
-              }]
-            }
-          }],
-          "system" : "pager",
-          "value" : "...",
-          "use" : "home"
-        }
-      },
-      {
-        "label" : "Temporary Pager",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "PG",
-                "display" : "Pager"
-              }]
-            }
-          }],
-          "system" : "pager",
-          "value" : "...",
-          "use" : "temp"
-        }
-      },
-      {
-        "label" : "Primary Work Pager",
-        "valueContactPoint" : {
-          "extension" : [{
-            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
-            "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://hl7.org/fhir/v3/AddressUse",
-                "code" : "PG",
-                "display" : "Pager"
-              }]
-            }
-          }],
-          "system" : "pager",
-          "value" : "...",
-          "use" : "work"
-        }
-      },
-      {
-        "label" : "Private email address",
-        "valueContactPoint" : {
-          "system" : "email",
-          "value" : "giesput@myweb.nl",
-          "use" : "home"
-        }
-      },
-      {
-        "label" : "Work email address",
-        "valueContactPoint" : {
-          "system" : "email",
-          "value" : "example@workplace.nl",
-          "use" : "work"
-        }
-      }],
-      "condition" : ["ele-1"],
-      "constraint" : [{
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() | (children().count() > id.count())",
-        "xpath" : "@value|f:*|h:div",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      },
-      {
-        "key" : "cpt-2",
-        "severity" : "error",
-        "human" : "A system is required if a value is provided.",
-        "expression" : "value.empty() or system.exists()",
-        "xpath" : "not(exists(f:value)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/ContactPoint"
-      }],
+      "isSummary" : true,
       "mapping" : [{
         "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
         "map" : "NL-CM:17.1.8",
@@ -1603,35 +1320,8 @@
         "comment" : "ContactInformation"
       },
       {
-        "identity" : "hcim-contactinformation-v2.0.1-2015EN",
-        "map" : "NL-CM:0.1.5",
-        "comment" : "ContactInformation"
-      },
-      {
-        "identity" : "hcim-contactinformation-v3.0-2016EN",
-        "map" : "NL-CM:0.1.5",
-        "comment" : "ContactInformation"
-      },
-      {
-        "identity" : "hcim-contactinformation-v1.0-2017EN",
-        "map" : "NL-CM:20.6.1",
-        "comment" : "ContactInformation"
-      },
-      {
         "identity" : "rim",
-        "map" : "n/a"
-      },
-      {
-        "identity" : "v2",
-        "map" : "XTN"
-      },
-      {
-        "identity" : "rim",
-        "map" : "TEL"
-      },
-      {
-        "identity" : "servd",
-        "map" : "ContactPoint"
+        "map" : ".telecom"
       }]
     },
     {

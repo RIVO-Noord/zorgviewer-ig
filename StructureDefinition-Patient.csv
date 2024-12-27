@@ -1,4 +1,4 @@
-"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: HCIM Patient-v3.1(2017EN)","Mapping: HCIM MaritalStatus-v3.0(2017EN)","Mapping: HCIM ContactPerson-v3.1(2017EN)","Mapping: HCIM HealthcareProvider-v3.1.1(2017EN)","Mapping: HCIM HealthProfessional-v3.2(2017EN)","Mapping: HCIM Nationality-v3.0(2017EN)","Mapping: HCIM Payer-v3.1(2017EN)","Mapping: HCIM ContactInformation-v1.0(2017EN)","Mapping: HCIM LanguageProficiency-v3.1(2017EN)","Mapping: HCIM FreedomRestrictingMeasures-v3.1(2017EN)","Mapping: HCIM BasicElements-v1.0(2017EN)","Mapping: HCIM FamilySituation-v3.0(2017EN)","Mapping: HCIM LifeStance-v3.1(2017EN)","Mapping: HCIM Patient-v3.0(2016EN)","Mapping: HCIM MaritalStatus-v3.0(2016EN)","Mapping: HCIM ContactPerson-v3.0(2016EN)","Mapping: HCIM HealthcareProvider-v3.0(2016EN)","Mapping: HCIM HealthProfessional-v3.0(2016EN)","Mapping: HCIM Nationality-v3.0(2016EN)","Mapping: HCIM Payer-v3.0(2016EN)","Mapping: HCIM FamilySituation-v3.0(2016EN)","Mapping: HCIM Patient-v2.0.1(2015EN)","Mapping: HCIM MaritalStatus-v1.2.1(2015EN)","Mapping: HCIM ContactPerson-v1.2(2015EN)","Mapping: HCIM HealthcareProvider-v1.2(2015EN)","Mapping: HCIM HealthProfessional-v1.2.1(2015EN)","Mapping: HCIM Nationality-v2.0(2015EN)","Mapping: HCIM Payer-v1.2(2015EN)","Mapping: HCIM FamilySituation-v1.0(2015EN)","Mapping: RIM Mapping","Mapping: CDA (R2)","Mapping: W5 Mapping","Mapping: HL7 v2 Mapping","Mapping: LOINC code for the element"
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: HCIM Patient-v3.1(2017EN)","Mapping: HCIM MaritalStatus-v3.0(2017EN)","Mapping: HCIM ContactPerson-v3.1(2017EN)","Mapping: HCIM HealthcareProvider-v3.1.1(2017EN)","Mapping: HCIM HealthProfessional-v3.2(2017EN)","Mapping: HCIM Nationality-v3.0(2017EN)","Mapping: HCIM Payer-v3.1(2017EN)","Mapping: HCIM LanguageProficiency-v3.1(2017EN)","Mapping: HCIM FreedomRestrictingMeasures-v3.1(2017EN)","Mapping: HCIM BasicElements-v1.0(2017EN)","Mapping: HCIM FamilySituation-v3.0(2017EN)","Mapping: HCIM LifeStance-v3.1(2017EN)","Mapping: HCIM Patient-v3.0(2016EN)","Mapping: HCIM MaritalStatus-v3.0(2016EN)","Mapping: HCIM ContactPerson-v3.0(2016EN)","Mapping: HCIM HealthcareProvider-v3.0(2016EN)","Mapping: HCIM HealthProfessional-v3.0(2016EN)","Mapping: HCIM Nationality-v3.0(2016EN)","Mapping: HCIM Payer-v3.0(2016EN)","Mapping: HCIM FamilySituation-v3.0(2016EN)","Mapping: HCIM Patient-v2.0.1(2015EN)","Mapping: HCIM MaritalStatus-v1.2.1(2015EN)","Mapping: HCIM ContactPerson-v1.2(2015EN)","Mapping: HCIM HealthcareProvider-v1.2(2015EN)","Mapping: HCIM HealthProfessional-v1.2.1(2015EN)","Mapping: HCIM Nationality-v2.0(2015EN)","Mapping: HCIM Payer-v1.2(2015EN)","Mapping: HCIM FamilySituation-v1.0(2015EN)","Mapping: RIM Mapping","Mapping: CDA (R2)","Mapping: W5 Mapping","Mapping: HL7 v2 Mapping","Mapping: LOINC code for the element"
 "Patient","Patient","","SubjectOfCare Client Resident
 Patiënt","",0,*,"","","","null {[]} {[]}
 ","Patient","Demographics and other administrative information about an individual or animal receiving care or other health-related services.","","","","","","","","","",,,,,"",,,,"Patient",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
@@ -193,57 +193,9 @@ Where the system is known, a type is unnecessary because the type is always part
 
 This element is labeled as a modifier because when the patient record is marked as not active it is not expected to be used/referenced without being changed back to active.","Need to be able to mark a patient record as not to be used because it was created in error.","<valueBoolean xmlns=""http://hl7.org/fhir"" value=""true""/>","","","","","","",,,,,"",,,,"Patient.active",0,1,"","","statusCode","n/a","status"
 "Patient.name","Patient.name","","Naamgegevens
-","",1,*,"Y","","","HumanName {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-humanname]]} {[]}
-","NameInformation","A human's name with the ability to identify parts and usage.","Dutch names require that certain name parts are separately communicable. For this reason, extensions are added onto the base HumanName element to mark the meaning of each part. A Dutch HumanName is still a proper FHIR HumanName; however, there might be an incompatibilty with the default FHIR mechanism for communicating given names. See the compatibility note below for more information.
-
-The extension elements cover birth name (NL: eigennaam / geslachtsnaam) and partner/spouse name. Both may have a prefix (NL: voorvoegsel). When a person marries, he or she may keep their own name, assume the partner name, append the partner name to their own name, or the other way around.
-
-**Incompatibility note**: It has come to light that this specification deviates from the way that the HumanName datatype is normally used. This will be fixed in a future release. However, current implementations should be aware of the special considerations regarding the use of this specification. 
-
-The issue at hand is the way alternative representations of a name, like initials or a nickname, are communicated. Normally this is done using multiple HumanName instances, which are differentiated using the `.use` element. However, this specification allows for including all alternative representations in the _same_ HumanName instance, with the expectation that the extensions provide enough information for receiving systems to differentiate them. However, this means that contrary to the normal usage of this datatype, repetitions of `.given` names cannot be concatenated to get the full list of given names; the list might be a mix of full names, nicknames and initials.
-
-Since multiple implementations are based on this specification, sending systems are advised (but not required) to keep the approach with one HumanName instance, while receiving systems should be able to handle this one-instance approach. More specifically:
-
-* Sending and receiving systems SHOULD always use the specified extensions when using this datatype.
-* Sending systems are encouraged to populate the `.text` element to unambigiously communicate the person's name.
-* Sending systems are encouraged to send either the full given names or the initials, but not both. This alleviates the duplication of names in `.given`.
-* When a sending system uses the current one-instance approach for communicating multiple representations, `.use` MAY NOT be populated. After all, it is not possible to select a single `.use` when the instance contains different representations.
-* When a receiving system interprets the instance as the single-instance-multiple-representations approach, the `.given` names marked as initials SHOULD be interpreted as alternatives to the full given names. Note the underlying HCIM expects both the _list_ of full names and _list_ of initials to be a single string; there's no match for an initial to a full name. The instance SHOULD be regarded as using this approach when:
-  * They encounter a single instance
-  * And the `.use` element is absent
-  * And all the name parts are differentiated using the specified extensions
-* In any other circumstance, receiving systems SHOULD interpret the usage as the normal use.
-
-Example: miss Irma Jongeneel marries mister de Haas and assumes the name Irma Jongeneel-de Haas:
-
-* `.family` = ""Jongeneel-de Haas""
-* `.given` = ""Irma"" (with `.given:iso21090EnQualifier` = _BR_)
-* `.family:humannameOwnName` = ""Jongeneel""
-* `.family:humannamePartnerPrefix` = ""de ""
-* `.family:humannamePartnerName` = ""Haas""","Need to be able to track the patient by multiple names. Examples are your official name and a partner name.","","","","","<valueHumanName xmlns=""http://hl7.org/fhir"">
-  <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"">
-    <valueCode value=""NL4""/>
-  </extension>
-  <text value=""Irma Jongeneel-de Haas""/>
-  <family value=""Jongeneel-de Haas"">
-    <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-own-name"">
-      <valueString value=""Jongeneel""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix"">
-      <valueString value=""de""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-partner-name"">
-      <valueString value=""Haas""/>
-    </extension>
-  </family>
-  <given value=""Irma"">
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"">
-      <valueCode value=""CL""/>
-    </extension>
-  </given>
-</valueHumanName>","","",,,,,"",,,,"Patient.name",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-nl-core-humanname-1:if you specify a prefix for an own name then an own name is also expected {name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()}nl-core-humanname-2:if you specify a voorvoegsel for a partner name then a partner name is also expected {name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()}zv-pat-1:Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present. {(family.exists() or given.exists() or text.exists())}zv-pat-2:To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present. {text.exists()}","NL-CM:0.1.6","NL-CM:1.1.5","NL-CM:0.1.6","NL-CM:1.1.5","NL-CM:0.1.6","NL-CM:1.1.5","n/a","EN (actually, PN)","XPN"
+","",1,*,"Y","","Y","HumanName {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-humanname]]} {[]}
+","NameInformation","A name associated with the individual.","A patient may have multiple names with different uses or applicable periods. For animals, the name is a ""HumanName"" in the sense that is assigned and used by humans and has the same patterns.","Need to be able to track the patient by multiple names. Examples are your official name and a partner name.","","","","","","","",,,,,"",,,,"Patient.name",0,*,"","zv-pat-1:Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present. {(family.exists() or given.exists() or text.exists())}
+zv-pat-2:To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present. {text.exists()}","NL-CM:0.1.6","NL-CM:1.1.5","NL-CM:0.1.6","NL-CM:1.1.5","NL-CM:0.1.6","NL-CM:1.1.5","name",".patient.name","PID-5, PID-9"
 "Patient.name.id","Patient.name.id","","","",0,1,"","","","string {[]} {[]}
 ","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Patient.name.extension","Patient.name.extension","","","",0,*,"","","","Extension {[]} {[]}
@@ -367,15 +319,8 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Parts that come after the name","Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.","","","","","","","","","",,,,,"",,,,"HumanName.suffix",0,*,"","","./part[partType = SFX]","XPN/4"
 "Patient.name.period","Patient.name.period","","","",0,1,"","","Y","Period {[]} {[]}
 ","Time period when name was/is in use","Indicates the period of time when this name was valid for the named person.","","Allows names to be placed in historical context.","","","","","","","",,,,,"",,,,"HumanName.period",0,1,"","","./usablePeriod[type=""IVL<TS>""]","XPN.13 + XPN.14"
-"Patient.telecom","Patient.telecom","","Contactgegevens
-","",0,*,"","","","ContactPoint {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint]]} {[]}
-","ContactInformation","A contact detail for the individual. Note that there is no support for multiple use values like 'mobile business'.","A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address may not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).","People have (primary) ways to contact them in some way such as phone, email.","","","","","<valueContactPoint xmlns=""http://hl7.org/fhir"">
-  <system value=""phone""/>
-  <value value=""+31611234567""/>
-  <use value=""work""/>
-</valueContactPoint>","","",,,,,"",,,,"Patient.telecom",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-cpt-2:A system is required if a value is provided. {value.empty() or system.exists()}","NL-CM:0.1.5","NL-CM:1.1.12","NL-CM:20.6.1","NL-CM:0.1.5","NL-CM:1.1.12","NL-CM:0.1.5","NL-CM:1.1.12","n/a","TEL","XTN"
+"Patient.telecom","Patient.telecom","","","",0,*,"","","Y","ContactPoint {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint]]} {[]}
+","A contact detail for the individual","A contact detail for the individual. Note that there is no support for multiple use values like 'mobile business'.","A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address may not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).","People have (primary) ways to contact them in some way such as phone, email.","","","","","","","",,,,,"",,,,"Patient.telecom",0,*,"","","NL-CM:0.1.5","NL-CM:1.1.12","NL-CM:0.1.5","NL-CM:1.1.12","NL-CM:0.1.5","NL-CM:1.1.12","telecom",".telecom","PID-13, PID-14, PID-40"
 "Patient.gender","Patient.gender","","Geslacht
 ","",0,1,"Y","","Y","code {[]} {[]}
 ","Gender","Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes.","The gender may not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though the vast majority of systems and contexts only support M and F.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific gender aspect of interest (anatomical, chromosonal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosonal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overrideable error, not a ""hard"" error.","Needed for identification of the individual, in combination with (at least) name and birth date. Gender of individual drives many clinical processes.","","","","","","","",,"required","","http://hl7.org/fhir/ValueSet/administrative-gender","",,,,"Patient.gender",0,1,"","","NL-CM:0.1.9","NL-CM:0.1.9","NL-CM:0.1.9","player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender",".patient.administrativeGenderCode","PID-8"
@@ -412,63 +357,9 @@ user content","",0,*,"","","","Extension {[]} {[]}
 dateTime {[]} {[]}","DeathIndicator/DateOfDeath","Indicates if the individual is deceased or not.","If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
 
 This element is labeled as a modifier because once a patient is marked as deceased, the actions that are appropriate to perform on the patient may be significantly different.","The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.","","","","","","","",,,,,"",,,,"Patient.deceased[x]",0,1,"","","NL-CM:0.1.32","NL-CM:0.1.33","NL-CM:0.1.32","NL-CM:0.1.33","NL-CM:0.1.32","NL-CM:0.1.33","player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime","n/a","PID-30  (bool) and PID-29 (datetime)"
-"Patient.address","Patient.address","","AdresInformatie
-Adresgegevens","",0,*,"","","","Address {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-address]]} {[]}
-","AddressInformation","This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.
-
-To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.
-
-**Separate address parts**
-
-The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.
-
-**Custom address types**
-
-The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse> and <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType> as well). The HCIM code itself should also be included using the AddressType extension.
-
-| HCIM                              |` .ext:AddressType` | `.ext:official` | `.use` | `.type`    |
-|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|
-| Postal Address/Postadres          | _PST_              |                 |        | _postal_   |
-| Primary Home/Officieel adres      | _HP_               | true            | _home_ |            |
-| Visit Address/Woon-/verblijfadres | _PHYS_             |                 | _home_ | _physical_ |
-| Temporary Address/Tijdelijk adres | _TMP_              |                 | _temp_ |            |
-| Work Place/Werkadres              | _WP_               |                 | _work_ |            |
-| Vacation Home/Vakantie adres      | _HV_               |                 | _temp_ |            |
-
- If Address.type is _both_ then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.
-
-NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension.","Note: address is for postal addresses, not physical locations.","May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.","","","","","<valueAddress xmlns=""http://hl7.org/fhir"">
-  <extension url=""http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType"">
-    <valueCodeableConcept>
-      <coding>
-        <system value=""http://hl7.org/fhir/v3/AddressUse""/>
-        <code value=""HV""/>
-        <display value=""Vakantie adres""/>
-      </coding>
-    </valueCodeableConcept>
-  </extension>
-  <use value=""temp""/>
-  <line value=""Binnenkant 12A Hoog"">
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"">
-      <valueString value=""Binnenkant""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"">
-      <valueString value=""12""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix"">
-      <valueString value=""A""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID"">
-      <valueString value=""Hoog""/>
-    </extension>
-  </line>
-  <city value=""Amsterdam""/>
-  <state value=""NH""/>
-  <postalCode value=""1000AA""/>
-  <country value=""NLD""/>
-</valueAddress>","","",,,,,"",,,,"Patient.address",0,*,"ele-1
-nl-streetname-if-official-and-other-line-parts","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-nl-streetname-if-official-and-other-line-parts:Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value {(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))}","NL-CM:0.1.4","NL-CM:1.1.17","NL-CM:0.1.4","NL-CM:1.1.17","NL-CM:0.1.4","NL-CM:1.1.17","n/a","AD","XAD"
+"Patient.address","Patient.address","","Adresgegevens
+","",0,*,"","","Y","Address {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-address]]} {[]}
+","AddressInformation","Addresses for the individual.","Patient may have multiple addresses with different uses or applicable periods.","May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.","","","","","","","",,,,,"",,,,"Patient.address",0,*,"","","NL-CM:0.1.4","NL-CM:1.1.17","NL-CM:0.1.4","NL-CM:1.1.17","NL-CM:0.1.4","NL-CM:1.1.17","addr",".addr","PID-11"
 "Patient.maritalStatus","Patient.maritalStatus","","BurgerlijkeStaat
 ","",0,1,"","","","CodeableConcept {[]} {[]}
 ","MaritalStatus","This field contains a patient's most recent marital (civil) status. A person’s marital status according to the terms and definition in the Dutch civil code.","","Most, if not all systems capture it.","","","","","","","",,"extensible","","http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000","",,,,"Patient.maritalStatus",0,1,"","","NL-CM:7.9.2","NL-CM:7.13.7","NL-CM:7.9.2","NL-CM:7.13.7","NL-CM:7.9.2","NL-CM:7.13.7","player[classCode=PSN]/maritalStatusCode",".patient.maritalStatusCode","PID-16"
@@ -502,56 +393,7 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 ","Role","Expectation is to have at least one of primary contact ('Eerste relatie/contactpersoon') or secondary contact ('Tweede relatie/contactpersoon')","","Used to determine which contact person is the most relevant to approach, depending on circumstances.","","","","","","","",,"required","","http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000","",,,,"Patient.contact.relationship",0,*,"","","NL-CM:3.1.2","NL-CM:3.1.2","NL-CM:3.1.2","code","n/a","NK1-7, NK1-3"
 "Patient.contact.name","Patient.contact.name","","Naamgegevens
 ","",0,1,"","","","HumanName {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-humanname]]} {[]}
-","NameInformation","A human's name with the ability to identify parts and usage.","Dutch names require that certain name parts are separately communicable. For this reason, extensions are added onto the base HumanName element to mark the meaning of each part. A Dutch HumanName is still a proper FHIR HumanName; however, there might be an incompatibilty with the default FHIR mechanism for communicating given names. See the compatibility note below for more information.
-
-The extension elements cover birth name (NL: eigennaam / geslachtsnaam) and partner/spouse name. Both may have a prefix (NL: voorvoegsel). When a person marries, he or she may keep their own name, assume the partner name, append the partner name to their own name, or the other way around.
-
-**Incompatibility note**: It has come to light that this specification deviates from the way that the HumanName datatype is normally used. This will be fixed in a future release. However, current implementations should be aware of the special considerations regarding the use of this specification. 
-
-The issue at hand is the way alternative representations of a name, like initials or a nickname, are communicated. Normally this is done using multiple HumanName instances, which are differentiated using the `.use` element. However, this specification allows for including all alternative representations in the _same_ HumanName instance, with the expectation that the extensions provide enough information for receiving systems to differentiate them. However, this means that contrary to the normal usage of this datatype, repetitions of `.given` names cannot be concatenated to get the full list of given names; the list might be a mix of full names, nicknames and initials.
-
-Since multiple implementations are based on this specification, sending systems are advised (but not required) to keep the approach with one HumanName instance, while receiving systems should be able to handle this one-instance approach. More specifically:
-
-* Sending and receiving systems SHOULD always use the specified extensions when using this datatype.
-* Sending systems are encouraged to populate the `.text` element to unambigiously communicate the person's name.
-* Sending systems are encouraged to send either the full given names or the initials, but not both. This alleviates the duplication of names in `.given`.
-* When a sending system uses the current one-instance approach for communicating multiple representations, `.use` MAY NOT be populated. After all, it is not possible to select a single `.use` when the instance contains different representations.
-* When a receiving system interprets the instance as the single-instance-multiple-representations approach, the `.given` names marked as initials SHOULD be interpreted as alternatives to the full given names. Note the underlying HCIM expects both the _list_ of full names and _list_ of initials to be a single string; there's no match for an initial to a full name. The instance SHOULD be regarded as using this approach when:
-  * They encounter a single instance
-  * And the `.use` element is absent
-  * And all the name parts are differentiated using the specified extensions
-* In any other circumstance, receiving systems SHOULD interpret the usage as the normal use.
-
-Example: miss Irma Jongeneel marries mister de Haas and assumes the name Irma Jongeneel-de Haas:
-
-* `.family` = ""Jongeneel-de Haas""
-* `.given` = ""Irma"" (with `.given:iso21090EnQualifier` = _BR_)
-* `.family:humannameOwnName` = ""Jongeneel""
-* `.family:humannamePartnerPrefix` = ""de ""
-* `.family:humannamePartnerName` = ""Haas""","Contact persons need to be identified by name, but it is uncommon to need details about multiple other names for that contact person.","","","","","<valueHumanName xmlns=""http://hl7.org/fhir"">
-  <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"">
-    <valueCode value=""NL4""/>
-  </extension>
-  <text value=""Irma Jongeneel-de Haas""/>
-  <family value=""Jongeneel-de Haas"">
-    <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-own-name"">
-      <valueString value=""Jongeneel""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix"">
-      <valueString value=""de""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/humanname-partner-name"">
-      <valueString value=""Haas""/>
-    </extension>
-  </family>
-  <given value=""Irma"">
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"">
-      <valueCode value=""CL""/>
-    </extension>
-  </given>
-</valueHumanName>","","",,,,,"",,,,"Patient.contact.name",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-nl-core-humanname-1:if you specify a prefix for an own name then an own name is also expected {name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()}nl-core-humanname-2:if you specify a voorvoegsel for a partner name then a partner name is also expected {name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()}","NL-CM:3.1.4","NL-CM:3.1.4","NL-CM:3.1.4","n/a","EN (actually, PN)","XPN"
+","NameInformation","A name associated with the contact person.","","Contact persons need to be identified by name, but it is uncommon to need details about multiple other names for that contact person.","","","","","","","",,,,,"",,,,"Patient.contact.name",0,1,"","","NL-CM:3.1.4","NL-CM:3.1.4","NL-CM:3.1.4","name","n/a","NK1-2"
 "Patient.contact.name.id","Patient.contact.name.id","","","",0,1,"","","","string {[]} {[]}
 ","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Patient.contact.name.extension","Patient.contact.name.extension","","","",0,*,"","","","Extension {[]} {[]}
@@ -675,95 +517,11 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Parts that come after the name","Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.","","","","","","","","","",,,,,"",,,,"HumanName.suffix",0,*,"","","./part[partType = SFX]","XPN/4"
 "Patient.contact.name.period","Patient.contact.name.period","","","",0,1,"","","Y","Period {[]} {[]}
 ","Time period when name was/is in use","Indicates the period of time when this name was valid for the named person.","","Allows names to be placed in historical context.","","","","","","","",,,,,"",,,,"HumanName.period",0,1,"","","./usablePeriod[type=""IVL<TS>""]","XPN.13 + XPN.14"
-"Patient.contact.telecom","Patient.contact.telecom","","Contactgegevens
-","",0,*,"","","","ContactPoint {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint]]} {[]}
-","ContactInformation","Contact information includes a person's telephone numbers and email addresses. This datatype defines a common basis for expressing all contact information around the world, but adds extensions to express Dutch contacts specifically, according to the HCIM ContactInformation (v1.0, 2017). A Dutch ContactPoint still is a proper FHIR ContactPoint, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype. The table below explains how the HCIM concepts are mapped to the various FHIR elements. The HCIM code itself should also be included using the TelecomType extension.
-
-| HCIM                                               | `.ext:TelecomType` | `.system` | `.use`   |
-|----------------------------------------------------|:------------------:|:---------:|:--------:|
-| Primary Home Land Line                             | _LL_               | _phone_   | _home_   |
-| Temporary Land Line                                | _LL_               | _phone_   | _temp_   |
-| Primary Work Land Line                             | _LL_               | _phone_   | _work_   |
-|                                                    |                    |           |          |
-| Primary Home Fax                                   | _FAX_              | _fax_     | _home_   |
-| Temporary Fax                                      | _FAX_              | _fax_     | _temp_   |
-| Primary Work Fax                                   | _FAX_              | _fax_     | _work_   |
-|                                                    |                    |           |          |
-| Primary Home Mobile Phone                          | _MC_               | _phone_   | _home_   |
-| Temporary Mobile Phone                             | _MC_               | _phone_   | _temp_   |
-| Primary Work Mobile Phone                          | _MC_               | _phone_   | _work_   |
-|                                                    |                    |           |          |
-| Primary Home Pager                                 | _PG_               | _pager_   | _home_   |
-| Temporary Pager                                    | _PG_               | _pager_   | _temp_   |
-| Primary Work Pager                                 | _PG_               | _pager_   | _work_   |
-|                                                    |                    |           |          |
-| Private email address                              |                    | _email_   | _home_   |
-| Work email address                                 |                    | _email_   | _work_   |
-|                                                    |                    |           |          |
-| Mobile phone number undetermined private/business  |                    | _phone_   | _mobile_ |","Telecommunication data details (phone/email) is physically modeled in the HCIM Patient, which is why the telecommunication mappings appear to be coming from the HCIM Patient instead of the HCIM ContactPerson","People have (primary) ways to contact them in some way such as phone, email.","","","","","<valueContactPoint xmlns=""http://hl7.org/fhir"">
-  <system value=""phone""/>
-  <value value=""+31611234567""/>
-  <use value=""work""/>
-</valueContactPoint>","","",,,,,"",,,,"Patient.contact.telecom",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-cpt-2:A system is required if a value is provided. {value.empty() or system.exists()}","NL-CM:3.1.6","NL-CM:20.6.1","NL-CM:3.1.6","NL-CM:3.1.6","n/a","TEL","XTN"
-"Patient.contact.address","Patient.contact.address","","AdresInformatie
-Adresgegevens","",0,1,"","","","Address {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-address]]} {[]}
-","AddressInformation","This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.
-
-To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.
-
-**Separate address parts**
-
-The first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.
-
-**Custom address types**
-
-The second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse> and <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType> as well). The HCIM code itself should also be included using the AddressType extension.
-
-| HCIM                              |` .ext:AddressType` | `.ext:official` | `.use` | `.type`    |
-|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|
-| Postal Address/Postadres          | _PST_              |                 |        | _postal_   |
-| Primary Home/Officieel adres      | _HP_               | true            | _home_ |            |
-| Visit Address/Woon-/verblijfadres | _PHYS_             |                 | _home_ | _physical_ |
-| Temporary Address/Tijdelijk adres | _TMP_              |                 | _temp_ |            |
-| Work Place/Werkadres              | _WP_               |                 | _work_ |            |
-| Vacation Home/Vakantie adres      | _HV_               |                 | _temp_ |            |
-
- If Address.type is _both_ then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.
-
-NOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension.","Note: address is for postal addresses, not physical locations.","Need to keep track where the contact person can be contacted per postal mail or visited.","","","","","<valueAddress xmlns=""http://hl7.org/fhir"">
-  <extension url=""http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType"">
-    <valueCodeableConcept>
-      <coding>
-        <system value=""http://hl7.org/fhir/v3/AddressUse""/>
-        <code value=""HV""/>
-        <display value=""Vakantie adres""/>
-      </coding>
-    </valueCodeableConcept>
-  </extension>
-  <use value=""temp""/>
-  <line value=""Binnenkant 12A Hoog"">
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"">
-      <valueString value=""Binnenkant""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"">
-      <valueString value=""12""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix"">
-      <valueString value=""A""/>
-    </extension>
-    <extension url=""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID"">
-      <valueString value=""Hoog""/>
-    </extension>
-  </line>
-  <city value=""Amsterdam""/>
-  <state value=""NH""/>
-  <postalCode value=""1000AA""/>
-  <country value=""NLD""/>
-</valueAddress>","","",,,,,"",,,,"Patient.contact.address",0,1,"ele-1
-nl-streetname-if-official-and-other-line-parts","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-nl-streetname-if-official-and-other-line-parts:Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value {(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))}","NL-CM:3.1.5","NL-CM:3.1.5","NL-CM:3.1.5","n/a","AD","XAD"
+"Patient.contact.telecom","Patient.contact.telecom","","","",0,*,"","","","ContactPoint {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint]]} {[]}
+","A contact detail for the person","A contact detail for the person, e.g. a telephone number or an email address.","Telecommunication data details (phone/email) is physically modeled in the HCIM Patient, which is why the telecommunication mappings appear to be coming from the HCIM Patient instead of the HCIM ContactPerson","People have (primary) ways to contact them in some way such as phone, email.","","","","","","","",,,,,"",,,,"Patient.contact.telecom",0,*,"","","NL-CM:3.1.6","NL-CM:3.1.6","NL-CM:3.1.6","telecom","n/a","NK1-5, NK1-6, NK1-40"
+"Patient.contact.address","Patient.contact.address","","Adresgegevens
+","",0,1,"","","","Address {[CanonicalType[http://fhir.nl/fhir/StructureDefinition/nl-core-address]]} {[]}
+","AddressInformation","Address for the contact person.","","Need to keep track where the contact person can be contacted per postal mail or visited.","","","","","","","",,,,,"",,,,"Patient.contact.address",0,1,"","","NL-CM:3.1.5","NL-CM:3.1.5","NL-CM:3.1.5","addr","n/a","NK1-4"
 "Patient.contact.gender","Patient.contact.gender","","","",0,1,"","","","code {[]} {[]}
 ","male | female | other | unknown","Administrative Gender - the gender that the contact person is considered to have for administration and record keeping purposes.","","Needed to address the person correctly.","","","","","","","",,"required","The gender of a person used for administrative purposes.","http://hl7.org/fhir/ValueSet/administrative-gender","",,,,"Patient.contact.gender",0,1,"","","player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender","n/a","NK1-15"
 "Patient.contact.organization","Patient.contact.organization","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
