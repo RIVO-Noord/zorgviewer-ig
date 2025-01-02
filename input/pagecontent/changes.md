@@ -4,7 +4,7 @@
 
 |Versie|Datum|Changes|
 |---|---|---|
-|1.11.0-sprint49|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.10.0-sprint48...master)|
+|1.11.0-sprint49|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.10.0-sprint48...master)<br/>* Non Functional Requirements toegevoegd|
 |1.10.0-sprint48|27-dec-2024|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.9.1-sprint47...1.10.0-sprint48)<br/>* Canonical url aangepast voor werkende history page|
 |1.9.1-sprint47|10-dec-2024|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.8.0-sprint46...1.9.1-sprint47)<br/>* Vaccinatie toegevoegd<br/>* Spoedopname behandelaanwijzing toegevoegd<br/>* Medicatie update<br/>* DocumentReference status=current parameter toegevoegd|
 |1.8.0-sprint46|25-nov-2024|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.7.0-sprint45...1.8.0-sprint46)<br/>* MedicatieGebruik en MedicatieAfspraak toegevoegd<br/>* Design pagina's gesplitst|
