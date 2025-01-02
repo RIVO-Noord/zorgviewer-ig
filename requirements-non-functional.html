@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Epic DocumentReference Example - RIVO-Noord Zorgviewer Implementation Guide v1.11.0</title>
+    <title>Non Functional Requirements - RIVO-Noord Zorgviewer Implementation Guide v1.11.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script src="assets/js/mermaid.js" type="text/javascript"></script>
     <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
-    <style type="text/css">h2{--heading-prefix:"10.68"}
-    h3,h4,h5,h6{--heading-prefix:"10.68"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.2"}
+    h3,h4,h5,h6{--heading-prefix:"2.2"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
 
@@ -145,7 +145,7 @@
     <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
       <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>Epic DocumentReference Example</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="0requirements.html"><b>Requirements</b></a></li><li><b>Non Functional Requirements</b></li>
 
         </ul>
       </div>    <!-- /container -->
@@ -157,9 +157,16 @@
         <div class="row">
           <div class="inner-wrapper">
 
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
 <div class="col-12">
     <!-- ReleaseHeader --><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.11.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://fhir.hl7.nl/zorgviewer/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
-
+  <h2>Non Functional Requirements</h2>
   
 
 
@@ -169,52 +176,161 @@
 
 
 
-<ul class="nav nav-tabs">
-
-  <li class="active">
-    <a href="#">Narrative Content</a>
-  </li>
-
-
-
-  
-    <li>
-      <a href="DocumentReference-esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi.xml.html">XML</a>
-    </li>
-  
-
-
-  
-    <li>
-      <a href="DocumentReference-esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi.json.html">JSON</a>
-    </li>
-  
 
 
 
 
-</ul>
+    <p>  <!-- white space is critical inside of capture --></p>
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+</div>
+<p>Als basis voor deze non functional requirements is <a href="https://nationalebibliotheek.nictiz.nl/bibliotheek/bgz-msz/">Programma-van-Eisen-BgZ-MSZ-usecase-inzien-hergebruik-22-okt-24</a> uit de Nationale Bibliotheek gebruikt.
+Deze zijn herschreven vanuit het Zorgviewer perspectief.</p>
 
+<h3 id="non-functionele-eisen">Non functionele eisen</h3>
 
-  <a name="root"> </a>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Korte Term</th>
+      <th>Eisen</th>
+      <th>Urgentie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Consistente Weergave</td>
+      <td>De weergave van de specifieke zib informatie die altijd zichtbaar moet zijn, moet snel en consistent zijn, ongeacht de omvang van de informatie in het systeem.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Efficiënte Weergave</td>
+      <td>De optionele weergave van zib informatie moet snel en efficiënt uitgevoerd worden.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Leesbaarheid</td>
+      <td>Informatie moet op een begrijpelijke en leesbare manier gepresenteerd worden.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Snelle Implementatie</td>
+      <td>De Zorgviewer moet in staat zijn om de doorontwikkeling van een uniforme codelijst snel te implementeren om zorgverleners snel de beschikbaarheid hierover te geven.<br/><em>Bijvoorbeeld als een bronsysteem de DHD VT toevoegd moet dit snel zichtbaar zijn in de Zorgviewer</em></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Interoperabiliteit</td>
+      <td>De uniforme codelijsten in de Bronsystemen moeten voldoen aan interoperabiliteitseisen om uitwisseling te kunnen waarborgen.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Consistentie en Betrouwbaarheid</td>
+      <td>De uniforme codelijsten in de Bronsystemen moeten continue geüpdatet worden om consistentie en betrouwbaarheid van de lijsten te waarborgen. De doorontwikkeling moet stabiel zijn met geen fouten en inconsistente gegevens.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Interoperabiliteit van BgZ</td>
+      <td>Het ontvangen en opslaan van de BgZ (zib elementen) in de Bronsystemen moet voldoen aan interoperabiliteit om de uitwisseling en hergebruik te waarborgen.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Medische Relaties</td>
+      <td>De in de Bronsystemen aangegeven (medische) relaties moeten voldoen aan interoperabiliteitseisen om uitwisseling en hergebruik te waarborgen (mits beschikbaar in het bronsysteem).</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Afwijkingen en Dubbelingen</td>
+      <td>De Zorgviewer moet signalering van afwijkingen/dubbelingen op een begrijpelijke en leesbare manier presenteren.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Snel en Consistent</td>
+      <td>Het ophalende (Zorgviewer) en beschikbaarstellende systeem (Bronsysteem) van de BgZ moet snel en consistent zijn, ongeacht de omvang van de informatie.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Efficiënt Ordenen</td>
+      <td>Het ordenen van BgZ gegevens moet snel en efficiënt plaatsvinden en consistent in de Zorgviewer worden gehandhaafd.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Filtermogelijkheden</td>
+      <td>De filtermogelijkheden om BgZ informatie te kunnen sorteren en/of filteren zijn te gebruiken op alle plekken in de Zorgviewer waar de informatie getoond wordt.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Interne en Externe Gegevens</td>
+      <td>Het onderscheid tussen bron (Zorginstelling) van de gegevens is snel en intuïtief te maken.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Consistentie in Gegevens</td>
+      <td>De manier waarop het onderscheid tussen bron (Zorginstelling) van de gegevens is gemaakt wordt consistent toegepast in de Zorgviewer.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Suggesties voor Duplicaten</td>
+      <td>Het genereren van suggesties door de Zorgviewer voor duplicaten die niet overgenomen hoeven te worden moet snel en efficiënt plaatsvinden.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Minimale Handeling</td>
+      <td>Het wel of niet overnemen van de Zorgviewer suggesties voor het wel of niet overnemen van duplicaten moet met een minimale handeling mogelijk zijn.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Efficiënt Accorderen</td>
+      <td>Het accorderen en overnemen van de BgZ gegevens in het Bronsysteem moet snel en efficiënt plaatsvinden.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Gebruikersinterface</td>
+      <td>De presentatie van gegevens uit de BgZ die niet geverifieerd en overgenomen zijn moet plaatsvinden binnen een duidelijk gestructureerde en overzichtelijke gebruikersinterface die intuïtief en gebruiksvriendelijk is.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Efficiënte Verwerking</td>
+      <td>De Zorgviewer moet de ontvangen zib-elementen efficiënt verwerken en weergeven binnen een aanvaardbare responstijd, zelfs bij een toename van het aantal externe gegevens.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>SNOMED Codelijst</td>
+      <td>Voor de lijst met symptomen (<a href="StructureDefinition-AllergyIntolerance.html">zib Allergie</a>) wordt gebruikt gemaakt van de SNOMED codelijst die door Nictiz wordt onderhouden.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Weergave-Koppeling</td>
+      <td>De weergave-koppeling tussen <a href="StructureDefinition-Condition.html">zib Probleem</a> en <a href="StructureDefinition-Procedure.html">zib Verrichting</a> moet snel en efficiënt uitgevoerd worden.</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
 
-
-  <h2 id="root">Example DocumentReference: Epic DocumentReference Example</h2>
-
-
-
-
-    <!-- insert intro if present -->
-  
-
-
-
-  <div><p class="res-header-id"><b>Gegenereerde narrative: DocumentReference esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi</b></p><a name="esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi"> </a><a name="hcesCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi"> </a><a name="esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi-nl-NL"> </a><p><b>masterIdentifier</b>: <code>urn:oid:1.2.840.114350.1.13.485.2.7.6.698084.19749</code>/Z1384252^55437.99^A0</p><p><b>identifier</b>: <code>urn:oid:1.2.840.114350.1.13.485.2.7.2.727879</code>/269312157</p><p><b>status</b>: Current</p><p><b>docStatus</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 56444-3}, {urn:oid:1.2.840.114350.1.13.485.2.7.10.698084.20208 2101200003}">Patiëntenbrief</span></p><p><b>class</b>: <span title="Codes:{http://open.epic.com/FHIR/StructureDefinition/document-reference-class correspondence}">Correspondence</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=https:///example.org/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3">Fictief, Jan</a></p><p><b>created</b>: 2021-12-15 09:42:11+0000</p><p><b>indexed</b>: 2021-12-15 09:42:11+0000</p><p><b>author</b>: <a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=https://example.org/Practitioner/ec6Rbm68P1PUCdhJhmzP0Jg-DOxJbgJDmPpildGhow943">G Boer</a></p><p><b>description</b>: Patiëntenbrief</p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style="display: none">*</td><td>application/pdf</td><td><a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=https://example.org/Binary/H6MxvY5-Q6bvzVSBsmNKpOld.Wwpzbc3P0Wj3zdD-lGov.W-bA1q9NpIp1RSdgAg">https://example.org/Binary/H6MxvY5-Q6bvzVSBsmNKpOld.Wwpzbc3P0Wj3zdD-lGov.W-bA1q9NpIp1RSdgAg</a></td></tr></table></blockquote><h3>Contexts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Encounter</b></td><td><b>Period</b></td><td><b>PracticeSetting</b></td></tr><tr><td style="display: none">*</td><td>Brief (uit) (Identifier: <code>urn:oid:1.2.840.114350.1.13.485.2.7.3.698084.8</code>/1043087869&nbsp;(gebruik:&nbsp;usual,&nbsp;))</td><td>2021-12-15 09:36:00+0000 --&gt; (continue)</td><td><span title="Codes:{urn:oid:1.2.840.114350.1.13.485.2.7.10.727879.59 039000}">KGA - Genetica</span></td></tr></table></div>
-
-  
-
-    <!-- insert notes if present -->
-  
+<blockquote>
+  <p><em>Gebruikte Copilot prompt: "Zet de non-functionele eisen tabellen uit het document 'Programma-van-Eisen-BgZ-MSZ-usecase-inzien-hergebruik-22-okt-24.pdf' om naar een markdown tabel. Voeg een ID kolom toe, maak de ID's uniek, en voeg een korte term kolom toe na de ID kolom."</em></p>
+</blockquote>
 
 
 

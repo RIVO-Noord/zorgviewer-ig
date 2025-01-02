@@ -1,119 +1,115 @@
-
-
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Epic Patient Example - XML Representation - RIVO-Noord Zorgviewer Implementation Guide v1.10.0</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Epic Patient Example - XML Representation - RIVO-Noord Zorgviewer Implementation Guide v1.11.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link href="fhir.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="fhir.css"/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
 
-    <!-- Project extras -->
-    <link href="assets/css/project.css" rel="stylesheet"/>
-    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
-    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="assets/css/prism.css" rel="stylesheet" />
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
-    <link href="assets/css/rivo.css" rel="stylesheet"/>
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/rivo.css"/>
 
-    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    <![endif] -->
 
-    <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"10.48"}
     h3,h4,h5,h6{--heading-prefix:"10.48"}</style>
-    <div id="segment-header" class="segment">  <!-- segment-header -->
-      <div class="container">  <!-- container -->
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
 
-        <!-- Placeholder for child template header declarations -->
+          <!-- Placeholder for child template header declarations -->
 
 <div id="project-nav">
-    <a id="project-logo" no-external="true" href="https://rivo-noord.nl"><img height="50"
-            alt="Visit the RIVO-Noord website" src="assets/images/rivonoord-logo.png" /> </a>
+    <a no-external="true" id="project-logo" href="https://rivo-noord.nl"><img src="assets/images/rivonoord-logo.png" alt="Visit the RIVO-Noord website" height="50"/> </a>
 </div>
 
 <div id="family-nav">
-    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
-    <a id="family-logo" no-external="true" href="https://hl7.nl"><img height="50" alt="Visit the HL7 NL website"
-            src="assets/images/HL7nl_Logo.png" /> </a>
+    <a no-external="true" id="hl7-search-lnk" href="searchform.html"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+    <a no-external="true" id="family-logo" href="https://hl7.nl"><img src="assets/images/HL7nl_Logo.png" alt="Visit the HL7 NL website" height="50"/> </a>
 </div>
 
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">RIVO-Noord Zorgviewer Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">1.10.0 - CI build
+            <span style="display:inline-block;">1.11.0 - CI build
 
 
 
-  <img alt="Netherlands flag" src="assets/images/nld.svg" height="16" title="Netherlands"/>
+  <img src="assets/images/nld.svg" alt="Netherlands flag" title="Netherlands" height="16"/>
 
 
             </span>
           </p>
         </div>
-      </div> <!-- /container -->
-    </div>  <!-- /segment-header -->
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">  <!-- container -->
-        <!-- HEADER CONTENT -->
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-          <!--status-bar-->
+            <!-- status-bar -->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+            <a href="http://hl7.org/fhir/STU3/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+              <ul class="nav navbar-nav">
   <li><a href="index.html">Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
   <li class="dropdown">
-		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requirements &#8964;</a>
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Requirements ⌄</a>
 		<ul class="dropdown-menu">
-			<li><a href="conformance.html">Uitgangspunten en Requirements</a></li>
+			<li><a name="l171">​</a><a href="conformance.html">Uitgangspunten en Requirements</a></li>
 			<li><a href="nen-normen.html">NEN Normen Conformiteit</a></li>
 			<li><a href="datasets.html">Datasets</a></li>
 			<li><a href="must-support.html">Must Support</a></li>
 		</ul>
 	</li>
   <li class="dropdown">
-		<a href="#" data-toggle="dropdown" class="dropdown-toggle">RAO &#8964;</a>
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">RAO ⌄</a>
 		<ul class="dropdown-menu">
 			<li><a href="zorgnetwerk.html">Inzage Zorgnetwerk</a></li>
 		</ul>
 	</li>
   <li class="dropdown">
-		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Design ⌄</a>
 		<ul class="dropdown-menu">
 			<li><a href="design.html">Design</a></li>
 			<li><a href="design2.html">Design 2024</a></li>
@@ -127,7 +123,7 @@
   <li><a href="artifacts.html">Artifact Index</a></li>
   <li><a href="downloads.html">Downloads</a></li>
   <li class="dropdown">
-		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Checklists &amp; Aansluiten &#8964;</a>
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Checklists &amp; Aansluiten ⌄</a>
 		<ul class="dropdown-menu">
 		  <li><a href="checklists.html">Checklists &amp; Aansluiten</a></li>
 		  <li><a href="thermometer.html">Aansluit Thermometer</a></li>
@@ -138,31 +134,31 @@
   <li><a href="changes.html">Change Log</a></li>
 </ul>      
 
-            </div>  <!-- /.nav-collapse -->
-          </div>  <!-- /.container -->
-        </nav>  <!-- /.navbar -->
-      <!-- /HEADER CONTENT -->
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-navbar -->
-    <!--status-bar-->
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
 
-    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Epic Patient Example</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>Epic Patient Example</b></li>
 
         </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">  <!-- segment-content -->
-      <div class="container">  <!-- container -->
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.10.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhir.hl7.nl/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!-- ReleaseHeader --><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.11.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://fhir.hl7.nl/zorgviewer/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
 
 
 
@@ -205,305 +201,305 @@
 <h2 id="root">: Epic Patient Example - XML Representation</h2>
 
 
-<p><a href="Patient-eXxP1o8ZlOz21F6HXS9puLA3.xml" no-download="true">Raw xml</a> | <a href="Patient-eXxP1o8ZlOz21F6HXS9puLA3.xml" download>Download</a></p>
+<p><a href="Patient-eXxP1o8ZlOz21F6HXS9puLA3.xml" no-download="true">Raw xml</a> | <a download="null" href="Patient-eXxP1o8ZlOz21F6HXS9puLA3.xml">Download</a></p>
 
-  <!-- insert intro if present -->
+    <!-- insert intro if present -->
   
 
 
 
-  <pre class="xml" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
-&lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient">Patient</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;eXxP1o8ZlOz21F6HXS9puLA3&quot;/&gt;
+  <pre style="white-space: pre; text-wrap: nowrap; width: auto;" class="xml"><code style="white-space: pre; text-wrap: nowrap;" class="language-xml">
+&lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient">Patient</a> xmlns="http://hl7.org/fhir"&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>="eXxP1o8ZlOz21F6HXS9puLA3"/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.meta">meta</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.nl/fhir/StructureDefinition/nl-core-patient&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="http://fhir.nl/fhir/StructureDefinition/nl-core-patient"/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://nictiz.nl/fhir/StructureDefinition/patient-proficiency&quot;/&gt;
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="http://nictiz.nl/fhir/StructureDefinition/patient-proficiency"/&gt;
   &lt;/meta&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.text">text</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Gegenereerde narrative: Patient eXxP1o8ZlOz21F6HXS9puLA3&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;eXxP1o8ZlOz21F6HXS9puLA3&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hceXxP1o8ZlOz21F6HXS9puLA3&quot;&gt; &lt;/a&gt;&lt;a name=&quot;eXxP1o8ZlOz21F6HXS9puLA3-nl-NL&quot;&gt; &lt;/a&gt;&lt;p style=&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;&quot;&gt;Johan XXX-Helleman Male, Geb.datum: 1964-07-25 ( https://open.epic.com/FHIR/StructureDefinition/PayerMemberId#12345678 (use: usual, ))&lt;/p&gt;&lt;hr/&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Record is actief&quot;&gt;Actief:&lt;/td&gt;&lt;td&gt;true&lt;/td&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Bekende status van Patient&quot;&gt;Overleden:&lt;/td&gt;&lt;td&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Bekende burgerlijke status van Patient&quot;&gt;Burgerlijke staat:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;span title=&quot;Codes:{http://hl7.org/fhir/v3/MaritalStatus M}&quot;&gt;Gehuwd&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Andere id's (zie hierboven)&quot;&gt;Andere id's:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;Burgerservicenummer (BSN)/999911120 (gebruik: usual, )&lt;/li&gt;&lt;li&gt;EPIC/E6488 (gebruik: usual, )&lt;/li&gt;&lt;li&gt;EXTERNAL/Z6505 (gebruik: usual, )&lt;/li&gt;&lt;li&gt;FHIR/ThaUv9zZwVynLmB9U4Hcn6At8IpBc52cm1EvMXyShGhEB (gebruik: usual, )&lt;/li&gt;&lt;li&gt;FHIR STU3/eXxP1o8ZlOz21F6HXS9puLA3 (gebruik: usual, )&lt;/li&gt;&lt;li&gt;INTERNAL/     Z6505 (gebruik: usual, )&lt;/li&gt;&lt;li&gt;MYCHARTLOGIN/JHELLEMAN (gebruik: usual, )&lt;/li&gt;&lt;li&gt;UMCG/2117507 (gebruik: usual, )&lt;/li&gt;&lt;li&gt;WPRINTERNAL/745 (gebruik: usual, )&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Alternatieve namen (zie hierboven)&quot;&gt;Alt. naam:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;J. XXX-Helleman(Official)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Contactopties voor Patient&quot;&gt;Contactgegevens&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;ph: 06 12 34 56 78(Mobile)&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;mailto:helleman@hotmail.com&quot;&gt;helleman@hotmail.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;null STITSWERD 9999 XA NLD (home)&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Aangewezen contactpersoon: Wife&quot;&gt;Wife:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;J.P.M. van Putten-XXX-helleman&lt;/li&gt;&lt;li&gt;null Stitswerd 9999 XA NLD (home)&lt;/li&gt;&lt;li&gt;ph: 06 12 34 56 78(Mobile)&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;mailto:xxx_helleman@hotmail.com&quot;&gt;xxx_helleman@hotmail.com&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Patient-links&quot;&gt;Links:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;Huisarts: &lt;a href=&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https:///example.org/TST-OAUTH2/api/FHIR/STU3/Practitioner/emuT1pBzFZOBnEqKVG9qEYw3&quot;&gt;VASTE. Huisarts 1, Longarts&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Beherende organisatie: &lt;a href=&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https:///example.org/TST-OAUTH2/api/FHIR/STU3/Organization/eDVBi8yhfh8A5aXnbOf6FJQ3&quot;&gt;UMCG&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="generated"/&gt;
+    &lt;div xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;p class="res-header-id"&gt;&lt;b&gt;Gegenereerde narrative: Patient eXxP1o8ZlOz21F6HXS9puLA3&lt;/b&gt;&lt;/p&gt;&lt;a name="eXxP1o8ZlOz21F6HXS9puLA3"&gt; &lt;/a&gt;&lt;a name="hceXxP1o8ZlOz21F6HXS9puLA3"&gt; &lt;/a&gt;&lt;a name="eXxP1o8ZlOz21F6HXS9puLA3-nl-NL"&gt; &lt;/a&gt;&lt;p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"&gt;Johan XXX-Helleman Male, Geb.datum: 1964-07-25 ( https://open.epic.com/FHIR/StructureDefinition/PayerMemberId#12345678&nbsp;(use:&nbsp;usual,&nbsp;))&lt;/p&gt;&lt;hr/&gt;&lt;table class="grid"&gt;&lt;tr&gt;&lt;td style="background-color: #f3f5da" title="Record is actief"&gt;Actief:&lt;/td&gt;&lt;td&gt;true&lt;/td&gt;&lt;td style="background-color: #f3f5da" title="Bekende status van Patient"&gt;Overleden:&lt;/td&gt;&lt;td&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="background-color: #f3f5da" title="Bekende burgerlijke status van Patient"&gt;Burgerlijke staat:&lt;/td&gt;&lt;td colspan="3"&gt;&lt;span title="Codes:{http://hl7.org/fhir/v3/MaritalStatus M}"&gt;Gehuwd&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="background-color: #f3f5da" title="Andere id's (zie hierboven)"&gt;Andere id's:&lt;/td&gt;&lt;td colspan="3"&gt;&lt;ul&gt;&lt;li&gt;Burgerservicenummer (BSN)/999911120&nbsp;(gebruik:&nbsp;usual,&nbsp;)&lt;/li&gt;&lt;li&gt;EPIC/E6488&nbsp;(gebruik:&nbsp;usual,&nbsp;)&lt;/li&gt;&lt;li&gt;EXTERNAL/Z6505&nbsp;(gebruik:&nbsp;usual,&nbsp;)&lt;/li&gt;&lt;li&gt;FHIR/ThaUv9zZwVynLmB9U4Hcn6At8IpBc52cm1EvMXyShGhEB&nbsp;(gebruik:&nbsp;usual,&nbsp;)&lt;/li&gt;&lt;li&gt;FHIR STU3/eXxP1o8ZlOz21F6HXS9puLA3&nbsp;(gebruik:&nbsp;usual,&nbsp;)&lt;/li&gt;&lt;li&gt;INTERNAL/     Z6505&nbsp;(gebruik:&nbsp;usual,&nbsp;)&lt;/li&gt;&lt;li&gt;MYCHARTLOGIN/JHELLEMAN&nbsp;(gebruik:&nbsp;usual,&nbsp;)&lt;/li&gt;&lt;li&gt;UMCG/2117507&nbsp;(gebruik:&nbsp;usual,&nbsp;)&lt;/li&gt;&lt;li&gt;WPRINTERNAL/745&nbsp;(gebruik:&nbsp;usual,&nbsp;)&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="background-color: #f3f5da" title="Alternatieve namen (zie hierboven)"&gt;Alt. naam:&lt;/td&gt;&lt;td colspan="3"&gt;J. XXX-Helleman(Official)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="background-color: #f3f5da" title="Contactopties voor Patient"&gt;Contactgegevens&lt;/td&gt;&lt;td colspan="3"&gt;&lt;ul&gt;&lt;li&gt;ph: 06 12 34 56 78(Mobile)&lt;/li&gt;&lt;li&gt;&lt;a href="mailto:helleman@hotmail.com"&gt;helleman@hotmail.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;null STITSWERD 9999 XA NLD (home)&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="background-color: #f3f5da" title="Aangewezen contactpersoon: Wife"&gt;Wife:&lt;/td&gt;&lt;td colspan="3"&gt;&lt;ul&gt;&lt;li&gt;J.P.M. van Putten-XXX-helleman&lt;/li&gt;&lt;li&gt;null Stitswerd 9999 XA NLD (home)&lt;/li&gt;&lt;li&gt;ph: 06 12 34 56 78(Mobile)&lt;/li&gt;&lt;li&gt;&lt;a href="mailto:xxx_helleman@hotmail.com"&gt;xxx_helleman@hotmail.com&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="background-color: #f3f5da" title="Patient-links"&gt;Links:&lt;/td&gt;&lt;td colspan="3"&gt;&lt;ul&gt;&lt;li&gt;Huisarts: &lt;a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https:///example.org/TST-OAUTH2/api/FHIR/STU3/Practitioner/emuT1pBzFZOBnEqKVG9qEYw3"&gt;VASTE. Huisarts 1, Longarts&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Beherende organisatie: &lt;a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=https:///example.org/TST-OAUTH2/api/FHIR/STU3/Organization/eDVBi8yhfh8A5aXnbOf6FJQ3"&gt;UMCG&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.extension">extension</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://open.epic.com/FHIR/StructureDefinition/extension/legal-sex&quot;&gt;
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://open.epic.com/FHIR/StructureDefinition/extension/legal-sex"&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.840.114350.1.13.485.3.7.10.698084.130.657370.444039&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;male&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;male&quot;/&gt;
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="urn:oid:1.2.840.114350.1.13.485.3.7.10.698084.130.657370.444039"/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="male"/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="male"/&gt;
       &lt;/coding&gt;
     &lt;/valueCodeableConcept&gt;
   &lt;/extension&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.extension">extension</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://open.epic.com/FHIR/StructureDefinition/extension/sex-for-clinical-use&quot;&gt;
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://open.epic.com/FHIR/StructureDefinition/extension/sex-for-clinical-use"&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.840.114350.1.13.485.3.7.10.698084.130.657370.444039&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;male&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;male&quot;/&gt;
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="urn:oid:1.2.840.114350.1.13.485.3.7.10.698084.130.657370.444039"/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="male"/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="male"/&gt;
       &lt;/coding&gt;
     &lt;/valueCodeableConcept&gt;
   &lt;/extension&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/rendered-value&quot;&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;999911120&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/rendered-value"&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="999911120"/&gt;
     &lt;/extension&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.nl/fhir/NamingSystem/bsn&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;999911120&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="usual"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="http://fhir.nl/fhir/NamingSystem/bsn"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="999911120"/&gt;
   &lt;/identifier&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="usual"/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;EPIC&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="EPIC"/&gt;
     &lt;/type&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.840.114350.1.13.485.3.7.5.737384.0&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;E6488&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="urn:oid:1.2.840.114350.1.13.485.3.7.5.737384.0"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="E6488"/&gt;
   &lt;/identifier&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="usual"/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;EXTERNAL&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="EXTERNAL"/&gt;
     &lt;/type&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.840.114350.1.13.485.3.7.2.698084&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Z6505&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="urn:oid:1.2.840.114350.1.13.485.3.7.2.698084"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Z6505"/&gt;
   &lt;/identifier&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="usual"/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;FHIR&quot;/&gt;
-    &lt;/type&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>
-            <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://open.epic.com/FHIR/StructureDefinition/patient-dstu2-fhir-id&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;ThaUv9zZwVynLmB9U4Hcn6At8IpBc52cm1EvMXyShGhEB&quot;/&gt;
-  &lt;/identifier&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;FHIR STU3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="FHIR"/&gt;
     &lt;/type&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>
-            <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://open.epic.com/FHIR/StructureDefinition/patient-fhir-id&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;eXxP1o8ZlOz21F6HXS9puLA3&quot;/&gt;
+            <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="http://open.epic.com/FHIR/StructureDefinition/patient-dstu2-fhir-id"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="ThaUv9zZwVynLmB9U4Hcn6At8IpBc52cm1EvMXyShGhEB"/&gt;
   &lt;/identifier&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="usual"/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;INTERNAL&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="FHIR STU3"/&gt;
     &lt;/type&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.840.114350.1.13.485.3.7.2.698084&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;     Z6505&quot;/&gt;
-  &lt;/identifier&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MYCHARTLOGIN&quot;/&gt;
-    &lt;/type&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.840.114350.1.13.485.3.7.3.878082.110&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;JHELLEMAN&quot;/&gt;
-  &lt;/identifier&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;UMCG&quot;/&gt;
-    &lt;/type&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;urn:oid:2.16.840.1.113883.2.4.3.8.12&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;2117507&quot;/&gt;
-  &lt;/identifier&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;WPRINTERNAL&quot;/&gt;
-    &lt;/type&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.840.114350.1.13.485.3.7.2.878082&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;745&quot;/&gt;
-  &lt;/identifier&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>
-            <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://open.epic.com/FHIR/StructureDefinition/PayerMemberId&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;12345678&quot;/&gt;
+            <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="http://open.epic.com/FHIR/StructureDefinition/patient-fhir-id"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="eXxP1o8ZlOz21F6HXS9puLA3"/&gt;
   &lt;/identifier&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.active">active</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="usual"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="INTERNAL"/&gt;
+    &lt;/type&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="urn:oid:1.2.840.114350.1.13.485.3.7.2.698084"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="     Z6505"/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="usual"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="MYCHARTLOGIN"/&gt;
+    &lt;/type&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="urn:oid:1.2.840.114350.1.13.485.3.7.3.878082.110"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="JHELLEMAN"/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="usual"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="UMCG"/&gt;
+    &lt;/type&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="urn:oid:2.16.840.1.113883.2.4.3.8.12"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="2117507"/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="usual"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="WPRINTERNAL"/&gt;
+    &lt;/type&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="urn:oid:1.2.840.114350.1.13.485.3.7.2.878082"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="745"/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="usual"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>
+            <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="https://open.epic.com/FHIR/StructureDefinition/PayerMemberId"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="12345678"/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.active">active</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>="true"/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.name">name</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.extension">extension</a>
-               <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/humanname-assembly-order&quot;&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;NL1&quot;/&gt;
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="NL1"/&gt;
     &lt;/extension&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;official&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;J. XXX-Helleman&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;XXX-Helleman&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="official"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="J. XXX-Helleman"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="XXX-Helleman"&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/humanname-own-name&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;XXX-Helleman&quot;/&gt;
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/humanname-own-name"&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="XXX-Helleman"/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/humanname-partner-name&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Putten&quot;/&gt;
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/humanname-partner-name"&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Putten"/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;van&quot;/&gt;
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix"&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="van"/&gt;
       &lt;/extension&gt;
     &lt;/family&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Johan&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;J.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Johan"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="J."/&gt;
   &lt;/name&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.name">name</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.extension">extension</a>
-               <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/humanname-assembly-order&quot;&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;NL1&quot;/&gt;
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="NL1"/&gt;
     &lt;/extension&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Johan XXX-Helleman&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;XXX-Helleman&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="usual"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Johan XXX-Helleman"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="XXX-Helleman"&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/humanname-own-name&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;XXX-Helleman&quot;/&gt;
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/humanname-own-name"&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="XXX-Helleman"/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/humanname-partner-name&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Putten&quot;/&gt;
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/humanname-partner-name"&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Putten"/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;van&quot;/&gt;
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix"&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="van"/&gt;
       &lt;/extension&gt;
     &lt;/family&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Johan&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;J.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Johan"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="J."/&gt;
   &lt;/name&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.telecom">telecom</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;06 12 34 56 78&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;mobile&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="phone"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="06 12 34 56 78"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="mobile"/&gt;
   &lt;/telecom&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.telecom">telecom</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;helleman@hotmail.com&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="email"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="helleman@hotmail.com"/&gt;
   &lt;/telecom&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.gender">gender</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;male&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.birthDate">birthDate</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#date">value</a>=&quot;1964-07-25&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.deceased[x]">deceasedBoolean</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.gender">gender</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="male"/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.birthDate">birthDate</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#date">value</a>="1964-07-25"/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.deceased[x]">deceasedBoolean</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>="false"/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.address">address</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;home&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="home"/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.line">line</a>&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;KNOLWG&quot;/&gt;
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="KNOLWG"/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1000&quot;/&gt;
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="1000"/&gt;
       &lt;/extension&gt;
     &lt;/line&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.city">city</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;STITSWERD&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.postalCode">postalCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;9999 XA&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.country">country</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;NLD&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.city">city</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="STITSWERD"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.postalCode">postalCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="9999 XA"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.country">country</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="NLD"/&gt;
   &lt;/address&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.maritalStatus">maritalStatus</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/v3/MaritalStatus&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;M&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Married&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="http://hl7.org/fhir/v3/MaritalStatus"/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="M"/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Married"/&gt;
     &lt;/coding&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Gehuwd&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Gehuwd"/&gt;
   &lt;/maritalStatus&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.contact.relationship">relationship</a>&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/v3/RoleCode&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;WIFE&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Wife&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>="http://hl7.org/fhir/v3/RoleCode"/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="WIFE"/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Wife"/&gt;
       &lt;/coding&gt;
     &lt;/relationship&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.contact.name">name</a>&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.extension">extension</a>
-                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/humanname-assembly-order&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;NL4&quot;/&gt;
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="NL4"/&gt;
       &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;J.P.M. van Putten-XXX-helleman&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Putten van-XXX-helleman&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="usual"/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="J.P.M. van Putten-XXX-helleman"/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Putten van-XXX-helleman"&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/humanname-own-name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Putten&quot;/&gt;
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/humanname-own-name"&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Putten"/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/humanname-own-prefix&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;van&quot;/&gt;
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix"&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="van"/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/humanname-partner-name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;XXX-helleman&quot;/&gt;
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/humanname-partner-name"&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="XXX-helleman"/&gt;
         &lt;/extension&gt;
       &lt;/family&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Jannie&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;J.P.M.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Jannie"/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="J.P.M."/&gt;
     &lt;/name&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.contact.telecom">telecom</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;06 12 34 56 78&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;mobile&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="phone"/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="06 12 34 56 78"/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="mobile"/&gt;
     &lt;/telecom&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.contact.telecom">telecom</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;xxx_helleman@hotmail.com&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="email"/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="xxx_helleman@hotmail.com"/&gt;
     &lt;/telecom&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.contact.address">address</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;home&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.use">use</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>="home"/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.line">line</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Knolweg&quot;/&gt;
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Knolweg"/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">extension</a>
-                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1000&quot;/&gt;
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="1000"/&gt;
         &lt;/extension&gt;
       &lt;/line&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.city">city</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Stitswerd&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.postalCode">postalCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;9999 XA&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.country">country</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;NLD&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.city">city</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="Stitswerd"/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.postalCode">postalCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="9999 XA"/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.country">country</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="NLD"/&gt;
     &lt;/address&gt;
   &lt;/contact&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.generalPractitioner">generalPractitioner</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>
-               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;https:///example.org/TST-OAUTH2/api/FHIR/STU3/Practitioner/emuT1pBzFZOBnEqKVG9qEYw3&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;VASTE. Huisarts 1, Longarts&quot;/&gt;
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="https:///example.org/TST-OAUTH2/api/FHIR/STU3/Practitioner/emuT1pBzFZOBnEqKVG9qEYw3"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="VASTE. Huisarts 1, Longarts"/&gt;
   &lt;/generalPractitioner&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/patient.html#Patient.managingOrganization">managingOrganization</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>
-               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;https:///example.org/TST-OAUTH2/api/FHIR/STU3/Organization/eDVBi8yhfh8A5aXnbOf6FJQ3&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;UMCG&quot;/&gt;
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="https:///example.org/TST-OAUTH2/api/FHIR/STU3/Organization/eDVBi8yhfh8A5aXnbOf6FJQ3"/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>="UMCG"/&gt;
   &lt;/managingOrganization&gt;
 &lt;/Patient&gt;</code></pre>
 
 
-  <!-- insert notes if present -->
+    <!-- insert notes if present -->
   
 
 
 
 </div>
-        </div>  <!-- /inner-wrapper -->
-      </div>  <!-- /row -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-content -->
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
 
-  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
 
-  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
-  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container">  <!-- container -->
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.10.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Dec 27, 2024 09:59+0000">2024-12-27</span>
+          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.11.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Thu, Jan 2, 2025 11:11+0000">2025-01-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -512,27 +508,26 @@
                 
           </span>
         </p>
-      </div>  <!-- /inner-wrapper -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-footer -->
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
-    <div class="container">  <!-- container -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
 
-  <!-- JS and analytics only. -->
-  <!-- Bootstrap core JavaScript
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  <!-- Analytics Below
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
-
