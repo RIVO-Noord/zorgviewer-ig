@@ -19,7 +19,7 @@
 1. Taal en transport zijn gescheiden, zodat vendor-lock-in wordt voorkomen
     * Internet-first transport - geen besloten netwerken
 
-### Requirements
+### Requirements per Bouwblok
 
 #### Zorgviewer Host
 
