@@ -29,7 +29,7 @@ Het RIVO-Noord Zorgviewer MVP2 Project wordt door een team vanuit het UMCG getro
 De implementatiegids bestaat uit een aantal tabbladen met sub-tabbladen. Elk tabblad geeft tekst en uitleg over het bepaalde onderdeel.
 
 <strong>Tabblad: Requirements</strong>
-- [Uitgangspunten en Requirements](conformance.html) = uitleg over de uitgangspunten, principes en de uiteindelijke requirements (eisen en wensen) van architectuur en onze gebruikers
+- [Uitgangspunten en Requirements](requirements.html) = uitleg over de uitgangspunten, principes en de uiteindelijke requirements (eisen en wensen) van architectuur en onze gebruikers
 - [NEN Conformiteit](nen-normen.html) = de NEN normen van toepassing bij de ontwikkeling van de Zorgviewer
 - [Datasets](datasets.html) = content van praktijkvoorbeelden (use-cases) voor het inzetten van de Zorgviewer
 - [Must Support](must-support.html) = bevat de specifieke interpretatie van "Must Support" in deze FHIR implementatie gids, zie ook [Must Support in de FHIR standaard](https://hl7.org/fhir/STU3/profiling.html#mustsupport)
