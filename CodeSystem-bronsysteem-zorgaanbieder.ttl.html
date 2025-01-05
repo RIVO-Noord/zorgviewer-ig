@@ -1,61 +1,65 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
     <title>Bronsysteem Zorgaanbieder - TTL Representation - RIVO-Noord Zorgviewer Implementation Guide v1.11.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link rel="stylesheet" href="fhir.css"/>
+    <link href="fhir.css" rel="stylesheet"/>
 
-      <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
 
-      <!-- Project extras -->
-    <link rel="stylesheet" href="assets/css/project.css"/>
-    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
-    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
-  	<link rel="stylesheet" href="assets/css/prism.css"/>
-  	<link rel="stylesheet" href="assets/css/cqf.css"/>
-      <!-- Placeholder for child template CSS declarations -->
-    <link rel="stylesheet" href="assets/css/rivo.css"/>
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/rivo.css" rel="stylesheet"/>
 
-    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
-      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- [if lt IE 9]>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif] -->
+    <![endif]-->
 
-      <!-- Favicons -->
-    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
-    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
-    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-    <script src="assets/js/mermaid.js" type="text/javascript"></script>
-    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"10.43"}
     h3,h4,h5,h6{--heading-prefix:"10.43"}</style>
-    <div id="segment-header" class="segment">    <!-- segment-header -->
-      <div class="container">    <!-- container -->
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
 
-          <!-- Placeholder for child template header declarations -->
+        <!-- Placeholder for child template header declarations -->
 
 <div id="project-nav">
-    <a no-external="true" id="project-logo" href="https://rivo-noord.nl"><img src="assets/images/rivonoord-logo.png" alt="Visit the RIVO-Noord website" height="50"/> </a>
+    <a id="project-logo" no-external="true" href="https://rivo-noord.nl"><img height="50"
+            alt="Visit the RIVO-Noord website" src="assets/images/rivonoord-logo.png" /> </a>
 </div>
 
 <div id="family-nav">
-    <a no-external="true" id="hl7-search-lnk" href="searchform.html"><img src="assets/images/search.png" alt="Search FHIR"/></a>
-    <a no-external="true" id="family-logo" href="https://hl7.nl"><img src="assets/images/HL7nl_Logo.png" alt="Visit the HL7 NL website" height="50"/> </a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+    <a id="family-logo" no-external="true" href="https://hl7.nl"><img height="50" alt="Visit the HL7 NL website"
+            src="assets/images/HL7nl_Logo.png" /> </a>
 </div>
 
 
@@ -66,50 +70,51 @@
 
 
 
-  <img src="assets/images/nld.svg" alt="Netherlands flag" title="Netherlands" height="16"/>
+  <img alt="Netherlands flag" src="assets/images/nld.svg" height="16" title="Netherlands"/>
 
 
             </span>
           </p>
         </div>
-      </div>   <!-- /container -->
-    </div>    <!-- /segment-header -->
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">    <!-- container -->
-          <!-- HEADER CONTENT -->
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-            <!-- status-bar -->
+          <!--status-bar-->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a href="http://hl7.org/fhir/STU3/index.html" class="navbar-brand hidden">FHIR</a>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul class="nav navbar-nav">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
   <li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Requirements ⌄</a>
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requirements &#8964;</a>
 		<ul class="dropdown-menu">
-			<li><a name="l171">​</a><a href="conformance.html">Uitgangspunten en Requirements</a></li>
+			<li><a href="requirements.html">Uitgangspunten en Requirements</a></li>
+			<li><a href="requirements-non-functional.html">Non Functional Requirements</a></li>
 			<li><a href="nen-normen.html">NEN Normen Conformiteit</a></li>
 			<li><a href="datasets.html">Datasets</a></li>
 			<li><a href="must-support.html">Must Support</a></li>
 		</ul>
 	</li>
   <li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">RAO ⌄</a>
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">RAO &#8964;</a>
 		<ul class="dropdown-menu">
 			<li><a href="zorgnetwerk.html">Inzage Zorgnetwerk</a></li>
 		</ul>
 	</li>
   <li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Design ⌄</a>
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
 		<ul class="dropdown-menu">
 			<li><a href="design.html">Design</a></li>
 			<li><a href="design2.html">Design 2024</a></li>
@@ -123,7 +128,7 @@
   <li><a href="artifacts.html">Artifact Index</a></li>
   <li><a href="downloads.html">Downloads</a></li>
   <li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Checklists &amp; Aansluiten ⌄</a>
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Checklists &amp; Aansluiten &#8964;</a>
 		<ul class="dropdown-menu">
 		  <li><a href="checklists.html">Checklists &amp; Aansluiten</a></li>
 		  <li><a href="thermometer.html">Aansluit Thermometer</a></li>
@@ -134,31 +139,31 @@
   <li><a href="changes.html">Change Log</a></li>
 </ul>      
 
-            </div>    <!-- /.nav-collapse -->
-          </div>    <!-- /.container -->
-        </nav>    <!-- /.navbar -->
-        <!-- /HEADER CONTENT -->
-      </div>    <!-- /container -->
-    </div>    <!-- /segment-navbar -->
-      <!-- status-bar -->
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
 
-    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
-      <div class="container">    <!-- container -->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>Bronsysteem Zorgaanbieder</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Bronsysteem Zorgaanbieder</b></li>
 
         </ul>
-      </div>    <!-- /container -->
-    </div>    <!-- /segment-breadcrumb -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">    <!-- segment-content -->
-      <div class="container">    <!-- container -->
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-  <!-- ReleaseHeader --><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.11.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://fhir.hl7.nl/zorgviewer/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+<!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.11.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhir.hl7.nl/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -207,7 +212,7 @@
         
           Active
           
-            as of 2025-01-02
+            as of 2025-01-05
           
         
       </td>
@@ -216,14 +221,14 @@
   </table>
 
 
-<p><a href="CodeSystem-bronsysteem-zorgaanbieder.ttl" no-download="true">Raw ttl</a> | <a download="null" href="CodeSystem-bronsysteem-zorgaanbieder.ttl">Download</a></p>
+<p><a href="CodeSystem-bronsysteem-zorgaanbieder.ttl" no-download="true">Raw ttl</a> | <a href="CodeSystem-bronsysteem-zorgaanbieder.ttl" download>Download</a></p>
 
-    <!-- insert intro if present -->
+  <!-- insert intro if present -->
   
 
 
 
-  <pre style="white-space: pre; overflow: hidden" class="rdf"><code class="language-turtle">
+  <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -233,93 +238,93 @@
 
  a fhir:CodeSystem ;
   <a href="http://hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">fhir:id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:v</a> "bronsysteem-zorgaanbieder"] ; # 
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">fhir:id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:v</a> &quot;bronsysteem-zorgaanbieder&quot;] ; # 
   <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">fhir:text</a> [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "generated" ] ;
-fhir:div "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p class=\"res-header-id\"&gt;&lt;b&gt;Gegenereerde narrative: CodeSystem bronsysteem-zorgaanbieder&lt;/b&gt;&lt;/p&gt;&lt;a name=\"bronsysteem-zorgaanbieder\"&gt; &lt;/a&gt;&lt;a name=\"hcbronsysteem-zorgaanbieder\"&gt; &lt;/a&gt;&lt;a name=\"bronsysteem-zorgaanbieder-nl-NL\"&gt; &lt;/a&gt;&lt;p&gt;Dit case-sensitive codesysteem &lt;code&gt;http://fhir.hl7.nl/zorgviewer/CodeSystem/bronsysteem-zorgaanbieder&lt;/code&gt; definieert de volgende codes:&lt;/p&gt;&lt;table class=\"codes\"&gt;&lt;tr&gt;&lt;td style=\"white-space:nowrap\"&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Weergave&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"white-space:nowrap\"&gt;urn:oid:2.16.840.1.113883.2.4.3.98&lt;a name=\"bronsysteem-zorgaanbieder-urn.58oid.582.4616.46840.461.46113883.462.464.463.4698\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ommelander Ziekenhuis Groep locatie Delfzicht OID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"white-space:nowrap\"&gt;urn:oid:2.16.840.1.113883.2.4.3.8&lt;a name=\"bronsysteem-zorgaanbieder-urn.58oid.582.4616.46840.461.46113883.462.464.463.468\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UMCG OID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"white-space:nowrap\"&gt;http://fhir.nl/fhir/NamingSystem/agb-z/06020101&lt;a name=\"bronsysteem-zorgaanbieder-http.58.47.47fhir.46nl.47fhir.47NamingSystem.47agb-z.4706020101\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UMCG AGB-Z&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"white-space:nowrap\"&gt;urn:oid:2.16.840.1.113883.2.4.3.75&lt;a name=\"bronsysteem-zorgaanbieder-urn.58oid.582.4616.46840.461.46113883.462.464.463.4675\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MCL OID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"white-space:nowrap\"&gt;http://fhir.nl/fhir/NamingSystem/agb-z/06010210&lt;a name=\"bronsysteem-zorgaanbieder-http.58.47.47fhir.46nl.47fhir.47NamingSystem.47agb-z.4706010210\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MCL AGB-Z&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"white-space:nowrap\"&gt;urn:oid:2.16.528.1.1007.3.3.15123&lt;a name=\"bronsysteem-zorgaanbieder-urn.58oid.582.4616.46528.461.461007.463.463.4615123\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Tjongerschans OID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"white-space:nowrap\"&gt;http://fhir.nl/fhir/NamingSystem/agb-z/06010205&lt;a name=\"bronsysteem-zorgaanbieder-http.58.47.47fhir.46nl.47fhir.47NamingSystem.47agb-z.4706010205\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Tjongerschans AGB-Z&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"white-space:nowrap\"&gt;urn:oid:2.16.840.1.113883.2.4.3.95&lt;a name=\"bronsysteem-zorgaanbieder-urn.58oid.582.4616.46840.461.46113883.462.464.463.4695\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Martini OID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"white-space:nowrap\"&gt;2.16.840.1.113883.2.4.3.213&lt;a name=\"bronsysteem-zorgaanbieder-2.4616.46840.461.46113883.462.464.463.46213\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;RIVO-Noord OID&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Gegenereerde narrative: CodeSystem bronsysteem-zorgaanbieder&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;bronsysteem-zorgaanbieder\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcbronsysteem-zorgaanbieder\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;bronsysteem-zorgaanbieder-nl-NL\&quot;&gt; &lt;/a&gt;&lt;p&gt;Dit case-sensitive codesysteem &lt;code&gt;http://fhir.hl7.nl/zorgviewer/CodeSystem/bronsysteem-zorgaanbieder&lt;/code&gt; definieert de volgende codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Weergave&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;urn:oid:2.16.840.1.113883.2.4.3.98&lt;a name=\&quot;bronsysteem-zorgaanbieder-urn.58oid.582.4616.46840.461.46113883.462.464.463.4698\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ommelander Ziekenhuis Groep locatie Delfzicht OID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;urn:oid:2.16.840.1.113883.2.4.3.8&lt;a name=\&quot;bronsysteem-zorgaanbieder-urn.58oid.582.4616.46840.461.46113883.462.464.463.468\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UMCG OID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;http://fhir.nl/fhir/NamingSystem/agb-z/06020101&lt;a name=\&quot;bronsysteem-zorgaanbieder-http.58.47.47fhir.46nl.47fhir.47NamingSystem.47agb-z.4706020101\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UMCG AGB-Z&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;urn:oid:2.16.840.1.113883.2.4.3.75&lt;a name=\&quot;bronsysteem-zorgaanbieder-urn.58oid.582.4616.46840.461.46113883.462.464.463.4675\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MCL OID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;http://fhir.nl/fhir/NamingSystem/agb-z/06010210&lt;a name=\&quot;bronsysteem-zorgaanbieder-http.58.47.47fhir.46nl.47fhir.47NamingSystem.47agb-z.4706010210\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MCL AGB-Z&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;urn:oid:2.16.528.1.1007.3.3.15123&lt;a name=\&quot;bronsysteem-zorgaanbieder-urn.58oid.582.4616.46528.461.461007.463.463.4615123\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Tjongerschans OID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;http://fhir.nl/fhir/NamingSystem/agb-z/06010205&lt;a name=\&quot;bronsysteem-zorgaanbieder-http.58.47.47fhir.46nl.47fhir.47NamingSystem.47agb-z.4706010205\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Tjongerschans AGB-Z&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;urn:oid:2.16.840.1.113883.2.4.3.95&lt;a name=\&quot;bronsysteem-zorgaanbieder-urn.58oid.582.4616.46840.461.46113883.462.464.463.4695\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Martini OID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;2.16.840.1.113883.2.4.3.213&lt;a name=\&quot;bronsysteem-zorgaanbieder-2.4616.46840.461.46113883.462.464.463.46213\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;RIVO-Noord OID&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
   ] ; # 
-  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "http://fhir.hl7.nl/zorgviewer/CodeSystem/bronsysteem-zorgaanbieder"^^xsd:anyURI] ; # 
-  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">fhir:version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "1.11.0"] ; # 
-  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">fhir:name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "bronsysteem-zorgaanbieder"] ; # 
-  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">fhir:title</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Bronsysteem Zorgaanbieder"] ; # 
-  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "active"] ; # 
-  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.experimental">fhir:experimental</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:v</a> "false"^^xsd:boolean] ; # 
-  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">fhir:date</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> "2025-01-02T12:37:15+00:00"^^xsd:dateTime] ; # 
-  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "RIVO-NN HL7NL"] ; # 
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://fhir.hl7.nl/zorgviewer/CodeSystem/bronsysteem-zorgaanbieder&quot;^^xsd:anyURI] ; # 
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">fhir:version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;1.11.0&quot;] ; # 
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">fhir:name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;bronsysteem-zorgaanbieder&quot;] ; # 
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">fhir:title</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Bronsysteem Zorgaanbieder&quot;] ; # 
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;active&quot;] ; # 
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.experimental">fhir:experimental</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:v</a> &quot;false&quot;^^xsd:boolean] ; # 
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">fhir:date</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2025-01-05T10:27:23+00:00&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;RIVO-NN HL7NL&quot;] ; # 
   <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.contact">fhir:contact</a> ( [
-<a href="http://hl7.org/fhir/STU3/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "RIVO-NN" ] ;
+<a href="http://hl7.org/fhir/STU3/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;RIVO-NN&quot; ] ;
     ( <a href="http://hl7.org/fhir/STU3/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:telecom</a> [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "url" ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "https://rivo-noord.nl" ]     ] )
+<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;url&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;https://rivo-noord.nl&quot; ]     ] )
   ] [
-<a href="http://hl7.org/fhir/STU3/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "HL7NL" ] ;
+<a href="http://hl7.org/fhir/STU3/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;HL7NL&quot; ] ;
     ( <a href="http://hl7.org/fhir/STU3/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:telecom</a> [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "url" ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "https://hl7.nl" ]     ] )
+<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;url&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;https://hl7.nl&quot; ]     ] )
   ] ) ; # 
-  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">fhir:description</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:v</a> "Bronsysteem Zorgaanbieder AGB-Z, OID and displays"] ; # 
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">fhir:description</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:v</a> &quot;Bronsysteem Zorgaanbieder AGB-Z, OID and displays&quot;] ; # 
   <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.jurisdiction">fhir:jurisdiction</a> ( [
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "NL" ]     ] )
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;urn:iso:std:iso:3166&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;NL&quot; ]     ] )
   ] ) ; # 
-  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">fhir:caseSensitive</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:v</a> "true"^^xsd:boolean] ; # 
-  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">fhir:content</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "complete"] ; # 
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">fhir:caseSensitive</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:v</a> &quot;true&quot;^^xsd:boolean] ; # 
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">fhir:content</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;complete&quot;] ; # 
   <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">fhir:concept</a> ( [
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "urn:oid:2.16.840.1.113883.2.4.3.98" ] ;
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Ommelander Ziekenhuis Groep locatie Delfzicht OID" ]
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;urn:oid:2.16.840.1.113883.2.4.3.98&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Ommelander Ziekenhuis Groep locatie Delfzicht OID&quot; ]
   ] [
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "urn:oid:2.16.840.1.113883.2.4.3.8" ] ;
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "UMCG OID" ]
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;urn:oid:2.16.840.1.113883.2.4.3.8&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;UMCG OID&quot; ]
   ] [
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "http://fhir.nl/fhir/NamingSystem/agb-z/06020101" ] ;
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "UMCG AGB-Z" ]
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;http://fhir.nl/fhir/NamingSystem/agb-z/06020101&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;UMCG AGB-Z&quot; ]
   ] [
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "urn:oid:2.16.840.1.113883.2.4.3.75" ] ;
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "MCL OID" ]
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;urn:oid:2.16.840.1.113883.2.4.3.75&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;MCL OID&quot; ]
   ] [
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "http://fhir.nl/fhir/NamingSystem/agb-z/06010210" ] ;
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "MCL AGB-Z" ]
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;http://fhir.nl/fhir/NamingSystem/agb-z/06010210&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;MCL AGB-Z&quot; ]
   ] [
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "urn:oid:2.16.528.1.1007.3.3.15123" ] ;
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Tjongerschans OID" ]
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;urn:oid:2.16.528.1.1007.3.3.15123&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Tjongerschans OID&quot; ]
   ] [
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "http://fhir.nl/fhir/NamingSystem/agb-z/06010205" ] ;
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Tjongerschans AGB-Z" ]
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;http://fhir.nl/fhir/NamingSystem/agb-z/06010205&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Tjongerschans AGB-Z&quot; ]
   ] [
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "urn:oid:2.16.840.1.113883.2.4.3.95" ] ;
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "Martini OID" ]
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;urn:oid:2.16.840.1.113883.2.4.3.95&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Martini OID&quot; ]
   ] [
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> "2.16.840.1.113883.2.4.3.213" ] ;
-<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> "RIVO-Noord OID" ]
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;2.16.840.1.113883.2.4.3.213&quot; ] ;
+<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;RIVO-Noord OID&quot; ]
   ] ) . # 
 
 </code></pre>
 
 
 
-    <!-- insert notes if present -->
+  <!-- insert notes if present -->
   
 
 
 
 </div>
-        </div>    <!-- /inner-wrapper -->
-      </div>    <!-- /row -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-content -->
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
 
-  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
-  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
-    <div class="container">    <!-- container -->
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.11.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Thu, Jan 2, 2025 12:37+0000">2025-01-02</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.11.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Sun, Jan 5, 2025 10:27+0000">2025-01-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -328,26 +333,27 @@ fhir:div "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p class=\"res-he
                 
           </span>
         </p>
-      </div>    <!-- /inner-wrapper -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-footer -->
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
-    <div class="container">    <!-- container -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
 
-    <!-- JS and analytics only. -->
-    <!-- Bootstrap core JavaScript
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
   ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
-  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
-  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
-  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
-  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
-  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
-    <!-- Analytics Below
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
+
