@@ -1,7 +1,7 @@
 ZorgviewerIG : Validation Results
 =========================================
 
-err = 133, warn = 112, info = 110
+err = 133, warn = 81, info = 110
 $--
 Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http://fhir.hl7.nl/zorgviewer)
  Build Errors : 0 / 5 / 0
@@ -107,14 +107,12 @@ WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in 
 == input/examples/AdvanceDirective-Chipsoft.json ==
 ERROR: Consent/2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449: Consent.source.ofType(Attachment).data: The value 'XXX' is not a valid Base64 value
 == input/examples/AdvanceDirective-Epic.json ==
-WARNING: Consent/eGuoY.m8DiRaUvsn.5w5Etg3: Consent.category[0].coding[0]: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.4.686783.100' could not be found, so the code cannot be validated
 == input/examples/AdvanceDirective-Nexus.json ==
 INFORMATION: Consent/162: Consent.category[1]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/AdvanceDirective|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: Consent/162: Consent: Slice 'Consent.category:typeOfLivingWill': a matching slice is required, but not found (from http://fhir.hl7.nl/zorgviewer/StructureDefinition/AdvanceDirective|1.11.0). Note that other slices are allowed in addition to this required slice
 INFORMATION: Consent/162: Consent.category[1]: This element does not match any known slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective|2.1.5 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: Consent/162: Consent: Slice 'Consent.category:typeOfLivingWill': a matching slice is required, but not found (from http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective|2.1.5). Note that other slices are allowed in addition to this required slice
 == input/examples/AdvanceDirective2-Epic.json ==
-WARNING: Consent/eCSfaTk2.C2TeVxgQk.zOgw3: Consent.category[0].coding[0]: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.4.686783.100' could not be found, so the code cannot be validated
 == input/examples/AllergyIntolerance-Chipsoft.json ==
 WARNING: AllergyIntolerance/2.16.840.1.113883.2.4.3.124.7.48765.212340000000820: AllergyIntolerance.code.coding[0].system: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.1.902.122' could not be found, so the code cannot be validated
 ERROR: AllergyIntolerance/2.16.840.1.113883.2.4.3.124.7.48765.212340000000820: AllergyIntolerance.code.coding[0]: The code provided (urn:oid:2.16.840.1.113883.2.4.4.1.902.122#000039) was not found in the value set 'VeroorzakendeStofThesaurus122Codelijst' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.15--20171231000000|2017-12-31T00:00:00), and a code from this value set is required: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.1.902.122' could not be found, so the code cannot be validated
@@ -162,10 +160,8 @@ INFORMATION: DocumentReference/22aa9e3e-f72f-4f76-97c7-0f66c8f691f5: DocumentRef
 == input/examples/DocumentReference-Epic.json ==
 ERROR: DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi: DocumentReference: DocumentReference.docStatus: max allowed = 0, but found 1 (from http://fhir.hl7.nl/zorgviewer/StructureDefinition/DocumentReference|1.11.0)
 ERROR: DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi: DocumentReference: DocumentReference.created: max allowed = 0, but found 1 (from http://fhir.hl7.nl/zorgviewer/StructureDefinition/DocumentReference|1.11.0)
-WARNING: DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi: DocumentReference.type.coding[1].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.2.7.10.698084.20208' could not be found, so the code cannot be validated
 WARNING: DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi: DocumentReference.class.coding[0].system: A definition for CodeSystem 'http://open.epic.com/FHIR/StructureDefinition/document-reference-class' could not be found, so the code cannot be validated
 ERROR: DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi: DocumentReference.author[0]: Bundled or contained reference not found within the bundle/resource https://example.org/Practitioner/ec6Rbm68P1PUCdhJhmzP0Jg-DOxJbgJDmPpildGhow943
-WARNING: DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi: DocumentReference.context.practiceSetting.coding[0].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.2.7.10.727879.59' could not be found, so the code cannot be validated
 == input/examples/Flag-Chipsoft.json ==
 == input/examples/Flag-Chipsoft-OTH.json ==
 INFORMATION: Bundle/69ecfed3-f811-45be-969c-6fb1f32fcf19: Bundle.entry[0].resource/*Flag/D71F2DC8E0EAEB7F55503D78CB4738A06F5865563476FCE606B19191FB7DC253*/.subject: Details for Patient/88384C001FDAFC29A3207DEA5E6BD22C01D53EBC60A844CA91761E6BE7008E32 matching against profile http://hl7.org/fhir/StructureDefinition/Patient
@@ -193,7 +189,6 @@ INFORMATION: Bundle/69ecfed3-f811-45be-969c-6fb1f32fcf19: Bundle.entry[7].resour
 ERROR: Bundle/69ecfed3-f811-45be-969c-6fb1f32fcf19: Bundle.entry[7].resource/*Patient/88384C001FDAFC29A3207DEA5E6BD22C01D53EBC60A844CA91761E6BE7008E32*/.address[0].postalCode: Constraint failed: nl-postal-code-pattern: 'Dutch postal code pattern 'nnnnAA''
 == input/examples/Flag-Epic.json ==
 WARNING: Flag/fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4: Flag.category.coding[0].system: A definition for CodeSystem 'http://open.epic.com/FHIR/StructureDefinition/flag-category' could not be found, so the code cannot be validated
-WARNING: Flag/fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4: Flag.code.coding[0].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.2.7.4.698084.10375' could not be found, so the code cannot be validated
 == input/examples/Flag-Nexus.json ==
 == input/examples/LaboratoryTestResult-Chipsoft.json ==
 INFORMATION: Observation/39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C: Observation.category[1]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/LaboratoryTestResult|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -201,9 +196,6 @@ WARNING: Observation/39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC68
 INFORMATION: Observation/39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C: Observation.category[1]: This element does not match any known slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|2.1.12 (this may not be a problem, but you should check that it's not intended to match a slice)
 == input/examples/LaboratoryTestResult-Epic.json ==
 INFORMATION: Observation/f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4: Observation.category[2]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/LaboratoryTestResult|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-WARNING: Observation/f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4: Observation.category[2].coding[0]: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.10.798268.30' could not be found, so the code cannot be validated
-WARNING: Observation/f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4: Observation.code.coding[1].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.5.737384.604002' could not be found, so the code cannot be validated
-WARNING: Observation/f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4: Observation.code.coding[2].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.2.768282' could not be found, so the code cannot be validated
 WARNING: Observation/f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4: Observation: Best Practice Recommendation: In general, all observations should have a performer
 INFORMATION: Observation/f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4: Observation.category[2]: This element does not match any known slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|2.1.12 (this may not be a problem, but you should check that it's not intended to match a slice)
 == input/examples/LaboratoryTestResult-Nexus.json ==
@@ -222,9 +214,6 @@ ERROR: Observation/3009316: Observation: Observation.subject: minimum required =
 == input/examples/LaboratoryTestResult2-Epic.json ==
 ERROR: Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3: Observation.id: Invalid Resource id: Too long (66 chars)
 INFORMATION: Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3: Observation.category[1]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/LaboratoryTestResult|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-WARNING: Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3: Observation.category[1].coding[0]: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.10.798268.30' could not be found, so the code cannot be validated
-WARNING: Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3: Observation.code.coding[0]: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.5.737384.604002' could not be found, so the code cannot be validated
-WARNING: Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3: Observation.code.coding[1]: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.2.768282' could not be found, so the code cannot be validated
 WARNING: Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3: Observation: Best Practice Recommendation: In general, all observations should have a performer
 INFORMATION: Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3: Observation.category[1]: This element does not match any known slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation|2.1.12 (this may not be a problem, but you should check that it's not intended to match a slice)
 == input/examples/Organization-Epic.json ==
@@ -252,9 +241,7 @@ INFORMATION: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient.identifier[7]: This eleme
 INFORMATION: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient.identifier[8]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient.identifier[9]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient.extension[0]: The extension http://open.epic.com/FHIR/StructureDefinition/extension/legal-sex could not be found so is not allowed here
-WARNING: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.10.698084.130.657370.444039' could not be found, so the code cannot be validated
 ERROR: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient.extension[1]: The extension http://open.epic.com/FHIR/StructureDefinition/extension/sex-for-clinical-use could not be found so is not allowed here
-WARNING: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient.extension[1].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.10.698084.130.657370.444039' could not be found, so the code cannot be validated
 ERROR: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient.identifier[0]: The extension http://hl7.org/fhir/StructureDefinition/rendered-value is not allowed to be used at this point (allowed = e:Identifier.value, e:date, e:dateTime, e:time, e:instant, e:integer, e:decimal, e:string, e:code; this element is [Identifier, Patient.identifier])
 WARNING: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient.identifier[5].value: value should not start or finish with whitespace '     Z6505'
 ERROR: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient.address[0].postalCode: Constraint failed: nl-postal-code-pattern: 'Dutch postal code pattern 'nnnnAA''
@@ -321,7 +308,6 @@ INFORMATION: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3: Practitioner.identifier[5]: 
 WARNING: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3: Practitioner.identifier[0].value: value should not start or finish with whitespace '   IMMD'
 WARNING: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3: Practitioner.identifier[4].value: value should not start or finish with whitespace ' 10000641'
 WARNING: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3: Practitioner.qualification[0]: Constraint failed: zv-pra-4: 'A SNOMED CT (beroep) code SHOULD be present.'
-WARNING: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3: Practitioner.qualification[0].code.coding[0]: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.4.836982.6000' could not be found, so the code cannot be validated
 INFORMATION: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3: Practitioner.identifier[0]: This element does not match any known slice defined in the profile http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|2.0.7 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|2.0.7 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3: Practitioner.identifier[2]: This element does not match any known slice defined in the profile http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|2.0.7 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -331,7 +317,6 @@ INFORMATION: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3: Practitioner.identifier[5]: 
 INFORMATION: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT: Practitioner.identifier[0]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Practitioner|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Practitioner|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT: Practitioner.identifier[3]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Practitioner|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-WARNING: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT: Practitioner.qualification[0].code.coding[0].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.4.836982.6000' could not be found, so the code cannot be validated
 INFORMATION: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT: Practitioner.identifier[0]: This element does not match any known slice defined in the profile http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|2.0.7 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|2.0.7 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT: Practitioner.identifier[3]: This element does not match any known slice defined in the profile http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|2.0.7 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -340,10 +325,7 @@ INFORMATION: Practitioner/67d36d4c-bc18-4c5d-8fb5-609f6a17451e: Practitioner.ide
 INFORMATION: Practitioner/67d36d4c-bc18-4c5d-8fb5-609f6a17451e: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner|2.0.7 (this may not be a problem, but you should check that it's not intended to match a slice)
 == input/examples/PractitionerRole-Epic.json ==
 ERROR: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole: PractitionerRole.specialty: max allowed = 1, but found 2 (from http://fhir.hl7.nl/zorgviewer/StructureDefinition/PractitionerRole|1.11.0)
-WARNING: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole.code[0].coding[0].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.10.836982.1040' could not be found, so the code cannot be validated
-WARNING: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole.specialty[0].coding[0].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.72.1.7.7.10.688867.4160' could not be found, so the code cannot be validated
 INFORMATION: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole.specialty[0].coding[0]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/PractitionerRole|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-WARNING: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole.specialty[1].coding[0]: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.72.1.7.7.10.688867.4160' could not be found, so the code cannot be validated
 INFORMATION: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole.specialty[1].coding[0]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/PractitionerRole|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole: Constraint failed: zv-prr-1: 'PractitionerRole Specialty COD016 Vektiz AGB medische specialismen code SHOULD be present.'
 ERROR: PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43: PractitionerRole: PractitionerRole.specialty: max allowed = 1, but found 2 (from http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole|2.0.7)
@@ -354,9 +336,6 @@ WARNING: Procedure/2.16.840.1.113883.2.4.3.124.7.47519.41230000001716: Procedure
 INFORMATION: Procedure/2.16.840.1.113883.2.4.3.124.7.47519.41230000001716: Procedure.code.coding[0]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Procedure|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Procedure/2.16.840.1.113883.2.4.3.124.7.47519.41230000001716: Procedure.code.coding[0]: This element does not match any known slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-Procedure|2.1.9 (this may not be a problem, but you should check that it's not intended to match a slice)
 == input/examples/Procedure-Epic.json ==
-WARNING: Procedure/flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4: Procedure.bodySite[0].coding[1].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.425.1.7.4.798276.2015' could not be found, so the code cannot be validated
-WARNING: Procedure/flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4: Procedure.bodySite[0].extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.425.1.7.4.798276.2010' could not be found, so the code cannot be validated
-WARNING: Procedure/flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4: Procedure.bodySite[0].extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.425.1.7.4.798276.2010' could not be found, so the code cannot be validated
 == input/examples/Procedure-Nexus.json ==
 INFORMATION: Procedure/25102292: Procedure.basedOn[0]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Procedure|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: Procedure/25102292: Procedure.code.coding[0].system: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.27.15.5' could not be found, so the code cannot be validated
@@ -366,7 +345,6 @@ INFORMATION: Procedure/25102292: Procedure.code.coding[0]: This element does not
 == input/examples/Procedure-VG-Epic.json ==
 == input/examples/Specimen-Chipsoft.json ==
 == input/examples/Specimen-Epic.json ==
-WARNING: Specimen/edAE6aGl0-InKRnWJAWRiChE4AhLNTRTlNIiljUcUA-I3: Specimen.type.coding[0].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.4.798268.300' could not be found, so the code cannot be validated
 == input/examples/Specimen-Nexus.json ==
 ERROR: Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635: Specimen: Specimen.subject: minimum required = 1, but only found 0 (from http://fhir.hl7.nl/zorgviewer/StructureDefinition/Specimen|1.11.0)
 ERROR: Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635: Specimen: Specimen.subject: minimum required = 1, but only found 0 (from http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen|3.0.2)
@@ -374,15 +352,10 @@ ERROR: Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635: Specimen: Specimen.subject
 == input/examples/TreatmentDirective-Chipsoft.json ==
 ERROR: Consent/81eacbcf-6d60-436a-a78f-e2962839a42f: Consent.extension[0].value.ofType(CodeableConcept): Error converting output stream to byte array
 == input/examples/TreatmentDirective-Epic.json ==
-WARNING: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.extension[0].extension[1].value.ofType(CodeableConcept).coding[1].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.4.696784.72007' could not be found, so the code cannot be validated
-WARNING: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.extension[0].extension[1].value.ofType(CodeableConcept).coding[1]: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.4.696784.72007' could not be found, so the code cannot be validated
-WARNING: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.extension[1].value.ofType(CodeableConcept).coding[1].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.4.696784.72009' could not be found, so the code cannot be validated
 ERROR: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.extension[1].value.ofType(CodeableConcept): Error converting output stream to byte array
 INFORMATION: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentcategorycodes|0.1.0
-WARNING: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.category[0].coding[1].system: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.4.796783.100' could not be found, so the code cannot be validated
 INFORMATION: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.category[0].coding[0]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/TreatmentDirective|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.category[0].coding[1]: This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/TreatmentDirective|1.11.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-WARNING: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.extension[1].value.ofType(CodeableConcept).coding[1]: A definition for CodeSystem 'urn:oid:1.2.840.114350.1.13.485.3.7.4.696784.72009' could not be found, so the code cannot be validated
 INFORMATION: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.category[0].coding[0]: This element does not match any known slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective|2.2.3 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.category[0].coding[1]: This element does not match any known slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective|2.2.3 (this may not be a problem, but you should check that it's not intended to match a slice)
 == input/examples/TreatmentDirective-Nexus.json ==
@@ -505,13 +478,9 @@ WARNING: ConceptMap/epic-rolcode: ConceptMap.group[2].element[2].target[0]: The 
 WARNING: ConceptMap/epic-rolcode: ConceptMap.group[3].element[0].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
 WARNING: ConceptMap/epic-rolcode: ConceptMap.group[3].element[1].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
 WARNING: ConceptMap/epic-rolcode: ConceptMap.group[3].element[2].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
-WARNING: ConceptMap/epic-rolcode: ConceptMap.group[0].source: The Source Code System urn:oid:1.2.840.114350.1.13.485.3.7.10.836982.1040 is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
 INFORMATION: ConceptMap/epic-rolcode: ConceptMap.group[0].target: Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
-WARNING: ConceptMap/epic-rolcode: ConceptMap.group[1].source: The Source Code System urn:oid:1.2.840.114350.1.13.485.2.7.10.836982.1040 is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
 INFORMATION: ConceptMap/epic-rolcode: ConceptMap.group[1].target: Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
-WARNING: ConceptMap/epic-rolcode: ConceptMap.group[2].source: The Source Code System urn:oid:1.2.840.114350.1.13.432.2.7.10.836982.1040 is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
 INFORMATION: ConceptMap/epic-rolcode: ConceptMap.group[2].target: Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
-WARNING: ConceptMap/epic-rolcode: ConceptMap.group[3].source: The Source Code System urn:oid:1.2.840.114350.1.13.432.3.7.10.836982.1040 is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
 INFORMATION: ConceptMap/epic-rolcode: ConceptMap.group[3].target: Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
 == input/resources/ConceptMap-patient-toestemming.json ==
 WARNING: ConceptMap/patient-toestemming: ConceptMap.group[0].element[0].target[0]: The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
