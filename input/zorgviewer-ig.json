@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.nl.zorgviewer",
   "url": "http://fhir.hl7.nl/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "name": "ZorgviewerIG",
   "title": "RIVO-Noord Zorgviewer Implementation Guide",
   "status": "active",
@@ -45,11 +45,13 @@
   ],
   "dependsOn": [
     {
+      "id": "terminology",
       "uri": "https://simplifier.net/packages/hl7.terminology.r3/5.3.0",
       "packageId": "hl7.terminology.r3",
       "version": "5.3.0"
     },
     {
+      "id": "zibs2017",
       "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.18",
       "packageId": "nictiz.fhir.nl.stu3.zib2017",
       "version": "2.2.18"
@@ -64,6 +66,13 @@
       }
     ],
     "resource": [
+      {
+        "reference": {
+          "reference": "Parameters/exp-params"
+        },
+        "name": "Parameters for Terminology selection of Netherlands SNOMED CT Edition",
+        "description": "This parameter resource is used to specify the system version of Netherlands SNOMED CT Edition to be used in the terminology service."
+      },
       {
         "reference": {
           "reference": "Organization/UMCG"
@@ -84,367 +93,367 @@
         "reference": {
           "reference": "Organization/MCL"
         },
-        "description": "Deze instance bevat de organization identifiers voor het MCL.",
         "name": "Organization MCL",
+        "description": "Deze instance bevat de organization identifiers voor het MCL.",
         "groupingId": "group-zs"
       },
       {
         "reference": {
           "reference": "Organization/VIPLive"
         },
-        "description": "Deze instance bevat de identifiers voor VIPLive.",
         "name": "Organization VIPLive",
+        "description": "Deze instance bevat de identifiers voor VIPLive.",
         "groupingId": "group-zs"
       },
       {
         "reference": {
           "reference": "Endpoint/UMCG"
         },
-        "description": "Dit is een voorbeeld Epic Endpoint voor UMCG.",
         "name": "Epic UMCG Endpoint Example",
+        "description": "Dit is een voorbeeld Epic Endpoint voor UMCG.",
         "groupingId": "group-zs"
       },
       {
         "reference": {
           "reference": "PractitionerRole/ewlllWqLbsFaKN.d3pMMnmf2FdzTdX0132jvZktW2LP43"
         },
-        "description": "Dit is een PractitionerRole voorbeeld uit Epic.",
         "name": "Epic PractitionerRole Example",
+        "description": "Dit is een PractitionerRole voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/PractitionerRole"
       },
       {
         "reference": {
           "reference": "Patient/eXxP1o8ZlOz21F6HXS9puLA3"
         },
-        "description": "Dit is een Patient voorbeeld uit Epic.",
         "name": "Epic Patient Example",
+        "description": "Dit is een Patient voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient"
       },
       {
         "reference": {
           "reference": "Condition/771"
         },
-        "description": "Dit is een Probleem voorbeeld uit Nexus.",
         "name": "Nexus Condition Example",
+        "description": "Dit is een Probleem voorbeeld uit Nexus.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition"
       },
       {
         "reference": {
           "reference": "Condition/e-ZZJzEApAU6z8DStznS9pQ3"
         },
-        "description": "Dit is een Probleem voorbeeld uit Epic.",
         "name": "Epic Condition Example",
+        "description": "Dit is een Probleem voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition"
       },
       {
         "reference": {
           "reference": "Condition/eod0yZoGGXEapUI7nJwX4tA3"
         },
-        "description": "Dit is een Probleem voorbeeld uit Epic met een overzicht notitie.",
         "name": "Epic Condition Example met overzicht notitie",
+        "description": "Dit is een Probleem voorbeeld uit Epic met een overzicht notitie.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition"
       },
       {
         "reference": {
           "reference": "Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3"
         },
-        "description": "Dit is een Zorgverlener voorbeeld uit Epic.",
         "name": "Epic Practitioner Example",
+        "description": "Dit is een Zorgverlener voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Practitioner"
       },
       {
         "reference": {
           "reference": "Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3-SCT"
         },
-        "description": "Dit is een Zorgverlener voorbeeld uit Epic waarin qualifier is vertaald van Epic SER 6000 code naar SNOMED CT.",
         "name": "Epic Practitioner Example met SNOMED CT",
+        "description": "Dit is een Zorgverlener voorbeeld uit Epic waarin qualifier is vertaald van Epic SER 6000 code naar SNOMED CT.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Practitioner"
       },
       {
         "reference": {
           "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1"
         },
-        "description": "Dit is een Patient voorbeeld uit Chipsoft.",
         "name": "Chipsoft Patient Example",
+        "description": "Dit is een Patient voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient"
       },
       {
         "reference": {
           "reference": "Patient/330073"
         },
-        "description": "Dit is een Patient voorbeeld uit Nexus.",
         "name": "Nexus Patient Example",
+        "description": "Dit is een Patient voorbeeld uit Nexus.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient"
       },
       {
         "reference": {
           "reference": "Consent/81eacbcf-6d60-436a-a78f-e2962839a42f"
         },
-        "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Chipsoft.",
         "name": "Chipsoft TreatmentDirective Example",
+        "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/TreatmentDirective"
       },
       {
         "reference": {
           "reference": "Consent/21"
         },
-        "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Nexus.",
         "name": "Nexus TreatmentDirective Example",
+        "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Nexus.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/TreatmentDirective"
       },
       {
         "reference": {
           "reference": "Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3"
         },
-        "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Epic.",
         "name": "Epic TreatmentDirective Example",
+        "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/TreatmentDirective"
       },
       {
         "reference": {
           "reference": "Consent/190c12af-49d4-4553-8009-c816ab622a3e"
         },
-        "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Topicus.",
         "name": "Topicus TreatmentDirective Example",
+        "description": "Dit is een Behandelaanwijzing (Consent) voorbeeld uit Topicus.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/TreatmentDirective"
       },
       {
         "reference": {
           "reference": "Consent/2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449"
         },
-        "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Chipsoft.",
         "name": "Chipsoft AdvanceDirective Example",
+        "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AdvanceDirective"
       },
       {
         "reference": {
           "reference": "Consent/162"
         },
-        "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Nexus.",
         "name": "Nexus AdvanceDirective Example",
+        "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Nexus.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AdvanceDirective"
       },
       {
         "reference": {
           "reference": "Consent/eCSfaTk2.C2TeVxgQk.zOgw3"
         },
-        "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Epic.",
         "name": "Epic AdvanceDirective Example",
+        "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AdvanceDirective"
       },
       {
         "reference": {
           "reference": "Consent/eGuoY.m8DiRaUvsn.5w5Etg3"
         },
-        "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Epic.",
         "name": "Epic AdvanceDirective Example",
+        "description": "Dit is een Wilsverklaring (Consent) voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AdvanceDirective"
       },
       {
         "reference": {
           "reference": "Practitioner/b5160776-43dc-43e1-9bb7-a6e3edf8e63d"
         },
-        "description": "Dit is een Zorgverlener voorbeeld uit Chipsoft.",
         "name": "Chipsoft Practitioner Example",
+        "description": "Dit is een Zorgverlener voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Practitioner"
       },
       {
         "reference": {
           "reference": "Practitioner/67d36d4c-bc18-4c5d-8fb5-609f6a17451e"
         },
-        "description": "Dit is een Zorgverlener voorbeeld uit Nexus.",
         "name": "Nexus Practitioner Example",
+        "description": "Dit is een Zorgverlener voorbeeld uit Nexus.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Practitioner"
       },
       {
         "reference": {
           "reference": "Condition/a20d2048-e1b7-467d-8bb5-28142af195d6"
         },
-        "description": "Dit is een Probleem voorbeeld uit Chipsoft.",
         "name": "Chipsoft Condition Example",
+        "description": "Dit is een Probleem voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition"
       },
       {
         "reference": {
           "reference": "PlanDefinition/BgZ2017"
         },
-        "description": "Deze PlanDefinition bevat de (data) definitie van de BgZ 2017. Dit is de basis view voor alle zorgverleners.",
-        "name": "PlanDefinition BgZ 2017"
+        "name": "PlanDefinition BgZ 2017",
+        "description": "Deze PlanDefinition bevat de (data) definitie van de BgZ 2017. Dit is de basis view voor alle zorgverleners."
       },
       {
         "reference": {
           "reference": "Organization/eXovwVA3zYl3U3fBH8mdkxw3"
         },
-        "description": "Dit is een Organisatie voorbeeld uit Epic.",
         "name": "Epic Organization Example",
+        "description": "Dit is een Organisatie voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Organization"
       },
       {
         "reference": {
           "reference": "DocumentReference/esCkfE4Gs407F39oUa3nrshNutfUhGSpc-H0LDMIXXub1sTx6eyOBq4OITaxvXRi"
         },
-        "description": "Dit is een Document Verwijzing voorbeeld uit Epic.",
         "name": "Epic DocumentReference Example",
+        "description": "Dit is een Document Verwijzing voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DocumentReference"
       },
       {
         "reference": {
           "reference": "DocumentReference/22aa9e3e-f72f-4f76-97c7-0f66c8f691f5"
         },
-        "description": "Dit is een Document Verwijzing voorbeeld uit Chipsoft.",
         "name": "Chipsoft DocumentReference Example",
+        "description": "Dit is een Document Verwijzing voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DocumentReference"
       },
       {
         "reference": {
           "reference": "Procedure/2.16.840.1.113883.2.4.3.124.7.47519.41230000001716"
         },
-        "description": "Dit is een Verrichting voorbeeld uit Chipsoft.",
         "name": "Chipsoft Procedure Example",
+        "description": "Dit is een Verrichting voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Procedure"
       },
       {
         "reference": {
           "reference": "Procedure/flS.UT.hs.t2UZUFBGcd05sj4obBlLB.TD3qdy07DasQ4"
         },
-        "description": "Dit is een Verrichting voorbeeld uit Epic.",
         "name": "Epic Procedure Example",
+        "description": "Dit is een Verrichting voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Procedure"
       },
       {
         "reference": {
           "reference": "Procedure/VPwS1rhM16bYvo-c52ce7kwRKeEaUOJaDIeHsOSNJzFTQLcTN5Lcg7N50uR5v1Z4"
         },
-        "description": "Dit is een Verrichting voorbeeld uit Epic (Surgical History).",
         "name": "Epic Procedure (Surgical History) Example",
+        "description": "Dit is een Verrichting voorbeeld uit Epic (Surgical History).",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Procedure"
       },
       {
         "reference": {
           "reference": "Procedure/25102292"
         },
-        "description": "Dit is een Verrichting voorbeeld uit Nexus.",
         "name": "Nexus Procedure (Surgical History) Example",
+        "description": "Dit is een Verrichting voorbeeld uit Nexus.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Procedure"
       },
       {
         "reference": {
           "reference": "AllergyIntolerance/2.16.840.1.113883.2.4.3.124.7.48765.212340000000820"
         },
-        "description": "Dit is een AllergyIntolerance voorbeeld uit Chipsoft.",
         "name": "Chipsoft AllergyIntolerance Example",
+        "description": "Dit is een AllergyIntolerance voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AllergyIntolerance"
       },
       {
         "reference": {
           "reference": "AllergyIntolerance/eot677ioPb4frLYJYyuabIg3"
         },
-        "description": "Dit is een AllergyIntolerance voorbeeld uit Epic.",
         "name": "Epic AllergyIntolerance Example",
+        "description": "Dit is een AllergyIntolerance voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AllergyIntolerance"
       },
       {
         "reference": {
           "reference": "AllergyIntolerance/41"
         },
-        "description": "Dit is een AllergyIntolerance voorbeeld uit Nexus.",
         "name": "Nexus AllergyIntolerance Example",
+        "description": "Dit is een AllergyIntolerance voorbeeld uit Nexus.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AllergyIntolerance"
       },
       {
         "reference": {
           "reference": "Flag/354CD8791FE7BB1CF7AAC44891171ECB671D9E91"
         },
-        "description": "Dit is een Alert voorbeeld uit Nexus.",
         "name": "Nexus Alert Example",
+        "description": "Dit is een Alert voorbeeld uit Nexus.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Flag"
       },
       {
         "reference": {
           "reference": "Flag/ac907bbc-89bd-45db-ab23-fdb11dd01a78"
         },
-        "description": "Dit is een Alert voorbeeld uit Chipsoft.",
         "name": "Chipsoft Alert Example",
+        "description": "Dit is een Alert voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Flag"
       },
       {
         "reference": {
           "reference": "Flag/fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4"
         },
-        "description": "Dit is een Alert voorbeeld uit Epic.",
         "name": "Epic Alert Example",
+        "description": "Dit is een Alert voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Flag"
       },
       {
         "reference": {
           "reference": "Observation/f8UmImiPIOsQ.5po1S7e9DkjuNqOXpuSeUU-S.g-EF2c4"
         },
-        "description": "Dit is een Lab-uitslag voorbeeld uit Epic.",
         "name": "Epic Lab-uitslag Example",
+        "description": "Dit is een Lab-uitslag voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/LaboratoryTestResult"
       },
       {
         "reference": {
           "reference": "Observation/3009316"
         },
-        "description": "Dit is een Lab-uitslag voorbeeld uit Nexus.",
         "name": "Nexus Lab-uitslag Example",
+        "description": "Dit is een Lab-uitslag voorbeeld uit Nexus.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/LaboratoryTestResult"
       },
       {
         "reference": {
           "reference": "Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3"
         },
-        "description": "Dit is een Lab-uitslag voorbeeld uit Epic.",
         "name": "Epic Lab-uitslag Example",
+        "description": "Dit is een Lab-uitslag voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/LaboratoryTestResult"
       },
       {
         "reference": {
           "reference": "Observation/39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C"
         },
-        "description": "Dit is een Lab-uitslag voorbeeld uit Chipsoft.",
         "name": "Chipsoft Lab-uitslag Example",
+        "description": "Dit is een Lab-uitslag voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/LaboratoryTestResult"
       },
       {
         "reference": {
           "reference": "Specimen/edAE6aGl0-InKRnWJAWRiChE4AhLNTRTlNIiljUcUA-I3"
         },
-        "description": "Dit is een Specimen voorbeeld uit Epic.",
         "name": "Epic Specimen Example",
+        "description": "Dit is een Specimen voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Specimen"
       },
       {
         "reference": {
           "reference": "Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635"
         },
-        "description": "Dit is een Specimen voorbeeld uit Nexus.",
         "name": "Nexus Specimen Example",
+        "description": "Dit is een Specimen voorbeeld uit Nexus.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Specimen"
       },
       {
         "reference": {
           "reference": "Specimen/exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3"
         },
-        "description": "Dit is een Specimen voorbeeld uit Epic.",
         "name": "Epic Specimen Example",
+        "description": "Dit is een Specimen voorbeeld uit Epic.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Specimen"
       },
       {
         "reference": {
           "reference": "Specimen/35648ae9-a74d-4800-9f15-4e436ebd12c8"
         },
-        "description": "Dit is een Specimen voorbeeld uit Chipsoft.",
         "name": "Chipsoft Specimen Example",
+        "description": "Dit is een Specimen voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Specimen"
       },
       {
         "reference": {
           "reference": "AuditEvent/example-auditevent-zorgviewer"
         },
-        "description": "Dit is een AuditEvent voorbeeld uit de Zorgviewer.",
         "name": "Zorgviewer AuditEvent Example",
+        "description": "Dit is een AuditEvent voorbeeld uit de Zorgviewer.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AuditEvent"
       }
     ],
@@ -456,12 +465,17 @@
         {
           "nameUrl": "0requirements.html",
           "generation": "markdown",
-          "title": "Conformance",
+          "title": "Requirements",
           "page": [
             {
-              "nameUrl": "conformance.html",
+              "nameUrl": "requirements.html",
               "generation": "markdown",
-              "title": "Conformance"
+              "title": "Uitgangspunten en Requirements"
+            },
+            {
+              "nameUrl": "requirements-non-functional.html",
+              "generation": "markdown",
+              "title": "Non Functional Requirements"
             },
             {
               "nameUrl": "nen-normen.html",
@@ -598,6 +612,14 @@
       {
         "code": "bundle-references-resolve",
         "value": "false"
+      },
+      {
+        "code": "path-expansion-params",
+        "value": "resources/Parameters-exp-params.json"
+      },
+      {
+        "code": "version-comparison-master",
+        "value": "1.10.0"
       }
     ]
   }

@@ -28,7 +28,7 @@ loop voor iedere zorgaanbieder
   activate Zorgviewer
   Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base>/Patient?identifier=<BSN>""
   activate Bron
-  Bron->Authenticatie : verkrijgen access token [[design.html#bevragen-bronsysteem-summary-table zie tabel]]
+  Bron->Authenticatie : verkrijgen access token [[design-authenticatie.html#bevragen-bronsysteem-summary-table zie tabel]]
   note right Bron
     auth_token bij access token request:
     { ...

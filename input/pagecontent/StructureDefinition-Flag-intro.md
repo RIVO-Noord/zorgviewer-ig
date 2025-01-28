@@ -58,10 +58,10 @@
 ### Examples
 
 {% sql {
-  "query" : "select name as Name, Description, web from Resources where Type = 'Flag'",
+  "query" : "select name as Name, Description, Web from Resources where Type = 'Flag'",
   "class" : "grid",
   "columns" : [
-    { "name" : "Name", "type" : "link", "source" : "Name", "target" : "web"},
+    { "name" : "Name", "type" : "link", "source" : "Name", "target" : "Web"},
     { "name" : "Description", "type" : "markdown", "source" : "Description"}
   ]
 } %}

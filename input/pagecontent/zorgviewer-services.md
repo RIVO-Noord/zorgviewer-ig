@@ -1,6 +1,6 @@
 De volgende bouwblokken hebben allen een FHIR API. Hierdoor kunnen ze allemaal worden gerealiseerd door een generieke FHIR-Store in te richten. Deze verzameling noemen we de Zorgviewer Services. Later kunnen die worden vervangen door nationale alternatieven. Bij onderstaande tijdelijke oplossingen worden de gegevens als FHIR resources opgeslagen in die Zorgviewer Services FHIR-Store.
 
-### [Terminology](CapabilityStatement-Terminology.html)
+### [Terminology](CapabilityStatement-Terminologie.html)
 
 * Doel: Nederlandse Terminology Service ([NTS Nictiz](https://nictiz.nl/wat-we-doen/activiteiten/terminologie/de-nationale-terminologieserver/))
 * Inhoud: Vertalingen (ValueSet, CodeSystem, ConceptMap)
@@ -18,7 +18,7 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
 
 * Doel: landelijke MITZ open vraag
 * Inhoud: Toestemmingen van een patient (Consents)
-* Tijdelijk: Vullen [Toestemming Consent](StructureDefinition-ToestemmingConsent) dmv afvangen HL7 v2 toestemming berichten.
+* Tijdelijk: Vullen [Toestemming Consent](StructureDefinition-ToestemmingConsent.html) dmv afvangen HL7 v2 toestemming berichten.
 
 ### [Zorgverlener Directory](CapabilityStatement-ZorgverlenerDirectory.html)
 

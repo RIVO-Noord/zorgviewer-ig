@@ -3,8 +3,12 @@
 Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/jurisdiction|3.0.2
 Unable to validate code without using server%
 
-# Epic known issue
+# Epic known
 Invalid Resource id: Too long%
+This element is not allowed by the profile http://hl7.org/fhir/StructureDefinition/dateTime
+% definition allows for the type dateTime but found type Period
+The extension http://open.epic.com/FHIR/StructureDefinition/extension/%
+Constraint failed: nl-postal-code-pattern: 'Dutch postal code pattern 'nnnnAA''
 
 # IG Publisher issue
 %which is experimental, but this structure is not labeled as experimental
@@ -19,22 +23,23 @@ if identifier.system is 'urn:ietf:rfc:3986', then the identifier.value must be a
 # Probably Dutch code; not in international terminology server
 Unknown code%
 
-# Epic internal Code System; not in international terminology server
-Code System URI 'urn:oid:1.2.840.114350.1.13.%
+# Internal Epic CodeSystem; not in international terminology server
+A definition for CodeSystem 'urn:oid:1.2.840.114350.1.%
+The Source Code System urn:oid:1.2.840.114350.1.%
 
 # Zib Code System; not in international terminology server
 %urn:oid:2.16.840.1.113883.2.4.3.11.60.40.%
-Unable to check whether the code is in the value set http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.%
 Wrong Display Name%
 
 # Tooling replaces DataRequirement.valueCode with .valueCoding in PlanDefinition. Why??
 A code with no system has no defined meaning. A system should be provided
 
-# Known issue in zibs2017 profiles
+# Known issue in Nictiz zibs2017 profiles
 %launches straight into slicing without the slicing being set up properly first%
 %is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Condition]%
 Error in constraint 'zib-LaboratoryTestResult-Observation-1'%
 %.value has no assigned types, and no content reference
+This element is not allowed by the profile http://nictiz.nl/fhir/StructureDefinition/patient-proficiency|2.0.1
 
 # Local copies
 Conformance resource%

@@ -39,7 +39,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 @> cd /app
 @> apt update
 @> apt install jekyll graphviz
-@> dpkg -i jdk-21_linux-x64_bin.deb
+@> dpkg -i jdk-23_linux-x64_bin.deb
 ```
 1. (optioneel) bouw lokaal de IG en check output
 ```
@@ -50,8 +50,11 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 
 ### Tag een Release
 
-1. Werk ``input/pagecontent/changes.md`` bij (TODO: beschrijven Michael)
-1. Werk ``input/images/package-feed.xml`` bij (datum, versie, IG publisher versie TODO: beschrijven Michael)
+1. Werk de volgende files bij: 
+  1. ``input/pagecontent/changes.md`` (github links en change bullets)
+  1. ``input/images/package-feed.xml`` (datum, versie, IG publisher versie; zodat nieuwe versie opgenomen wordt in de fhir package registries)
+  1. ``fhir.hl7.nl/package-list.json`` (datum, versie, IG publisher versie en upload naar fhir.hl7.nl/zorgviewer; used for version comparison!)
+  1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
 1. ``> git commit -a; git push``
 1. Create tag "1.M.R-sprintX" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
   1. tags
@@ -61,7 +64,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
   1. Create a new tag
   1. Release title: "1.M.R-sprintX"
   1. Description: generate release notes -> "{github changes link}"
-  1. Vink aan: Set as pre-release
+  1. Vink aan: Set as the latest release
   1. Publish release
 
 ### Merge release naar Snapshot
@@ -80,7 +83,9 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 > git push
 ```
 1. En werk verder in de master branch
-1. Update input/zorgviewer-ig.json version naar volgende minor "1.M+1.0"
+1. Update input/zorgviewer-ig.json 
+  * version naar volgende minor "1.M+1.0" 
+  * parameter/version-comparison-master naar (vorige versie) "1.M.0" 
 
 ### Handmatig publish implementatiegids.zorgviewer.nl
 
@@ -100,19 +105,22 @@ N.B. Alleen nodig als de [GitHub Snapshot Publish Workflow](.github/workflows/pu
 
 ## Toevoegen publicatie aan de internationale Implementation Guide Registry
 
-### Instructies 
+### Instructies
+
 - https://registry.fhir.org/submit
 - https://github.com/FHIR/ig-registry/blob/master/README.md
 
-### package-feeds.json 
+### package-feeds.json
+
 Zorgt voor opname van de package in de 2 package registers:
 - packages.fhir.org -> https://simplifier.net/packages
 - http://packages2.fhir.org/packages/catalog
 
 ### fhir-ig-list.json
+
 Zorgt voor beschikbaar komen in de searches:
-- https://fhir.org/guides/registry/ (yes, vanaf 3-mei-2024)
-- https://registry.fhir.org/ (hier nog niet 3-mei-2024)
+- https://fhir.org/guides/registry/
+- https://registry.fhir.org/
 
 ## Some usefull resources
 

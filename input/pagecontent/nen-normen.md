@@ -11,6 +11,7 @@ Op deze pagine beschrijven we de conformiteit met de verschillende NEN normen al
     * "Figuur 9 – Usecase Opvragen BgZ" 
     * En voor "6.4.7. Stap 7: Verwerken BgZ' ondersteund het de "Inzien" functie
 * [TTA Direct Pull](https://vzvz.atlassian.net/wiki/spaces/Twiincon/pages/331847141/10.2.4+TTA+FHIR+-+Pull) *in ontwikkeling*
+* Medicatieoverdracht | Medicatie- en toediengegevens - NEN 7542
 
 ### Normen voor generieke functies
 
