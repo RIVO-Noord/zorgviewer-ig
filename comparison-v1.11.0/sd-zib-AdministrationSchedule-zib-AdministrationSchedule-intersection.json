@@ -1,0 +1,682 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "8b68de40-158c-492f-a5d5-aba017968468-54",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/8b68de40-158c-492f-a5d5-aba017968468-54",
+  "name" : "IntersectionZib AdministrationScheduleAndZib AdministrationSchedule",
+  "title" : "Intersection of HCIM AdministrationSchedule And HCIM AdministrationSchedule",
+  "status" : "active",
+  "date" : "2025-01-28T20:08:37+00:00",
+  "snapshot" : {
+    "element" : [{
+      "path" : "Timing",
+      "short" : "AdministeringSchedule",
+      "definition" : "Specifications of the times at which the medication is to be administered. This is indicated as follows: \r\nTime(s) (16:00) or indications (“before meals”) at which the medication is to be taken each day.\r\nA specific number of times the medication is to be taken each day (\"3x a day\"), indicated with the frequency\r\nA time interval between consecutive doses (“Every 2 hours”, “every 3 days”), indicated with the word Interval.\r\nCombined periods with an interval and duration (“1 daily for three out of four weeks: the pill schedule”)\r\n\r\nIf a certain medication is not to be taken daily, the aforementioned can be combined with daily indications: \r\nOne or more week days on which the medication is to be administered (e.g. “Monday, Wednesday, Friday”)\r\n”3x a week”, “2x a month”.\r\n\r\nThe specified administration “infinite” is automatically to be repeated until: \r\nThe end date and time has been reached\r\nThe total administration duration has been reached (14 days)\r\n\r\nA specific amount of administrations has been reached (“20 doses”, “one-time only”), to be entered in the NumberOfDoses concept.",
+      "comment" : "A timing schedule can be either a list of events - intervals on which the event occurs, or a single event with repeating criteria or just repeating criteria with no actual event.  When both event and a repeating specification are provided, the list of events should be understood as an interpretation of the information in the repeat structure.",
+      "alias" : ["Toedieningsschema"],
+      "min" : 0,
+      "max" : "*",
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() | (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.19948",
+        "comment" : "AdministeringSchedule"
+      },
+      {
+        "identity" : "rim",
+        "map" : "n/a"
+      },
+      {
+        "identity" : "v2",
+        "map" : "N/A"
+      },
+      {
+        "identity" : "rim",
+        "map" : "QSET<TS> (GTS)"
+      }]
+    },
+    {
+      "path" : "Timing.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Timing.extension",
+      "short" : "Additional Content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Timing.event",
+      "short" : "When the event occurs",
+      "definition" : "Identifies specific times when the event occurs.",
+      "requirements" : "In an MAR, for instance, you need to take a general specification, and turn it into a precise specification.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "QLIST<TS>"
+      }]
+    },
+    {
+      "path" : "Timing.repeat",
+      "short" : "When the event is to occur",
+      "definition" : "A set of rules that describe when the event is scheduled.",
+      "requirements" : "Many timing schedules are determined by regular repetitions.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Element"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() | (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(exists(f:offset)) or exists(f:when)"
+        }],
+        "key" : "tim-9",
+        "severity" : "error",
+        "human" : "If there's an offset, there must be a when (and not C, CM, CD, CV)",
+        "expression" : "offset.empty() or (when.exists() and ((when in ('C' | 'CM' | 'CD' | 'CV')).not()))",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Timing"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "f:period/@value >= 0 or not(f:period/@value)"
+        }],
+        "key" : "tim-5",
+        "severity" : "error",
+        "human" : "period SHALL be a non-negative value",
+        "expression" : "period.exists() implies period >= 0",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Timing"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(exists(f:periodMax)) or exists(f:period)"
+        }],
+        "key" : "tim-6",
+        "severity" : "error",
+        "human" : "If there's a periodMax, there must be a period",
+        "expression" : "periodMax.empty() or period.exists()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Timing"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(exists(f:durationMax)) or exists(f:duration)"
+        }],
+        "key" : "tim-7",
+        "severity" : "error",
+        "human" : "If there's a durationMax, there must be a duration",
+        "expression" : "durationMax.empty() or duration.exists()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Timing"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(exists(f:countMax)) or exists(f:count)"
+        }],
+        "key" : "tim-8",
+        "severity" : "error",
+        "human" : "If there's a countMax, there must be a count",
+        "expression" : "countMax.empty() or count.exists()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Timing"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(exists(f:duration)) or exists(f:durationUnit)"
+        }],
+        "key" : "tim-1",
+        "severity" : "error",
+        "human" : "if there's a duration, there needs to be duration units",
+        "expression" : "duration.empty() or durationUnit.exists()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Timing"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(exists(f:timeOfDay)) or not(exists(f:when))"
+        }],
+        "key" : "tim-10",
+        "severity" : "error",
+        "human" : "If there's a timeOfDay, there cannot be be a when, or vice versa",
+        "expression" : "timeOfDay.empty() or when.empty()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Timing"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(exists(f:period)) or exists(f:periodUnit)"
+        }],
+        "key" : "tim-2",
+        "severity" : "error",
+        "human" : "if there's a period, there needs to be period units",
+        "expression" : "period.empty() or periodUnit.exists()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Timing"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "f:duration/@value >= 0 or not(f:duration/@value)"
+        }],
+        "key" : "tim-4",
+        "severity" : "error",
+        "human" : "duration SHALL be a non-negative value",
+        "expression" : "duration.exists() implies duration >= 0",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Timing"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "Implies PIVL or EIVL"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.extension",
+      "short" : "Additional Content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.bounds[x]",
+      "short" : "DoseDuration",
+      "definition" : "The intended time duration for these dosing instructions.",
+      "alias" : ["Doseerduur"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Duration"
+      },
+      {
+        "code" : "Range"
+      },
+      {
+        "code" : "Period"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.22506",
+        "comment" : "DoseDuration"
+      },
+      {
+        "identity" : "rim",
+        "map" : "IVL(TS) used in a QSI"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.count",
+      "short" : "Number of times to repeat",
+      "definition" : "A total count of the desired number of repetitions.",
+      "comment" : "If you have both bounds and count, then this should be understood as within the bounds period, until count times happens.",
+      "requirements" : "Repetitions may be limited by end time or total occurrences.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "integer"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "PIVL.count"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.countMax",
+      "short" : "Maximum number of times to repeat",
+      "definition" : "A maximum value for the count of the desired repetitions (e.g. do something 6-8 times).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "integer"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "PIVL.count"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.duration",
+      "short" : "Duration of administration",
+      "definition" : "Defines the amount of time during which medication is being administered. This is used especially in the context of administering liquids.",
+      "comment" : "For some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise).",
+      "requirements" : "Some activities are not instantaneous and need to be maintained for a period of time.",
+      "alias" : ["Toedieninsgduur"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.23141",
+        "comment" : "DurationOfAdministration"
+      },
+      {
+        "identity" : "rim",
+        "map" : "PIVL.phase"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.durationMax",
+      "short" : "How long when it happens (Max)",
+      "definition" : "The upper limit of how long this thing happens for when it happens.",
+      "comment" : "For some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise).",
+      "requirements" : "Some activities are not instantaneous and need to be maintained for a period of time.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "PIVL.phase"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.durationUnit",
+      "short" : "Duration unit of administration",
+      "definition" : "Defines the unit for the amount of time during which medication is being administered. This is used especially in the context of administering liquids.",
+      "alias" : ["Toedieninsgduur"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "description" : "A unit of time (units from UCUM).",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/units-of-time"
+      },
+      "mapping" : [{
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.23141",
+        "comment" : "DurationOfAdministration"
+      },
+      {
+        "identity" : "rim",
+        "map" : "PIVL.phase.unit"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.frequency",
+      "short" : "Frequency",
+      "definition" : "The frequency indicates the number of dose moments per time unit, usually per day. If this frequency is included, then the Interval will not have been included. Usually, frequency comprises both amount and time unit (3 times a day), but it can occur without the time unit (single use).          In that case, a reasonable distribution over the day is expected, but exact times are not given. This is left to the patient. It is the most common manner of extramural prescription. In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics).          The time unit of the frequency must be the same as how it is indicated in the textual description of the dose.                   Example:          for a '2x a day...' dose:         amount = 2         time unit = 'day'.                          for a '3x a week...' dose:         amount = 3         time unit = 'week'.",
+      "alias" : ["frequentie",
+      "frequentie vaste waarde",
+      "frequentie min"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "integer"
+      }],
+      "defaultValueInteger" : 1,
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.19949",
+        "comment" : "Frequency"
+      },
+      {
+        "identity" : "hcim-range-v1.0-2017EN",
+        "map" : "NL-CM:20.1.2",
+        "comment" : "Minimal frequency"
+      },
+      {
+        "identity" : "hcim-range-v1.0-2017EN",
+        "map" : "NL-CM:20.1.4",
+        "comment" : "nominalValue. Nominal frequency: This element can not be used in combination with a minimum and maximum value"
+      },
+      {
+        "identity" : "rim",
+        "map" : "PIVL.phase"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.frequencyMax",
+      "short" : "maximumValue",
+      "definition" : "If present, indicates that the frequency is a range - so to repeat between [frequency (min)] and [frequencyMax] times within the period or period range.",
+      "alias" : ["maximumWaarde"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "integer"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-range-v1.0-2017EN",
+        "map" : "NL-CM:20.1.3",
+        "comment" : "maximumValue"
+      },
+      {
+        "identity" : "rim",
+        "map" : "PIVL.phase"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.period",
+      "short" : "Interval",
+      "definition" : "Interval indicates the time between dose times. If this is included, then the <i>Frequency </i>will not have been included. \r\n \r\nExamples: every 4 hours, every 3 weeks. \r\n\r\nThe times can now be chosen freely, but distribution throughout the day is more precise, and the interval between times is important (e.g. in the case of antibiotics) \r\nIn the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)",
+      "comment" : "In FHIR, the HCIM concepts Interval and Frequency are represented with the elements Timing.repeat.frequency, Timing.repeat.period and Timing.repeat.periodUnit.",
+      "alias" : ["Interval",
+      "Frequentie"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.19949",
+        "comment" : "Frequency. When frequency is used, set \"exact\" to false"
+      },
+      {
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.19950",
+        "comment" : "Interval. When interval is used, set \"exact\" to true"
+      },
+      {
+        "identity" : "rim",
+        "map" : "PIVL.phase"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.periodMax",
+      "short" : "Upper limit of period (3-4 hours)",
+      "definition" : "If present, indicates that the period is a range from [period] to [periodMax], allowing expressing concepts such as \"do this once every 3-5 days.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "PIVL.phase"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.periodUnit",
+      "short" : "s | min | h | d | wk | mo | a - unit of time (UCUM)",
+      "definition" : "Interval indicates the time between dose times. If this is included, then the <i>Frequency </i>will not have been included. \r\n \r\nExamples: every 4 hours, every 3 weeks. \r\n\r\nThe times can now be chosen freely, but distribution throughout the day is more precise, and the interval between times is important (e.g. in the case of antibiotics) \r\nIn the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics)",
+      "comment" : "The unit of time for the information given in Timing.repeat.period. In FHIR, the HCIM concepts Interval and Frequency are represented with the elements Timing.repeat.frequency, Timing.repeat.period and Timing.repeat.periodUnit.",
+      "alias" : ["Interval",
+      "Frequentie"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "description" : "A unit of time (units from UCUM).",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/units-of-time"
+      },
+      "mapping" : [{
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.19949",
+        "comment" : "Frequency. When frequency is used, set \"exact\" to false"
+      },
+      {
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.19950",
+        "comment" : "Interval. When interval is used, set \"exact\" to true"
+      },
+      {
+        "identity" : "rim",
+        "map" : "PIVL.phase.unit"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.dayOfWeek",
+      "short" : "WeekDay",
+      "definition" : "WeekDay indicates a pattern of doses on fixed week days.",
+      "comment" : "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.",
+      "alias" : ["Weekdagen"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/days-of-week"
+      },
+      "mapping" : [{
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.19952",
+        "comment" : "WeekDay.See for details ConceptMap (http://nictiz.nl/fhir/ConceptMap/WeekdagCodelijst-to-days-of-week)"
+      },
+      {
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.timeOfDay",
+      "short" : "AdministrationTime",
+      "definition" : "Specified time of day for action to take place.",
+      "comment" : "If there's a timeOfDay, there cannot be a when, or vice versa.",
+      "alias" : ["Toedientijd"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "time"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.19951",
+        "comment" : "AdministrationTime"
+      },
+      {
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.when",
+      "short" : "TimeOfDay",
+      "definition" : "Time of day: morning, afternoon, evening, night.",
+      "comment" : "When more than one event is listed, the event is tied to the union of the specified events.",
+      "requirements" : "Timings are frequently determined by occurrences such as waking, eating and sleep.",
+      "alias" : ["Dagdeel"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/event-timing"
+      },
+      "mapping" : [{
+        "identity" : "hcim-instructionsforuse-v1.1-2017EN",
+        "map" : "NL-CM:9.12.19953",
+        "comment" : "TimeOfDay. See for details the ConceptMap (http://nictiz.nl/fhir/ConceptMap/DagdeelCodelijst-to-EventTiming)"
+      },
+      {
+        "identity" : "rim",
+        "map" : "EIVL.event"
+      }]
+    },
+    {
+      "path" : "Timing.repeat.offset",
+      "short" : "Minutes from event (before or after)",
+      "definition" : "The number of minutes from the event. If the event code does not indicate whether the minutes is before or after the event, then the offset is assumed to be after the event.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "unsignedInt"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "EIVL.offset"
+      }]
+    },
+    {
+      "path" : "Timing.code",
+      "short" : "BID | TID | QID | AM | PM | QD | QOD | Q4H | Q6H +",
+      "definition" : "A code for the timing schedule. Some codes such as BID are ubiquitous, but many institutions define their own additional codes. If a code is provided, the code is understood to be a complete statement of whatever is specified in the structured timing data, and either the code or the data may be used to interpret the Timing, with the exception that .repeat.bounds still applies over the code (and is not contained in the code).",
+      "comment" : "BID etc are defined as 'at institutionally specified times'. For example, an institution may choose that BID is \"always at 7am and 6pm\".  If it is inappropriate for this choice to be made, the code BID should not be used. Instead, a distinct organization-specific code should be used in place of the HL7-defined BID code and/or the a structured representation should be used (in this case, specifying the two event times).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "TimingAbbreviation"
+        }],
+        "strength" : "preferred",
+        "description" : "Code for a known / defined timing pattern.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/timing-abbreviation",
+        "_valueSet" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+            "valueUrl" : "Reference"
+          }]
+        }
+      },
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "QSC.code"
+      }]
+    }]
+  }
+}

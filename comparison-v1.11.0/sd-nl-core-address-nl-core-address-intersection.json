@@ -1,0 +1,762 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "8b68de40-158c-492f-a5d5-aba017968468-66",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/8b68de40-158c-492f-a5d5-aba017968468-66",
+  "name" : "Intersectionnl-core-addressAndnl-core-address",
+  "title" : "Intersection of nl-core-address And nl-core-address",
+  "status" : "active",
+  "date" : "2025-01-28T20:08:37+00:00",
+  "snapshot" : {
+    "element" : [{
+      "path" : "Address",
+      "short" : "Address information",
+      "definition" : "This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Dutch addresses specifically, according to the HCIM AddressInformation (v1.0, 2017). A Dutch Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.\r\n\r\nTo have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Dutch context, the implementer SHOULD in addition use the extension elements.\r\n\r\n**Separate address parts**\r\n\r\nThe first addition is that Dutch addresses make certain address parts separately communicable. These parts are required for use in true Dutch systems when dealing with Dutch addresses, but may not have value for international systems when information gets sent abroad.\r\n\r\n**Custom address types**\r\n\r\nThe second addition is that the HCIM defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the HCIM concepts are mapped to the various FHIR elements (see the ConceptMaps <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse> and <http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType> as well). The HCIM code itself should also be included using the AddressType extension.\r\n\r\n| HCIM                              |` .ext:AddressType` | `.ext:official` | `.use` | `.type`    |\r\n|-----------------------------------|:------------------:|:---------------:|:------:|:----------:|\r\n| Postal Address/Postadres          | _PST_              |                 |        | _postal_   |\r\n| Primary Home/Officieel adres      | _HP_               | true            | _home_ |            |\r\n| Visit Address/Woon-/verblijfadres | _PHYS_             |                 | _home_ | _physical_ |\r\n| Temporary Address/Tijdelijk adres | _TMP_              |                 | _temp_ |            |\r\n| Work Place/Werkadres              | _WP_               |                 | _work_ |            |\r\n| Vacation Home/Vakantie adres      | _HV_               |                 | _temp_ |            |\r\n\r\n If Address.type is _both_ then this is to be understood as a dual purpose address (postal and physical). Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.\r\n\r\nNOTE: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the HCIM ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension.",
+      "comment" : "Note: address is for postal addresses, not physical locations.",
+      "alias" : ["AdresInformatie"],
+      "min" : 0,
+      "max" : "*",
+      "example" : [{
+        "label" : "Example of a Vacation Home address",
+        "valueAddress" : {
+          "extension" : [{
+            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+            "valueCodeableConcept" : {
+              "coding" : [{
+                "system" : "http://hl7.org/fhir/v3/AddressUse",
+                "code" : "HV",
+                "display" : "Vakantie adres"
+              }]
+            }
+          }],
+          "use" : "temp",
+          "line" : ["Binnenkant 12A Hoog"],
+          "_line" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString" : "Binnenkant"
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString" : "12"
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+              "valueString" : "A"
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+              "valueString" : "Hoog"
+            }]
+          }],
+          "city" : "Amsterdam",
+          "state" : "NH",
+          "postalCode" : "1000AA",
+          "country" : "NLD"
+        }
+      },
+      {
+        "label" : "Example of a Primary Home address",
+        "valueAddress" : {
+          "extension" : [{
+            "url" : "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+            "valueCodeableConcept" : {
+              "coding" : [{
+                "system" : "http://hl7.org/fhir/v3/AddressUse",
+                "code" : "HP",
+                "display" : "Officieel adres"
+              }]
+            }
+          },
+          {
+            "url" : "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official",
+            "valueBoolean" : true
+          }],
+          "use" : "home",
+          "line" : ["Binnenkant to 10"],
+          "_line" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString" : "Binnenkant"
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+              "valueString" : "to"
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString" : "10"
+            }]
+          }],
+          "city" : "Amsterdam",
+          "state" : "NH",
+          "postalCode" : "1001AA",
+          "country" : "NLD"
+        }
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() | (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(.[f:extension[@url='http://fhir.nl/fhir/StructureDefinition/nl-core-address-official'][f:valueBoolean/@value='true']][f:line[empty(f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName'])][f:extension[@url=('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix','http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator')]]])"
+        }],
+        "key" : "nl-streetname-if-official-and-other-line-parts",
+        "requirements" : "This constraint checks conformance against the Dutch BRP constraints on address parts. However: when you only send postalCode + houseNumber which is enough for certain cases this may still be a valid address",
+        "severity" : "error",
+        "human" : "Address.streetName in an official address SHALL have a value if one of houseNumber|buildingNumberSuffix|additionalLocator has a value",
+        "expression" : "(extension.where(url = 'http://fhir.nl/fhir/StructureDefinition/nl-core-address-official').where(value = true)).empty() or (line.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').empty().not() and (line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').empty().not() or line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator').empty().not()))"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "hcim-address-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.4",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-addressinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.4",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-addressinformation-v1.0-2017EN",
+        "map" : "NL-CM:20.5.1",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "rim",
+        "map" : "n/a"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XAD"
+      },
+      {
+        "identity" : "rim",
+        "map" : "AD"
+      },
+      {
+        "identity" : "servd",
+        "map" : "Address"
+      }]
+    },
+    {
+      "path" : "Address.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Address.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Address.use",
+      "short" : "home | work | temp | old - purpose of this address",
+      "definition" : "Purpose of this address",
+      "comment" : "This is labeled as \"Is Modifier\" because applications should not mistake a temporary or old address etc.for a current/permanent one. Applications can assume that an address is current unless it explicitly says that it is temporary or old.",
+      "requirements" : "Allows an appropriate address to be chosen from a list of many.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "example" : [{
+        "label" : "General",
+        "valueCode" : "home"
+      }],
+      "mustSupport" : false,
+      "isModifier" : true,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/address-use"
+      },
+      "mapping" : [{
+        "identity" : "hcim-address-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.11",
+        "comment" : "AddressType. See for details the ConceptMap http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse"
+      },
+      {
+        "identity" : "hcim-address-v3.0-2016EN",
+        "map" : "NL-CM:0.1.11",
+        "comment" : "AddressType. See for details the ConceptMap http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse"
+      },
+      {
+        "identity" : "hcim-addressinformation-v1.0-2017EN",
+        "map" : "NL-CM:20.5.8",
+        "comment" : "AddressType. See for details the ConceptMap http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XAD.7"
+      },
+      {
+        "identity" : "rim",
+        "map" : "unique(./use)"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./AddressPurpose"
+      }]
+    },
+    {
+      "path" : "Address.type",
+      "short" : "postal | physical | both",
+      "definition" : "Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "example" : [{
+        "label" : "General",
+        "valueCode" : "both"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/address-type"
+      },
+      "mapping" : [{
+        "identity" : "hcim-address-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.11",
+        "comment" : "AddressType. See for details the ConceptMap http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType"
+      },
+      {
+        "identity" : "hcim-address-v3.0-2016EN",
+        "map" : "NL-CM:0.1.11",
+        "comment" : "AddressType. See for details the ConceptMap http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType"
+      },
+      {
+        "identity" : "hcim-addressinformation-v1.0-2017EN",
+        "map" : "NL-CM:20.5.8",
+        "comment" : "AddressType. See for details the ConceptMap http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XAD.18"
+      },
+      {
+        "identity" : "rim",
+        "map" : "unique(./use)"
+      },
+      {
+        "identity" : "vcard",
+        "map" : "address type parameter"
+      }]
+    },
+    {
+      "path" : "Address.text",
+      "short" : "Text representation of the address",
+      "definition" : "A full text representation of the address.",
+      "comment" : "Can provide both a text representation and parts.",
+      "requirements" : "A renderable, unencoded form.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "example" : [{
+        "label" : "General",
+        "valueString" : "137 Nowhere Street, Erewhon 9132"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XAD.1 + XAD.2 + XAD.3 + XAD.4 + XAD.5 + XAD.6"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./formatted"
+      },
+      {
+        "identity" : "vcard",
+        "map" : "address label parameter"
+      }]
+    },
+    {
+      "path" : "Address.line",
+      "short" : "Street name, number, direction & P.O. Box etc.",
+      "definition" : "This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.",
+      "requirements" : "home | work | temp | old - purpose of this address.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "string"
+      }],
+      "example" : [{
+        "label" : "General",
+        "valueString" : "137 Nowhere Street"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XAD.1 + XAD.2 (note: XAD.1 and XAD.2 have different meanings for a company address than for a person address)"
+      },
+      {
+        "identity" : "rim",
+        "map" : "AD.part[parttype = AL]"
+      },
+      {
+        "identity" : "vcard",
+        "map" : "street"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./StreetAddress (newline delimitted)"
+      }]
+    },
+    {
+      "path" : "Address.line.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Address.line.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Address.line.value",
+      "representation" : ["xmlAttr"],
+      "short" : "Primitive value for string",
+      "definition" : "The actual value",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "_code" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
+            "valueString" : "string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
+            "valueString" : "xsd:string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
+            "valueString" : "xsd:string"
+          }]
+        }
+      }],
+      "maxLength" : 1048576,
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Address.city",
+      "short" : "Name of city, town etc.",
+      "definition" : "The name of the city, town, village or other community or delivery center.",
+      "requirements" : "Basisregistratie Persoonsgegevens 11.70 Woonplaatsnaam",
+      "alias" : ["Municpality",
+      "Municipality",
+      "woonplaats"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "example" : [{
+        "label" : "General",
+        "valueString" : "Erewhon"
+      },
+      {
+        "label" : "Example city",
+        "valueString" : "Den Haag"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-address-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.14",
+        "comment" : "Place of residence"
+      },
+      {
+        "identity" : "hcim-addressinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.14",
+        "comment" : "Place of residence"
+      },
+      {
+        "identity" : "hcim-addressinformation-v1.0-2017EN",
+        "map" : "NL-CM:20.5.3",
+        "comment" : "PlaceOfResidence"
+      },
+      {
+        "identity" : "BRP",
+        "map" : "11.70",
+        "comment" : "Woonplaatsnaam"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XAD.3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "AD.part[parttype = CTY]"
+      },
+      {
+        "identity" : "vcard",
+        "map" : "locality"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./Jurisdiction"
+      }]
+    },
+    {
+      "path" : "Address.district",
+      "short" : "District name (aka county)",
+      "definition" : "The name of the administrative area (county).",
+      "comment" : "District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead. In a Dutch address this element is used for the population of a \"gemeente\"",
+      "requirements" : "Basisregistratie Persoonsgegevens 09.10 Gemeente van inschrijving",
+      "alias" : ["County",
+      "Gemeente"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "example" : [{
+        "label" : "General",
+        "valueString" : "Madison"
+      },
+      {
+        "label" : "Example district",
+        "valueString" : "Wateringen"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-address-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.16",
+        "comment" : "Municipality"
+      },
+      {
+        "identity" : "hcim-addressinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.16",
+        "comment" : "Municipality"
+      },
+      {
+        "identity" : "hcim-addressinformation-v1.0-2017EN",
+        "map" : "NL-CM:20.5.4",
+        "comment" : "Municipality"
+      },
+      {
+        "identity" : "BRP",
+        "map" : "09.10",
+        "comment" : "Gemeente van inschrijving"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XAD.9"
+      },
+      {
+        "identity" : "rim",
+        "map" : "AD.part[parttype = CNT | CPA]"
+      }]
+    },
+    {
+      "path" : "Address.state",
+      "short" : "Sub-unit of country (abbreviations ok).",
+      "definition" : "Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (i.e. US 2 letter state codes). For Dutch addresses this element should contain the \"provincie\" code",
+      "requirements" : "Some (Dutch) cities have the same name in multiple provinces. Dutch examples include Bergen (Noord-Holland / Limburg) and  Geesteren (Gelderland / Overijssel).",
+      "alias" : ["Province",
+      "Territory",
+      "Provincie"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "example" : [{
+        "label" : "Example province",
+        "valueString" : "ZH"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XAD.4"
+      },
+      {
+        "identity" : "rim",
+        "map" : "AD.part[parttype = STA]"
+      },
+      {
+        "identity" : "vcard",
+        "map" : "region"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./Region"
+      }]
+    },
+    {
+      "path" : "Address.postalCode",
+      "short" : "Postal code for area",
+      "definition" : "A postal code designating a region defined by the postal service.",
+      "comment" : "Dutch postal codes have pattern '\\d{4}[A-Z]{2}' so they do not have spaces. Systems can easily render postal codes with a space if necessary.",
+      "alias" : ["Zip",
+      "Postcode"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "example" : [{
+        "label" : "General",
+        "valueString" : "9132"
+      },
+      {
+        "label" : "Example postcode",
+        "valueString" : "9132AG"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(../f:country[lower-case(@value)=('nl','nld','nederland')]) or matches(@value,'^\\d{4}[A-Z]{2}$')"
+        }],
+        "key" : "nl-postal-code-pattern",
+        "severity" : "error",
+        "human" : "Dutch postal code pattern 'nnnnAA'",
+        "expression" : "(country in 'nl' | 'nld' | 'nederland').not() or matches('^\\\\d{4}[A-Z]{2}$')"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-address-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.15",
+        "comment" : "Postcode"
+      },
+      {
+        "identity" : "hcim-addressinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.15",
+        "comment" : "Postcode"
+      },
+      {
+        "identity" : "hcim-addressinformation-v1.0-2017EN",
+        "map" : "NL-CM:20.5.6",
+        "comment" : "Postcode"
+      },
+      {
+        "identity" : "BRP",
+        "map" : "11.60",
+        "comment" : "Postcode"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XAD.5"
+      },
+      {
+        "identity" : "rim",
+        "map" : "AD.part[parttype = ZIP]"
+      },
+      {
+        "identity" : "vcard",
+        "map" : "code"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./PostalIdentificationCode"
+      }]
+    },
+    {
+      "path" : "Address.country",
+      "short" : "Country",
+      "definition" : "Country in which the address is located.",
+      "comment" : "The FHIR datatype does not properly support coding the country using a CodeableConcept or Coding datatype. If the sender supports coded countries, it SHALL send the coded value using the code-specification extension under Address.country.",
+      "alias" : ["Land"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "example" : [{
+        "label" : "Example country",
+        "valueString" : "NLD"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-address-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.17",
+        "comment" : "Country"
+      },
+      {
+        "identity" : "hcim-addressinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.17",
+        "comment" : "Country"
+      },
+      {
+        "identity" : "hcim-addressinformation-v1.0-2017EN",
+        "map" : "NL-CM:20.5.5",
+        "comment" : "Country"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XAD.6"
+      },
+      {
+        "identity" : "rim",
+        "map" : "AD.part[parttype = CNT]"
+      },
+      {
+        "identity" : "vcard",
+        "map" : "country"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./Country"
+      }]
+    },
+    {
+      "path" : "Address.country.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Address.country.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Address.country.value",
+      "representation" : ["xmlAttr"],
+      "short" : "Primitive value for string",
+      "definition" : "The actual value",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "_code" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
+            "valueString" : "string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
+            "valueString" : "xsd:string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
+            "valueString" : "xsd:string"
+          }]
+        }
+      }],
+      "maxLength" : 1048576,
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Address.period",
+      "short" : "Time period when address was/is in use",
+      "definition" : "Time period when address was/is in use.",
+      "requirements" : "Allows addresses to be placed in historical context.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Period"
+      }],
+      "example" : [{
+        "label" : "General",
+        "valuePeriod" : {
+          "start" : "2010-03-23",
+          "end" : "2010-07-01"
+        }
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XAD.12 / XAD.13 + XAD.14"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./usablePeriod[type=\"IVL<TS>\"]"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./StartDate and ./EndDate"
+      }]
+    }]
+  }
+}
