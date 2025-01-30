@@ -122,6 +122,13 @@ Zorgt voor beschikbaar komen in de searches:
 - https://fhir.org/guides/registry/
 - https://registry.fhir.org/
 
+### EViews (hidden from menu)
+
+Update inhoud van input/eviews.md middels volgende commando (manually remove extension):
+```
+> find temp/pages/_includes/ | fgrep -eview.xhtml | awk -F'[/-]' '{ print "### " $5 "\n{% include StructureDefinition-" $5 "-eview.xhtml %}"}'
+```
+
 ## Some usefull resources
 
 * Base standards
