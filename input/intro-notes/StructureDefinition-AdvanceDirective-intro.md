@@ -4,7 +4,7 @@
 
 [ZIB Wilsverklaring](https://zibs.nl/wiki/Wilsverklaring-v3.1(2017NL))
 
-### User-Interface guidance
+### User-Interface Mockup
 
 Kolom definities:
 <table class="grid">

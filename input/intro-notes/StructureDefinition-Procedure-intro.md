@@ -8,7 +8,7 @@
 
 * [ViewDefinition voor Verrichtingen](ViewDefinition-Procedure.json)
 
-### User-Interface guidance
+### User-Interface Mockup
 
 Een schets van het scherm met labels en sortering informatie
 <div style="clear:both;"><img src="UI-Schets-Verrichtingen.png" class="figure-img img-responsive img-rounded center-block"></div>

@@ -4,7 +4,7 @@
 
 * [ViewDefinition voor Correspondentie](ViewDefinition-DocumentReference.json)
 
-### User-Interface guidance
+### User-Interface Mockup
 
 Kolom definities:
 <table class="grid">

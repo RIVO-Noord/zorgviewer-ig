@@ -27,7 +27,7 @@ Op dit moment zijn alleen de Behandelwensen deel (de BehandelAanwijzing zib) in 
 
 * [ViewDefinition voor Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
 
-### User-Interface guidance
+### User-Interface Mockup
 **! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.**
 
 Een schets van het scherm met labels en sortering informatie:

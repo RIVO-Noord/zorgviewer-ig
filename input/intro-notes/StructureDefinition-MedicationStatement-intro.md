@@ -8,6 +8,12 @@
 
 * [ViewDefinition voor MedicationStatement](ViewDefinition-MedicationStatement.json)
 
+### User-Interface Mockup
+
+<div>
+{% include UI-Mockup-Medicatie.svg %}
+</div>
+
 ### Request
 
 1. Opvragen (search) definities

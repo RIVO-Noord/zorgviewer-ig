@@ -4,7 +4,7 @@
 
 [ZIB Laboratorium uitslag](https://zibs.nl/wiki/LaboratoriumUitslag-v4.1(2017NL))
 
-### User-Interface guidance
+### User-Interface Mockup
 
 Een schets van het scherm met labels en sortering informatie
 <div style="clear:both;"><img src="UI-Schets-LaboratoriumUitslag.png" class="figure-img img-responsive img-rounded center-block"></div>
