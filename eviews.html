@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>EViews (experimental) - RIVO-Noord Zorgviewer Implementation Guide v1.12.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/rivo.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"10"}
+    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://rivo-noord.nl"><img height="50"
+            alt="Visit the RIVO-Noord website" src="assets/images/rivonoord-logo.png" /> </a>
+</div>
+
+<div id="family-nav">
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+    <a id="family-logo" no-external="true" href="https://hl7.nl"><img height="50" alt="Visit the HL7 NL website"
+            src="assets/images/HL7nl_Logo.png" /> </a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">RIVO-Noord Zorgviewer Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.12.0 - CI build
+
+
+
+  <img alt="Netherlands flag" src="assets/images/nld.svg" height="16" title="Netherlands"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requirements &#8964;</a>
+		<ul class="dropdown-menu">
+			<li><a href="requirements.html">Uitgangspunten en Requirements</a></li>
+			<li><a href="requirements-non-functional.html">Non Functional Requirements</a></li>
+			<li><a href="nen-normen.html">NEN Normen Conformiteit</a></li>
+			<li><a href="datasets.html">Datasets</a></li>
+			<li><a href="must-support.html">Must Support</a></li>
+		</ul>
+	</li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">RAO &#8964;</a>
+		<ul class="dropdown-menu">
+			<li><a href="zorgnetwerk.html">Inzage Zorgnetwerk</a></li>
+		</ul>
+	</li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
+		<ul class="dropdown-menu">
+			<li><a href="design.html">Design</a></li>
+			<li><a href="design2.html">Design 2024</a></li>
+			<li><a href="design-background.html">Design Achtergrond</a></li>
+			<li><a href="design-security.html">Security Design</a></li>
+			<li><a href="design-authenticatie.html">Authenticatie Bouwblok Design</a></li>
+			<li><a href="design-logging.html">Logging Bouwblok Design</a></li>
+			<li><a href="zorgviewer-services.html">Zorgviewer Services</a></li>
+		</ul>
+	</li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li class="dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Checklists &amp; Aansluiten &#8964;</a>
+		<ul class="dropdown-menu">
+		  <li><a href="checklists.html">Checklists &amp; Aansluiten</a></li>
+		  <li><a href="thermometer.html">Aansluit Thermometer</a></li>
+		  <li><a href="testing.html">Testing</a></li>
+		</ul>
+  </li>
+  <li><a href="copyrights.html">Copyrights</a></li>
+  <li><a href="changes.html">Change Log</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>EViews (experimental)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">RIVO-Noord Zorgviewer Implementation Guide - Local Development build (v1.12.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhir.hl7.nl/zorgviewer/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>EViews (experimental)</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#condition" id="markdown-toc-condition">Condition</a></li>
+  <li><a href="#practitioner" id="markdown-toc-practitioner">Practitioner</a></li>
+  <li><a href="#laboratorytestresult" id="markdown-toc-laboratorytestresult">LaboratoryTestResult</a></li>
+  <li><a href="#patient" id="markdown-toc-patient">Patient</a></li>
+  <li><a href="#unsupported-types" id="markdown-toc-unsupported-types">unsupported types</a></li>
+</ul>
+
+</div>
+<div class="dragon">
+Op deze pagina staan de experimentele OpenEHR View renderings van de profielen.
+</div>
+
+<h3 id="condition">Condition</h3>
+<table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 2px black solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="Conditione"><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #dfdfdf" id="a"><td colspan="3" style="vertical-align: top; text-align : left; background-color: #dfdfdf; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap" class="hierarchy"><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><span style="vertical-align: middle; font-weight: bold; font-size: 14px; padding-top: 10px; padding-bottom: 10px">Clinical</span></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap;min-width: 220px" class="hierarchy"><table role="presentation" class="none"><tr><td><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /></td><td><span style="font-weight: bold">ProblemStatus</span><br />Cardinality: 1..1<br /><img src="icon_primitive.png" title="code" /><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="code"> code</a></td></tr></table></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The problem status describes the condition of the problem:<br /><br /><br /><br />
+<ul>
+
+<li>Active problems are problems of which the patient experiences symptoms or for which evidence exists.</li>
+
+<li>Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore..</li>
+</ul><br /><br /></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px;min-width: 300px" class="hierarchy"><code>value</code> is bound to <a href="http://hl7.org/fhir/STU3/valueset-condition-clinical.html">Condition Clinical Status Codes</a>.  Codes:
+<ul><li><a href="http://hl7.org/fhir/STU3/codesystem-condition-clinical.html#condition-clinical-active">Condition Clinical Status Codes: active</a> "Active"</li>
+<li><a href="http://hl7.org/fhir/STU3/codesystem-condition-clinical.html#condition-clinical-recurrence">Condition Clinical Status Codes: recurrence</a> "Recurrence"</li>
+<li><a href="http://hl7.org/fhir/STU3/codesystem-condition-clinical.html#condition-clinical-inactive">Condition Clinical Status Codes: inactive</a> "Inactive"</li>
+<li><a href="http://hl7.org/fhir/STU3/codesystem-condition-clinical.html#condition-clinical-remission">Condition Clinical Status Codes: remission</a> "Remission"</li>
+<li><a href="http://hl7.org/fhir/STU3/codesystem-condition-clinical.html#condition-clinical-resolved">Condition Clinical Status Codes: resolved</a> "Resolved"</li></ul></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white; border-top: 1px solid silver" id="ab"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap;min-width: 220px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><table role="presentation" class="none"><tr><td><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /></td><td><span style="font-weight: bold">ProblemName</span><br />Cardinality: 1..1<br /><img src="icon_datatype.gif" title="CodeableConcept" /><a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept" title="CodeableConcept"> CodeableConcept</a></td></tr></table></td>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy">The problem name defines the problem. Depending on the setting, different code systems can be used. The ProblemNameCodelist provides an overview of the possible code systems.<br /><br /></td>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px;min-width: 300px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><code>value</code> is bound to <a href="ValueSet-ProbleemNaamCodelist.html">Zorgviewer probleem naam waardelijst</a><span title="Error converting output stream to byte array"> (??)</span></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7; border-top: 1px solid silver" id="ac"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap;min-width: 220px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><table role="presentation" class="none"><tr><td><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /></td><td><span style="font-weight: bold">Estimated or actual date,  date-time, or age</span><br />Cardinality: 1..1<br /><img src="icon_primitive.png" title="dateTime" /><a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime" title="dateTime"> dateTime</a></td></tr></table></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy">Estimated or actual date or date-time  the condition began, in the opinion of the clinician.<br /><br /></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px;min-width: 300px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"></td></tr>
+
+<tr fhir="generated-heirarchy"><td colspan="3" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legenda voor dit formaat"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit" /> Documentatie voor dit formaat</a></td></tr></table>
+<h3 id="practitioner">Practitioner</h3>
+<table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 2px black solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="Practitionere"><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #dfdfdf" id="a"><td colspan="3" style="vertical-align: top; text-align : left; background-color: #dfdfdf; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap" class="hierarchy"><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><span style="vertical-align: middle; font-weight: bold; font-size: 14px; padding-top: 10px; padding-bottom: 10px">Demographics</span></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap;min-width: 220px" class="hierarchy"><table role="presentation" class="none"><tr><td><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /></td><td><span style="font-weight: bold">NameInformation</span><br />Cardinality: 1..*<br /><img src="icon_datatype.gif" title="HumanName" /><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName" title="HumanName"> HumanName</a></td></tr></table></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Health professional’s full name. If a health professional identification number is entered, it will be the name as listed in UZI, AGB or by the healthcare center.<br /><br /></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px;min-width: 300px" class="hierarchy"><code>value</code> must be a <a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-humanname">nl-core-humanname</a></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #dfdfdf" id="b"><td colspan="3" style="vertical-align: top; text-align : left; background-color: #dfdfdf; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap" class="hierarchy"><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><span style="vertical-align: middle; font-weight: bold; font-size: 14px; padding-top: 10px; padding-bottom: 10px">Record Mgmt.</span></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ba"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap;min-width: 220px" class="hierarchy"><table role="presentation" class="none"><tr><td><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /></td><td><span style="font-weight: bold">HealthProfessionalIdentificationNumber</span><br />Cardinality: 1..*<br /><img src="icon_datatype.gif" title="Identifier" /><a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier" title="Identifier"> Identifier</a></td></tr></table></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The health professional identification number is a number that uniquely identifies the health professional.<br /><br /><br /><br />The following numbers are used in the Netherlands:<br /><br /><br /><br />
+<ol>
+
+<li>UZI Health Professionals. Identification of health professionals (people) in the Dutch healthcare industry.</li>
+
+<li>VEKTIS AGB-Z. Identifies health professionals and healthcare organizations.</li>
+
+<li>BIG-ID. The ID of the health professional listed in the BIG Register.</li>
+</ol><br /><br /><br /><br />This information is not readily available for foreign health professionals.<br /><br /></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px;min-width: 300px" class="hierarchy"></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #dfdfdf" id="c"><td colspan="3" style="vertical-align: top; text-align : left; background-color: #dfdfdf; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap" class="hierarchy"><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><span style="vertical-align: middle; font-weight: bold; font-size: 14px; padding-top: 10px; padding-bottom: 10px">Other Data.</span></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ca"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap;min-width: 220px" class="hierarchy"><table role="presentation" class="none"><tr><td><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /></td><td><span style="font-weight: bold">Qualifications obtained by training and certification</span><br />Cardinality: 0..*<br /><img src="icon_group.png" title="BackboneElement" /><a href="http://hl7.org/fhir/STU3/datatypes.html#BackboneElement" title="BackboneElement"> Group</a></td></tr></table></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Qualifications obtained by training and certification.<br /><br /></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px;min-width: 300px" class="hierarchy"></td></tr>
+
+<tr fhir="generated-heirarchy"><td colspan="3" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legenda voor dit formaat"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit" /> Documentatie voor dit formaat</a></td></tr></table>
+<h3 id="laboratorytestresult">LaboratoryTestResult</h3>
+<table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 2px black solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="LaboratoryTestResulte"><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #dfdfdf" id="a"><td colspan="3" style="vertical-align: top; text-align : left; background-color: #dfdfdf; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap" class="hierarchy"><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><span style="vertical-align: middle; font-weight: bold; font-size: 14px; padding-top: 10px; padding-bottom: 10px">Data</span></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap;min-width: 220px" class="hierarchy"><table role="presentation" class="none"><tr><td><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /></td><td><span style="font-weight: bold">TestDateTime</span><br />Cardinality: 0..1<br /><img src="icon_primitive.png" title="dateTime" /><a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime" title="dateTime"> dateTime</a></td></tr></table></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The date and if possible the time at which the test was carried out.<br /><br /></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px;min-width: 300px" class="hierarchy"></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white; border-top: 1px solid silver" id="ab"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap;min-width: 220px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><table role="presentation" class="none"><tr><td><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /></td><td><span style="font-weight: bold">TestResult</span><br />Cardinality: 0..1<br /><img src="icon_datatype.gif" title="Quantity" /><a href="http://hl7.org/fhir/STU3/datatypes.html#Quantity" title="Quantity"> Quantity</a></td></tr></table></td>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy">The test result. Depending on the type of test, the result will consist of a value with a unit or a coded value (ordinal or nominal).<br /><br /></td>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px;min-width: 300px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #dfdfdf" id="b"><td colspan="3" style="vertical-align: top; text-align : left; background-color: #dfdfdf; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap" class="hierarchy"><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><span style="vertical-align: middle; font-weight: bold; font-size: 14px; padding-top: 10px; padding-bottom: 10px">Protocol</span></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ba"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap;min-width: 220px" class="hierarchy"><table role="presentation" class="none"><tr><td><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /></td><td><span style="font-weight: bold">Specimen</span><br />Cardinality: 0..1<br /><img src="icon_reference.png" title="Reference" /><a href="http://hl7.org/fhir/STU3/references.html#Reference" title="Reference"> Reference</a></td></tr></table></td>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The specimen that was used when this observation was made.<br /><br /></td>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px;min-width: 300px" class="hierarchy"><code>value</code> must point to a <a href="StructureDefinition-Specimen.html">Specimen</a></td></tr>
+
+<tr fhir="generated-heirarchy"><td colspan="3" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legenda voor dit formaat"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit" /> Documentatie voor dit formaat</a></td></tr></table>
+<h3 id="patient">Patient</h3>
+<table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 2px black solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="Patiente"><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #dfdfdf" id="a"><td colspan="3" style="vertical-align: top; text-align : left; background-color: #dfdfdf; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap" class="hierarchy"><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><span style="vertical-align: middle; font-weight: bold; font-size: 14px; padding-top: 10px; padding-bottom: 10px">Demographics</span></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap;min-width: 220px" class="hierarchy"><table role="presentation" class="none"><tr><td><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /></td><td><span style="font-weight: bold">NameInformation</span><br />Cardinality: 1..*<br /><img src="icon_datatype.gif" title="HumanName" /><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName" title="HumanName"> HumanName</a></td></tr></table></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A name associated with the individual.<br /><br /></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px;min-width: 300px" class="hierarchy"><code>value</code> must be a <a href="https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=http://fhir.nl/fhir/StructureDefinition/nl-core-humanname">nl-core-humanname</a></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #dfdfdf" id="b"><td colspan="3" style="vertical-align: top; text-align : left; background-color: #dfdfdf; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap" class="hierarchy"><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><span style="vertical-align: middle; font-weight: bold; font-size: 14px; padding-top: 10px; padding-bottom: 10px">Record Mgmt.</span></td></tr>
+
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ba"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap;min-width: 220px" class="hierarchy"><table role="presentation" class="none"><tr><td><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy" /></td><td><span style="font-weight: bold">BSN</span><br />Cardinality: 1..1<br /><img src="icon_datatype.gif" title="Identifier" /><a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier" title="Identifier"> Identifier</a></td></tr></table></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">An identifier for this patient.<br /><br /></td>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px;min-width: 300px" class="hierarchy"><code>system</code> is fixed to <a href="http://fhir.nl/fhir/NamingSystem/bsn"><code>http://fhir.nl/fhir/NamingSystem/bsn</code></a><br /><code>system</code>has cardinality: 1..1<br /><code>value</code>has cardinality: 1..1</td></tr>
+
+<tr fhir="generated-heirarchy"><td colspan="3" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legenda voor dit formaat"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit" /> Documentatie voor dit formaat</a></td></tr></table>
+<h3 id="unsupported-types">unsupported types</h3>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+<div><p>This view is not supported for this profile because it is of an unsupported type</p></div>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Jan 31, 2025 07:22+0000">2025-01-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
