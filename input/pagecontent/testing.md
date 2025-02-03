@@ -25,13 +25,23 @@ Zie in de FHIR specificaties: [Testing FHIR](https://hl7.org/fhir/STU3/testing.h
 
 ### SQL-on-FHIR-v2 ViewDefinitions
 
-Een tool om een FHIR response als tabel te tonen. Op basis van de "FHIR Path"s in de "Kolom definities" secties van de Profiles in deze implementatie gids kan je eenvoudig van test FHIR response snel als tabel zien. 
+Een tool om een FHIR response als tabel te tonen. Op basis van de "FHIR Path"s in de "Kolom definities" secties van de Profiles in deze implementatie gids kan je eenvoudig van test FHIR response snel als tabel zien.
 
-* [SQL-on-FHIR](https://fhirpath-lab.azurewebsites.net/sqlonfhir/)
-* [ViewDefinition voor Alerts](ViewDefinition-Flag.json)
-* [ViewDefinition voor Allergieën en Intoleranties](ViewDefinition-AllergyIntolerance.json)
-* [ViewDefinition voor Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
-* [ViewDefinition voor Correspondentie](ViewDefinition-DocumentReference.json)
+How-to:
+1. ga naar [SQL-on-FHIR](https://fhirpath-lab.azurewebsites.net/sqlonfhir/)
+2. paste een van onderstaande ViewDefinition in de "VIEW DEF" links onder "SQL on FHIR v2 View Definition"
+3. paste een resultaat Bundle rechts onder "Test Resource Id"
+4. druk op de "&#9658; Play" button rechts boven en druk op "RESULTS" om de tabel te zien
+
+ViewDefinition voor ...:
+* [... Alerts](ViewDefinition-Flag.json)
+* [... Allergieën en Intoleranties](ViewDefinition-AllergyIntolerance.json)
+* [... Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
+* [... Correspondentie](ViewDefinition-DocumentReference.json)
+* [... Vaccinatie](ViewDefinition-Immunization.json)
+* [... MedicatieAfspraak](ViewDefinition-MedicationRequest.json)
+* [... MedicatieGebruik](ViewDefinition-MedicationStatement.json)
+* [... Verrichting](ViewDefinition-Procedure.json)
 
 ### FHIR Validator Web
 
