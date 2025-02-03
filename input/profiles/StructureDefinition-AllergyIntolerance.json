@@ -8,13 +8,14 @@
     "kind": "resource",
     "abstract": false,
     "type": "AllergyIntolerance",
-    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance",
+    "baseDefinition": "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance",
     "derivation": "constraint",
     "differential": {
         "element": [
             {
                 "id": "AllergyIntolerance.clinicalStatus",
                 "path": "AllergyIntolerance.clinicalStatus",
+                "comment": "Zie voor mappings [AllergieStatusCodelijst-to-allergy-status](https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.18/files/2316940)",
                 "mustSupport": true
             },
             {
@@ -64,7 +65,7 @@
                 "id": "AllergyIntolerance.reaction.severity",
                 "path": "AllergyIntolerance.reaction.severity",
                 "mustSupport": true
-            }            
+            }
         ]
     }
 }
