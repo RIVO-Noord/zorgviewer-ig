@@ -14,27 +14,39 @@
         },
         {
           "path": "performedPeriod.start",
-          "name": "Datum"
+          "name": "Datum",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "VerrichtingBeginDatum" } ]
         },
         {
-          "path": "iif(code.text.empty(),code.coding.display,code.text)",
-          "name": "Verrichting"
-        },
-        {
-          "path": "bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.text",
-          "name": "Lateraliteit"
+          "path": "iif(exists(code.text),code.text,code.coding.display)",
+          "name": "Verrichting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "VerrichtingType" } ]
         },
         {
           "path": "location.display",
-          "name": "Locatie"
+          "name": "Locatie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Locatie::Zorgaanbieder" } ]
         },
         {
           "path": "performer.actor.display.join('\n')",
-          "name": "Uitgevoerd door"
+          "name": "Uitgevoerd door",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Uitvoerder" } ]
         },
         {
-          "path": "code.coding.system+'#'+code.coding.code+' '+code.coding.display",
-          "name": "(Verrichtingcode)"
+          "path": "code.coding[0].system+'#'+code.coding[0].code+' '+code.coding[0].display",
+          "name": "+Verrichtingcode",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "VerrichtingType" } ]
+        },
+        {
+          "path": "bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.text",
+          "name": "+Lateraliteit",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "ProbleemLateraliteit" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Procedure')"

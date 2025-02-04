@@ -1,0 +1,50 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Condition",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "iif(exists(onsetPeriod),onsetPeriod.start,onsetDateTime)",
+          "name": "Datum",
+          "type": "Period,dateTime",
+          "tag": [ { "name": "Zib element", "value": "ProbleemBeginDatum" } ]
+        },
+        {
+          "path": "code.text",
+          "name": "Diagnose",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "ProbleemNaam" } ]
+        },
+        {
+          "name": "+Diagnose",
+          "path": "code.coding[0].system+'#'+code.coding[0].code+' '+iif(exists(code.coding[0].display),code.coding[0].display,'')",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "ProbleemNaam" } ]
+        },
+        {
+          "path": "note.text",
+          "name": "+Toelichting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
+        },
+        {
+          "path": "clinicalStatus",
+          "name": "(regelkleur)",
+          "description": "Actueel (active) = groene rijen, dikgedrukt\nNiet actueel (inactive) = grijze rijen",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "ProbleemStatus" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Condition')"
+    }
+  ]
+}
