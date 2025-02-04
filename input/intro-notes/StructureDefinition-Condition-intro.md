@@ -8,6 +8,10 @@
 
 Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap analyse probleem](https://amigo.nictiz.nl/uploads/e4a96295-3715-439b-804a-024ca1d7fadf/fit_gap_analyse_Probleeem.pdf)
 
+### View Definition
+
+* [ViewDefinition voor Problemen](ViewDefinition-Condition.json)
+
 ### User-Interface Mockup
 
 Een schets van het scherm met labels en sortering informatie

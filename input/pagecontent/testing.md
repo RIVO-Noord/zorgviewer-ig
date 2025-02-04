@@ -34,13 +34,14 @@ How-to:
 4. druk op de "&#9658; Play" button rechts boven en druk op "RESULTS" om de tabel te zien
 
 ViewDefinition voor ...:
+* [... Problemen](ViewDefinition-Condition.json)
 * [... Alerts](ViewDefinition-Flag.json)
 * [... Allergieën en Intoleranties](ViewDefinition-AllergyIntolerance.json)
 * [... Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
 * [... Correspondentie](ViewDefinition-DocumentReference.json)
 * [... Vaccinatie](ViewDefinition-Immunization.json)
-* [... MedicatieAfspraak](ViewDefinition-MedicationRequest.json)
-* [... MedicatieGebruik](ViewDefinition-MedicationStatement.json)
+* [... Medicatie Afspraak](ViewDefinition-MedicationRequest.json)
+* [... Medicatie Gebruik](ViewDefinition-MedicationStatement.json)
 * [... Verrichting](ViewDefinition-Procedure.json)
 
 ### FHIR Validator Web
