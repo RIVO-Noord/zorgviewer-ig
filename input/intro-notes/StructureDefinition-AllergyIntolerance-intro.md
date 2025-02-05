@@ -46,7 +46,7 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
     </tr>
     <tr>
       <td>Toelichting</td>
-      <td><samp>.note.extension('http://nictiz.nl/fhir/StructureDefinition/note')</samp></td>
+      <td><samp>.note.text</samp></td>
       <td><code>string</code></td>
       <td>Toelichting</td>
       <td></td>
@@ -73,7 +73,7 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
       <td>Hebt meerdere opties die tegelijk getoond kunnen worden</td>
     </tr>
     <tr>
-      <td>Klinische status</td>
+      <td>Status</td>
       <td><samp>.clinicalStatus.extension[system=" http://nictiz.nl/fhir/StructureDefinition/code-specification "].text</samp> of indien geen extensie aanwezig <samp>.clinicalStatus</samp></td>
       <td><code>string,code</code></td>
       <td>AllergieStatus</td>
