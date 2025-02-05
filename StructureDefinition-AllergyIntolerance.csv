@@ -303,7 +303,7 @@ Applications converting a logical reference to a literal reference may choose to
 "AllergyIntolerance.lastOccurrence","AllergyIntolerance.lastOccurrence","","LaatsteReactieDatumTijd
 ","",0,1,"","","","dateTime {[]} {[]}
 ","LastReactionDateTime","Entry of the last time a hypersensitive reaction took place.","This date may be replicated by one of the Onset of Reaction dates. Where a textual representation of the date of last occurrence is required e.g. 'In Childhood, '10 years ago' the Comment element should be used.","","","","","","","","",,,,,"",,,,"AllergyIntolerance.lastOccurrence",0,1,"","","NL-CM:8.2.8","NL-CM:8.2.8","NL-CM:8.2.8","outBoundRelationship[typeCode=SUBJ].target[classCode=OBS, moodCode=EVN, code <= CommonClinicalObservationType, value <= ObservationValue (Reaction Type)].effectiveTime"
-"AllergyIntolerance.note","AllergyIntolerance.note","","","",0,*,"","","","Annotation {[]} {[]}
+"AllergyIntolerance.note","AllergyIntolerance.note","","","",0,*,"Y","","","Annotation {[]} {[]}
 ","Additional text not captured in other fields","Additional narrative about the propensity for the Adverse Reaction, not captured in other fields.","For example: including reason for flagging a seriousness of 'High Risk'; and instructions related to future exposure or administration of the substance, such as administration within an Intensive Care Unit or under corticosteroid cover. The notes should be related to an allergy or intolerance as a condition in general and not related to any particular episode of it. For episode notes and descriptions, use AllergyIntolerance.event.description and  AllergyIntolerance.event.notes.","","","","","","","","",,,,,"",,,,"AllergyIntolerance.note",0,*,"","","subjectOf.observationEvent[code=""annotation""].value"
 "AllergyIntolerance.note.id","AllergyIntolerance.note.id","","","",0,1,"","","","string {[]} {[]}
 ","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
@@ -340,7 +340,7 @@ Applications converting a logical reference to a literal reference may choose to
 "AllergyIntolerance.note.time","AllergyIntolerance.note.time","","","",0,1,"","","Y","dateTime {[]} {[]}
 ","When the annotation was made","Indicates when this particular annotation was made.","","","","","","","","","",,,,,"",,,,"Annotation.time",0,1,"","","Act.effectiveTime","N/A"
 "AllergyIntolerance.note.text","AllergyIntolerance.note.text","","Toelichting
-","",1,1,"","","","string {[]} {[]}
+","",1,1,"Y","","","string {[]} {[]}
 ","Comment","Textual explanation of the hypersensitivity which cannot be entered in any of the other fields.","","","","","","","","","",,,,,"",,,,"Annotation.text",1,1,"","","NL-CM:8.2.9","NL-CM:8.2.9","NL-CM:8.2.9","Act.text","N/A"
 "AllergyIntolerance.reaction","AllergyIntolerance.reaction","","Reactie
 ","",0,*,"","","","BackboneElement {[]} {[]}

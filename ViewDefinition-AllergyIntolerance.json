@@ -13,31 +13,63 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "iif(exists(resource.onsetPeriod.start),resource.onsetPeriod.start,resource.onsetDateTime)",
-          "name": "Datum"
+          "path": "iif(exists(onsetPeriod.start),onsetPeriod.start,onsetDateTime)",
+          "name": "Datum",
+          "description": "",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "StartDateTime" } ]
         },
         {
-          "path": "resource.clinicalStatus+'|'+resource.clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
-          "name": "Klinische status"
+          "path": "iif(exists(code.text),code.text,code.coding.display)",
+          "name": "Stof",
+          "description": "",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "CausativeAgent" } ]
         },
         {
-          "path": "resource.category.join(',')",
-          "name": "Categorie"
+          "path": "note.text",
+          "name": "Toelichting",
+          "description": "....",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Comment" } ]
         },
         {
-          "path": "iif(exists(resource.code.text),resource.code.text,resource.code.coding.display)",
-          "name": "Stof"
+          "path": "category.join(',')",
+          "name": "Categorie",
+          "description": "Hebt meerdere opties die tegelijk getoond kunnen worden",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "resource.reaction.severity",
-          "name": "Ernst"
+          "path": "criticality+'|'+criticality.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
+          "name": "Ernst",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "Criticality" } ]
         },
         {
-          "path": "resource.reaction.manifestation.text",
-          "name": "Reacties"
+          "path": "reaction[0].manifestation[0].text",
+          "name": "Reacties",
+          "description": "",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Symptom" } ]
+        },
+        {
+          "path": "clinicalStatus+'|'+clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
+          "name": "Status",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "AllergyStatus" } ]
+        },
+        {
+          "path": "verificationStatus",
+          "name": "VStatus",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "AllergyStatus" } ]
         }
       ],
-      "forEach": "entry.where(resource.resourceType = 'AllergyIntolerance')"
+      "forEach": "entry.resource.where(resourceType = 'AllergyIntolerance')"
     }
   ]
 }
