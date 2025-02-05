@@ -42,10 +42,18 @@
         },
         {
           "path": "criticality+'|'+criticality.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
-          "name": "Ernst",
+          "name": "Ernst(1)",
           "description": "",
           "type": "code",
-          "tag": [ { "name": "Zib element", "value": "Criticality" } ]
+          "tag": [ 
+            { "name": "Zib element", "value": "Criticality" } ]
+        },
+        {
+          "path": "reaction[0].severity",
+          "name": "Ernst(2)",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "Severity" } ]
         },
         {
           "path": "reaction[0].manifestation[0].text",
@@ -63,7 +71,7 @@
         },
         {
           "path": "verificationStatus",
-          "name": "VStatus",
+          "name": "(VStatus)",
           "description": "",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "AllergyStatus" } ]
