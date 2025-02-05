@@ -41,8 +41,23 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "criticality+'|'+criticality.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
+          "path": "category.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
+          "name": "CategorieCS",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "criticality",
           "name": "Ernst(1)",
+          "description": "",
+          "type": "code",
+          "tag": [ 
+            { "name": "Zib element", "value": "Criticality" } ]
+        },
+        {
+          "path": "criticality.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
+          "name": "Ernst(1)CS",
           "description": "",
           "type": "code",
           "tag": [ 
@@ -63,8 +78,15 @@
           "tag": [ { "name": "Zib element", "value": "Symptom" } ]
         },
         {
-          "path": "clinicalStatus+'|'+clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
+          "path": "clinicalStatus",
           "name": "Status",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "AllergyStatus" } ]
+        },
+        {
+          "path": "clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
+          "name": "StatusCS",
           "description": "",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "AllergyStatus" } ]
