@@ -55,6 +55,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
   1. ``input/images/package-feed.xml`` (datum, versie, IG publisher versie; zodat nieuwe versie opgenomen wordt in de fhir package registries)
   1. ``fhir.hl7.nl/package-list.json`` (datum, versie, IG publisher versie en upload naar fhir.hl7.nl/zorgviewer; used for version comparison!)
   1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
+  1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
 1. ``> git commit -a; git push``
 1. Create tag "1.M.R-sprintX" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
   1. tags
