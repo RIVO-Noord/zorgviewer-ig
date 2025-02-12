@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -15,7 +16,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Observation. id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.18.3009316 (urn:ietf:rfc:3986), Category: <span title=\"Laboratory (49581000146104 - SNOMED CT)\">Laboratory</span>, <span title=\"Klinische chemie (275711006 - SNOMED CT)\">Klinische chemie</span>, Status: status-final</caption>\n                     <tbody>\n                        <tr>\n                           <th>Effective Time</th>\n                           <td>14:47:00, 13 March 2023</td>\n                        </tr>\n                        <tr>\n                           <th>Specimen</th>\n                           <td>Materiaal: Bloed</td>\n                        </tr>\n                        <tr>\n                           <th>Related</th>\n                           <td>Observation/a3d4d0c9-6ff0-414e-a50c-f5180105fef7</td>\n                        </tr>\n                        <tr>\n                           <th>code</th>\n                           <th>Value</th>\n                        </tr>\n                        <tr>\n                           <td/>\n                           <td/>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Observation. id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.18.3009316 (urn:ietf:rfc:3986), Category: <span title=\"Laboratory (49581000146104 - SNOMED CT)\">Laboratory</span>, <span title=\"Klinische chemie (275711006 - SNOMED CT)\">Klinische chemie</span>, Status: status-final</caption>\n                     <tbody>\n                        <tr>\n                           <th>Effective Time</th>\n                           <td>14:47:00, 13 March 2023</td>\n                        </tr>\n                        <tr>\n                           <th>Specimen</th>\n                           <td>Materiaal: Bloed</td>\n                        </tr>\n                        <tr>\n                           <th>Related</th>\n                           <td>Observation/a3d4d0c9-6ff0-414e-a50c-f5180105fef7</td>\n                        </tr>\n                        <tr>\n                           <th>code</th>\n                           <th>Value</th>\n                        </tr>\n                        <tr>\n                           <td/>\n                           <td/>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:contained ( [
      a fhir:ProcedureRequest ;
@@ -78,7 +79,10 @@
        fhir:display [ fhir:v "Klinische chemie" ]
      ] )
   ] ) ; # 
-  fhir:effective [ fhir:v "2023-03-13T14:47:00+01:00"^^xsd:dateTime] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2023-03-13T14:47:00+01:00"^^xsd:dateTime
+  ] ; # 
   fhir:specimen [
      fhir:link <http://fhir.hl7.nl/zorgviewer/Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635> ;
      fhir:reference [ fhir:v "Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635" ] ;

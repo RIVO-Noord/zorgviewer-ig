@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,7 +11,7 @@
   fhir:id [ fhir:v "epic-rolcode"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: ConceptMap epic-rolcode</b></p><a name=\"epic-rolcode\"> </a><a name=\"hcepic-rolcode\"> </a><a name=\"epic-rolcode-nl-NL\"> </a><p>Mapping van (niet gespecificeerd) naar (niet gespecificeerd)</p><br/><p><b>Groep 1 </b>Mapping van <code>urn:oid:1.2.840.114350.1.13.485.3.7.10.836982.1040|UMCG Epic Non Prod</code> to <a href=\"CodeSystem-SCT.html\">SNOMED CT</a></p><table class=\"grid\"><tr><td><b>Bron code</b></td><td><b>Relatie</b></td><td><b>Doel code</b></td></tr><tr><td>1 (Arts)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>309343006 (Medical doctor)</td></tr><tr><td>6 (Physician assistant)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>449161006 (Physician assistant)</td></tr><tr><td>9 (Verpleegkundige specialist)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>224571005 (Nurse practitioner)</td></tr></table><hr/><p><b>Groep 2 </b>Mapping van <code>urn:oid:1.2.840.114350.1.13.485.2.7.10.836982.1040|UMCG Epic Prod</code> to <a href=\"CodeSystem-SCT.html\">SNOMED CT</a></p><table class=\"grid\"><tr><td><b>Bron code</b></td><td><b>Relatie</b></td><td><b>Doel code</b></td></tr><tr><td>1 (Arts)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>309343006 (Medical doctor)</td></tr><tr><td>6 (Physician assistant)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>449161006 (Physician assistant)</td></tr><tr><td>9 (Verpleegkundige specialist)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>224571005 (Nurse practitioner)</td></tr></table><hr/><p><b>Groep 3 </b>Mapping van <code>urn:oid:1.2.840.114350.1.13.432.2.7.10.836982.1040|MCL Epic Prod</code> to <a href=\"CodeSystem-SCT.html\">SNOMED CT</a></p><table class=\"grid\"><tr><td><b>Bron code</b></td><td><b>Relatie</b></td><td><b>Doel code</b></td></tr><tr><td>1 (Arts)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>309343006 (Medical doctor)</td></tr><tr><td>6 (Physician assistant)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>449161006 (Physician assistant)</td></tr><tr><td>9 (Verpleegkundige specialist)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>224571005 (Nurse practitioner)</td></tr></table><hr/><p><b>Groep 4 </b>Mapping van <code>urn:oid:1.2.840.114350.1.13.432.3.7.10.836982.1040|MCL Epic Non Prod</code> to <a href=\"CodeSystem-SCT.html\">SNOMED CT</a></p><table class=\"grid\"><tr><td><b>Bron code</b></td><td><b>Relatie</b></td><td><b>Doel code</b></td></tr><tr><td>1 (Arts)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>309343006 (Medical doctor)</td></tr><tr><td>6 (Physician assistant)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>449161006 (Physician assistant)</td></tr><tr><td>9 (Verpleegkundige specialist)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>224571005 (Nurse practitioner)</td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: ConceptMap epic-rolcode</b></p><a name=\"epic-rolcode\"> </a><a name=\"hcepic-rolcode\"> </a><a name=\"epic-rolcode-nl-NL\"> </a><p>Mapping van (niet gespecificeerd) naar (niet gespecificeerd)</p><br/><p><b>Groep 1 </b>Mapping van <code>urn:oid:1.2.840.114350.1.13.485.3.7.10.836982.1040|UMCG Epic Non Prod</code> to <a href=\"CodeSystem-SCT.html\">SNOMED CT</a></p><table class=\"grid\"><tr><td><b>Bron code</b></td><td><b>Relatie</b></td><td><b>Doel code</b></td></tr><tr><td>1 (Arts)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>309343006 (Medical doctor)</td></tr><tr><td>6 (Physician assistant)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>449161006 (Physician assistant)</td></tr><tr><td>9 (Verpleegkundige specialist)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>224571005 (Nurse practitioner)</td></tr></table><hr/><p><b>Groep 2 </b>Mapping van <code>urn:oid:1.2.840.114350.1.13.485.2.7.10.836982.1040|UMCG Epic Prod</code> to <a href=\"CodeSystem-SCT.html\">SNOMED CT</a></p><table class=\"grid\"><tr><td><b>Bron code</b></td><td><b>Relatie</b></td><td><b>Doel code</b></td></tr><tr><td>1 (Arts)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>309343006 (Medical doctor)</td></tr><tr><td>6 (Physician assistant)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>449161006 (Physician assistant)</td></tr><tr><td>9 (Verpleegkundige specialist)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>224571005 (Nurse practitioner)</td></tr></table><hr/><p><b>Groep 3 </b>Mapping van <code>urn:oid:1.2.840.114350.1.13.432.2.7.10.836982.1040|MCL Epic Prod</code> to <a href=\"CodeSystem-SCT.html\">SNOMED CT</a></p><table class=\"grid\"><tr><td><b>Bron code</b></td><td><b>Relatie</b></td><td><b>Doel code</b></td></tr><tr><td>1 (Arts)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>309343006 (Medical doctor)</td></tr><tr><td>6 (Physician assistant)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>449161006 (Physician assistant)</td></tr><tr><td>9 (Verpleegkundige specialist)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>224571005 (Nurse practitioner)</td></tr></table><hr/><p><b>Groep 4 </b>Mapping van <code>urn:oid:1.2.840.114350.1.13.432.3.7.10.836982.1040|MCL Epic Non Prod</code> to <a href=\"CodeSystem-SCT.html\">SNOMED CT</a></p><table class=\"grid\"><tr><td><b>Bron code</b></td><td><b>Relatie</b></td><td><b>Doel code</b></td></tr><tr><td>1 (Arts)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>309343006 (Medical doctor)</td></tr><tr><td>6 (Physician assistant)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>449161006 (Physician assistant)</td></tr><tr><td>9 (Verpleegkundige specialist)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equal\" title=\"equal\">is equal to</a></td><td>224571005 (Nurse practitioner)</td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://fhir.hl7.nl/zorgviewer/ConceptMap/epic-rolcode"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.12.0"] ; # 
@@ -18,7 +19,7 @@
   fhir:title [ fhir:v "Epic Provider Type naar SNOMED-CT Mapping"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2025-02-05T14:12:35+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-02-12T15:28:44+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -50,7 +51,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equal"
+           ]
          ] ) ;
          fhir:code [ fhir:v "309343006" ] ;
          fhir:display [ fhir:v "Medical doctor" ] ;
@@ -62,7 +66,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equal"
+           ]
          ] ) ;
          fhir:code [ fhir:v "449161006" ] ;
          fhir:display [ fhir:v "Physician assistant" ] ;
@@ -74,7 +81,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equal"
+           ]
          ] ) ;
          fhir:code [ fhir:v "224571005" ] ;
          fhir:display [ fhir:v "Nurse practitioner" ] ;
@@ -91,7 +101,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equal"
+           ]
          ] ) ;
          fhir:code [ fhir:v "309343006" ] ;
          fhir:display [ fhir:v "Medical doctor" ] ;
@@ -103,7 +116,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equal"
+           ]
          ] ) ;
          fhir:code [ fhir:v "449161006" ] ;
          fhir:display [ fhir:v "Physician assistant" ] ;
@@ -115,7 +131,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equal"
+           ]
          ] ) ;
          fhir:code [ fhir:v "224571005" ] ;
          fhir:display [ fhir:v "Nurse practitioner" ] ;
@@ -132,7 +151,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equal"
+           ]
          ] ) ;
          fhir:code [ fhir:v "309343006" ] ;
          fhir:display [ fhir:v "Medical doctor" ] ;
@@ -144,7 +166,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equal"
+           ]
          ] ) ;
          fhir:code [ fhir:v "449161006" ] ;
          fhir:display [ fhir:v "Physician assistant" ] ;
@@ -156,7 +181,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equal"
+           ]
          ] ) ;
          fhir:code [ fhir:v "224571005" ] ;
          fhir:display [ fhir:v "Nurse practitioner" ] ;
@@ -173,7 +201,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equal"
+           ]
          ] ) ;
          fhir:code [ fhir:v "309343006" ] ;
          fhir:display [ fhir:v "Medical doctor" ] ;
@@ -185,7 +216,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equal"
+           ]
          ] ) ;
          fhir:code [ fhir:v "449161006" ] ;
          fhir:display [ fhir:v "Physician assistant" ] ;
@@ -197,7 +231,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equal" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equal"
+           ]
          ] ) ;
          fhir:code [ fhir:v "224571005" ] ;
          fhir:display [ fhir:v "Nurse practitioner" ] ;

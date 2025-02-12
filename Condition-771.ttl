@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -15,7 +16,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Condition. typeCode-SUBJ: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.26.771 (urn:ietf:rfc:3986), Category: <span title=\"Diagnose (282291009 - SNOMED CT)\">Diagnose</span>, Status: status-inactive / status-unknown</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Gevallen op kunstijsbaan</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>code</th>\n                           <td>\n                              <span title=\"fractuur van pols (31641000146105 - SNOMED CT)\">fractuur van pols</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Onset</th>\n                           <td>2001</td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Condition. typeCode-SUBJ: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.26.771 (urn:ietf:rfc:3986), Category: <span title=\"Diagnose (282291009 - SNOMED CT)\">Diagnose</span>, Status: status-inactive / status-unknown</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Gevallen op kunstijsbaan</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>code</th>\n                           <td>\n                              <span title=\"fractuur van pols (31641000146105 - SNOMED CT)\">fractuur van pols</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Onset</th>\n                           <td>2001</td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
@@ -91,7 +92,10 @@
      fhir:reference [ fhir:v "https://example.org/Patient/330073" ] ;
      fhir:display [ fhir:v "Xxx-Helleman, J (M)" ]
   ] ; # 
-  fhir:onset [ fhir:v "2001"^^xsd:gYear] ; # 
+  fhir:onset [
+     a fhir:dateTime ;
+     fhir:v "2001"^^xsd:gYear
+  ] ; # 
   fhir:note ( [
      fhir:text [ fhir:v "Gevallen op kunstijsbaan" ]
   ] ) . # 

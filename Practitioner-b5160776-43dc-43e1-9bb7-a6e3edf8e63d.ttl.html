@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11.64"}
-    h3,h4,h5,h6{--heading-prefix:"11.64"}</style>
+    <style type="text/css">h2{--heading-prefix:"11.43"}
+    h3,h4,h5,h6{--heading-prefix:"11.43"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -216,6 +216,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
@@ -229,7 +230,7 @@
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h3&gt;Practitioner resource:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Identification:&lt;/strong&gt; &amp;#x27; 2.16.840.1.113883.2.4.6.1, 03123456&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; &amp;#x27;Lisette (L.) van Cruijningen de Winter&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Phone number:&lt;/strong&gt; &amp;#x27;&amp;#x2B;3120&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Address&lt;/strong&gt; &amp;#x27;Tt.Melissaweg 1033SP Amsterdam (AMSTERDAM)&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h3&gt;Practitioner resource:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Identification:&lt;/strong&gt; &amp;#x27; 2.16.840.1.113883.2.4.6.1, 03123456&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; &amp;#x27;Lisette (L.) van Cruijningen de Winter&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Phone number:&lt;/strong&gt; &amp;#x27;&amp;#x2B;3120&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Address&lt;/strong&gt; &amp;#x27;Tt.Melissaweg 1033SP Amsterdam (AMSTERDAM)&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.identifier">fhir:identifier</a> ( [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://fhir.nl/fhir/NamingSystem/agb-z&quot;^^xsd:anyURI ] ;
@@ -238,27 +239,41 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h
   <a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.name">fhir:name</a> ( [
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/humanname-assembly-order&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;NL4&quot; ]     ] ) ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;NL4&quot;       ]     ] ) ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">fhir:family</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;van Cruijningen de Winter&quot; ;
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/humanname-own-prefix&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;van&quot; ]       ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;van&quot;         ]       ] [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/humanname-own-name&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Cruijningen&quot; ]       ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Cruijningen&quot;         ]       ] [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;de&quot; ]       ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;de&quot;         ]       ] [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/humanname-partner-name&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Winter&quot; ]       ] )     ] ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Winter&quot;         ]       ] )     ] ;
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">fhir:given</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Lisette&quot; ;
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;CL&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;CL&quot;         ]       ] )     ] [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;L.&quot; ;
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;IN&quot; ]       ] )     ] )
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;IN&quot;         ]       ] )     ] )
   ] ) ; # 
   <a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.telecom">fhir:telecom</a> ( [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;phone&quot; ] ;
@@ -280,7 +295,9 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Tt.Melissaweg&quot; ;
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Tt.Melissaweg&quot; ]       ] )     ] ) ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Tt.Melissaweg&quot;         ]       ] )     ] ) ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.city">fhir:city</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Amsterdam&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.district">fhir:district</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;AMSTERDAM&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.postalCode">fhir:postalCode</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;1033SP&quot; ]
@@ -311,7 +328,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 5, 2025 14:12+0000">2025-02-05</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 12, 2025 15:29+0000">2025-02-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

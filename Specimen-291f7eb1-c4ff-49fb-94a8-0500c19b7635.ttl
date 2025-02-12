@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -15,7 +16,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Specimen. id: 9877</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Monster bij LaboratoriumUitslag (LaboratoryTestResult) [bgz-patA-labresult2]</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>type</th>\n                           <td>\n                              <span title=\"Bloed (87612001 - SNOMED CT)\">Bloed</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Received</th>\n                           <td>08:30:00, 13 March 2023</td>\n                        </tr>\n                        <tr>\n                           <th>Collection</th>\n                           <td>Quantity5.23 08:00:00, 13 March 2023<div>Method: <span title=\"venapunctie voor bloedtest (28520004 - SNOMED CT)\">venapunctie voor bloedtest</span>\n                              </div>\n                              <div>\n                                 <span title=\"gehele regio van elleboog (76248009 - SNOMED CT)\">gehele regio van elleboog</span> \n                                 <span title=\"rechts (24028007 - SNOMED CT)\">rechts</span>\n                              </div>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Container</th>\n                           <td>\n                              <div>type: <span title=\"container voor bloed- of weefselopslag of -kweek (700957004 - SNOMED CT)\">container voor bloed- of weefselopslag of -kweek</span>\n                              </div>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Specimen. id: 9877</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Monster bij LaboratoriumUitslag (LaboratoryTestResult) [bgz-patA-labresult2]</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>type</th>\n                           <td>\n                              <span title=\"Bloed (87612001 - SNOMED CT)\">Bloed</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Received</th>\n                           <td>08:30:00, 13 March 2023</td>\n                        </tr>\n                        <tr>\n                           <th>Collection</th>\n                           <td>Quantity5.23 08:00:00, 13 March 2023<div>Method: <span title=\"venapunctie voor bloedtest (28520004 - SNOMED CT)\">venapunctie voor bloedtest</span>\n                              </div>\n                              <div>\n                                 <span title=\"gehele regio van elleboog (76248009 - SNOMED CT)\">gehele regio van elleboog</span> \n                                 <span title=\"rechts (24028007 - SNOMED CT)\">rechts</span>\n                              </div>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Container</th>\n                           <td>\n                              <div>type: <span title=\"container voor bloed- of weefselopslag of -kweek (700957004 - SNOMED CT)\">container voor bloed- of weefselopslag of -kweek</span>\n                              </div>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:value [ fhir:v "9877" ]
@@ -30,7 +31,10 @@
   ] ; # 
   fhir:receivedTime [ fhir:v "2023-03-13T08:30:00+01:00"^^xsd:dateTime] ; # 
   fhir:collection [
-     fhir:collected [ fhir:v "2023-03-13T08:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:collected [
+       a fhir:dateTime ;
+       fhir:v "2023-03-13T08:00:00+01:00"^^xsd:dateTime
+     ] ;
      fhir:quantity [
        fhir:value [ fhir:v "5.23"^^xsd:decimal ] ;
        fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ]

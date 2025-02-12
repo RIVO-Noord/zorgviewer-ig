@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11.85"}
-    h3,h4,h5,h6{--heading-prefix:"11.85"}</style>
+    <style type="text/css">h2{--heading-prefix:"11.64"}
+    h3,h4,h5,h6{--heading-prefix:"11.64"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -216,6 +216,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix sct: &lt;http://snomed.info/id/&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
@@ -231,7 +232,7 @@
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/specimen.html#Specimen.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;extensions&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                  &lt;table&gt;\n                     &lt;caption&gt;Specimen. id: 9877&lt;/caption&gt;\n                     &lt;tfoot&gt;\n                        &lt;tr&gt;\n                           &lt;td colspan=\&quot;2\&quot;&gt;Monster bij LaboratoriumUitslag (LaboratoryTestResult) [bgz-patA-labresult2]&lt;/td&gt;\n                        &lt;/tr&gt;\n                     &lt;/tfoot&gt;\n                     &lt;tbody&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;type&lt;/th&gt;\n                           &lt;td&gt;\n                              &lt;span title=\&quot;Bloed (87612001 - SNOMED CT)\&quot;&gt;Bloed&lt;/span&gt;\n                           &lt;/td&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;Received&lt;/th&gt;\n                           &lt;td&gt;08:30:00, 13 March 2023&lt;/td&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;Collection&lt;/th&gt;\n                           &lt;td&gt;Quantity5.23 08:00:00, 13 March 2023&lt;div&gt;Method: &lt;span title=\&quot;venapunctie voor bloedtest (28520004 - SNOMED CT)\&quot;&gt;venapunctie voor bloedtest&lt;/span&gt;\n                              &lt;/div&gt;\n                              &lt;div&gt;\n                                 &lt;span title=\&quot;gehele regio van elleboog (76248009 - SNOMED CT)\&quot;&gt;gehele regio van elleboog&lt;/span&gt; \n                                 &lt;span title=\&quot;rechts (24028007 - SNOMED CT)\&quot;&gt;rechts&lt;/span&gt;\n                              &lt;/div&gt;\n                           &lt;/td&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;Container&lt;/th&gt;\n                           &lt;td&gt;\n                              &lt;div&gt;type: &lt;span title=\&quot;container voor bloed- of weefselopslag of -kweek (700957004 - SNOMED CT)\&quot;&gt;container voor bloed- of weefselopslag of -kweek&lt;/span&gt;\n                              &lt;/div&gt;\n                           &lt;/td&gt;\n                        &lt;/tr&gt;\n                     &lt;/tbody&gt;\n                  &lt;/table&gt;\n               &lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                  &lt;table&gt;\n                     &lt;caption&gt;Specimen. id: 9877&lt;/caption&gt;\n                     &lt;tfoot&gt;\n                        &lt;tr&gt;\n                           &lt;td colspan=\&quot;2\&quot;&gt;Monster bij LaboratoriumUitslag (LaboratoryTestResult) [bgz-patA-labresult2]&lt;/td&gt;\n                        &lt;/tr&gt;\n                     &lt;/tfoot&gt;\n                     &lt;tbody&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;type&lt;/th&gt;\n                           &lt;td&gt;\n                              &lt;span title=\&quot;Bloed (87612001 - SNOMED CT)\&quot;&gt;Bloed&lt;/span&gt;\n                           &lt;/td&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;Received&lt;/th&gt;\n                           &lt;td&gt;08:30:00, 13 March 2023&lt;/td&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;Collection&lt;/th&gt;\n                           &lt;td&gt;Quantity5.23 08:00:00, 13 March 2023&lt;div&gt;Method: &lt;span title=\&quot;venapunctie voor bloedtest (28520004 - SNOMED CT)\&quot;&gt;venapunctie voor bloedtest&lt;/span&gt;\n                              &lt;/div&gt;\n                              &lt;div&gt;\n                                 &lt;span title=\&quot;gehele regio van elleboog (76248009 - SNOMED CT)\&quot;&gt;gehele regio van elleboog&lt;/span&gt; \n                                 &lt;span title=\&quot;rechts (24028007 - SNOMED CT)\&quot;&gt;rechts&lt;/span&gt;\n                              &lt;/div&gt;\n                           &lt;/td&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;Container&lt;/th&gt;\n                           &lt;td&gt;\n                              &lt;div&gt;type: &lt;span title=\&quot;container voor bloed- of weefselopslag of -kweek (700957004 - SNOMED CT)\&quot;&gt;container voor bloed- of weefselopslag of -kweek&lt;/span&gt;\n                              &lt;/div&gt;\n                           &lt;/td&gt;\n                        &lt;/tr&gt;\n                     &lt;/tbody&gt;\n                  &lt;/table&gt;\n               &lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/specimen.html#Specimen.identifier">fhir:identifier</a> ( [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;9877&quot; ]
@@ -245,7 +246,9 @@ a sct:87612001 ;
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/specimen.html#Specimen.receivedTime">fhir:receivedTime</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2023-03-13T08:30:00+01:00&quot;^^xsd:dateTime] ; # 
   <a href="http://hl7.org/fhir/STU3/specimen.html#Specimen.collection">fhir:collection</a> [
-<a href="http://hl7.org/fhir/STU3/specimen.html#Specimen.collection.collected[x]">fhir:collected</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2023-03-13T08:00:00+01:00&quot;^^xsd:dateTime ] ;
+<a href="http://hl7.org/fhir/STU3/specimen.html#Specimen.collection.collected[x]">fhir:collected</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">a</a> fhir:dateTime ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2023-03-13T08:00:00+01:00&quot;^^xsd:dateTime     ] ;
 <a href="http://hl7.org/fhir/STU3/specimen.html#Specimen.collection.quantity">fhir:quantity</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#SimpleQuantity#Quantity.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">fhir:v</a> &quot;5.23&quot;^^xsd:decimal ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#SimpleQuantity#Quantity.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://unitsofmeasure.org&quot;^^xsd:anyURI ]     ] ;
@@ -309,7 +312,7 @@ a sct:700957004 ;
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 5, 2025 14:12+0000">2025-02-05</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 12, 2025 15:29+0000">2025-02-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

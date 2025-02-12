@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -13,7 +14,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: Specimen exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3</b></p><a name=\"exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3\"> </a><a name=\"hcexZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3\"> </a><a name=\"exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3-nl-NL\"> </a><p><b>identifier</b>: <code>urn:oid:1.2.840.114350.1.13.485.3.7.3.798268.320</code>/92069404, <code>urn:oid:1.2.840.114350.1.13.485.3.7.3.798268.850</code>/21260001171, <code>urn:oid:1.2.840.114350.1.13.485.3.7.3.798268.800</code>/961212600011</p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eSGar8w78ryJi3BCYMGOK5w3\">Fictief, J.</a></p><p><b>receivedTime</b>: 2021-07-01 08:48:14+0000</p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2021-07-01 08:46:00+0000</td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: Specimen exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3</b></p><a name=\"exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3\"> </a><a name=\"hcexZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3\"> </a><a name=\"exZSk-b3OlcTzGCgPiLC7vWfuWK61KNrcmTO8gYKthmA3-nl-NL\"> </a><p><b>identifier</b>: <code>urn:oid:1.2.840.114350.1.13.485.3.7.3.798268.320</code>/92069404, <code>urn:oid:1.2.840.114350.1.13.485.3.7.3.798268.850</code>/21260001171, <code>urn:oid:1.2.840.114350.1.13.485.3.7.3.798268.800</code>/961212600011</p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eSGar8w78ryJi3BCYMGOK5w3\">Fictief, J.</a></p><p><b>receivedTime</b>: 2021-07-01 08:48:14+0000</p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2021-07-01 08:46:00+0000</td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "urn:oid:1.2.840.114350.1.13.485.3.7.3.798268.320"^^xsd:anyURI ] ;
@@ -38,7 +39,10 @@
   ] ; # 
   fhir:receivedTime [ fhir:v "2021-07-01T08:48:14Z"^^xsd:dateTime] ; # 
   fhir:collection [
-     fhir:collected [ fhir:v "2021-07-01T08:46:00Z"^^xsd:dateTime ]
+     fhir:collected [
+       a fhir:dateTime ;
+       fhir:v "2021-07-01T08:46:00Z"^^xsd:dateTime
+     ]
   ] . # 
 
 # -------------------------------------------------------------------------------------

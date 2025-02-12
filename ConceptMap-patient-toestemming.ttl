@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,7 +11,7 @@
   fhir:id [ fhir:v "patient-toestemming"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: ConceptMap patient-toestemming</b></p><a name=\"patient-toestemming\"> </a><a name=\"hcpatient-toestemming\"> </a><a name=\"patient-toestemming-nl-NL\"> </a><p>Mapping van HL7v2 naar <a href=\"StructureDefinition-ToestemmingConsent.html\">ToestemmingConsent</a></p><br/><p><b>Groep 1 </b>Mapping van <code>ongespecificeerd codesysteem</code> to <code>ongespecificeerd codesysteem</code></p><table class=\"grid\"><tr><td><b>Bron code</b></td><td><b>Relatie</b></td><td><b>Doel code</b></td></tr><tr><td>PID-2 (Patient BSN (NLMINBIZA^NNNLD))</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>patient.identifier (system=BSN)</td></tr><tr><td>CON-2 (Doss. delen?)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>category ('Doss. delen?')</td></tr><tr><td>CON-11 (Status)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>status ('AKKOORD' of 'TIJDELIJK' &gt; active, 'GEWEIGERD' &gt; rejected))</td></tr><tr><td>CON-13 (Startdatum)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>period.start</td></tr><tr><td>CON-15 (Einddatum)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>period.end</td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: ConceptMap patient-toestemming</b></p><a name=\"patient-toestemming\"> </a><a name=\"hcpatient-toestemming\"> </a><a name=\"patient-toestemming-nl-NL\"> </a><p>Mapping van HL7v2 naar <a href=\"StructureDefinition-ToestemmingConsent.html\">ToestemmingConsent</a></p><br/><p><b>Groep 1 </b>Mapping van <code>ongespecificeerd codesysteem</code> to <code>ongespecificeerd codesysteem</code></p><table class=\"grid\"><tr><td><b>Bron code</b></td><td><b>Relatie</b></td><td><b>Doel code</b></td></tr><tr><td>PID-2 (Patient BSN (NLMINBIZA^NNNLD))</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>patient.identifier (system=BSN)</td></tr><tr><td>CON-2 (Doss. delen?)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>category ('Doss. delen?')</td></tr><tr><td>CON-11 (Status)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>status ('AKKOORD' of 'TIJDELIJK' &gt; active, 'GEWEIGERD' &gt; rejected))</td></tr><tr><td>CON-13 (Startdatum)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>period.start</td></tr><tr><td>CON-15 (Einddatum)</td><td><a href=\"http://hl7.org/fhir/STU3/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>period.end</td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://fhir.hl7.nl/zorgviewer/ConceptMap/patient-toestemming"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.12.0"] ; # 
@@ -18,7 +19,7 @@
   fhir:title [ fhir:v "Patient Toestemming Mapping"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2025-02-05T14:12:35+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-02-12T15:28:44+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -40,8 +41,14 @@
        fhir:code [ fhir:v "NL" ]
      ] )
   ] ) ; # 
-  fhir:source [ fhir:v "HL7v2"^^xsd:anyURI] ; # 
-  fhir:target [ fhir:v "http://fhir.hl7.nl/zorgviewer/StructureDefinition/ToestemmingConsent"^^xsd:anyURI] ; # 
+  fhir:source [
+     a fhir:uri ;
+     fhir:v "HL7v2"^^xsd:anyURI
+  ] ; # 
+  fhir:target [
+     a fhir:uri ;
+     fhir:v "http://fhir.hl7.nl/zorgviewer/StructureDefinition/ToestemmingConsent"^^xsd:anyURI
+  ] ; # 
   fhir:group ( [
      fhir:element ( [
        fhir:code [ fhir:v "PID-2" ] ;
@@ -49,7 +56,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equivalent" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equivalent"
+           ]
          ] ) ;
          fhir:code [ fhir:v "patient.identifier" ] ;
          fhir:display [ fhir:v "system=BSN" ] ;
@@ -61,7 +71,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equivalent" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equivalent"
+           ]
          ] ) ;
          fhir:code [ fhir:v "category" ] ;
          fhir:display [ fhir:v "'Doss. delen?'" ] ;
@@ -73,7 +86,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equivalent" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equivalent"
+           ]
          ] ) ;
          fhir:code [ fhir:v "status" ] ;
          fhir:display [ fhir:v "'AKKOORD' of 'TIJDELIJK' > active, 'GEWEIGERD' > rejected)" ] ;
@@ -85,7 +101,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equivalent" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equivalent"
+           ]
          ] ) ;
          fhir:code [ fhir:v "period.start" ] ;
          fhir:equivalence [ fhir:v "equivalent" ]
@@ -96,7 +115,10 @@
        fhir:_target ( [
          fhir:modifierExtension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "equivalent" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "equivalent"
+           ]
          ] ) ;
          fhir:code [ fhir:v "period.end" ] ;
          fhir:equivalence [ fhir:v "equivalent" ]

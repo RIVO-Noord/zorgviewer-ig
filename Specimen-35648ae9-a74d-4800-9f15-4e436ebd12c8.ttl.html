@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11.87"}
-    h3,h4,h5,h6{--heading-prefix:"11.87"}</style>
+    <style type="text/css">h2{--heading-prefix:"11.66"}
+    h3,h4,h5,h6{--heading-prefix:"11.66"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -216,6 +216,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
@@ -229,7 +230,7 @@
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/specimen.html#Specimen.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h3&gt;RelatedPerson resource:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt; &amp;#x27;Johan XXX_Helleman_Afblijven&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Identifier&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;D7AD2306-32CE-4AC0-814D-DC7DA9EA2104&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Type&lt;/strong&gt; &amp;#x27;Other&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Collection collected:&lt;/strong&gt; &amp;#x27;30-9-2022 13:48&amp;#x2B;0200&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h3&gt;RelatedPerson resource:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt; &amp;#x27;Johan XXX_Helleman_Afblijven&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Identifier&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;D7AD2306-32CE-4AC0-814D-DC7DA9EA2104&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Type&lt;/strong&gt; &amp;#x27;Other&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Collection collected:&lt;/strong&gt; &amp;#x27;30-9-2022 13:48&amp;#x2B;0200&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/specimen.html#Specimen.identifier">fhir:identifier</a> ( [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;D7AD2306-32CE-4AC0-814D-DC7DA9EA2104&quot; ]
@@ -246,7 +247,9 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h
 <a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Johan XXX_Helleman_Afblijven&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/specimen.html#Specimen.collection">fhir:collection</a> [
-<a href="http://hl7.org/fhir/STU3/specimen.html#Specimen.collection.collected[x]">fhir:collected</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2022-09-30T13:48:00+02:00&quot;^^xsd:dateTime ]
+<a href="http://hl7.org/fhir/STU3/specimen.html#Specimen.collection.collected[x]">fhir:collected</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">a</a> fhir:dateTime ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2022-09-30T13:48:00+02:00&quot;^^xsd:dateTime     ]
   ] . # 
 
 </code></pre>
@@ -274,7 +277,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 5, 2025 14:12+0000">2025-02-05</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 12, 2025 15:29+0000">2025-02-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

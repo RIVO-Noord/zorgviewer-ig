@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -14,7 +15,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Condition resource:</h3><ul><li><p><strong>Subject:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Clinical status:</strong> &#x27;Active&#x27;</p></li><li><p><strong>Verification status:</strong> &#x27;Confirmed&#x27;</p></li><li><p><strong>Category:</strong> &#x27;Diagnosis&#x27;</p></li><li><p><strong>Code:</strong> &#x27;Other&#x27;</p></li><li><p><strong>Onset date/time:</strong> &#x27;1-1-2001&#x27;</p></li><li><p><strong>Body site:</strong> &#x27;Other&#x27;</p></li><li><p><strong>Laterality:</strong> &#x27;Right&#x27;</p></li><li><p><strong>Asserter:</strong> &#x27;Practitioner author with last name &#x27;van Cruijningen de Winter&#x27;.&#x27;</p></li><li><p><strong>Note:</strong> &#x27;Gevallen op kunstijsbaan.&#x27;</p></li></ul></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Condition resource:</h3><ul><li><p><strong>Subject:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Clinical status:</strong> &#x27;Active&#x27;</p></li><li><p><strong>Verification status:</strong> &#x27;Confirmed&#x27;</p></li><li><p><strong>Category:</strong> &#x27;Diagnosis&#x27;</p></li><li><p><strong>Code:</strong> &#x27;Other&#x27;</p></li><li><p><strong>Onset date/time:</strong> &#x27;1-1-2001&#x27;</p></li><li><p><strong>Body site:</strong> &#x27;Other&#x27;</p></li><li><p><strong>Laterality:</strong> &#x27;Right&#x27;</p></li><li><p><strong>Asserter:</strong> &#x27;Practitioner author with last name &#x27;van Cruijningen de Winter&#x27;.&#x27;</p></li><li><p><strong>Note:</strong> &#x27;Gevallen op kunstijsbaan.&#x27;</p></li></ul></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:clinicalStatus [
      fhir:v "active" ;
@@ -85,7 +86,10 @@
      fhir:reference [ fhir:v "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1" ] ;
      fhir:display [ fhir:v "Patient name: Johan XXX_Helleman_Afblijven" ]
   ] ; # 
-  fhir:onset [ fhir:v "2001-01-01"^^xsd:date] ; # 
+  fhir:onset [
+     a fhir:dateTime ;
+     fhir:v "2001-01-01"^^xsd:date
+  ] ; # 
   fhir:assertedDate [ fhir:v "2001-01-01"^^xsd:date] ; # 
   fhir:asserter [
      fhir:link <http://example.org/Practitioner/ecb6593e-75fe-4b02-8a4f-25302a6f9693> ;

@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11.60"}
-    h3,h4,h5,h6{--heading-prefix:"11.60"}</style>
+    <style type="text/css">h2{--heading-prefix:"11.39"}
+    h3,h4,h5,h6{--heading-prefix:"11.39"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -216,6 +216,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix sct: &lt;http://snomed.info/id/&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
@@ -230,11 +231,13 @@
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/consent.html#Consent.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;extensions&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Gegenereerde narrative: Consent 2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449-nl-NL\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;Comment&lt;/b&gt;: Niet-reanimerenpenning&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:2.16.840.1.113883.2.4.3.124.7.42348.3.2&lt;/code&gt;/1230000026449&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Active&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 11341000146107}\&quot;&gt;Living will and advance directive record&lt;/span&gt;, &lt;span title=\&quot;Codes:{http://hl7.org/fhir/v3/NullFlavor OTH}\&quot;&gt;Patiëntinformatie - Wilsbeschikkingen&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=http://example.org/Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1\&quot;&gt;Johan XXX_Helleman_Afblijven&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dateTime&lt;/b&gt;: 2018-04-09&lt;/p&gt;&lt;p&gt;&lt;b&gt;source&lt;/b&gt;: application/pdf: XXX&lt;/p&gt;&lt;p&gt;&lt;b&gt;policyRule&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=http://wetten.overheid.nl/\&quot;&gt;http://wetten.overheid.nl/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Gegenereerde narrative: Consent 2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;2.16.840.1.113883.2.4.3.124.7.42348.3.21230000026449-nl-NL\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;Comment&lt;/b&gt;: Niet-reanimerenpenning&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:2.16.840.1.113883.2.4.3.124.7.42348.3.2&lt;/code&gt;/1230000026449&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Active&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 11341000146107}\&quot;&gt;Living will and advance directive record&lt;/span&gt;, &lt;span title=\&quot;Codes:{http://hl7.org/fhir/v3/NullFlavor OTH}\&quot;&gt;Patiëntinformatie - Wilsbeschikkingen&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=http://example.org/Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1\&quot;&gt;Johan XXX_Helleman_Afblijven&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dateTime&lt;/b&gt;: 2018-04-09&lt;/p&gt;&lt;p&gt;&lt;b&gt;source&lt;/b&gt;: application/pdf: XXX&lt;/p&gt;&lt;p&gt;&lt;b&gt;policyRule&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;amp;canonical=http://wetten.overheid.nl/\&quot;&gt;http://wetten.overheid.nl/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/consent.html#Consent.extension">fhir:extension</a> ( [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://nictiz.nl/fhir/StructureDefinition/Comment&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Niet-reanimerenpenning&quot; ]
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Niet-reanimerenpenning&quot;     ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/STU3/consent.html#Consent.identifier">fhir:identifier</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;urn:oid:2.16.840.1.113883.2.4.3.124.7.42348.3.2&quot;^^xsd:anyURI ] ;
@@ -293,7 +296,7 @@ a sct:11341000146107 ;
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 5, 2025 14:12+0000">2025-02-05</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 12, 2025 15:29+0000">2025-02-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

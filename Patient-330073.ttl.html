@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11.55"}
-    h3,h4,h5,h6{--heading-prefix:"11.55"}</style>
+    <style type="text/css">h2{--heading-prefix:"11.34"}
+    h3,h4,h5,h6{--heading-prefix:"11.34"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -216,6 +216,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
@@ -230,7 +231,7 @@
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/patient.html#Patient.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;extensions&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                  &lt;div&gt;id urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.25.330073 (urn:ietf:rfc:3986), &lt;span title=\&quot;Name assembly order: HumanNameAssemblyOrder-NL1\&quot;&gt;Johan J Johan XXX-HELLEMAN&lt;/span&gt; (Johan), 2.16.840.1.113883.5.1-M, 25 July 1964, notPartOfMultipleBirth, &lt;span title=\&quot;Gehuwd (M - v3/MaritalStatus)\&quot;&gt;Gehuwd&lt;/span&gt;\n                  &lt;/div&gt;\n                  &lt;div&gt;\n                     &lt;a href=\&quot;tel:06-12345678\&quot;&gt;06-12345678&lt;/a&gt; (addressUse_MC addressUse_H), &lt;a href=\&quot;mailto:XXX_Helleman@hotmail.com\&quot;&gt;XXX_Helleman@hotmail.com&lt;/a&gt; (Email addressUse_H)&lt;/div&gt;\n                  &lt;div&gt;Knolweg 1000, 9999XA STITSWERD, NL (TMP)&lt;br/&gt;Knolweg 1000 naast (test add), 9999XA STITSWERD, NL (official addressUse_HP addressUse_PST / addressUse_PHYS)&lt;br/&gt;\n                  &lt;/div&gt;\n                  &lt;div&gt;\n                     &lt;span title=\&quot;Echtgenote (WIFE - v3/RoleCode)\&quot;&gt;Echtgenote&lt;/span&gt;, &lt;span title=\&quot;Eerste relatie/contactpersoon (1 - 2.16.840.1.113883.2.4.3.11.22.472)\&quot;&gt;Eerste relatie/contactpersoon&lt;/span&gt; \n                     &lt;span title=\&quot;Name assembly order: HumanNameAssemblyOrder-NL4\&quot;&gt;Jannie J.P.M. van Putten-XXX-Helleman&lt;/span&gt;\n                     &lt;div&gt;\n                        &lt;a href=\&quot;tel:06-12345678\&quot;&gt;06-12345678&lt;/a&gt; (addressUse_MC addressUse_H), &lt;a href=\&quot;mailto:XXX_Helleman@hotmail.com\&quot;&gt;XXX_Helleman@hotmail.com&lt;/a&gt; (Email addressUse_H), Knolweg 1000, 9999XA STITSWERD, NL (addressUse_PHYS)&lt;/div&gt;\n                  &lt;/div&gt;\n                  &lt;div&gt;General Practitioner: Vaste Huisarts 1&lt;div&gt;PractitionerRole: Huisartsen&lt;/div&gt;\n                  &lt;/div&gt;\n               &lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                  &lt;div&gt;id urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.25.330073 (urn:ietf:rfc:3986), &lt;span title=\&quot;Name assembly order: HumanNameAssemblyOrder-NL1\&quot;&gt;Johan J Johan XXX-HELLEMAN&lt;/span&gt; (Johan), 2.16.840.1.113883.5.1-M, 25 July 1964, notPartOfMultipleBirth, &lt;span title=\&quot;Gehuwd (M - v3/MaritalStatus)\&quot;&gt;Gehuwd&lt;/span&gt;\n                  &lt;/div&gt;\n                  &lt;div&gt;\n                     &lt;a href=\&quot;tel:06-12345678\&quot;&gt;06-12345678&lt;/a&gt; (addressUse_MC addressUse_H), &lt;a href=\&quot;mailto:XXX_Helleman@hotmail.com\&quot;&gt;XXX_Helleman@hotmail.com&lt;/a&gt; (Email addressUse_H)&lt;/div&gt;\n                  &lt;div&gt;Knolweg 1000, 9999XA STITSWERD, NL (TMP)&lt;br/&gt;Knolweg 1000 naast (test add), 9999XA STITSWERD, NL (official addressUse_HP addressUse_PST / addressUse_PHYS)&lt;br/&gt;\n                  &lt;/div&gt;\n                  &lt;div&gt;\n                     &lt;span title=\&quot;Echtgenote (WIFE - v3/RoleCode)\&quot;&gt;Echtgenote&lt;/span&gt;, &lt;span title=\&quot;Eerste relatie/contactpersoon (1 - 2.16.840.1.113883.2.4.3.11.22.472)\&quot;&gt;Eerste relatie/contactpersoon&lt;/span&gt; \n                     &lt;span title=\&quot;Name assembly order: HumanNameAssemblyOrder-NL4\&quot;&gt;Jannie J.P.M. van Putten-XXX-Helleman&lt;/span&gt;\n                     &lt;div&gt;\n                        &lt;a href=\&quot;tel:06-12345678\&quot;&gt;06-12345678&lt;/a&gt; (addressUse_MC addressUse_H), &lt;a href=\&quot;mailto:XXX_Helleman@hotmail.com\&quot;&gt;XXX_Helleman@hotmail.com&lt;/a&gt; (Email addressUse_H), Knolweg 1000, 9999XA STITSWERD, NL (addressUse_PHYS)&lt;/div&gt;\n                  &lt;/div&gt;\n                  &lt;div&gt;General Practitioner: Vaste Huisarts 1&lt;div&gt;PractitionerRole: Huisartsen&lt;/div&gt;\n                  &lt;/div&gt;\n               &lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">fhir:identifier</a> ( [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;urn:ietf:rfc:3986&quot;^^xsd:anyURI ] ;
@@ -240,26 +241,36 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n   
   <a href="http://hl7.org/fhir/STU3/patient.html#Patient.name">fhir:name</a> ( [
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/humanname-assembly-order&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;NL1&quot; ]     ] ) ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;NL1&quot;       ]     ] ) ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Johan J Johan XXX-HELLEMAN&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">fhir:family</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;XXX-HELLEMAN&quot; ;
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/humanname-own-name&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;XXX-HELLEMAN&quot; ]       ] )     ] ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;XXX-HELLEMAN&quot;         ]       ] )     ] ;
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">fhir:given</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Johan&quot; ;
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;BR&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;BR&quot;         ]       ] )     ] [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;J&quot; ;
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;IN&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;IN&quot;         ]       ] )     ] [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Johan&quot; ;
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;CL&quot; ]       ] )     ] )
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;CL&quot;         ]       ] )     ] )
   ] ) ; # 
   <a href="http://hl7.org/fhir/STU3/patient.html#Patient.telecom">fhir:telecom</a> ( [
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.extension">fhir:extension</a> [
@@ -290,7 +301,10 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n   
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Man&quot; ]         ] )       ]     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/patient.html#Patient.birthDate">fhir:birthDate</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#date">fhir:v</a> &quot;1964-07-25&quot;^^xsd:date] ; # 
-  <a href="http://hl7.org/fhir/STU3/patient.html#Patient.deceased[x]">fhir:deceased</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:v</a> &quot;false&quot;^^xsd:boolean] ; # 
+  <a href="http://hl7.org/fhir/STU3/patient.html#Patient.deceased[x]">fhir:deceased</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">a</a> fhir:boolean ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:v</a> &quot;false&quot;^^xsd:boolean
+  ] ; # 
   <a href="http://hl7.org/fhir/STU3/patient.html#Patient.address">fhir:address</a> ( [
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType&quot;^^xsd:anyURI ] ;
@@ -305,9 +319,13 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n   
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Knolweg 1000&quot; ;
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Knolweg&quot; ]       ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Knolweg&quot;         ]       ] [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;1000&quot; ]       ] )     ] ) ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;1000&quot;         ]       ] )     ] ) ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.city">fhir:city</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;STITSWERD&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.postalCode">fhir:postalCode</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;9999XA&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.country">fhir:country</a> [
@@ -323,7 +341,9 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n   
   ] [
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://fhir.nl/fhir/StructureDefinition/nl-core-address-official&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:v</a> &quot;true&quot;^^xsd:boolean ]     ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">a</a> fhir:boolean ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:v</a> &quot;true&quot;^^xsd:boolean       ]     ] [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
@@ -337,13 +357,21 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n   
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Knolweg 1000 naast (test add)&quot; ;
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Knolweg&quot; ]       ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Knolweg&quot;         ]       ] [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;1000&quot; ]       ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;1000&quot;         ]       ] [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot; naast&quot; ]       ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot; naast&quot;         ]       ] [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;test add&quot; ]       ] )     ] ) ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;test add&quot;         ]       ] )     ] ) ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.city">fhir:city</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;STITSWERD&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.postalCode">fhir:postalCode</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;9999XA&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.country">fhir:country</a> [
@@ -363,7 +391,10 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n   
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;M&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Gehuwd&quot; ]     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/STU3/patient.html#Patient.multipleBirth[x]">fhir:multipleBirth</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:v</a> &quot;false&quot;^^xsd:boolean] ; # 
+  <a href="http://hl7.org/fhir/STU3/patient.html#Patient.multipleBirth[x]">fhir:multipleBirth</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">a</a> fhir:boolean ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:v</a> &quot;false&quot;^^xsd:boolean
+  ] ; # 
   <a href="http://hl7.org/fhir/STU3/patient.html#Patient.contact">fhir:contact</a> ( [
     ( <a href="http://hl7.org/fhir/STU3/patient.html#Patient.contact.relationship">fhir:relationship</a> [
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
@@ -377,26 +408,38 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n   
 <a href="http://hl7.org/fhir/STU3/patient.html#Patient.contact.name">fhir:name</a> [
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/humanname-assembly-order&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;NL4&quot; ]       ] ) ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;NL4&quot;         ]       ] ) ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.text">fhir:text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Jannie J.P.M. van Putten-XXX-Helleman&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">fhir:family</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;van Putten-XXX-Helleman&quot; ;
         ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/humanname-own-prefix&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;van&quot; ]         ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;van&quot;           ]         ] [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/humanname-own-name&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Putten&quot; ]         ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Putten&quot;           ]         ] [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/humanname-partner-name&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;XXX-Helleman&quot; ]         ] )       ] ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;XXX-Helleman&quot;           ]         ] )       ] ;
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">fhir:given</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Jannie&quot; ;
         ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;BR&quot; ]         ] )       ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;BR&quot;           ]         ] )       ] [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;J.P.M.&quot; ;
         ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;IN&quot; ]         ] )       ] )     ] ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;IN&quot;           ]         ] )       ] )     ] ;
     ( <a href="http://hl7.org/fhir/STU3/patient.html#Patient.contact.telecom">fhir:telecom</a> [
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType&quot;^^xsd:anyURI ] ;
@@ -427,9 +470,13 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n   
 <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Knolweg 1000&quot; ;
         ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Knolweg&quot; ]         ] [
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Knolweg&quot;           ]         ] [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;1000&quot; ]         ] )       ] ) ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;1000&quot;           ]         ] )       ] ) ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.city">fhir:city</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;STITSWERD&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.postalCode">fhir:postalCode</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;9999XA&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.country">fhir:country</a> [
@@ -481,7 +528,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n   
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 5, 2025 14:12+0000">2025-02-05</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 12, 2025 15:29+0000">2025-02-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

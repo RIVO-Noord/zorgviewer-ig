@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -14,7 +15,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <div>id urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.25.330073 (urn:ietf:rfc:3986), <span title=\"Name assembly order: HumanNameAssemblyOrder-NL1\">Johan J Johan XXX-HELLEMAN</span> (Johan), 2.16.840.1.113883.5.1-M, 25 July 1964, notPartOfMultipleBirth, <span title=\"Gehuwd (M - v3/MaritalStatus)\">Gehuwd</span>\n                  </div>\n                  <div>\n                     <a href=\"tel:06-12345678\">06-12345678</a> (addressUse_MC addressUse_H), <a href=\"mailto:XXX_Helleman@hotmail.com\">XXX_Helleman@hotmail.com</a> (Email addressUse_H)</div>\n                  <div>Knolweg 1000, 9999XA STITSWERD, NL (TMP)<br/>Knolweg 1000 naast (test add), 9999XA STITSWERD, NL (official addressUse_HP addressUse_PST / addressUse_PHYS)<br/>\n                  </div>\n                  <div>\n                     <span title=\"Echtgenote (WIFE - v3/RoleCode)\">Echtgenote</span>, <span title=\"Eerste relatie/contactpersoon (1 - 2.16.840.1.113883.2.4.3.11.22.472)\">Eerste relatie/contactpersoon</span> \n                     <span title=\"Name assembly order: HumanNameAssemblyOrder-NL4\">Jannie J.P.M. van Putten-XXX-Helleman</span>\n                     <div>\n                        <a href=\"tel:06-12345678\">06-12345678</a> (addressUse_MC addressUse_H), <a href=\"mailto:XXX_Helleman@hotmail.com\">XXX_Helleman@hotmail.com</a> (Email addressUse_H), Knolweg 1000, 9999XA STITSWERD, NL (addressUse_PHYS)</div>\n                  </div>\n                  <div>General Practitioner: Vaste Huisarts 1<div>PractitionerRole: Huisartsen</div>\n                  </div>\n               </div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <div>id urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.25.330073 (urn:ietf:rfc:3986), <span title=\"Name assembly order: HumanNameAssemblyOrder-NL1\">Johan J Johan XXX-HELLEMAN</span> (Johan), 2.16.840.1.113883.5.1-M, 25 July 1964, notPartOfMultipleBirth, <span title=\"Gehuwd (M - v3/MaritalStatus)\">Gehuwd</span>\n                  </div>\n                  <div>\n                     <a href=\"tel:06-12345678\">06-12345678</a> (addressUse_MC addressUse_H), <a href=\"mailto:XXX_Helleman@hotmail.com\">XXX_Helleman@hotmail.com</a> (Email addressUse_H)</div>\n                  <div>Knolweg 1000, 9999XA STITSWERD, NL (TMP)<br/>Knolweg 1000 naast (test add), 9999XA STITSWERD, NL (official addressUse_HP addressUse_PST / addressUse_PHYS)<br/>\n                  </div>\n                  <div>\n                     <span title=\"Echtgenote (WIFE - v3/RoleCode)\">Echtgenote</span>, <span title=\"Eerste relatie/contactpersoon (1 - 2.16.840.1.113883.2.4.3.11.22.472)\">Eerste relatie/contactpersoon</span> \n                     <span title=\"Name assembly order: HumanNameAssemblyOrder-NL4\">Jannie J.P.M. van Putten-XXX-Helleman</span>\n                     <div>\n                        <a href=\"tel:06-12345678\">06-12345678</a> (addressUse_MC addressUse_H), <a href=\"mailto:XXX_Helleman@hotmail.com\">XXX_Helleman@hotmail.com</a> (Email addressUse_H), Knolweg 1000, 9999XA STITSWERD, NL (addressUse_PHYS)</div>\n                  </div>\n                  <div>General Practitioner: Vaste Huisarts 1<div>PractitionerRole: Huisartsen</div>\n                  </div>\n               </div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
@@ -24,33 +25,48 @@
   fhir:name ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "NL1" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "NL1"
+       ]
      ] ) ;
      fhir:text [ fhir:v "Johan J Johan XXX-HELLEMAN" ] ;
      fhir:family [
        fhir:v "XXX-HELLEMAN" ;
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-own-name"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "XXX-HELLEMAN" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "XXX-HELLEMAN"
+         ]
        ] )
      ] ;
      fhir:given ( [
        fhir:v "Johan" ;
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "BR" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "BR"
+         ]
        ] )
      ] [
        fhir:v "J" ;
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "IN" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "IN"
+         ]
        ] )
      ] [
        fhir:v "Johan" ;
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CL" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "CL"
+         ]
        ] )
      ] )
   ] ) ; # 
@@ -89,7 +105,10 @@
      ] )
   ] ; # 
   fhir:birthDate [ fhir:v "1964-07-25"^^xsd:date] ; # 
-  fhir:deceased [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:deceased [
+     a fhir:boolean ;
+     fhir:v "false"^^xsd:boolean
+  ] ; # 
   fhir:address ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType"^^xsd:anyURI ] ;
@@ -107,10 +126,16 @@
        fhir:v "Knolweg 1000" ;
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Knolweg" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Knolweg"
+         ]
        ] [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "1000" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "1000"
+         ]
        ] )
      ] ) ;
      fhir:city [ fhir:v "STITSWERD" ] ;
@@ -132,7 +157,10 @@
   ] [
      fhir:extension ( [
        fhir:url [ fhir:v "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "true"^^xsd:boolean ]
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v "true"^^xsd:boolean
+       ]
      ] [
        fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType"^^xsd:anyURI ] ;
        fhir:value [
@@ -150,16 +178,28 @@
        fhir:v "Knolweg 1000 naast (test add)" ;
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Knolweg" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Knolweg"
+         ]
        ] [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "1000" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "1000"
+         ]
        ] [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v " naast" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v " naast"
+         ]
        ] [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "test add" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "test add"
+         ]
        ] )
      ] ) ;
      fhir:city [ fhir:v "STITSWERD" ] ;
@@ -186,7 +226,10 @@
        fhir:display [ fhir:v "Gehuwd" ]
      ] )
   ] ; # 
-  fhir:multipleBirth [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:multipleBirth [
+     a fhir:boolean ;
+     fhir:v "false"^^xsd:boolean
+  ] ; # 
   fhir:contact ( [
      fhir:relationship ( [
        fhir:coding ( [
@@ -204,33 +247,51 @@
      fhir:name [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "NL4" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "NL4"
+         ]
        ] ) ;
        fhir:text [ fhir:v "Jannie J.P.M. van Putten-XXX-Helleman" ] ;
        fhir:family [
          fhir:v "van Putten-XXX-Helleman" ;
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "van" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "van"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-own-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "Putten" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "Putten"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-partner-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "XXX-Helleman" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "XXX-Helleman"
+           ]
          ] )
        ] ;
        fhir:given ( [
          fhir:v "Jannie" ;
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "BR" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "BR"
+           ]
          ] )
        ] [
          fhir:v "J.P.M." ;
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "IN" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "IN"
+           ]
          ] )
        ] )
      ] ;
@@ -272,10 +333,16 @@
          fhir:v "Knolweg 1000" ;
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "Knolweg" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "Knolweg"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "1000" ]
+           fhir:value [
+             a fhir:string ;
+             fhir:v "1000"
+           ]
          ] )
        ] ) ;
        fhir:city [ fhir:v "STITSWERD" ] ;

@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11.81"}
-    h3,h4,h5,h6{--heading-prefix:"11.81"}</style>
+    <style type="text/css">h2{--heading-prefix:"11.60"}
+    h3,h4,h5,h6{--heading-prefix:"11.60"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -216,6 +216,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix sct: &lt;http://snomed.info/id/&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
@@ -231,7 +232,7 @@
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;extensions&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                  &lt;table&gt;\n                     &lt;caption&gt;Observation. id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.18.3009316 (urn:ietf:rfc:3986), Category: &lt;span title=\&quot;Laboratory (49581000146104 - SNOMED CT)\&quot;&gt;Laboratory&lt;/span&gt;, &lt;span title=\&quot;Klinische chemie (275711006 - SNOMED CT)\&quot;&gt;Klinische chemie&lt;/span&gt;, Status: status-final&lt;/caption&gt;\n                     &lt;tbody&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;Effective Time&lt;/th&gt;\n                           &lt;td&gt;14:47:00, 13 March 2023&lt;/td&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;Specimen&lt;/th&gt;\n                           &lt;td&gt;Materiaal: Bloed&lt;/td&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;Related&lt;/th&gt;\n                           &lt;td&gt;Observation/a3d4d0c9-6ff0-414e-a50c-f5180105fef7&lt;/td&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;code&lt;/th&gt;\n                           &lt;th&gt;Value&lt;/th&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;td/&gt;\n                           &lt;td/&gt;\n                        &lt;/tr&gt;\n                     &lt;/tbody&gt;\n                  &lt;/table&gt;\n               &lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                  &lt;table&gt;\n                     &lt;caption&gt;Observation. id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.18.3009316 (urn:ietf:rfc:3986), Category: &lt;span title=\&quot;Laboratory (49581000146104 - SNOMED CT)\&quot;&gt;Laboratory&lt;/span&gt;, &lt;span title=\&quot;Klinische chemie (275711006 - SNOMED CT)\&quot;&gt;Klinische chemie&lt;/span&gt;, Status: status-final&lt;/caption&gt;\n                     &lt;tbody&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;Effective Time&lt;/th&gt;\n                           &lt;td&gt;14:47:00, 13 March 2023&lt;/td&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;Specimen&lt;/th&gt;\n                           &lt;td&gt;Materiaal: Bloed&lt;/td&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;Related&lt;/th&gt;\n                           &lt;td&gt;Observation/a3d4d0c9-6ff0-414e-a50c-f5180105fef7&lt;/td&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;th&gt;code&lt;/th&gt;\n                           &lt;th&gt;Value&lt;/th&gt;\n                        &lt;/tr&gt;\n                        &lt;tr&gt;\n                           &lt;td/&gt;\n                           &lt;td/&gt;\n                        &lt;/tr&gt;\n                     &lt;/tbody&gt;\n                  &lt;/table&gt;\n               &lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/procedurerequest.html#ProcedureRequest">fhir:contained</a> ( [
 <a href="http://hl7.org/fhir/STU3/procedurerequest.html">a</a> fhir:ProcedureRequest ;
@@ -284,7 +285,10 @@ a sct:275711006 ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;275711006&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Klinische chemie&quot; ]     ] )
   ] ) ; # 
-  <a href="http://hl7.org/fhir/STU3/observation.html#Observation.effective[x]">fhir:effective</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2023-03-13T14:47:00+01:00&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/STU3/observation.html#Observation.effective[x]">fhir:effective</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">a</a> fhir:dateTime ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:v</a> &quot;2023-03-13T14:47:00+01:00&quot;^^xsd:dateTime
+  ] ; # 
   <a href="http://hl7.org/fhir/STU3/observation.html#Observation.specimen">fhir:specimen</a> [
 <a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Materiaal: Bloed&quot; ]
@@ -320,7 +324,7 @@ a sct:275711006 ;
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 5, 2025 14:12+0000">2025-02-05</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 12, 2025 15:29+0000">2025-02-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

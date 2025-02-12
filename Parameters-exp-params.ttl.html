@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11.90"}
-    h3,h4,h5,h6{--heading-prefix:"11.90"}</style>
+    <style type="text/css">h2{--heading-prefix:"11.69"}
+    h3,h4,h5,h6{--heading-prefix:"11.69"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -216,6 +216,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
@@ -226,7 +227,9 @@
   <a href="http://hl7.org/fhir/STU3/parameters.html#Parameters.id">fhir:id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:v</a> &quot;exp-params&quot;] ; # 
   <a href="http://hl7.org/fhir/STU3/parameters.html#Parameters.parameter">fhir:parameter</a> ( [
 <a href="http://hl7.org/fhir/STU3/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;system-version&quot; ] ;
-<a href="http://hl7.org/fhir/STU3/parameters.html#Parameters.parameter.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct|http://snomed.info/sct/11000146104&quot;^^xsd:anyURI ]
+<a href="http://hl7.org/fhir/STU3/parameters.html#Parameters.parameter.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#uri">a</a> fhir:uri ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct|http://snomed.info/sct/11000146104&quot;^^xsd:anyURI     ]
   ] ) . # 
 
 </code></pre>
@@ -254,7 +257,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 5, 2025 14:12+0000">2025-02-05</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 12, 2025 15:29+0000">2025-02-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

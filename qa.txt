@@ -1,9 +1,9 @@
 ZorgviewerIG : Validation Results
 =========================================
 
-err = 193, warn = 98, info = 110
-IG Publisher Version: 1.8.10
-Generated Wed Feb 05 14:14:19 UTC 2025. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#1.12.0 (canonical = http://fhir.hl7.nl/zorgviewer)
+err = 193, warn = 99, info = 110
+IG Publisher Version: 1.8.12
+Generated Wed Feb 12 15:31:12 UTC 2025. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#1.12.0 (canonical = http://fhir.hl7.nl/zorgviewer)
  Build Errors : 3 / 5 / 0
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/capabilities/CapabilityStatement-Adressering : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/capabilities/CapabilityStatement-Behandelplan : 0 / 0 / 1
@@ -88,7 +88,7 @@ Generated Wed Feb 05 14:14:19 UTC 2025. FHIR version 3.0.2 for hl7.fhir.nl.zorgv
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-ICD10dut : 2 / 0 / 2
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-ICPC1NL : 2 / 0 / 2
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-SCT : 2 / 0 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-bronsysteem-zorgaanbieder : 0 / 0 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-bronsysteem-zorgaanbieder : 0 / 1 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ConceptMap-behandelaanwijzing-2017-2020 : 0 / 9 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ConceptMap-epic-rolcode : 0 / 16 / 5
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ConceptMap-patient-toestemming : 1 / 7 / 1
@@ -547,6 +547,7 @@ ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem
 ERROR: CodeSystem.where(url = 'http://snomed.info/sct'): Conformance resource /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-SCT.json - the canonical URL (http://fhir.hl7.nl/zorgviewer/CodeSystem/SCT) does not match the URL (http://snomed.info/sct)
 ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-SCT: URL Mismatch http://fhir.hl7.nl/zorgviewer/CodeSystem/SCT vs http://snomed.info/sct
 == input/vocabulary/CodeSystem-bronsysteem-zorgaanbieder.json ==
+WARNING: CodeSystem/bronsysteem-zorgaanbieder: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
 == input/vocabulary/ConceptMap-behandelaanwijzing-2017-2020.json ==
 WARNING: ConceptMap/behandelaanwijzing-2017-2020: ConceptMap.group[0].element[0].target[0]: De modifier extensie http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence uit FHIR version 1.0 is niet toegestaan om te worden gebruikt op dit punt (toegestaan = e:ConceptMap.element.target; dit element is [[BackboneElement, ConceptMap.group.element.target]; dit is een waarschuwing aangezien contexten gewijzigd mogen worden tussen versies van FHIR)
 WARNING: ConceptMap/behandelaanwijzing-2017-2020: ConceptMap.group[0].element[1].target[0]: De modifier extensie http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence uit FHIR version 1.0 is niet toegestaan om te worden gebruikt op dit punt (toegestaan = e:ConceptMap.element.target; dit element is [[BackboneElement, ConceptMap.group.element.target]; dit is een waarschuwing aangezien contexten gewijzigd mogen worden tussen versies van FHIR)

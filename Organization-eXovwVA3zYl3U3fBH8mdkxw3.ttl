@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -13,7 +14,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: Organization eXovwVA3zYl3U3fBH8mdkxw3</b></p><a name=\"eXovwVA3zYl3U3fBH8mdkxw3\"> </a><a name=\"hceXovwVA3zYl3U3fBH8mdkxw3\"> </a><a name=\"eXovwVA3zYl3U3fBH8mdkxw3-nl-NL\"> </a><p><b>identifier</b>: VEKTIS/06020101 (gebruik: usual, periode: 2011-05-17 --&gt; (continue)), FAC/S_UMCG (gebruik: usual, )</p><p><b>active</b>: true</p><p><b>name</b>: UMCG</p><p><b>address</b>: null Groningen 9713 GZ Nederland </p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: Organization eXovwVA3zYl3U3fBH8mdkxw3</b></p><a name=\"eXovwVA3zYl3U3fBH8mdkxw3\"> </a><a name=\"hceXovwVA3zYl3U3fBH8mdkxw3\"> </a><a name=\"eXovwVA3zYl3U3fBH8mdkxw3-nl-NL\"> </a><p><b>identifier</b>: VEKTIS/06020101 (gebruik: usual, periode: 2011-05-17 --&gt; (continue)), FAC/S_UMCG (gebruik: usual, )</p><p><b>active</b>: true</p><p><b>name</b>: UMCG</p><p><b>address</b>: null Groningen 9713 GZ Nederland </p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "usual" ] ;
@@ -39,7 +40,10 @@
      fhir:line ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Hanzeplein" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Hanzeplein"
+         ]
        ] )
      ] ) ;
      fhir:city [ fhir:v "Groningen" ] ;

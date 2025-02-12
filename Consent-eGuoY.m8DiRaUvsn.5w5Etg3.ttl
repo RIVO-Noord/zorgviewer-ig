@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -14,11 +15,14 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: Consent eGuoY.m8DiRaUvsn.5w5Etg3</b></p><a name=\"eGuoY.m8DiRaUvsn.5w5Etg3\"> </a><a name=\"hceGuoY.m8DiRaUvsn.5w5Etg3\"> </a><a name=\"eGuoY.m8DiRaUvsn.5w5Etg3-nl-NL\"> </a><p><b>Comment</b>: Wilsverklaring</p><p><b>identifier</b>: <code>urn:oid:1.2.840.114350.1.13.485.3.7.2.686783</code>/10848 (gebruik: usual, )</p><p><b>status</b>: Active</p><p><b>category</b>: <span title=\"Codes:{urn:oid:1.2.840.114350.1.13.485.3.7.4.686783.100 10}, {http://snomed.info/sct 11341000146107}\">Wilsverklaring</span>, <span title=\"Codes:{urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1 NR}\">Niet reanimeren verklaring</span></p><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eXxP1o8ZlOz21F6HXS9puLA3\">XXX-Helleman, Johan</a></p><p><b>dateTime</b>: 2022-06-30 14:02:08+0000</p><p><b>consentingParty</b>: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eXxP1o8ZlOz21F6HXS9puLA3\">XXX-Helleman, Johan</a></p><h3>Policies</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td></tr><tr><td style=\"display: none\">*</td><td/></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Gegenereerde narrative: Consent eGuoY.m8DiRaUvsn.5w5Etg3</b></p><a name=\"eGuoY.m8DiRaUvsn.5w5Etg3\"> </a><a name=\"hceGuoY.m8DiRaUvsn.5w5Etg3\"> </a><a name=\"eGuoY.m8DiRaUvsn.5w5Etg3-nl-NL\"> </a><p><b>Comment</b>: Wilsverklaring</p><p><b>identifier</b>: <code>urn:oid:1.2.840.114350.1.13.485.3.7.2.686783</code>/10848 (gebruik: usual, )</p><p><b>status</b>: Active</p><p><b>category</b>: <span title=\"Codes:{urn:oid:1.2.840.114350.1.13.485.3.7.4.686783.100 10}, {http://snomed.info/sct 11341000146107}\">Wilsverklaring</span>, <span title=\"Codes:{urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1 NR}\">Niet reanimeren verklaring</span></p><p><b>patient</b>: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eXxP1o8ZlOz21F6HXS9puLA3\">XXX-Helleman, Johan</a></p><p><b>dateTime</b>: 2022-06-30 14:02:08+0000</p><p><b>consentingParty</b>: <a href=\"https://simplifier.net/resolve?scope=nictiz.fhir.nl.stu3.zib2017@2.2.18&amp;canonical=https://example.org/TST-OAUTH2/api/FHIR/STU3/Patient/eXxP1o8ZlOz21F6HXS9puLA3\">XXX-Helleman, Johan</a></p><h3>Policies</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td></tr><tr><td style=\"display: none\">*</td><td/></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/Comment"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "Wilsverklaring" ]
+     fhir:value [
+       a fhir:string ;
+       fhir:v "Wilsverklaring"
+     ]
   ] ) ; # 
   fhir:identifier [
      fhir:use [ fhir:v "usual" ] ;
@@ -59,7 +63,10 @@
   fhir:policy ( [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "unknown" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
      ] )
   ] ) . # 
 

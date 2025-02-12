@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11.67"}
-    h3,h4,h5,h6{--heading-prefix:"11.67"}</style>
+    <style type="text/css">h2{--heading-prefix:"11.46"}
+    h3,h4,h5,h6{--heading-prefix:"11.46"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -216,6 +216,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
@@ -229,7 +230,7 @@
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/organization.html#Organization.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Gegenereerde narrative: Organization eXovwVA3zYl3U3fBH8mdkxw3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;eXovwVA3zYl3U3fBH8mdkxw3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hceXovwVA3zYl3U3fBH8mdkxw3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;eXovwVA3zYl3U3fBH8mdkxw3-nl-NL\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: VEKTIS/06020101 (gebruik: usual, periode: 2011-05-17 --&amp;gt; (continue)), FAC/S_UMCG (gebruik: usual, )&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: UMCG&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: null Groningen 9713 GZ Nederland &lt;/p&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Gegenereerde narrative: Organization eXovwVA3zYl3U3fBH8mdkxw3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;eXovwVA3zYl3U3fBH8mdkxw3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hceXovwVA3zYl3U3fBH8mdkxw3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;eXovwVA3zYl3U3fBH8mdkxw3-nl-NL\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: VEKTIS/06020101 (gebruik: usual, periode: 2011-05-17 --&amp;gt; (continue)), FAC/S_UMCG (gebruik: usual, )&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: UMCG&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: null Groningen 9713 GZ Nederland &lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/STU3/organization.html#Organization.identifier">fhir:identifier</a> ( [
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.use">fhir:use</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:v</a> &quot;usual&quot; ] ;
@@ -252,7 +253,9 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
     ( <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.line">fhir:line</a> [
       ( <a href="http://hl7.org/fhir/STU3/datatypes.html#string#string.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Hanzeplein&quot; ]       ] )     ] ) ;
+<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Hanzeplein&quot;         ]       ] )     ] ) ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.city">fhir:city</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Groningen&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.postalCode">fhir:postalCode</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;9713 GZ&quot; ] ;
 <a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.country">fhir:country</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:v</a> &quot;Nederland&quot; ]
@@ -283,7 +286,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 5, 2025 14:12+0000">2025-02-05</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Feb 12, 2025 15:29+0000">2025-02-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
