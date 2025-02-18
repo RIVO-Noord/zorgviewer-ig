@@ -40,6 +40,7 @@ ViewDefinition voor ...:
 * [... Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
 * [... Correspondentie](ViewDefinition-DocumentReference.json)
 * [... Vaccinatie](ViewDefinition-Immunization.json)
+* [... Medicatiegegevens](ViewDefinition-Medicationgegevens.json) - samengevoegd MedicationRequest en MedicationStatement
 * [... Medicatie Afspraak](ViewDefinition-MedicationRequest.json)
 * [... Medicatie Gebruik](ViewDefinition-MedicationStatement.json)
 * [... Verrichting](ViewDefinition-Procedure.json)
