@@ -5,19 +5,16 @@ const viewDefPath = "../input/images/";
 const pumlPath = "../input/images-source/";
 
 fs.readdirSync(viewDefPath).forEach(file => {
-    const match = file.match("ViewDefinition-(.+)\.json");
+    const match = file.match("ViewDefinition-.+\.json");
     if (match) {
-        console.log(file);
-
-        const title = match[1];
-        const puml = [
-            `@startuml ViewDefinition-${title}`,
-            ":",
-            `== ${title}`,
-        ];
-
         const viewDef_filePath = path.join(viewDefPath, file);
         const viewDef = JSON.parse(fs.readFileSync(viewDef_filePath, 'utf8'));
+
+        const puml = [
+            `@startuml ${viewDef.id}`,
+            ":",
+            `== ${viewDef.title}`,
+        ];
 
         // add column names for select
         if (viewDef.select[0].column) {
@@ -25,13 +22,15 @@ fs.readdirSync(viewDefPath).forEach(file => {
         }
         if (viewDef.select[0].unionAll) {
             // assume first columns is the final list of columns
-            doColumns(viewDef.select[0].unionAll[0].column, puml);
+            viewDef.select[0].unionAll.forEach(union => {
+                doColumns(union.column, puml);
+            });
         }
 
         puml.push(";",
             "@enduml");
 
-        const puml_filePath = path.join(pumlPath, `ViewDefinition-${title}.plantuml`);
+        const puml_filePath = path.join(pumlPath, `${viewDef.id}.plantuml`);
         fs.writeFileSync(puml_filePath, puml.join('\n'));
     }
 });
