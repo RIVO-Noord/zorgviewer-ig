@@ -1,7 +1,7 @@
 {
     "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
     "resource": "Bundle",
-    "id": "ViewDefinition-MedicationRequest",
+    "id": "ViewDefinition-Medicatiegegevens",
     "select": [
         {
             "unionAll": [
@@ -16,17 +16,6 @@
                                 {
                                     "name": "Zib element",
                                     "value": "nvt"
-                                }
-                            ]
-                        },
-                        {
-                            "path": "authoredOn",
-                            "name": "Datum",
-                            "type": "dateTime",
-                            "tag": [
-                                {
-                                    "name": "Zib element",
-                                    "value": "MedicationAgreementDateTime"
                                 }
                             ]
                         },
@@ -64,8 +53,19 @@
                             ]
                         },
                         {
+                            "path": "authoredOn",
+                            "name": "Datum",
+                            "type": "dateTime",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "MedicationAgreementDateTime"
+                                }
+                            ]
+                        },
+                        {
                             "path": "category.text",
-                            "name": "Categorie",
+                            "name": "+Categorie",
                             "type": "string",
                             "tag": [
                                 {
@@ -76,7 +76,7 @@
                         },
                         {
                             "path": "'Req'",
-                            "name": "Type"
+                            "name": "+Type"
                         }
                     ],
                     "forEach": "entry.resource.where(resourceType='MedicationRequest')"
@@ -92,17 +92,6 @@
                                 {
                                     "name": "Zib element",
                                     "value": "nvt"
-                                }
-                            ]
-                        },
-                        {
-                            "path": "dateAsserted",
-                            "name": "Datum",
-                            "type": "dateTime",
-                            "tag": [
-                                {
-                                    "name": "Zib element",
-                                    "value": "MedicationUseDateTime"
                                 }
                             ]
                         },
@@ -140,8 +129,19 @@
                             ]
                         },
                         {
+                            "path": "dateAsserted",
+                            "name": "Datum",
+                            "type": "dateTime",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "MedicationUseDateTime"
+                                }
+                            ]
+                        },
+                        {
                             "path": "category.text",
-                            "name": "Categorie",
+                            "name": "+Categorie",
                             "type": "string",
                             "tag": [
                                 {
@@ -152,7 +152,7 @@
                         },
                         {
                             "path": "'Stmt'",
-                            "name": "Type"
+                            "name": "+Type"
                         }
                     ],
                     "forEach": "entry.resource.where(resourceType='MedicationStatement')"
