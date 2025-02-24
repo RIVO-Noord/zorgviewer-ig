@@ -1,0 +1,83 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Medicatiegegevens",
+    "name": "Medicatiegegevens",
+    "title": "Medicatiegegevens",
+    "status": "active",
+    "experimental": false,
+    "description": "Medicatiegegevens abstract samenstelling voor het documenteren van de combinatie van Medicatieafspraak en Medicatiegebruik",
+    "kind": "resource",
+    "abstract": true,
+    "type": "Bundle",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+    "derivation": "constraint",
+    "differential": {
+        "element":  [
+            {
+                "id": "Bundle.type",
+                "path": "Bundle.type",
+                "short": "searchset",
+                "fixedCode": "searchset"
+            },
+            {
+                "id": "Bundle.entry",
+                "path": "Bundle.entry",
+                "slicing": {
+                    "discriminator":  [
+                        {
+                            "type": "type",
+                            "path": "resource"
+                        }
+                    ],
+                    "rules": "open"
+                }
+            },
+            {
+                "id": "Bundle.entry:MedicationRequest",
+                "path": "Bundle.entry",
+                "sliceName": "MedicationRequest",
+                "short": "MedicationRequest"
+            },
+            {
+                "id": "Bundle.entry:MedicationRequest.fullUrl",
+                "path": "Bundle.entry.fullUrl",
+                "min": 1
+            },
+            {
+                "id": "Bundle.entry:MedicationRequest.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Medicationafspraak",
+                "min": 1,
+                "type":  [
+                    {
+                        "code": "MedicationRequest",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationRequest"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:MedicationStatement",
+                "path": "Bundle.entry",
+                "sliceName": "MedicationStatement",
+                "short": "MedicationStatement"
+            },
+            {
+                "id": "Bundle.entry:MedicationStatement.fullUrl",
+                "path": "Bundle.entry.fullUrl",
+                "min": 1
+            },
+            {
+                "id": "Bundle.entry:MedicationStatement.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Medicationgebruik",
+                "min": 1,
+                "type":  [
+                    {
+                        "code": "MedicationStatement",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationStatement"
+                    }
+                ]
+            }
+        ]
+    }
+}
