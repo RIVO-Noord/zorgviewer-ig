@@ -4,14 +4,21 @@
 
 [ZIB Verrichting](https://zibs.nl/wiki/Verrichting-v4.1(2017NL))
 
-### View Definition
-
-* [ViewDefinition voor Verrichtingen](ViewDefinition-Procedure.json)
-
 ### User-Interface Mockup
 
 Een schets van het scherm met labels en sortering informatie
 <div style="clear:both;"><img src="UI-Schets-Verrichtingen.png" class="figure-img img-responsive img-rounded center-block"></div>
+
+### View Definition
+
+* [ViewDefinition voor Verrichtingen](ViewDefinition-Procedure.json)
+
+<div>
+{% include ViewDefinition-Procedure.svg %}
+</div>
+
+* '+' voor de kolom naam betekent in de uitklap
+* '()' om de kolom naam betekent gebruiken voor formatting of verbergen
 
 Kolom definities:
 <table class="grid">

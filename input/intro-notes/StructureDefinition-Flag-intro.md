@@ -6,8 +6,16 @@
 
 ### View Definition
 
-* [ViewDefinition voor Alerts](ViewDefinition-Flag.json)
+[ViewDefinition voor Alerts](ViewDefinition-Flag.json)
 
+<div>
+{% include ViewDefinition-Flag.svg %}
+</div>
+
+'+' voor de kolom naam betekent in de uitklap<br/>
+'()' om de kolom naam betekent gebruiken voor formatting of verbergen
+
+Kolom definities:
 <table class="grid">
   <thead>
     <th>Kolom label</th>

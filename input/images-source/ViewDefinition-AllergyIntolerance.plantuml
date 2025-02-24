@@ -1,0 +1,9 @@
+@startuml ViewDefinition-AllergyIntolerance
+:
+== AllergyIntolerance
+|= Bron |= Datum |= Stof |= Toelichting |= Categorie |= CategorieCS |= Ernst(1) |= Ernst(1)CS |= Ernst(2) |= Reacties |= Status |= StatusCS |= (VStatus) |
+| meta...| iif(exists(onsetPeriod...| iif(exists(code...| note...| category...| category...| criticality...| criticality...| reaction[0]...| reaction[0]...| clinicalStatus...| clinicalStatus...| verificationStatus...|
+| string | dateTime | string | string | code | code | code | code | code | string | code | code | code |
+| nvt | StartDateTime | CausativeAgent | Comment | nvt | nvt | Criticality | Criticality | Severity | Symptom | AllergyStatus | AllergyStatus | AllergyStatus |
+;
+@enduml

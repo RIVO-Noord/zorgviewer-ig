@@ -4,7 +4,16 @@
 
 [ZIB Wilsverklaring](https://zibs.nl/wiki/Wilsverklaring-v3.1(2017NL))
 
-### User-Interface Mockup
+### View Definition
+
+[ViewDefinition voor Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
+
+<div>
+{% include ViewDefinition-Behandelaanwijzingen.svg %}
+</div>
+
+'+' voor de kolom naam betekent in de uitklap<br/>
+'()' om de kolom naam betekent gebruiken voor formatting of verbergen
 
 Kolom definities:
 <table class="grid">

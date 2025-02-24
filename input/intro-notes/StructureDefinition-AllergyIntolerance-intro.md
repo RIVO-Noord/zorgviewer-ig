@@ -10,10 +10,16 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 
 ### View Definition
 
-* [ViewDefinition voor Allergieën en Intoleranties](ViewDefinition-AllergyIntolerance.json)
+[ViewDefinition voor Allergieën en Intoleranties](ViewDefinition-AllergyIntolerance.json)
 
-### User-Interface Mockup
+<div>
+{% include ViewDefinition-AllergyIntolerance.svg %}
+</div>
 
+'+' voor de kolom naam betekent in de uitklap<br/>
+'()' om de kolom naam betekent gebruiken voor formatting of verbergen
+
+Kolom definities:
 <table class="grid">
   <thead>
     <th>Kolom label</th>

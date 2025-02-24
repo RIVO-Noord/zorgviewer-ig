@@ -6,13 +6,14 @@
 
 ### View Definition
 
-* [ViewDefinition voor MedicationStatement](ViewDefinition-MedicationStatement.json)
-
-### User-Interface Mockup
+[ViewDefinition voor MedicationStatement](ViewDefinition-MedicationStatement.json)
 
 <div>
-{% include UI-Mockup-Medicatie.svg %}
+{% include ViewDefinition-MedicationStatement.svg %}
 </div>
+
+'+' voor de kolom naam betekent in de uitklap<br/>
+'()' om de kolom naam betekent gebruiken voor formatting of verbergen
 
 ### Request
 

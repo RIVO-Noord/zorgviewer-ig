@@ -1,0 +1,9 @@
+@startuml ViewDefinition-Medicatiegegevens
+:
+== Medicatiegegevens
+|= Bron |= Medicatie |= Toedieningsweg |= Dosering & Instructies |= Datum |= +Categorie |= +Type |
+| meta...| medicationReference...| dosageInstruction...| dosageInstruction...| authoredOn...| category...| 'voorgeschreven'...|
+| string | string | string | string | dateTime | string |  |
+| nvt | AgreedMedicine\n /Medication | InstructionsForUse\n /RouteOfAdministration | InstructionsForUse\n /Description | MedicationAgreementDateTime | nvt ||
+;
+@enduml

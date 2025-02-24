@@ -2,9 +2,14 @@
 
 ### View Definition
 
-* [ViewDefinition voor Correspondentie](ViewDefinition-DocumentReference.json)
+[ViewDefinition voor Correspondentie](ViewDefinition-DocumentReference.json)
 
-### User-Interface Mockup
+<div>
+{% include ViewDefinition-DocumentReference.svg %}
+</div>
+
+'+' voor de kolom naam betekent in de uitklap<br/>
+'()' om de kolom naam betekent gebruiken voor formatting of verbergen
 
 Kolom definities:
 <table class="grid">
