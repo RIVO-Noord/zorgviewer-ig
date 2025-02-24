@@ -1,9 +1,9 @@
 ZorgviewerIG : Validation Results
 =========================================
 
-err = 133, warn = 113, info = 110
+err = 133, warn = 114, info = 110
 IG Publisher Version: 1.8.14
-Generated Mon Feb 24 11:29:56 UTC 2025. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#1.12.0 (canonical = http://fhir.hl7.nl/zorgviewer)
+Generated Mon Feb 24 13:34:15 UTC 2025. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#1.12.0 (canonical = http://fhir.hl7.nl/zorgviewer)
  Build Errors : 4 / 5 / 0
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/capabilities/CapabilityStatement-Adressering : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/capabilities/CapabilityStatement-Behandelplan : 0 / 0 / 1
@@ -65,6 +65,7 @@ Generated Mon Feb 24 11:29:56 UTC 2025. FHIR version 3.0.2 for hl7.fhir.nl.zorgv
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Flag : 1 / 2 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Immunization : 0 / 3 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-LaboratoryTestResult : 2 / 7 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Medicatiegegevens : 0 / 1 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-MedicationRequest : 0 / 3 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-MedicationStatement : 0 / 2 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Organization : 0 / 5 / 1
@@ -431,6 +432,8 @@ WARNING: StructureDefinition.where(url = 'http://fhir.hl7.nl/zorgviewer/Structur
 == input/profiles/StructureDefinition-LaboratoryTestResult.json ==
 ERROR: StructureDefinition/LaboratoryTestResult: StructureDefinition.snapshot.element[20]: Het element Observation.status.value heeft geen toegekende typen en geen content-reference
 ERROR: StructureDefinition/LaboratoryTestResult: StructureDefinition.snapshot.element[65].constraint[0]: Fout in constraint 'zib-LaboratoryTestResult-Observation-1' met expressie 'coding.where(system = 'http://snomed.info/sct' and (code = '281302008' or '281300000' or '11896004' or '30714006' or '131196009')  ).exists() implies coding.where(system = 'http://hl7.org/fhir/v2/0078').exists()': Fout bij evalueren FHIRPath expressie: De naam 'coding' is niet geldig voor een van de mogelijke typen: [http://hl7.org/fhir/StructureDefinition/Coding] (@char 21)
+== input/profiles/StructureDefinition-Medicatiegegevens.json ==
+WARNING: StructureDefinition/Medicatiegegevens: StructureDefinition: Bundle is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
 == input/profiles/StructureDefinition-MedicationRequest.json ==
 WARNING: StructureDefinition/MedicationRequest: StructureDefinition.snapshot.element[15].example[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.3.2050' could not be found, so the code cannot be validated
 WARNING: StructureDefinition/MedicationRequest: StructureDefinition.snapshot.element[90].example[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.9' could not be found, so the code cannot be validated
