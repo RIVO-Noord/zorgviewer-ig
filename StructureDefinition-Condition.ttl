@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "Condition"] ; # 
   fhir:title [ fhir:v "Condition"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-02-24T16:22:43+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-02-25T09:38:10+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "RIVO-NN HL7NL"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "RIVO-NN" ] ;
@@ -2392,8 +2392,9 @@
        fhir:binding [
          fhir:strength [ fhir:v "extensible" ] ;
          fhir:valueSet [
-           a fhir:uri ;
-           fhir:v "http://fhir.hl7.nl/zorgviewer/ValueSet/ProbleemNaamCodelist"^^xsd:anyURI
+           a fhir:Reference ;
+           fhir:link <http://fhir.hl7.nl/zorgviewer/ValueSet/ProbleemNaamCodelist> ;
+           fhir:reference [ fhir:v "http://fhir.hl7.nl/zorgviewer/ValueSet/ProbleemNaamCodelist" ]
          ]
        ]
      ] [
