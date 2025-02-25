@@ -2,11 +2,11 @@
 :
 == Correspondentie
 |= Bron |= Datum |= Type |= Class |= Beschrijving |= Auteur |= Specialisme |= (MimeType - voor filteren op pdf) |
-| meta... | iif(exists(context... | iif(type... | iif(class... | iif(exists(description),description,content... | author... | iif(context... | content |
-| string |  |  |  |  |  |  |  |
-| nvt |  |  |  |  |  |  |  |
-| |
+|<back:yellow> meta... |<back:yellow> iif(exists(context.period.start),context.period.st... |<back:yellow> iif(type.text.startsWith('2.16.840.1.113883.'),typ... |<back:yellow> iif(class.text.startsWith('2.16.840.1.113883.'),cl... |<back:yellow> iif(exists(description),description,content.attach... |<back:yellow> author.display |<back:yellow> iif(context.practiceSetting.text.startsWith('2.16.... |<back:yellow> content.attachment.contentType |
+|<back:yellow> string |<back:yellow>  |<back:yellow>  |<back:yellow>  |<back:yellow>  |<back:yellow>  |<back:yellow>  |<back:yellow>  |
+|<back:yellow> nvt |<back:yellow>  |<back:yellow>  |<back:yellow>  |<back:yellow>  |<back:yellow>  |<back:yellow>  |<back:yellow>  |
 | Chipsoft | 2022-05-11T22:00:00+00:00 | 51852-2 | 51852-2 | test.pdf |  | 394802001 | application/pdf |
 | Epic | 2021-12-15T09:36:00Z | Patiëntenbrief | Correspondence | Patiëntenbrief | G Boer | KGA - Genetica | application/pdf |
+| |
 ;
 @enduml

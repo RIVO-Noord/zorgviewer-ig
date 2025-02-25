@@ -2,9 +2,9 @@
 :
 == Medicatie Afspraken
 |= Bron |= Medicatie |= Toedieningsweg |= Dosering & Instructies |= Datum |= +Categorie |
-| meta... | medicationReference... | dosageInstruction... | dosageInstruction... | authoredOn... | category |
-| string | string | string | string | dateTime | string |
-| nvt | AgreedMedicine\n /Medication | InstructionsForUse\n /RouteOfAdministration | InstructionsForUse\n /Description | MedicationAgreementDateTime | nvt |
+|<back:yellow> meta... |<back:yellow> medicationReference.display |<back:yellow> dosageInstruction.route.text.toString() |<back:yellow> dosageInstruction.text.toString() |<back:yellow> authoredOn |<back:yellow> category.text |
+|<back:yellow> string |<back:yellow> string |<back:yellow> string |<back:yellow> string |<back:yellow> dateTime |<back:yellow> string |
+|<back:yellow> nvt |<back:yellow> AgreedMedicine\n /Medication |<back:yellow> InstructionsForUse\n /RouteOfAdministration |<back:yellow> InstructionsForUse\n /Description |<back:yellow> MedicationAgreementDateTime |<back:yellow> nvt |
 | |
 ;
 @enduml

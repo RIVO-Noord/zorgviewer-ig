@@ -2,12 +2,12 @@
 :
 == Alerts / Waarschuwingen
 |= Bron |= Datum |= Voor |= Voor-detail |= Categorie |= Status |
-| meta... | period... | iif(exists(code... | extension('http://hl7... | iif(exists(category... | status |
-| string | dateTime | string | dateTime | string | code |
-| nvt | BeginDatumTijd | AlertNaam | Conditie::Probleem | AlertType | nvt |
-| |
+|<back:yellow> meta... |<back:yellow> period.start |<back:yellow> iif(exists(code.text),code.text,code.coding.displa... |<back:yellow> extension('http://hl7.org/fhir/StructureDefinition... |<back:yellow> iif(exists(category.text),category.text,category.c... |<back:yellow> status |
+|<back:yellow> string |<back:yellow> dateTime |<back:yellow> string |<back:yellow> dateTime |<back:yellow> string |<back:yellow> code |
+|<back:yellow> nvt |<back:yellow> BeginDatumTijd |<back:yellow> AlertNaam |<back:yellow> Conditie::Probleem |<back:yellow> AlertType |<back:yellow> nvt |
 | Chipsoft | 2010-06-01 | Drager MRSA |  | waarschuwing | active |
 | Epic | 2022-05-10T20:55:17Z | TBC |  | Infection Flag | inactive |
 | Nexus | 2022-05-16 | LET OP!!!!!\n Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5.... |  | Waarschuwing | active |
+| |
 ;
 @enduml

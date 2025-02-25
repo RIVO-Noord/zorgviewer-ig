@@ -25,7 +25,6 @@ fs.readdirSync(viewDefPath).forEach(file => {
             // Add column examples based on examples
             const match2 = viewDef.select[0].forEach.match("resourceType='(.+)'");
             if (match2) {
-                puml.push("| |");
                 const resourceType = match2[1];
                 const examplesPath = "../input/examples";
                 fs.readdirSync(examplesPath).forEach(file => {
@@ -50,6 +49,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
                     }
                 });
             }
+            puml.push("| |");
         }
         if (viewDef.select[0].unionAll) {
             // assume first columns is the final list of columns
@@ -69,11 +69,17 @@ fs.readdirSync(viewDefPath).forEach(file => {
 function doColumns(columns, puml) {
     const columnNames = columns.map(column => ` ${column.name} `);
     puml.push(`|=${columnNames.join('|=')}|`);
-    // TODO: figure out why full path breaks PlantUML; for now split
-    const columnPaths = columns.map(column => column.path.split('.')[0] || "");
-    puml.push(`| ${columnPaths.join('... | ')} |`);
+    // TODO: figure out why full path breaks PlantUML; for now maximize
+    const columnPaths = columns.map(column => { 
+        var value = column.path;
+        if (value.length > 50) value = `${value.substring(0,50)}...`;
+        return value;
+    });
+    // first column always meta so shorten
+    columnPaths[0] = "meta...";
+    puml.push(`|<back:yellow> ${columnPaths.join(' |<back:yellow> ')} |`);
     const columnTypes = columns.map(column => column.type || "");
-    puml.push(`| ${columnTypes.join(' | ')} |`);
+    puml.push(`|<back:yellow> ${columnTypes.join(' |<back:yellow> ')} |`);
     const columnZib = columns.map(column => column.tag ? column.tag[0].value.split('/').join('\\n /') : "");
-    puml.push(`| ${columnZib.join(' | ')} |`);
+    puml.push(`|<back:yellow> ${columnZib.join(' |<back:yellow> ')} |`);
 }

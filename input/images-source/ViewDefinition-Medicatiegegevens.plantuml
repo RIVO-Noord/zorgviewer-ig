@@ -2,12 +2,12 @@
 :
 == Medicatie Gebruik en Afspraken
 |= Bron |= Medicatie |= Toedieningsweg |= Dosering & Instructies |= Datum |= +Categorie |= +Type |
-| meta... | medicationReference... | dosageInstruction... | dosageInstruction... | authoredOn... | category... | 'voorgeschreven' |
-| string | string | string | string | dateTime | string |  |
-| nvt | AgreedMedicine\n /Medication | InstructionsForUse\n /RouteOfAdministration | InstructionsForUse\n /Description | MedicationAgreementDateTime | nvt |  |
+|<back:yellow> meta... |<back:yellow> medicationReference.display |<back:yellow> dosageInstruction.route.text.toString() |<back:yellow> dosageInstruction.text.toString() |<back:yellow> authoredOn |<back:yellow> category.text |<back:yellow> 'voorgeschreven' |
+|<back:yellow> string |<back:yellow> string |<back:yellow> string |<back:yellow> string |<back:yellow> dateTime |<back:yellow> string |<back:yellow>  |
+|<back:yellow> nvt |<back:yellow> AgreedMedicine\n /Medication |<back:yellow> InstructionsForUse\n /RouteOfAdministration |<back:yellow> InstructionsForUse\n /Description |<back:yellow> MedicationAgreementDateTime |<back:yellow> nvt |<back:yellow>  |
 |= Bron |= Medicatie |= Toedieningsweg |= Dosering & Instructies |= Datum |= +Categorie |= +Type |
-| meta... | medicationReference... | dosage... | dosage... | dateAsserted... | category... | 'huidig' |
-| string | string | string | string | dateTime | string |  |
-| nvt | ProductUsed | InstructionsForUse\n /RouteOfAdministration | InstructionsForUse\n /Description | MedicationUseDateTime | nvt |  |
+|<back:yellow> meta... |<back:yellow> medicationReference.display |<back:yellow> dosage.route.text |<back:yellow> dosage.text |<back:yellow> dateAsserted |<back:yellow> category.text |<back:yellow> 'huidig' |
+|<back:yellow> string |<back:yellow> string |<back:yellow> string |<back:yellow> string |<back:yellow> dateTime |<back:yellow> string |<back:yellow>  |
+|<back:yellow> nvt |<back:yellow> ProductUsed |<back:yellow> InstructionsForUse\n /RouteOfAdministration |<back:yellow> InstructionsForUse\n /Description |<back:yellow> MedicationUseDateTime |<back:yellow> nvt |<back:yellow>  |
 ;
 @enduml

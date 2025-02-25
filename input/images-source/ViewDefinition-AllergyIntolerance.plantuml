@@ -2,8 +2,9 @@
 :
 == Allergieen en intoleranties
 |= Bron |= Datum |= Stof |= Toelichting |= Categorie |= CategorieCS |= Ernst(1) |= Ernst(1)CS |= Ernst(2) |= Reacties |= Status |= StatusCS |= (VStatus) |
-| meta... | iif(exists(onsetPeriod... | iif(exists(code... | note... | category... | category... | criticality... | criticality... | reaction[0]... | reaction[0]... | clinicalStatus... | clinicalStatus... | verificationStatus |
-| string | dateTime | string | string | code | code | code | code | code | string | code | code | code |
-| nvt | StartDateTime | CausativeAgent | Comment | nvt | nvt | Criticality | Criticality | Severity | Symptom | AllergyStatus | AllergyStatus | AllergyStatus |
+|<back:yellow> meta... |<back:yellow> iif(exists(onsetPeriod.start),onsetPeriod.start,on... |<back:yellow> iif(exists(code.text),code.text,code.coding.displa... |<back:yellow> note.text |<back:yellow> category.join(',') |<back:yellow> category.extension('http://nictiz.nl/fhir/Structur... |<back:yellow> criticality |<back:yellow> criticality.extension('http://nictiz.nl/fhir/Struc... |<back:yellow> reaction[0].severity |<back:yellow> reaction[0].manifestation[0].text |<back:yellow> clinicalStatus |<back:yellow> clinicalStatus.extension('http://nictiz.nl/fhir/St... |<back:yellow> verificationStatus |
+|<back:yellow> string |<back:yellow> dateTime |<back:yellow> string |<back:yellow> string |<back:yellow> code |<back:yellow> code |<back:yellow> code |<back:yellow> code |<back:yellow> code |<back:yellow> string |<back:yellow> code |<back:yellow> code |<back:yellow> code |
+|<back:yellow> nvt |<back:yellow> StartDateTime |<back:yellow> CausativeAgent |<back:yellow> Comment |<back:yellow> nvt |<back:yellow> nvt |<back:yellow> Criticality |<back:yellow> Criticality |<back:yellow> Severity |<back:yellow> Symptom |<back:yellow> AllergyStatus |<back:yellow> AllergyStatus |<back:yellow> AllergyStatus |
+| |
 ;
 @enduml
