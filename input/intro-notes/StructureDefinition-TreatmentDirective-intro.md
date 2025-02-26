@@ -25,14 +25,6 @@ Op dit moment zijn alleen de Behandelwensen deel (de BehandelAanwijzing zib) in 
 
 ### View Definition
 
-* [ViewDefinition voor Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
-
-### User-Interface Mockup
-**! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.**
-
-Een schets van het scherm met labels en sortering informatie:
-<div style="clear:both;"><img src="UI-Schets-BehandelAanwijzingenWilsverklaring1.png" class="figure-img img-responsive img-rounded center-block"></div>
-
 Kolom definities:
 <table class="grid">
   <thead>
@@ -100,6 +92,13 @@ Kolom definities:
     </tr>
   </tbody>
 </table>
+
+### User-Interface Mockup
+
+**! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.**
+
+Een schets van het scherm met labels en sortering informatie:
+<div style="clear:both;"><img src="UI-Schets-BehandelAanwijzingenWilsverklaring1.png" class="figure-img img-responsive img-rounded center-block"></div>
 
 ### Gerelateerde Mapping
 

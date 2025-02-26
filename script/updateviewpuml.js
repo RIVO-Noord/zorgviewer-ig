@@ -46,7 +46,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
                             return value;
                         });
                         // overwrite bron 1ste kolom met filename
-                        values[0] = file.substring(resourceType.length+1, file.length-5);
+                        values[0] = file.substring(file.indexOf('-')+1, file.length-5);
                         puml.push(`| ${values.join(' | ')} |`);
                     }
                 });
@@ -57,6 +57,8 @@ fs.readdirSync(viewDefPath).forEach(file => {
             // assume first columns is the final list of columns
             viewDef.select[0].unionAll.forEach(union => {
                 doColumns(union.column, puml);
+                union.column.forEach(column => columnPaths.push(column.path));
+                puml.push("| |");
             });
         }
 
