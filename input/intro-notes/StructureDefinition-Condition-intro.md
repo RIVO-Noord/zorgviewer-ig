@@ -16,8 +16,11 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 {% include ViewDefinition-Condition.svg %}
 </div>
 
-'+' voor de kolom naam betekent in de uitklap<br/>
-'()' om de kolom naam betekent gebruiken voor formatting of verbergen
+Legenda:<br/>
+> geel gearceerd - Zib Element naam<br/>
+> groen gearceerd - FHIR datatype<br/>
+> `+Kolom` - in de uitklap<br/>
+> `(Kolom)` - gebruikt voor formatting of verbergen
 
 Kolom definities:
 <table class="grid">
