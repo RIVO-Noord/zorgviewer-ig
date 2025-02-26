@@ -2,9 +2,22 @@
 :
 == Allergieen en intoleranties
 |= Bron |= Datum |= Stof |= Toelichting |= Categorie |= CategorieCS |= Ernst(1) |= Ernst(1)CS |= Ernst(2) |= Reacties |= Status |= StatusCS |= (VStatus) |
-|<back:yellow> meta... |<back:yellow> iif(exists(onsetPeriod.start),onsetPeriod.start,on... |<back:yellow> iif(exists(code.text),code.text,code.coding.displa... |<back:yellow> note.text |<back:yellow> category.join(',') |<back:yellow> category.extension('http://nictiz.nl/fhir/Structur... |<back:yellow> criticality |<back:yellow> criticality.extension('http://nictiz.nl/fhir/Struc... |<back:yellow> reaction[0].severity |<back:yellow> reaction[0].manifestation[0].text |<back:yellow> clinicalStatus |<back:yellow> clinicalStatus.extension('http://nictiz.nl/fhir/St... |<back:yellow> verificationStatus |
-|<back:yellow> string |<back:yellow> dateTime |<back:yellow> string |<back:yellow> string |<back:yellow> code |<back:yellow> code |<back:yellow> code |<back:yellow> code |<back:yellow> code |<back:yellow> string |<back:yellow> code |<back:yellow> code |<back:yellow> code |
-|<back:yellow> nvt |<back:yellow> StartDateTime |<back:yellow> CausativeAgent |<back:yellow> Comment |<back:yellow> nvt |<back:yellow> nvt |<back:yellow> Criticality |<back:yellow> Criticality |<back:yellow> Severity |<back:yellow> Symptom |<back:yellow> AllergyStatus |<back:yellow> AllergyStatus |<back:yellow> AllergyStatus |
+|<back:yellow> //nvt//\n<back:lightgreen> //string// |<back:yellow> //StartDateTime//\n<back:lightgreen> //dateTime// |<back:yellow> //CausativeAgent//\n<back:lightgreen> //string// |<back:yellow> //Comment//\n<back:lightgreen> //string// |<back:yellow> //nvt//\n<back:lightgreen> //code// |<back:yellow> //nvt//\n<back:lightgreen> //code// |<back:yellow> //Criticality//\n<back:lightgreen> //code// |<back:yellow> //Criticality//\n<back:lightgreen> //code// |<back:yellow> //Severity//\n<back:lightgreen> //code// |<back:yellow> //Symptom//\n<back:lightgreen> //string// |<back:yellow> //AllergyStatus//\n<back:lightgreen> //code// |<back:yellow> //AllergyStatus//\n<back:lightgreen> //code// |<back:yellow> //AllergyStatus//\n<back:lightgreen> //code// |
 | |
+
+<color:gray>//Column fhirpaths://
+<color:gray>//1. meta.extension('http:~//hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri//
+<color:gray>//2. iif(exists(onsetPeriod.start),onsetPeriod.start,onsetDateTime)//
+<color:gray>//3. iif(exists(code.text),code.text,code.coding.display)//
+<color:gray>//4. note.text//
+<color:gray>//5. category.join(',')//
+<color:gray>//6. category.extension('http:~//nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text//
+<color:gray>//7. criticality//
+<color:gray>//8. criticality.extension('http:~//nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text//
+<color:gray>//9. reaction[0].severity//
+<color:gray>//10. reaction[0].manifestation[0].text//
+<color:gray>//11. clinicalStatus//
+<color:gray>//12. clinicalStatus.extension('http:~//nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text//
+<color:gray>//13. verificationStatus//
 ;
 @enduml

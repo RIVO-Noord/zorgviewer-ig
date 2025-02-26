@@ -19,8 +19,10 @@ fs.readdirSync(viewDefPath).forEach(file => {
         ];
 
         // add column names for select
+        const columnPaths = [];
         if (viewDef.select[0].column) {
             doColumns(viewDef.select[0].column, puml);
+            viewDef.select[0].column.forEach(column => columnPaths.push(column.path));
 
             // Add column examples based on examples
             const match2 = viewDef.select[0].forEach.match("resourceType='(.+)'");
@@ -58,6 +60,11 @@ fs.readdirSync(viewDefPath).forEach(file => {
             });
         }
 
+        puml.push("\n<color:gray>//Column fhirpaths://");
+        columnPaths.forEach((path,index) => {
+            puml.push(`<color:gray>//${index+1}. ${path.replaceAll("//","~//")}//`); // escape // for not italics
+        });
+
         puml.push(";",
             "@enduml");
 
@@ -69,17 +76,11 @@ fs.readdirSync(viewDefPath).forEach(file => {
 function doColumns(columns, puml) {
     const columnNames = columns.map(column => ` ${column.name} `);
     puml.push(`|=${columnNames.join('|=')}|`);
-    // TODO: figure out why full path breaks PlantUML; for now maximize
-    const columnPaths = columns.map(column => { 
-        var value = column.path;
-        if (value.length > 50) value = `${value.substring(0,50)}...`;
+    const columnZib = columns.map(column => {
+        var value = column.tag ? "//" + column.tag[0].value.split('/').join('\\n<back:yellow> ///') + "//" : "";
+        value += "\\n";
+        if (column.type) value += `<back:lightgreen> //${column.type}//`;
         return value;
     });
-    // first column always meta so shorten
-    columnPaths[0] = "meta...";
-    puml.push(`|<back:yellow> ${columnPaths.join(' |<back:yellow> ')} |`);
-    const columnTypes = columns.map(column => column.type || "");
-    puml.push(`|<back:yellow> ${columnTypes.join(' |<back:yellow> ')} |`);
-    const columnZib = columns.map(column => column.tag ? column.tag[0].value.split('/').join('\\n /') : "");
     puml.push(`|<back:yellow> ${columnZib.join(' |<back:yellow> ')} |`);
 }

@@ -2,14 +2,21 @@
 :
 == Verrichtingen
 |= Bron |= Datum |= Verrichting |= Locatie |= Uitgevoerd door |= +Verrichtingcode |= +Lateraliteit |
-|<back:yellow> meta... |<back:yellow> performedPeriod.start |<back:yellow> iif(exists(code.text),code.text,code.coding.displa... |<back:yellow> location.display |<back:yellow> performer.actor.display.join('
-') |<back:yellow> code.coding[0].system+'#'+code.coding[0].code+' '+... |<back:yellow> bodySite.extension('http://nictiz.nl/fhir/Structur... |
-|<back:yellow> string |<back:yellow> dateTime |<back:yellow> string |<back:yellow> string |<back:yellow> string |<back:yellow> string |<back:yellow> string |
-|<back:yellow> nvt |<back:yellow> VerrichtingBeginDatum |<back:yellow> VerrichtingType |<back:yellow> Locatie::Zorgaanbieder |<back:yellow> Uitvoerder |<back:yellow> VerrichtingType |<back:yellow> ProbleemLateraliteit |
+|<back:yellow> //nvt//\n<back:lightgreen> //string// |<back:yellow> //VerrichtingBeginDatum//\n<back:lightgreen> //dateTime// |<back:yellow> //VerrichtingType//\n<back:lightgreen> //string// |<back:yellow> //Locatie::Zorgaanbieder//\n<back:lightgreen> //string// |<back:yellow> //Uitvoerder//\n<back:lightgreen> //string// |<back:yellow> //VerrichtingType//\n<back:lightgreen> //string// |<back:yellow> //ProbleemLateraliteit//\n<back:lightgreen> //string// |
 | Chipsoft | 2012-06-05 | implantatie van totale knieprothese | Drachten | Lisette van Cruijningen de Winter | urn:oid:2.16.840.1.113883.2.4.3.120.5.3#00090991 implantatie van totale knieprot... | Links |
 | Epic | 2021-11-07T20:02:00Z | Gesloten repositie supra- of transcondylaire femur fractuur. | UMCG | MedMij Orthopedie, MD | http://snomed.info/sct#46866001 Gesloten repositie supra- of transcondylaire fem... | Rechts |
 | Nexus | 2012-05-06 | Prothese implantatie kniegewricht. |  | Boonstra\n VIPP NEXUS Ziekenhuis | urn:oid:2.16.840.1.113883.2.4.3.27.15.5#038663 Prothese implantatie kniegewricht... |  |
 | VG-Epic | 2001 | SELECTIEVE FASCIECTOMIE |  |  |  |  |
 | |
+
+<color:gray>//Column fhirpaths://
+<color:gray>//1. meta.extension('http:~//hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri//
+<color:gray>//2. performedPeriod.start//
+<color:gray>//3. iif(exists(code.text),code.text,code.coding.display)//
+<color:gray>//4. location.display//
+<color:gray>//5. performer.actor.display.join('
+')//
+<color:gray>//6. code.coding[0].system+'#'+code.coding[0].code+' '+code.coding[0].display//
+<color:gray>//7. bodySite.extension('http:~//nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.text//
 ;
 @enduml
