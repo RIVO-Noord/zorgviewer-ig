@@ -4,11 +4,6 @@
 
 [ZIB Verrichting](https://zibs.nl/wiki/Verrichting-v4.1(2017NL))
 
-### User-Interface Mockup
-
-Een schets van het scherm met labels en sortering informatie
-<div style="clear:both;"><img src="UI-Schets-Verrichtingen.png" class="figure-img img-responsive img-rounded center-block"></div>
-
 ### View Definition
 
 * [ViewDefinition voor Verrichtingen](ViewDefinition-Procedure.json)
@@ -84,6 +79,11 @@ Kolom definities:
     </tr>
   </tbody>
 </table>
+
+### User-Interface Mockup
+
+Een schets van het scherm met labels en sortering informatie
+<div style="clear:both;"><img src="UI-Schets-Verrichtingen.png" class="figure-img img-responsive img-rounded center-block"></div>
 
 ### Codesystemen
 
