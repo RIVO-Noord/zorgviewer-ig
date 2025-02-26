@@ -13,8 +13,7 @@
 {% include ViewDefinition-Medicatiegegevens.svg %}
 </div>
 
-'+' voor de kolom naam betekent in de uitklap<br/>
-'()' om de kolom naam betekent gebruiken voor formatting of verbergen
+{% include legenda.md %}
 
 <div>
 {% include UI-Mockup-Medicatie.svg %}

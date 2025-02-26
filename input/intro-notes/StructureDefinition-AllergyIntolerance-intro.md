@@ -16,8 +16,7 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 {% include ViewDefinition-AllergyIntolerance.svg %}
 </div>
 
-'+' voor de kolom naam betekent in de uitklap<br/>
-'()' om de kolom naam betekent gebruiken voor formatting of verbergen
+{% include legenda.md %}
 
 Kolom definities:
 <table class="grid">

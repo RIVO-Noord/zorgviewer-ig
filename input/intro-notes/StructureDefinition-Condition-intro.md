@@ -16,11 +16,7 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 {% include ViewDefinition-Condition.svg %}
 </div>
 
-Legenda:<br/>
-> geel gearceerd - Zib Element naam<br/>
-> groen gearceerd - FHIR datatype<br/>
-> `+Kolom` - in de uitklap<br/>
-> `(Kolom)` - gebruikt voor formatting of verbergen
+{% include legenda.md %}
 
 Kolom definities:
 <table class="grid">
