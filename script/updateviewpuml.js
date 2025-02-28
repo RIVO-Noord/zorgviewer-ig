@@ -46,21 +46,29 @@ fs.readdirSync(viewDefPath).forEach(file => {
                     if (!file.endsWith(".json")) return;
                     const example_filePath = path.join(examplesPath, file);
                     const example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
-                    if (example.resourceType == resourceType) {
-                        const values = viewDef.select[0].column.map(column => {
-                            var result;
-                            try { result = fhirpath.evaluate(example, `${resourceType}.${column.path}`); }
-                            catch { }
-                            var value = "";
-                            if (result && result.length > 0) {
-                                value = result[0].replace(/\r?\n/g, "\\n ");
-                                if (value.length > 80) value = `${value.substring(0,80)}...`;
-                            }
-                            return value;
-                        });
-                        // overwrite bron 1ste kolom met filename
-                        values[0] = file.substring(file.indexOf('-')+1, file.length-5);
-                        puml.push(`| ${values.join(' | ')} |`);
+
+                    // only include in table when where clause applies
+                    const match3 = viewDef.select[0].forEach.match(".where\((.+)\)");
+                    if (match3) {
+                        var result;
+                        try { result = fhirpath.evaluate(example, match3[1]); }
+                        catch { }
+                        if (result[0]) {
+                            const values = viewDef.select[0].column.map(column => {
+                                var result;
+                                try { result = fhirpath.evaluate(example, `${column.path}`); }
+                                catch { }
+                                var value = "";
+                                if (result && result.length > 0) {
+                                    value = result[0].replace(/\r?\n/g, "\\n ");
+                                    if (value.length > 80) value = `${value.substring(0,80)}...`;
+                                }
+                                return value;
+                            });
+                            // overwrite bron 1ste kolom met filename
+                            values[0] = file.substring(file.indexOf('-')+1, file.length-5);
+                            puml.push(`| ${values.join(' | ')} |`);
+                        }
                     }
                 });
             }
