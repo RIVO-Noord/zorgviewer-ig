@@ -109,6 +109,7 @@
 		<a href="#" data-toggle="dropdown" class="dropdown-toggle">RAO &#8964;</a>
 		<ul class="dropdown-menu">
 			<li><a href="zorgnetwerk.html">Inzage Zorgnetwerk</a></li>
+			<li><a href="zorgplan.html">Zorgplan</a></li>
 		</ul>
 	</li>
   <li class="dropdown">
@@ -129,7 +130,6 @@
 		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Checklists &amp; Aansluiten &#8964;</a>
 		<ul class="dropdown-menu">
 		  <li><a href="checklists.html">Checklists &amp; Aansluiten</a></li>
-		  <li><a href="thermometer.html">Aansluit Thermometer</a></li>
 		  <li><a href="testing.html">Testing</a></li>
 		</ul>
   </li>
@@ -186,16 +186,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#inzage-zorgnetwerk" id="markdown-toc-inzage-zorgnetwerk">Inzage zorgnetwerk?</a></li>
+  <li><a href="#inzage-zorgnetwerk" id="markdown-toc-inzage-zorgnetwerk">Inzage zorgnetwerk</a></li>
   <li><a href="#fasering" id="markdown-toc-fasering">Fasering</a></li>
 </ul>
 
 </div>
 <div class="dragon">
-<b>Dit is een RIVO Architecten Overleg onderwerp en uitwerking.</b>
+<b>Dit is een RIVO Architectuur Overleg onderwerp.</b>
 </div>
 
-<h3 id="inzage-zorgnetwerk">Inzage zorgnetwerk?</h3>
+<h3 id="inzage-zorgnetwerk">Inzage zorgnetwerk</h3>
 
 <p>Inzage in het zorgnetwerk van een patiënt/cliënt binnen het zorgdomein.</p>
 
@@ -203,19 +203,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ol>
   <li>Doordat de arts in de informatie kijkt in de Zorgviewer</li>
-  <li>Overzicht afleiden en presenteren uit beschikbare informatie Zorgviewer</li>
-  <li>Zorgteam bijhouden irt Behandelplan</li>
+  <li>Overzicht afleiden en presenteren uit beschikbare informatie Zorgviewer
+    <ol>
+      <li>Eventueel lookup contact gegevens van de zorgverleners als voldoende sleutelvelden beschikbaar</li>
+    </ol>
+  </li>
+  <li>Zorgteam bijhouden bijvoorbeeld irt Behandelplan</li>
 </ol>
 
-<h4 id="1-huidige-situatie">1 Huidige situatie</h4>
-
-<h4 id="2-afleiden-uit-beschikbare-informatie">2 Afleiden uit beschikbare informatie</h4>
+<h4 id="afleiden-uit-beschikbare-informatie">Afleiden uit beschikbare informatie</h4>
 
 <p>In onderstaande tabel staat een overzicht van gegevens die mogelijk het zorgnetwerk voor een patient vormen. 
 Zowel de bron in de zib als de bron in FHIR, waar soms meer in staat dan in de zib.
 De laatste 4 kolommen (Zorgviewer, Epic, Zorgplatform, Nexus) geeft per systeem aan of dat gegeven via FHIR beschikbaar is (Persoon, Zorginstelling, Contactdatums). De 3 legenda waarden gaan over beschikbaarheid van de gegevens. '111' betekent dat het gegeven in de kolom Persoon, Zorginstellen als Contactdatums beschikbaar is.</p>
-
-<p>Legenda: '-' = nvt, '0' = gegeven niet beschikbaar, '1' gegeven beschikbaar, '?' = nog uitzoeken</p>
 
 <table border="1" cellpadding="5">
 <tr><th>Zib / FHIR</th>
@@ -311,7 +311,23 @@ UMCGheeft ook nog afdeling als 2de locatie! 
 <td>111</td>
 <td>111</td>
 <td>111</td></tr>
+<tr><td>MedicationRequest / Medicatieafspraak</td>
+<td>Voorschrijver MedicationRequest.requester.agent</td>
+<td></td>
+<td>MedicationRequest.authoredOn</td>
+<td>0--</td>
+<td>1--</td>
+<td>1--</td>
+<td>?--</td>
+</tr>
 </table>
+
+<p>Legenda:<br />
+'-' = nvt<br />
+'0' = gegeven niet beschikbaar<br />
+'1' gegeven beschikbaar<br />
+'?' = nog uitzoeken<br /></p>
+
 
 
 
@@ -331,7 +347,7 @@ UMCGheeft ook nog afdeling als 2de locatie! 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Feb 28, 2025 11:14+0000">2025-02-28</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Fri, Feb 28, 2025 11:38+0000">2025-02-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
