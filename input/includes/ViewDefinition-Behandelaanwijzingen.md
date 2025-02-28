@@ -16,13 +16,6 @@ Kolom definities:
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
-<td>Category</td>
-<td><samp>category.coding.display.join(' & ')</samp></td>
-<td><code>string</code></td>
-<td>nvt</td>
-<td></td>
-</tr>
-<tr>
 <td>Datum</td>
 <td><samp>period.start</samp></td>
 <td><code>dateTime</code></td>
@@ -63,6 +56,13 @@ Kolom definities:
 <td><samp>extension.where(url='http://nictiz.nl/fhir/StructureDefinition/Comment').valueString</samp></td>
 <td><code>string</code></td>
 <td>Toelichting</td>
+<td></td>
+</tr>
+<tr style="background-color:#b4c7e7">
+<td>+Categorie</td>
+<td><samp>category.coding.display.join(' & ')</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
 <td></td>
 </tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>

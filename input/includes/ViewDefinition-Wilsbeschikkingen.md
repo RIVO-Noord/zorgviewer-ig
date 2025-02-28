@@ -27,7 +27,7 @@ Kolom definities:
 <td><samp>category[1].text</samp></td>
 <td><code>string</code></td>
 <td>WilsverklaringType</td>
-<td>Kunnen vage datums zijn</td>
+<td></td>
 </tr>
 </tbody>
 </table>
