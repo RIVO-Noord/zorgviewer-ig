@@ -16,6 +16,7 @@
         {
           "path": "performedPeriod.start",
           "name": "Datum",
+          "description": "​Kunnen vage datums zijn.",
           "type": "dateTime",
           "tag": [ { "name": "Zib element", "value": "VerrichtingBeginDatum" } ]
         },
@@ -28,18 +29,21 @@
         {
           "path": "location.display",
           "name": "Locatie",
+          "description": "Zie discussie hier: <a href=\"https://bits.nictiz.nl/browse/MM-5002\">BITS ticket MM-5002</a>",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Locatie::Zorgaanbieder" } ]
         },
         {
           "path": "performer.actor.display.join('\n')",
           "name": "Uitgevoerd door",
+          "description": "Meestal alleen specialisme",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Uitvoerder" } ]
         },
         {
           "path": "code.coding[0].system+'#'+code.coding[0].code+' '+code.coding[0].display",
           "name": "+Verrichtingcode",
+          "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.​<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "VerrichtingType" } ]
         },
