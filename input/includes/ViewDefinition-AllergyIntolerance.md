@@ -34,14 +34,14 @@ Kolom definities:
 <td><samp>note.text</samp></td>
 <td><code>string</code></td>
 <td>Comment</td>
-<td>....</td>
+<td></td>
 </tr>
 <tr>
 <td>Categorie</td>
 <td><samp>category.join(',')</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
-<td>Hebt meerdere opties die tegelijk getoond kunnen worden</td>
+<td>Meerdere opties die tegelijk getoond kunnen worden</td>
 </tr>
 <tr>
 <td>CategorieCS</td>
@@ -54,50 +54,50 @@ Kolom definities:
 <td>Ernst(1)</td>
 <td><samp>criticality</samp></td>
 <td><code>code</code></td>
-<td>Criticality</td>
+<td>MateVanKritiek</td>
 <td></td>
 </tr>
 <tr>
 <td>Ernst(1)CS</td>
 <td><samp>criticality.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text</samp></td>
 <td><code>code</code></td>
-<td>Criticality</td>
+<td>MateVanKritiek</td>
 <td></td>
 </tr>
 <tr>
 <td>Ernst(2)</td>
 <td><samp>reaction[0].severity</samp></td>
 <td><code>code</code></td>
-<td>Severity</td>
+<td>Reactie/Ernst</td>
 <td></td>
 </tr>
 <tr>
 <td>Reacties</td>
 <td><samp>reaction[0].manifestation[0].text</samp></td>
 <td><code>string</code></td>
-<td>Symptom</td>
+<td>Reactie/Symptoom</td>
 <td></td>
 </tr>
 <tr>
 <td>Status</td>
 <td><samp>clinicalStatus</samp></td>
 <td><code>code</code></td>
-<td>AllergyStatus</td>
-<td></td>
+<td>AllergieStatus</td>
+<td>‘Actief’, ‘Niet meer aanwezig’, ‘Achterhaald’. ‘Foutief’ status wordt niet getoond in de Zorgviewer (wordt uitgefilterd). Indien geen extensie aanwezig, dan worden de waarden als volgt gemapped: Active -> Actief; InActive -> Achterhaald; Resolved -> Niet meer aanwezig</td>
 </tr>
 <tr>
 <td>StatusCS</td>
 <td><samp>clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text</samp></td>
 <td><code>code</code></td>
-<td>AllergyStatus</td>
-<td></td>
+<td>AllergieStatus</td>
+<td>Zie AllergieStatus</td>
 </tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>(VStatus)</td>
 <td><samp>verificationStatus</samp></td>
 <td><code>code</code></td>
-<td>AllergyStatus</td>
+<td>AllergieStatus</td>
 <td></td>
 </tr>
 </tbody>
