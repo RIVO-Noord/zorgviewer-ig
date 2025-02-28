@@ -1,8 +1,8 @@
 {% include profile-note.md %}
 
 <blockquote class="stu-note" markdown="1">
-* N.B. "Geverifieerd" en "Geverifieerd bij" wel gewenst, maar niet beschikbaar in alle huidige configuraties en "echte" voorbeeld data.
-* Op dit moment zijn alleen de Behandelwensen deel (de BehandelAanwijzing zib) in scope. Deze specificering van de zib BehandelAanwijzing is te vinden in dit [profile](#profile).
+* N.B. "Geverifieerd" en "Geverifieerd bij" wel gewenst vanuit FMS, maar niet beschikbaar in alle huidige configuraties en "echte" voorbeeld data.
+* Op dit moment zijn alleen de ACP Behandelwensen deel (de BehandelAanwijzing zib) in scope. Deze specificering van de zib BehandelAanwijzing is te vinden in dit [profile](#profile).
 </blockquote>
 
 ### Zorginformatiebouwsteen
