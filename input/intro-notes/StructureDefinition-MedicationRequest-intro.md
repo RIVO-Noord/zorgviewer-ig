@@ -12,7 +12,7 @@
 {% include ViewDefinition-MedicationRequest.svg %}
 </div>
 
-{% include legenda.md %}
+{% include ViewDefinition-MedicationRequest.md %}
 
 ### Request
 

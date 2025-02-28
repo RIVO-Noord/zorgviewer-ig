@@ -2,18 +2,13 @@
 :
 == Alerts / Waarschuwingen
 |= Bron |= Datum |= Voor |= Voor-detail |= Categorie |= Status |
-|<back:yellow> //nvt//\n<back:lightgreen> //string// |<back:yellow> //BeginDatumTijd//\n<back:lightgreen> //dateTime// |<back:yellow> //AlertNaam//\n<back:lightgreen> //string// |<back:yellow> //Conditie::Probleem//\n<back:lightgreen> //dateTime// |<back:yellow> //AlertType//\n<back:lightgreen> //string// |<back:yellow> //nvt//\n<back:lightgreen> //code// |
 | Chipsoft | 2010-06-01 | Drager MRSA |  | waarschuwing | active |
 | Epic | 2022-05-10T20:55:17Z | TBC |  | Infection Flag | inactive |
 | Nexus | 2022-05-16 | LET OP!!!!!\n Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5.... |  | Waarschuwing | active |
 | |
 
-<color:gray>//Column fhirpaths://
-<color:gray>//1. meta.extension('http:~//hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri//
-<color:gray>//2. period.start//
-<color:gray>//3. iif(exists(code.text),code.text,code.coding.display)//
-<color:gray>//4. extension('http:~//hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text+extension('http:~//hl7.org/fhir/StructureDefinition/flag-detail').valueReference.display//
-<color:gray>//5. iif(exists(category.text),category.text,category.coding.display)//
-<color:gray>//6. status//
+//Legenda//
+//+Kolom - in de uitklap//
+//(Kolom) - gebruikt voor formatting of verbergen//
 ;
 @enduml

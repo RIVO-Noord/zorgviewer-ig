@@ -2,7 +2,6 @@
 :
 == Behandelaanwijzingen
 |= Bron |= Category |= Datum |= Behandeling |= Behandeling toegestaan |= Beperkingen |= Geverifieerd bij |= (status) |
-|<back:yellow> //nvt//\n<back:lightgreen> //string// |<back:yellow> //nvt//\n<back:lightgreen> //string// |<back:yellow> //BeginDatum//\n<back:lightgreen> //dateTime// |<back:yellow> //Behandeling//\n<back:lightgreen> //string// |<back:yellow> //BehandelingToegestaan//\n<back:lightgreen> //string// |<back:yellow> //Beperkingen//\n<back:lightgreen> //string// |<back:yellow> //GeverifieerdBij//\n<back:lightgreen> //string// |<back:yellow> //nvt//\n<back:lightgreen> //code// |
 | Chipsoft | Living will and advance directive record & other |  |  |  |  |  | active |
 | Epic | Wilsverklaring & Niet reanimeren verklaring |  |  |  |  |  | active |
 | Nexus | Wilsverklaring (artefact opnemen) & volmacht |  |  |  |  |  | active |
@@ -13,14 +12,8 @@
 | Topicus | Treatment instructions & Advance Directive | 2023-10-03T14:56:05+02:00 | cardiopulmonale resuscitatie | Ja |  |  | active |
 | |
 
-<color:gray>//Column fhirpaths://
-<color:gray>//1. meta.extension('http:~//hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri//
-<color:gray>//2. category.coding.display.join(' & ')//
-<color:gray>//3. period.start//
-<color:gray>//4. extension('http:~//nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.coding[0].display//
-<color:gray>//5. modifierExtension.where(url='http:~//nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.display//
-<color:gray>//6. except.extension('http:~//nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions').value//
-<color:gray>//7. extension('http:~//nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification').extension('VerifiedWith').valueCodeableConcept.text.join(' & ')//
-<color:gray>//8. status//
+//Legenda//
+//+Kolom - in de uitklap//
+//(Kolom) - gebruikt voor formatting of verbergen//
 ;
 @enduml

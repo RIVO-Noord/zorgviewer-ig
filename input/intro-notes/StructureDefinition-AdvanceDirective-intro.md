@@ -6,48 +6,13 @@
 
 ### View Definition
 
-[ViewDefinition voor Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
+[ViewDefinition voor Wilsbeschikkingen](ViewDefinition-Wilsbeschikkingen.json)
 
 <div>
-{% include ViewDefinition-Behandelaanwijzingen.svg %}
+{% include ViewDefinition-Wilsbeschikkingen.svg %}
 </div>
 
-{% include legenda.md %}
-
-
-Kolom definities:
-<table class="grid">
-  <thead>
-    <th>Kolom label</th>
-    <th width="25%">FHIR Path</th>
-    <th>FHIR Type</th>
-    <th>Zib element</th>
-    <th>Toelichting of regels</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Bron</td>
-      <td><samp>.meta.extension("http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source").valueUri</samp></td>
-      <td><code>string</code></td>
-      <td><i>nvt</i></td>
-      <td> of lookup adhv code (AGB-Z of OID)</td>
-    </tr>
-    <tr>
-      <td>Datum</td>
-      <td><samp>.dateTime</samp></td>
-      <td><code>dateTime</code></td>
-      <td>WilsverklaringDatum</td>
-      <td>Kunnen vage datums zijn</td>
-    </tr>
-    <tr>
-      <td>Type​</td>
-      <td><samp>.category[1].text</samp></td>
-      <td><code>string</code></td>
-      <td>WilsverklaringType</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{% include ViewDefinition-Wilsbeschikkingen.md %}
 
 ### Request
 

@@ -50,7 +50,7 @@ Kolom definities:
       <td></td>
     </tr>
     <tr style="background-color:#8faadc; color:white">
-      <th colspan="5">(1) UITKLAPVELD</tH>
+      <th colspan="5">(1) UITKLAPVELD</th>
     </tr>
     <tr style="background-color:#b4c7e7">
       <td>Diagnose</td>
@@ -67,7 +67,7 @@ Kolom definities:
       <td></td>
     </tr>
     <tr style="background-color:#adb9ca; color:white">
-      <th colspan="5">MARKERING</tH>
+      <th colspan="5">MARKERING</th>
     </tr>
     <tr style="background-color:#d6dce5">
       <td></td>

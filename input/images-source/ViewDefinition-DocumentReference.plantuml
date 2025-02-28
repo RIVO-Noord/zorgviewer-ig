@@ -2,19 +2,12 @@
 :
 == Correspondentie
 |= Bron |= Datum |= Type |= Class |= Beschrijving |= Auteur |= Specialisme |= (MimeType - voor filteren op pdf) |
-|<back:yellow> //nvt//\n<back:lightgreen> //string// |<back:yellow> //nvt//\n<back:lightgreen> //dateTime// |<back:yellow> //nvt//\n<back:lightgreen> //string// |<back:yellow> //nvt//\n<back:lightgreen> //string// |<back:yellow> //nvt//\n<back:lightgreen> //string// |<back:yellow> //nvt//\n<back:lightgreen> //string// |<back:yellow> //nvt//\n<back:lightgreen> //string// |<back:yellow> //nvt//\n<back:lightgreen> //code// |
 | Chipsoft | 2022-05-11T22:00:00+00:00 | 51852-2 | 51852-2 | test.pdf |  | 394802001 | application/pdf |
 | Epic | 2021-12-15T09:36:00Z | Patiëntenbrief | Correspondence | Patiëntenbrief | G Boer | KGA - Genetica | application/pdf |
 | |
 
-<color:gray>//Column fhirpaths://
-<color:gray>//1. meta.extension('http:~//hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri//
-<color:gray>//2. iif(exists(context.period.start),context.period.start,indexed+'(i)')//
-<color:gray>//3. iif(type.text.startsWith('2.16.840.1.113883.'),type.coding[0].code,type.text)//
-<color:gray>//4. iif(class.text.startsWith('2.16.840.1.113883.'),class.coding[0].code,class.text)//
-<color:gray>//5. iif(exists(description),description,content.attachment.title)//
-<color:gray>//6. author.display//
-<color:gray>//7. iif(context.practiceSetting.text.startsWith('2.16.840.1.113883.'),context.practiceSetting.coding.code,context.practiceSetting.text)//
-<color:gray>//8. content.attachment.contentType//
+//Legenda//
+//+Kolom - in de uitklap//
+//(Kolom) - gebruikt voor formatting of verbergen//
 ;
 @enduml

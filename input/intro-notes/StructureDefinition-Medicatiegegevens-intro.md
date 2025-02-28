@@ -13,11 +13,7 @@
 {% include ViewDefinition-Medicatiegegevens.svg %}
 </div>
 
-{% include legenda.md %}
-
-<div>
-{% include UI-Mockup-Medicatie.svg %}
-</div>
+{% include ViewDefinition-Medicatiegegevens.md %}
 
 ### Requests
 

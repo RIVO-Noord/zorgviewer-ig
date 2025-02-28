@@ -2,19 +2,14 @@
 :
 == Problemen (incl. diagnosen)
 |= Bron |= Datum |= Diagnose |= +Diagnose |= +Toelichting |= (regelkleur) |
-|<back:yellow> //nvt//\n<back:lightgreen> //string// |<back:yellow> //ProbleemBeginDatum//\n<back:lightgreen> //Period/dateTime// |<back:yellow> //ProbleemNaam//\n<back:lightgreen> //string// |<back:yellow> //ProbleemNaam//\n<back:lightgreen> //string// |<back:yellow> //Toelichting//\n<back:lightgreen> //string// |<back:yellow> //ProbleemStatus//\n<back:lightgreen> //code// |
 | Chipsoft | 2001-01-01 | fractuur van pols | http://hl7.org/fhir/v3/NullFlavor#OTH other | Gevallen op kunstijsbaan. | active |
 | Epic-note | 2023-02-23 | posttraumatische stressstoornis (incl. de posttraumatische-stressstoornis bij ki... | http://hl7.org/fhir/sid/icd-10-nl#F43.1  | 2022-02: ziekte van Crohn\n 2021-07: Complicatie ANPY infectie lokaal\n 2021-03:... | active |
 | Epic | 2012-08-16 | fractuur van onderste extremiteit | http://hl7.org/fhir/sid/icd-10-nl#T12.0  |  | active |
 | Nexus | 2001 |  | http://snomed.info/sct#31641000146105 fractuur van pols | Gevallen op kunstijsbaan | inactive |
 | |
 
-<color:gray>//Column fhirpaths://
-<color:gray>//1. meta.extension('http:~//hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri//
-<color:gray>//2. iif(exists(onsetPeriod),onsetPeriod.start,onsetDateTime)//
-<color:gray>//3. code.text//
-<color:gray>//4. code.coding[0].system+'#'+code.coding[0].code+' '+iif(exists(code.coding[0].display),code.coding[0].display,'')//
-<color:gray>//5. note.text//
-<color:gray>//6. clinicalStatus//
+//Legenda//
+//+Kolom - in de uitklap//
+//(Kolom) - gebruikt voor formatting of verbergen//
 ;
 @enduml

@@ -25,73 +25,13 @@ Op dit moment zijn alleen de Behandelwensen deel (de BehandelAanwijzing zib) in 
 
 ### View Definition
 
-Kolom definities:
-<table class="grid">
-  <thead>
-    <th>Kolom label</th>
-    <th width="25%">FHIR Path</th>
-    <th>FHIR Type</th>
-    <th>Zib element</th>
-    <th>Toelichting of regels</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Bron</td>
-      <td><samp>.meta.extension("http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source").valueUri</samp></td>
-      <td><code>string</code></td>
-      <td><i>nvt</i></td>
-      <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
-    </tr>  
-    <tr>
-      <td>Datum</td>
-      <td><samp>.period.start​</samp></td>
-      <td><code>dateTime</code></td>
-      <td></td>
-      <td>Kunnen vage datums zijn.</td>
-    </tr>
-    <tr>
-      <td>Behandeling</td>
-      <td><samp>.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment')...</samp><br/>
-      Variaties per bronsysteem<ul><li>Epic: <samp>...valueCodeableConcept.text</samp> met lange display</li> 
-      <li>VIPLive: <samp>...valueCodeableConcept.display</samp> in het Engels</li> 
-      <li>ChipSoft: <samp>...valueCodeableConcept.text</samp> korte display met hoofdletters</li></ul></td>
-      <td><code>string</code></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Behandeling toegestaan</td>
-      <td><samp>.modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.display</samp></td>
-      <td><code>string</code></td>
-      <td>BehandelingToegestaan</td>
-      <td>Zie UI schets voor icon mapping. N.B. obv coding.code</td>
-    </tr>
-    <tr>
-      <td>Beperkingen</td>
-      <td><samp>.except.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions').value</samp></td>
-      <td><code>string</code></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Geverifieerd bij</td>
-      <td><samp>.extension.extension.where(url='VerifiedWith').valueCodeableConcept.text</samp></td>
-      <td><code>string</code></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr style="background-color:#8faadc; color:white">
-      <th colspan="5">(1) UITKLAPVELD</tH>
-    </tr>
-    <tr style="background-color:#b4c7e7">
-      <td>Toelichting</td>
-      <td><samp>.extension.where(url='http://nictiz.nl/fhir/StructureDefinition/Comment').valueString</samp></td>
-      <td><code>string</code></td>
-      <td>Toelichting</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+[ViewDefinition voor Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
+
+<div>
+{% include ViewDefinition-Behandelaanwijzingen.svg %}
+</div>
+
+{% include ViewDefinition-Behandelaanwijzingen.md %}
 
 ### User-Interface Mockup
 
