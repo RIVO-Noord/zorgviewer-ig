@@ -38,8 +38,7 @@ De implementatiegids bestaat uit een aantal tabbladen met sub-tabbladen. Elk tab
 - [Design](design.html) = het volledige ontwerp van de Zorgviewer
 
 <strong>Tabblad: RAO</strong>
-Dit tabblad is voor de aanvullingen vanuit het Regionaal Architecten Overleg vanuit RIVO
-- [Inzage Zorgnetwerk](zorgnetwerk.html) = overzicht hoe de verschillende systemen acteren rondom de patiënt met als perspectief 'de Zorgviewer'
+Dit tabblad bevat onderwerpen vanuit het RIVO Regionaal Architectuur Overleg.
 
 <strong>Tabblad: Artifact Index</strong>
 - [Artifact index](artifacts.html) = beschrijving van onder andere de FHIR resources. Deze pagina wordt gebruikt om de details van de FHIR resources in te zien met een aantal voorbeelden vanuit de verschillende organisaties en systemen
