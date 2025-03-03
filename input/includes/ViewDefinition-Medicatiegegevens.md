@@ -8,6 +8,7 @@ Kolom definities:
 <th>Toelichting of regels</th>
 </thead>
 <tbody>
+<tr><td colspan=5><i>MedicationRequest</i></td></tr>
 <tr>
 <td>Bron</td>
 <td><samp>meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri</samp></td>
@@ -58,6 +59,7 @@ Kolom definities:
 <td><i>nvt</i></td>
 <td></td>
 </tr>
+<tr><td colspan=5><i>MedicationStatement</i></td></tr>
 <tr>
 <td>Bron</td>
 <td><samp>meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri</samp></td>

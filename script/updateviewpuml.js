@@ -77,6 +77,11 @@ fs.readdirSync(viewDefPath).forEach(file => {
         if (viewDef.select[0].unionAll) {
             // assume first columns is the final list of columns
             viewDef.select[0].unionAll.forEach(union => {
+                const match = union.forEach.match("resourceType='(.+)'");
+                if (match) {
+                    const resourceType = match[1];
+                    md.push(`<tr><td colspan=5><i>${resourceType}</i></td></tr>`);
+                }
                 doColumns(union.column, puml, md);
                 union.column.forEach(column => columnPaths.push(column.path));
                 puml.push("| |");
