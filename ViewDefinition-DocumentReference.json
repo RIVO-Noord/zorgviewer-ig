@@ -16,6 +16,7 @@
         {
           "path": "iif(exists(context.period.start),context.period.start,indexed+'(i)')",
           "name": "Datum",
+          "description": "N.B. tijd is GMT, dus omzetten naar CET. Ter info: indien datum uit ​.indexed komt, wordt deze gemarkeerd met een icoontje (i)",
           "type": "dateTime",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
@@ -34,24 +35,28 @@
         {
           "path": "iif(exists(description),description,content.attachment.title)",
           "name": "Beschrijving",
+          "description": "Tijdelijk voor Zorgplatform: gebruik <code>content.attachment.title</code> voor de beschrijving van documenten inclusief het strippen van de <code>.pdf</code> extensie",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
           "path": "author.display",
           "name": "Auteur",
+          "description": "Tijdelijk voor Zorgplatform: indien <code>author.display</code> is gevuld met een OID, dan wordt het veld gevuld met <code>Auteur niet bekend</code>",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
           "path": "iif(context.practiceSetting.text.startsWith('2.16.840.1.113883.'),context.practiceSetting.coding.code,context.practiceSetting.text)",
           "name": "Specialisme",
+          "description": "Tijdelijk voor Zorgplatform: indien <code>context.practiceSetting.text</code> is gevuld met een OID (startsWith('2.16.840.1.113883.)), dan wordt het veld gevuld met <code>context.practiceSetting.coding.code</code> (een SNOMED CT code)",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
           "path": "content.attachment.contentType",
-          "name": "(MimeType - voor filteren op pdf)",
+          "name": "(MimeType)",
+          "description": "Alleen <code>application/pdf</code> tonen",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }
