@@ -8,78 +8,7 @@
 {% include ViewDefinition-DocumentReference.svg %}
 </div>
 
-{% include legenda.md %}
-
-Kolom definities:
-<table class="grid">
-  <thead>
-    <th>Kolom label</th>
-    <th width="25%">FHIR Path</th>
-    <th>FHIR Type</th>
-    <th>Zib element</th>
-    <th>Toelichting of regels</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Bron</td>
-      <td><samp>.meta.extension("http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source").valueUri</samp></td>
-      <td><code>string</code></td>
-      <td><i>nvt</i></td>
-      <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
-    </tr>
-    <tr>
-      <td>Datum</td>
-      <td><samp>.context.period.start</samp> of <samp>.indexed</samp> indien <samp>.context.period.start</samp> leeg is</td>
-      <td><code>dateTime</code></td>
-      <td><i>nvt</i></td>
-      <td>N.B. tijd is GMT, dus omzetten naar CET. 
-      
-  Ter info: indien datum uit ​<samp>.indexed</samp> komt, wordt deze gemarkeerd met een icoontje (i) </td>
-    </tr>
-    <tr>
-      <td>Type</td>
-      <td><samp>iif(type.text.startsWith('2.16.840.1.113883.'),type.coding[0].code,type.text)</samp></td>
-      <td><code>code</code></td>
-      <td><i>nvt</i></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Klasse</td>
-      <td><samp>iif(class.text.startsWith('2.16.840.1.113883.'),class.coding[0].code,class.text)</samp></td>
-      <td><code>code</code></td>
-      <td><i>nvt</i></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Beschrijving</td>
-      <td><samp>.description​</samp></td>
-      <td><code>string</code></td>
-      <td><i>nvt</i></td>
-      <td>Tijdelijk voor Zorgplatform: gebruik <code>content.attachment.title</code> voor de beschrijving van documenten inclusief het strippen van de <code>.pdf</code>extensie</td>
-    </tr>
-    <tr>
-      <td>Auteur</td>
-      <td><samp>.author.display</samp></td>
-      <td><code>string</code></td>
-      <td><i>nvt</i></td>
-      <td>Tijdelijk voor Zorgplatform: indien <code>.author.display</code> is gevuld met een OID, dan wordt het veld gevuld met <code>Auteur niet bekend</code></td>
-    </tr>
-    <tr>
-      <td>Specialisme</td>
-      <td><samp>.context.practiceSetting.text</samp></td>
-      <td><code>string</code></td>
-      <td><i>nvt</i></td>
-      <td>Tijdelijk voor Zorgplatform: indien <code>.context.practiceSetting.text</code> is gevuld met een OID (startsWith('2.16.840.1.113883.)), dan wordt het veld gevuld met <code>.context.practiceSetting.coding.code</code> (een SNOMED CT code)</td>
-    </tr>
-    <tr style="background-color:gray; color:white">
-      <td>MimeType (voor filtering op pdf)</td>
-      <td><samp>.content.attachment.contentType</samp></td>
-      <td><code>string</code></td>
-      <td><i>nvt</i></td>
-      <td>Alleen <code>application/pdf</code> tonen</td>
-    </tr>
-  </tbody>
-</table>
+{% include ViewDefinition-DocumentReference.md %}
 
 ### Document soorten herkennen
 
