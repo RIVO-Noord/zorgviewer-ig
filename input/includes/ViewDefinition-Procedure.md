@@ -24,7 +24,7 @@ Kolom definities:
 </tr>
 <tr>
 <td>Verrichting</td>
-<td><samp>iif(exists(code.text),code.text,code.coding.display)</samp></td>
+<td><samp>iif(exists(code.text), code.text, code.coding.display)</samp></td>
 <td><code>string</code></td>
 <td>VerrichtingType</td>
 <td></td>
@@ -47,7 +47,7 @@ Kolom definities:
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Verrichtingcode</td>
-<td><samp>code.coding[0].system+'#'+code.coding[0].code+' '+code.coding[0].display</samp></td>
+<td><samp>code.coding[0].system + '#' + code.coding[0].code + ' ' + code.coding[0].display</samp></td>
 <td><code>string</code></td>
 <td>VerrichtingType</td>
 <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.​<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code></td>

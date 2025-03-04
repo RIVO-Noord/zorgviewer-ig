@@ -17,28 +17,28 @@ Kolom definities:
 </tr>
 <tr>
 <td>Datum</td>
-<td><samp>iif(exists(context.period.start),context.period.start,indexed+'(i)')</samp></td>
+<td><samp>iif(exists(context.period.start), context.period.start, indexed+'(i)')</samp></td>
 <td><code>dateTime</code></td>
 <td>nvt</td>
-<td>N.B. tijd is GMT, dus omzetten naar CET. Ter info: indien datum uit ​.indexed komt, wordt deze gemarkeerd met een icoontje (i)</td>
+<td>N.B. tijd is GMT, dus omzetten naar CET. Ter info: indien datum uit <code>indexed</code> komt, wordt deze gemarkeerd met een icoontje (i)</td>
 </tr>
 <tr>
 <td>Type</td>
-<td><samp>iif(type.text.startsWith('2.16.840.1.113883.'),type.coding[0].code,type.text)</samp></td>
+<td><samp>iif(type.text.startsWith('2.16.840.1.113883.'), type.coding[0].code, type.text)</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td></td>
 </tr>
 <tr>
 <td>Class</td>
-<td><samp>iif(class.text.startsWith('2.16.840.1.113883.'),class.coding[0].code,class.text)</samp></td>
+<td><samp>iif(class.text.startsWith('2.16.840.1.113883.'), class.coding[0].code, class.text)</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td></td>
 </tr>
 <tr>
 <td>Beschrijving</td>
-<td><samp>iif(exists(description),description,content.attachment.title)</samp></td>
+<td><samp>iif(exists(description), description, content.attachment.title)</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td>Tijdelijk voor Zorgplatform: gebruik <code>content.attachment.title</code> voor de beschrijving van documenten inclusief het strippen van de <code>.pdf</code> extensie</td>
@@ -52,7 +52,7 @@ Kolom definities:
 </tr>
 <tr>
 <td>Specialisme</td>
-<td><samp>iif(context.practiceSetting.text.startsWith('2.16.840.1.113883.'),context.practiceSetting.coding.code,context.practiceSetting.text)</samp></td>
+<td><samp>iif(context.practiceSetting.text.startsWith('2.16.840.1.113883.'), context.practiceSetting.coding.code, context.practiceSetting.text)</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td>Tijdelijk voor Zorgplatform: indien <code>context.practiceSetting.text</code> is gevuld met een OID (startsWith('2.16.840.1.113883.)), dan wordt het veld gevuld met <code>context.practiceSetting.coding.code</code> (een SNOMED CT code)</td>

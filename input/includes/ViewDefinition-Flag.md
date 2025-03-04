@@ -31,7 +31,7 @@ Kolom definities:
 </tr>
 <tr>
 <td>Voor-detail</td>
-<td><samp>extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text+extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.display</samp></td>
+<td><samp>extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text + extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.display</samp></td>
 <td><code>dateTime</code></td>
 <td>Conditie::Probleem</td>
 <td>De resolve levert de bijbehorende Condition</td>
@@ -48,7 +48,7 @@ Kolom definities:
 <td><samp>status</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
-<td>Mapping: ‘active’ naar ‘actueel’; ‘in-active’ naar ‘niet actueel’ Uitgefilterd: ‘entered-in-error’ wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.</td>
+<td>Mapping: <code>active</code> naar <code>actueel</code>; <code>in-active</code> naar <code>niet actueel</code> Uitgefilterd: <code>entered-in-error</code> wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.</td>
 </tr>
 </tbody>
 </table>
