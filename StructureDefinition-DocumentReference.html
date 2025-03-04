@@ -327,28 +327,28 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 </tr>
 <tr>
 <td>Datum</td>
-<td><samp>iif(exists(context.period.start),context.period.start,indexed+'(i)')</samp></td>
+<td><samp>iif(exists(context.period.start), context.period.start, indexed+'(i)')</samp></td>
 <td><code>dateTime</code></td>
 <td>nvt</td>
-<td>N.B. tijd is GMT, dus omzetten naar CET. Ter info: indien datum uit ​.indexed komt, wordt deze gemarkeerd met een icoontje (i)</td>
+<td>N.B. tijd is GMT, dus omzetten naar CET. Ter info: indien datum uit <code>indexed</code> komt, wordt deze gemarkeerd met een icoontje (i)</td>
 </tr>
 <tr>
 <td>Type</td>
-<td><samp>iif(type.text.startsWith('2.16.840.1.113883.'),type.coding[0].code,type.text)</samp></td>
+<td><samp>iif(type.text.startsWith('2.16.840.1.113883.'), type.coding[0].code, type.text)</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td></td>
 </tr>
 <tr>
 <td>Class</td>
-<td><samp>iif(class.text.startsWith('2.16.840.1.113883.'),class.coding[0].code,class.text)</samp></td>
+<td><samp>iif(class.text.startsWith('2.16.840.1.113883.'), class.coding[0].code, class.text)</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td></td>
 </tr>
 <tr>
 <td>Beschrijving</td>
-<td><samp>iif(exists(description),description,content.attachment.title)</samp></td>
+<td><samp>iif(exists(description), description, content.attachment.title)</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td>Tijdelijk voor Zorgplatform: gebruik <code>content.attachment.title</code> voor de beschrijving van documenten inclusief het strippen van de <code>.pdf</code> extensie</td>
@@ -362,7 +362,7 @@ Voornamelijk bedoeld voor houvast van een client en voor validatie van output.</
 </tr>
 <tr>
 <td>Specialisme</td>
-<td><samp>iif(context.practiceSetting.text.startsWith('2.16.840.1.113883.'),context.practiceSetting.coding.code,context.practiceSetting.text)</samp></td>
+<td><samp>iif(context.practiceSetting.text.startsWith('2.16.840.1.113883.'), context.practiceSetting.coding.code, context.practiceSetting.text)</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td>Tijdelijk voor Zorgplatform: indien <code>context.practiceSetting.text</code> is gevuld met een OID (startsWith('2.16.840.1.113883.)), dan wordt het veld gevuld met <code>context.practiceSetting.coding.code</code> (een SNOMED CT code)</td>
@@ -2344,7 +2344,7 @@ Samenvatting
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Mar 4, 2025 09:52+0000">2025-03-04</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Mar 4, 2025 10:32+0000">2025-03-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

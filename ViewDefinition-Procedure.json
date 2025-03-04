@@ -21,7 +21,7 @@
           "tag": [ { "name": "Zib element", "value": "VerrichtingBeginDatum" } ]
         },
         {
-          "path": "iif(exists(code.text),code.text,code.coding.display)",
+          "path": "iif(exists(code.text), code.text, code.coding.display)",
           "name": "Verrichting",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "VerrichtingType" } ]
@@ -41,7 +41,7 @@
           "tag": [ { "name": "Zib element", "value": "Uitvoerder" } ]
         },
         {
-          "path": "code.coding[0].system+'#'+code.coding[0].code+' '+code.coding[0].display",
+          "path": "code.coding[0].system + '#' + code.coding[0].code + ' ' + code.coding[0].display",
           "name": "+Verrichtingcode",
           "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.​<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
           "type": "string",
