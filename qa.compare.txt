@@ -1,7 +1,7 @@
 ZorgviewerIG : Validation Results
 =========================================
 
-err = 132, warn = 118, info = 104
+err = 127, warn = 117, info = 102
 $--
 Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http://fhir.hl7.nl/zorgviewer)
  Build Errors : 5 / 5 / 0
@@ -86,18 +86,16 @@ Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-VIPLive : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Parameters-exp-params : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/PlanDefinition-BgZ2017 : 0 / 2 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-ICD10dut : 2 / 0 / 2
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-ICPC1NL : 2 / 0 / 2
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-SCT : 2 / 0 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-bronsysteem-zorgaanbieder : 0 / 1 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ConceptMap-behandelaanwijzing-2017-2020 : 0 / 9 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ConceptMap-epic-rolcode : 0 / 16 / 5
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ConceptMap-patient-toestemming : 1 / 7 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ValueSet-ACPTreatmentCodelist : 0 / 0 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ValueSet-CodeSystems : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ValueSet-DocumentLOINCCodelist : 0 / 0 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ValueSet-ProbleemNaamCodelist : 1 / 0 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ValueSet-ProbleemNaamCodelist : 2 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ValueSet-SubjectRoleCodelists : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ValueSet-VerrichtingTypeCodelist : 1 / 0 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/ValueSet-bronsysteem-zorgaanbieder : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/zorgviewer-ig : 0 / 4 / 1
 </table>
 == n/a ==
@@ -491,19 +489,6 @@ INFORMATION: Organization/UMCG: Organization.identifier[2]: Dit element komt nie
 == input/resources/PlanDefinition-BgZ2017.json ==
 WARNING: PlanDefinition/BgZ2017: PlanDefinition.action[0].output[2].codeFilter[0].valueCoding[0]: Een code zonder system heeft geen gedefinieerde betekenis en kan niet worden gevalideerd. Er zou een system moeten zijn
 WARNING: PlanDefinition/BgZ2017: PlanDefinition.action[0].output[2].codeFilter[0].valueCoding[1]: Een code zonder system heeft geen gedefinieerde betekenis en kan niet worden gevalideerd. Er zou een system moeten zijn
-== input/vocabulary/CodeSystem-ICD10dut.json ==
-ERROR: CodeSystem.where(url = 'http://hl7.org/fhir/sid/icd-10-nl'): Conformance resource /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-ICD10dut.json - the canonical URL (http://fhir.hl7.nl/zorgviewer/CodeSystem/ICD10dut) does not match the URL (http://hl7.org/fhir/sid/icd-10-nl)
-INFORMATION: CodeSystem/ICD10dut: CodeSystem: Meeste codesystemen gedefinieerd in HL7 IG's zullen later naar THO worden verplaatst in het proces. Overweeg om dit codesysteem nu al een THO url te geven (Zie https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, en/of praat met TSMG)
-ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-ICD10dut: URL Mismatch http://fhir.hl7.nl/zorgviewer/CodeSystem/ICD10dut vs http://hl7.org/fhir/sid/icd-10-nl
-== input/vocabulary/CodeSystem-ICPC1NL.json ==
-ERROR: CodeSystem.where(url = 'http://hl7.org/fhir/sid/icpc-1-nl'): Conformance resource /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-ICPC1NL.json - the canonical URL (http://fhir.hl7.nl/zorgviewer/CodeSystem/ICPC-1-NL) does not match the URL (http://hl7.org/fhir/sid/icpc-1-nl)
-INFORMATION: CodeSystem/ICPC-1-NL: CodeSystem: Meeste codesystemen gedefinieerd in HL7 IG's zullen later naar THO worden verplaatst in het proces. Overweeg om dit codesysteem nu al een THO url te geven (Zie https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, en/of praat met TSMG)
-ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-ICPC1NL: URL Mismatch http://fhir.hl7.nl/zorgviewer/CodeSystem/ICPC-1-NL vs http://hl7.org/fhir/sid/icpc-1-nl
-== input/vocabulary/CodeSystem-SCT.json ==
-ERROR: CodeSystem.where(url = 'http://snomed.info/sct'): Conformance resource /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-SCT.json - the canonical URL (http://fhir.hl7.nl/zorgviewer/CodeSystem/SCT) does not match the URL (http://snomed.info/sct)
-ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/vocabulary/CodeSystem-SCT: URL Mismatch http://fhir.hl7.nl/zorgviewer/CodeSystem/SCT vs http://snomed.info/sct
-== input/vocabulary/CodeSystem-bronsysteem-zorgaanbieder.json ==
-WARNING: CodeSystem/bronsysteem-zorgaanbieder: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
 == input/vocabulary/ConceptMap-behandelaanwijzing-2017-2020.json ==
 WARNING: ConceptMap/behandelaanwijzing-2017-2020: ConceptMap.group[0].element[0].target[0]: De modifier extensie http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence uit FHIR version 1.0 is niet toegestaan om te worden gebruikt op dit punt (toegestaan = e:ConceptMap.element.target; dit element is [[BackboneElement, ConceptMap.group.element.target]; dit is een waarschuwing aangezien contexten gewijzigd mogen worden tussen versies van FHIR)
 WARNING: ConceptMap/behandelaanwijzing-2017-2020: ConceptMap.group[0].element[1].target[0]: De modifier extensie http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence uit FHIR version 1.0 is niet toegestaan om te worden gebruikt op dit punt (toegestaan = e:ConceptMap.element.target; dit element is [[BackboneElement, ConceptMap.group.element.target]; dit is een waarschuwing aangezien contexten gewijzigd mogen worden tussen versies van FHIR)
@@ -545,12 +530,15 @@ ERROR: ConceptMap/patient-toestemming: ConceptMap.target: Reference must be to a
 WARNING: ConceptMap/patient-toestemming: ConceptMap.group[0]: Geen bron CodeSystem, dus de bron-codes kunnen niet worden gecontroleerd
 WARNING: ConceptMap/patient-toestemming: ConceptMap.group[0]: Geen doel CodeSystem, dus de doel-codes kunnen niet worden gecontroleerd
 == input/vocabulary/ValueSet-ACPTreatmentCodelist.json ==
+== input/vocabulary/ValueSet-CodeSystems.json ==
 == input/vocabulary/ValueSet-DocumentLOINCCodelist.json ==
 == input/vocabulary/ValueSet-ProbleemNaamCodelist.json ==
+ERROR: ValueSet/ProbleemNaamCodelist: ValueSet.compose.include[2].system: URL-waarde 'http://hl7.org/fhir/sid/icpc-1-nl' komt nergens uit
 ERROR: ValueSet.where(id = 'ProbleemNaamCodelist'): Error converting output stream to byte array
 == input/vocabulary/ValueSet-SubjectRoleCodelists.json ==
 == input/vocabulary/ValueSet-VerrichtingTypeCodelist.json ==
 ERROR: ValueSet.where(id = 'VerrichtingTypeCodelist'): Error converting output stream to byte array
+== input/vocabulary/ValueSet-bronsysteem-zorgaanbieder.json ==
 == input/zorgviewer-ig.json ==
 WARNING: ImplementationGuide/hl7.fhir.nl.zorgviewer: ImplementationGuide.dependency[0]: De extensie http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId van FHIR versie 4.0 is niet toegestaan om te worden gebruikt op dit punt (toegestaan = e:ImplementationGuide.dependsOn; dit element is [[BackboneElement, ImplementationGuide.dependency]; Dit is een waarschuwing aangezien contexten gewijzigd mogen worden tussen versies van FHIR)
 WARNING: ImplementationGuide/hl7.fhir.nl.zorgviewer: ImplementationGuide.dependency[0]: De extensie http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version van FHIR versie 4.0 is niet toegestaan om te worden gebruikt op dit punt (toegestaan = e:ImplementationGuide.dependsOn; dit element is [[BackboneElement, ImplementationGuide.dependency]; Dit is een waarschuwing aangezien contexten gewijzigd mogen worden tussen versies van FHIR)
