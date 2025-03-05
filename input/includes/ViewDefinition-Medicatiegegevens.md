@@ -55,7 +55,7 @@ Kolom definities:
 <tr style="background-color:#b4c7e7">
 <td>+Type</td>
 <td><samp>'voorgeschreven'</samp></td>
-<td><code>undefined</code></td>
+<td><code>string</code></td>
 <td><i>nvt</i></td>
 <td></td>
 </tr>
@@ -106,7 +106,7 @@ Kolom definities:
 <tr style="background-color:#b4c7e7">
 <td>+Type</td>
 <td><samp>'huidig'</samp></td>
-<td><code>undefined</code></td>
+<td><code>string</code></td>
 <td><i>nvt</i></td>
 <td></td>
 </tr>
