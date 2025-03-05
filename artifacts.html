@@ -116,11 +116,12 @@
 		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Design &#8964;</a>
 		<ul class="dropdown-menu">
 			<li><a href="design.html">Design</a></li>
-			<li><a href="design2.html">Design 2024</a></li>
+			<li><a href="design2.html">Design (WIP)</a></li>
 			<li><a href="design-background.html">Design Achtergrond</a></li>
-			<li><a href="design-security.html">Security Design</a></li>
 			<li><a href="design-authenticatie.html">Authenticatie Bouwblok Design</a></li>
 			<li><a href="design-logging.html">Logging Bouwblok Design</a></li>
+			<li><a href="design-toestemming.html">Toestemming Bouwblok Design</a></li>
+			<li><a href="design-security.html">Security Design</a></li>
 			<li><a href="zorgviewer-services.html">Zorgviewer Services</a></li>
 		</ul>
 	</li>
@@ -186,28 +187,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#2">Behavior: Capability Statements</a>
       </li>
       <li>
-         <a href="#3">Knowledge Artifacts: Plan Definitions</a>
+         <a href="#3">Structures: Abstract Profiles</a>
       </li>
       <li>
-         <a href="#4">Structures: Abstract Profiles</a>
+         <a href="#4">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#5">Structures: Resource Profiles</a>
+         <a href="#5">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#6">Structures: Extension Definitions</a>
+         <a href="#6">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#7">Terminology: Value Sets</a>
+         <a href="#7">Terminology: Concept Maps</a>
       </li>
       <li>
-         <a href="#8">Terminology: Concept Maps</a>
+         <a href="#8">Example: Example Instances</a>
       </li>
       <li>
-         <a href="#9">Example: Example Instances</a>
-      </li>
-      <li>
-         <a href="#10">Other</a>
+         <a href="#9">Other</a>
       </li>
    </ul>
 </div>
@@ -345,22 +343,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </tbody>
    </table>
    <a name="3"> </a>
-   <h3>Knowledge Artifacts: Plan Definitions </h3>
-    <p>These define workflows, rules, strategies, or protocols as part of content in this implementation guide.</p>
-<table class="grid">
-      <col style="width:20%"/>
-      <tbody>
-         <tr>
-            <td style="column-width:30%">
-               <a href="PlanDefinition-BgZ2017.html" title="PlanDefinition/BgZ2017">PlanDefinition BgZ 2017</a>
-            </td>
-            <td>
-<p>Deze PlanDefinition bevat de (data) definitie van de BgZ 2017. Dit is de basis view voor alle zorgverleners.</p>
-</td>
-         </tr>
-      </tbody>
-   </table>
-   <a name="4"> </a>
    <h3>Structures: Abstract Profiles </h3>
     <p>These are profiles on resources or data types that describe patterns used by other profiles, but cannot be instantiated directly.  I.e. instances can conform to profiles <em>based</em> on these abstract profiles, but do not declare conformance to the abstract profiles themselves.</p>
 <table class="grid">
@@ -377,7 +359,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="5"> </a>
+   <a name="4"> </a>
    <h3>Structures: Resource Profiles </h3>
     <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -564,7 +546,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="6"> </a>
+   <a name="5"> </a>
    <h3>Structures: Extension Definitions </h3>
     <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -581,7 +563,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="7"> </a>
+   <a name="6"> </a>
    <h3>Terminology: Value Sets </h3>
     <p>These define sets of codes used by systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -651,7 +633,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="8"> </a>
+   <a name="7"> </a>
    <h3>Terminology: Concept Maps </h3>
     <p>These define transformations to convert between codes by systems conforming with this implementation guide.</p>
 <table class="grid">
@@ -685,7 +667,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="9"> </a>
+   <a name="8"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -1054,6 +1036,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="PlanDefinition-BgZ2017.html" title="PlanDefinition/BgZ2017">PlanDefinition BgZ 2017</a>
+            </td>
+            <td>
+<p>Deze PlanDefinition bevat de (data) definitie van de BgZ 2017. Dit is de basis view voor alle zorgverleners.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Consent-190c12af-49d4-4553-8009-c816ab622a3e.html"
                   title="Consent/190c12af-49d4-4553-8009-c816ab622a3e">Topicus TreatmentDirective Example</a>
             </td>
@@ -1072,7 +1062,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="10"> </a>
+   <a name="9"> </a>
    <h3>Other </h3>
     <p>These are resources that are used within this implementation guide that do not fit into one of the other categories.</p>
 <table class="grid">
@@ -1115,7 +1105,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Mar 5, 2025 13:45+0000">2025-03-05</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.12.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Wed, Mar 5, 2025 16:02+0000">2025-03-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
