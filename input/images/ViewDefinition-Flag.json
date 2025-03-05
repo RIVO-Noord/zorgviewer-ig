@@ -21,16 +21,22 @@
           "tag": [ { "name": "Zib element", "value": "BeginDatumTijd" } ]
         },
         {
-          "path": "iif(exists(code.text),code.text,code.coding.display)",
-          "name": "Voor",
+          "path": "extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text",
+          "name": "Voor(1)",
+          "description": "Als geen Voor(1), dan Voor(2), als geen Voor(2) dan Voor(3).<br/><i>De Condition resolve in de resultaat Bundle.</i>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Conditie::Probleem" } ]
+        },
+        {
+          "path": "iif(exists(code.text), code.text, code.coding.display)",
+          "name": "Voor(2)",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "AlertNaam" } ]
         },
         {
-          "path": "extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text + extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.display",
-          "name": "Voor-detail",
-          "description": "De resolve levert de bijbehorende Condition",
-          "type": "dateTime",
+          "path": "extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.display",
+          "name": "Voor(3)",
+          "type": "string",
           "tag": [ { "name": "Zib element", "value": "Conditie::Probleem" } ]
         },
         {

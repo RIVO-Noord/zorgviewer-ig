@@ -23,18 +23,25 @@ Kolom definities:
 <td></td>
 </tr>
 <tr>
-<td>Voor</td>
-<td><samp>iif(exists(code.text),code.text,code.coding.display)</samp></td>
+<td>Voor(1)</td>
+<td><samp>extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text</samp></td>
+<td><code>string</code></td>
+<td>Conditie::Probleem</td>
+<td>Als geen Voor(1), dan Voor(2), als geen Voor(2) dan Voor(3).<br/><i>De Condition resolve in de resultaat Bundle.</i></td>
+</tr>
+<tr>
+<td>Voor(2)</td>
+<td><samp>iif(exists(code.text), code.text, code.coding.display)</samp></td>
 <td><code>string</code></td>
 <td>AlertNaam</td>
 <td></td>
 </tr>
 <tr>
-<td>Voor-detail</td>
-<td><samp>extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text + extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.display</samp></td>
-<td><code>dateTime</code></td>
+<td>Voor(3)</td>
+<td><samp>extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.display</samp></td>
+<td><code>string</code></td>
 <td>Conditie::Probleem</td>
-<td>De resolve levert de bijbehorende Condition</td>
+<td></td>
 </tr>
 <tr>
 <td>Categorie</td>
