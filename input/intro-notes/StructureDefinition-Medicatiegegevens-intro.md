@@ -17,4 +17,6 @@
 
 ### Requests
 
+Er is geen request waarmee je beide resources in 1 keer kan opvragen. Je moet hiervoor dus een request doen per resource.
+
 * Zie [MedicationStatement](StructureDefinition-MedicationStatement.html#request) en [MedicationRequest](StructureDefinition-MedicationRequest.html#request)
