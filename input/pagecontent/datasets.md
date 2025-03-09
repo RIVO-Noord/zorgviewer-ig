@@ -1,7 +1,9 @@
 Deze pagina beschrijft de verschillende datasets waaruit data requirements komen voor de Zorgviewer.
 N.B. Datasets zijn relevante selectie van data elementen met eventueel filters voor een bepaalde use-case of zorgpad, b.v. Medisch Specialistische Zorg (BgZ MSZ) of ACP.
 
-### Data Requirements 
+{% include DataSetsLM.svg %}
+
+### Data Requirements
 
 *Aka "Gegevenssets" virtueel bouwblok.*
 
@@ -93,3 +95,7 @@ Het ACP beschrijft ook informatie over de patiëntencontext in de Gegevensset Pa
 Vanuit project Zorgviewer is de ACP deels in scope, namelijk de BehandelAanwijzing (TreatmentDirective) met een aanvulling in de codelijst. Codelijst die gebruikt gaat worden voor de zorgviewer is een lijst met 8 items, zie [TreatmentDirective ACP behandelingen waardelijst](ValueSet-ACPTreatmentCodelist.html)
 
 Voor de volledige dataset, kijk op [Nictiz ART-DECOR](https://decor.nictiz.nl/art-decor/decor-project--pall-izppz-)
+
+### Verpleegkundige Overdracht
+
+...
