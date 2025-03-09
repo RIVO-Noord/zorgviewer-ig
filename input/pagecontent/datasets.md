@@ -1,7 +1,9 @@
 Deze pagina beschrijft de verschillende datasets waaruit data requirements komen voor de Zorgviewer.
 N.B. Datasets zijn relevante selectie van data elementen met eventueel filters voor een bepaalde use-case of zorgpad, b.v. Medisch Specialistische Zorg (BgZ MSZ) of ACP.
 
+<div>
 {% include DataSetsLM.svg %}
+</div>
 
 ### Data Requirements
 
