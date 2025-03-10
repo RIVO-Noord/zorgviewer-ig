@@ -1,7 +1,7 @@
 ZorgviewerIG : Validation Results
 =========================================
 
-err = 127, warn = 116, info = 103
+err = 137, warn = 116, info = 114
 $--
 Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http://fhir.hl7.nl/zorgviewer)
  Build Errors : 5 / 5 / 0
@@ -31,6 +31,11 @@ Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Flag-Chipsoft-OTH : 8 / 11 / 30
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Flag-Epic : 0 / 3 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Flag-Nexus : 0 / 2 / 3
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Immunization-Chipsoft : 5 / 1 / 4
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Immunization-Epic : 2 / 0 / 3
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Immunization-Epic2 : 0 / 0 / 5
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Immunization-Epic3 : 1 / 2 / 11
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/Immunization-Nexus : 2 / 2 / 3
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/LaboratoryTestResult-Chipsoft : 0 / 8 / 5
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/LaboratoryTestResult-Epic : 0 / 8 / 5
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/examples/LaboratoryTestResult-Nexus : 6 / 7 / 8
@@ -63,7 +68,7 @@ Generated $--. FHIR version $-- for hl7.fhir.nl.zorgviewer#$-- (canonical = http
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-DocumentReference : 0 / 1 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Endpoint : 0 / 2 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Flag : 1 / 2 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Immunization : 0 / 3 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Immunization : 0 / 2 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-LaboratoryTestResult : 2 / 7 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Medicatiegegevens : 0 / 1 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-MedicationRequest : 0 / 3 / 1
@@ -207,6 +212,33 @@ WARNING: Flag/fp4NreWdKGl71zKtuqY7biisS3I-b61-FLM1FcdiDNPU4: Flag.category.codin
 WARNING: Flag/354CD8791FE7BB1CF7AAC44891171ECB671D9E91: Flag.code.coding[0].display: Verkeerde weergavenaam 'LET OP!!!!!
 Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5. Graag GEEN wijzigingen doorvoeren!!!
 Alvast dank namens squad12' voor http://hl7.org/fhir/v3/NullFlavor#OTH - moet zijn ''other'' (voor taal/talen 'nl-NL')
+== input/examples/Immunization-Chipsoft.json ==
+WARNING: Immunization/b0a09112-1141-41a5-ab3e-277dd7cf34c4: Immunization.vaccineCode.coding[0].system: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.10' could not be found, so the code cannot be validated
+ERROR: Immunization/b0a09112-1141-41a5-ab3e-277dd7cf34c4: Immunization.vaccineCode.coding[0]: De gevonden code (urn:oid:2.16.840.1.113883.2.4.4.10#00062022) staat niet in waardelijst 'ProductCodePRKCodelijst' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.11.1.1--20171231000000|2017-12-31T00:00:00) en een code uit deze waardelijst is verplicht: De definitie voor CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.10' is niet gevonden, dus kan de code niet worden gevalideerd
+ERROR: Immunization/b0a09112-1141-41a5-ab3e-277dd7cf34c4: Immunization.doseQuantity.code: Unknown code 'STUK' in the CodeSystem 'http://unitsofmeasure.org' version '2.2'
+INFORMATION: Immunization/b0a09112-1141-41a5-ab3e-277dd7cf34c4: Immunization.doseQuantity.code: Error processing Unit: 'STUK': The unit "STUK" is unknown at character 1
+ERROR: Immunization/b0a09112-1141-41a5-ab3e-277dd7cf34c4: Immunization.practitioner[0].actor: Kan resource 'Practitioner/37b6e64f-9d95-4e33-8a38-ede7e0cbb905' niet vinden
+ERROR: Immunization/b0a09112-1141-41a5-ab3e-277dd7cf34c4: Immunization.note[0].author.ofType(Reference): Kan resource 'Practitioner/5b246c55-3730-4fb6-b1f8-e987822fed85' niet vinden
+ERROR: Immunization/b0a09112-1141-41a5-ab3e-277dd7cf34c4: Immunization.note[0].author.ofType(Reference).extension[0].value.ofType(Reference): Kan resource 'PractitionerRole/F291A52653198B7DFFDE2BF39572EF714413829AF1665C47CB3ABED9525E9492' niet vinden
+== input/examples/Immunization-Epic.json ==
+ERROR: Immunization/e6-GYWpe6tA541IbVTqmL.KQ0y3yguI2FH9XCaDsG8gI3: Immunization.vaccineCode: Immunization.vaccineCode.coding: minimum vereist = 1, maar gevonden 0 (uit http://fhir.hl7.nl/zorgviewer/StructureDefinition/Immunization|1.12.0)
+ERROR: Immunization/e6-GYWpe6tA541IbVTqmL.KQ0y3yguI2FH9XCaDsG8gI3: Immunization.vaccineCode: Immunization.vaccineCode.coding: minimum vereist = 1, maar gevonden 0 (uit http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination|2.1.5)
+== input/examples/Immunization-Epic2.json ==
+INFORMATION: Immunization/ekk06V5y.aLipR7luJJbtWUCJul8emhI5g29CotXmMDE3: Immunization.vaccineCode.coding[0]: Dit element komt niet overeen met een bekende slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Immunization|1.12.0 (mogelijk geen probleem, maar controleer of dat mogelijk toch de bedoeling was)
+INFORMATION: Immunization/ekk06V5y.aLipR7luJJbtWUCJul8emhI5g29CotXmMDE3: Immunization.vaccineCode.coding[0]: Dit element komt niet overeen met een bekende slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination|2.1.5 (mogelijk geen probleem, maar controleer of dat mogelijk toch de bedoeling was)
+== input/examples/Immunization-Epic3.json ==
+ERROR: Immunization/emmoWnHUUdm1G2gaviFakSiHIeAZOAsB1DSFw4OCaA9Y3: Immunization.vaccineCode.coding[0].code: Unknown code 'COVID-19 VACCIN MODERNA INJVLST 0,5ML (16979966)' in the CodeSystem 'http://hl7.org/fhir/sid/ndc' version ''
+INFORMATION: Immunization/emmoWnHUUdm1G2gaviFakSiHIeAZOAsB1DSFw4OCaA9Y3: Immunization.vaccineCode.coding[0].code: Code "COVID-19 VACCIN MODERNA INJVLST 0,5ML (16979966)" not found in NDC
+INFORMATION: Immunization/emmoWnHUUdm1G2gaviFakSiHIeAZOAsB1DSFw4OCaA9Y3: Immunization.vaccineCode.coding[0]: Dit element komt niet overeen met een bekende slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Immunization|1.12.0 (mogelijk geen probleem, maar controleer of dat mogelijk toch de bedoeling was)
+INFORMATION: Immunization/emmoWnHUUdm1G2gaviFakSiHIeAZOAsB1DSFw4OCaA9Y3: Immunization.doseQuantity: De definitie voor CodeSystem 'urn:oid:1.2.840.114350.1.13.485.2.7.10.768076.4019' is niet gevonden, dus kan de code niet worden gevalideerd
+INFORMATION: Immunization/emmoWnHUUdm1G2gaviFakSiHIeAZOAsB1DSFw4OCaA9Y3: Immunization.practitioner[0].role.coding[0]: Dit element komt niet overeen met een bekende slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Immunization|1.12.0 (mogelijk geen probleem, maar controleer of dat mogelijk toch de bedoeling was)
+INFORMATION: Immunization/emmoWnHUUdm1G2gaviFakSiHIeAZOAsB1DSFw4OCaA9Y3: Immunization.practitioner[1].role.coding[0]: Dit element komt niet overeen met een bekende slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Immunization|1.12.0 (mogelijk geen probleem, maar controleer of dat mogelijk toch de bedoeling was)
+INFORMATION: Immunization/emmoWnHUUdm1G2gaviFakSiHIeAZOAsB1DSFw4OCaA9Y3: Immunization.vaccineCode.coding[0]: Dit element komt niet overeen met een bekende slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination|2.1.5 (mogelijk geen probleem, maar controleer of dat mogelijk toch de bedoeling was)
+INFORMATION: Immunization/emmoWnHUUdm1G2gaviFakSiHIeAZOAsB1DSFw4OCaA9Y3: Immunization.practitioner[0].role.coding[0]: Dit element komt niet overeen met een bekende slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination|2.1.5 (mogelijk geen probleem, maar controleer of dat mogelijk toch de bedoeling was)
+INFORMATION: Immunization/emmoWnHUUdm1G2gaviFakSiHIeAZOAsB1DSFw4OCaA9Y3: Immunization.practitioner[1].role.coding[0]: Dit element komt niet overeen met een bekende slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination|2.1.5 (mogelijk geen probleem, maar controleer of dat mogelijk toch de bedoeling was)
+== input/examples/Immunization-Nexus.json ==
+ERROR: Immunization/873: Immunization.practitioner[0].actor: Kan resource 'Practitioner/8017' niet vinden
+ERROR: Immunization/873: Immunization.practitioner[0].actor.extension[0].value.ofType(Reference): Kan resource 'PractitionerRole/71994976-3190-49ea-865c-18b8b20d589b' niet vinden
 == input/examples/LaboratoryTestResult-Chipsoft.json ==
 INFORMATION: Observation/39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C: Observation.category[1]: Dit element komt niet overeen met een bekende slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/LaboratoryTestResult|1.12.0 (mogelijk geen probleem, maar controleer of dat mogelijk toch de bedoeling was)
 WARNING: Observation/39E0E479029134429CCEFEE59BB98E661DE26A675AB08E9F4A1817EBC687A98C: Observation: Best practice aanbeveling: alle Observations zouden een performer moeten bevatten
@@ -424,7 +456,6 @@ WARNING: StructureDefinition.where(url = 'http://fhir.hl7.nl/zorgviewer/Structur
 == input/profiles/StructureDefinition-Flag.json ==
 ERROR: StructureDefinition.snapshot.element[12]: The element Flag.extension:ConcernReference.valueReference:valueReference launches straight into slicing without the slicing being set up properly first
 == input/profiles/StructureDefinition-Immunization.json ==
-WARNING: StructureDefinition.where(url = 'http://fhir.hl7.nl/zorgviewer/StructureDefinition/Immunization'): The Implementation Guide contains no examples for this profile
 == input/profiles/StructureDefinition-LaboratoryTestResult.json ==
 ERROR: StructureDefinition/LaboratoryTestResult: StructureDefinition.snapshot.element[20]: Het element Observation.status.value heeft geen toegekende typen en geen content-reference
 ERROR: StructureDefinition/LaboratoryTestResult: StructureDefinition.snapshot.element[65].constraint[0]: Fout in constraint 'zib-LaboratoryTestResult-Observation-1' met expressie 'coding.where(system = 'http://snomed.info/sct' and (code = '281302008' or '281300000' or '11896004' or '30714006' or '131196009')  ).exists() implies coding.where(system = 'http://hl7.org/fhir/v2/0078').exists()': Fout bij evalueren FHIRPath expressie: De naam 'coding' is niet geldig voor een van de mogelijke typen: [http://hl7.org/fhir/StructureDefinition/Coding] (@char 21)

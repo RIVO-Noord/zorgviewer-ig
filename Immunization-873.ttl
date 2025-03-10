@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hl7.nl/zorgviewer/Immunization/873> a fhir:Immunization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "873"] ; # 
+  fhir:meta [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:uri ;
+         fhir:v "Nexus"^^xsd:anyURI
+       ]
+     ] ) ;
+     fhir:lastUpdated [ fhir:v "2024-04-17T10:12:07.984+02:00"^^xsd:dateTime ] ;
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Immunization. typeCode-RCT: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.30.873 (urn:ietf:rfc:3986), Status: status-completed</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Bezoek aan Guatemala.</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>\n                              <span title=\"hepatitis-a-vaccin (J07BC02 - http://www.whocc.no/atc)\">hepatitis-a-vaccin</span>\n                           </th>\n                           <td>\n                              <div>Administered: boolean-true (5 March 1999)</div>\n                              <div>Reported By Performer: boolean-true</div>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Practitioner</th>\n                           <td>Vaste Huisarts 1<div>PractitionerRole: Huisartsen</div>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.30.873" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:notGiven [ fhir:v false] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "J07BC02" ] ;
+       fhir:display [ fhir:v "hepatitis-a-vaccin" ]
+     ] )
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://fhir.hl7.nl/zorgviewer/Patient/330073> ;
+     fhir:reference [ fhir:v "Patient/330073" ] ;
+     fhir:display [ fhir:v "Xxx-Helleman, J (M)" ]
+  ] ; # 
+  fhir:date [ fhir:v "1999-03-05"^^xsd:date] ; # 
+  fhir:primarySource [ fhir:v true] ; # 
+  fhir:practitioner ( [
+     fhir:actor [
+       fhir:link <http://fhir.hl7.nl/zorgviewer/Practitioner/8017> ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Reference ;
+           fhir:link <http://fhir.hl7.nl/zorgviewer/PractitionerRole/71994976-3190-49ea-865c-18b8b20d589b> ;
+           fhir:reference [ fhir:v "PractitionerRole/71994976-3190-49ea-865c-18b8b20d589b" ] ;
+           fhir:display [ fhir:v "Huisartsen" ]
+         ]
+       ] ) ;
+       fhir:reference [ fhir:v "Practitioner/8017" ] ;
+       fhir:display [ fhir:v "Vaste Huisarts 1" ]
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Bezoek aan Guatemala." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

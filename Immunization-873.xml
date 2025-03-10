@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="873"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source">
+      <valueUri value="Nexus"/>
+    </extension>
+    <lastUpdated value="2024-04-17T10:12:07.984+02:00"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+                  <table>
+                     <caption>Immunization. typeCode-RCT: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.30.873 (urn:ietf:rfc:3986), Status: status-completed</caption>
+                     <tfoot>
+                        <tr>
+                           <td colspan="2">Bezoek aan Guatemala.</td>
+                        </tr>
+                     </tfoot>
+                     <tbody>
+                        <tr>
+                           <th>
+                              <span title="hepatitis-a-vaccin (J07BC02 - http://www.whocc.no/atc)">hepatitis-a-vaccin</span>
+                           </th>
+                           <td>
+                              <div>Administered: boolean-true (5 March 1999)</div>
+                              <div>Reported By Performer: boolean-true</div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th>Practitioner</th>
+                           <td>Vaste Huisarts 1<div>PractitionerRole: Huisartsen</div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+  </text>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.30.873"/>
+  </identifier>
+  <status value="completed"/>
+  <notGiven value="false"/>
+  <vaccineCode>
+    <coding>
+      <system value="http://www.whocc.no/atc"/>
+      <code value="J07BC02"/>
+      <display value="hepatitis-a-vaccin"/>
+    </coding>
+  </vaccineCode>
+  <patient>
+    <reference value="Patient/330073"/>
+    <display value="Xxx-Helleman, J (M)"/>
+  </patient>
+  <date value="1999-03-05"/>
+  <primarySource value="true"/>
+  <practitioner>
+    <actor>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+        <valueReference>
+          <reference value="PractitionerRole/71994976-3190-49ea-865c-18b8b20d589b"/>
+          <display value="Huisartsen"/>
+        </valueReference>
+      </extension>
+      <reference value="Practitioner/8017"/>
+      <display value="Vaste Huisarts 1"/>
+    </actor>
+  </practitioner>
+  <note>
+    <text value="Bezoek aan Guatemala."/>
+  </note>
+</Immunization>

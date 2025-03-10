@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hl7.nl/zorgviewer/Immunization/b0a09112-1141-41a5-ab3e-277dd7cf34c4> a fhir:Immunization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "b0a09112-1141-41a5-ab3e-277dd7cf34c4"] ; # 
+  fhir:meta [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:uri ;
+         fhir:v "ZP"^^xsd:anyURI
+       ]
+     ] ) ;
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Immunization resource:</h3><ul><li><p><strong>Patient:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Start:</strong> &#x27;Completed&#x27;</p></li><li><p><strong>Note:</strong> &#x27;Bezoek aan Guatemala&#x27;</p></li><li><p><strong>Date:</strong> &#x27;5-3-1999 12:58&#x2B;0100&#x27;</p></li><li><p><strong>Not given:</strong> &#x27;No&#x27;</p></li><li><p><strong>Vaccine code:</strong> &#x27;HEPATITIS-A-VACCIN HAVRIX JR WSP 0,5ML (1440E/ML)&#x27;</p></li><li><table><thead><tr><th>Practitioner</th><th>Names</th></tr></thead><tbody><tr><td>Practitioner 1</td><td></td></tr></tbody></table></li><li><p><strong>Author</strong> &#x27;Practitioner author with last name &#x27;van Partners&#x27;.&#x27;</p></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:notGiven [ fhir:v false] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.4.10"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "00062022" ] ;
+       fhir:display [ fhir:v "HEPATITIS-A-VACCIN HAVRIX JR WSP 0,5ML (1440E/ML)" ]
+     ] ) ;
+     fhir:text [ fhir:v "HEPATITIS-A-VACCIN HAVRIX JR WSP 0,5ML (1440E/ML)" ]
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://fhir.hl7.nl/zorgviewer/Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1> ;
+     fhir:reference [ fhir:v "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1" ] ;
+     fhir:display [ fhir:v "Johan XXX_Helleman_Afblijven" ]
+  ] ; # 
+  fhir:date [ fhir:v "1999-03-05"^^xsd:date] ; # 
+  fhir:primarySource [ fhir:v true] ; # 
+  fhir:doseQuantity [
+     fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "STUK" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "STUK" ]
+  ] ; # 
+  fhir:practitioner ( [
+     fhir:actor [
+       fhir:link <http://fhir.hl7.nl/zorgviewer/Practitioner/37b6e64f-9d95-4e33-8a38-ede7e0cbb905> ;
+       fhir:reference [ fhir:v "Practitioner/37b6e64f-9d95-4e33-8a38-ede7e0cbb905" ] ;
+       fhir:display [ fhir:v "ChipSoft gebruiker" ]
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:link <http://fhir.hl7.nl/zorgviewer/Practitioner/5b246c55-3730-4fb6-b1f8-e987822fed85> ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Reference ;
+           fhir:link <http://fhir.hl7.nl/zorgviewer/PractitionerRole/F291A52653198B7DFFDE2BF39572EF714413829AF1665C47CB3ABED9525E9492> ;
+           fhir:reference [ fhir:v "PractitionerRole/F291A52653198B7DFFDE2BF39572EF714413829AF1665C47CB3ABED9525E9492" ] ;
+           fhir:display [ fhir:v "Onbekende functiecode." ]
+         ]
+       ] ) ;
+       fhir:reference [ fhir:v "Practitioner/5b246c55-3730-4fb6-b1f8-e987822fed85" ] ;
+       fhir:display [ fhir:v "van Partners" ]
+     ] ;
+     fhir:time [ fhir:v "2022-09-30"^^xsd:date ] ;
+     fhir:text [ fhir:v "Bezoek aan Guatemala" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
