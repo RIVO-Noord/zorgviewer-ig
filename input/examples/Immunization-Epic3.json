@@ -1,0 +1,104 @@
+{
+  "resourceType": "Immunization",
+  "id": "emmoWnHUUdm1G2gaviFakSiHIeAZOAsB1DSFw4OCaA9Y3",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
+        "valueUri": "Epic"
+      }
+    ],
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination"
+    ]
+  },
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "urn:oid:1.2.840.114350.1.13.485.2.7.2.768076",
+      "value": "3916879"
+    }
+  ],
+  "status": "completed",
+  "notGiven": false,
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/ndc",
+        "code": "COVID-19 VACCIN MODERNA INJVLST 0,5ML (16979966)"
+      }
+    ],
+    "text": "COVID-19 Vaccin (Spikevax, Moderna)"
+  },
+  "patient": {
+    "reference": "http://example.org/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3",
+    "display": "Fictief, Jan"
+  },
+  "encounter": {
+    "reference": "http://example.org/api/FHIR/STU3/Encounter/eCpX.Xe.2R9zNTiTzFMre.w3",
+    "display": "Vaccinatie"
+  },
+  "date": "2021-03-25T11:19:00Z",
+  "primarySource": true,
+  "lotNumber": "777",
+  "site": {
+    "coding": [
+      {
+        "system": "urn:oid:1.2.840.114350.1.13.485.2.7.10.768076.4040",
+        "code": "24",
+        "display": "Linkerbovenarm"
+      }
+    ],
+    "text": "Linkerbovenarm"
+  },
+  "route": {
+    "coding": [
+      {
+        "system": "urn:oid:1.2.840.114350.1.13.485.2.7.10.768076.4030",
+        "code": "2",
+        "display": "Intramusculair"
+      }
+    ],
+    "text": "Intramusculair"
+  },
+  "doseQuantity": {
+    "value": 0.5,
+    "unit": "ml",
+    "system": "urn:oid:1.2.840.114350.1.13.485.2.7.10.768076.4019",
+    "code": "1"
+  },
+  "practitioner": [
+    {
+      "role": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0443",
+            "code": "AP",
+            "display": "Administering Provider"
+          }
+        ],
+        "text": "Administering Provider"
+      },
+      "actor": {
+        "reference": "http://example.org/api/FHIR/STU3/Practitioner/etKlglcoLtnBSgz4F26UxTmRJ8YMeUNGxZGaoN8rSx3A3",
+        "display": "R Bos"
+      }
+    },
+    {
+      "role": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0443",
+            "code": "OP",
+            "display": "Ordering Provider"
+          }
+        ],
+        "text": "Ordering Provider"
+      },
+      "actor": {
+        "reference": "http://example.org/api/FHIR/STU3/Practitioner/ebdg23HbRcn6WKqL44OYXLxCaVltT49z9LDc7POvlXVo3",
+        "display": "J Sanders"
+      }
+    }
+  ]
+}
