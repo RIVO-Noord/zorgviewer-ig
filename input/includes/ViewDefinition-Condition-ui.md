@@ -1,0 +1,6 @@
+| Bron | Datum | Diagnose | +Diagnose | +Toelichting | (regelkleur) |
+|------|-------|----------|-----------|--------------|--------------|
+| Chipsoft | 2001-01-01 | fractuur van pols | http://hl7.org/fhir/v3/NullFlavor#OTH other | Gevallen op kunstijsbaan. | active |
+| Epic-note | 2023-02-23 | posttraumatische stressstoornis (incl. de posttraumatische-stressstoornis bij ki... | http://hl7.org/fhir/sid/icd-10-nl#F43.1  | 2022-02: ziekte van Crohn\n 2021-07: Complicatie ANPY infectie lokaal\n 2021-03:... | active |
+| Epic | 2012-08-16 | fractuur van onderste extremiteit | http://hl7.org/fhir/sid/icd-10-nl#T12.0  |  | active |
+| Nexus | 2001 |  | http://snomed.info/sct#31641000146105 fractuur van pols | Gevallen op kunstijsbaan | inactive |

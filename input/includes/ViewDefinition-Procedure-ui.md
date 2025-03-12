@@ -1,0 +1,6 @@
+| Bron | Datum | Verrichting | Locatie | Uitgevoerd door | +Verrichtingcode | +Lateraliteit |
+|------|-------|-------------|---------|-----------------|------------------|---------------|
+| Chipsoft | 2012-06-05 | implantatie van totale knieprothese | Drachten | Lisette van Cruijningen de Winter | urn:oid:2.16.840.1.113883.2.4.3.120.5.3#00090991 implantatie van totale knieprot... | Links |
+| Epic | 2021-11-07T20:02:00Z | Gesloten repositie supra- of transcondylaire femur fractuur. | UMCG | MedMij Orthopedie, MD | http://snomed.info/sct#46866001 Gesloten repositie supra- of transcondylaire fem... | Rechts |
+| Nexus | 2012-05-06 | Prothese implantatie kniegewricht. |  | Boonstra\n VIPP NEXUS Ziekenhuis | urn:oid:2.16.840.1.113883.2.4.3.27.15.5#038663 Prothese implantatie kniegewricht... |  |
+| VG-Epic | 2001 | SELECTIEVE FASCIECTOMIE |  |  |  |  |
