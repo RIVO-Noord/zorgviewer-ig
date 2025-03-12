@@ -14,6 +14,13 @@
 
 {% include ViewDefinition-Immunization.md %}
 
+### Gebruikte waardelijsten
+
+* ATC (Nexus) - `system=http://www.whocc.no/atc`
+* NDC (Epic) - `system=http://hl7.org/fhir/sid/ndc`
+* CVX (Epic) - `system=http://hl7.org/fhir/sid/cvx`
+* G-Standaard Voorschrijfproducten (PRK) (Chipsoft) - `system=urn:oid:2.16.840.1.113883.2.4.4.10`
+
 ### Request
 
 1. Opvragen (search) vaccinaties
