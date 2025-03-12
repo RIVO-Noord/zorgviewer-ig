@@ -13,7 +13,12 @@ fs.readdirSync(viewDefPath).forEach(file => {
         const viewDef_filePath = path.join(viewDefPath, file);
         const viewDef = JSON.parse(fs.readFileSync(viewDef_filePath, 'utf8'));
 
-        const md = [
+        const puml_ui = [
+            `@startuml ${viewDef.id}`,
+            ":",
+            `== ${viewDef.title}`,
+        ];
+        const md_def = [
             "Kolom definities:",
             "<table class=\"grid\">",
             "<thead>",
@@ -25,16 +30,12 @@ fs.readdirSync(viewDefPath).forEach(file => {
             "</thead>",
             "<tbody>"
         ];
-        const puml = [
-            `@startuml ${viewDef.id}`,
-            ":",
-            `== ${viewDef.title}`,
-        ];
+        const md_ui = [ ];
 
         // add column names for select
         const columnPaths = [];
         if (viewDef.select[0].column) {
-            doColumns(viewDef.select[0].column, puml, md);
+            doColumns(viewDef.select[0].column, puml_ui, md_ui, md_def);
             viewDef.select[0].column.forEach(column => columnPaths.push(column.path));
 
             // Add column examples based on examples
@@ -67,12 +68,13 @@ fs.readdirSync(viewDefPath).forEach(file => {
                             });
                             // overwrite bron 1ste kolom met filename
                             values[0] = file.substring(file.indexOf('-')+1, file.length-5);
-                            puml.push(`| ${values.join(' | ')} |`);
+                            puml_ui.push(`| ${values.join(' | ')} |`);
+                            md_ui.push(`| ${values.join(' | ')} |`);
                         }
                     }
                 });
             }
-            puml.push("| |");
+            puml_ui.push("| |");
         }
         if (viewDef.select[0].unionAll) {
             // assume first columns is the final list of columns
@@ -80,59 +82,65 @@ fs.readdirSync(viewDefPath).forEach(file => {
                 const match = union.forEach.match("resourceType='(.+)'");
                 if (match) {
                     const resourceType = match[1];
-                    md.push(`<tr><td colspan=5><i>${resourceType}</i></td></tr>`);
+                    md_def.push(`<tr><td colspan=5><i>${resourceType}</i></td></tr>`);
                 }
-                doColumns(union.column, puml, md);
+                doColumns(union.column, puml_ui, md_ui, md_def);
                 union.column.forEach(column => columnPaths.push(column.path));
-                puml.push("| |");
+                puml_ui.push("| |");
             });
         }
-        puml.push("",
+        puml_ui.push("",
             "//Legenda//",
             "//+Kolom - in de uitklap//",
             "//(Kolom) - gebruikt voor formatting of verbergen//",
             ";",
             "@enduml");
 
-        md.push("</tbody>",
+        md_def.push("</tbody>",
             "</table>");
 
-        const puml_filePath = path.join(pumlPath, `${viewDef.id}.plantuml`);
-        fs.writeFileSync(puml_filePath, puml.join('\n'));
+        const puml_ui_filePath = path.join(pumlPath, `${viewDef.id}.plantuml`);
+        fs.writeFileSync(puml_ui_filePath, puml_ui.join('\n'));
 
-        const md_filePath = path.join(mdPath, `${viewDef.id}.md`);
-        fs.writeFileSync(md_filePath, md.join('\n'));
+        const md_def_filePath = path.join(mdPath, `${viewDef.id}.md`);
+        fs.writeFileSync(md_def_filePath, md_def.join('\n'));
+
+        const md_ui_filePath = path.join(mdPath, `${viewDef.id}-ui.md`);
+        fs.writeFileSync(md_ui_filePath, md_ui.join('\n'));
     }
 });
 
-function doColumns(columns, puml, md) {
+function doColumns(columns, puml_ui, md_ui, md_def) {
     const columnNames = columns.map(column => ` ${column.name} `);
-    puml.push(`|=${columnNames.join('|=')}|`);
+    puml_ui.push(`|=${columnNames.join('|=')}|`);
+
+    md_ui.push(`|${columnNames.join('|')}|`);
+    md_ui.push(`|${columnNames.join('|').replaceAll(/[^|]/g,'-')}|`);
 
     columns.forEach(column => { 
         if (column.name.charAt(0) != '+' && column.name.charAt(0) != '(') {
-            md.push("<tr>");
-            doColumn(column, md);
-            md.push("</tr>");
+            md_def.push("<tr>");
+            doColumn(column, md_def);
+            md_def.push("</tr>");
         }
     });
     if (columns.find(column => column.name.charAt(0) == '+')) {
-        md.push('<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>');
+        md_def.push('<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>');
         columns.forEach(column => { 
             if (column.name.charAt(0) == '+') {
-                md.push("<tr style=\"background-color:#b4c7e7\">");
-                doColumn(column, md);
-                md.push("</tr>");
+                md_def.push("<tr style=\"background-color:#b4c7e7\">");
+                doColumn(column, md_def);
+                md_def.push("</tr>");
             }
         });
     }
     if (columns.find(column => column.name.charAt(0) == '(')) {
-        md.push('<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>');
+        md_def.push('<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>');
         columns.forEach(column => { 
             if (column.name.charAt(0) == '(') {
-                md.push("<tr style=\"background-color:#b4c7e7\">");
-                doColumn(column, md);
-                md.push("</tr>");
+                md_def.push("<tr style=\"background-color:#b4c7e7\">");
+                doColumn(column, md_def);
+                md_def.push("</tr>");
             }
         });    
     }
