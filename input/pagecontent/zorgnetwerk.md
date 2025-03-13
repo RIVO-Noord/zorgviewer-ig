@@ -129,3 +129,7 @@ Legenda:<br/>
 '0' = gegeven niet beschikbaar<br/>
 '1' gegeven beschikbaar<br/>
 '?' = nog uitzoeken<br/>
+
+### AGB en Fysieke Locatie
+
+> Use AGB API om bij inzage zorgnetwerk fysieke locaties te tonen adhv de AGB codes: https://www.vektis.nl/uploads/AGB/AGB%20Raadpleegdienst%20REST%20API.pdf  

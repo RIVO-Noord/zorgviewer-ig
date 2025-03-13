@@ -9,3 +9,4 @@
 
 ### Pneumokokken vaccinatie indicatie
 
+* Uitwerken van de VWS Richtlijn naar CQL
