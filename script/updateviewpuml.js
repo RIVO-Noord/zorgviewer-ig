@@ -61,8 +61,14 @@ fs.readdirSync(viewDefPath).forEach(file => {
                                 catch { }
                                 var value = "";
                                 if (result && result.length > 0) {
-                                    value = result[0].replace(/\r?\n/g, "\\n ");
-                                    if (value.length > 80) value = `${value.substring(0,80)}...`;
+                                    if (column.type == "dateTime") {
+                                        const date = new Date(result[0]);
+                                        value = date.toLocaleDateString('nl-NL'); // + ' ' + date.toLocaleTimeString('nl-NL';
+                                    }
+                                    else {
+                                        value = result[0].replace(/\r?\n/g, "\\n ");
+                                        if (value.length > 80) value = `${value.substring(0,80)}...`;    
+                                    }
                                 }
                                 return value;
                             });

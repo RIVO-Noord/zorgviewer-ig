@@ -1,4 +1,4 @@
 | Bron | Datum | Type |
 |------|-------|------|
-| Chipsoft | 2018-04-09 | Patiëntinformatie - Wilsbeschikkingen |
-| Nexus | 2018-04-09 |  |
+| Chipsoft | 9-4-2018 | Patiëntinformatie - Wilsbeschikkingen |
+| Nexus | 9-4-2018 |  |
