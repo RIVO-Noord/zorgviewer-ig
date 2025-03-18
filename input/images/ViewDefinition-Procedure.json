@@ -2,6 +2,7 @@
   "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
   "resource": "Bundle",
   "id": "ViewDefinition-Procedure",
+  "title": "Verrichtingen",
   "select": [
     {
       "column": [
@@ -14,27 +15,43 @@
         },
         {
           "path": "performedPeriod.start",
-          "name": "Datum"
+          "name": "Datum",
+          "description": "​Kunnen vage datums zijn.",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "VerrichtingBeginDatum" } ]
         },
         {
-          "path": "iif(code.text.empty(),code.coding.display,code.text)",
-          "name": "Verrichting"
-        },
-        {
-          "path": "bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.text",
-          "name": "Lateraliteit"
+          "path": "iif(exists(code.text), code.text, code.coding.display)",
+          "name": "Verrichting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "VerrichtingType" } ]
         },
         {
           "path": "location.display",
-          "name": "Locatie"
+          "name": "Locatie",
+          "description": "Zie discussie hier: <a href=\"https://bits.nictiz.nl/browse/MM-5002\">BITS ticket MM-5002</a>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Locatie::Zorgaanbieder" } ]
         },
         {
           "path": "performer.actor.display.join('\n')",
-          "name": "Uitgevoerd door"
+          "name": "Uitgevoerd door",
+          "description": "Meestal alleen specialisme",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Uitvoerder" } ]
         },
         {
-          "path": "code.coding.system+'#'+code.coding.code+' '+code.coding.display",
-          "name": "(Verrichtingcode)"
+          "path": "code.coding[0].system + '#' + code.coding[0].code + ' ' + code.coding[0].display",
+          "name": "+Verrichtingcode",
+          "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.​<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "VerrichtingType" } ]
+        },
+        {
+          "path": "bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.text",
+          "name": "+Lateraliteit",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "ProbleemLateraliteit" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Procedure')"

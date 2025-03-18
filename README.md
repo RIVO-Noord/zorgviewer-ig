@@ -9,14 +9,15 @@
 
 ## Validate resources
 ```
-(initial) > curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o validator_cli.jar
-> java -jar validator_cli.jar -version 3.0.2 input/resources -ig input/resources -ig nictiz.fhir.nl.stu3.zib2017
+(initial) > curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o input-cache/validator_cli.jar
+> java -jar input-cache/validator_cli.jar -version 3.0.2 input/resources -ig input/resources -ig nictiz.fhir.nl.stu3.zib2017
 ```
 
 ## To build the IG (need minimal version 1.2.31 dd 1-feb-2023 ivm zib2017 package fix)
 ```
-(initial) > curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
-> java -jar publisher.jar -ig ig.ini
+(initial) (Bash) > curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o input-cache/publisher.jar
+(initial) (Powershell) > Invoke-WebRequest -Uri "https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar" -OutFile "input-cache/publisher.jar"
+> java -jar input-cache/publisher.jar -ig ig.ini
 ```
 
 ### Trigger FHIR auto-ig builder
@@ -41,12 +42,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 @> apt install jekyll graphviz
 @> dpkg -i jdk-23_linux-x64_bin.deb
 ```
-1. (optioneel) bouw lokaal de IG en check output
-```
-> (Bash) curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
-> (Powershell) Invoke-WebRequest -Uri "https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar" -OutFile "publisher.jar"
-@> java -jar publisher.jar -ig ig.ini
-```
+1. (optioneel) bouw lokaal de IG en check output - zie "To build the IG"
 
 ### Tag een Release
 
@@ -55,6 +51,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
   1. ``input/images/package-feed.xml`` (datum, versie, IG publisher versie; zodat nieuwe versie opgenomen wordt in de fhir package registries)
   1. ``fhir.hl7.nl/package-list.json`` (datum, versie, IG publisher versie en upload naar fhir.hl7.nl/zorgviewer; used for version comparison!)
   1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
+  1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
 1. ``> git commit -a; git push``
 1. Create tag "1.M.R-sprintX" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
   1. tags
@@ -91,12 +88,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 
 N.B. Alleen nodig als de [GitHub Snapshot Publish Workflow](.github/workflows/publish.yml) niet werkt.
 
-1. Maak nieuwe publicatie
-```
-> cd <temp-folder>
-> curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
-> java -jar publisher.jar -ig ig.ini
-```
+1. Maak nieuwe publicatie - zie "To build the IG"
 1. Upload
 ```
 > docker run --name azure-cli -it -v "$(pwd)":/app  mcr.microsoft.com/azure-cli
@@ -121,6 +113,13 @@ Zorgt voor opname van de package in de 2 package registers:
 Zorgt voor beschikbaar komen in de searches:
 - https://fhir.org/guides/registry/
 - https://registry.fhir.org/
+
+### EViews (hidden from menu)
+
+Update inhoud van input/eviews.md middels volgende commando (manually remove extension):
+```
+> find temp/pages/_includes/ | fgrep -eview.xhtml | awk -F'[/-]' '{ print "### " $5 "\n{% include StructureDefinition-" $5 "-eview.xhtml %}"}'
+```
 
 ## Some usefull resources
 

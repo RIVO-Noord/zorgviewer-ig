@@ -1,0 +1,7 @@
+| Bron | Datum | Product | Toelichting |
+|------|-------|---------|-------------|
+| Chipsoft | 5-3-1999 | HEPATITIS-A-VACCIN HAVRIX JR WSP 0,5ML (1440E/ML) | Bezoek aan Guatemala |
+| Epic | 2-8-2021 | COVID-19 Vaccin (Type Algemeen) |  |
+| Epic2 | 29-7-2019 | Bof-/Mazelen-/Rubellavaccin |  |
+| Epic3 | 25-3-2021 | COVID-19 Vaccin (Spikevax, Moderna) |  |
+| Nexus | 5-3-1999 | hepatitis-a-vaccin | Bezoek aan Guatemala. |

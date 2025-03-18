@@ -2,6 +2,7 @@
   "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
   "resource": "Bundle",
   "id": "ViewDefinition-AllergyIntolerance",
+  "title": "Allergieen en intoleranties",
   "select": [
     {
       "column": [
@@ -13,31 +14,90 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "iif(exists(resource.onsetPeriod.start),resource.onsetPeriod.start,resource.onsetDateTime)",
-          "name": "Datum"
+          "path": "iif(exists(onsetPeriod.start),onsetPeriod.start,onsetDateTime)",
+          "name": "Datum",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "StartDateTime" } ]
         },
         {
-          "path": "resource.clinicalStatus",
-          "name": "Klinische status"
+          "path": "iif(exists(code.text),code.text,code.coding.display)",
+          "name": "Stof",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "CausativeAgent" } ]
         },
         {
-          "path": "resource.category.join(',')",
-          "name": "Categorie"
+          "path": "note.text",
+          "name": "Toelichting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Comment" } ]
         },
         {
-          "path": "iif(exists(resource.code.text),resource.code.text,resource.code.coding.display)",
-          "name": "Stof"
+          "path": "category.join(',')",
+          "name": "Categorie",
+          "description": "Meerdere opties die tegelijk getoond kunnen worden",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "resource.reaction.severity",
-          "name": "Ernst"
+          "path": "category.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
+          "name": "CategorieCS",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "resource.reaction.manifestation.text",
-          "name": "Reacties"
+          "path": "criticality",
+          "name": "Ernst(1)",
+          "description": "",
+          "type": "code",
+          "tag": [ 
+            { "name": "Zib element", "value": "MateVanKritiek" } ]
+        },
+        {
+          "path": "criticality.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
+          "name": "Ernst(1)CS",
+          "description": "",
+          "type": "code",
+          "tag": [ 
+            { "name": "Zib element", "value": "MateVanKritiek" } ]
+        },
+        {
+          "path": "reaction[0].severity",
+          "name": "Ernst(2)",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "Reactie/Ernst" } ]
+        },
+        {
+          "path": "reaction[0].manifestation[0].text",
+          "name": "Reacties",
+          "description": "",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Reactie/Symptoom" } ]
+        },
+        {
+          "path": "clinicalStatus",
+          "name": "Status",
+          "description": "‘Actief’, ‘Niet meer aanwezig’, ‘Achterhaald’. ‘Foutief’ status wordt niet getoond in de Zorgviewer (wordt uitgefilterd). Indien geen extensie aanwezig, dan worden de waarden als volgt gemapped: Active -> Actief; InActive -> Achterhaald; Resolved -> Niet meer aanwezig",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "AllergieStatus" } ]
+        },
+        {
+          "path": "clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
+          "name": "StatusCS",
+          "description": "Zie AllergieStatus",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "AllergieStatus" } ]
+        },
+        {
+          "path": "verificationStatus",
+          "name": "(VStatus)",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "AllergieStatus" } ]
         }
       ],
-      "forEach": "entry.where(resource.resourceType = 'AllergyIntolerance')"
+      "forEach": "entry.resource.where(resourceType='AllergyIntolerance')"
     }
   ]
 }

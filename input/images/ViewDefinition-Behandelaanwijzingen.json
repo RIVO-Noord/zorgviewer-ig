@@ -2,6 +2,7 @@
   "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
   "resource": "Bundle",
   "id": "ViewDefinition-Behandelaanwijzingen",
+  "title": "Behandelaanwijzingen",
   "select": [
     {
       "column": [
@@ -13,35 +14,57 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "category.coding.display.join(' & ')",
-          "name": "Category"
-        },
-        {
           "path": "period.start",
-          "name": "Datum"
+          "name": "Datum",
+          "description": "Kunnen vage datums zijn.",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "BeginDatum" } ]
         },
         {
           "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.coding[0].display",
-          "name": "Behandeling"
+          "name": "Behandeling",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Behandeling" } ]
         },
         {
           "path": "modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted').valueCodeableConcept.coding.display",
-          "name": "Behandeling toegestaan"
+          "name": "Behandeling toegestaan",
+          "description": "Zie UI schets voor icon mapping. N.B. obv coding.code",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "BehandelingToegestaan" } ]
         },
         {
           "path": "except.extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Restrictions').value",
-          "name": "Beperkingen"
+          "name": "Beperkingen",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Beperkingen" } ]
         },
         {
           "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification').extension('VerifiedWith').valueCodeableConcept.text.join(' & ')",
-          "name": "Geverifieerd bij"
+          "name": "Geverifieerd bij",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "GeverifieerdBij" } ]
+        },
+        {
+          "path": "extension.where(url='http://nictiz.nl/fhir/StructureDefinition/Comment').valueString",
+          "name": "+Toelichting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
+        },
+        {
+          "path": "category.coding.display.join(' & ')",
+          "name": "+Categorie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
           "path": "status",
-          "name": "(status)"
+          "name": "(status)",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }
       ],
-      "forEach": "entry.resource"
+      "forEach": "entry.resource.where(resourceType='Consent' and category.coding.last().code='11291000146105')"
     }
   ]
 }

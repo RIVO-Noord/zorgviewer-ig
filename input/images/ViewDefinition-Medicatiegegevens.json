@@ -1,0 +1,166 @@
+{
+    "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+    "resource": "Bundle",
+    "id": "ViewDefinition-Medicatiegegevens",
+    "title": "Medicatie Gebruik en Afspraken",
+    "select": [
+        {
+            "unionAll": [
+                {
+                    "column": [
+                        {
+                            "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+                            "name": "Bron",
+                            "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "nvt"
+                                }
+                            ]
+                        },
+                        {
+                            "path": "medicationReference.display",
+                            "name": "Medicatie",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "Afgesprokengeneesmiddel"
+                                }
+                            ]
+                        },
+                        {
+                            "path": "dosageInstruction.route.text.toString()",
+                            "name": "Toedieningsweg",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "Gebruiksinstructie/Toedieningsweg"
+                                }
+                            ]
+                        },
+                        {
+                            "path": "dosageInstruction.text.toString()",
+                            "name": "Dosering & Instructies",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "Gebruiksinstructie/Omschrijving"
+                                }
+                            ]
+                        },
+                        {
+                            "path": "authoredOn",
+                            "name": "Datum",
+                            "type": "dateTime",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "MedicatieafspraakDatumTijd"
+                                }
+                            ]
+                        },
+                        {
+                            "path": "category.text",
+                            "name": "+Categorie",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "nvt"
+                                }
+                            ]
+                        },
+                        {
+                            "path": "'voorgeschreven'",
+                            "name": "+Type",
+                            "type": "string"
+                        }
+                    ],
+                    "forEach": "entry.resource.where(resourceType='MedicationRequest')"
+                },
+                {
+                    "column": [
+                        {
+                            "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+                            "name": "Bron",
+                            "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "nvt"
+                                }
+                            ]
+                        },
+                        {
+                            "path": "medicationReference.display",
+                            "name": "Medicatie",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "Gebruiksproduct"
+                                }
+                            ]
+                        },
+                        {
+                            "path": "dosage.route.text",
+                            "name": "Toedieningsweg",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "InstructionsForUse/Toedieningsweg"
+                                }
+                            ]
+                        },
+                        {
+                            "path": "dosage.text",
+                            "name": "Dosering & Instructies",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "InstructionsForUse/Omschrijving"
+                                }
+                            ]
+                        },
+                        {
+                            "path": "dateAsserted",
+                            "name": "Datum",
+                            "type": "dateTime",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "MedicatieGebruikDatumTijd"
+                                }
+                            ]
+                        },
+                        {
+                            "path": "category.text",
+                            "name": "+Categorie",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "nvt"
+                                }
+                            ]
+                        },
+                        {
+                            "path": "'huidig'",
+                            "name": "+Type",
+                            "type": "string"
+                        }
+                    ],
+                    "forEach": "entry.resource.where(resourceType='MedicationStatement')"
+                }
+            ]
+        }
+    ]
+}

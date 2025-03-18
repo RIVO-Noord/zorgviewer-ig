@@ -1,0 +1,5 @@
+| Bron | Datum | Voor(1) | Voor(2) | Voor(3) | Categorie | Status |
+|------|-------|---------|---------|---------|-----------|--------|
+| Chipsoft | 1-6-2010 |  | Drager MRSA |  | waarschuwing | active |
+| Epic | 10-5-2022 |  | TBC |  | Infection Flag | inactive |
+| Nexus | 16-5-2022 |  | LET OP!!!!!\n Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5.... |  | Waarschuwing | active |

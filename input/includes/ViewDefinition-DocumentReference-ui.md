@@ -1,0 +1,4 @@
+| Bron | Datum | Type | Class | Beschrijving | Auteur | Specialisme | (MimeType) |
+|------|-------|------|-------|--------------|--------|-------------|------------|
+| Chipsoft | 11-5-2022 | 51852-2 | 51852-2 | test.pdf |  | 394802001 | application/pdf |
+| Epic | 15-12-2021 | Patiëntenbrief | Correspondence | Patiëntenbrief | G Boer | KGA - Genetica | application/pdf |

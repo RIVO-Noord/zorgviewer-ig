@@ -1,0 +1,70 @@
+{
+  "resourceType": "Immunization",
+  "id": "b0a09112-1141-41a5-ab3e-277dd7cf34c4",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
+        "valueUri": "ZP"
+      }
+    ],
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Immunization resource:</h3><ul><li><p><strong>Patient:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Start:</strong> &#x27;Completed&#x27;</p></li><li><p><strong>Note:</strong> &#x27;Bezoek aan Guatemala&#x27;</p></li><li><p><strong>Date:</strong> &#x27;5-3-1999 12:58&#x2B;0100&#x27;</p></li><li><p><strong>Not given:</strong> &#x27;No&#x27;</p></li><li><p><strong>Vaccine code:</strong> &#x27;HEPATITIS-A-VACCIN HAVRIX JR WSP 0,5ML (1440E/ML)&#x27;</p></li><li><table><thead><tr><th>Practitioner</th><th>Names</th></tr></thead><tbody><tr><td>Practitioner 1</td><td></td></tr></tbody></table></li><li><p><strong>Author</strong> &#x27;Practitioner author with last name &#x27;van Partners&#x27;.&#x27;</p></li></ul></div>"
+  },
+  "status": "completed",
+  "notGiven": false,
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.4.10",
+        "code": "00062022",
+        "display": "HEPATITIS-A-VACCIN HAVRIX JR WSP 0,5ML (1440E/ML)"
+      }
+    ],
+    "text": "HEPATITIS-A-VACCIN HAVRIX JR WSP 0,5ML (1440E/ML)"
+  },
+  "patient": {
+    "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+    "display": "Johan XXX_Helleman_Afblijven"
+  },
+  "date": "1999-03-05",
+  "primarySource": true,
+  "doseQuantity": {
+    "value": 1,
+    "unit": "STUK",
+    "system": "http://unitsofmeasure.org",
+    "code": "STUK"
+  },
+  "practitioner": [
+    {
+      "actor": {
+        "reference": "Practitioner/37b6e64f-9d95-4e33-8a38-ede7e0cbb905",
+        "display": "ChipSoft gebruiker"
+      }
+    }
+  ],
+  "note": [
+    {
+      "authorReference": {
+        "extension": [
+          {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+            "valueReference": {
+              "reference": "PractitionerRole/F291A52653198B7DFFDE2BF39572EF714413829AF1665C47CB3ABED9525E9492",
+              "display": "Onbekende functiecode."
+            }
+          }
+        ],
+        "reference": "Practitioner/5b246c55-3730-4fb6-b1f8-e987822fed85",
+        "display": "van Partners"
+      },
+      "time": "2022-09-30",
+      "text": "Bezoek aan Guatemala"
+    }
+  ]
+}

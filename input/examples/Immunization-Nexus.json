@@ -1,0 +1,65 @@
+{
+  "resourceType": "Immunization",
+  "id": "873",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
+        "valueUri": "Nexus"
+      }
+    ],
+    "lastUpdated": "2024-04-17T10:12:07.984+02:00",
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Immunization. typeCode-RCT: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.30.873 (urn:ietf:rfc:3986), Status: status-completed</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Bezoek aan Guatemala.</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>\n                              <span title=\"hepatitis-a-vaccin (J07BC02 - http://www.whocc.no/atc)\">hepatitis-a-vaccin</span>\n                           </th>\n                           <td>\n                              <div>Administered: boolean-true (5 March 1999)</div>\n                              <div>Reported By Performer: boolean-true</div>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Practitioner</th>\n                           <td>Vaste Huisarts 1<div>PractitionerRole: Huisartsen</div>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+  },
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.30.873"
+    }
+  ],
+  "status": "completed",
+  "notGiven": false,
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "http://www.whocc.no/atc",
+        "code": "J07BC02",
+        "display": "hepatitis-a-vaccin"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/330073",
+    "display": "Xxx-Helleman, J (M)"
+  },
+  "date": "1999-03-05",
+  "primarySource": true,
+  "practitioner": [
+    {
+      "actor": {
+        "extension": [
+          {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+            "valueReference": {
+              "reference": "PractitionerRole/71994976-3190-49ea-865c-18b8b20d589b",
+              "display": "Huisartsen"
+            }
+          }
+        ],
+        "reference": "Practitioner/8017",
+        "display": "Vaste Huisarts 1"
+      }
+    }
+  ],
+  "note": [
+    {
+      "text": "Bezoek aan Guatemala."
+    }
+  ]
+}

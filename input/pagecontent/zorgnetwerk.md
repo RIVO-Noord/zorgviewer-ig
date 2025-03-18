@@ -1,8 +1,8 @@
 <div class="dragon">
-<b>Dit is een RIVO Architecten Overleg onderwerp en uitwerking.</b>
+<b>Dit is een RIVO Architectuur Overleg onderwerp.</b>
 </div>
 
-### Inzage zorgnetwerk?
+### Inzage zorgnetwerk
 
 Inzage in het zorgnetwerk van een patiënt/cliënt binnen het zorgdomein.
 
@@ -10,17 +10,14 @@ Inzage in het zorgnetwerk van een patiënt/cliënt binnen het zorgdomein.
 
 1. Doordat de arts in de informatie kijkt in de Zorgviewer
 1. Overzicht afleiden en presenteren uit beschikbare informatie Zorgviewer
-1. Zorgteam bijhouden irt Behandelplan
+    1. Eventueel lookup contact gegevens van de zorgverleners als voldoende sleutelvelden beschikbaar
+1. Zorgteam bijhouden bijvoorbeeld irt Behandelplan
 
-#### 1 Huidige situatie
-
-#### 2 Afleiden uit beschikbare informatie
+#### Afleiden uit beschikbare informatie
 
 In onderstaande tabel staat een overzicht van gegevens die mogelijk het zorgnetwerk voor een patient vormen. 
 Zowel de bron in de zib als de bron in FHIR, waar soms meer in staat dan in de zib.
 De laatste 4 kolommen (Zorgviewer, Epic, Zorgplatform, Nexus) geeft per systeem aan of dat gegeven via FHIR beschikbaar is (Persoon, Zorginstelling, Contactdatums). De 3 legenda waarden gaan over beschikbaarheid van de gegevens. '111' betekent dat het gegeven in de kolom Persoon, Zorginstellen als Contactdatums beschikbaar is.
-
-Legenda: '-' = nvt, '0' = gegeven niet beschikbaar, '1' gegeven beschikbaar, '?' = nog uitzoeken
 
 <table border="1" cellpadding="5">
 <tr><th>Zib / FHIR</th>
@@ -116,4 +113,23 @@ UMCGheeft ook nog afdeling als 2de locatie! 
 <td>111</td>
 <td>111</td>
 <td>111</td></tr>
+<tr><td>MedicationRequest / Medicatieafspraak</td>
+<td>Voorschrijver MedicationRequest.requester.agent</td>
+<td></td>
+<td>MedicationRequest.authoredOn</td>
+<td>0--</td>
+<td>1--</td>
+<td>1--</td>
+<td>?--</td>
+</tr>
 </table>
+
+Legenda:<br/>
+'-' = nvt<br/>
+'0' = gegeven niet beschikbaar<br/>
+'1' gegeven beschikbaar<br/>
+'?' = nog uitzoeken<br/>
+
+### AGB en Fysieke Locatie
+
+> Use AGB API om bij inzage zorgnetwerk fysieke locaties te tonen adhv de AGB codes: https://www.vektis.nl/uploads/AGB/AGB%20Raadpleegdienst%20REST%20API.pdf  

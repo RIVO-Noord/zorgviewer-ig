@@ -2,6 +2,7 @@
   "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
   "resource": "Bundle",
   "id": "ViewDefinition-MedicationRequest",
+  "title": "Medicatie Afspraken",
   "select": [
     {
       "column": [
@@ -13,32 +14,32 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "authoredOn",
-          "name": "Datum",
-          "type": "dateTime",
-          "tag": [ { "name": "Zib element", "value": "MedicationAgreementDateTime" } ]
-        },
-        {
           "path": "medicationReference.display",
           "name": "Medicatie",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "AgreedMedicine" } ]
+          "tag": [ { "name": "Zib element", "value": "Afgesprokengeneesmiddel" } ]
         },
         {
           "path": "dosageInstruction.route.text.toString()",
           "name": "Toedieningsweg",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "RouteOfAdministration" } ]
+          "tag": [ { "name": "Zib element", "value": "Gebruiksinstructie/Toedieningsweg" } ]
         },
         {
           "path": "dosageInstruction.text.toString()",
-          "name": "Instructies",
+          "name": "Dosering & Instructies",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "InstructionsForUse" } ]
+          "tag": [ { "name": "Zib element", "value": "Gebruiksinstructie/Omschrijving" } ]
+        },
+        {
+          "path": "authoredOn",
+          "name": "Datum",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "MedicatieafspraakDatumTijd" } ]
         },
         {
           "path": "category.text",
-          "name": "Categorie",
+          "name": "+Categorie",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]  
         }

@@ -1,0 +1,33 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Wilsbeschikkingen",
+  "title": "Wilsbeschikkingen",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "dateTime",
+          "name": "Datum",
+          "description": "Kunnen vage datums zijn",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "WilsverklaringDatum" } ]
+        },
+        {
+          "path": "category[1].text",
+          "name": "Type",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "WilsverklaringType" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Consent' and category.coding.first().code='11341000146107')"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+| Bron | Datum | Behandeling | Behandeling toegestaan | Beperkingen | Geverifieerd bij | +Toelichting | +Categorie | (status) |
+|------|-------|-------------|------------------------|-------------|------------------|--------------|------------|----------|
+| Chipsoft | 30-9-2022 | Artificial respiration (procedure) | Ja, maar met beperkingen |  |  |  | Treatment instructions | active |
+| Epic | 22-3-2022 | kunstmatige beademing (verrichting) | Ja, maar met beperkingen |  | patiënt (persoon) |  | Advance Directive & Vastgelegd | active |
+| Nexus | 5-5-2023 | Kunstmatige beademing | Behandeling niet toegestaan en/of wenselijk |  |  | testje | Behandelingsinstructies (artefact opnemen) | active |
