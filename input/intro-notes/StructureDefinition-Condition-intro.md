@@ -13,7 +13,7 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 [ViewDefinition voor Problemen](ViewDefinition-Condition.json)
 
 <div>
-{% include ViewDefinition-Condition.svg %}
+{% include ViewDefinition-Condition-ui.md %}
 </div>
 
 {% include ViewDefinition-Condition.md %}

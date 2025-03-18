@@ -25,7 +25,7 @@ Vanuit de landelijke organisatie rondom palliatieve zorg is er een aanvulling no
 [ViewDefinition voor Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
 
 <div>
-{% include ViewDefinition-Behandelaanwijzingen.svg %}
+{% include ViewDefinition-Behandelaanwijzingen-ui.md %}
 </div>
 
 {% include ViewDefinition-Behandelaanwijzingen.md %}

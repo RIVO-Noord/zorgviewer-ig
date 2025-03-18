@@ -13,7 +13,7 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 [ViewDefinition voor Allergieën en Intoleranties](ViewDefinition-AllergyIntolerance.json)
 
 <div>
-{% include ViewDefinition-AllergyIntolerance.svg %}
+{% include ViewDefinition-AllergyIntolerance-ui.md %}
 </div>
 
 {% include ViewDefinition-AllergyIntolerance.md %}

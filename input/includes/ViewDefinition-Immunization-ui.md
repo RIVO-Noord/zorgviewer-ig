@@ -1,7 +1,95 @@
-| Bron | Datum | Product | Toelichting |
-|------|-------|---------|-------------|
-| Chipsoft | 5-3-1999 | HEPATITIS-A-VACCIN HAVRIX JR WSP 0,5ML (1440E/ML) | Bezoek aan Guatemala |
-| Epic | 2-8-2021 | COVID-19 Vaccin (Type Algemeen) |  |
-| Epic2 | 29-7-2019 | Bof-/Mazelen-/Rubellavaccin |  |
-| Epic3 | 25-3-2021 | COVID-19 Vaccin (Spikevax, Moderna) |  |
-| Nexus | 5-3-1999 | hepatitis-a-vaccin | Bezoek aan Guatemala. |
+Mock-up met voorbeeld data:<p/>
+<b>Vaccinaties</b>
+<table class="grid">
+<thead>
+<tr><th>&gt;&lt;</th>
+<th>
+Bron
+</th>
+<th>
+Datum
+</th>
+<th>
+Product
+</th>
+<th>
+Toelichting
+</th>
+</tr></thead><tbody>
+<tr><td>+</td>
+<td>
+Chipsoft
+</td>
+<td>
+5-3-1999
+</td>
+<td>
+HEPATITIS-A-VACCIN HAVRIX JR WSP 0,5ML (1440E/ML)
+</td>
+<td>
+Bezoek aan Guatemala
+</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
+<td>
+Epic
+</td>
+<td>
+2-8-2021
+</td>
+<td>
+COVID-19 Vaccin (Type Algemeen)
+</td>
+<td>
+
+</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
+<td>
+Epic2
+</td>
+<td>
+29-7-2019
+</td>
+<td>
+Bof-/Mazelen-/Rubellavaccin
+</td>
+<td>
+
+</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
+<td>
+Epic3
+</td>
+<td>
+25-3-2021
+</td>
+<td>
+COVID-19 Vaccin (Spikevax, Moderna)
+</td>
+<td>
+
+</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
+<td>
+Nexus
+</td>
+<td>
+5-3-1999
+</td>
+<td>
+hepatitis-a-vaccin
+</td>
+<td>
+Bezoek aan Guatemala.
+</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+</tbody>
+</table>

@@ -1,4 +1,40 @@
-| Bron | Medicatie | Toedieningsweg | Dosering & Instructies | Datum | +Categorie | +Type |
-|------|-----------|----------------|------------------------|-------|------------|-------|
-| Bron | Medicatie | Toedieningsweg | Dosering & Instructies | Datum | +Categorie | +Type |
-|------|-----------|----------------|------------------------|-------|------------|-------|
+Mock-up met voorbeeld data:<p/>
+<b>Medicatie Gebruik en Afspraken</b>
+<table class="grid">
+<thead>
+<tr><th>&gt;&lt;</th>
+<th>
+Bron
+</th>
+<th>
+Medicatie
+</th>
+<th>
+Toedieningsweg
+</th>
+<th>
+Dosering & Instructies
+</th>
+<th>
+Datum
+</th>
+</tr></thead><tbody>
+<tr><th>&gt;&lt;</th>
+<th>
+Bron
+</th>
+<th>
+Medicatie
+</th>
+<th>
+Toedieningsweg
+</th>
+<th>
+Dosering & Instructies
+</th>
+<th>
+Datum
+</th>
+</tr></thead><tbody>
+</tbody>
+</table>

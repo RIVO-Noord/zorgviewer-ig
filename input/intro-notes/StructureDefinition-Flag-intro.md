@@ -9,7 +9,7 @@
 [ViewDefinition voor Alerts](ViewDefinition-Flag.json)
 
 <div>
-{% include ViewDefinition-Flag.svg %}
+{% include ViewDefinition-Flag-ui.md %}
 </div>
 
 {% include ViewDefinition-Flag.md %}
