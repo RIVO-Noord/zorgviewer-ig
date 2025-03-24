@@ -13,7 +13,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
         const viewDef = JSON.parse(fs.readFileSync(viewDef_filePath, 'utf8'));
 
         const md_def = [
-            "Kolom definities:",
+            "### Kolom Definities",
             "<table class=\"grid\">",
             "<thead>",
             "<th>Kolom label</th>",
@@ -25,7 +25,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
             "<tbody>"
         ];
         const md_ui = [
-            "Mock-up met voorbeeld data:<p/>",
+            "### UI Wireframe",
             `<b>${viewDef.title}</b>`,
             "<table class=\"grid\">",
             "<tbody>"

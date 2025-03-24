@@ -1,4 +1,4 @@
-Mock-up met voorbeeld data:<p/>
+### UI Wireframe
 <b>Behandelaanwijzingen</b>
 <table class="grid">
 <tbody>
