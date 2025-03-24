@@ -1,0 +1,2735 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "6b4caa81-91c0-41ff-9b38-80314b9d2bdf-60",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/6b4caa81-91c0-41ff-9b38-80314b9d2bdf-60",
+  "name" : "IntersectionPatientAndPatient",
+  "title" : "Intersection of Patient And Patient",
+  "status" : "active",
+  "date" : "2025-03-24T10:29:27+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NL"
+    }]
+  }],
+  "snapshot" : {
+    "element" : [{
+      "path" : "Patient",
+      "short" : "Patient",
+      "definition" : "Demographics and other administrative information about an individual or animal receiving care or other health-related services.",
+      "alias" : ["SubjectOfCare Client Resident",
+      "Patiënt"],
+      "min" : 0,
+      "max" : "*",
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(parent::f:contained and f:contained)"
+        }],
+        "key" : "dom-2",
+        "severity" : "error",
+        "human" : "If the resource is contained in another resource, it SHALL NOT contain nested Resources",
+        "expression" : "contained.contained.empty()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(parent::f:contained and f:text)"
+        }],
+        "key" : "dom-1",
+        "severity" : "error",
+        "human" : "If the resource is contained in another resource, it SHALL NOT contain any narrative",
+        "expression" : "contained.text.empty()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))"
+        }],
+        "key" : "dom-4",
+        "severity" : "error",
+        "human" : "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated",
+        "expression" : "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "not(exists(for $id in f:contained/*/@id return $id[not(ancestor::f:contained/parent::*/descendant::f:reference/@value=concat('#', $id))]))"
+        }],
+        "key" : "dom-3",
+        "severity" : "error",
+        "human" : "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource",
+        "expression" : "contained.where(('#'+id in %resource.descendants().reference).not()).empty()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.1",
+        "comment" : "Patient"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.1",
+        "comment" : "Patient"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.1",
+        "comment" : "Patient"
+      },
+      {
+        "identity" : "hcim-payer-v1.2-2015EN",
+        "map" : "NL-CM:1.1.2",
+        "comment" : "PayerPerson"
+      },
+      {
+        "identity" : "hcim-payer-v3.0-2016EN",
+        "map" : "NL-CM:1.1.2",
+        "comment" : "PayerPerson"
+      },
+      {
+        "identity" : "hcim-payer-v3.1-2017EN",
+        "map" : "NL-CM:1.1.2",
+        "comment" : "PayerPerson"
+      },
+      {
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.3",
+        "comment" : "PatientAsInformationSource::Patient"
+      },
+      {
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.8",
+        "comment" : "PatientAsAuthor::Patient"
+      },
+      {
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.12",
+        "comment" : "Patient"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Entity. Role, or Act"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Patient[classCode=PAT]"
+      },
+      {
+        "identity" : "cda",
+        "map" : "ClinicalDocument.recordTarget.patientRole"
+      },
+      {
+        "identity" : "w5",
+        "map" : "administrative.individual"
+      }]
+    },
+    {
+      "path" : "Patient.id",
+      "short" : "Logical id of this artifact",
+      "definition" : "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "comment" : "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "id"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true
+    },
+    {
+      "path" : "Patient.meta",
+      "short" : "Metadata about the resource",
+      "definition" : "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Meta"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true
+    },
+    {
+      "path" : "Patient.implicitRules",
+      "short" : "A set of rules under which this content was created",
+      "definition" : "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+      "comment" : "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. \n\nThis element is labelled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "uri"
+      }],
+      "mustSupport" : false,
+      "isModifier" : true,
+      "isSummary" : true
+    },
+    {
+      "path" : "Patient.language",
+      "short" : "Language of the resource content",
+      "definition" : "The base language in which the resource is written.",
+      "comment" : "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "binding" : {
+        "strength" : "extensible",
+        "description" : "A human language.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/languages"
+      }
+    },
+    {
+      "path" : "Patient.text",
+      "short" : "Text summary of the resource, for human interpretation",
+      "definition" : "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "comment" : "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded in formation is added later.",
+      "alias" : ["narrative",
+      "html",
+      "xhtml",
+      "display"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Narrative"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "Act.text?"
+      }]
+    },
+    {
+      "path" : "Patient.contained",
+      "short" : "Contained, inline Resources",
+      "definition" : "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "comment" : "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+      "alias" : ["inline resources",
+      "anonymous resources",
+      "contained resources"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Resource"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "path" : "Patient.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.modifierExtension",
+      "short" : "Extensions that cannot be ignored",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : true,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "path" : "Patient.identifier",
+      "short" : "PatientIdentificationNumber",
+      "definition" : "The Burgerservicenummer or BSN, as one of the possible patient identification numbers, should at least be sent unless there is a reason not to. Reasons for not sending the burgerservicenummer include but are not limited to, research and apps without a contract for processing data (Dutch: bewerkingsovereenkomst).",
+      "requirements" : "Patients are almost always assigned specific numerical identifiers.",
+      "alias" : ["Identificatienummer"],
+      "min" : 1,
+      "max" : "*",
+      "type" : [{
+        "code" : "Identifier"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.7",
+        "comment" : "PatientIdentificationNumber"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.7",
+        "comment" : "PatientIdentificationNumber"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.7",
+        "comment" : "PatientIdentificationNumber"
+      },
+      {
+        "identity" : "hcim-basicelements-v1.0-2017EN",
+        "map" : "NL-CM:0.0.6",
+        "comment" : "IdentificationNumber"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "id"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".id"
+      },
+      {
+        "identity" : "w5",
+        "map" : "id"
+      }]
+    },
+    {
+      "path" : "Patient.active",
+      "short" : "Whether this patient's record is in active use",
+      "definition" : "This field determines the status of the 'patient' record in the context of the organization that owns the record. Note that the record is not the medical record, but rather the actual patient 'resource'. Obviously when the patient 'resource' is not active, then by extension his medical record might also be inactive. Patient.active='false' may be used discourage use of the record, but that it is kept beause there is (medical) data attached to it. Another use case is a patient moving to a different GP practice. Patient.active would be 'false' in the system of the previous GP.",
+      "comment" : "Default is true. If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient\n\nThis element is labeled as a modifier because when the patient record is marked as not active it is not expected to be used/referenced without being changed back to active.",
+      "requirements" : "Need to be able to mark a patient record as not to be used because it was created in error.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "boolean"
+      }],
+      "defaultValueBoolean" : true,
+      "mustSupport" : false,
+      "isModifier" : true,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "statusCode"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      },
+      {
+        "identity" : "w5",
+        "map" : "status"
+      }]
+    },
+    {
+      "path" : "Patient.name",
+      "short" : "NameInformation",
+      "definition" : "A name associated with the individual.",
+      "comment" : "A patient may have multiple names with different uses or applicable periods. For animals, the name is a \"HumanName\" in the sense that is assigned and used by humans and has the same patterns.",
+      "requirements" : "Need to be able to track the patient by multiple names. Examples are your official name and a partner name.",
+      "alias" : ["Naamgegevens"],
+      "min" : 1,
+      "max" : "*",
+      "type" : [{
+        "code" : "HumanName",
+        "profile" : ["http://fhir.nl/fhir/StructureDefinition/nl-core-humanname",
+        "#sd-nl-core-humanname-nl-core-humanname"]
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "/f:name/f:family or /f:name/f:given or /f:name/f:text"
+        }],
+        "key" : "zv-pat-1",
+        "severity" : "error",
+        "human" : "Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present.",
+        "expression" : "(family.exists() or given.exists() or text.exists())"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+          "valueBoolean" : true
+        },
+        {
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "/f:name/f:text"
+        }],
+        "key" : "zv-pat-2",
+        "severity" : "warning",
+        "human" : "To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present.",
+        "expression" : "text.exists()"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.6",
+        "comment" : "NameInformation"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.6",
+        "comment" : "NameInformation"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.6",
+        "comment" : "NameInformation"
+      },
+      {
+        "identity" : "hcim-payer-v1.2-2015EN",
+        "map" : "NL-CM:1.1.5",
+        "comment" : "PayerName"
+      },
+      {
+        "identity" : "hcim-payer-v3.0-2016EN",
+        "map" : "NL-CM:1.1.5",
+        "comment" : "PayerName"
+      },
+      {
+        "identity" : "hcim-payer-v3.1-2017EN",
+        "map" : "NL-CM:1.1.5",
+        "comment" : "PayerName"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-5, PID-9"
+      },
+      {
+        "identity" : "rim",
+        "map" : "name"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".patient.name"
+      }]
+    },
+    {
+      "path" : "Patient.name.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.name.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.name.use",
+      "short" : "usual | official | temp | nickname | anonymous | old | maiden",
+      "definition" : "Identifies the purpose for this name.",
+      "comment" : "This is labeled as \"Is Modifier\" because applications should not mistake a temporary or old name etc.for a current/permanent one. Applications can assume that a name is current unless it explicitly says that it is temporary or old.",
+      "requirements" : "Allows the appropriate name for a particular context of use to be selected from among a set of names.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mustSupport" : false,
+      "isModifier" : true,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "description" : "The use of a human name",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/name-use"
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XPN.7, but often indicated by which field contains the name"
+      },
+      {
+        "identity" : "rim",
+        "map" : "unique(./use)"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./NamePurpose"
+      }]
+    },
+    {
+      "path" : "Patient.name.text",
+      "short" : "Text representation of the full name",
+      "definition" : "A full text representation of the name.",
+      "comment" : "Can provide both a text representation and structured parts.",
+      "requirements" : "A renderable, unencoded form.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-payer-v1.2-2015EN",
+        "map" : "NL-CM:1.1.5",
+        "comment" : "PayerName"
+      },
+      {
+        "identity" : "hcim-payer-v3.0-2016EN",
+        "map" : "NL-CM:1.1.5",
+        "comment" : "PayerName"
+      },
+      {
+        "identity" : "hcim-payer-v3.1-2017EN",
+        "map" : "NL-CM:1.1.5",
+        "comment" : "PayerName"
+      },
+      {
+        "identity" : "v2",
+        "map" : "implied by XPN.11"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./formatted"
+      }]
+    },
+    {
+      "path" : "Patient.name.family",
+      "short" : "Surname",
+      "definition" : "The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.",
+      "comment" : "Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).",
+      "alias" : ["surname",
+      "Achternaam"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XPN.1/FN.1"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./part[partType = FAM]"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./FamilyName"
+      }]
+    },
+    {
+      "path" : "Patient.name.family.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.name.family.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.name.family.value",
+      "representation" : ["xmlAttr"],
+      "short" : "Primitive value for string",
+      "definition" : "The actual value",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "_code" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
+            "valueString" : "string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
+            "valueString" : "xsd:string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
+            "valueString" : "xsd:string"
+          }]
+        }
+      }],
+      "maxLength" : 1048576,
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.name.given",
+      "short" : "Given",
+      "definition" : "Note that in order to mark the type of a given name, the FHIR standard extension for ISO 21090 EN Qualifiers is to be used. Examples include call me name (Dutch: roepnaam) and initials. Each initial is expected to be delimited by a dot.",
+      "comment" : "Note that in order to mark the type of a given name, the FHIR standard extension for ISO 21090 EN Qualifiers is to be used. Examples include call me name (Dutch: roepnaam) and initials. Each initial is expected to be delimited by a dot. To be conformant to the HCIM for NameInformation, at least the following qualifiers SHALL be supported: _BR_, _IN_ and _CL_. The qualifier _BR_ maps to the HCIM concept FirstNames, _IN_ maps to Initials and _CL_ to GivenName.\r\n\r\nPlease see the compatibility note on the containing element as well!",
+      "alias" : ["first name",
+      "middle name",
+      "Voornamen",
+      "Initialen",
+      "Roepnaam"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-nameinformation-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.26",
+        "comment" : "FirstNames. Qualifier 'BR'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.35",
+        "comment" : "Initials. Qualifier 'IN'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.27",
+        "comment" : "GivenName. Qualifier 'CL'"
+      },
+      {
+        "identity" : "BRP",
+        "map" : "02.10",
+        "comment" : "Voornamen"
+      },
+      {
+        "identity" : "hcim-nameinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.26",
+        "comment" : "FirstNames. Qualifier 'BR'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.35",
+        "comment" : "Initials. Qualifier 'IN'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.27",
+        "comment" : "GivenName. Qualifier 'CL'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v1.0.1-2017EN",
+        "map" : "NL-CM:20.4.4",
+        "comment" : "FirstNames. Qualifier 'BR'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v1.0.1-2017EN",
+        "map" : "NL-CM:20.4.5",
+        "comment" : "Initials. Qualifier 'IN'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v1.0.1-2017EN",
+        "map" : "NL-CM:20.4.6",
+        "comment" : "GivenName. Qualifier 'CL'"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XPN.2 + XPN.3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./part[partType = GIV]"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./GivenNames"
+      }]
+    },
+    {
+      "path" : "Patient.name.given.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.name.given.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.name.given.value",
+      "representation" : ["xmlAttr"],
+      "short" : "Primitive value for string",
+      "definition" : "The actual value",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "_code" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
+            "valueString" : "string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
+            "valueString" : "xsd:string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
+            "valueString" : "xsd:string"
+          }]
+        }
+      }],
+      "maxLength" : 1048576,
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.name.prefix",
+      "short" : "Parts that come before the name",
+      "definition" : "Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XPN.5"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./part[partType = PFX]"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./TitleCode"
+      }]
+    },
+    {
+      "path" : "Patient.name.suffix",
+      "short" : "Parts that come after the name",
+      "definition" : "Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XPN/4"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./part[partType = SFX]"
+      }]
+    },
+    {
+      "path" : "Patient.name.period",
+      "short" : "Time period when name was/is in use",
+      "definition" : "Indicates the period of time when this name was valid for the named person.",
+      "requirements" : "Allows names to be placed in historical context.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Period"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XPN.13 + XPN.14"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./usablePeriod[type=\"IVL<TS>\"]"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./StartDate and ./EndDate"
+      }]
+    },
+    {
+      "path" : "Patient.telecom",
+      "short" : "A contact detail for the individual",
+      "definition" : "A contact detail for the individual. Note that there is no support for multiple use values like 'mobile business'.",
+      "comment" : "A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address may not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).",
+      "requirements" : "People have (primary) ways to contact them in some way such as phone, email.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "ContactPoint",
+        "profile" : ["http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint",
+        "#sd-nl-core-contactpoint-nl-core-contactpoint"]
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.5",
+        "comment" : "ContactInformation"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.5",
+        "comment" : "ContactInformation"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.5",
+        "comment" : "ContactInformation"
+      },
+      {
+        "identity" : "hcim-payer-v1.2-2015EN",
+        "map" : "NL-CM:1.1.12",
+        "comment" : "TelephoneEmail::ContactInformation"
+      },
+      {
+        "identity" : "hcim-payer-v3.0-2016EN",
+        "map" : "NL-CM:1.1.12",
+        "comment" : "TelephoneEmail::ContactInformation"
+      },
+      {
+        "identity" : "hcim-payer-v3.1-2017EN",
+        "map" : "NL-CM:1.1.12",
+        "comment" : "ContactInformation"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-13, PID-14, PID-40"
+      },
+      {
+        "identity" : "rim",
+        "map" : "telecom"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".telecom"
+      }]
+    },
+    {
+      "path" : "Patient.gender",
+      "short" : "Gender",
+      "definition" : "Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes.",
+      "comment" : "The gender may not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though the vast majority of systems and contexts only support M and F.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific gender aspect of interest (anatomical, chromosonal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosonal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overrideable error, not a \"hard\" error.",
+      "requirements" : "Needed for identification of the individual, in combination with (at least) name and birth date. Gender of individual drives many clinical processes.",
+      "alias" : ["Geslacht"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/administrative-gender"
+      },
+      "mapping" : [{
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.9",
+        "comment" : "Gender. Use FHIR Core ConceptMap for HCIM mapping: http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.9",
+        "comment" : "Gender. Use FHIR Core ConceptMap for HCIM mapping: http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.9",
+        "comment" : "Gender. Use FHIR Core ConceptMap for HCIM mapping: http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-8"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".patient.administrativeGenderCode"
+      }]
+    },
+    {
+      "path" : "Patient.gender.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.gender.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.gender.value",
+      "representation" : ["xmlAttr"],
+      "short" : "Primitive value for code",
+      "definition" : "Primitive value for code",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-regex",
+          "valueString" : "[^\\s]+([\\s]?[^\\s]+)*"
+        }],
+        "_code" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
+            "valueString" : "string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
+            "valueString" : "xsd:token"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
+            "valueString" : "xsd:token"
+          }]
+        }
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.birthDate",
+      "short" : "Patients date of birth. The date of birth is mandatory for a patient. An incomplete date, e.g. only year or only year + month, is permitted.",
+      "definition" : "The date of birth for the individual.",
+      "comment" : "At least an estimated year should be provided as a guess if the real DOB is unknown  There is a standard extension \"patient-birthTime\" available that should be used where Time is required (such as in maternaty/infant care systems).",
+      "requirements" : "Age of the individual drives many clinical processes.",
+      "alias" : ["Geboortedatum"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.10",
+        "comment" : "DateOfBirth"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.10",
+        "comment" : "DateOfBirth"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.10",
+        "comment" : "DateOfBirth"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-7"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/birthTime"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".patient.birthTime"
+      },
+      {
+        "identity" : "loinc",
+        "map" : "21112-8"
+      }]
+    },
+    {
+      "path" : "Patient.deceased[x]",
+      "short" : "DeathIndicator/DateOfDeath",
+      "definition" : "Indicates if the individual is deceased or not.",
+      "comment" : "If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.\n\nThis element is labeled as a modifier because once a patient is marked as deceased, the actions that are appropriate to perform on the patient may be significantly different.",
+      "requirements" : "The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.",
+      "alias" : ["Overlijdensindicator/DatumOverlijden"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "boolean"
+      },
+      {
+        "code" : "dateTime"
+      }],
+      "mustSupport" : true,
+      "isModifier" : true,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.32",
+        "comment" : "DeathIndicator"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.32",
+        "comment" : "DeathIndicator"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.32",
+        "comment" : "DeathIndicator"
+      },
+      {
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.33",
+        "comment" : "DateOfDeath"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.33",
+        "comment" : "DateOfDeath"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.33",
+        "comment" : "DateOfDeath"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-30  (bool) and PID-29 (datetime)"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.address",
+      "short" : "AddressInformation",
+      "definition" : "Addresses for the individual.",
+      "comment" : "Patient may have multiple addresses with different uses or applicable periods.",
+      "requirements" : "May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.",
+      "alias" : ["Adresgegevens"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Address",
+        "profile" : ["http://fhir.nl/fhir/StructureDefinition/nl-core-address",
+        "#sd-nl-core-address-nl-core-address"]
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.4",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.4",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.4",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-payer-v1.2-2015EN",
+        "map" : "NL-CM:1.1.17",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-payer-v3.0-2016EN",
+        "map" : "NL-CM:1.1.17",
+        "comment" : "Address"
+      },
+      {
+        "identity" : "hcim-payer-v3.1-2017EN",
+        "map" : "NL-CM:1.1.17",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-11"
+      },
+      {
+        "identity" : "rim",
+        "map" : "addr"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".addr"
+      }]
+    },
+    {
+      "path" : "Patient.maritalStatus",
+      "short" : "MaritalStatus",
+      "definition" : "This field contains a patient's most recent marital (civil) status. A person’s marital status according to the terms and definition in the Dutch civil code.",
+      "requirements" : "Most, if not all systems capture it.",
+      "alias" : ["BurgerlijkeStaat"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20171231000000"
+      },
+      "mapping" : [{
+        "identity" : "hcim-maritalstatus-v1.2.1-2015EN",
+        "map" : "NL-CM:7.9.2",
+        "comment" : "MaritalStatus"
+      },
+      {
+        "identity" : "hcim-maritalstatus-v3.0-2016EN",
+        "map" : "NL-CM:7.9.2",
+        "comment" : "MaritalStatus"
+      },
+      {
+        "identity" : "hcim-maritalstatus-v3.0-2017EN",
+        "map" : "NL-CM:7.9.2",
+        "comment" : "MaritalStatus"
+      },
+      {
+        "identity" : "hcim-familysituation-v1.0-2015EN",
+        "map" : "NL-CM:7.13.7",
+        "comment" : "FamilySituation"
+      },
+      {
+        "identity" : "hcim-familysituation-v3.0-2016EN",
+        "map" : "NL-CM:7.13.7",
+        "comment" : "FamilySituation"
+      },
+      {
+        "identity" : "hcim-familysituation-v3.0-2017EN",
+        "map" : "NL-CM:7.13.7",
+        "comment" : "FamilySituation"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-16"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN]/maritalStatusCode"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".patient.maritalStatusCode"
+      }]
+    },
+    {
+      "path" : "Patient.multipleBirth[x]",
+      "short" : "MultipleBirthIndicator",
+      "definition" : "Indicates whether the patient is part of a multiple (bool) or indicates the actual birth order (integer).",
+      "comment" : "Where the valueInteger is provided, the number is the birth number in the sequence.\nE.g. The middle birth in tripplets would be valueInteger=2 and the third born would have valueInteger=3\nIf a bool value was provided for this tripplets examle, then all 3 patient records would have valueBool=true (the ordering is not indicated).",
+      "requirements" : "For disambiguation of multiple-birth children, especially relevant where the care provider doesn't meet the patient, such as labs.",
+      "alias" : ["Meerlingindicator"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "boolean"
+      },
+      {
+        "code" : "integer"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "hcim-patient-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.31",
+        "comment" : "MultipleBirthIndicator"
+      },
+      {
+        "identity" : "hcim-patient-v3.0-2016EN",
+        "map" : "NL-CM:0.1.31",
+        "comment" : "MultipleBirthIndicator"
+      },
+      {
+        "identity" : "hcim-patient-v3.1-2017EN",
+        "map" : "NL-CM:0.1.31",
+        "comment" : "MultipleBirthIndicator"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-24 (bool), PID-25 (integer)"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd,  player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.photo",
+      "short" : "Image of the patient",
+      "definition" : "Image of the patient.",
+      "requirements" : "Many EHR systems have the capability to capture an image of the patient. Fits with newer social media usage too.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Attachment"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "OBX-5 - needs a profile"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/desc"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.contact",
+      "short" : "ContactPerson",
+      "definition" : "Contacts are related persons in some way, but not all related persons are contacts. The HCIM ContactPerson is designed to deal with both related persons and contacts. An HCIM ContactPerson who is a contact, is expected to have an NL-CM:3.1.2 Role primary contact ('Eerste relatie/contactpersoon') or secondary contact ('Tweede relatie/contactpersoon'). See Patient.contact.relationship in slice 'role'.",
+      "comment" : "Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.",
+      "requirements" : "Need to track people you can contact about the patient.",
+      "alias" : ["Contactpersoon"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() | (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "exists(f:name) or exists(f:telecom) or exists(f:address) or exists(f:organization)"
+        }],
+        "key" : "pat-1",
+        "severity" : "error",
+        "human" : "SHALL at least contain a contact's details or a reference to an organization",
+        "expression" : "name.exists() or telecom.exists() or address.exists() or organization.exists()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Patient"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "hcim-contactperson-v1.2-2015EN",
+        "map" : "NL-CM:3.1.1",
+        "comment" : "Contact"
+      },
+      {
+        "identity" : "hcim-contactperson-v3.0-2016EN",
+        "map" : "NL-CM:3.1.1",
+        "comment" : "Contact"
+      },
+      {
+        "identity" : "hcim-contactperson-v3.1-2017EN",
+        "map" : "NL-CM:3.1.1",
+        "comment" : "Contact"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.contact.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.contact.extension",
+      "short" : "Additional Content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.contact.modifierExtension",
+      "short" : "Extensions that cannot be ignored",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content",
+      "modifiers"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : true,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "path" : "Patient.contact.relationship",
+      "short" : "The kind of relationship",
+      "definition" : "The nature of the relationship between the patient and the contact person.",
+      "requirements" : "Used to determine which contact person is the most relevant to approach, depending on circumstances.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "binding" : {
+        "strength" : "extensible",
+        "description" : "The nature of the relationship between a patient and a contact person for that patient.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/v2-0131"
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "NK1-7, NK1-3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "code"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.contact.name",
+      "short" : "NameInformation",
+      "definition" : "A name associated with the contact person.",
+      "requirements" : "Contact persons need to be identified by name, but it is uncommon to need details about multiple other names for that contact person.",
+      "alias" : ["Naamgegevens"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "HumanName",
+        "profile" : ["http://fhir.nl/fhir/StructureDefinition/nl-core-humanname",
+        "#sd-nl-core-humanname-nl-core-humanname"]
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "hcim-contactperson-v1.2-2015EN",
+        "map" : "NL-CM:3.1.4",
+        "comment" : "NameInformation"
+      },
+      {
+        "identity" : "hcim-contactperson-v3.0-2016EN",
+        "map" : "NL-CM:3.1.4",
+        "comment" : "NameInformation"
+      },
+      {
+        "identity" : "hcim-contactperson-v3.1-2017EN",
+        "map" : "NL-CM:3.1.4",
+        "comment" : "NameInformation"
+      },
+      {
+        "identity" : "v2",
+        "map" : "NK1-2"
+      },
+      {
+        "identity" : "rim",
+        "map" : "name"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.contact.name.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.contact.name.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.contact.name.use",
+      "short" : "usual | official | temp | nickname | anonymous | old | maiden",
+      "definition" : "Identifies the purpose for this name.",
+      "comment" : "This is labeled as \"Is Modifier\" because applications should not mistake a temporary or old name etc.for a current/permanent one. Applications can assume that a name is current unless it explicitly says that it is temporary or old.",
+      "requirements" : "Allows the appropriate name for a particular context of use to be selected from among a set of names.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mustSupport" : false,
+      "isModifier" : true,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "description" : "The use of a human name",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/name-use"
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XPN.7, but often indicated by which field contains the name"
+      },
+      {
+        "identity" : "rim",
+        "map" : "unique(./use)"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./NamePurpose"
+      }]
+    },
+    {
+      "path" : "Patient.contact.name.text",
+      "short" : "Text representation of the full name",
+      "definition" : "A full text representation of the name.",
+      "comment" : "Can provide both a text representation and structured parts.",
+      "requirements" : "A renderable, unencoded form.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-payer-v1.2-2015EN",
+        "map" : "NL-CM:1.1.5",
+        "comment" : "PayerName"
+      },
+      {
+        "identity" : "hcim-payer-v3.0-2016EN",
+        "map" : "NL-CM:1.1.5",
+        "comment" : "PayerName"
+      },
+      {
+        "identity" : "hcim-payer-v3.1-2017EN",
+        "map" : "NL-CM:1.1.5",
+        "comment" : "PayerName"
+      },
+      {
+        "identity" : "v2",
+        "map" : "implied by XPN.11"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./formatted"
+      }]
+    },
+    {
+      "path" : "Patient.contact.name.family",
+      "short" : "Surname",
+      "definition" : "The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.",
+      "comment" : "Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).",
+      "alias" : ["surname",
+      "Achternaam"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XPN.1/FN.1"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./part[partType = FAM]"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./FamilyName"
+      }]
+    },
+    {
+      "path" : "Patient.contact.name.family.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.contact.name.family.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.contact.name.family.value",
+      "representation" : ["xmlAttr"],
+      "short" : "Primitive value for string",
+      "definition" : "The actual value",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "_code" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
+            "valueString" : "string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
+            "valueString" : "xsd:string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
+            "valueString" : "xsd:string"
+          }]
+        }
+      }],
+      "maxLength" : 1048576,
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.contact.name.given",
+      "short" : "Given",
+      "definition" : "Note that in order to mark the type of a given name, the FHIR standard extension for ISO 21090 EN Qualifiers is to be used. Examples include call me name (Dutch: roepnaam) and initials. Each initial is expected to be delimited by a dot.",
+      "comment" : "Note that in order to mark the type of a given name, the FHIR standard extension for ISO 21090 EN Qualifiers is to be used. Examples include call me name (Dutch: roepnaam) and initials. Each initial is expected to be delimited by a dot. To be conformant to the HCIM for NameInformation, at least the following qualifiers SHALL be supported: _BR_, _IN_ and _CL_. The qualifier _BR_ maps to the HCIM concept FirstNames, _IN_ maps to Initials and _CL_ to GivenName.\r\n\r\nPlease see the compatibility note on the containing element as well!",
+      "alias" : ["first name",
+      "middle name",
+      "Voornamen",
+      "Initialen",
+      "Roepnaam"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "hcim-nameinformation-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.26",
+        "comment" : "FirstNames. Qualifier 'BR'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.35",
+        "comment" : "Initials. Qualifier 'IN'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v2.0.1-2015EN",
+        "map" : "NL-CM:0.1.27",
+        "comment" : "GivenName. Qualifier 'CL'"
+      },
+      {
+        "identity" : "BRP",
+        "map" : "02.10",
+        "comment" : "Voornamen"
+      },
+      {
+        "identity" : "hcim-nameinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.26",
+        "comment" : "FirstNames. Qualifier 'BR'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.35",
+        "comment" : "Initials. Qualifier 'IN'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v3.0-2016EN",
+        "map" : "NL-CM:0.1.27",
+        "comment" : "GivenName. Qualifier 'CL'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v1.0.1-2017EN",
+        "map" : "NL-CM:20.4.4",
+        "comment" : "FirstNames. Qualifier 'BR'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v1.0.1-2017EN",
+        "map" : "NL-CM:20.4.5",
+        "comment" : "Initials. Qualifier 'IN'"
+      },
+      {
+        "identity" : "hcim-nameinformation-v1.0.1-2017EN",
+        "map" : "NL-CM:20.4.6",
+        "comment" : "GivenName. Qualifier 'CL'"
+      },
+      {
+        "identity" : "v2",
+        "map" : "XPN.2 + XPN.3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./part[partType = GIV]"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./GivenNames"
+      }]
+    },
+    {
+      "path" : "Patient.contact.name.given.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.contact.name.given.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.contact.name.given.value",
+      "representation" : ["xmlAttr"],
+      "short" : "Primitive value for string",
+      "definition" : "The actual value",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "_code" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
+            "valueString" : "string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
+            "valueString" : "xsd:string"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type",
+            "valueString" : "xsd:string"
+          }]
+        }
+      }],
+      "maxLength" : 1048576,
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.contact.name.prefix",
+      "short" : "Parts that come before the name",
+      "definition" : "Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XPN.5"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./part[partType = PFX]"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./TitleCode"
+      }]
+    },
+    {
+      "path" : "Patient.contact.name.suffix",
+      "short" : "Parts that come after the name",
+      "definition" : "Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XPN/4"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./part[partType = SFX]"
+      }]
+    },
+    {
+      "path" : "Patient.contact.name.period",
+      "short" : "Time period when name was/is in use",
+      "definition" : "Indicates the period of time when this name was valid for the named person.",
+      "requirements" : "Allows names to be placed in historical context.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Period"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "XPN.13 + XPN.14"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./usablePeriod[type=\"IVL<TS>\"]"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./StartDate and ./EndDate"
+      }]
+    },
+    {
+      "path" : "Patient.contact.telecom",
+      "short" : "A contact detail for the person",
+      "definition" : "A contact detail for the person, e.g. a telephone number or an email address.",
+      "comment" : "Telecommunication data details (phone/email) is physically modeled in the HCIM Patient, which is why the telecommunication mappings appear to be coming from the HCIM Patient instead of the HCIM ContactPerson",
+      "requirements" : "People have (primary) ways to contact them in some way such as phone, email.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "ContactPoint",
+        "profile" : ["http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint",
+        "#sd-nl-core-contactpoint-nl-core-contactpoint"]
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "hcim-contactperson-v1.2-2015EN",
+        "map" : "NL-CM:3.1.6",
+        "comment" : "TelephoneEmail::ContactInformation"
+      },
+      {
+        "identity" : "hcim-contactperson-v3.0-2016EN",
+        "map" : "NL-CM:3.1.6",
+        "comment" : "TelephoneEmail::ContactInformation"
+      },
+      {
+        "identity" : "hcim-contactperson-v3.1-2017EN",
+        "map" : "NL-CM:3.1.6",
+        "comment" : "ContactInformation"
+      },
+      {
+        "identity" : "v2",
+        "map" : "NK1-5, NK1-6, NK1-40"
+      },
+      {
+        "identity" : "rim",
+        "map" : "telecom"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.contact.address",
+      "short" : "AddressInformation",
+      "definition" : "Address for the contact person.",
+      "requirements" : "Need to keep track where the contact person can be contacted per postal mail or visited.",
+      "alias" : ["Adresgegevens"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Address",
+        "profile" : ["http://fhir.nl/fhir/StructureDefinition/nl-core-address",
+        "#sd-nl-core-address-nl-core-address"]
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "hcim-contactperson-v1.2-2015EN",
+        "map" : "NL-CM:3.1.5",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-contactperson-v3.0-2016EN",
+        "map" : "NL-CM:3.1.5",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "hcim-contactperson-v3.1-2017EN",
+        "map" : "NL-CM:3.1.5",
+        "comment" : "AddressInformation"
+      },
+      {
+        "identity" : "v2",
+        "map" : "NK1-4"
+      },
+      {
+        "identity" : "rim",
+        "map" : "addr"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.contact.gender",
+      "short" : "male | female | other | unknown",
+      "definition" : "Administrative Gender - the gender that the contact person is considered to have for administration and record keeping purposes.",
+      "requirements" : "Needed to address the person correctly.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "binding" : {
+        "strength" : "required",
+        "description" : "The gender of a person used for administrative purposes.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/administrative-gender"
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "NK1-15"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.contact.organization",
+      "short" : "Organization that is associated with the contact",
+      "definition" : "Organization on behalf of which the contact is acting or for which the contact is working.",
+      "requirements" : "For guardians or business related contacts, the organization is relevant.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Organization"]
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "NK1-13, NK1-30, NK1-31, NK1-32, NK1-41"
+      },
+      {
+        "identity" : "rim",
+        "map" : "scoper"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.contact.period",
+      "short" : "The period during which this contact person or organization is valid to be contacted relating to this patient",
+      "definition" : "The period during which this contact person or organization is valid to be contacted relating to this patient.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Period"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "effectiveTime"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.animal",
+      "short" : "This patient is known to be an animal (non-human)",
+      "definition" : "This patient is known to be an animal.",
+      "comment" : "The animal element is labeled \"Is Modifier\" since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject declared animal records.   The absense of the animal element does not imply that the patient is a human. If a system requires such a positive assertion that the patient is human, an extension will be required.  (Do not use a species of homo-sapiens in animal species, as this would incorrectly infer that the patient is an animal).",
+      "requirements" : "Many clinical systems are extended to care for animal patients as well as human.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() | (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : false,
+      "isModifier" : true,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "player[classCode=ANM]"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.animal.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.animal.extension",
+      "short" : "Additional Content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.animal.modifierExtension",
+      "short" : "Extensions that cannot be ignored",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content",
+      "modifiers"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : true,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "path" : "Patient.animal.species",
+      "short" : "E.g. Dog, Cow",
+      "definition" : "Identifies the high level taxonomic categorization of the kind of animal.",
+      "comment" : "If the patient is non-human, at least a species SHALL be specified. Species SHALL be a widely recognised taxonomic classification.  It may or may not be Linnaean taxonomy and may or may not be at the level of species. If the level is finer than species--such as a breed code--the code system used SHALL allow inference of the species.  (The common example is that the word \"Hereford\" does not allow inference of the species Bos taurus, because there is a Hereford pig breed, but the SNOMED CT code for \"Hereford Cattle Breed\" does.).",
+      "requirements" : "Need to know what kind of animal.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "AnimalSpecies"
+        }],
+        "strength" : "example",
+        "description" : "The species of an animal.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/animal-species",
+        "_valueSet" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+            "valueUrl" : "Reference"
+          }]
+        }
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "PID-35"
+      },
+      {
+        "identity" : "rim",
+        "map" : "code"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.animal.breed",
+      "short" : "E.g. Poodle, Angus",
+      "definition" : "Identifies the detailed categorization of the kind of animal.",
+      "comment" : "Breed MAY be used to provide further taxonomic or non-taxonomic classification.  It may involve local or proprietary designation--such as commercial strain--and/or additional information such as production type.",
+      "requirements" : "May need to know the specific kind within the species.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "AnimalBreed"
+        }],
+        "strength" : "example",
+        "description" : "The breed of an animal.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/animal-breeds",
+        "_valueSet" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+            "valueUrl" : "Reference"
+          }]
+        }
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "PID-37"
+      },
+      {
+        "identity" : "rim",
+        "map" : "playedRole[classCode=GEN]/scoper[classCode=ANM, determinerCode=KIND]/code"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.animal.genderStatus",
+      "short" : "E.g. Neutered, Intact",
+      "definition" : "Indicates the current state of the animal's reproductive organs.",
+      "requirements" : "Gender status can affect housing and animal behavior.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "AnimalGenderStatus"
+        }],
+        "strength" : "example",
+        "description" : "The state of the animal's reproductive organs.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/animal-genderstatus",
+        "_valueSet" : {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+            "valueUrl" : "Reference"
+          }]
+        }
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "N/A"
+      },
+      {
+        "identity" : "rim",
+        "map" : "genderStatusCode"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.communication",
+      "short" : "A list of Languages which may be used to communicate with the patient about his or her health",
+      "definition" : "Languages which may be used to communicate with the patient about his or her health.",
+      "comment" : "If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.",
+      "requirements" : "If a patient does not speak the local language, interpreters may be required, so languages spoken and proficiency is an important things to keep track of both for patient and other persons of interest.",
+      "alias" : ["Taalvaardigheid"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() | (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "hcim-languageproficiency-v3.1-2017EN",
+        "map" : "NL-CM:7.12.1",
+        "comment" : "LanguageProficiency"
+      },
+      {
+        "identity" : "rim",
+        "map" : "LanguageCommunication"
+      },
+      {
+        "identity" : "cda",
+        "map" : "patient.languageCommunication"
+      }]
+    },
+    {
+      "path" : "Patient.communication.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.communication.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.communication.modifierExtension",
+      "short" : "Extensions that cannot be ignored",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content",
+      "modifiers"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : true,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "path" : "Patient.communication.language",
+      "short" : "CommunicationLanguage",
+      "definition" : "The language of communication. \r\n\r\nThe ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. \"en\" for English, or \"en-US\" for American English versus \"en-EN\" for England English.",
+      "comment" : "The FHIR value set http://hl7.org/fhir/valueset-languages.html is used instead of the HCIM value set CommunicationLanguageCodelist. The FHIR value set uses the code system urn:ietf:bcp:47 which includes the ISO-639-2 alpha code system used by the HCIM value set.",
+      "requirements" : "Most systems in multilingual countries will want to convey language. Not all systems actually need the regional dialect.",
+      "alias" : ["CommunicatieTaal"],
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "binding" : {
+        "strength" : "extensible",
+        "description" : "A human language.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/languages"
+      },
+      "mapping" : [{
+        "identity" : "hcim-languageproficiency-v3.1-2017EN",
+        "map" : "NL-CM:7.12.3",
+        "comment" : "CommunicationLanguage"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PID-15, LAN-2"
+      },
+      {
+        "identity" : "rim",
+        "map" : "player[classCode=PSN|ANM and determinerCode=INSTANCE]/languageCommunication/code"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".languageCode"
+      }]
+    },
+    {
+      "path" : "Patient.communication.preferred",
+      "short" : "Language preference indicator",
+      "definition" : "Indicates whether or not the patient prefers this language (over other languages he masters up a certain level).",
+      "comment" : "This language is specifically identified for communicating healthcare information.",
+      "requirements" : "People that master multiple languages up to certain level may prefer one or more, i.e. feel more confident in communicating in a particular language making other languages sort of a fall back method.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "boolean"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "PID-15"
+      },
+      {
+        "identity" : "rim",
+        "map" : "preferenceInd"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".preferenceInd"
+      }]
+    },
+    {
+      "path" : "Patient.generalPractitioner",
+      "short" : "GeneralPractitioner",
+      "definition" : "Patient's nominated care provider.",
+      "comment" : "This may be the primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disablity setting, or even organization that will provide people to perform the care provider roles.\n\nIt is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources.",
+      "alias" : ["careProvider",
+      "Huisarts"],
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://fhir.nl/fhir/StructureDefinition/nl-core-organization",
+        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"]
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "hcim-healthcareprovider-v1.2-2015EN",
+        "map" : "NL-CM:17.2.1",
+        "comment" : "HealthcareProvider"
+      },
+      {
+        "identity" : "hcim-healthcareprovider-v3.0-2016EN",
+        "map" : "NL-CM:17.2.1",
+        "comment" : "HealthcareProvider"
+      },
+      {
+        "identity" : "hcim-healthcareprovider-v3.1.1-2017EN",
+        "map" : "NL-CM:17.2.1",
+        "comment" : "HealthcareProvider"
+      },
+      {
+        "identity" : "hcim-healthprofessional-v1.2.1-2015EN",
+        "map" : "NL-CM:17.1.1",
+        "comment" : "HealthProfessional"
+      },
+      {
+        "identity" : "hcim-healthprofessional-v3.0-2016EN",
+        "map" : "NL-CM:17.1.1",
+        "comment" : "HealthProfessional"
+      },
+      {
+        "identity" : "hcim-healthprofessional-v3.2-2017EN",
+        "map" : "NL-CM:17.1.1",
+        "comment" : "HealthProfessional"
+      },
+      {
+        "identity" : "v2",
+        "map" : "PD1-4"
+      },
+      {
+        "identity" : "rim",
+        "map" : "subjectOf.CareEvent.performer.AssignedEntity"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.generalPractitioner.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.generalPractitioner.extension",
+      "short" : "Extension",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Patient.generalPractitioner.reference",
+      "short" : "Literal reference, Relative, internal or absolute URL",
+      "definition" : "A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.",
+      "comment" : "Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure \"/[type]/[id]\" then it should be assumed that the reference is to a FHIR RESTful server.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "path" : "Patient.generalPractitioner.identifier",
+      "short" : "Logical reference, when literal reference is not known",
+      "definition" : "An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.",
+      "comment" : "When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. \n\nWhen both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference\n\nApplications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Identifier"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : ".identifier"
+      }]
+    },
+    {
+      "path" : "Patient.generalPractitioner.display",
+      "short" : "Text alternative for the resource",
+      "definition" : "Plain text narrative that identifies the resource in addition to the resource reference.",
+      "comment" : "This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "path" : "Patient.managingOrganization",
+      "short" : "Organization that is the custodian of the patient record",
+      "definition" : "Organization that is the custodian of the patient record.",
+      "comment" : "There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association).",
+      "requirements" : "Need to know who recognizes this patient record, manages and updates it.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Organization"]
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "scoper"
+      },
+      {
+        "identity" : "cda",
+        "map" : ".providerOrganization"
+      }]
+    },
+    {
+      "path" : "Patient.link",
+      "short" : "Link to another patient resource that concerns the same actual person",
+      "definition" : "Link to another patient resource that concerns the same actual patient.",
+      "comment" : "There is no assumption that linked patient records have mutual links. \n\nThis element is labelled as a modifier because it may not be the main Patient resource, and the referenced patient should be used instead of this Patient record. This is when the link.type value is 'replaced-by'.",
+      "requirements" : "There are multiple usecases: \n\n* Duplicate patient records due to the clerical errors associated with the difficulties of identifying humans consistently, and * Distribution of patient information across multiple servers.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() | (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : false,
+      "isModifier" : true,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "outboundLink"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.link.id",
+      "representation" : ["xmlAttr"],
+      "short" : "xml:id (or equivalent in JSON)",
+      "definition" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.link.extension",
+      "short" : "Additional Content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.link.modifierExtension",
+      "short" : "Extensions that cannot be ignored",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content",
+      "modifiers"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : true,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "path" : "Patient.link.other",
+      "short" : "The other patient or related person resource that the link refers to",
+      "definition" : "The other patient resource that the link refers to.",
+      "comment" : "Referencing a RelatedPerson here removes the need to use a Person record to associate a Patient and RelatedPerson as the same individual.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient",
+        "http://hl7.org/fhir/StructureDefinition/RelatedPerson"]
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "PID-3, MRG-1"
+      },
+      {
+        "identity" : "rim",
+        "map" : "id"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Patient.link.type",
+      "short" : "replaced-by | replaces | refer | seealso - type of link",
+      "definition" : "The type of link between this patient resource and another patient resource.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "description" : "The type of link between this patient resource and another patient resource.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/link-type"
+      },
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "typeCode"
+      },
+      {
+        "identity" : "cda",
+        "map" : "n/a"
+      }]
+    }]
+  }
+}
