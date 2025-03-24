@@ -1,7 +1,7 @@
 Mock-up met voorbeeld data:<p/>
 <b>Medicatie Gebruik en Afspraken</b>
 <table class="grid">
-<thead>
+<tbody>
 <tr><th>&gt;&lt;</th>
 <th>
 Bron
@@ -10,15 +10,15 @@ Bron
 Medicatie
 </th>
 <th>
-Toedieningsweg
+Dosering & Instructies
 </th>
 <th>
-Dosering & Instructies
+Toedieningsweg
 </th>
 <th>
 Datum
 </th>
-</tr></thead><tbody>
+</tr>
 <tr><th>&gt;&lt;</th>
 <th>
 Bron
@@ -27,14 +27,14 @@ Bron
 Medicatie
 </th>
 <th>
-Toedieningsweg
+Dosering & Instructies
 </th>
 <th>
-Dosering & Instructies
+Toedieningsweg
 </th>
 <th>
 Datum
 </th>
-</tr></thead><tbody>
+</tr>
 </tbody>
 </table>

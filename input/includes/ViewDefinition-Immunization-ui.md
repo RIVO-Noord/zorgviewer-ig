@@ -1,7 +1,7 @@
 Mock-up met voorbeeld data:<p/>
 <b>Vaccinaties</b>
 <table class="grid">
-<thead>
+<tbody>
 <tr><th>&gt;&lt;</th>
 <th>
 Bron
@@ -15,7 +15,7 @@ Product
 <th>
 Toelichting
 </th>
-</tr></thead><tbody>
+</tr>
 <tr><td>+</td>
 <td>
 Chipsoft

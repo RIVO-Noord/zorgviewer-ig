@@ -1,7 +1,7 @@
 Mock-up met voorbeeld data:<p/>
 <b>Allergieen en intoleranties</b>
 <table class="grid">
-<thead>
+<tbody>
 <tr><th>&gt;&lt;</th>
 <th>
 Bron
@@ -42,7 +42,7 @@ StatusCS
 <th>
 (VStatus)
 </th>
-</tr></thead><tbody>
+</tr>
 <tr><td>+</td>
 <td>
 Chipsoft

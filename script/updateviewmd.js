@@ -28,7 +28,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
             "Mock-up met voorbeeld data:<p/>",
             `<b>${viewDef.title}</b>`,
             "<table class=\"grid\">",
-            "<thead>"
+            "<tbody>"
          ];
 
         // add column names for select
@@ -130,7 +130,7 @@ function doColumns(columns, md_ui, md_def) {
                 "</th>");
         }
     });
-    md_ui.push("</tr></thead><tbody>");
+    md_ui.push("</tr>");
 
     columns.forEach(column => { 
         if (column.name.charAt(0) != '+' && column.name.charAt(0) != '(') {
@@ -153,7 +153,7 @@ function doColumns(columns, md_ui, md_def) {
         md_def.push('<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>');
         columns.forEach(column => { 
             if (column.name.charAt(0) == '(') {
-                md_def.push("<tr style=\"background-color:#b4c7e7\">");
+                md_def.push("<tr style=\"background-color:#d6dce5\">");
                 doColumn(column, md_def);
                 md_def.push("</tr>");
             }

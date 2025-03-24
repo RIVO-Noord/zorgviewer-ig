@@ -7,6 +7,8 @@
 * [Web-based VS Code](https://github.dev/RIVO-Noord/zorgviewer-ig/)
 * [Auto-IG build dashboard](https://fhir.github.io/auto-ig-builder/)
 
+*TODO: mermaid plaatje van bovenstaande maken*
+
 ## Validate resources
 ```
 (initial) > curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o input-cache/validator_cli.jar

@@ -1,7 +1,7 @@
 Mock-up met voorbeeld data:<p/>
 <b>Problemen (incl. diagnosen)</b>
 <table class="grid">
-<thead>
+<tbody>
 <tr><th>&gt;&lt;</th>
 <th>
 Bron
@@ -15,7 +15,7 @@ Diagnose
 <th>
 (regelkleur)
 </th>
-</tr></thead><tbody>
+</tr>
 <tr><td>+</td>
 <td>
 Chipsoft

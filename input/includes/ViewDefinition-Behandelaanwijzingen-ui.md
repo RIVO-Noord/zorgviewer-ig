@@ -1,7 +1,7 @@
 Mock-up met voorbeeld data:<p/>
 <b>Behandelaanwijzingen</b>
 <table class="grid">
-<thead>
+<tbody>
 <tr><th>&gt;&lt;</th>
 <th>
 Bron
@@ -24,7 +24,7 @@ Geverifieerd bij
 <th>
 (status)
 </th>
-</tr></thead><tbody>
+</tr>
 <tr><td>+</td>
 <td>
 Chipsoft
