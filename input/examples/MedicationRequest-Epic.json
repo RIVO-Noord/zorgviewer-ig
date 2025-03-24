@@ -1,0 +1,230 @@
+{
+    "resourceType": "MedicationRequest",
+    "id": "eMds53eQTsCHDM2Kq35hbKnUMUW7FngCWXMhKdQvVRgs3",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"
+        ]
+    },
+    "contained": [
+        {
+            "resourceType": "Observation",
+            "id": "obs1",
+            "meta": {
+                "profile": [
+                    "http://nictiz.nl/fhir/StructureDefinition/zib-BodyWeight"
+                ]
+            },
+            "status": "final",
+            "category": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/observation-category",
+                            "code": "vital-signs",
+                            "display": "Vital Signs"
+                        }
+                    ],
+                    "text": "Vital Signs"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "29463-7",
+                        "display": "Weight"
+                    }
+                ],
+                "text": "Weight"
+            },
+            "subject": {
+                "reference": "http://example.org/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3",
+                "display": "Fictief, Jan"
+            },
+            "effectiveDateTime": "2020-10-16T09:55:00Z",
+            "valueQuantity": {
+                "value": 200,
+                "unit": "kg",
+                "system": "http://unitsofmeasure.org",
+                "code": "kg"
+            }
+        },
+        {
+            "resourceType": "Observation",
+            "id": "obs2",
+            "meta": {
+                "profile": [
+                    "http://nictiz.nl/fhir/StructureDefinition/zib-BodyHeight"
+                ]
+            },
+            "status": "final",
+            "category": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/observation-category",
+                            "code": "vital-signs",
+                            "display": "Vital Signs"
+                        }
+                    ],
+                    "text": "Vital Signs"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "8302-2",
+                        "display": "Height"
+                    }
+                ],
+                "text": "Height"
+            },
+            "subject": {
+                "reference": "http://example.org/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3",
+                "display": "Fictief, Jan"
+            },
+            "effectiveDateTime": "2020-10-16T09:55:00Z",
+            "valueQuantity": {
+                "value": 149.9997,
+                "unit": "cm",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+            }
+        }
+    ],
+    "extension": [
+        {
+            "valuePeriod": {
+                "start": "2020-11-27"
+            },
+            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse"
+        }
+    ],
+    "identifier": [
+        {
+            "use": "usual",
+            "system": "urn:oid:1.2.840.114350.1.13.485.2.7.2.798268",
+            "value": "122033678"
+        }
+    ],
+    "status": "active",
+    "intent": "order",
+    "category": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/medication-request-category",
+                "code": "community",
+                "display": "Community"
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "code": "16076005",
+                "display": "Prescription (procedure)"
+            }
+        ],
+        "text": "Community"
+    },
+    "medicationReference": {
+        "reference": "http://example.org/api/FHIR/STU3/Medication/fHER-7BKK9hfH62XmqNj5a68SZ5WRjfaiTJvXJfeJM1s4",
+        "display": "metoPROLOL 50mg tablet"
+    },
+    "subject": {
+        "reference": "http://example.org/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3",
+        "display": "Fictief, Jan"
+    },
+    "supportingInformation": [
+        {
+            "reference": "#obs1",
+            "display": "Meest recentelijk gemeten gewicht (werkelijk)"
+        },
+        {
+            "reference": "#obs2",
+            "display": "Meest recentelijk gemeten lengte (werkelijk)"
+        }
+    ],
+    "authoredOn": "2020-11-27",
+    "requester": {
+        "agent": {
+            "reference": "http://example.org/api/FHIR/STU3/Practitioner/eYsrfO8FjxQmaRQcFFp7IbimYRj9h.U39hCdbwg4fw403",
+            "display": "M Crop"
+        }
+    },
+    "recorder": {
+        "reference": "http://example.org/api/FHIR/STU3/Practitioner/eYsrfO8FjxQmaRQcFFp7IbimYRj9h.U39hCdbwg4fw403",
+        "display": "M Crop"
+    },
+    "dosageInstruction": [
+        {
+            "extension": [
+                {
+                    "valueQuantity": {
+                        "value": 1,
+                        "unit": "tablet",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "{tbl}"
+                    },
+                    "url": "https://open.epic.com/fhir/extensions/admin-amount"
+                },
+                {
+                    "valueQuantity": {
+                        "value": 50,
+                        "unit": "mg",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mg"
+                    },
+                    "url": "https://open.epic.com/fhir/extensions/ordered-dose"
+                }
+            ],
+            "text": "1x per dag 50 mg innemen.",
+            "patientInstruction": "1x per dag 50 mg innemen.",
+            "timing": {
+                "repeat": {
+                    "boundsPeriod": {
+                        "start": "2020-11-27"
+                    },
+                    "timeOfDay": [
+                        "07:00:00"
+                    ]
+                },
+                "code": {
+                    "text": "1x per dag"
+                }
+            },
+            "asNeededBoolean": false,
+            "route": {
+                "coding": [
+                    {
+                        "system": "urn:oid:1.2.840.114350.1.13.485.2.7.4.798268.7025",
+                        "code": "8",
+                        "display": "Oraal"
+                    }
+                ],
+                "text": "Oraal"
+            },
+            "doseQuantity": {
+                "value": 50,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+            }
+        }
+    ],
+    "dispenseRequest": {
+        "validityPeriod": {
+            "start": "2020-11-27"
+        },
+        "numberOfRepeatsAllowed": 2,
+        "quantity": {
+            "value": 30,
+            "unit": "tablet"
+        },
+        "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "Day",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+        }
+    }
+}

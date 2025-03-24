@@ -1,0 +1,63 @@
+{
+    "resourceType": "MedicationStatement",
+    "id": "e2qDW3csWlKhFLAFtLX.hWRVnai3zNOL7mFdTBSalQqk3",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse"
+        ]
+    },
+    "identifier": [
+        {
+            "use": "usual",
+            "system": "urn:oid:1.2.840.114350.1.13.485.2.7.2.798268",
+            "value": "71644476"
+        }
+    ],
+    "status": "active",
+    "category": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/medication-statement-category",
+                "code": "patientspecified",
+                "display": "Patient Specified"
+            },
+            {
+                "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.3",
+                "code": "6",
+                "display": "MedicationUse"
+            }
+        ],
+        "text": "Patient Specified"
+    },
+    "medicationReference": {
+        "reference": "http://example.org/api/FHIR/STU3/Medication/fuMVbmBdR-Tq7hePjghDIIxKJVjkUJKAJ63YTbDRKVZQ4",
+        "display": "simvastatine 20mg tablet"
+    },
+    "dateAsserted": "2018-03-15T10:01:43Z",
+    "subject": {
+        "reference": "http://example.org/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3",
+        "display": "Fictief, Jan"
+    },
+    "taken": "unk",
+    "dosage": [
+        {
+            "text": "innemen. s Avonds innemen; Bij dit middel GEEN grapefruit(sap) gebruiken",
+            "additionalInstruction": [
+                {
+                    "text": "s Avonds innemen; Bij dit middel GEEN grapefruit(sap) gebruiken "
+                }
+            ],
+            "patientInstruction": "innemen. s Avonds innemen; Bij dit middel GEEN grapefruit(sap) gebruiken",
+            "route": {
+                "coding": [
+                    {
+                        "system": "urn:oid:1.2.840.114350.1.13.485.2.7.4.798268.7025",
+                        "code": "8",
+                        "display": "Oraal"
+                    }
+                ],
+                "text": "Oraal"
+            }
+        }
+    ]
+}

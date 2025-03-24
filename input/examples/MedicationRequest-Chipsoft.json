@@ -1,0 +1,135 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "2.16.840.1.113883.2.4.3.124.7.10160.01230000013923",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>MedicationRequest resource:</h3><ul><li><p><strong>Subject:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><table><thead><tr><th>Medication</th><th>Code</th></tr></thead><tbody><tr><td>Medication 1</td><td>METOCLOPRAMIDE ZETPIL 10MG</td></tr></tbody></table></li><li><table><thead><tr><th>Dosage instruction</th><th>Route</th><th>Dosing instruction 1</th><th>Additional instruction 1</th></tr></thead><tbody><tr><td>Dosage instruction 1</td><td>RECTAAL</td><td>dosing instruction with sequencenumber 1;with dosages dosage with dose range with nominal value of &#x27; Value: &#x27;1&#x27;. Unit: &#x27;1&#x27;.&#x27;; with administering schedule with Administering schedule with frequency: &#x27;amount range with minimum &#x27;1&#x27;, nominal &#x27;&#x27; and maximum &#x27;1&#x27;,time unit &#x27; Value: &#x27;1&#x27;. Unit: &#x27;d&#x27;.&#x27;&#x27;;; with as needed reasons: as needed reason 1 with set condition Zo nodig.;.</td><td>Pas op met alcohol&#xA;Kan het reactievermogen verminderen&#xA;Niet langer dan 5 dagen achtereen gebr.</td></tr></tbody></table></li><li><p><strong>Authored on:</strong> &#x27;30-9-2022 13:11&#x2B;0100&#x27;</p></li><li><p><strong>Period of use:</strong> &#x27;Period with lower bound 15-8-2016 00:00&#x2B;0200 and upper bound 14-9-2016 00:00&#x2B;0200.&#x27;</p></li><table><thead><tr><th>Reason reference</th><th>Code</th><th>Clinical status</th></tr></thead><tbody><tr><td>Reason reference 1</td><td>Other</td><td>Active</td></tr></tbody></table><li><table><thead><tr><th>Requester</th><th>Identifications</th><th>Names</th></tr></thead><tbody><tr><td>Requester 1</td><td> , </td><td>Peter van Pulver</td></tr></tbody></table></li><li><p><strong>Stop type:</strong> &#x27;Definitief&#x27;</p></li><li><p><strong>Recorder</strong> &#x27;Practitioner author with last name &#x27;van Pulver&#x27;.&#x27;</p></li></ul></div>"
+  },
+  "extension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse",
+      "valuePeriod": {
+        "start": "2016-08-15",
+        "end": "2016-09-14"
+      }
+    }
+  ],
+  "modifierExtension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.1",
+            "code": "2",
+            "display": "Definitief"
+          }
+        ],
+        "text": "Definitief"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:oid:2.16.840.1.113883.2.4.3.124.7.10160.0",
+      "value": "1230000013923"
+    }
+  ],
+  "status": "unknown",
+  "intent": "order",
+  "category": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "16076005",
+        "display": "Prescription"
+      }
+    ],
+    "text": "Prescription"
+  },
+  "medicationReference": {
+    "reference": "Medication/422D1F5FD442D2BA2BC38537A79017AC038782F22394BF147F33EB3E7F88A525",
+    "display": "METOCLOPRAMIDE ZETPIL 10MG"
+  },
+  "subject": {
+    "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+    "display": "Johan XXX_Helleman_Afblijven"
+  },
+  "authoredOn": "2022-09-30",
+  "requester": {
+    "agent": {
+      "extension": [
+        {
+          "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+          "valueReference": {
+            "reference": "PractitionerRole/961B266DED04E29A27B3BD9DA784EC608C754E147567EB2EFB23AD8D616F40DF",
+            "display": "Onbekende functiecode."
+          }
+        }
+      ],
+      "reference": "Practitioner/26364bee-66ce-4f54-b349-b55b9a4b610b",
+      "display": "Peter van Pulver"
+    }
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/0b350e55-38f9-4840-8400-a75c11679963",
+      "display": "other"
+    }
+  ],
+  "dosageInstruction": [
+    {
+      "sequence": 1,
+      "additionalInstruction": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v3/NullFlavor",
+              "code": "OTH",
+              "display": "overig"
+            }
+          ],
+          "text": "Pas op met alcohol\nKan het reactievermogen verminderen\nNiet langer dan 5 dagen achtereen gebr."
+        }
+      ],
+      "timing": {
+        "repeat": {
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "asNeededCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-25-gebruiksvoorschrift#aanvullend-numeriek",
+            "code": "1137",
+            "display": "Zo nodig"
+          }
+        ],
+        "text": "Zo nodig"
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.4.9",
+            "code": "12",
+            "display": "RECTAAL"
+          }
+        ],
+        "text": "RECTAAL"
+      },
+      "doseQuantity": {
+        "value": 1,
+        "unit": "STUK",
+        "system": "urn:oid:2.16.840.1.113883.2.4.4.1.900.2",
+        "code": "245"
+      }
+    }
+  ]
+}
