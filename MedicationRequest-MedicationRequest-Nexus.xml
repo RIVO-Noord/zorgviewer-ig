@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="MedicationRequest-Nexus"/>
+  <meta>
+    <lastUpdated value="2024-04-17T12:00:48.873+02:00"/>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+                  <table>
+                     <caption>Medication Agreement. typeCode-SUBJ: 2214799. <span style="display: block;">Ordered By: Aalders, JCA (CAR)</span>
+                     </caption>
+                     <tbody>
+                        <tr>
+                           <th>Medication</th>
+                           <td>GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML</td>
+                        </tr>
+                        <tr>
+                           <th>Authored</th>
+                           <td>10:39:07, 3 October 2023</td>
+                        </tr>
+                        <tr>
+                           <th>Use Duration</th>
+                           <td>FromNoTo 10:38:00, 3 October 2023</td>
+                        </tr>
+                        <tr>
+                           <th>Dosage Instruction</th>
+                           <td>
+                              <div>Sequence: 1</div>
+                              <div>Timing: <div>, once per ucum-d08:00:00</div>
+                              </div>
+                              <div>Route Of Administration: <span title="INTRAVENEUS (5 - 2.16.840.1.113883.2.4.4.9)">INTRAVENEUS</span>
+                              </div>
+                              <div>doseQuantity: 1.0 ml</div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+  </text>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse">
+    <valuePeriod>
+      <start value="2023-10-03T10:38:00+02:00"/>
+    </valuePeriod>
+  </extension>
+  <medicationReference>
+    <reference value="Medication/3899cd0a-ee84-4484-af9b-43ede45ecee6"/>
+    <display value="GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/2214799"/>
+    <display value="2214799"/>
+  </subject>
+  <authoredOn value="2023-10-03T10:39:07+02:00"/>
+  <requester>
+    <agent>
+      <reference value="Practitioner/719"/>
+      <display value="Aalders, JCA (CAR)"/>
+    </agent>
+  </requester>
+  <dosageInstruction>
+    <sequence value="1"/>
+    <timing>
+      <repeat>
+        <boundsDuration>
+          <system value="http://unitsofmeasure.org"/>
+        </boundsDuration>
+        <frequency value="1"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+        <timeOfDay value="08:00:00"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
+        <code value="5"/>
+        <display value="INTRAVENEUS"/>
+      </coding>
+    </route>
+    <doseQuantity>
+      <value value="1.0"/>
+      <unit value="ml"/>
+      <system value="urn:oid:2.16.840.1.113883.2.4.4.1.900.2"/>
+      <code value="233"/>
+    </doseQuantity>
+  </dosageInstruction>
+</MedicationRequest>

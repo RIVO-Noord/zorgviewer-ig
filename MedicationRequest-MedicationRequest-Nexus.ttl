@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hl7.nl/zorgviewer/MedicationRequest/MedicationRequest-Nexus> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MedicationRequest-Nexus"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-04-17T12:00:48.873+02:00"^^xsd:dateTime ] ;
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Medication Agreement. typeCode-SUBJ: 2214799. <span style=\"display: block;\">Ordered By: Aalders, JCA (CAR)</span>\n                     </caption>\n                     <tbody>\n                        <tr>\n                           <th>Medication</th>\n                           <td>GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML</td>\n                        </tr>\n                        <tr>\n                           <th>Authored</th>\n                           <td>10:39:07, 3 October 2023</td>\n                        </tr>\n                        <tr>\n                           <th>Use Duration</th>\n                           <td>FromNoTo 10:38:00, 3 October 2023</td>\n                        </tr>\n                        <tr>\n                           <th>Dosage Instruction</th>\n                           <td>\n                              <div>Sequence: 1</div>\n                              <div>Timing: <div>, once per ucum-d08:00:00</div>\n                              </div>\n                              <div>Route Of Administration: <span title=\"INTRAVENEUS (5 - 2.16.840.1.113883.2.4.4.9)\">INTRAVENEUS</span>\n                              </div>\n                              <div>doseQuantity: 1.0 ml</div>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Period ;
+       fhir:start [ fhir:v "2023-10-03T10:38:00+02:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:link <http://fhir.hl7.nl/zorgviewer/Medication/3899cd0a-ee84-4484-af9b-43ede45ecee6> ;
+     fhir:reference [ fhir:v "Medication/3899cd0a-ee84-4484-af9b-43ede45ecee6" ] ;
+     fhir:display [ fhir:v "GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.hl7.nl/zorgviewer/Patient/2214799> ;
+     fhir:reference [ fhir:v "Patient/2214799" ] ;
+     fhir:display [ fhir:v "2214799" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2023-10-03T10:39:07+02:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:agent [
+       fhir:link <http://fhir.hl7.nl/zorgviewer/Practitioner/719> ;
+       fhir:reference [ fhir:v "Practitioner/719" ] ;
+       fhir:display [ fhir:v "Aalders, JCA (CAR)" ]
+     ]
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:sequence [ fhir:v 1 ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:bounds [
+           a fhir:Duration ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ]
+         ] ;
+         fhir:frequency [ fhir:v 1 ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ] ;
+         fhir:timeOfDay ( [ fhir:v "08:00:00"^^xsd:time ] )
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.4.9"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "5" ] ;
+         fhir:display [ fhir:v "INTRAVENEUS" ]
+       ] )
+     ] ;
+     fhir:dose [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v 1.0 ] ;
+       fhir:unit [ fhir:v "ml" ] ;
+       fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.4.1.900.2"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "233" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

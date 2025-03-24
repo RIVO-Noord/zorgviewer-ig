@@ -1,0 +1,132 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hl7.nl/zorgviewer/MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923> a fhir:_MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "2.16.840.1.113883.2.4.3.124.7.10160.01230000013923"] ; # 
+  fhir:meta [
+     fhir:profile ( [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"^^xsd:anyURI ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>MedicationRequest resource:</h3><ul><li><p><strong>Subject:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><table><thead><tr><th>Medication</th><th>Code</th></tr></thead><tbody><tr><td>Medication 1</td><td>METOCLOPRAMIDE ZETPIL 10MG</td></tr></tbody></table></li><li><table><thead><tr><th>Dosage instruction</th><th>Route</th><th>Dosing instruction 1</th><th>Additional instruction 1</th></tr></thead><tbody><tr><td>Dosage instruction 1</td><td>RECTAAL</td><td>dosing instruction with sequencenumber 1;with dosages dosage with dose range with nominal value of &#x27; Value: &#x27;1&#x27;. Unit: &#x27;1&#x27;.&#x27;; with administering schedule with Administering schedule with frequency: &#x27;amount range with minimum &#x27;1&#x27;, nominal &#x27;&#x27; and maximum &#x27;1&#x27;,time unit &#x27; Value: &#x27;1&#x27;. Unit: &#x27;d&#x27;.&#x27;&#x27;;; with as needed reasons: as needed reason 1 with set condition Zo nodig.;.</td><td>Pas op met alcohol&#xA;Kan het reactievermogen verminderen&#xA;Niet langer dan 5 dagen achtereen gebr.</td></tr></tbody></table></li><li><p><strong>Authored on:</strong> &#x27;30-9-2022 13:11&#x2B;0100&#x27;</p></li><li><p><strong>Period of use:</strong> &#x27;Period with lower bound 15-8-2016 00:00&#x2B;0200 and upper bound 14-9-2016 00:00&#x2B;0200.&#x27;</p></li><table><thead><tr><th>Reason reference</th><th>Code</th><th>Clinical status</th></tr></thead><tbody><tr><td>Reason reference 1</td><td>Other</td><td>Active</td></tr></tbody></table><li><table><thead><tr><th>Requester</th><th>Identifications</th><th>Names</th></tr></thead><tbody><tr><td>Requester 1</td><td> , </td><td>Peter van Pulver</td></tr></tbody></table></li><li><p><strong>Stop type:</strong> &#x27;Definitief&#x27;</p></li><li><p><strong>Recorder</strong> &#x27;Practitioner author with last name &#x27;van Pulver&#x27;.&#x27;</p></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Period ;
+       fhir:start [ fhir:v "2016-08-15"^^xsd:date ] ;
+       fhir:end [ fhir:v "2016-09-14"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:modifierExtension ( [
+     fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.1"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "2" ] ;
+         fhir:display [ fhir:v "Definitief" ]
+       ] ) ;
+       fhir:text [ fhir:v "Definitief" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.3.124.7.10160.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1230000013923" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:category [
+     fhir:coding ( [
+       a sct:16076005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "16076005" ] ;
+       fhir:display [ fhir:v "Prescription" ]
+     ] ) ;
+     fhir:text [ fhir:v "Prescription" ]
+  ] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:link <http://fhir.hl7.nl/zorgviewer/Medication/422D1F5FD442D2BA2BC38537A79017AC038782F22394BF147F33EB3E7F88A525> ;
+     fhir:reference [ fhir:v "Medication/422D1F5FD442D2BA2BC38537A79017AC038782F22394BF147F33EB3E7F88A525" ] ;
+     fhir:display [ fhir:v "METOCLOPRAMIDE ZETPIL 10MG" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.hl7.nl/zorgviewer/Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1> ;
+     fhir:reference [ fhir:v "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1" ] ;
+     fhir:display [ fhir:v "Johan XXX_Helleman_Afblijven" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2022-09-30"^^xsd:date] ; # 
+  fhir:requester [
+     fhir:agent [
+       fhir:link <http://fhir.hl7.nl/zorgviewer/Practitioner/26364bee-66ce-4f54-b349-b55b9a4b610b> ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Reference ;
+           fhir:link <http://fhir.hl7.nl/zorgviewer/PractitionerRole/961B266DED04E29A27B3BD9DA784EC608C754E147567EB2EFB23AD8D616F40DF> ;
+           fhir:reference [ fhir:v "PractitionerRole/961B266DED04E29A27B3BD9DA784EC608C754E147567EB2EFB23AD8D616F40DF" ] ;
+           fhir:display [ fhir:v "Onbekende functiecode." ]
+         ]
+       ] ) ;
+       fhir:reference [ fhir:v "Practitioner/26364bee-66ce-4f54-b349-b55b9a4b610b" ] ;
+       fhir:display [ fhir:v "Peter van Pulver" ]
+     ]
+  ] ; # 
+  fhir:reasonReference ( [
+     fhir:link <http://fhir.hl7.nl/zorgviewer/Condition/0b350e55-38f9-4840-8400-a75c11679963> ;
+     fhir:reference [ fhir:v "Condition/0b350e55-38f9-4840-8400-a75c11679963" ] ;
+     fhir:display [ fhir:v "other" ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:sequence [ fhir:v 1 ] ;
+     fhir:additionalInstruction ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/v3/NullFlavor"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "OTH" ] ;
+         fhir:display [ fhir:v "overig" ]
+       ] ) ;
+       fhir:text [ fhir:v "Pas op met alcohol\nKan het reactievermogen verminderen\nNiet langer dan 5 dagen achtereen gebr." ]
+     ] ) ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v 1 ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:asNeeded [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://referentiemodel.nhg.org/tabellen/nhg-tabel-25-gebruiksvoorschrift#aanvullend-numeriek"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1137" ] ;
+         fhir:display [ fhir:v "Zo nodig" ]
+       ] ) ;
+       fhir:text [ fhir:v "Zo nodig" ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.4.9"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "12" ] ;
+         fhir:display [ fhir:v "RECTAAL" ]
+       ] ) ;
+       fhir:text [ fhir:v "RECTAAL" ]
+     ] ;
+     fhir:dose [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "STUK" ] ;
+       fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.4.4.1.900.2"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "245" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
