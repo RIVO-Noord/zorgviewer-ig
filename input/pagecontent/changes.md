@@ -2,8 +2,6 @@
 
 [Resource comparison with version v1.11.0](comparison-v1.11.0/index.html)
 
-<style>table, td, th { border: 1px solid black; padding:5px; }</style>
-
 |Versie|Datum|Changes|
 |---|---|---|
 |1.13.0-sprint55|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.13.0-sprint54...master)|
@@ -53,6 +51,7 @@
 |0.3.0-sprint4|3-apr-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.2.0-sprint3...0.3.0-sprint4)<br/>* Behandelaanwijzing (Consent) obv ACP - draft<br/>* Sequence diagrammen bijgewerkt<br/>* Bron zorgaanbieder meta tag<br/>* Correspondentie - draft|
 |0.2.0-sprint3|24-mar-2023|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/0.1.0-sprint2...0.2.0-sprint3)<br/>* Opstarten Zorgviewer - afgestemd<br/>* Correspondentie onderdelen, o.a. DocumentReference - draft<br/>* Security Design - draft|
 |0.1.0-sprint1|tot 17-feb-2023|Wijzigingen sprint 1 en 2<br/>* Initiele vulling<br/>* Opstarten Zorgviewer draft<br/>* Requirements review door productowner|
+{: .grid .table-striped}
 
 ### Versienummering
 

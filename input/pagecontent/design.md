@@ -1,5 +1,3 @@
-<style>table, td, th { border: 1px solid black; padding:5px; }</style>
-
 Deze pagina beschrijft de interacties tussen de bouwblokken voor het opstarten van de zorgviewer en het ontsluiten van de bronsystemen.
 
 ### Bouwblokken
@@ -72,6 +70,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 |--|--|--|--|
 | Practitioner FHIR ID | practitioner | ``ABCD..`` | Practitioner.id |
 | Patient FHIR ID | patient | ``WXYZ..`` | Patient.id |
+{: .grid .table-striped}
 
 ### Opstarten zorgviewer: Chipsoft HiX/Zorgplatform
 
@@ -93,6 +92,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 | Practitioner ID | Subject/NameID | ``larts@2.16.528.1.1007.3.3.15123`` | Practitioner.identifier |
 | Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | ``SNOMED CT 62247001 huisarts`` | PractitionerRole.code[system=sct] |
 | Patient BSN | urn:oasis:names:tc:xacml:1.0:resource:resource-id | ``999911120`` | Patient.identifier[system=bsn] |
+{: .grid .table-striped}
 
 ### Opstarten zorgviewer: VIPlive
 
@@ -117,6 +117,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 | Patient Name | client.family_name | `Fictief` | Patient.name.family |
 | Patient Birthdate | client.birthdate | `19700101` | Patient.birthDate |
 | Patient BSN | client.bsn | `999911120` | Patient.identifier[system=bsn] |
+{: .grid .table-striped}
 
 ### Bepalen zorgaanbieders
 

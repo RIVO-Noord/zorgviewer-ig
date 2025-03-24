@@ -1,5 +1,3 @@
-<style>table, td, th { border: 1px solid black; padding:5px; }</style>
-
 <div class="dragon" markdown="1">
 *De specificatie op deze pagina is work-in-progress.*
 
