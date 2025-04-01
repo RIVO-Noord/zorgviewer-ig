@@ -370,14 +370,14 @@ Datum
 </tr>
 <tr>
 <td>Dosering &amp; Instructies</td>
-<td><samp>dosageInstruction.text.toString()</samp></td>
+<td><samp>iif(exists(dosageInstruction.text), dosageInstruction.text, dosageInstruction.additionalInstruction.text)</samp></td>
 <td><code>string</code></td>
-<td>Gebruiksinstructie/Omschrijving</td>
+<td>Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie</td>
 <td></td>
 </tr>
 <tr>
 <td>Toedieningsweg</td>
-<td><samp>dosageInstruction.route.text.toString()</samp></td>
+<td><samp>dosageInstruction.route.text</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksinstructie/Toedieningsweg</td>
 <td></td>
@@ -2700,7 +2700,7 @@ Samenvatting
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.14.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Apr 1, 2025 10:40+0000">2025-04-01</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://rivo-noord.nl">RIVO-NN HL7NL</a>.  Package hl7.fhir.nl.zorgviewer#1.14.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/STU3/">FHIR 3.0.2</a>. Generated <span title="Tue, Apr 1, 2025 11:03+0000">2025-04-01</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
