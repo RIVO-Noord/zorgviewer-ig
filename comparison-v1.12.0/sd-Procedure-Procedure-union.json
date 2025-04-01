@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "c2df3134-8f82-4f71-8efd-b74d9eebeb27-74",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/c2df3134-8f82-4f71-8efd-b74d9eebeb27-74",
+  "id" : "aec4a776-a3f1-4ea7-a412-9a01ed8d8a43-74",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/aec4a776-a3f1-4ea7-a412-9a01ed8d8a43-74",
   "name" : "UnionProcedureAndProcedure",
   "title" : "Union of Procedure And Procedure",
   "status" : "active",
-  "date" : "2025-03-24T11:38:22+00:00",
+  "date" : "2025-04-01T10:34:22+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -961,8 +961,11 @@
     },
     {
       "path" : "Procedure.performer.actor.extension",
-      "short" : "Extension",
-      "definition" : "An Extension",
+      "short" : "left: Extension; right: Additional Content defined by implementations",
+      "definition" : "left: An Extension; right: May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -970,7 +973,11 @@
       }],
       "mustSupport" : false,
       "isModifier" : false,
-      "isSummary" : false
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
     },
     {
       "path" : "Procedure.performer.actor.reference",
