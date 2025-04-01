@@ -8,9 +8,7 @@
 
 [ViewDefinition voor MedicationRequest](ViewDefinition-MedicationRequest.json)
 
-<div>
-{% include ViewDefinition-MedicationRequest.svg %}
-</div>
+{% include ViewDefinition-MedicationRequest-ui.md %}
 
 {% include ViewDefinition-MedicationRequest.md %}
 

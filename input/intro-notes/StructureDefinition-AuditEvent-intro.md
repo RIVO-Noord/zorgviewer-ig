@@ -4,8 +4,6 @@
         * Als een beheerder loggegevens inziet: "loggegevens lezen"
 * Zie [AuditEvent-example-1](AuditEvent-example-auditevent-zorgviewer.html)
 
-<style>table, td, th { border: 1px solid black; padding:5px; }</style>
-
 | key | value | FHIR Path |
 |--|--|--|
 | **Gebeurtenis** | | `AuditEvent` |
@@ -25,5 +23,6 @@
 | Toestemmingsprofiel | ? | |
 | **Loggegevens** | | `AuditEvent.source` |
 | Identificatie van de bron | Zorgviewer RIVO-Noord | `AuditEvent.source.identifier.value` | 
+{: .grid .table-striped}
 
 {% include img.html img="nen7513-datamodel.png" caption="NEN 7513 overzicht datamodel<br/>geel is verplicht" width="50%" %}

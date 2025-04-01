@@ -4,9 +4,7 @@
 
 [ViewDefinition voor Correspondentie](ViewDefinition-DocumentReference.json)
 
-<div>
-{% include ViewDefinition-DocumentReference.svg %}
-</div>
+{% include ViewDefinition-DocumentReference-ui.md %}
 
 {% include ViewDefinition-DocumentReference.md %}
 

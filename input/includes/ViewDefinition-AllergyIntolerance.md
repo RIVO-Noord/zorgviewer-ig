@@ -1,4 +1,4 @@
-Kolom definities:
+### Kolom Definities
 <table class="grid">
 <thead>
 <th>Kolom label</th>
@@ -93,7 +93,7 @@ Kolom definities:
 <td>Zie AllergieStatus</td>
 </tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
-<tr style="background-color:#b4c7e7">
+<tr style="background-color:#d6dce5">
 <td>(VStatus)</td>
 <td><samp>verificationStatus</samp></td>
 <td><code>code</code></td>

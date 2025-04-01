@@ -3,9 +3,40 @@
 
 * [Official Snapshot laatste release](https://implementatiegids.zorgviewer.nl/) of [Snapshot Release](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/snapshot/)
 * [HL7 FHIR CI Build](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/) of [RIVO CI Build](https://rivo-noord.github.io/zorgviewer-ig/)
-* [Releases](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/)
 * [Web-based VS Code](https://github.dev/RIVO-Noord/zorgviewer-ig/)
-* [Auto-IG build dashboard](https://fhir.github.io/auto-ig-builder/)
+* [HL7 Auto-IG build dashboard](https://fhir.github.io/auto-ig-builder/)
+* [Releases](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/)
+
+```mermaid
+flowchart BT
+    subgraph HL7 ci-build
+        ci0[WIP]
+        ci1[Snapshot Release]
+        ci2[Releases]
+        ci3[Auto-IG Dashboard]
+    end
+    subgraph GitHub
+        gh0[Source-main WIP]--release via merge-->gh1[Source-snapshot]
+        gh0--action-->gh2[WIP-pages]
+        gh4[VS Code]--edit-->gh0
+    end
+    subgraph RIVO-noord.nl
+        rivo[Snapshot Release]
+    end
+    gh1--action-->rivo
+    gh0--trigger-->ci0
+    gh1--trigger-->ci1
+
+    click rivo "https://implementatgids.zorgviewer.nl" "-"
+    click ci0 "https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/" "-"
+    click ci1 "https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/snapshot/" "-"
+    click ci2 "https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/branches/" "-"
+    click ci3 "https://fhir.github.io/auto-ig-builder/" "-"
+    click gh0 "https://github.com/RIVO-Noord/zorgviewer-ig/" "-"
+    click gh1 "https://github.com/RIVO-Noord/zorgviewer-ig/tree/snapshot" "-"
+    click gh2 "https://rivo-noord.github.io/zorgviewer-ig/" "-"
+    click gh4 "https://github.dev/RIVO-Noord/zorgviewer-ig/" "-"
+```
 
 ## Validate resources
 ```

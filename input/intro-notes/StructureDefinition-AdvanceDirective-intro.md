@@ -8,9 +8,7 @@
 
 [ViewDefinition voor Wilsbeschikkingen](ViewDefinition-Wilsbeschikkingen.json)
 
-<div>
-{% include ViewDefinition-Wilsbeschikkingen.svg %}
-</div>
+{% include ViewDefinition-Wilsbeschikkingen-ui.md %}
 
 {% include ViewDefinition-Wilsbeschikkingen.md %}
 

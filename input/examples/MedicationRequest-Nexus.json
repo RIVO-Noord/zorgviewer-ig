@@ -1,0 +1,69 @@
+{
+  "resourceType": "MedicationRequest",
+  "meta": {
+    "lastUpdated": "2024-04-17T12:00:48.873+02:00",
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Medication Agreement. typeCode-SUBJ: 2214799. <span style=\"display: block;\">Ordered By: Aalders, JCA (CAR)</span>\n                     </caption>\n                     <tbody>\n                        <tr>\n                           <th>Medication</th>\n                           <td>GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML</td>\n                        </tr>\n                        <tr>\n                           <th>Authored</th>\n                           <td>10:39:07, 3 October 2023</td>\n                        </tr>\n                        <tr>\n                           <th>Use Duration</th>\n                           <td>FromNoTo 10:38:00, 3 October 2023</td>\n                        </tr>\n                        <tr>\n                           <th>Dosage Instruction</th>\n                           <td>\n                              <div>Sequence: 1</div>\n                              <div>Timing: <div>, once per ucum-d08:00:00</div>\n                              </div>\n                              <div>Route Of Administration: <span title=\"INTRAVENEUS (5 - 2.16.840.1.113883.2.4.4.9)\">INTRAVENEUS</span>\n                              </div>\n                              <div>doseQuantity: 1.0 ml</div>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+  },
+  "extension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse",
+      "valuePeriod": {
+        "start": "2023-10-03T10:38:00+02:00"
+      }
+    }
+  ],
+  "medicationReference": {
+    "reference": "Medication/3899cd0a-ee84-4484-af9b-43ede45ecee6",
+    "display": "GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML"
+  },
+  "subject": {
+    "reference": "Patient/2214799",
+    "display": "2214799"
+  },
+  "authoredOn": "2023-10-03T10:39:07+02:00",
+  "requester": {
+    "agent": {
+      "reference": "Practitioner/719",
+      "display": "Aalders, JCA (CAR)"
+    }
+  },
+  "dosageInstruction": [
+    {
+      "sequence": 1,
+      "timing": {
+        "repeat": {
+          "boundsDuration": {
+            "system": "http://unitsofmeasure.org"
+          },
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d",
+          "timeOfDay": [
+            "08:00:00"
+          ]
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.4.9",
+            "code": "5",
+            "display": "INTRAVENEUS"
+          }
+        ]
+      },
+      "doseQuantity": {
+        "value": 1.0,
+        "unit": "ml",
+        "system": "urn:oid:2.16.840.1.113883.2.4.4.1.900.2",
+        "code": "233"
+      }
+    }
+  ]
+}

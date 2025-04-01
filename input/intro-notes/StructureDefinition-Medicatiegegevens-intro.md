@@ -9,9 +9,7 @@
 
 [ViewDefinition voor Medicatiegegevens](ViewDefinition-Medicatiegegevens.json)
 
-<div>
-{% include ViewDefinition-Medicatiegegevens.svg %}
-</div>
+{% include ViewDefinition-Medicatiegegevens-ui.md %}
 
 {% include ViewDefinition-Medicatiegegevens.md %}
 

@@ -20,8 +20,6 @@ Maar ook voor het toevoegen van een nieuw behandelplan met relevante filters voo
 {% include Checklist-Epic.svg %}
 </div>
 
-<style>table, td, th { border: 1px solid black; padding:5px; }</style>
-
 **Stap 1 Aanmaken Apps in Epic: Zorgviewer FrontEnd en Zorgviewer Backend**<br/>
 De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence er zo uit ziet](https://galaxy.epic.com/?#Browse/page=1!68!50!3404409,100001067,100001075,100001077&from=Galaxy-Redirect).
 * 1.1 Front-end App: Interconnect (Foreground) verbinding kan maken naar https://auth.zorgviewer.nl/.well-known/jwks
@@ -40,6 +38,7 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence
 | Is this a confidential Client? | Disable|
 | Advanced: | * Enable on Sandbox: Disable |
 | Non-Production Client ID: | Activate for Non-Production (production volgt in een later stadium)|
+{: .grid .table-striped}
 
 * 1.3 Back-end App: Ga naar [My Apps / Vendor Services (epic.com)](https://vendorservices.epic.com/Developer/Apps) en maak de volgende App registratie:
 
@@ -55,6 +54,7 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence
 | Non-Production JWK Set URL: | `https://auth.zorgviewer.nl/.well-known/jwks`|
 | Production JWK Set URL: | voorlopig leeg laten|
 | Advanced: |* Enable on Sandbox: Disable<br/>* Non-Production Client ID: Activate for Non-Production (production volgt in een later stadium)<br/>* Ter info: deze waarschuwing kan genegeerd worden "Add Non-Production Credentials"|
+{: .grid .table-striped}
 
 **Stap 2 Client Certificate van de Zorgviewer back-end**
 * 2.1 Team Zorgviewer: Het Zorgviewer team genereert een Zorgviewer-Bronsysteem specifiek Certificate Request (Client Certificaat) en leveren dit aan het aan te sluiten organisatie.
@@ -137,6 +137,7 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 | Model Record: | SMART ON FHIR |
 | Patient ID Type: | MDN |
 | Installation Mnemonic Values: | 1 URL: `https://dev.zorgviewer.nl/api/application/launch`<br/>2 Protected: `1`<br/>3 ClientID: eigen clientID<br/>4 Launchtype: 7 (of 6)<br/>7 Use edge browser: 1|
+{: .grid .table-striped}
 
 * 5.2 Knop (E2U) maken voor het kunnen opstarten van de Zorgviewer
 	* 5.2.1 Plaats de knop in de patiëntencontext en respecteer hierbij eigen Break-the-Glass regels
@@ -158,7 +159,7 @@ Er moet een backend EMP worden aangemaakt, zie hiervoor de  [Epic Galaxy documen
 | 1 | Constant > User > C_User Role | = |  <GEMAAKTE BACKGROUND USER> Checklist stap 3.1 |
 | 2 | Patient > C_Patient Verification > C_PT_VRX | <> | Geverifieerd [1] |
 | 3 | Patient > CE - Has Prospective Auth | <> | Ja [1] |
-
+{: .grid .table-striped}
 
 Foutmelding 1
 

@@ -4,7 +4,6 @@ const fhirpath = require('fhirpath');
 const fhirpath_stu3_model = require('fhirpath/fhir-context/stu3');
 
 const viewDefPath = "../input/images/";
-const pumlPath = "../input/images-source/";
 const mdPath = "../input/includes/";
 
 fs.readdirSync(viewDefPath).forEach(file => {
@@ -13,13 +12,8 @@ fs.readdirSync(viewDefPath).forEach(file => {
         const viewDef_filePath = path.join(viewDefPath, file);
         const viewDef = JSON.parse(fs.readFileSync(viewDef_filePath, 'utf8'));
 
-        const puml_ui = [
-            `@startuml ${viewDef.id}`,
-            ":",
-            `== ${viewDef.title}`,
-        ];
         const md_def = [
-            "Kolom definities:",
+            "### Kolom Definities",
             "<table class=\"grid\">",
             "<thead>",
             "<th>Kolom label</th>",
@@ -30,12 +24,17 @@ fs.readdirSync(viewDefPath).forEach(file => {
             "</thead>",
             "<tbody>"
         ];
-        const md_ui = [ ];
+        const md_ui = [
+            "### UI Wireframe",
+            `<b>${viewDef.title}</b>`,
+            "<table class=\"grid\">",
+            "<tbody>"
+         ];
 
         // add column names for select
         const columnPaths = [];
         if (viewDef.select[0].column) {
-            doColumns(viewDef.select[0].column, puml_ui, md_ui, md_def);
+            doColumns(viewDef.select[0].column, md_ui, md_def);
             viewDef.select[0].column.forEach(column => columnPaths.push(column.path));
 
             // Add column examples based on examples
@@ -72,15 +71,29 @@ fs.readdirSync(viewDefPath).forEach(file => {
                                 }
                                 return value;
                             });
-                            // overwrite bron 1ste kolom met filename
+                            // haal bron uit filename
                             values[0] = file.substring(file.indexOf('-')+1, file.length-5);
-                            puml_ui.push(`| ${values.join(' | ')} |`);
-                            md_ui.push(`| ${values.join(' | ')} |`);
+                            md_ui.push("<tr><td>+</td>");
+                            viewDef.select[0].column.forEach((column,idx) => {
+                                if (column.name.charAt(0) != '+') {
+                                    md_ui.push("<td>",
+                                        values[idx],
+                                        "</td>");
+                                }
+                            });
+                            const colcount = viewDef.select[0].column.filter(column => column.name.charAt(0) != '+').length;
+                            md_ui.push(`</tr><tr><td></td><td colspan=${colcount}>`);
+                            viewDef.select[0].column.forEach((column,idx) => {
+                                if (column.name.charAt(0) == '+' && values[idx] != "") {
+                                    md_ui.push(`<b>${column.name.slice(1)}</b><br/>`,
+                                        `${values[idx]}<br/>`);
+                                }
+                            });
+                            md_ui.push("</td></tr>");
                         }
                     }
                 });
             }
-            puml_ui.push("| |");
         }
         if (viewDef.select[0].unionAll) {
             // assume first columns is the final list of columns
@@ -90,24 +103,16 @@ fs.readdirSync(viewDefPath).forEach(file => {
                     const resourceType = match[1];
                     md_def.push(`<tr><td colspan=5><i>${resourceType}</i></td></tr>`);
                 }
-                doColumns(union.column, puml_ui, md_ui, md_def);
+                doColumns(union.column, md_ui, md_def);
                 union.column.forEach(column => columnPaths.push(column.path));
-                puml_ui.push("| |");
             });
         }
-        puml_ui.push("",
-            "//Legenda//",
-            "//+Kolom - in de uitklap//",
-            "//(Kolom) - gebruikt voor formatting of verbergen//",
-            ";",
-            "@enduml");
-
         md_def.push("</tbody>",
             "</table>");
 
-        const puml_ui_filePath = path.join(pumlPath, `${viewDef.id}.plantuml`);
-        fs.writeFileSync(puml_ui_filePath, puml_ui.join('\n'));
-
+        md_ui.push("</tbody>",
+            "</table>");
+    
         const md_def_filePath = path.join(mdPath, `${viewDef.id}.md`);
         fs.writeFileSync(md_def_filePath, md_def.join('\n'));
 
@@ -116,12 +121,16 @@ fs.readdirSync(viewDefPath).forEach(file => {
     }
 });
 
-function doColumns(columns, puml_ui, md_ui, md_def) {
-    const columnNames = columns.map(column => ` ${column.name} `);
-    puml_ui.push(`|=${columnNames.join('|=')}|`);
-
-    md_ui.push(`|${columnNames.join('|')}|`);
-    md_ui.push(`|${columnNames.join('|').replaceAll(/[^|]/g,'-')}|`);
+function doColumns(columns, md_ui, md_def) {
+    md_ui.push("<tr><th>&gt;&lt;</th>");
+    columns.forEach(column => { 
+        if (column.name.charAt(0) != '+') {
+            md_ui.push("<th>",
+                column.name,
+                "</th>");
+        }
+    });
+    md_ui.push("</tr>");
 
     columns.forEach(column => { 
         if (column.name.charAt(0) != '+' && column.name.charAt(0) != '(') {
@@ -144,7 +153,7 @@ function doColumns(columns, puml_ui, md_ui, md_def) {
         md_def.push('<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>');
         columns.forEach(column => { 
             if (column.name.charAt(0) == '(') {
-                md_def.push("<tr style=\"background-color:#b4c7e7\">");
+                md_def.push("<tr style=\"background-color:#d6dce5\">");
                 doColumn(column, md_def);
                 md_def.push("</tr>");
             }

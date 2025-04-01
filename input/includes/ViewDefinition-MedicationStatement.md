@@ -1,4 +1,4 @@
-Kolom definities:
+### Kolom Definities
 <table class="grid">
 <thead>
 <th>Kolom label</th>
@@ -23,17 +23,17 @@ Kolom definities:
 <td></td>
 </tr>
 <tr>
-<td>Toedieningsweg</td>
-<td><samp>dosage.route.text</samp></td>
-<td><code>string</code></td>
-<td>Gebruiksinstructie/Toedieningsweg</td>
-<td></td>
-</tr>
-<tr>
 <td>Dosering & Instructies</td>
 <td><samp>dosage.text</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksinstructie/Omschrijving</td>
+<td></td>
+</tr>
+<tr>
+<td>Toedieningsweg</td>
+<td><samp>dosage.route.text</samp></td>
+<td><code>string</code></td>
+<td>Gebruiksinstructie/Toedieningsweg</td>
 <td></td>
 </tr>
 <tr>

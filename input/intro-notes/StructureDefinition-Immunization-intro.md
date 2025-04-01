@@ -8,9 +8,7 @@
 
 * [ViewDefinition voor Vaccinaties](ViewDefinition-Immunization.json)
 
-<div>
-{% include ViewDefinition-Immunization.svg %}
-</div>
+{% include ViewDefinition-Immunization-ui.md %}
 
 {% include ViewDefinition-Immunization.md %}
 

@@ -1,4 +1,4 @@
-Kolom definities:
+### Kolom Definities
 <table class="grid">
 <thead>
 <th>Kolom label</th>
@@ -58,7 +58,7 @@ Kolom definities:
 <td>Tijdelijk voor Zorgplatform: indien <code>context.practiceSetting.text</code> is gevuld met een OID (startsWith('2.16.840.1.113883.)), dan wordt het veld gevuld met <code>context.practiceSetting.coding.code</code> (een SNOMED CT code)</td>
 </tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
-<tr style="background-color:#b4c7e7">
+<tr style="background-color:#d6dce5">
 <td>(MimeType)</td>
 <td><samp>content.attachment.contentType</samp></td>
 <td><code>code</code></td>

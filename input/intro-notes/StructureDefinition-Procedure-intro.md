@@ -8,9 +8,7 @@
 
 * [ViewDefinition voor Verrichtingen](ViewDefinition-Procedure.json)
 
-<div>
-{% include ViewDefinition-Procedure.svg %}
-</div>
+{% include ViewDefinition-Procedure-ui.md %}
 
 {% include ViewDefinition-Procedure.md %}
 
