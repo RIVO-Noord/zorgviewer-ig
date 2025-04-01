@@ -32,18 +32,18 @@
                             ]
                         },
                         {
-                            "path": "dosageInstruction.text.toString()",
+                            "path": "iif(exists(dosageInstruction.text), dosageInstruction.text, dosageInstruction.additionalInstruction.text)",
                             "name": "Dosering & Instructies",
                             "type": "string",
                             "tag": [
                                 {
                                     "name": "Zib element",
-                                    "value": "Gebruiksinstructie/Omschrijving"
+                                    "value": "Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie"
                                 }
                             ]
                         },
                         {
-                            "path": "dosageInstruction.route.text.toString()",
+                            "path": "dosageInstruction.route.text",
                             "name": "Toedieningsweg",
                             "type": "string",
                             "tag": [
