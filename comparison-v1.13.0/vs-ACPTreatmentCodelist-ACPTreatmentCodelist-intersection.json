@@ -1,0 +1,38 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "dff5a210-b30c-470e-aa5c-c36fac4d721a-87",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/dff5a210-b30c-470e-aa5c-c36fac4d721a-87",
+  "name" : "IntersectionACPTreatmentCodelistAndACPTreatmentCodelist",
+  "title" : "Intersection of ACP behandelingen waardelijst And ACP behandelingen waardelijst",
+  "status" : "active",
+  "date" : "2025-04-07T09:58:37+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NL"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "183452005",
+        "display" : "Emergency hospital admission (procedure)"
+      },
+      {
+        "code" : "32485007",
+        "display" : "Hospital admission (procedure)"
+      },
+      {
+        "code" : "281789004",
+        "display" : "Antibiotic therapy (procedure)"
+      },
+      {
+        "code" : "431415002",
+        "display" : "Management of internal defibrillation (procedure)"
+      }]
+    },
+    {
+      "valueSet" : ["http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.2.1.1--20171231000000"]
+    }]
+  }
+}
