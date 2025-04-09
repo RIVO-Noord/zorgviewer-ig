@@ -25,6 +25,12 @@
           "name": "Type",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "WilsverklaringType" } ]
+        },
+        {
+          "path": "sourceAttachement.data",
+          "name": "+Document",
+          "type": "base64Binary",
+          "tag": [ { "name": "Zib element", "value": "WilsverklaringDocument" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Consent' and category.coding.first().code='11341000146107')"
