@@ -1,9 +1,9 @@
 ZorgviewerIG : Validation Results
 =========================================
 
-err = 158, warn = 84, info = 26
+err = 156, warn = 71, info = 21
 IG Publisher Version: 1.8.23
-Generated Wed Apr 09 22:28:25 UTC 2025. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#1.14.0 (canonical = http://fhir.hl7.nl/zorgviewer)
+Generated Wed Apr 09 23:06:02 UTC 2025. FHIR version 3.0.2 for hl7.fhir.nl.zorgviewer#1.14.0 (canonical = http://fhir.hl7.nl/zorgviewer)
  Build Errors : 4 / 9 / 0
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/capabilities/CapabilityStatement-Adressering : 0 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/capabilities/CapabilityStatement-Behandelplan : 0 / 0 / 1
@@ -86,7 +86,7 @@ Generated Wed Apr 09 22:28:25 UTC 2025. FHIR version 3.0.2 for hl7.fhir.nl.zorgv
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-Specimen : 0 / 4 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-ToestemmingConsent : 1 / 4 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-TreatmentDirective : 1 / 8 / 1
- /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-extension-Meta.source : 3 / 0 / 1
+ /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-extension-Meta.source : 1 / 0 / 1
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Endpoint-UMCG : 0 / 0 / 2
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-MCL : 0 / 2 / 2
  /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/resources/Organization-OZGDelfzicht : 1 / 1 / 1
@@ -148,7 +148,6 @@ ERROR: Condition/a20d2048-e1b7-467d-8bb5-28142af195d6: Condition.code: Error con
 WARNING: Condition/a20d2048-e1b7-467d-8bb5-28142af195d6: Condition: Constraint failed: zv-con-2: 'Use either Condition.abatementDateTime or Condition.abatementPeriod for the resolved timestamp'
 == input/examples/Condition-Epic.json ==
 ERROR: Condition/e-ZZJzEApAU6z8DStznS9pQ3: Condition.onset.ofType(Period): This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition|1.14.0 and slicing is CLOSED: Condition.onset.ofType(Period): Does not match slice 'onsetDateTime' (discriminator: ($this is dateTime))
-INFORMATION: Condition/e-ZZJzEApAU6z8DStznS9pQ3: Condition.category[0]: Reference to experimental CodeSystem http://hl7.org/fhir/condition-category|3.0.2
 ERROR: Condition/e-ZZJzEApAU6z8DStznS9pQ3: Condition.code: Error converting output stream to byte array
 ERROR: Condition/e-ZZJzEApAU6z8DStznS9pQ3: Condition.onset.ofType(Period): The Profile 'http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition|1.14.0' definition allows for the type dateTime but found type Period
 ERROR: Condition/e-ZZJzEApAU6z8DStznS9pQ3: Condition.onset.ofType(Period).start: This element is not allowed by the profile http://hl7.org/fhir/StructureDefinition/dateTime
@@ -158,7 +157,6 @@ ERROR: Condition/e-ZZJzEApAU6z8DStznS9pQ3: Condition.onset.ofType(Period): This 
 ERROR: Condition/e-ZZJzEApAU6z8DStznS9pQ3: Condition.onset.ofType(Period): The Profile 'http://nictiz.nl/fhir/StructureDefinition/zib-Problem|3.0.6' definition allows for the type dateTime but found type Period
 == input/examples/Condition-Epic-note.json ==
 ERROR: Condition/eod0yZoGGXEapUI7nJwX4tA3: Condition.onset.ofType(Period): This element does not match any known slice defined in the profile http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition|1.14.0 and slicing is CLOSED: Condition.onset.ofType(Period): Does not match slice 'onsetDateTime' (discriminator: ($this is dateTime))
-INFORMATION: Condition/eod0yZoGGXEapUI7nJwX4tA3: Condition.category[0]: Reference to experimental CodeSystem http://hl7.org/fhir/condition-category|3.0.2
 ERROR: Condition/eod0yZoGGXEapUI7nJwX4tA3: Condition.code: Error converting output stream to byte array
 ERROR: Condition/eod0yZoGGXEapUI7nJwX4tA3: Condition.onset.ofType(Period): The Profile 'http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition|1.14.0' definition allows for the type dateTime but found type Period
 ERROR: Condition/eod0yZoGGXEapUI7nJwX4tA3: Condition.onset.ofType(Period).start: This element is not allowed by the profile http://hl7.org/fhir/StructureDefinition/dateTime
@@ -236,17 +234,10 @@ ERROR: Observation/3009316: Observation: Observation.subject: minimum required =
 ERROR: Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3: Observation.id: Invalid Resource id: Too long (66 chars)
 WARNING: Observation/eLkztXF4frEa7ZOBv9MSS9vp.TIkR.7MqI5KrsX.3m1H2WoeIQnswnT44yGd6ybl.3: Observation: Best Practice Recommendation: In general, all observations should have a performer
 == input/examples/MedicationRequest-Chipsoft.json ==
-WARNING: MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923: MedicationRequest.modifierExtension[0].value.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.19--20160617101300|2016-06-17T10:13:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.1 was not found
-WARNING: MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923: MedicationRequest.modifierExtension[0].value.ofType(CodeableConcept): A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.1' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.19--20160617101300|2016-06-17T10:13:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.1 was not found
 ERROR: MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923: MedicationRequest.medication.ofType(Reference): Unable to resolve resource with reference 'Medication/422D1F5FD442D2BA2BC38537A79017AC038782F22394BF147F33EB3E7F88A525'
 ERROR: MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923: MedicationRequest.requester.agent: Unable to resolve resource with reference 'Practitioner/26364bee-66ce-4f54-b349-b55b9a4b610b'
 ERROR: MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923: MedicationRequest.requester.agent.extension[0].value.ofType(Reference): Unable to resolve resource with reference 'PractitionerRole/961B266DED04E29A27B3BD9DA784EC608C754E147567EB2EFB23AD8D616F40DF'
 ERROR: MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923: MedicationRequest.reasonReference[0]: Unable to resolve resource with reference 'Condition/0b350e55-38f9-4840-8400-a75c11679963'
-WARNING: MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923: MedicationRequest.dosageInstruction[0].asNeeded.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.4--20171231000000|2017-12-31T00:00:00' because the code system https://referentiemodel.nhg.org/tabellen/nhg-tabel-25-gebruiksvoorschrift#aanvullend-numeriek was not found
-WARNING: MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923: MedicationRequest.dosageInstruction[0].asNeeded.ofType(CodeableConcept): A definition for CodeSystem 'https://referentiemodel.nhg.org/tabellen/nhg-tabel-25-gebruiksvoorschrift#aanvullend-numeriek' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.4--20171231000000|2017-12-31T00:00:00' because the code system https://referentiemodel.nhg.org/tabellen/nhg-tabel-25-gebruiksvoorschrift#aanvullend-numeriek was not found
-WARNING: MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923: MedicationRequest.dosageInstruction[0].route: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.1--20171231000000|2017-12-31T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.4.9 was not found
-WARNING: MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923: MedicationRequest.dosageInstruction[0].route: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.9' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.1--20171231000000|2017-12-31T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.4.9 was not found
-WARNING: MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923: MedicationRequest.dosageInstruction[0].dose.ofType(Quantity): Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.27--20160830202453|2016-08-30T20:24:53' because the code system urn:oid:2.16.840.1.113883.2.4.4.1.900.2| was not found
 ERROR: MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923: MedicationRequest.dosageInstruction[0].dose.ofType(Quantity): The code provided (urn:oid:2.16.840.1.113883.2.4.4.1.900.2#245) was not found in the value set 'G-Standaard Eenhedentabel' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.27--20160830202453|2016-08-30T20:24:53), and a code from this value set is required: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.1.900.2' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.27--20160830202453|2016-08-30T20:24:53' because the code system urn:oid:2.16.840.1.113883.2.4.4.1.900.2| was not found
 == input/examples/MedicationRequest-Epic.json ==
 WARNING: MedicationRequest/eMds53eQTsCHDM2Kq35hbKnUMUW7FngCWXMhKdQvVRgs3: MedicationRequest.contained[0]/*Observation/obs1*/: Best Practice Recommendation: In general, all observations should have a performer
@@ -263,8 +254,6 @@ ERROR: MedicationRequest/MedicationRequest-Nexus: MedicationRequest: MedicationR
 ERROR: MedicationRequest/MedicationRequest-Nexus: MedicationRequest.medication.ofType(Reference): Unable to resolve resource with reference 'Medication/3899cd0a-ee84-4484-af9b-43ede45ecee6'
 ERROR: MedicationRequest/MedicationRequest-Nexus: MedicationRequest.subject: Unable to resolve resource with reference 'Patient/2214799'
 ERROR: MedicationRequest/MedicationRequest-Nexus: MedicationRequest.requester.agent: Unable to resolve resource with reference 'Practitioner/719'
-WARNING: MedicationRequest/MedicationRequest-Nexus: MedicationRequest.dosageInstruction[0].route: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.1--20171231000000|2017-12-31T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.4.9 was not found
-WARNING: MedicationRequest/MedicationRequest-Nexus: MedicationRequest.dosageInstruction[0].route: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.9' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.12.1--20171231000000|2017-12-31T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.4.9 was not found
 ERROR: MedicationRequest/MedicationRequest-Nexus: MedicationRequest.dosageInstruction[0].dose.ofType(Quantity): The code provided (urn:oid:2.16.840.1.113883.2.4.4.1.900.2#233) was not found in the value set 'G-Standaard Eenhedentabel' (http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.27--20160830202453|2016-08-30T20:24:53), and a code from this value set is required: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.4.1.900.2' could not be found, so the code cannot be validated
 == input/examples/MedicationStatement-Epic.json ==
 WARNING: MedicationStatement/e2qDW3csWlKhFLAFtLX.hWRVnai3zNOL7mFdTBSalQqk3: MedicationStatement.dosage[0].additionalInstruction[0].text: value should not start or finish with whitespace 's Avonds innemen; Bij dit middel GEEN grapefruit(sap) gebruiken '
@@ -273,8 +262,6 @@ ERROR: Organization/eXovwVA3zYl3U3fBH8mdkxw3: Organization.address[0].postalCode
 ERROR: Organization/eXovwVA3zYl3U3fBH8mdkxw3: Organization: Constraint failed: zv-org-1: 'Organization AGB SHALL be present.'
 == input/examples/Patient-Chipsoft.json ==
 WARNING: Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1: Patient.name[0]: Constraint failed: zv-pat-2: 'To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present.' (Best Practice Recommendation)
-WARNING: Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1: Patient.contact[0].relationship[1]: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000|2017-12-31T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.11.22.472 was not found
-WARNING: Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1: Patient.contact[0].relationship[1]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.22.472' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000|2017-12-31T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.11.22.472 was not found
 == input/examples/Patient-Epic.json ==
 ERROR: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient.extension[0]: The extension http://open.epic.com/FHIR/StructureDefinition/extension/legal-sex could not be found so is not allowed here
 ERROR: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient.extension[1]: The extension http://open.epic.com/FHIR/StructureDefinition/extension/sex-for-clinical-use could not be found so is not allowed here
@@ -313,8 +300,6 @@ ERROR: Patient/eXxP1o8ZlOz21F6HXS9puLA3: Patient: Extension.url: minimum require
 == input/examples/Patient-Nexus.json ==
 ERROR: Patient/330073: Patient: Slice 'Patient.identifier:BSN': a matching slice is required, but not found (from http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient|1.14.0). Note that other slices are allowed in addition to this required slice
 WARNING: Patient/330073: Patient.address[1].line[0].extension[2].value.ofType(string): value should not start or finish with whitespace ' naast'
-WARNING: Patient/330073: Patient.contact[0].relationship[1]: Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000|2017-12-31T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.11.22.472 was not found
-WARNING: Patient/330073: Patient.contact[0].relationship[1]: A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.3.11.22.472' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000|2017-12-31T00:00:00' because the code system urn:oid:2.16.840.1.113883.2.4.3.11.22.472 was not found
 == input/examples/Practitioner-Chipsoft.json ==
 WARNING: Practitioner/b5160776-43dc-43e1-9bb7-a6e3edf8e63d: Practitioner.name[0]: Constraint failed: zv-pra-2: 'To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present.' (Best Practice Recommendation)
 == input/examples/Practitioner-Epic.json ==
@@ -341,12 +326,10 @@ ERROR: Specimen/291f7eb1-c4ff-49fb-94a8-0500c19b7635: Specimen: Specimen.subject
 ERROR: Consent/81eacbcf-6d60-436a-a78f-e2962839a42f: Consent.extension[0].value.ofType(CodeableConcept): Error converting output stream to byte array
 == input/examples/TreatmentDirective-Epic.json ==
 ERROR: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.extension[1].value.ofType(CodeableConcept): Error converting output stream to byte array
-INFORMATION: Consent/ehLhIC8xuXjiZDVRntQauPyXlKehTcmaSh3Ozrs3nMfw3: Consent.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentcategorycodes|0.1.0
 == input/examples/TreatmentDirective-Nexus.json ==
 ERROR: Consent/21: Consent.extension[2].value.ofType(CodeableConcept): Error converting output stream to byte array
 == input/examples/TreatmentDirective-Topicus.json ==
 ERROR: Consent/190c12af-49d4-4553-8009-c816ab622a3e: Consent.extension[1].value.ofType(CodeableConcept): Error converting output stream to byte array
-INFORMATION: Consent/190c12af-49d4-4553-8009-c816ab622a3e: Consent.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentcategorycodes|0.1.0
 == input/profiles/StructureDefinition-AdvanceDirective.json ==
 ERROR: StructureDefinition/AdvanceDirective: StructureDefinition.snapshot.element[11].example[0].value.ofType(Identifier): if identifier.system is 'urn:ietf:rfc:3986', then the identifier.value must be a full URI (e.g. start with a scheme), not 'Local eCMS identifier'
 == input/profiles/StructureDefinition-AllergyIntolerance.json ==
@@ -410,11 +393,8 @@ WARNING: StructureDefinition.where(url = 'http://fhir.hl7.nl/zorgviewer/Structur
 == input/profiles/StructureDefinition-TreatmentDirective.json ==
 ERROR: StructureDefinition/TreatmentDirective: StructureDefinition.snapshot.element[50].example[0].value.ofType(Identifier): if identifier.system is 'urn:ietf:rfc:3986', then the identifier.value must be a full URI (e.g. start with a scheme), not 'Local eCMS identifier'
 == input/profiles/StructureDefinition-extension-Meta.source.json ==
-ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source'): Conformance resource /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-extension-Meta.source.json - the canonical URL (http://fhir.hl7.nl/zorgviewer/StructureDefinition/extension-Meta.source) does not match the URL (http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source)
 ERROR: StructureDefinition/extension-Meta.source: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
-ERROR: /home/runner/work/zorgviewer-ig/zorgviewer-ig/input/profiles/StructureDefinition-extension-Meta.source: URL Mismatch http://fhir.hl7.nl/zorgviewer/StructureDefinition/extension-Meta.source vs http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source
 == input/resources/Endpoint-UMCG.json ==
-INFORMATION: Endpoint/UMCG: Endpoint.payloadType[0]: Reference to draft CodeSystem http://hl7.org/fhir/resource-types|3.0.2
 == input/resources/Organization-MCL.json ==
 == input/resources/Organization-OZGDelfzicht.json ==
 ERROR: Organization/OZGDelfzicht: Organization: Constraint failed: zv-org-1: 'Organization AGB SHALL be present.'
