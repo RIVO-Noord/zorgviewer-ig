@@ -78,7 +78,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 ### Tag een Release
 
 1. Werk de volgende files bij: 
-  1. ``input/pagecontent/changes.md`` (github links en change bullets)
+  1. ``input/pagecontent/changes.md`` (github links, comparison version en change bullets)
   1. ``input/images/package-feed.xml`` (datum, versie, IG publisher versie; zodat nieuwe versie opgenomen wordt in de fhir package registries)
   1. ``fhir.hl7.nl/package-list.json`` (datum, versie, IG publisher versie en upload naar fhir.hl7.nl/zorgviewer; used for version comparison!)
   1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
