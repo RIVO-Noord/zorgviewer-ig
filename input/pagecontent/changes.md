@@ -4,7 +4,8 @@
 
 |Versie|Datum|Changes|
 |---|---|---|
-|1.14.0-sprint56|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.13.0-sprint55...master)|
+|1.15.0-sprint57|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.14.0-sprint56...master)|
+|1.14.0-sprint56|15-apr-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.13.0-sprint55...1.14.0-sprint56)Focus op Medicatie en QA fixes.|
 |1.13.0-sprint55|1-apr-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.12.0-sprint54...1.13.0-sprint55)|
 |1.12.0-sprint54|18-mrt-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.11.0-sprint49...1.12.0-sprint54)|
 |1.11.0-sprint49|28-jan-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.10.0-sprint48...1.11.0-sprint49)<br/>* Non Functional Requirements toegevoegd<br/>* Enabled version compare<br/>* Prepare for IG go-publish infrastructuur op fhir.hl7.nl|
