@@ -1,6 +1,6 @@
 ### Versies
 
-[Resource comparison with version v1.13.0](comparison-v1.13.0/index.html)
+[Resource comparison with version v1.14.0](comparison-v1.14.0/index.html)
 
 |Versie|Datum|Changes|
 |---|---|---|
@@ -83,6 +83,7 @@ Voorbeelden:
 |---------------|------------------------------------------------|---------|---------------|---------|---------------|
 | 0.1.0-sprint1 | Requirements en uitgangspunten alle paragrafen | Gereed  | Niet gevraagd | Gereed  | Niet gevraagd |
 | | | | | | |
+{: .grid .table-striped}
 
 <div>
 {% include Review-Workflow.svg %}
