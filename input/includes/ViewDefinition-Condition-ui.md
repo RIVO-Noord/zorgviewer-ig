@@ -52,7 +52,7 @@ active
 <b>Diagnose</b><br/>
 http://hl7.org/fhir/sid/icd-10-nl#F43.1 <br/>
 <b>Toelichting</b><br/>
-2022-02: ziekte van Crohn\n 2021-07: Complicatie ANPY infectie lokaal\n 2021-03:...<br/>
+2022-02: ziekte van Crohn<br/>2021-07: Complicatie ANPY infectie lokaal<br/>2021...<br/>
 </td></tr>
 <tr><td>+</td>
 <td>

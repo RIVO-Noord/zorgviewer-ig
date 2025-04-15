@@ -27,7 +27,7 @@ Chipsoft
 METOCLOPRAMIDE ZETPIL 10MG
 </td>
 <td>
-
+Pas op met alcohol<br/>Kan het reactievermogen verminderen<br/>Niet langer dan 5...
 </td>
 <td>
 RECTAAL

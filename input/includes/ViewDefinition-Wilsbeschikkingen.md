@@ -29,5 +29,13 @@
 <td>WilsverklaringType</td>
 <td></td>
 </tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#b4c7e7">
+<td>+Document</td>
+<td><samp>sourceAttachement.data</samp></td>
+<td><code>base64Binary</code></td>
+<td>WilsverklaringDocument</td>
+<td></td>
+</tr>
 </tbody>
 </table>

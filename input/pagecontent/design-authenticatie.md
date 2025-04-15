@@ -15,6 +15,7 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 | Patient Name | ^^ / *zie FHIR Path* | client.initials | ^^ / *zie FHIR Path* | `J.` | Patient.name.given[extension=IN] |
 | Patient Name | ^^ / *zie FHIR Path* | client.family_name | ^^ / *zie FHIR Path* | `Fictief` | Patient.name.family |
 | Patient Birthdate | ^^ / *zie FHIR Path* | client.birthdate | ^^ / *zie FHIR Path* | `19700101` | Patient.birthDate |
+{: .grid .table-striped}
 
 ### Verkrijgen bronsysteem access token
 

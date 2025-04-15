@@ -77,7 +77,7 @@ Prothese implantatie kniegewricht.
 
 </td>
 <td>
-Boonstra\n VIPP NEXUS Ziekenhuis
+Boonstra<br/>VIPP NEXUS Ziekenhuis
 </td>
 </tr><tr><td></td><td colspan=5>
 <b>Verrichtingcode</b><br/>

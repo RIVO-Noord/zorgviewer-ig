@@ -24,14 +24,14 @@
 </tr>
 <tr>
 <td>Dosering & Instructies</td>
-<td><samp>dosageInstruction.text.toString()</samp></td>
+<td><samp>iif(exists(dosageInstruction.text), dosageInstruction.text, dosageInstruction.additionalInstruction.text)</samp></td>
 <td><code>string</code></td>
-<td>Gebruiksinstructie/Omschrijving</td>
+<td>Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie</td>
 <td></td>
 </tr>
 <tr>
 <td>Toedieningsweg</td>
-<td><samp>dosageInstruction.route.text.toString()</samp></td>
+<td><samp>dosageInstruction.route.text</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksinstructie/Toedieningsweg</td>
 <td></td>

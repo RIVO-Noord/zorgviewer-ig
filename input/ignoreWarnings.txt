@@ -9,9 +9,13 @@ This element is not allowed by the profile http://hl7.org/fhir/StructureDefiniti
 % definition allows for the type dateTime but found type Period
 The extension http://open.epic.com/FHIR/StructureDefinition/extension/%
 Constraint failed: nl-postal-code-pattern: 'Dutch postal code pattern 'nnnnAA''
+This element does not match any known slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-Problem|3.0.6 and slicing is CLOSED: Condition.onset.ofType(Period): Does not match slice 'onsetDateTime' (discriminator: ($this is dateTime))
 
-# IG Publisher issue
-%which is experimental, but this structure is not labeled as experimental
+# Accepted as is
+% which is experimental, but this structure is not labeled as experimental
+Reference to experimental CodeSystem % 
+Reference to draft CodeSystem %
+Unable to resolve resource with reference %
 
 # Terminology server issue?
 Error performing tx3 operation 'validate-code: Cannot invoke "java.util.List.iterator()" because "headers" is null' (parameters = "")
@@ -27,9 +31,12 @@ Unknown code%
 A definition for CodeSystem 'urn:oid:1.2.840.114350.1.%
 The Source Code System urn:oid:1.2.840.114350.1.%
 
-# Zib Code System; not in international terminology server
+# Zib or EHR System CodeSystem; not in international terminology server
 %urn:oid:2.16.840.1.113883.2.4.3.11.60.40.%
 Wrong Display Name%
+% could not be found, so the code cannot be validated
+Unable to check whether the code is in the value set %
+A definition for CodeSystem %
 
 # Tooling replaces DataRequirement.valueCode with .valueCoding in PlanDefinition. Why??
 A code with no system has no defined meaning. A system should be provided
@@ -40,11 +47,18 @@ A code with no system has no defined meaning. A system should be provided
 Error in constraint 'zib-LaboratoryTestResult-Observation-1'%
 %.value has no assigned types, and no content reference
 This element is not allowed by the profile http://nictiz.nl/fhir/StructureDefinition/patient-proficiency|2.0.1
+This element does not match any known slice defined in the profile %
 
-# Local copies
+# Local copy
 Conformance resource%
 When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 URL Mismatch%
 
 # Nexus issue
 Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry
+
+# Not in the FHIR package registry or Terminology Service
+% does not resolve
+
+# Examples not complete
+Unable to resolve resource with reference%
