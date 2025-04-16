@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const fhirpath = require('fhirpath');
 const fhirpath_stu3_model = require('fhirpath/fhir-context/stu3');
+const { dosageToNLString } = require('./dosage');
+const dosageToString = require('./dosage').dosageToString;
 
 const viewDefPath = "../input/images/";
 const mdPath = "../input/includes/";
@@ -46,6 +48,15 @@ fs.readdirSync(viewDefPath).forEach(file => {
                     if (!file.endsWith(".json")) return;
                     const example_filePath = path.join(examplesPath, file);
                     const example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
+
+                    // generate if no text
+                    if (example.dosageInstruction) {
+                        var text = dosageToString(example.dosageInstruction[0]);
+                        if (text.includes("undefined")) {
+                            console.error("Some required dosge parts undefined?", JSON.stringify(example.dosageInstruction));
+                        }
+                        example.dosageInstruction[0].text = text;
+                    }
 
                     // only include in table when where clause applies
                     const match3 = viewDef.select[0].forEach.match(".where\((.+)\)");
