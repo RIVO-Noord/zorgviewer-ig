@@ -84,7 +84,7 @@ Nexus
 
 </td>
 <td>
-LET OP!!!!!<br/>Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP ...
+LET OP!!!!!<br/>Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5. Graag GEEN wijzigingen doorvoeren!!!<br/>Alvast dank namens squad12
 </td>
 <td>
 

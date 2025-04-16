@@ -27,7 +27,7 @@ Chipsoft
 METOCLOPRAMIDE ZETPIL 10MG
 </td>
 <td>
-Neem 1x per 1 d. Route: RECTAAL. Aanvullende instructie 1: Pas op met alcohol<br...
+ 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alcohol<br/>Kan het reactievermogen verminderen<br/>Niet langer dan 5 dagen achtereen gebr.. 
 </td>
 <td>
 RECTAAL
@@ -67,7 +67,7 @@ Nexus
 GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML
 </td>
 <td>
-Neem 1x per 1 d. Route: INTRAVENEUS.
+ 1x elke 1 dag om 08:00:00
 </td>
 <td>
 

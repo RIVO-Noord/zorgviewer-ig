@@ -4,6 +4,7 @@ const fhirpath = require('fhirpath');
 const fhirpath_stu3_model = require('fhirpath/fhir-context/stu3');
 const { dosageToNLString } = require('./dosage');
 const dosageToString = require('./dosage').dosageToString;
+const dosageToStringGemini = require('./dosage').dosageToStringGemini;
 
 const viewDefPath = "../input/images/";
 const mdPath = "../input/includes/";
@@ -51,9 +52,10 @@ fs.readdirSync(viewDefPath).forEach(file => {
 
                     // generate if no text
                     if (example.dosageInstruction) {
-                        var text = dosageToString(example.dosageInstruction[0]);
+                        // var text = dosageToString(example.dosageInstruction[0]);
+                        var text = dosageToStringGemini(example.dosageInstruction[0]);
                         if (text.includes("undefined")) {
-                            console.error("Some required dosge parts undefined?", JSON.stringify(example.dosageInstruction));
+                            console.error("Some expected dosage parts undefined?", JSON.stringify(example.dosageInstruction));
                         }
                         example.dosageInstruction[0].text = text;
                     }
@@ -76,8 +78,8 @@ fs.readdirSync(viewDefPath).forEach(file => {
                                         value = date.toLocaleDateString('nl-NL'); // + ' ' + date.toLocaleTimeString('nl-NL';
                                     }
                                     else {
-                                        value = result[0].replace(/\r?\n/g, "<br/>");
                                         if (value.length > 80) value = `${value.substring(0,80)}...`;    
+                                        value = result[0].replace(/\r?\n/g, "<br/>");
                                     }
                                 }
                                 return value;

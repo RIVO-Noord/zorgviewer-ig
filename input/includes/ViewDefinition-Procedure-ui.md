@@ -37,7 +37,7 @@ Lisette van Cruijningen de Winter
 </td>
 </tr><tr><td></td><td colspan=5>
 <b>Verrichtingcode</b><br/>
-urn:oid:2.16.840.1.113883.2.4.3.120.5.3#00090991 implantatie van totale knieprot...<br/>
+urn:oid:2.16.840.1.113883.2.4.3.120.5.3#00090991 implantatie van totale knieprothese<br/>
 <b>Lateraliteit</b><br/>
 Links<br/>
 </td></tr>
@@ -59,7 +59,7 @@ MedMij Orthopedie, MD
 </td>
 </tr><tr><td></td><td colspan=5>
 <b>Verrichtingcode</b><br/>
-http://snomed.info/sct#46866001 Gesloten repositie supra- of transcondylaire fem...<br/>
+http://snomed.info/sct#46866001 Gesloten repositie supra- of transcondylaire femur fractuur.<br/>
 <b>Lateraliteit</b><br/>
 Rechts<br/>
 </td></tr>
@@ -81,7 +81,7 @@ Boonstra<br/>VIPP NEXUS Ziekenhuis
 </td>
 </tr><tr><td></td><td colspan=5>
 <b>Verrichtingcode</b><br/>
-urn:oid:2.16.840.1.113883.2.4.3.27.15.5#038663 Prothese implantatie kniegewricht...<br/>
+urn:oid:2.16.840.1.113883.2.4.3.27.15.5#038663 Prothese implantatie kniegewricht.<br/>
 </td></tr>
 <tr><td>+</td>
 <td>
