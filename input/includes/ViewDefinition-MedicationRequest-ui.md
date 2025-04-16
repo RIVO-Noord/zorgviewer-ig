@@ -70,7 +70,7 @@ GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML
  1x elke 1 dag om 08:00:00
 </td>
 <td>
-
+INTRAVENEUS
 </td>
 <td>
 3-10-2023

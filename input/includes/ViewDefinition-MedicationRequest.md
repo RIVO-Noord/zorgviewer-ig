@@ -31,7 +31,7 @@
 </tr>
 <tr>
 <td>Toedieningsweg</td>
-<td><samp>dosageInstruction.route.text</samp></td>
+<td><samp>iif(exists(dosageInstruction.route.text), dosageInstruction.route.text, dosageInstruction.route.coding.display)</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksinstructie/Toedieningsweg</td>
 <td></td>

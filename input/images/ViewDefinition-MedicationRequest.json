@@ -26,7 +26,7 @@
           "tag": [ { "name": "Zib element", "value": "Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie" } ]
         },
         {
-          "path": "dosageInstruction.route.text",
+          "path": "iif(exists(dosageInstruction.route.text), dosageInstruction.route.text, dosageInstruction.route.coding.display)",
           "name": "Toedieningsweg",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Gebruiksinstructie/Toedieningsweg" } ]
