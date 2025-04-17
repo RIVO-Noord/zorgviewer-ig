@@ -1,0 +1,62 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Appointment",
+  "title": "Afspraken",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "start",
+          "name": "Begin",
+          "description": "",
+          "type": "datetime",
+          "tag": [ { "name": "Zib element", "value": "BeginDatumTijd" } ]
+        },
+        {
+          "path": "end",
+          "name": "Eind",
+          "description": "",
+          "type": "datetime",
+          "tag": [ { "name": "Zib element", "value": "EindDatumTijd" } ]
+        },
+        {
+          "path": "participant.where(actor.reference.contains('/Practitioner/'))[0].actor.display",
+          "name": "Met",
+          "description": "",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "ContactMet::Zorgverlener" } ]
+        },
+        {
+          "path": "participant.where(actor.reference.contains('/Location/'))[0].actor.display",
+          "name": "Locatie",
+          "description": "",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Locatie::Zorgaanbieder" } ]
+        },
+        {
+          "path": "status",
+          "name": "Status",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "appointmentType.coding.display",
+          "name": "Type",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "ContactType" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Appointment')"
+    }
+  ]
+}

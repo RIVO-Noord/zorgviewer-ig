@@ -25,5 +25,6 @@ Deze zijn herschreven vanuit het Zorgviewer perspectief.
 | 19 | Efficiënte Verwerking | De Zorgviewer moet de ontvangen zib-elementen efficiënt verwerken en weergeven binnen een aanvaardbare responstijd, zelfs bij een toename van het aantal externe gegevens. | 2 |
 | 20 | SNOMED Codelijst | Voor de lijst met symptomen ([zib Allergie](StructureDefinition-AllergyIntolerance.html)) wordt gebruikt gemaakt van de SNOMED codelijst die door Nictiz wordt onderhouden. | 1 |
 | 21 | Weergave-Koppeling | De weergave-koppeling tussen [zib Probleem](StructureDefinition-Condition.html) en [zib Verrichting](StructureDefinition-Procedure.html) moet snel en efficiënt uitgevoerd worden. | 1 |
+{: .grid .table-striped}
 
 > *Gebruikte Copilot prompt: "Zet de non-functionele eisen tabellen uit het document 'Programma-van-Eisen-BgZ-MSZ-usecase-inzien-hergebruik-22-okt-24.pdf' om naar een markdown tabel. Voeg een ID kolom toe, maak de ID's uniek, en voeg een korte term kolom toe na de ID kolom."*

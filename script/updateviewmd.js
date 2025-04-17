@@ -89,17 +89,14 @@ fs.readdirSync(viewDefPath).forEach(file => {
                             md_ui.push("<tr><td>+</td>");
                             viewDef.select[0].column.forEach((column,idx) => {
                                 if (column.name.charAt(0) != '+') {
-                                    md_ui.push("<td>",
-                                        values[idx],
-                                        "</td>");
+                                    md_ui.push(`<td>${values[idx]}</td>`);
                                 }
                             });
                             const colcount = viewDef.select[0].column.filter(column => column.name.charAt(0) != '+').length;
                             md_ui.push(`</tr><tr><td></td><td colspan=${colcount}>`);
                             viewDef.select[0].column.forEach((column,idx) => {
                                 if (column.name.charAt(0) == '+' && values[idx] != "") {
-                                    md_ui.push(`<b>${column.name.slice(1)}</b><br/>`,
-                                        `${values[idx]}<br/>`);
+                                    md_ui.push(`<b>${column.name.slice(1)}</b><br/>${values[idx]}<br/>`);
                                 }
                             });
                             md_ui.push("</td></tr>");
@@ -138,9 +135,7 @@ function doColumns(columns, md_ui, md_def) {
     md_ui.push("<tr><th>&gt;&lt;</th>");
     columns.forEach(column => { 
         if (column.name.charAt(0) != '+') {
-            md_ui.push("<th>",
-                column.name,
-                "</th>");
+            md_ui.push(`<th>${column.name}</th>`);
         }
     });
     md_ui.push("</tr>");
