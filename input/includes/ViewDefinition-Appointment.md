@@ -31,14 +31,14 @@
 </tr>
 <tr>
 <td>Met</td>
-<td><samp>participant.where(actor.reference.contains('/Practitioner/'))[0].actor.display</samp></td>
+<td><samp>participant.where(actor.reference.contains('Practitioner/'))[0].actor.display</samp></td>
 <td><code>string</code></td>
 <td>ContactMet::Zorgverlener</td>
 <td></td>
 </tr>
 <tr>
 <td>Locatie</td>
-<td><samp>participant.where(actor.reference.contains('/Location/'))[0].actor.display</samp></td>
+<td><samp>participant.where(actor.reference.contains('Location/'))[0].actor.display</samp></td>
 <td><code>string</code></td>
 <td>Locatie::Zorgaanbieder</td>
 <td></td>
