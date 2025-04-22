@@ -43,13 +43,5 @@
 <td>MedicatieGebruikDatumTijd</td>
 <td></td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
-<tr style="background-color:#b4c7e7">
-<td>+Categorie</td>
-<td><samp>category.text</samp></td>
-<td><code>string</code></td>
-<td>nvt</td>
-<td></td>
-</tr>
 </tbody>
 </table>

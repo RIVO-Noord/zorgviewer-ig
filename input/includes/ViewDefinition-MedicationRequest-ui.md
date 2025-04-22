@@ -16,7 +16,6 @@
 <td>RECTAAL</td>
 <td>30-9-2022</td>
 </tr><tr><td></td><td colspan=5>
-<b>Categorie</b><br/>Prescription<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -25,7 +24,6 @@
 <td>Oraal</td>
 <td>27-11-2020</td>
 </tr><tr><td></td><td colspan=5>
-<b>Categorie</b><br/>Community<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>

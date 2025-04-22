@@ -16,7 +16,6 @@
 <td>Oraal</td>
 <td>15-3-2018</td>
 </tr><tr><td></td><td colspan=5>
-<b>Categorie</b><br/>Patient Specified<br/>
 </td></tr>
 </tbody>
 </table>
