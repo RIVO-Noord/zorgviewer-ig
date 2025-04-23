@@ -12,7 +12,7 @@
 <tr><td>+</td>
 <td>Chipsoft</td>
 <td>METOCLOPRAMIDE ZETPIL 10MG</td>
-<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alcohol<br/>Kan het reactievermogen verminderen<br/>Niet langer dan 5 dagen achtereen gebr.. </td>
+<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alcohol<br/>Kan het reactievermogen verminderen<br/>Niet langer dan 5 dagen achtereen gebr..  &#9432;</td>
 <td>RECTAAL</td>
 <td>30-9-2022</td>
 </tr><tr><td></td><td colspan=5>
@@ -28,7 +28,7 @@
 <tr><td>+</td>
 <td>Nexus</td>
 <td>GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML</td>
-<td> 1x elke 1 dag om 08:00:00</td>
+<td> 1x elke 1 dag om 08:00:00 &#9432;</td>
 <td>INTRAVENEUS</td>
 <td>3-10-2023</td>
 </tr><tr><td></td><td colspan=5>

@@ -51,13 +51,13 @@ fs.readdirSync(viewDefPath).forEach(file => {
                     const example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
 
                     // generate if no text
-                    if (example.dosageInstruction) {
+                    if (example.dosageInstruction && !example.dosageInstruction[0].text) {
                         // var text = dosageToString(example.dosageInstruction[0]);
                         var text = dosageToStringGemini(example.dosageInstruction[0]);
                         if (text.includes("undefined")) {
                             console.error("Some expected dosage parts undefined?", JSON.stringify(example.dosageInstruction));
                         }
-                        example.dosageInstruction[0].text = text;
+                        example.dosageInstruction[0].text = text + ' &#9432;';
                     }
 
                     // only include in table when where clause applies
