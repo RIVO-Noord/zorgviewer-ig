@@ -27,7 +27,7 @@
 <td><samp>iif(exists(dosageInstruction.text), dosageInstruction.text, dosageInstruction.additionalInstruction.text)</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie</td>
-<td>N.B. Als gegenereerd uit discrete informatie dan wordt deze gemarkeerd met een icoontje (i)</td>
+<td>N.B. Als gegenereerd uit discrete informatie dan wordt deze gemarkeerd met een icoontje &#9432;</td>
 </tr>
 <tr>
 <td>Toedieningsweg</td>
