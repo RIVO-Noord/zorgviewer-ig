@@ -14,8 +14,8 @@
 </tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
-<td>2012-08-15T00:00:00+02:00</td>
-<td>2012-08-15T15:04:00+02:00</td>
+<td>14-8-2012</td>
+<td>15-8-2012</td>
 <td>J.H.R Peters</td>
 <td>Onbekende functiecode.</td>
 <td></td>
@@ -25,8 +25,8 @@
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
-<td>2012-08-16T12:22:00+02:00</td>
-<td>2012-08-19T13:22:00+02:00</td>
+<td>16-8-2012</td>
+<td>19-8-2012</td>
 <td>Wit</td>
 <td>Orthopedie</td>
 <td></td>
@@ -36,8 +36,8 @@
 </td></tr>
 <tr><td>+</td>
 <td>Encounter.Epic</td>
-<td>2025-04-08</td>
-<td>2025-04-08</td>
+<td>8-4-2025</td>
+<td>8-4-2025</td>
 <td>AAB. Krol, Arts</td>
 <td></td>
 <td>Centrum voor revalidatie Beatrixoord</td>

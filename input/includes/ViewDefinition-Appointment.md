@@ -18,14 +18,14 @@
 <tr>
 <td>Begin</td>
 <td><samp>start</samp></td>
-<td><code>datetime</code></td>
+<td><code>dateTime</code></td>
 <td>BeginDatumTijd</td>
 <td></td>
 </tr>
 <tr>
 <td>Eind</td>
 <td><samp>end</samp></td>
-<td><code>datetime</code></td>
+<td><code>dateTime</code></td>
 <td>EindDatumTijd</td>
 <td></td>
 </tr>
