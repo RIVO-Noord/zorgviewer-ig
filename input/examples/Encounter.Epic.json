@@ -1,0 +1,74 @@
+{
+    "resourceType": "Encounter",
+    "id": "eYagIsqhRq.Q82cYTzJXv9g3",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-Encounter"
+        ]
+    },
+    "identifier": [
+        {
+            "use": "usual",
+            "system": "urn:oid:1.2.840.114350.1.13.485.3.7.3.698084.8",
+            "value": "1000138671"
+        }
+    ],
+    "status": "unknown",
+    "class": {
+        "system": "http://hl7.org/fhir/v3/ActCode",
+        "code": "AMB",
+        "display": "Ambulatory"
+    },
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "urn:oid:1.2.840.114350.1.13.485.3.7.10.698084.30",
+                    "code": "61020",
+                    "display": "Voorbereiding Revalidatie"
+                }
+            ],
+            "text": "Voorbereiding Revalidatie"
+        }
+    ],
+    "subject": {
+        "reference": "https://example.org/POC-OAUTH2/api/FHIR/STU3/Patient/eH4ng98difN8LJcKjg54GkA3",
+        "display": "Fictief, Jan-Willem"
+    },
+    "participant": [
+        {
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/ParticipationType",
+                            "code": "PART",
+                            "display": "Participation"
+                        }
+                    ],
+                    "text": "Participation"
+                }
+            ],
+            "individual": {
+                "reference": "https://example.org/POC-OAUTH2/api/FHIR/STU3/Practitioner/eMSD24oeluJBxvy..TtT2HZg1Ogl.z1z8kXCwxb2XItM3",
+                "display": "AAB. Krol, Arts"
+            }
+        }
+    ],
+    "period": {
+        "start": "2025-04-08",
+        "end": "2025-04-08"
+    },
+    "location": [
+        {
+            "location": {
+                "reference": "https://example.org/POC-OAUTH2/api/FHIR/STU3/Location/eSpGXMovCE1um4xTQTKti8DTHGsNYq.7kKQIY4nycIwg3",
+                "display": "Centrum voor revalidatie Beatrixoord"
+            }
+        }
+    ],
+    "serviceProvider": {
+        "reference": "https://example.org/POC-OAUTH2/api/FHIR/STU3/Organization/eXovwVA3zYl3U3fBH8mdkxw3",
+        "display": "UMCG"
+    }
+}

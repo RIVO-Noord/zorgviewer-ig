@@ -91,6 +91,10 @@
     {
       "reference": "http://nictiz.nl/fhir/StructureDefinition/eAfspraak-Appointment",
       "display": "eAfspraak-Appointment"
+    },
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Encouner",
+      "display": "zib-Encouner"
     }
   ],
   "rest": [
@@ -538,6 +542,29 @@
           "type": "Appointment",
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Appointment"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Encounter",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
           },
           "interaction": [
             {

@@ -17,6 +17,20 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
+<td>Start</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.start</samp></td>
+<td><code>date</code></td>
+<td>Gebruiksperiode/startDatumTijd</td>
+<td></td>
+</tr>
+<tr>
+<td>Eind</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.end</samp></td>
+<td><code>date</code></td>
+<td>Gebruiksperiode/eindDatumTijd</td>
+<td></td>
+</tr>
+<tr>
 <td>Medicatie</td>
 <td><samp>medicationReference.display</samp></td>
 <td><code>string</code></td>
@@ -59,6 +73,20 @@
 <td><code>string</code></td>
 <td>nvt</td>
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
+</tr>
+<tr>
+<td>Start</td>
+<td><samp>effectivePeriod.start</samp></td>
+<td><code>date</code></td>
+<td>Gebruiksperiode/startDatumTijd</td>
+<td></td>
+</tr>
+<tr>
+<td>Eind</td>
+<td><samp>effectivePeriod.end</samp></td>
+<td><code>date</code></td>
+<td>Gebruiksperiode/eindDatumTijd</td>
+<td></td>
 </tr>
 <tr>
 <td>Medicatie</td>

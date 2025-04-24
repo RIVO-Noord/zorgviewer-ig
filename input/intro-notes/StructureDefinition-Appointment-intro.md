@@ -14,8 +14,8 @@
 
 ### Request
 
-1. Opvragen (search) actieve en gesloten problemen
+1. Opvragen (search) afspraken
 
-    `GET <ontsluiten-bronsysteem-base>/Appointment?status=booked,pending,proposed`
+    `GET <ontsluiten-bronsysteem-base>/Appointment`
 
 {% include bronsysteem-herkennen.md %}

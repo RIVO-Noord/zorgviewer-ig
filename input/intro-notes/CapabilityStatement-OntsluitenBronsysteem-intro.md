@@ -15,3 +15,4 @@ Benodigde SMART-on-FHIR [scopes](http://hl7.org/fhir/smart-app-launch/1.0.0/scop
 1. user/MedicationStatement.search
 1. user/Immunization.search
 1. user/Appointment.search
+1. user/Encounter.search
