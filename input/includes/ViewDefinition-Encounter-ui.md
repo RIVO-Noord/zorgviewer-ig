@@ -24,6 +24,17 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
+<td>Epic</td>
+<td>8-4-2025</td>
+<td>8-4-2025</td>
+<td>AAB. Krol, Arts</td>
+<td></td>
+<td>Centrum voor revalidatie Beatrixoord</td>
+<td>unknown</td>
+<td>Ambulatory</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
 <td>Nexus</td>
 <td>16-8-2012</td>
 <td>19-8-2012</td>
@@ -32,17 +43,6 @@
 <td></td>
 <td>finished</td>
 <td>Klinisch</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>Encounter.Epic</td>
-<td>8-4-2025</td>
-<td>8-4-2025</td>
-<td>AAB. Krol, Arts</td>
-<td></td>
-<td>Centrum voor revalidatie Beatrixoord</td>
-<td>unknown</td>
-<td>Ambulatory</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 </tbody>
