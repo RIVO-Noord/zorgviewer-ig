@@ -73,7 +73,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
                                 catch { }
                                 var value = "";
                                 if (result && result.length > 0) {
-                                    if (column.type == "dateTime") {
+                                    if (column.type == "date" || column.type == "dateTime") {
                                         const date = new Date(result[0]);
                                         value = date.toLocaleDateString('nl-NL'); // + ' ' + date.toLocaleTimeString('nl-NL';
                                     }

@@ -18,14 +18,14 @@
 <tr>
 <td>Start</td>
 <td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.start</samp></td>
-<td><code>date</code></td>
+<td><code>dateTime</code></td>
 <td>Gebruiksperiode/startDatumTijd</td>
 <td></td>
 </tr>
 <tr>
 <td>Eind</td>
 <td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.end</samp></td>
-<td><code>date</code></td>
+<td><code>dateTime</code></td>
 <td>Gebruiksperiode/eindDatumTijd</td>
 <td></td>
 </tr>

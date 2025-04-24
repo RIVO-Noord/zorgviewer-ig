@@ -18,14 +18,14 @@
 <tr>
 <td>Start</td>
 <td><samp>effectivePeriod.start</samp></td>
-<td><code>date</code></td>
+<td><code>dateTime</code></td>
 <td>Gebruiksperiode/startDatumTijd</td>
 <td></td>
 </tr>
 <tr>
 <td>Eind</td>
 <td><samp>effectivePeriod.end</samp></td>
-<td><code>date</code></td>
+<td><code>dateTime</code></td>
 <td>Gebruiksperiode/eindDatumTijd</td>
 <td></td>
 </tr>
