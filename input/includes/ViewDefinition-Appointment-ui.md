@@ -27,7 +27,7 @@
 <td>20-4-2018</td>
 <td>G. Dijkstra, MDL arts</td>
 <td>Maag- Darm- Leverziekten</td>
-<td>fulfilled</td>
+<td>pending</td>
 <td>Ambulatory</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>

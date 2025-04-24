@@ -56,7 +56,7 @@
           "tag": [ { "name": "Zib element", "value": "ContactType" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='Appointment')"
+      "forEach": "entry.resource.where(resourceType='Appointment' and (status='proposed' or status='pending' or status='booked'))"
     }
   ]
 }

@@ -16,6 +16,6 @@
 
 1. Opvragen (search) afspraken
 
-    `GET <ontsluiten-bronsysteem-base>/Appointment`
+    `GET <ontsluiten-bronsysteem-base>/Appointment?status=booked,pending,proposed`
 
 {% include bronsysteem-herkennen.md %}

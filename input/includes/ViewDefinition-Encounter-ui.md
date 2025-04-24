@@ -25,13 +25,13 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
-<td>8-4-2025</td>
-<td>8-4-2025</td>
-<td>AAB. Krol, Arts</td>
+<td>27-3-2025</td>
+<td>27-3-2025</td>
+<td>E. Sieders, Chirurg</td>
 <td></td>
-<td>Centrum voor revalidatie Beatrixoord</td>
+<td>UMCG HC</td>
 <td>unknown</td>
-<td>Ambulatory</td>
+<td>Inpatient Encounter</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>

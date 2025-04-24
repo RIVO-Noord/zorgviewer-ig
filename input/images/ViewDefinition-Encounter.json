@@ -63,7 +63,7 @@
           "tag": [ { "name": "Zib element", "value": "ContactType" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='Encounter')"
+      "forEach": "entry.resource.where(resourceType='Encounter' and (class.code='IMP' or class.code='ACUTE' or class.code='NONAC'))"
     }
   ]
 }
