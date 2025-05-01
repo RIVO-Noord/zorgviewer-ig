@@ -50,14 +50,14 @@
 <td>Gebruiksinstructie/Toedieningsweg</td>
 <td></td>
 </tr>
-<tr>
-<td>Datum</td>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#b4c7e7">
+<td>+Afspraakdatum</td>
 <td><samp>authoredOn</samp></td>
 <td><code>dateTime</code></td>
 <td>MedicatieafspraakDatumTijd</td>
 <td></td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Voorschrijver</td>
 <td><samp>requester.agent.display</samp></td>

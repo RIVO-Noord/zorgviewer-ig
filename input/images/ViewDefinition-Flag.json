@@ -1,6 +1,6 @@
 {
   "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
-  "status": "active",
+  "resource": "Bundle",
   "id": "ViewDefinition-Flag",
   "title": "Alerts / Waarschuwingen",
   "profile": "http://nictiz.nl/fhir/StructureDefinition/zib-Alert",
@@ -53,7 +53,7 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='Flag')"
+      "forEach": "entry.resource.where(resourceType='Flag' and status!='entered-in-error')"
     }
   ]
 }

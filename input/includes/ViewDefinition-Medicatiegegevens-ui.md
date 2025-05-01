@@ -9,7 +9,6 @@
 <th>Medicatie</th>
 <th>Dosering & Instructies</th>
 <th>Toedieningsweg</th>
-<th>Datum</th>
 </tr>
 <tr><th>&gt;&lt;</th>
 <th>Bron</th>
@@ -18,7 +17,6 @@
 <th>Medicatie</th>
 <th>Dosering & Instructies</th>
 <th>Toedieningsweg</th>
-<th>Datum</th>
 </tr>
 </tbody>
 </table>
