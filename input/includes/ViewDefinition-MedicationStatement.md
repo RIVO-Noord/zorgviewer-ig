@@ -41,7 +41,7 @@
 <td><samp>dosage.text</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksinstructie/Omschrijving</td>
-<td></td>
+<td>N.B. Als text niet beschikbaar dan samenstellen uit discrete informatie en markeren met een icoontje &#9432;</td>
 </tr>
 <tr>
 <td>Toedieningsweg</td>
