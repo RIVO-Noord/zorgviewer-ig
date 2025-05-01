@@ -52,6 +52,12 @@
           "name": "Datum",
           "type": "dateTime",
           "tag": [ { "name": "Zib element", "value": "MedicatieafspraakDatumTijd" } ]
+        },
+        {
+          "path": "requester.agent.display",
+          "name": "+Voorschrijver",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Voorschrijver::Zorgverlener" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='MedicationRequest')"

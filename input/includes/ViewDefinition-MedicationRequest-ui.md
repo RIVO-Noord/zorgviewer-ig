@@ -20,6 +20,7 @@
 <td>RECTAAL</td>
 <td>30-9-2022</td>
 </tr><tr><td></td><td colspan=7>
+<b>Voorschrijver</b><br/>Peter van Pulver<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -30,6 +31,7 @@
 <td>Oraal</td>
 <td>27-11-2020</td>
 </tr><tr><td></td><td colspan=7>
+<b>Voorschrijver</b><br/>M Crop<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
@@ -40,6 +42,7 @@
 <td>INTRAVENEUS</td>
 <td>3-10-2023</td>
 </tr><tr><td></td><td colspan=7>
+<b>Voorschrijver</b><br/>Aalders, JCA (CAR)<br/>
 </td></tr>
 </tbody>
 </table>

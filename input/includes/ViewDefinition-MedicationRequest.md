@@ -57,5 +57,13 @@
 <td>MedicatieafspraakDatumTijd</td>
 <td></td>
 </tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#b4c7e7">
+<td>+Voorschrijver</td>
+<td><samp>requester.agent.display</samp></td>
+<td><code>string</code></td>
+<td>Voorschrijver::Zorgverlener</td>
+<td></td>
+</tr>
 </tbody>
 </table>
