@@ -71,7 +71,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 @> cd /app
 @> apt update
 @> apt install jekyll graphviz
-@> dpkg -i jdk-23_linux-x64_bin.deb
+@> dpkg -i jdk-24_linux-x64_bin.deb
 ```
 1. (optioneel) bouw lokaal de IG en check output - zie "To build the IG"
 
