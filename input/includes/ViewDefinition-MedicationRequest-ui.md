@@ -9,6 +9,7 @@
 <th>Medicatie</th>
 <th>Dosering & Instructies</th>
 <th>Toedieningsweg</th>
+<th>Stop Type</th>
 </tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
@@ -17,7 +18,8 @@
 <td>METOCLOPRAMIDE ZETPIL 10MG</td>
 <td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alcohol<br/>Kan het reactievermogen verminderen<br/>Niet langer dan 5 dagen achtereen gebr..  &#9432;</td>
 <td>RECTAAL</td>
-</tr><tr><td></td><td colspan=6>
+<td></td>
+</tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>30-9-2022<br/>
 <b>Voorschrijver</b><br/>Peter van Pulver<br/>
 </td></tr>
@@ -28,7 +30,8 @@
 <td>metoPROLOL 50mg tablet</td>
 <td>1x per dag 50 mg innemen.</td>
 <td>Oraal</td>
-</tr><tr><td></td><td colspan=6>
+<td></td>
+</tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>27-11-2020<br/>
 <b>Voorschrijver</b><br/>M Crop<br/>
 </td></tr>
@@ -39,7 +42,8 @@
 <td>GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML</td>
 <td> 1x elke 1 dag om 08:00:00 &#9432;</td>
 <td>INTRAVENEUS</td>
-</tr><tr><td></td><td colspan=6>
+<td></td>
+</tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>3-10-2023<br/>
 <b>Voorschrijver</b><br/>Aalders, JCA (CAR)<br/>
 </td></tr>

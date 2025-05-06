@@ -9,6 +9,7 @@
 <th>Medicatie</th>
 <th>Dosering & Instructies</th>
 <th>Toedieningsweg</th>
+<th>Stop Type</th>
 </tr>
 <tr><th>&gt;&lt;</th>
 <th>Bron</th>

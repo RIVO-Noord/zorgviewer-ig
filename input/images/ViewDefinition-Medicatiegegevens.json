@@ -79,6 +79,17 @@
                             ]
                         },
                         {
+                            "path": "modifierExtension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType').valueCodeableConcept.coding.display",
+                            "name": "Stop Type",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "StopType"
+                                }
+                            ]
+                        },
+                        {
                             "path": "authoredOn",
                             "name": "+Afspraakdatum",
                             "type": "dateTime",
@@ -90,10 +101,15 @@
                             ]
                         },
                         {
-                          "path": "requester.agent.display",
-                          "name": "+Voorschrijver",
-                          "type": "string",
-                          "tag": [ { "name": "Zib element", "value": "Voorschrijver::Zorgverlener" } ]
+                            "path": "requester.agent.display",
+                            "name": "+Voorschrijver",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "Voorschrijver::Zorgverlener"
+                                }
+                            ]
                         },
                         {
                             "path": "'voorgeschreven'",
@@ -186,10 +202,15 @@
                             ]
                         },
                         {
-                          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Prescriber').valueReference.display",
-                          "name": "+Voorschrijver",
-                          "type": "string",
-                          "tag": [ { "name": "Zib element", "value": "Voorschrijver::Zorgverlener" } ]
+                            "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Prescriber').valueReference.display",
+                            "name": "+Voorschrijver",
+                            "type": "string",
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "Voorschrijver::Zorgverlener"
+                                }
+                            ]
                         },
                         {
                             "path": "'huidig'",
