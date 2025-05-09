@@ -19,25 +19,25 @@
 <td>Start</td>
 <td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.start</samp></td>
 <td><code>dateTime</code></td>
-<td>Gebruiksperiode/startDatumTijd</td>
+<td>Gebruiksperiode::TijdsInterval/startDatumTijd</td>
 <td></td>
 </tr>
 <tr>
 <td>Eind</td>
 <td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.end</samp></td>
 <td><code>dateTime</code></td>
-<td>Gebruiksperiode/eindDatumTijd</td>
+<td>Gebruiksperiode::TijdsInterval/eindDatumTijd</td>
 <td></td>
 </tr>
 <tr>
 <td>Medicatie</td>
 <td><samp>medicationReference.display</samp></td>
 <td><code>string</code></td>
-<td>Afgesprokengeneesmiddel</td>
+<td>Afgesprokengeneesmiddel::Product</td>
 <td></td>
 </tr>
 <tr>
-<td>Dosering & Instructies</td>
+<td>Dosering & instructies</td>
 <td><samp>dosageInstruction.text</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie</td>

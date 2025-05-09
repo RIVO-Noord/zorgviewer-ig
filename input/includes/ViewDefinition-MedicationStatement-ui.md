@@ -7,7 +7,7 @@
 <th>Start</th>
 <th>Eind</th>
 <th>Medicatie</th>
-<th>Dosering & Instructies</th>
+<th>Dosering & instructies</th>
 <th>Toedieningsweg</th>
 </tr>
 <tr><td>+</td>

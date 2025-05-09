@@ -20,25 +20,25 @@
 <td>Start</td>
 <td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.start</samp></td>
 <td><code>dateTime</code></td>
-<td>Gebruiksperiode/startDatumTijd</td>
+<td>Gebruiksperiode::TijdsInterval/startDatumTijd</td>
 <td></td>
 </tr>
 <tr>
 <td>Eind</td>
 <td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.end</samp></td>
 <td><code>dateTime</code></td>
-<td>Gebruiksperiode/eindDatumTijd</td>
+<td>Gebruiksperiode::TijdsInterval/eindDatumTijd</td>
 <td></td>
 </tr>
 <tr>
 <td>Medicatie</td>
 <td><samp>medicationReference.display</samp></td>
 <td><code>string</code></td>
-<td>Afgesprokengeneesmiddel</td>
+<td>Afgesprokengeneesmiddel::Product</td>
 <td></td>
 </tr>
 <tr>
-<td>Dosering & Instructies</td>
+<td>Dosering & instructies</td>
 <td><samp>dosageInstruction.text</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie</td>
@@ -92,14 +92,14 @@
 <td>Start</td>
 <td><samp>effectivePeriod.start</samp></td>
 <td><code>dateTime</code></td>
-<td>Gebruiksperiode/startDatumTijd</td>
+<td>Gebruiksperiode::TijdsInterval/startDatumTijd</td>
 <td></td>
 </tr>
 <tr>
 <td>Eind</td>
 <td><samp>effectivePeriod.end</samp></td>
 <td><code>dateTime</code></td>
-<td>Gebruiksperiode/eindDatumTijd</td>
+<td>Gebruiksperiode::TijdsInterval/eindDatumTijd</td>
 <td></td>
 </tr>
 <tr>
@@ -110,17 +110,17 @@
 <td></td>
 </tr>
 <tr>
-<td>Dosering & Instructies</td>
+<td>Dosering & instructies</td>
 <td><samp>dosage.text</samp></td>
 <td><code>string</code></td>
-<td>InstructionsForUse/Omschrijving</td>
-<td></td>
+<td>Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie</td>
+<td>N.B. Als gegenereerd uit discrete informatie dan wordt deze gemarkeerd met een icoontje &#9432;</td>
 </tr>
 <tr>
 <td>Toedieningsweg</td>
 <td><samp>dosage.route.text</samp></td>
 <td><code>string</code></td>
-<td>InstructionsForUse/Toedieningsweg</td>
+<td>Gebruiksinstructie/Toedieningsweg</td>
 <td></td>
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>

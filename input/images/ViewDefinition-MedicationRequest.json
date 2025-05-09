@@ -18,25 +18,25 @@
           "name": "Start",
           "description": "",
           "type": "dateTime",
-          "tag": [ { "name": "Zib element", "value": "Gebruiksperiode/startDatumTijd" } ]
+          "tag": [ { "name": "Zib element", "value": "Gebruiksperiode::TijdsInterval/startDatumTijd" } ]
         },
         {
           "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.end",
           "name": "Eind",
           "description": "",
           "type": "dateTime",
-          "tag": [ { "name": "Zib element", "value": "Gebruiksperiode/eindDatumTijd" } ]
+          "tag": [ { "name": "Zib element", "value": "Gebruiksperiode::TijdsInterval/eindDatumTijd" } ]
         },
         {
           "path": "medicationReference.display",
           "name": "Medicatie",
           "description": "",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "Afgesprokengeneesmiddel" } ]
+          "tag": [ { "name": "Zib element", "value": "Afgesprokengeneesmiddel::Product" } ]
         },
         {
           "path": "dosageInstruction.text",
-          "name": "Dosering & Instructies",
+          "name": "Dosering & instructies",
           "description": "N.B. Als text niet beschikbaar dan samenstellen uit discrete informatie en markeren met een icoontje &#9432;",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie" } ]

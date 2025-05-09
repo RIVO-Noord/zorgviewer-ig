@@ -19,28 +19,28 @@
 <td>Start</td>
 <td><samp>effectivePeriod.start</samp></td>
 <td><code>dateTime</code></td>
-<td>Gebruiksperiode/startDatumTijd</td>
+<td>Gebruiksperiode::TijdsInterval/startDatumTijd</td>
 <td></td>
 </tr>
 <tr>
 <td>Eind</td>
 <td><samp>effectivePeriod.end</samp></td>
 <td><code>dateTime</code></td>
-<td>Gebruiksperiode/eindDatumTijd</td>
+<td>Gebruiksperiode::TijdsInterval/eindDatumTijd</td>
 <td></td>
 </tr>
 <tr>
 <td>Medicatie</td>
 <td><samp>medicationReference.display</samp></td>
 <td><code>string</code></td>
-<td>Gebruiksproduct</td>
+<td>Gebruiksproduct::FarmaceutischProduct</td>
 <td></td>
 </tr>
 <tr>
-<td>Dosering & Instructies</td>
+<td>Dosering & instructies</td>
 <td><samp>dosage.text</samp></td>
 <td><code>string</code></td>
-<td>Gebruiksinstructie/Omschrijving</td>
+<td>Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie</td>
 <td>N.B. Als text niet beschikbaar dan samenstellen uit discrete informatie en markeren met een icoontje &#9432;</td>
 </tr>
 <tr>
