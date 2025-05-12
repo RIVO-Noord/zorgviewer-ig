@@ -1,0 +1,66 @@
+{
+    "resourceType": "Encounter",
+    "id": "307375",
+    "meta": {
+        "lastUpdated": "2024-04-17T10:09:18.633+02:00",
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-Encounter"
+        ]
+    },
+    "text": {
+        "status": "extensions",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Encounter. typeCode-SUBJ: Xxx-Helleman, J (M). id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.10.307375 (urn:ietf:rfc:3986), Status: status-finished</caption>\n                     <tbody>\n                        <tr>\n                           <th>Encounter_Type</th>\n                           <td>\n                              <div>\n                                 <span title=\"Klinisch (IMP - 2.16.840.1.113883.5.4)\">Klinisch</span>\n                              </div>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Period</th>\n                           <td>16 August 2012 12:22:00 - 19 August 2012 13:22:00</td>\n                        </tr>\n                        <tr>\n                           <th>Participant</th>\n                           <td>\n                              <div>Wit<div>PractitionerRole: Orthopedie</div>\n                              </div>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Service Provider</th>\n                           <td>Nexus Nederland BV</td>\n                        </tr>\n                        <tr>\n                           <th>Hospitalization</th>\n                           <td>\n                              <ul>\n                                 <li>DischargeDisposition: <span title=\"Eigen woonomgeving (264362003 - SNOMED CT)\">Eigen woonomgeving</span>\n                                 </li>\n                              </ul>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+    },
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.10.307375"
+        }
+    ],
+    "status": "finished",
+    "class": {
+        "system": "urn:oid:2.16.840.1.113883.5.4",
+        "code": "IMP",
+        "display": "Klinisch"
+    },
+    "subject": {
+        "reference": "Patient/330073",
+        "display": "Xxx-Helleman, J (M)"
+    },
+    "participant": [
+        {
+            "individual": {
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                        "valueReference": {
+                            "reference": "PractitionerRole/88fda4e5-57f3-4168-a204-dae1e0ed8449",
+                            "display": "Orthopedie"
+                        }
+                    }
+                ],
+                "reference": "Practitioner/8122",
+                "display": "Wit"
+            }
+        }
+    ],
+    "period": {
+        "start": "2012-08-16T12:22:00+02:00",
+        "end": "2012-08-19T13:22:00+02:00"
+    },
+    "hospitalization": {
+        "dischargeDisposition": {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "264362003",
+                    "display": "Eigen woonomgeving"
+                }
+            ]
+        }
+    },
+    "serviceProvider": {
+        "reference": "Organization/5910A24F1A74F629E8A53C7C2F97D5EF28CF30B2",
+        "display": "Nexus Nederland BV"
+    }
+}

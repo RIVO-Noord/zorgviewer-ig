@@ -71,7 +71,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 @> cd /app
 @> apt update
 @> apt install jekyll graphviz
-@> dpkg -i jdk-23_linux-x64_bin.deb
+@> dpkg -i jdk-24_linux-x64_bin.deb
 ```
 1. (optioneel) bouw lokaal de IG en check output - zie "To build the IG"
 
@@ -83,9 +83,9 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
   1. ``fhir.hl7.nl/package-list.json`` (datum, versie, IG publisher versie en upload naar fhir.hl7.nl/zorgviewer; used for version comparison!)
   1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
   1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
-1. ``> git commit -a; git push``
+1. ``> git commit -a -m "prepare for publication"; git push``
 1. Create tag "1.M.R-sprintX" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
-  1. tags
+  1. Tags
   1. Releases
   1. Draft new release
   1. Choose a tag: "1.M.R-sprintX"
@@ -100,14 +100,14 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 1. Publish naar implementatiegids.zorgviewer.nl via snapshot branch
 ```
 > cd {temp-folder}
-> git pull of git clone https://github.com/RIVO-Noord/zorgviewer-ig.git
-> git checkout snapshot
+(eerste keer: git clone https://github.com/RIVO-Noord/zorgviewer-ig.git ; git checkout snapshot)
+> git pull
 > git merge 1.M.R-sprintX
 ```
 1. Zet release label in zorgviewer-ig.json op "sprintX"
 ```
 > vi input/zorgviewer-ig.json
-> git commit -a
+> git commit -a -m "snapshot publication"
 > git push
 ```
 1. En werk verder in de master branch

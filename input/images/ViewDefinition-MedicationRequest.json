@@ -14,34 +14,56 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "medicationReference.display",
-          "name": "Medicatie",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "Afgesprokengeneesmiddel" } ]
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.start",
+          "name": "Start",
+          "description": "",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "Gebruiksperiode::TijdsInterval/startDatumTijd" } ]
         },
         {
-          "path": "iif(exists(dosageInstruction.text), dosageInstruction.text, dosageInstruction.additionalInstruction.text)",
-          "name": "Dosering & Instructies",
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.end",
+          "name": "Eind",
+          "description": "",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "Gebruiksperiode::TijdsInterval/eindDatumTijd" } ]
+        },
+        {
+          "path": "medicationReference.display",
+          "name": "Medicatie",
+          "description": "",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Afgesprokengeneesmiddel::Product" } ]
+        },
+        {
+          "path": "dosageInstruction.text",
+          "name": "Dosering & instructies",
+          "description": "N.B. Als text niet beschikbaar dan samenstellen uit discrete informatie en markeren met een icoontje &#9432;",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie" } ]
         },
         {
-          "path": "dosageInstruction.route.text",
+          "path": "iif(exists(dosageInstruction.route.text), dosageInstruction.route.text, dosageInstruction.route.coding.display)",
           "name": "Toedieningsweg",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Gebruiksinstructie/Toedieningsweg" } ]
         },
         {
+          "path": "modifierExtension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType').valueCodeableConcept.coding.display",
+          "name": "Stop Type",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "StopType" } ]
+        },
+        {
           "path": "authoredOn",
-          "name": "Datum",
+          "name": "+Afspraakdatum",
           "type": "dateTime",
           "tag": [ { "name": "Zib element", "value": "MedicatieafspraakDatumTijd" } ]
         },
         {
-          "path": "category.text",
-          "name": "+Categorie",
+          "path": "requester.agent.display",
+          "name": "+Voorschrijver",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "nvt" } ]  
+          "tag": [ { "name": "Zib element", "value": "Voorschrijver::Zorgverlener" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='MedicationRequest')"

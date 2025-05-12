@@ -2,7 +2,7 @@
 
 ### Zorginformatiebouwsteen
 
-[ZIB Medicatieafspraak](https://zibs.nl/wiki/MedicationAgreement-v1.0(2017EN))
+[ZIB Medicatieafspraak](https://zibs.nl/wiki/Medicatieafspraak-v1.0.1(2017NL))
 
 ### View Definition
 

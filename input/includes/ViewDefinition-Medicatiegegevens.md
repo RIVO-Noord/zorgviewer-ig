@@ -17,39 +17,60 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
+<td>Start</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.start</samp></td>
+<td><code>dateTime</code></td>
+<td>Gebruiksperiode::TijdsInterval/startDatumTijd</td>
+<td></td>
+</tr>
+<tr>
+<td>Eind</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.end</samp></td>
+<td><code>dateTime</code></td>
+<td>Gebruiksperiode::TijdsInterval/eindDatumTijd</td>
+<td></td>
+</tr>
+<tr>
 <td>Medicatie</td>
 <td><samp>medicationReference.display</samp></td>
 <td><code>string</code></td>
-<td>Afgesprokengeneesmiddel</td>
+<td>Afgesprokengeneesmiddel::Product</td>
 <td></td>
 </tr>
 <tr>
-<td>Dosering & Instructies</td>
-<td><samp>iif(exists(dosageInstruction.text), dosageInstruction.text, dosageInstruction.additionalInstruction.text)</samp></td>
+<td>Dosering & instructies</td>
+<td><samp>dosageInstruction.text</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie</td>
-<td></td>
+<td>N.B. Als gegenereerd uit discrete informatie dan wordt deze gemarkeerd met een icoontje &#9432;</td>
 </tr>
 <tr>
 <td>Toedieningsweg</td>
-<td><samp>dosageInstruction.route.text</samp></td>
+<td><samp>iif(exists(dosageInstruction.route.text), dosageInstruction.route.text, dosageInstruction.route.coding.display)</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksinstructie/Toedieningsweg</td>
 <td></td>
 </tr>
 <tr>
-<td>Datum</td>
+<td>Stop Type</td>
+<td><samp>modifierExtension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType').valueCodeableConcept.coding.display</samp></td>
+<td><code>string</code></td>
+<td>StopType</td>
+<td></td>
+</tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#b4c7e7">
+<td>+Afspraakdatum</td>
 <td><samp>authoredOn</samp></td>
 <td><code>dateTime</code></td>
 <td>MedicatieafspraakDatumTijd</td>
 <td></td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
-<td>+Categorie</td>
-<td><samp>category.text</samp></td>
+<td>+Voorschrijver</td>
+<td><samp>requester.agent.display</samp></td>
 <td><code>string</code></td>
-<td>nvt</td>
+<td>Voorschrijver::Zorgverlener</td>
 <td></td>
 </tr>
 <tr style="background-color:#b4c7e7">
@@ -68,6 +89,20 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
+<td>Start</td>
+<td><samp>effectivePeriod.start</samp></td>
+<td><code>dateTime</code></td>
+<td>Gebruiksperiode::TijdsInterval/startDatumTijd</td>
+<td></td>
+</tr>
+<tr>
+<td>Eind</td>
+<td><samp>effectivePeriod.end</samp></td>
+<td><code>dateTime</code></td>
+<td>Gebruiksperiode::TijdsInterval/eindDatumTijd</td>
+<td></td>
+</tr>
+<tr>
 <td>Medicatie</td>
 <td><samp>medicationReference.display</samp></td>
 <td><code>string</code></td>
@@ -75,32 +110,32 @@
 <td></td>
 </tr>
 <tr>
-<td>Dosering & Instructies</td>
+<td>Dosering & instructies</td>
 <td><samp>dosage.text</samp></td>
 <td><code>string</code></td>
-<td>InstructionsForUse/Omschrijving</td>
-<td></td>
+<td>Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie</td>
+<td>N.B. Als gegenereerd uit discrete informatie dan wordt deze gemarkeerd met een icoontje &#9432;</td>
 </tr>
 <tr>
 <td>Toedieningsweg</td>
 <td><samp>dosage.route.text</samp></td>
 <td><code>string</code></td>
-<td>InstructionsForUse/Toedieningsweg</td>
+<td>Gebruiksinstructie/Toedieningsweg</td>
 <td></td>
 </tr>
-<tr>
-<td>Datum</td>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#b4c7e7">
+<td>+Registratiedatum</td>
 <td><samp>dateAsserted</samp></td>
 <td><code>dateTime</code></td>
 <td>MedicatieGebruikDatumTijd</td>
 <td></td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
-<td>+Categorie</td>
-<td><samp>category.text</samp></td>
+<td>+Voorschrijver</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Prescriber').valueReference.display</samp></td>
 <td><code>string</code></td>
-<td>nvt</td>
+<td>Voorschrijver::Zorgverlener</td>
 <td></td>
 </tr>
 <tr style="background-color:#b4c7e7">

@@ -1,0 +1,82 @@
+{
+    "resourceType": "Appointment",
+    "id": "euUwgaknEL2dCH5-hqEvSVp5BhPTmqDJUdEhZHe5uI-w3",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/eAfspraak-Appointment"
+        ]
+    },
+    "extension": [
+        {
+            "valueCode": "Europe/Amsterdam",
+            "url": "http://hl7.org/fhir/StructureDefinition/timezone"
+        }
+    ],
+    "identifier": [
+        {
+            "system": "urn:oid:1.2.840.114350.1.13.485.3.7.3.698084.8",
+            "value": "1000001193"
+        }
+    ],
+    "status": "pending",
+    "serviceCategory": {
+        "coding": [
+            {
+                "system": "http://open.epic.com/FHIR/StructureDefinition/appointment-service-category",
+                "code": "appointment",
+                "display": "Appointment"
+            }
+        ],
+        "text": "appointment"
+    },
+    "serviceType": [
+        {
+            "coding": [
+                {
+                    "system": "urn:oid:1.2.840.114350.1.13.485.3.7.2.808267",
+                    "code": "11721041",
+                    "display": "telefonische afspraak"
+                }
+            ]
+        }
+    ],
+    "appointmentType": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/v3/ActCode",
+                "code": "AMB",
+                "display": "Ambulatory"
+            }
+        ]
+    },
+    "start": "2018-04-20T09:10:00Z",
+    "end": "2018-04-20T09:15:00Z",
+    "minutesDuration": 5,
+    "created": "2018-04-18",
+    "participant": [
+        {
+            "actor": {
+                "reference": "https://example.org/POC-OAUTH2/api/FHIR/STU3/Patient/eH4ng98difN8LJcKjg54GkA3",
+                "display": "Fictief, Jan-Willem"
+            },
+            "required": "required",
+            "status": "accepted"
+        },
+        {
+            "actor": {
+                "reference": "https://example.org/POC-OAUTH2/api/FHIR/STU3/Practitioner/ejyV6A9uTniNY5L1GoDqOE0c3APy6mwaXDHxvOZ2-LH03",
+                "display": "G. Dijkstra, MDL arts"
+            },
+            "required": "required",
+            "status": "accepted"
+        },
+        {
+            "actor": {
+                "reference": "https://example.org/POC-OAUTH2/api/FHIR/STU3/Location/e2xoGvegE0L0fVKm.3X1LigWh8XZ2I0dsrKQnpBoRjxI3",
+                "display": "Maag- Darm- Leverziekten"
+            },
+            "required": "required",
+            "status": "accepted"
+        }
+    ]
+}

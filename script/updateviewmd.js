@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const fhirpath = require('fhirpath');
 const fhirpath_stu3_model = require('fhirpath/fhir-context/stu3');
+const { dosageToNLString } = require('./dosage');
+const dosageToString = require('./dosage').dosageToString;
+const dosageToStringGemini = require('./dosage').dosageToStringGemini;
 
 const viewDefPath = "../input/images/";
 const mdPath = "../input/includes/";
@@ -47,6 +50,16 @@ fs.readdirSync(viewDefPath).forEach(file => {
                     const example_filePath = path.join(examplesPath, file);
                     const example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
 
+                    // generate if no text
+                    if (example.dosageInstruction && !example.dosageInstruction[0].text) {
+                        // var text = dosageToString(example.dosageInstruction[0]);
+                        var text = dosageToStringGemini(example.dosageInstruction[0]);
+                        if (text.includes("undefined")) {
+                            console.error("Some expected dosage parts undefined?", JSON.stringify(example.dosageInstruction));
+                        }
+                        example.dosageInstruction[0].text = text + ' &#9432;';
+                    }
+
                     // only include in table when where clause applies
                     const match3 = viewDef.select[0].forEach.match(".where\((.+)\)");
                     if (match3) {
@@ -60,13 +73,13 @@ fs.readdirSync(viewDefPath).forEach(file => {
                                 catch { }
                                 var value = "";
                                 if (result && result.length > 0) {
-                                    if (column.type == "dateTime") {
+                                    if (column.type == "date" || column.type == "dateTime") {
                                         const date = new Date(result[0]);
                                         value = date.toLocaleDateString('nl-NL'); // + ' ' + date.toLocaleTimeString('nl-NL';
                                     }
                                     else {
-                                        value = result[0].replace(/\r?\n/g, "<br/>");
                                         if (value.length > 80) value = `${value.substring(0,80)}...`;    
+                                        value = result[0].replace(/\r?\n/g, "<br/>");
                                     }
                                 }
                                 return value;
@@ -76,17 +89,14 @@ fs.readdirSync(viewDefPath).forEach(file => {
                             md_ui.push("<tr><td>+</td>");
                             viewDef.select[0].column.forEach((column,idx) => {
                                 if (column.name.charAt(0) != '+') {
-                                    md_ui.push("<td>",
-                                        values[idx],
-                                        "</td>");
+                                    md_ui.push(`<td>${values[idx]}</td>`);
                                 }
                             });
                             const colcount = viewDef.select[0].column.filter(column => column.name.charAt(0) != '+').length;
                             md_ui.push(`</tr><tr><td></td><td colspan=${colcount}>`);
                             viewDef.select[0].column.forEach((column,idx) => {
                                 if (column.name.charAt(0) == '+' && values[idx] != "") {
-                                    md_ui.push(`<b>${column.name.slice(1)}</b><br/>`,
-                                        `${values[idx]}<br/>`);
+                                    md_ui.push(`<b>${column.name.slice(1)}</b><br/>${values[idx]}<br/>`);
                                 }
                             });
                             md_ui.push("</td></tr>");
@@ -125,9 +135,7 @@ function doColumns(columns, md_ui, md_def) {
     md_ui.push("<tr><th>&gt;&lt;</th>");
     columns.forEach(column => { 
         if (column.name.charAt(0) != '+') {
-            md_ui.push("<th>",
-                column.name,
-                "</th>");
+            md_ui.push(`<th>${column.name}</th>`);
         }
     });
     md_ui.push("</tr>");

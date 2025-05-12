@@ -1,0 +1,69 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Encounter",
+  "title": "Contacten",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "period.start",
+          "name": "Begin",
+          "description": "",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "BeginDatumTijd" } ]
+        },
+        {
+          "path": "period.end",
+          "name": "Eind",
+          "description": "",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "EindDatumTijd" } ]
+        },
+        {
+          "path": "participant.individual.display",
+          "name": "Met",
+          "description": "",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "ContactMet::Zorgverlener" } ]
+        },
+        {
+          "path": "participant.individual.extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display",
+          "name": "Rol",
+          "description": "",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "location.location.display",
+          "name": "Locatie",
+          "description": "",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Locatie::Zorgaanbieder" } ]
+        },
+        {
+          "path": "status",
+          "name": "Status",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "class.display",
+          "name": "Type",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "ContactType" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Encounter' and (class.code='IMP' or class.code='ACUTE' or class.code='NONAC'))"
+    }
+  ]
+}

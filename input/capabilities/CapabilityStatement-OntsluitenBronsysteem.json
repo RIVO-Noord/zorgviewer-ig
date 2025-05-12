@@ -75,6 +75,26 @@
     {
       "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Specimen",
       "display": "zib-LaboratoryTestResult-Specimen"
+    },
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement",
+      "display": "zib-MedicationAgreement"
+    },
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse",
+      "display": "zib-MedicationUse"
+    },
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination",
+      "display": "zib-Vaccination"
+    },
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/eAfspraak-Appointment",
+      "display": "eAfspraak-Appointment"
+    },
+    {
+      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Encouner",
+      "display": "zib-Encouner"
     }
   ],
   "rest": [
@@ -430,6 +450,121 @@
           "type": "Specimen",
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Specimen"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "MedicationRequest",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationRequest"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "MedicationStatement",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationStatement"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Immunization",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Immunization"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Appointment",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Appointment"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Encounter",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
           },
           "interaction": [
             {

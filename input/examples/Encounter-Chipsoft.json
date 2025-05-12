@@ -1,0 +1,84 @@
+{
+    "resourceType": "Encounter",
+    "id": "2.16.840.1.113883.2.4.3.124.7.46240.81230000070144",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-Encounter"
+        ]
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Encounter resource:</h3><ul><li><p><strong>Subject:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Status:</strong> &#x27;Finished&#x27;</p></li><li><p><strong>Class:</strong> &#x27;Inpatient&#x27;</p></li><li><table><thead><tr><th>Participant</th><th>Names</th><th>Phone numbers</th><th>Address</th></tr></thead><tbody><tr><td>Participant 1</td><td>(J.H.R) Peters</td><td>&#x2B;31306003111, &#x2B;31306003199</td><td>Postbus 7037, 3430JA Nieuwegein (Netherlands (the))</td></tr></tbody></table></li><li><p><strong>Period:</strong> &#x27;Period with lower bound 15-8-2012 00:00&#x2B;0200 and upper bound 15-8-2012 15:04&#x2B;0200.&#x27;</p></li><li><p><strong>Diagnosis condition</strong> &#x27;Problem&#x27;</p></li><li><table><thead><tr><th>Service provider</th><th>Name</th><th>Address</th><th>Identifications</th><th>Standard industry class code</th></tr></thead><tbody><tr><td>Service provider 1</td><td>Ziekenhuis Apotheek</td><td>Tt.Melissaweg 23, TRUE Amsterdam (AMSTERDAM)</td><td> 2.16.528.1.1007.3.3, 00002727</td><td>Openbare apotheek</td></tr></tbody></table></li><li><p><strong>Hospitalization admit source:</strong> &#x27;Home&#x27;</p></li><li><p><strong>Hospitalization discharge disposition:</strong> &#x27;Home&#x27;</p></li></ul></div>"
+    },
+    "identifier": [
+        {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.124.7.46240.8",
+            "value": "1230000070144"
+        }
+    ],
+    "status": "finished",
+    "class": {
+        "system": "http://hl7.org/fhir/v3/ActCode",
+        "code": "IMP",
+        "display": "inpatient"
+    },
+    "subject": {
+        "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+        "display": "Johan XXX_Helleman_Afblijven"
+    },
+    "participant": [
+        {
+            "individual": {
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                        "valueReference": {
+                            "reference": "PractitionerRole/D39901D5633311B18D8CC9D7E6546C74898DAC5C0E33EEF454329D16153F096E",
+                            "display": "Onbekende functiecode."
+                        }
+                    }
+                ],
+                "reference": "Practitioner/7667ea25-2acb-49c0-8565-41a37da4b81e",
+                "display": "J.H.R Peters"
+            }
+        }
+    ],
+    "period": {
+        "start": "2012-08-15T00:00:00+02:00",
+        "end": "2012-08-15T15:04:00+02:00"
+    },
+    "diagnosis": [
+        {
+            "condition": {
+                "reference": "Procedure/a0002acf-c5c8-4368-b389-028b42cd396c",
+                "display": "other"
+            }
+        }
+    ],
+    "hospitalization": {
+        "admitSource": {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "264362003",
+                    "display": "Home"
+                }
+            ],
+            "text": "Eigen woonomgeving"
+        },
+        "dischargeDisposition": {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "264362003",
+                    "display": "Home"
+                }
+            ],
+            "text": "Eigen woonomgeving"
+        }
+    },
+    "serviceProvider": {
+        "reference": "Organization/2.16.528.1.1007.3.300002727",
+        "display": "Ziekenhuis Apotheek"
+    }
+}
