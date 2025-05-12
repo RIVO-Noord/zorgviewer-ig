@@ -4,7 +4,8 @@
 
 |Versie|Datum|Changes|
 |---|---|---|
-|1.15.0-sprint57|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.14.0-sprint56...master)|
+|1.16.0-sprint59|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.15.0-sprint58...master)|
+|1.15.0-sprint58|12-mei-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.14.0-sprint56...1.15.0-sprint58)<br/>* Focus op Medicatie<br/>* Start Afspraken en Contacten|
 |1.14.0-sprint56|15-apr-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.13.0-sprint55...1.14.0-sprint56)<br/>Focus op Medicatie en QA fixes.|
 |1.13.0-sprint55|1-apr-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.12.0-sprint54...1.13.0-sprint55)|
 |1.12.0-sprint54|18-mrt-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.11.0-sprint49...1.12.0-sprint54)|
