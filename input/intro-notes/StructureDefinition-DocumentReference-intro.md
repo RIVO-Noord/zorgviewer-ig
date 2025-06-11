@@ -34,7 +34,7 @@
     </tr>
     <tr>
       <td>clinical-note<br/>Notitie</td>
-      <td>Epic clinical-note(s) types from [DocumentReference.Search (Clinical Notes) (STU3)](https://vendorservices.epic.com/Sandbox/Index?api=865)
+      <td>Epic clinical-note(s) types from <a href="https://vendorservices.epic.com/Sandbox/Index?api=865">DocumentReference.Search (Clinical Notes) (STU3)</a>
         <ul><li>Discharge Documentation (18842-5)</li>
         <li>Consultation (11488-4)</li>
         <li>History & Physical (34117-2)</li>
