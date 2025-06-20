@@ -55,7 +55,8 @@
 1. De zorgviewer integreert in de informatieomgeving van de gebruiker.
     1. **Keuze**: Conform [SMART-on-FHIR 1.0.0 EHR launch](http://hl7.org/fhir/smart-app-launch/1.0.0/index.html#ehr-launch-sequence)
 1. Het moet mogelijk zijn om aan te geven dat het een spoedsituatie betreft.
-1. Conflicten, ontdubbelen en duplicaatdetectie volgens [BgZ MSZ Informatiestandaard](https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard)
+1. Conflicten, ontdubbelen en duplicaatdetectie volgens paragraaf "3.2.9.1 Ontdubbelen" in 
+[BgZ MSZ Informatiestandaard](https://informatiestandaarden.nictiz.nl/wiki/BgZ:V1.0_BgZ_MSZ_Informatiestandaard)
     1. De zorgviewer attendeert de gebruiker op belangrijke lacunes in het eigen informatiesysteem: specificeren wat en welke dat zijn. Centraal vastleggen en dat alerten. 
     1. De zorgviewer attendeert de gebruiker op conflicten in het tonen van data van verschillende bronnen waar ze niet overeenkomen. 
     1. De zorgviewer faciliteert in ontdubbelen

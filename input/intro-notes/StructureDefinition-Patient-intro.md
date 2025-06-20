@@ -24,6 +24,21 @@ Bovenop constraint **zv-pat-1**:
 
     `identifier=<BSN>`
 
+1. Of (Sanday) opvragen (match) middels POST, zie: [FHIR STU3 operation-patient-match](https://hl7.org/fhir/STU3/operation-patient-match.html)
+
+    `POST <bronsysteem-ontsluiting-base/Patient/$match`
+
+    ```json
+    {
+      "resourceType": "Patient",
+      "identifier": [ {
+        "use": "official",
+        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+        "value": "123456789"
+      } ]
+    }
+    ```
+
 1. Opvragen (read) patient op basis van de fhir_patient_id
 
     `GET <ontsluiten-bronsysteem-base>/Patient/<fhir_patient_id>`
