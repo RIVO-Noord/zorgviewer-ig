@@ -1,0 +1,32 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Medication",
+    "name": "Medication",
+    "title": "Medication",
+    "status": "active",
+    "description": "Medicatie",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Medication",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-Product",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "MedicationStatement.form",
+                "path": "MedicationStatement.form",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationStatement.form.coding",
+                "path": "MedicationStatement.form.coding",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationStatement.form.coding.display",
+                "path": "MedicationStatement.form.coding.display",
+                "mustSupport": true
+            }
+        ]
+    }
+}
