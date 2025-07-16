@@ -31,7 +31,7 @@
 </tr>
 <tr>
 <td>Medicatie</td>
-<td><samp>medicationReference.display</samp></td>
+<td><samp>medication.display</samp></td>
 <td><code>string</code></td>
 <td>Afgesprokengeneesmiddel::Product</td>
 <td></td>
