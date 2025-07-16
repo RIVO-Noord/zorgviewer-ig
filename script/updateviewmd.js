@@ -9,6 +9,28 @@ const dosageToStringGemini = require('./dosage').dosageToStringGemini;
 const viewDefPath = "../input/images/";
 const mdPath = "../input/includes/";
 
+// Need stu3_model as param to work
+// eg fhirpath.evaluate(example, `${column.path}`, null, fhirpath_stu3_model, { userInvocationTable }); }
+function resolveFn(inputs) {
+    const reference = inputs[0].reference;
+    const id = reference.split('/').pop();
+    // try to find an example with a matching id 
+    const examplesPath = "../input/examples";
+    var resolved;
+    fs.readdirSync(examplesPath).forEach(file => {
+        if (!file.endsWith(".json")) return;
+        const example_filePath = path.join(examplesPath, file);
+        const example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
+        if (example.id === id) {
+            resolved = example;
+        }
+    });
+    return resolved;
+}
+const userInvocationTable = {
+    resolve: { fn: resolveFn }
+};
+
 fs.readdirSync(viewDefPath).forEach(file => {
     const match = file.match("ViewDefinition-.+\.json");
     if (match) {
@@ -69,7 +91,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
                         if (result[0]) {
                             const values = viewDef.select[0].column.map(column => {
                                 var result;
-                                try { result = fhirpath.evaluate(example, `${column.path}`); }
+                                try { result = fhirpath.evaluate(example, `${column.path}`, null, fhirpath_stu3_model, { userInvocationTable }); }
                                 catch (err) { console.error(column.name, err.message, column.path); }
                                 var value = "";
                                 if (result && result.length > 0) {

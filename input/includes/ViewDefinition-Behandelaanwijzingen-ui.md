@@ -16,7 +16,7 @@
 <td>30-9-2022</td>
 <td>Artificial respiration (procedure)</td>
 <td>Ja, maar met beperkingen</td>
-<td></td>
+<td>Toelichting: Eerst overleg met echtgenote</td>
 <td></td>
 <td>active</td>
 </tr><tr><td></td><td colspan=7>
@@ -27,7 +27,7 @@
 <td>22-3-2022</td>
 <td>kunstmatige beademing (verrichting)</td>
 <td>Ja, maar met beperkingen</td>
-<td></td>
+<td>Eerst overleg met echtgenote</td>
 <td>patiënt (persoon)</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=7>

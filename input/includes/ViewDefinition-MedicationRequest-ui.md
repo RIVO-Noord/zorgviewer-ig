@@ -20,7 +20,6 @@
 <td>RECTAAL</td>
 <td>Definitief</td>
 </tr><tr><td></td><td colspan=7>
-<b>Medicatie Vorm</b><br/><i>resolve</i><br/>
 <b>Afspraakdatum</b><br/>30-9-2022<br/>
 <b>Voorschrijver</b><br/>Peter van Pulver<br/>
 </td></tr>
@@ -33,7 +32,7 @@
 <td>Oraal</td>
 <td></td>
 </tr><tr><td></td><td colspan=7>
-<b>Medicatie Vorm</b><br/><i>resolve</i><br/>
+<b>Medicatie Vorm</b><br/>tablet<br/>
 <b>Afspraakdatum</b><br/>27-11-2020<br/>
 <b>Voorschrijver</b><br/>M Crop<br/>
 </td></tr>
@@ -46,7 +45,6 @@
 <td>INTRAVENEUS</td>
 <td></td>
 </tr><tr><td></td><td colspan=7>
-<b>Medicatie Vorm</b><br/><i>resolve</i><br/>
 <b>Afspraakdatum</b><br/>3-10-2023<br/>
 <b>Voorschrijver</b><br/>Aalders, JCA (CAR)<br/>
 </td></tr>
