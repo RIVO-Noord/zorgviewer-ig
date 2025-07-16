@@ -12,6 +12,10 @@ const mdPath = "../input/includes/";
 // Need stu3_model as param to work
 // eg fhirpath.evaluate(example, `${column.path}`, null, fhirpath_stu3_model, { userInvocationTable }); }
 function resolveFn(inputs) {
+    if (!inputs || inputs.length === 0) {
+        console.error("resolve() called on undefined path");
+        return null;
+    }
     const reference = inputs[0].reference;
     const id = reference.split('/').pop();
     // try to find an example with a matching id 
@@ -25,6 +29,9 @@ function resolveFn(inputs) {
             resolved = example;
         }
     });
+    if (!resolved) {
+        console.error(`No example found for reference: ${reference}`);
+    }
     return resolved;
 }
 const userInvocationTable = {
@@ -72,7 +79,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
                     const example_filePath = path.join(examplesPath, file);
                     const example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
 
-                    // generate if no text
+                    // generate if dosageInstruction but no text; only for MedicationRequest/Statements
                     if (example.dosageInstruction && !example.dosageInstruction[0].text) {
                         // var text = dosageToString(example.dosageInstruction[0]);
                         var text = dosageToStringGemini(example.dosageInstruction[0]);
