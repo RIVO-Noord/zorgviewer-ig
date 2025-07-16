@@ -70,7 +70,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
                             const values = viewDef.select[0].column.map(column => {
                                 var result;
                                 try { result = fhirpath.evaluate(example, `${column.path}`); }
-                                catch { }
+                                catch (err) { console.error(column.name, err.message, column.path); }
                                 var value = "";
                                 if (result && result.length > 0) {
                                     if (column.type == "date" || column.type == "dateTime") {
@@ -84,14 +84,16 @@ fs.readdirSync(viewDefPath).forEach(file => {
                                 }
                                 return value;
                             });
-                            // haal bron uit filename
+                            // column 0 is altijd bron en set bron obv filename
                             values[0] = file.substring(file.indexOf('-')+1, file.length-5);
                             md_ui.push("<tr><td>+</td>");
+                            // add column values
                             viewDef.select[0].column.forEach((column,idx) => {
                                 if (column.name.charAt(0) != '+') {
                                     md_ui.push(`<td>${values[idx]}</td>`);
                                 }
                             });
+                            // add uitklap values; only show if there is a value
                             const colcount = viewDef.select[0].column.filter(column => column.name.charAt(0) != '+').length;
                             md_ui.push(`</tr><tr><td></td><td colspan=${colcount}>`);
                             viewDef.select[0].column.forEach((column,idx) => {

@@ -48,13 +48,13 @@
           "tag": [ { "name": "Zib element", "value": "Gebruiksinstructie/Toedieningsweg" } ]
         },
         {
-          "path": "modifierExtension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType').valueCodeableConcept.coding.display",
+          "path": "modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType').valueCodeableConcept.coding.display",
           "name": "Stop Type",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "StopType" } ]
         },
         {
-          "path": "medicationReference.resolve().form.coding.display",
+          "path": "medication.resolve().form.coding.display",
           "name": "+Medicatie Vorm",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Afgesprokengeneesmiddel::FarmaceutischProduct/FarmaceutischeVorm" } ]

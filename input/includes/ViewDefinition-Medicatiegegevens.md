@@ -32,7 +32,7 @@
 </tr>
 <tr>
 <td>Medicatie</td>
-<td><samp>medicationReference.display</samp></td>
+<td><samp>medication.display</samp></td>
 <td><code>string</code></td>
 <td>Afgesprokengeneesmiddel::Product</td>
 <td></td>
@@ -53,7 +53,7 @@
 </tr>
 <tr>
 <td>Stop Type</td>
-<td><samp>modifierExtension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType').valueCodeableConcept.coding.display</samp></td>
+<td><samp>modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType').valueCodeableConcept.coding.display</samp></td>
 <td><code>string</code></td>
 <td>StopType</td>
 <td></td>
@@ -68,7 +68,7 @@
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+Medicatie Vorm</td>
-<td><samp>medicationReference.resolve().form.coding.display</samp></td>
+<td><samp>medication.resolve().form.coding.display</samp></td>
 <td><code>string</code></td>
 <td>Afgesprokengeneesmiddel::FarmaceutischProduct/FarmaceutischeVorm</td>
 <td></td>
@@ -111,7 +111,7 @@
 </tr>
 <tr>
 <td>Medicatie</td>
-<td><samp>medicationReference.display</samp></td>
+<td><samp>medication.display</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksproduct</td>
 <td></td>
@@ -133,7 +133,7 @@
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Medicatie Vorm</td>
-<td><samp>medicationReference.resolve().form.coding.display</samp></td>
+<td><samp>medication.resolve().form.coding.display</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksproduct::FarmaceutischProduct/FarmaceutischeVorm</td>
 <td></td>
