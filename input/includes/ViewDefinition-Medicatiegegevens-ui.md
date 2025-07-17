@@ -33,8 +33,8 @@
 <td>Oraal</td>
 <td></td>
 </tr><tr><td></td><td colspan=7>
-<b>Afspraakdatum</b><br/>27-11-2020<br/>
 <b>Medicatie Vorm</b><br/>tablet<br/>
+<b>Afspraakdatum</b><br/>27-11-2020<br/>
 <b>Voorschrijver</b><br/>M Crop<br/>
 <b>Type</b><br/>voorgeschreven<br/>
 </td></tr>

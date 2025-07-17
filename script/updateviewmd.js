@@ -72,7 +72,6 @@ fs.readdirSync(viewDefPath).forEach(file => {
             // assume first unions columns is the final list of columns
             viewDef.select[0].unionAll.forEach(union => {
                 const match = union.forEach.match("resourceType='(.+)'");
-                console.log(match);
                 if (match) {
                     const resourceType = match[1];
                     md_def.push(`<tr><td colspan=5><i>${resourceType}</i></td></tr>`);
