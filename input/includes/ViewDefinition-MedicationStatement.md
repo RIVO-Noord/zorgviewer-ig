@@ -52,7 +52,7 @@
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
-<td>+Medicatie Vorm</td>
+<td>+Medicatie vorm</td>
 <td><samp>medication.resolve().form.coding.display</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksproduct::FarmaceutischProduct/FarmaceutischeVorm</td>
