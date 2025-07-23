@@ -29,6 +29,13 @@
 <td>ProbleemNaam</td>
 <td></td>
 </tr>
+<tr>
+<td>Status</td>
+<td><samp>clinicalStatus</samp></td>
+<td><code>code</code></td>
+<td>ProbleemStatus</td>
+<td></td>
+</tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Diagnose</td>

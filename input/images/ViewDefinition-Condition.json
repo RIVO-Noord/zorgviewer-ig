@@ -27,6 +27,13 @@
           "tag": [ { "name": "Zib element", "value": "ProbleemNaam" } ]
         },
         {
+          "path": "clinicalStatus",
+          "name": "Status",
+          "description": "",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "ProbleemStatus" } ]
+        },
+        {
           "name": "+Diagnose",
           "path": "code.coding[0].system+'#' + code.coding[0].code + ' ' + iif(exists(code.coding[0].display),code.coding[0].display,'')",
           "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
