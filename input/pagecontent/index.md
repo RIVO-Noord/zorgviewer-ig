@@ -50,7 +50,7 @@ Informatie over uitgangspunten, normen en gegevensbronnen.
 
 #### RAO
 
-- Onderwerpen en documenten uit het Regionaal Architectuur Overleg (RIVO-RAO).
+- Onderwerpen en documenten uit het RIVO-Noord Architectuur Overleg (RAO).
 
 #### Artifact Index
 
