@@ -39,7 +39,7 @@ const userInvocationTable = {
 };
 
 fs.readdirSync(viewDefPath).forEach(file => {
-    const match = file.match("ViewDefinition-.+\.json");
+    const match = file.match(/^ViewDefinition-.+\.json$/);
     if (match) {
         const viewDef_filePath = path.join(viewDefPath, file);
         const viewDef = JSON.parse(fs.readFileSync(viewDef_filePath, 'utf8'));
@@ -95,6 +95,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
 });
 
 function doColumns(columns, md_ui, md_def) {
+    // Add column names for UI wireframe
     md_ui.push("<tr><th>&gt;&lt;</th>");
     columns.forEach(column => { 
         if (column.name.charAt(0) != '+') {
@@ -103,6 +104,7 @@ function doColumns(columns, md_ui, md_def) {
     });
     md_ui.push("</tr>");
 
+    // Add column definitions
     columns.forEach(column => { 
         if (column.name.charAt(0) != '+' && column.name.charAt(0) != '(') {
             md_def.push("<tr>");
@@ -110,6 +112,7 @@ function doColumns(columns, md_ui, md_def) {
             md_def.push("</tr>");
         }
     });
+    // Add uitklap columns
     if (columns.find(column => column.name.charAt(0) == '+')) {
         md_def.push('<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>');
         columns.forEach(column => { 
@@ -120,6 +123,7 @@ function doColumns(columns, md_ui, md_def) {
             }
         });
     }
+    // Add markering columns
     if (columns.find(column => column.name.charAt(0) == '(')) {
         md_def.push('<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>');
         columns.forEach(column => { 
