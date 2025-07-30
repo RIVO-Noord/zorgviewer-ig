@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>Vitalegegevens</b>
+<b>Vitale gegevens</b>
 <table class="grid">
 <tbody>
 <tr><th>&gt;&lt;</th>
@@ -14,7 +14,7 @@
 </tr>
 <tr><td>+</td>
 <td>Epic</td>
-<td>2020-08-03T11:15:00Z</td>
+<td>3-8-2020</td>
 <td>Bloeddruk</td>
 <td></td>
 <td></td>
@@ -26,7 +26,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
-<td>2024-03-21T15:31:00+00:00</td>
+<td>21-3-2024</td>
 <td>hartfrequentie (thuismeting)</td>
 <td></td>
 <td>80 aantal/min</td>
@@ -38,7 +38,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
-<td>2019-08-23T07:00:00Z</td>
+<td>23-8-2019</td>
 <td>Temperatuur</td>
 <td>38 Cel</td>
 <td></td>

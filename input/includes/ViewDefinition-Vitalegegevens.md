@@ -18,7 +18,7 @@
 <tr>
 <td>Datum</td>
 <td><samp>effectiveDateTime</samp></td>
-<td><code>string</code></td>
+<td><code>dateTime</code></td>
 <td>*DatumTijd</td>
 <td></td>
 </tr>
