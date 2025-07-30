@@ -27,7 +27,13 @@
         },
         {
           "path": "valueQuantity.value.toString()+' '+valueQuantity.unit",
-          "name": "Waarde",
+          "name": "Quantity",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
+        },
+        {
+          "path": "valueString",
+          "name": "String",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
         },
@@ -41,7 +47,7 @@
           "path": "performer.display",
           "name": "Uitvoerder",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
+          "tag": [ { "name": "Zib element", "value": "Auteur" } ]
         },
         {
           "path": "status",
@@ -69,7 +75,7 @@
           "tag": [ { "name": "Zib element", "value": "MetingNaam" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='Observation')"
+      "forEach": "entry.resource.where(resourceType='Observation' and category.coding.code='vital-signs')"
     }
   ]
 }

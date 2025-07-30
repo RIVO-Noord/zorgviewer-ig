@@ -1,0 +1,63 @@
+{
+    "resourceType": "Observation",
+    "id": "2a35354e-9624-454c-a083-edabf7930c5a",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/observation-category",
+                    "code": "vital-signs",
+                    "display": "vital-signs"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen",
+                "code": "3963",
+                "display": "hartfrequentie (thuismeting)"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/6F872FD1-BC0A-4A4C-A48E-D2B7C17142BE",
+        "identifier": {
+            "value": "6F872FD1-BC0A-4A4C-A48E-D2B7C17142BE"
+        }
+    },
+    "effectiveDateTime": "2024-03-21T15:31:00+00:00",
+    "issued": "2024-03-21T15:31:00.000+00:00",
+    "performer": [
+        {
+            "reference": "Practitioner/b80608b1-851d-47e4-a0ef-c52b30e5aa2d",
+            "identifier": {
+                "value": "b80608b1-851d-47e4-a0ef-c52b30e5aa2d"
+            }
+        }
+    ],
+    "valueString": "80 aantal/min",
+    "referenceRange": [
+        {
+            "low": {
+                "value": 60.0,
+                "unit": "aantal/min",
+                "system": "http://unitsofmeasure.org",
+                "code": "aantal/min"
+            },
+            "high": {
+                "value": 100.0,
+                "unit": "aantal/min",
+                "system": "http://unitsofmeasure.org",
+                "code": "aantal/min"
+            }
+        }
+    ]
+}

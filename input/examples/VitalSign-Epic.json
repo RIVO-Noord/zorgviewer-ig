@@ -1,0 +1,114 @@
+{
+    "resourceType": "Observation",
+    "id": "fnOT.DhAM3rvu5Q8YAm3-LZHYD--XzzBJiZgxXDXElkw4",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure"
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/observation-category",
+                    "code": "vital-signs",
+                    "display": "Vital Signs"
+                }
+            ],
+            "text": "Vital Signs"
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "85354-9",
+                "display": "Blood pressure panel with all children optional"
+            },
+            {
+                "system": "urn:oid:1.2.840.114350.1.13.485.2.7.2.707679",
+                "code": "5",
+                "display": "Bloeddruk"
+            },
+            {
+                "system": "http://open.epic.com/FHIR/STU3/StructureDefinition/observation-flowsheet-id",
+                "code": "tNMi9VSntSLwWTsx66DJLfg0",
+                "display": "Bloeddruk"
+            },
+            {
+                "system": "urn:oid:1.2.246.537.6.96",
+                "code": "8462-4"
+            },
+            {
+                "system": "urn:oid:1.2.246.537.6.96",
+                "code": "8480-6"
+            },
+            {
+                "system": "http://loinc.org",
+                "code": "55284-4",
+                "display": "Blood pressure systolic and diastolic"
+            },
+            {
+                "system": "http://loinc.org",
+                "code": "8716-3",
+                "display": "Vital signs"
+            }
+        ],
+        "text": "Bloeddruk"
+    },
+    "subject": {
+        "reference": "https://icf.prd.epd.umcg.intra/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3",
+        "display": "Fictief, Jan"
+    },
+    "context": {
+        "reference": "https://icf.prd.epd.umcg.intra/PRD-OAUTH2/api/FHIR/STU3/Encounter/eYbNbDDNe-hVCVRsO7GgTPg3",
+        "display": "Ziekenhuiscontact"
+    },
+    "effectiveDateTime": "2020-08-03T11:15:00Z",
+    "issued": "2020-08-03T11:16:06Z",
+    "performer": [
+        {
+            "reference": "https://icf.prd.epd.umcg.intra/PRD-OAUTH2/api/FHIR/STU3/Practitioner/ey2wx9FuxHbR-Q4sDWdx9UfwpWK8ZOtvVcrmcvou04cE3",
+            "display": "C Ooms"
+        }
+    ],
+    "component": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "8480-6",
+                        "display": "Systolic blood pressure"
+                    }
+                ],
+                "text": "Systolic blood pressure"
+            },
+            "valueQuantity": {
+                "value": 100,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "8462-4",
+                        "display": "Diastolic blood pressure"
+                    }
+                ],
+                "text": "Diastolic blood pressure"
+            },
+            "valueQuantity": {
+                "value": 60,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+            }
+        }
+    ]
+}
