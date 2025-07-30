@@ -9,4 +9,4 @@ This script needs newer version (>=14) of node. See https://www.linode.com/docs/
 ```
 
 Known limitations:
-* Add code to handle Bundles of examples
+* Add code to handle resolve in Bundles; currently looks for single resource examples

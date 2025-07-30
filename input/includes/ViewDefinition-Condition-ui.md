@@ -48,5 +48,25 @@
 <b>Diagnose</b><br/>http://snomed.info/sct#31641000146105 fractuur van pols<br/>
 <b>Toelichting</b><br/>Gevallen op kunstijsbaan<br/>
 </td></tr>
+<tr><td>+</td>
+<td>Chipsoft-OTH</td>
+<td>2019-04-15</td>
+<td>BRMO: Bewezen dragerschap</td>
+<td>active</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>http://hl7.org/fhir/v3/NullFlavor#OTH other<br/>
+<b>Toelichting</b><br/>BRMO bewezen dragerschap als opmerking<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Chipsoft-OTH</td>
+<td>2024-07-19</td>
+<td>MRSA: Bewezen dragerschap</td>
+<td>active</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>http://hl7.org/fhir/v3/NullFlavor#OTH other<br/>
+<b>Toelichting</b><br/>test mrsa opmerkingenveld<br/>
+</td></tr>
 </tbody>
 </table>

@@ -12,6 +12,26 @@
 <th>Status</th>
 </tr>
 <tr><td>+</td>
+<td>Chipsoft-OTH</td>
+<td>15-4-2019</td>
+<td></td>
+<td>Anders</td>
+<td>other</td>
+<td>conditie</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>Chipsoft-OTH</td>
+<td>19-7-2024</td>
+<td></td>
+<td>Anders</td>
+<td>other</td>
+<td>conditie</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft</td>
 <td>1-6-2010</td>
 <td></td>

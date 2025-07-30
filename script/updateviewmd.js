@@ -153,62 +153,73 @@ function doExampleRows(select, md_ui) {
         fs.readdirSync(examplesPath).forEach(file => {
             if (!file.endsWith(".json")) return;
             const example_filePath = path.join(examplesPath, file);
-            const example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
+            const raw_example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
 
-            // generate if dosageInstruction but no text; only for MedicationRequest/Statements
-            if (example.dosageInstruction && !example.dosageInstruction[0].text) {
-                // var text = dosageToString(example.dosageInstruction[0]);
-                var text = dosageToStringGemini(example.dosageInstruction[0]);
-                if (text.includes("undefined")) {
-                    console.error("Some expected dosage parts undefined?", JSON.stringify(example.dosageInstruction));
-                }
-                example.dosageInstruction[0].text = text + ' &#9432;';
+            const examples = [];
+            // If this is a Bundle split into individual resources
+            if (raw_example.resourceType == "Bundle") {
+                raw_example.entry.forEach(entry => examples.push(entry.resource));
+            }
+            else {
+                examples.push(raw_example);
             }
 
-            // only include in table when where clause applies
-            const match3 = select.forEach.match(".where\((.+)\)");
-            if (match3) {
-                var result;
-                try { result = fhirpath.evaluate(example, match3[1]); }
-                catch { }
-                if (result[0]) {
-                    const values = select.column.map(column => {
-                        var result;
-                        try { result = fhirpath.evaluate(example, `${column.path}`, null, fhirpath_stu3_model, { userInvocationTable }); }
-                        catch (err) { console.error(column.name, err.message, column.path); }
-                        var value = "";
-                        if (result && result.length > 0) {
-                            if (column.type == "date" || column.type == "dateTime") {
-                                const date = new Date(result[0]);
-                                value = date.toLocaleDateString('nl-NL'); // + ' ' + date.toLocaleTimeString('nl-NL';
-                            }
-                            else {
-                                if (value.length > 80) value = `${value.substring(0,80)}...`;    
-                                value = result[0].replace(/\r?\n/g, "<br/>");
-                            }
-                        }
-                        return value;
-                    });
-                    // column 0 is altijd bron en set bron obv filename
-                    values[0] = file.substring(file.indexOf('-')+1, file.length-5);
-                    md_ui.push("<tr><td>+</td>");
-                    // add column values
-                    select.column.forEach((column,idx) => {
-                        if (column.name.charAt(0) != '+') {
-                            md_ui.push(`<td>${values[idx]}</td>`);
-                        }
-                    });
-                    // add uitklap values; only show if there is a value
-                    const colcount = select.column.filter(column => column.name.charAt(0) != '+').length;
-                    md_ui.push(`</tr><tr><td></td><td colspan=${colcount}>`);
-                    select.column.forEach((column,idx) => {
-                        if (column.name.charAt(0) == '+' && values[idx] != "") {
-                            md_ui.push(`<b>${column.name.slice(1)}</b><br/>${values[idx]}<br/>`);
-                        }
-                    });
-                    md_ui.push("</td></tr>");
+            examples.forEach(example => {
+                // generate if dosageInstruction but no text; only for MedicationRequest/Statements
+                if (example.dosageInstruction && !example.dosageInstruction[0].text) {
+                    // var text = dosageToString(example.dosageInstruction[0]);
+                    var text = dosageToStringGemini(example.dosageInstruction[0]);
+                    if (text.includes("undefined")) {
+                        console.error("Some expected dosage parts undefined?", JSON.stringify(example.dosageInstruction));
+                    }
+                    example.dosageInstruction[0].text = text + ' &#9432;';
                 }
-            }
+
+                // only include in table when where clause applies
+                const match3 = select.forEach.match(".where\((.+)\)");
+                if (match3) {
+                    var result;
+                    try { result = fhirpath.evaluate(example, match3[1]); }
+                    catch { }
+                    if (result[0]) {
+                        const values = select.column.map(column => {
+                            var result;
+                            try { result = fhirpath.evaluate(example, `${column.path}`, null, fhirpath_stu3_model, { userInvocationTable }); }
+                            catch (err) { console.error(column.name, err.message, column.path); }
+                            var value = "";
+                            if (result && result.length > 0) {
+                                if (column.type == "date" || column.type == "dateTime") {
+                                    const date = new Date(result[0]);
+                                    value = date.toLocaleDateString('nl-NL'); // + ' ' + date.toLocaleTimeString('nl-NL';
+                                }
+                                else {
+                                    if (value.length > 80) value = `${value.substring(0,80)}...`;    
+                                    value = result[0].replace(/\r?\n/g, "<br/>");
+                                }
+                            }
+                            return value;
+                        });
+                        // column 0 is altijd bron en set bron obv filename
+                        values[0] = file.substring(file.indexOf('-')+1, file.length-5);
+                        md_ui.push("<tr><td>+</td>");
+                        // add column values
+                        select.column.forEach((column,idx) => {
+                            if (column.name.charAt(0) != '+') {
+                                md_ui.push(`<td>${values[idx]}</td>`);
+                            }
+                        });
+                        // add uitklap values; only show if there is a value
+                        const colcount = select.column.filter(column => column.name.charAt(0) != '+').length;
+                        md_ui.push(`</tr><tr><td></td><td colspan=${colcount}>`);
+                        select.column.forEach((column,idx) => {
+                            if (column.name.charAt(0) == '+' && values[idx] != "") {
+                                md_ui.push(`<b>${column.name.slice(1)}</b><br/>${values[idx]}<br/>`);
+                            }
+                        });
+                        md_ui.push("</td></tr>");
+                    }
+                }
+            });
         });
     }
 }
