@@ -1,0 +1,75 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Vitalegegevens",
+  "title": "Vitalegegevens",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "effectiveDateTime",
+          "name": "Datum",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "*DatumTijd" } ]
+        },
+        {
+          "path": "iif(exists(code.text), code.text, code.coding.display)",
+          "name": "Meting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "MetingNaam" } ]
+        },
+        {
+          "path": "valueQuantity.value.toString()+' '+valueQuantity.unit",
+          "name": "Waarde",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
+        },
+        {
+          "path": "component.valueQuantity.value.select(toString()).join('/')+' '+component[0].valueQuantity.unit",
+          "name": "Components",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
+        },
+        {
+          "path": "performer.display",
+          "name": "Uitvoerder",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
+        },
+        {
+          "path": "status",
+          "name": "Status",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "method.text",
+          "name": "+Methode",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "*Type" } ]
+        },
+        {
+          "path": "bodySite.text",
+          "name": "+MeetLocatie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "MeetLocatie" } ]
+        },
+        {
+          "path": "code.coding[0].system+'#' + code.coding[0].code + ' ' + iif(exists(code.coding[0].display),code.coding[0].display,'')",
+          "name": "+Meting",
+          "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "MetingNaam" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Observation')"
+    }
+  ]
+}
