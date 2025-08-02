@@ -4,7 +4,8 @@
 
 |Versie|Datum|Changes|
 |---|---|---|
-|1.17.0-sprint63|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.16.0-sprint61...master)<br/>* Medicatie toegevoegd ivm medicatie vorm<br/>* vitale gegevens begin gemaakt|
+|1.18.0-sprint65|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.17.0-sprint64...master)|
+|1.17.0-sprint64|2-aug-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.16.0-sprint61...1.17.0-sprint64)<br/>* Medicatie toegevoegd ivm medicatie vorm<br/>* Vitale gegevens aanzet<br/>* |
 |1.16.0-sprint61|20-jun-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.15.0-sprint58...1.16.0-sprint61)<br/>* Mainly minor corrections and Sanday comparison start|
 |*sprint59,60*||*No changes*|
 |1.15.0-sprint58|12-mei-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.14.0-sprint56...1.15.0-sprint58)<br/>* Focus op Medicatie<br/>* Start Afspraken en Contacten|
