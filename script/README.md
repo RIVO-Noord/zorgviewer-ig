@@ -7,3 +7,6 @@ This script needs newer version (>=14) of node. See https://www.linode.com/docs/
 @> apt install nodejs
 @> npm install --save fhirpath
 ```
+
+Known limitations:
+* Add code to handle resolve in Bundles; currently looks for single resource examples

@@ -1,0 +1,42 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/VitalSign",
+    "name": "VitalSign",
+    "title": "VitalSign",
+    "status": "active",
+    "description": "Vitale gegevens",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Observation",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Observation.status",
+                "path": "Observation.status",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.code.text",
+                "path": "Observation.code.text",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.effectiveDateTime",
+                "path": "Observation.effective[x]",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.performer",
+                "path": "Observation.performer",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.value",
+                "path": "Observation.value[x]",
+                "mustSupport": true
+            }
+       ]
+    }
+}

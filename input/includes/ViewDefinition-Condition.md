@@ -20,13 +20,20 @@
 <td><samp>iif(exists(onsetPeriod), onsetPeriod.start,onsetDateTime)</samp></td>
 <td><code>Period</code> of <code>dateTime</code></td>
 <td>ProbleemBeginDatum</td>
-<td>Laat één datum zien als de <code>.onsetDateTime</code> of <code>.onsetPeriod</code> hetzelfde is​</td>
+<td>Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn</td>
 </tr>
 <tr>
 <td>Diagnose</td>
 <td><samp>code.text</samp></td>
 <td><code>string</code></td>
 <td>ProbleemNaam</td>
+<td></td>
+</tr>
+<tr>
+<td>Status</td>
+<td><samp>clinicalStatus</samp></td>
+<td><code>code</code></td>
+<td>ProbleemStatus</td>
 <td></td>
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>

@@ -28,7 +28,7 @@
           "tag": [ { "name": "Zib element", "value": "Gebruiksperiode::TijdsInterval/eindDatumTijd" } ]
         },
         {
-          "path": "medicationReference.display",
+          "path": "medication.display",
           "name": "Medicatie",
           "description": "",
           "type": "string",
@@ -48,10 +48,16 @@
           "tag": [ { "name": "Zib element", "value": "Gebruiksinstructie/Toedieningsweg" } ]
         },
         {
-          "path": "modifierExtension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType').valueCodeableConcept.coding.display",
-          "name": "Stop Type",
+          "path": "modifierExtension.where(url='http://nictiz.nl/fhir/StructureDefinition/zib-Medication-StopType').valueCodeableConcept.coding.display",
+          "name": "Stop type",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "StopType" } ]
+        },
+        {
+          "path": "medication.resolve().form.coding.display",
+          "name": "+Medicatie vorm",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Afgesprokengeneesmiddel::FarmaceutischProduct/FarmaceutischeVorm" } ]
         },
         {
           "path": "authoredOn",

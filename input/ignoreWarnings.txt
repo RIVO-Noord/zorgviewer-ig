@@ -1,4 +1,13 @@
 == Suppressed Messages ==
+
+# Accepted as is
+% which is experimental, but this structure is not labeled as experimental
+Reference to experimental CodeSystem % 
+Reference to draft CodeSystem %
+Unable to resolve resource with reference %
+The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
+The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId from FHIR version 4.0 is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[BackboneElement, ImplementationGuide.dependency]; this is a warning since contexts may be renamed between FHIR versions)
+
 # Publisher ran without terminology server (tx=n/a)
 Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/jurisdiction|3.0.2
 Unable to validate code without using server%
@@ -10,12 +19,6 @@ This element is not allowed by the profile http://hl7.org/fhir/StructureDefiniti
 The extension http://open.epic.com/FHIR/StructureDefinition/extension/%
 Constraint failed: nl-postal-code-pattern: 'Dutch postal code pattern 'nnnnAA''
 This element does not match any known slice defined in the profile http://nictiz.nl/fhir/StructureDefinition/zib-Problem|3.0.6 and slicing is CLOSED: Condition.onset.ofType(Period): Does not match slice 'onsetDateTime' (discriminator: ($this is dateTime))
-
-# Accepted as is
-% which is experimental, but this structure is not labeled as experimental
-Reference to experimental CodeSystem % 
-Reference to draft CodeSystem %
-Unable to resolve resource with reference %
 
 # Terminology server issue?
 Error performing tx3 operation 'validate-code: Cannot invoke "java.util.List.iterator()" because "headers" is null' (parameters = "")

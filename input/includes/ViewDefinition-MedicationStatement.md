@@ -31,7 +31,7 @@
 </tr>
 <tr>
 <td>Medicatie</td>
-<td><samp>medicationReference.display</samp></td>
+<td><samp>medication.display</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksproduct::FarmaceutischProduct</td>
 <td></td>
@@ -51,6 +51,13 @@
 <td></td>
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#b4c7e7">
+<td>+Medicatie vorm</td>
+<td><samp>medication.resolve().form.coding.display</samp></td>
+<td><code>string</code></td>
+<td>Gebruiksproduct::FarmaceutischProduct/FarmaceutischeVorm</td>
+<td></td>
+</tr>
 <tr style="background-color:#b4c7e7">
 <td>+Registratiedatum</td>
 <td><samp>dateAsserted</samp></td>

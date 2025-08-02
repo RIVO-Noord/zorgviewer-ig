@@ -12,11 +12,6 @@
 
 {% include ViewDefinition-Procedure.md %}
 
-### User-Interface Mockup
-
-Een schets van het scherm met labels en sortering informatie
-<div style="clear:both;"><img src="UI-Schets-Verrichtingen.png" class="figure-img img-responsive img-rounded center-block"></div>
-
 ### Codesystemen
 
 * [DHD Verrichtingenthesaurus, CBV en Zorgactiviteiten](https://trex.dhd.nl/)

@@ -16,11 +16,6 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 
 {% include ViewDefinition-Condition.md %}
 
-### User-Interface Mockup
-
-Een schets van het scherm met labels en sortering informatie
-<div style="clear:both;"><img src="UI-Schets-Problemen.png" class="figure-img img-responsive img-rounded center-block"></div>
-
 ### Zoeken naar codes
 
 * [DHD T-Rex](https://trex.dhd.nl/) - `system=http://snomed.info/sct`

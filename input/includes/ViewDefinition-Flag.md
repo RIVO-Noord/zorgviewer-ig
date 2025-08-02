@@ -24,7 +24,7 @@
 </tr>
 <tr>
 <td>Voor(1)</td>
-<td><samp>extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.reference.resolve().code.text</samp></td>
+<td><samp>extension.where('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.resolve().code.text</samp></td>
 <td><code>string</code></td>
 <td>Conditie::Probleem</td>
 <td>Als geen Voor(1), dan Voor(2), als geen Voor(2) dan Voor(3).<br/><i>De Condition resolve in de resultaat Bundle.</i></td>
