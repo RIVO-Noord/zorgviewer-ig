@@ -13,6 +13,20 @@
 <th>Status</th>
 </tr>
 <tr><td>+</td>
+<td>Chipsoft</td>
+<td>7-2-2013</td>
+<td>Blood pressure panel with all children optional</td>
+<td></td>
+<td></td>
+<td>108/56/73/73 mm[Hg]</td>
+<td></td>
+<td>registered</td>
+</tr><tr><td></td><td colspan=8>
+<b>Methode</b><br/>Niet-invasief<br/>
+<b>MeetLocatie</b><br/>Linker bovenarm<br/>
+<b>Meting</b><br/>http://loinc.org#85354-9 Blood pressure panel with all children optional<br/>
+</td></tr>
+<tr><td>+</td>
 <td>Epic</td>
 <td>3-8-2020</td>
 <td>Bloeddruk</td>

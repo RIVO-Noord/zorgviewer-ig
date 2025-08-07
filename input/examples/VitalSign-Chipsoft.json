@@ -1,0 +1,178 @@
+{
+    "resourceType": "Observation",
+    "id": "8130f2fc-1fc9-4304-875e-2e5630625cee",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure"
+        ]
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Observation resource for blood pressure:</h3><ul><li><p><strong>Patient:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Systolic blood pressure:</strong> &#x27;108 mm[Hg]&#x27;</p></li><li><p><strong>Diastolic blood pressure:</strong> &#x27;56 mm[Hg]&#x27;</p></li><li><p><strong>Average blood pressure:</strong> &#x27;73 mm[Hg]&#x27;</p></li><li><p><strong>Effective:</strong> &#x27;7-2-2013 08:53&#x2B;0100&#x27;</p></li><li><p><strong>Body site:</strong> &#x27;Left upper arm structure&#x27;</p></li><li><p><strong>Method:</strong> &#x27;Non-invasive&#x27;</p></li><li><p><strong>Position:</strong> &#x27;Sitting position&#x27;</p></li><li><p><strong>Status:</strong> &#x27;Registered&#x27;</p></li><li><p><strong>Code:</strong> &#x27;85354-9&#x27;</p></li></ul></div>"
+    },
+    "status": "registered",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/observation-category",
+                    "code": "vital-signs",
+                    "display": "Vital Signs"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "85354-9",
+                "display": "Blood pressure panel with all children optional"
+            }
+        ],
+        "text": "Blood pressure panel with all children optional"
+    },
+    "subject": {
+        "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+        "display": "Johan XXX_Helleman_Afblijven"
+    },
+    "effectiveDateTime": "2013-02-07T08:53:00+01:00",
+    "bodySite": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "368208006",
+                "display": "Left upper arm structure"
+            }
+        ],
+        "text": "Linker bovenarm"
+    },
+    "method": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "22762002",
+                "display": "Non-invasive"
+            }
+        ],
+        "text": "Niet-invasief"
+    },
+    "component": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "8480-6",
+                        "display": "Systolic blood pressure"
+                    }
+                ],
+                "text": "Systolic blood pressure"
+            },
+            "valueQuantity": {
+                "value": 108,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "8462-4",
+                        "display": "Diastolic blood pressure"
+                    }
+                ],
+                "text": "Diastolic blood pressure"
+            },
+            "valueQuantity": {
+                "value": 56,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "6797001",
+                        "display": "Mean blood pressure"
+                    }
+                ],
+                "text": "Mean blood pressure"
+            },
+            "valueQuantity": {
+                "value": 73,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "8478-0",
+                        "display": "Mean blood pressure"
+                    }
+                ],
+                "text": "Mean blood pressure"
+            },
+            "valueQuantity": {
+                "value": 73,
+                "unit": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "code": "mm[Hg]"
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "424724000",
+                        "display": "Body position for blood pressure measurement"
+                    }
+                ],
+                "text": "Body position for blood pressure measurement"
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "33586001",
+                        "display": "Sitting position"
+                    }
+                ],
+                "text": "Zittende positie"
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "8361-8",
+                        "display": "Body position with respect to gravity"
+                    }
+                ],
+                "text": "Body position with respect to gravity"
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "33586001",
+                        "display": "Sitting position"
+                    }
+                ],
+                "text": "Zittende positie"
+            }
+        }
+    ]
+}
