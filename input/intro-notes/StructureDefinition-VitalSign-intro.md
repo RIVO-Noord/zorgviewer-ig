@@ -11,7 +11,7 @@
 
 ### View Definition
 
-[ViewDefinition voor Alerts](ViewDefinition-Vitalegegevens.json)
+[ViewDefinition voor Vitale Gegevens](ViewDefinition-Vitalegegevens.json)
 
 {% include ViewDefinition-Vitalegegevens-ui.md %}
 

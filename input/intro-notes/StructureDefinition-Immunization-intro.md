@@ -6,7 +6,7 @@
 
 ### View Definition
 
-* [ViewDefinition voor Vaccinaties](ViewDefinition-Immunization.json)
+[ViewDefinition voor Vaccinaties](ViewDefinition-Immunization.json)
 
 {% include ViewDefinition-Immunization-ui.md %}
 
