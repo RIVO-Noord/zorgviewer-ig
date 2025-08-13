@@ -30,24 +30,10 @@
 <td></td>
 </tr>
 <tr>
-<td>Quantity</td>
-<td><samp>valueQuantity.value.toString()+' '+valueQuantity.unit</samp></td>
+<td>Value</td>
+<td><samp>valueQuantity.value.toString()+' '+valueQuantity.unit | valueString | valueCodeableConcept.coding.display</samp></td>
 <td><code>string</code></td>
-<td>*Waarde</td>
-<td></td>
-</tr>
-<tr>
-<td>String</td>
-<td><samp>valueString</samp></td>
-<td><code>string</code></td>
-<td>*Waarde</td>
-<td></td>
-</tr>
-<tr>
-<td>Coded</td>
-<td><samp>valueCodeableConcept.coding.display</samp></td>
-<td><code>string</code></td>
-<td>*Waarde</td>
+<td>Uitslag/Waarde</td>
 <td></td>
 </tr>
 <tr>

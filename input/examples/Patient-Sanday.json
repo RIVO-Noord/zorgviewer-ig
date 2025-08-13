@@ -1,0 +1,111 @@
+{
+    "resourceType": "Patient",
+    "id": "B211BE58-949E-4950-9FE7-410B4D944E6F",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+        ]
+    },
+    "identifier": [
+        {
+            "use": "official",
+            "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+            "value": "999911132"
+        }
+    ],
+    "name": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                    "valueCode": "NL1"
+                }
+            ],
+            "use": "official",
+            "text": "J. Xxx_cevat",
+            "family": "Xxx_cevat",
+            "_family": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                        "valueString": "Xxx_cevat"
+                    }
+                ]
+            },
+            "given": [
+                "J",
+                "J."
+            ],
+            "_given": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                            "valueString": "CL"
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                            "valueString": "IN"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "gender": "female",
+    "birthDate": "1964-07-25",
+    "address": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.1.11.190",
+                                "code": "HP",
+                                "display": "Primary Home"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "use": "home",
+            "line": [
+                "Knolweg 1001"
+            ],
+            "_line": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                            "valueString": "Knolweg"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                            "valueString": "1001"
+                        }
+                    ]
+                }
+            ],
+            "city": "Utrecht",
+            "postalCode": "9999 XX",
+            "country": "NL",
+            "_country": {
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification",
+                        "valueCoding": {
+                            "system": "urn:iso:std:iso:3166",
+                            "code": "NL"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

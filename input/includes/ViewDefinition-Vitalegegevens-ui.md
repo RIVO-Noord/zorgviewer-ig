@@ -6,9 +6,7 @@
 <th>Bron</th>
 <th>Datum</th>
 <th>Meting</th>
-<th>Quantity</th>
-<th>String</th>
-<th>Coded</th>
+<th>Value</th>
 <th>Components</th>
 <th>Uitvoerder</th>
 <th>Status</th>
@@ -20,10 +18,8 @@
 <td>183 cm</td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
 <td>registered</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8302-2 Body height<br/>
 </td></tr>
 <tr><td>+</td>
@@ -33,10 +29,8 @@
 <td>72 kg</td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
 <td>registered</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 </td></tr>
 <tr><td>+</td>
@@ -44,12 +38,10 @@
 <td>7-2-2013</td>
 <td>Blood pressure panel with all children optional</td>
 <td></td>
-<td></td>
-<td></td>
 <td>108/56/73/73 mm[Hg]</td>
 <td></td>
 <td>registered</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Methode</b><br/>Niet-invasief<br/>
 <b>MeetLocatie</b><br/>Linker bovenarm<br/>
 <b>Meting</b><br/>LOINC#85354-9 Blood pressure panel with all children optional<br/>
@@ -59,12 +51,10 @@
 <td>25-7-2025</td>
 <td>RR</td>
 <td></td>
-<td></td>
-<td></td>
 <td>112/63 mm[Hg]</td>
 <td>P Havelaar</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Methode</b><br/>Non-invasive<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 </td></tr>
@@ -73,12 +63,10 @@
 <td>24-7-2025</td>
 <td>RR</td>
 <td></td>
-<td></td>
-<td></td>
 <td>110/60 mm[Hg]</td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Methode</b><br/>Non-invasive<br/>
 <b>MeetLocatie</b><br/>Body Site<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
@@ -89,11 +77,9 @@
 <td>Temperatuur</td>
 <td>38 Cel</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8310-5 Body temperature<br/>
 </td></tr>
 <tr><td>+</td>
@@ -102,11 +88,9 @@
 <td>Temperatuur</td>
 <td>37 Cel</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8310-5 Body temperature<br/>
 </td></tr>
 <tr><td>+</td>
@@ -115,11 +99,9 @@
 <td>Temperatuur</td>
 <td>36.4 Cel</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8310-5 Body temperature<br/>
 </td></tr>
 <tr><td>+</td>
@@ -128,11 +110,9 @@
 <td>Polsfrequentie</td>
 <td>59 /min</td>
 <td></td>
-<td></td>
-<td></td>
 <td>P Havelaar</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 </td></tr>
 <tr><td>+</td>
@@ -141,11 +121,9 @@
 <td>Polsfrequentie</td>
 <td>58 /min</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 </td></tr>
 <tr><td>+</td>
@@ -154,11 +132,9 @@
 <td>Ademfreq.</td>
 <td>17 /min</td>
 <td></td>
-<td></td>
-<td></td>
 <td>P Havelaar</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 </td></tr>
 <tr><td>+</td>
@@ -167,11 +143,9 @@
 <td>Ademfreq.</td>
 <td>16 /min</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 </td></tr>
 <tr><td>+</td>
@@ -180,11 +154,9 @@
 <td>SpO2</td>
 <td>100 %</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#2708-6 Oxygen saturation in Arterial blood<br/>
 </td></tr>
 <tr><td>+</td>
@@ -193,11 +165,9 @@
 <td>SpO2</td>
 <td>99 %</td>
 <td></td>
-<td></td>
-<td></td>
 <td>P Havelaar</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#2708-6 Oxygen saturation in Arterial blood<br/>
 </td></tr>
 <tr><td>+</td>
@@ -206,11 +176,9 @@
 <td>SpO2</td>
 <td>98 %</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#2708-6 Oxygen saturation in Arterial blood<br/>
 </td></tr>
 <tr><td>+</td>
@@ -219,11 +187,9 @@
 <td>Lengte</td>
 <td>171 cm</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8302-2 Body height<br/>
 </td></tr>
 <tr><td>+</td>
@@ -232,11 +198,9 @@
 <td>Lengte</td>
 <td>172 cm</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8302-2 Body height<br/>
 </td></tr>
 <tr><td>+</td>
@@ -245,11 +209,9 @@
 <td>Lengte</td>
 <td>169 cm</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8302-2 Body height<br/>
 </td></tr>
 <tr><td>+</td>
@@ -258,11 +220,9 @@
 <td>Lengte</td>
 <td>170 cm</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8302-2 Body height<br/>
 </td></tr>
 <tr><td>+</td>
@@ -271,11 +231,9 @@
 <td>Gewicht</td>
 <td>71 kg</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 </td></tr>
 <tr><td>+</td>
@@ -284,11 +242,9 @@
 <td>Gewicht</td>
 <td>72 kg</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 </td></tr>
 <tr><td>+</td>
@@ -297,11 +253,9 @@
 <td>Gewicht</td>
 <td>69 kg</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 </td></tr>
 <tr><td>+</td>
@@ -310,11 +264,9 @@
 <td>Gewicht</td>
 <td>70 kg</td>
 <td></td>
-<td></td>
-<td></td>
 <td>User. Inpatient, Verpleegkundige</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 </td></tr>
 <tr><td>+</td>
@@ -322,12 +274,10 @@
 <td>3-8-2020</td>
 <td>Bloeddruk</td>
 <td></td>
-<td></td>
-<td></td>
 <td>100/60 mm[Hg]</td>
 <td>C Ooms</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#85354-9 Blood pressure panel with all children optional<br/>
 </td></tr>
 <tr><td>+</td>
@@ -337,10 +287,8 @@
 <td>81 kg</td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
 </td></tr>
 <tr><td>+</td>
@@ -350,10 +298,8 @@
 <td>1.81 m</td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>NHG45#560 lengte patiënt<br/>
 </td></tr>
 <tr><td>+</td>
@@ -363,10 +309,8 @@
 <td>24.7 kg/m2</td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>NHG45#1272 Quetelet-index (BMI) patiënt<br/>
 </td></tr>
 <tr><td>+</td>
@@ -376,23 +320,19 @@
 <td>37.3 °C</td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>NHG45#1357 temperatuur patiënt<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday-Bundle</td>
 <td>7-8-2025</td>
 <td>roken</td>
-<td></td>
-<td></td>
 <td>nooit</td>
 <td></td>
 <td></td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>NHG45#1739 roken<br/>
 </td></tr>
 <tr><td>+</td>
@@ -402,10 +342,8 @@
 <td>80 mmHg</td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>NHG45#1740 diastolische bloeddruk<br/>
 </td></tr>
 <tr><td>+</td>
@@ -415,10 +353,8 @@
 <td>125 mmHg</td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>NHG45#1744 systolische bloeddruk<br/>
 </td></tr>
 <tr><td>+</td>
@@ -428,23 +364,19 @@
 <td>2 m2</td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>NHG45#3017 lichaamsoppervlakte<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
 <td>21-3-2024</td>
 <td>hartfrequentie (thuismeting)</td>
-<td></td>
 <td>80 aantal/min</td>
 <td></td>
 <td></td>
-<td></td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>NHG45#3963 hartfrequentie (thuismeting)<br/>
 </td></tr>
 <tr><td>+</td>
@@ -453,11 +385,9 @@
 <td>Temperatuur</td>
 <td>38 Cel</td>
 <td></td>
-<td></td>
-<td></td>
 <td>S Brouwer</td>
 <td>final</td>
-</tr><tr><td></td><td colspan=9>
+</tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8310-5 Body temperature<br/>
 </td></tr>
 </tbody>

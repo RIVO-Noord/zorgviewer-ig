@@ -26,22 +26,10 @@
           "tag": [ { "name": "Zib element", "value": "MetingNaam" } ]
         },
         {
-          "path": "valueQuantity.value.toString()+' '+valueQuantity.unit",
-          "name": "Quantity",
+          "path": "valueQuantity.value.toString()+' '+valueQuantity.unit | valueString | valueCodeableConcept.coding.display",
+          "name": "Value",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
-        },
-        {
-          "path": "valueString",
-          "name": "String",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
-        },
-        {
-          "path": "valueCodeableConcept.coding.display",
-          "name": "Coded",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
+          "tag": [ { "name": "Zib element", "value": "Uitslag/Waarde" } ]
         },
         {
           "path": "component.valueQuantity.value.select(toString()).join('/')+' '+component[0].valueQuantity.unit",
