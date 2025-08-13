@@ -162,9 +162,9 @@ Er zijn meerdere niveau's van autorisatie, namelijk:
 * [Epic Interconnect](https://fhir.epic.com) via Intersystems Iris Healthshare
 * [Chipsoft Zorgplatform](https://developer.zorgplatform.online) 
 * [Topicus VIPlive](https://viplive.nl/over-ons/viplive-koppelen-met-systemen)
+* Nexus Cloud-Connect
 * XDS-NN met een FHIR API volgens de IG (e.g. Documenten)
 * Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan ontsluiten
-* Nexus via Founda
 
 #### Behandelplan
 

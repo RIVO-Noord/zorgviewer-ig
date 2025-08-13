@@ -44,6 +44,13 @@
 <td></td>
 </tr>
 <tr>
+<td>Coded</td>
+<td><samp>valueCodeableConcept.coding.display</samp></td>
+<td><code>string</code></td>
+<td>*Waarde</td>
+<td></td>
+</tr>
+<tr>
 <td>Components</td>
 <td><samp>component.valueQuantity.value.select(toString()).join('/')+' '+component[0].valueQuantity.unit</samp></td>
 <td><code>string</code></td>
@@ -81,7 +88,14 @@
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+Meting</td>
-<td><samp>code.coding[0].system+'#' + code.coding[0].code + ' ' + iif(exists(code.coding[0].display),code.coding[0].display,'')</samp></td>
+<td><samp>code.coding.where(system='http://loinc.org').select('LOINC#' + code + ' ' + iif(exists(display),display,''))</samp></td>
+<td><code>string</code></td>
+<td>MetingNaam</td>
+<td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code></td>
+</tr>
+<tr style="background-color:#b4c7e7">
+<td>+Meting</td>
+<td><samp>code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').select('NHG45#' + code + ' ' + iif(exists(display),display,''))</samp></td>
 <td><code>string</code></td>
 <td>MetingNaam</td>
 <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code></td>
