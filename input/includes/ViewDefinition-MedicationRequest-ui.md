@@ -16,7 +16,7 @@
 <td>15-8-2016</td>
 <td>14-9-2016</td>
 <td>METOCLOPRAMIDE ZETPIL 10MG</td>
-<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alcohol<br/>Kan het reactievermogen verminderen<br/>Niet langer dan 5 dagen achtereen gebr..  &#9432;</td>
+<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met...</td>
 <td>RECTAAL</td>
 <td>Definitief</td>
 </tr><tr><td></td><td colspan=7>
@@ -47,6 +47,17 @@
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>3-10-2023<br/>
 <b>Voorschrijver</b><br/>Aalders, JCA (CAR)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td></td>
+<td></td>
+<td>PANTOPRAZOL TABLET MSR 40MG</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>6-8-2025<br/>
 </td></tr>
 </tbody>
 </table>

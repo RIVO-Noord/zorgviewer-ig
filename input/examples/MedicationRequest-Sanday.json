@@ -1,0 +1,95 @@
+{
+    "resourceType": "Bundle",
+    "id": "19c74840-1ae3-4d6a-9585-802ea27e31d2",
+    "meta": {
+        "lastUpdated": "2025-08-13T09:06:20.658+00:00"
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "https://api-acc.sanday.com/gp-data-service/r4/MedicationRequest?_include=MedicationRequest%3Amedication&category=http%3A%2F%2Fsnomed.info%2Fsct%7C16076005&patient=B211BE58-949E-4950-9FE7-410B4D944E6F"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "https://api-acc.sanday.com/gp-data-service/r4/MedicationRequest/238ea567-a527-4c50-92ca-4b16df5e9027",
+            "resource": {
+                "resourceType": "MedicationRequest",
+                "id": "238ea567-a527-4c50-92ca-4b16df5e9027",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/mp-MedicationAgreement"
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/ext-RenderedDosageInstruction",
+                        "valueString": "2 maal per dag 1 tablet;1 TABLET 1 UUR VOOR DE MAALTIJD"
+                    },
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period",
+                        "valuePeriod": {
+                            "start": "2025-08-07",
+                            "end": "2025-09-20"
+                        }
+                    }
+                ],
+                "status": "active",
+                "intent": "order",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "16076005",
+                                "display": "Medicatieafspraak"
+                            }
+                        ]
+                    }
+                ],
+                "medicationReference": {
+                    "reference": "Medication/238ea567-a527-4c50-92ca-4b16df5e9027",
+                    "display": "PANTOPRAZOL TABLET MSR 40MG"
+                },
+                "subject": {
+                    "reference": "Patient/B211BE58-949E-4950-9FE7-410B4D944E6F",
+                    "type": "Patient",
+                    "identifier": {
+                        "value": "B211BE58-949E-4950-9FE7-410B4D944E6F"
+                    },
+                    "display": "J. Xxx_cevat"
+                },
+                "authoredOn": "2025-08-06T22:00:00+00:00",
+                "requester": {
+                    "reference": "Practitioner/1e333948-ca59-4586-af71-3932236111d5",
+                    "type": "Practitioner",
+                    "identifier": {
+                        "value": "1e333948-ca59-4586-af71-3932236111d5"
+                    },
+                    "display": "Jenneke van der Vecht"
+                }
+            }
+        },
+        {
+            "fullUrl": "https://api-acc.sanday.com/gp-data-service/r4/Medication/238ea567-a527-4c50-92ca-4b16df5e9027",
+            "resource": {
+                "resourceType": "Medication",
+                "id": "238ea567-a527-4c50-92ca-4b16df5e9027",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.4.10",
+                            "code": "43044",
+                            "display": "PANTOPRAZOL TABLET MSR 40MG"
+                        }
+                    ]
+                }
+            },
+            "search": {
+                "mode": "include"
+            }
+        }
+    ]
+}

@@ -65,5 +65,21 @@
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=13>
 </td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>6-8-2025</td>
+<td>HUISSTOFMIJTENALLERGEEN</td>
+<td>opmerking bij overgevoeligheid</td>
+<td>medication</td>
+<td></td>
+<td>low</td>
+<td></td>
+<td></td>
+<td></td>
+<td>active</td>
+<td></td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=13>
+</td></tr>
 </tbody>
 </table>

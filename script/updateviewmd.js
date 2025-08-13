@@ -24,9 +24,19 @@ function resolveFn(inputs) {
     fs.readdirSync(examplesPath).forEach(file => {
         if (!file.endsWith(".json")) return;
         const example_filePath = path.join(examplesPath, file);
-        const example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
-        if (example.id === id) {
-            resolved = example;
+        const raw_example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
+
+        const examples = [];
+        // If this is a Bundle split into individual resources
+        if (raw_example.resourceType == "Bundle") {
+            raw_example.entry.forEach(entry => examples.push(entry.resource));
+        }
+        else {
+            examples.push(raw_example);
+        }
+        var match = examples.find(example => example.id === id);
+        if (match) {
+            resolved = match;
         }
     });
     if (!resolved) {
@@ -192,9 +202,16 @@ function doExampleRows(select, md_ui) {
                                     const date = new Date(result[0]);
                                     value = date.toLocaleDateString('nl-NL'); // + ' ' + date.toLocaleTimeString('nl-NL';
                                 }
+                                else if (column.type == "code") {
+                                    value = result[0];
+                                    // check if this is a CodeableConcept; sometimes w/ STU3 vs R4
+                                    if (typeof(result[0]) == "object") {
+                                        value = result[0].coding[0].display;
+                                    }
+                                }
                                 else {
-                                    if (value.length > 80) value = `${value.substring(0,80)}...`;    
                                     value = result[0].replace(/\r?\n/g, "<br/>");
+                                    if (value.length > 80) value = `${value.substring(0,80)}...`;    
                                 }
                             }
                             return value;
