@@ -14,7 +14,7 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "iif(exists(onsetPeriod), onsetPeriod.start,onsetDateTime)",
+          "path": "onsetPeriod.start | onsetDateTime",
           "name": "Datum",
           "description": "Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn",
           "type": "Period/dateTime",
@@ -34,7 +34,7 @@
           "tag": [ { "name": "Zib element", "value": "ProbleemStatus" } ]
         },
         {
-          "path": "code.coding[0].system+'#' + code.coding[0].code + ' ' + iif(exists(code.coding[0].display),code.coding[0].display,'')",
+          "path": "code.coding[0].select(system+'#' + code + ' ' + iif(exists(display),display,''))",
           "name": "+Diagnose",
           "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
           "type": "string",

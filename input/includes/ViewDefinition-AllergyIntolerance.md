@@ -17,7 +17,7 @@
 </tr>
 <tr>
 <td>Datum</td>
-<td><samp>iif(exists(onsetPeriod.start),onsetPeriod.start,onsetDateTime)</samp></td>
+<td><samp>onsetPeriod.start | onsetDateTime</samp></td>
 <td><code>dateTime</code></td>
 <td>StartDateTime</td>
 <td></td>

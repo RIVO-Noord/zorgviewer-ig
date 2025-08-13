@@ -62,14 +62,14 @@
           "tag": [ { "name": "Zib element", "value": "MeetLocatie" } ]
         },
         {
-          "path": "code.coding.where(system='http://loinc.org').select('LOINC#' + code + ' ' + iif(exists(display),display,''))",
+          "path": "code.coding.where(system='http://loinc.org').select('LOINC#' + code + ' ' + display)",
           "name": "+Meting",
           "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "MetingNaam" } ]
         },
         {
-          "path": "code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').select('NHG45#' + code + ' ' + iif(exists(display),display,''))",
+          "path": "code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').select('NHG45#' + code + ' ' + display)",
           "name": "+Meting",
           "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
           "type": "string",
