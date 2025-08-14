@@ -49,6 +49,24 @@
 <b>Toelichting</b><br/>Gevallen op kunstijsbaan<br/>
 </td></tr>
 <tr><td>+</td>
+<td>Sanday-Bundle</td>
+<td>2025-08-07</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>http://hl7.org/fhir/sid/icpc-1-nl#D89 Hernia inguinalis<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday-Bundle</td>
+<td>2025-04-01</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>http://hl7.org/fhir/sid/icpc-1-nl#R21.01 Keelpijn<br/>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft-OTH</td>
 <td>2019-04-15</td>
 <td>BRMO: Bewezen dragerschap</td>
