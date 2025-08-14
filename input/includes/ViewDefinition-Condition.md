@@ -24,7 +24,7 @@
 </tr>
 <tr>
 <td>Diagnose</td>
-<td><samp>code.text</samp></td>
+<td><samp>code.text | code.coding[0].display</samp></td>
 <td><code>string</code></td>
 <td>ProbleemNaam</td>
 <td></td>

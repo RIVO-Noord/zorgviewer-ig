@@ -20,7 +20,7 @@
           "tag": [ { "name": "Zib element", "value": "StartDateTime" } ]
         },
         {
-          "path": "iif(exists(code.text),code.text,code.coding.display)",
+          "path": "code.text | code.coding[0].display",
           "name": "Stof",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "CausativeAgent" } ]

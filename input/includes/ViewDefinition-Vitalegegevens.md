@@ -24,7 +24,7 @@
 </tr>
 <tr>
 <td>Meting</td>
-<td><samp>iif(exists(code.text), code.text, code.coding.display)</samp></td>
+<td><samp>code.text | code.coding[0].display</samp></td>
 <td><code>string</code></td>
 <td>MetingNaam</td>
 <td></td>

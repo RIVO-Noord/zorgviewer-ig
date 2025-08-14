@@ -41,7 +41,7 @@
 <tr><td>+</td>
 <td>Nexus</td>
 <td>2001</td>
-<td></td>
+<td>fractuur van pols</td>
 <td>inactive</td>
 <td>inactive</td>
 </tr><tr><td></td><td colspan=5>
@@ -51,7 +51,7 @@
 <tr><td>+</td>
 <td>Sanday-Bundle</td>
 <td>2025-08-07</td>
-<td></td>
+<td>Hernia inguinalis</td>
 <td></td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
@@ -60,7 +60,7 @@
 <tr><td>+</td>
 <td>Sanday-Bundle</td>
 <td>2025-04-01</td>
-<td></td>
+<td>Keelpijn</td>
 <td></td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
