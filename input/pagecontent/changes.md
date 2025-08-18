@@ -4,7 +4,7 @@
 
 |Versie|Datum|Changes|
 |---|---|---|
-|1.19.0-sprint66|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.18.0-sprint64...master)|
+|1.19.0-sprint66|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.18.0-sprint65...master)|
 |1.18.0-sprint65|18-aug-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.17.0-sprint64...1.18.0-sprint65)<br/>* Sanday (van alles) en Chipsoft (vitale gegevens) voorbeelden toegevoegd<br/>* Mockup generatie script kan nu omgaan met Bundled voorbeelden<br/>* Kleinere optimalisaties en Nexus foutje|
 |1.17.0-sprint64|2-aug-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.16.0-sprint61...1.17.0-sprint64)<br/>* Medicatie toegevoegd ivm medicatie vorm<br/>* Vitale gegevens aanzet|
 |1.16.0-sprint61|20-jun-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.15.0-sprint58...1.16.0-sprint61)<br/>* Mainly minor corrections and Sanday comparison start|
