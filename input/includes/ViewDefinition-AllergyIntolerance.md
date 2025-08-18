@@ -17,14 +17,14 @@
 </tr>
 <tr>
 <td>Datum</td>
-<td><samp>iif(exists(onsetPeriod.start),onsetPeriod.start,onsetDateTime)</samp></td>
+<td><samp>onsetPeriod.start | onsetDateTime</samp></td>
 <td><code>dateTime</code></td>
 <td>StartDateTime</td>
 <td></td>
 </tr>
 <tr>
 <td>Stof</td>
-<td><samp>iif(exists(code.text),code.text,code.coding.display)</samp></td>
+<td><samp>code.text | code.coding[0].display</samp></td>
 <td><code>string</code></td>
 <td>CausativeAgent</td>
 <td></td>

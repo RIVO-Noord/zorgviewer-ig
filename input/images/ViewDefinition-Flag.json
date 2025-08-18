@@ -28,7 +28,7 @@
           "tag": [ { "name": "Zib element", "value": "Conditie::Probleem" } ]
         },
         {
-          "path": "iif(exists(code.text), code.text, code.coding.display)",
+          "path": "code.text | code.coding[0].display",
           "name": "Voor(2)",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "AlertNaam" } ]

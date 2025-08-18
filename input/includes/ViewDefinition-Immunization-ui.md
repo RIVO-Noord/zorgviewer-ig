@@ -23,24 +23,24 @@
 </tr><tr><td></td><td colspan=4>
 </td></tr>
 <tr><td>+</td>
-<td>Epic2</td>
+<td>Nexus</td>
+<td>5-3-1999</td>
+<td>hepatitis-a-vaccin</td>
+<td>Bezoek aan Guatemala.</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
+<td>Epic</td>
 <td>29-7-2019</td>
 <td>Bof-/Mazelen-/Rubellavaccin</td>
 <td></td>
 </tr><tr><td></td><td colspan=4>
 </td></tr>
 <tr><td>+</td>
-<td>Epic3</td>
+<td>Epic</td>
 <td>25-3-2021</td>
 <td>COVID-19 Vaccin (Spikevax, Moderna)</td>
 <td></td>
-</tr><tr><td></td><td colspan=4>
-</td></tr>
-<tr><td>+</td>
-<td>Nexus</td>
-<td>5-3-1999</td>
-<td>hepatitis-a-vaccin</td>
-<td>Bezoek aan Guatemala.</td>
 </tr><tr><td></td><td colspan=4>
 </td></tr>
 </tbody>

@@ -20,22 +20,16 @@
           "tag": [ { "name": "Zib element", "value": "*DatumTijd" } ]
         },
         {
-          "path": "iif(exists(code.text), code.text, code.coding.display)",
+          "path": "code.text | code.coding[0].display",
           "name": "Meting",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "MetingNaam" } ]
         },
         {
-          "path": "valueQuantity.value.toString()+' '+valueQuantity.unit",
-          "name": "Quantity",
+          "path": "valueQuantity.value.toString()+' '+valueQuantity.unit | valueString | valueCodeableConcept.coding.display",
+          "name": "Value",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
-        },
-        {
-          "path": "valueString",
-          "name": "String",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
+          "tag": [ { "name": "Zib element", "value": "Uitslag/Waarde" } ]
         },
         {
           "path": "component.valueQuantity.value.select(toString()).join('/')+' '+component[0].valueQuantity.unit",
@@ -68,7 +62,14 @@
           "tag": [ { "name": "Zib element", "value": "MeetLocatie" } ]
         },
         {
-          "path": "code.coding[0].system+'#' + code.coding[0].code + ' ' + iif(exists(code.coding[0].display),code.coding[0].display,'')",
+          "path": "code.coding.where(system='http://loinc.org').select('LOINC#' + code + ' ' + display)",
+          "name": "+Meting",
+          "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "MetingNaam" } ]
+        },
+        {
+          "path": "code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').select('NHG45#' + code + ' ' + display)",
           "name": "+Meting",
           "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
           "type": "string",

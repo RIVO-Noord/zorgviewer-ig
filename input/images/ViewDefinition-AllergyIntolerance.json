@@ -14,13 +14,13 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "iif(exists(onsetPeriod.start),onsetPeriod.start,onsetDateTime)",
+          "path": "onsetPeriod.start | onsetDateTime",
           "name": "Datum",
           "type": "dateTime",
           "tag": [ { "name": "Zib element", "value": "StartDateTime" } ]
         },
         {
-          "path": "iif(exists(code.text),code.text,code.coding.display)",
+          "path": "code.text | code.coding[0].display",
           "name": "Stof",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "CausativeAgent" } ]

@@ -1,0 +1,97 @@
+{
+    "resourceType": "Bundle",
+    "id": "d9c8899b-210f-46ae-b336-e6e58fb73647",
+    "meta": {
+        "lastUpdated": "2025-08-13T09:04:28.225+00:00"
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "https://api-acc.sanday.com/gp-data-service/r4/AllergyIntolerance?category=medication&patient=B211BE58-949E-4950-9FE7-410B4D944E6F"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "https://api-acc.sanday.com/gp-data-service/r4/AllergyIntolerance/772f9cce-eaf7-404e-9085-904e98fab2b3",
+            "resource": {
+                "resourceType": "AllergyIntolerance",
+                "id": "772f9cce-eaf7-404e-9085-904e98fab2b3",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/nl-core-AllergyIntolerance"
+                    ]
+                },
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.4.642.3.1372",
+                            "code": "active",
+                            "display": "active"
+                        }
+                    ]
+                },
+                "verificationStatus": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.4.642.1.1371",
+                            "code": "confirmed",
+                            "display": "confirmed"
+                        }
+                    ]
+                },
+                "category": [
+                    "medication"
+                ],
+                "_category": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification",
+                                "valueCoding": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "419511003",
+                                    "display": "Neiging tot ongewenste reactie op geneesmiddel"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "criticality": "low",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.4.1.750",
+                            "code": "99554",
+                            "display": "HUISSTOFMIJTENALLERGEEN"
+                        }
+                    ],
+                    "text": "HUISSTOFMIJTENALLERGEEN"
+                },
+                "patient": {
+                    "reference": "Patient/B211BE58-949E-4950-9FE7-410B4D944E6F",
+                    "type": "Patient",
+                    "identifier": {
+                        "value": "B211BE58-949E-4950-9FE7-410B4D944E6F"
+                    },
+                    "display": "J. Xxx_cevat"
+                },
+                "onsetDateTime": "2025-08-06T22:00:00+00:00",
+                "recorder": {
+                    "reference": "Practitioner/1e06e37e-a2c5-42fe-ab09-bf484b47d8d4",
+                    "type": "Practitioner",
+                    "identifier": {
+                        "value": "1e06e37e-a2c5-42fe-ab09-bf484b47d8d4"
+                    },
+                    "display": "J van der Vecht"
+                },
+                "note": [
+                    {
+                        "text": "opmerking bij overgevoeligheid"
+                    }
+                ]
+            }
+        }
+    ]
+}

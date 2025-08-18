@@ -3,7 +3,7 @@
   "id": "hl7.fhir.nl.zorgviewer",
   "language": "en-US",
   "url": "http://fhir.hl7.nl/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer",
-  "version": "1.17.0",
+  "version": "1.18.0",
   "name": "ZorgviewerIG",
   "title": "RIVO-Noord Zorgviewer Implementation Guide",
   "status": "active",
@@ -522,6 +522,14 @@
       },
       {
         "reference": {
+          "reference": "MedicationRequest/MedicationRequest-Nexus"
+        },
+        "name": "Nexus MedicationRequest Example",
+        "description": "Dit is een MedicationRequest voorbeeld uit Nexus.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationRequest"
+      },
+      {
+        "reference": {
           "reference": "MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923"
         },
         "name": "Chipsoft MedicationRequest Example",
@@ -558,6 +566,14 @@
         },
         "name": "Sanday VitalSign Example",
         "description": "Dit is een VitalSign voorbeeld uit Sanday.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/VitalSign"
+      },
+      {
+        "reference": {
+          "reference": "Observation/8130f2fc-1fc9-4304-875e-2e5630625cee"
+        },
+        "name": "Chipsoft VitalSign Example",
+        "description": "Dit is een VitalSign voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/VitalSign"
       }
     ],
@@ -742,7 +758,7 @@
       },
       {
         "code": "version-comparison-master",
-        "value": "1.16.0"
+        "value": "1.17.0"
       }
     ]
   }

@@ -75,7 +75,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 ```
 1. (optioneel) bouw lokaal de IG en check output - zie "To build the IG"
 
-### Tag een Release
+### Afhechten van een Release
 
 1. Werk de volgende files bij: 
   1. ``input/pagecontent/changes.md`` (github links, comparison version en change bullets)
@@ -83,7 +83,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
   1. ``fhir.hl7.nl/package-list.json`` (datum, versie, IG publisher versie en upload naar fhir.hl7.nl/zorgviewer; used for version comparison!)
   1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
   1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
-1. ``> git commit -a -m "prepare for publication"; git push``
+1. ``> git commit -a -m "afhechten release"; git push``
 1. Create tag "1.M.R-sprintX" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
   1. Tags
   1. Releases
@@ -95,7 +95,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
   1. Vink aan: Set as the latest release
   1. Publish release
 
-### Merge release naar Snapshot
+### Vrijgeven van de laatste Release
 
 1. Publish naar implementatiegids.zorgviewer.nl via snapshot branch
 ```

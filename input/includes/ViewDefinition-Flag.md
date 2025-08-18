@@ -31,7 +31,7 @@
 </tr>
 <tr>
 <td>Voor(2)</td>
-<td><samp>iif(exists(code.text), code.text, code.coding.display)</samp></td>
+<td><samp>code.text | code.coding[0].display</samp></td>
 <td><code>string</code></td>
 <td>AlertNaam</td>
 <td></td>
