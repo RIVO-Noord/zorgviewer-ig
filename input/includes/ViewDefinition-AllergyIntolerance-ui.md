@@ -8,9 +8,7 @@
 <th>Stof</th>
 <th>Toelichting</th>
 <th>Categorie</th>
-<th>CategorieCS</th>
 <th>Ernst(1)</th>
-<th>Ernst(1)CS</th>
 <th>Ernst(2)</th>
 <th>Reacties</th>
 <th>Status</th>
@@ -22,16 +20,14 @@
 <td>12-11-2019</td>
 <td>ALLE NSAID'S (INCL. SALICYLATEN)</td>
 <td></td>
-<td>medication</td>
 <td>Medicijn</td>
-<td>low</td>
 <td>Licht</td>
 <td></td>
 <td>Huiduitslag</td>
 <td>active</td>
 <td>Actief</td>
 <td>unconfirmed</td>
-</tr><tr><td></td><td colspan=13>
+</tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -40,14 +36,12 @@
 <td></td>
 <td>food</td>
 <td></td>
-<td></td>
-<td></td>
 <td>moderate</td>
 <td>Erythrodermie</td>
 <td>active</td>
 <td></td>
 <td>confirmed</td>
-</tr><tr><td></td><td colspan=13>
+</tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
@@ -55,15 +49,13 @@
 <td>Bijengif</td>
 <td></td>
 <td></td>
-<td></td>
 <td>high</td>
-<td></td>
 <td>severe</td>
 <td></td>
 <td>active</td>
 <td></td>
 <td>confirmed</td>
-</tr><tr><td></td><td colspan=13>
+</tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -71,15 +63,13 @@
 <td>HUISSTOFMIJTENALLERGEEN</td>
 <td>opmerking bij overgevoeligheid</td>
 <td>medication</td>
-<td></td>
 <td>low</td>
-<td></td>
 <td></td>
 <td></td>
 <td>active</td>
 <td></td>
 <td>confirmed</td>
-</tr><tr><td></td><td colspan=13>
+</tr><tr><td></td><td colspan=11>
 </td></tr>
 </tbody>
 </table>

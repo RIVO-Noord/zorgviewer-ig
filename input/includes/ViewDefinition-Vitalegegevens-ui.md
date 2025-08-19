@@ -48,6 +48,45 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic-Bundle</td>
+<td>14-8-2025</td>
+<td>RR</td>
+<td></td>
+<td>116/67 mm[Hg]</td>
+<td>User. Inpatient, Verpleegkundige</td>
+<td>amended</td>
+</tr><tr><td></td><td colspan=7>
+<b>Methode</b><br/>Non-invasive<br/>
+<b>MeetLocatie</b><br/>Body Site<br/>
+<b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-Bundle</td>
+<td>13-8-2025</td>
+<td>RR</td>
+<td></td>
+<td>114/65 mm[Hg]</td>
+<td>User. Inpatient, Verpleegkundige</td>
+<td>final</td>
+</tr><tr><td></td><td colspan=7>
+<b>Methode</b><br/>Non-invasive<br/>
+<b>MeetLocatie</b><br/>Body Site<br/>
+<b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-Bundle</td>
+<td>12-8-2025</td>
+<td>RR</td>
+<td></td>
+<td>113/64 mm[Hg]</td>
+<td>User. Inpatient, Verpleegkundige</td>
+<td>final</td>
+</tr><tr><td></td><td colspan=7>
+<b>Methode</b><br/>Non-invasive<br/>
+<b>MeetLocatie</b><br/>Body Site<br/>
+<b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-Bundle</td>
 <td>25-7-2025</td>
 <td>RR</td>
 <td></td>
@@ -103,6 +142,39 @@
 <td>final</td>
 </tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8310-5 Body temperature<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-Bundle</td>
+<td>14-8-2025</td>
+<td>Polsfrequentie</td>
+<td>61 /min</td>
+<td></td>
+<td>User. Inpatient, Verpleegkundige</td>
+<td>final</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-Bundle</td>
+<td>13-8-2025</td>
+<td>Polsfrequentie</td>
+<td>60 /min</td>
+<td></td>
+<td>User. Inpatient, Verpleegkundige</td>
+<td>final</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-Bundle</td>
+<td>12-8-2025</td>
+<td>Polsfrequentie</td>
+<td>62 /min</td>
+<td></td>
+<td>User. Inpatient, Verpleegkundige</td>
+<td>final</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic-Bundle</td>

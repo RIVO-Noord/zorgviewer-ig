@@ -38,28 +38,14 @@
 </tr>
 <tr>
 <td>Categorie</td>
-<td><samp>category.join(',')</samp></td>
+<td><samp>category.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text | category.join(',')</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
 <td>Meerdere opties die tegelijk getoond kunnen worden</td>
 </tr>
 <tr>
-<td>CategorieCS</td>
-<td><samp>category.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text</samp></td>
-<td><code>code</code></td>
-<td>nvt</td>
-<td></td>
-</tr>
-<tr>
 <td>Ernst(1)</td>
-<td><samp>criticality</samp></td>
-<td><code>code</code></td>
-<td>MateVanKritiek</td>
-<td></td>
-</tr>
-<tr>
-<td>Ernst(1)CS</td>
-<td><samp>criticality.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text</samp></td>
+<td><samp>criticality.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text | criticality</samp></td>
 <td><code>code</code></td>
 <td>MateVanKritiek</td>
 <td></td>
@@ -83,14 +69,14 @@
 <td><samp>clinicalStatus</samp></td>
 <td><code>code</code></td>
 <td>AllergieStatus</td>
-<td>‘Actief’, ‘Niet meer aanwezig’, ‘Achterhaald’. ‘Foutief’ status wordt niet getoond in de Zorgviewer (wordt uitgefilterd). Indien geen extensie aanwezig, dan worden de waarden als volgt gemapped: Active -> Actief; InActive -> Achterhaald; Resolved -> Niet meer aanwezig</td>
+<td><code>Actief</code>, <code>Niet meer aanwezig</code>, <code>Achterhaald</code> en <code>Foutief</code> status wordt niet getoond in de Zorgviewer (wordt uitgefilterd). Indien geen extensie aanwezig, dan worden de waarden als volgt gemapped: <code>active</code> -> <code>Actief</code>; <code>inactive</code> -> <code>Achterhaald</code>; <code>resolved</code> -> <code>Niet meer aanwezig</code></td>
 </tr>
 <tr>
 <td>StatusCS</td>
 <td><samp>clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text</samp></td>
 <td><code>code</code></td>
 <td>AllergieStatus</td>
-<td>Zie AllergieStatus</td>
+<td>Zie Status</td>
 </tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">

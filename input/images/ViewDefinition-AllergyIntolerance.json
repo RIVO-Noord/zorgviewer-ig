@@ -32,30 +32,15 @@
           "tag": [ { "name": "Zib element", "value": "Comment" } ]
         },
         {
-          "path": "category.join(',')",
+          "path": "category.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text | category.join(',')",
           "name": "Categorie",
           "description": "Meerdere opties die tegelijk getoond kunnen worden",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "category.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
-          "name": "CategorieCS",
-          "description": "",
-          "type": "code",
-          "tag": [ { "name": "Zib element", "value": "nvt" } ]
-        },
-        {
-          "path": "criticality",
+          "path": "criticality.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text | criticality",
           "name": "Ernst(1)",
-          "description": "",
-          "type": "code",
-          "tag": [ 
-            { "name": "Zib element", "value": "MateVanKritiek" } ]
-        },
-        {
-          "path": "criticality.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
-          "name": "Ernst(1)CS",
           "description": "",
           "type": "code",
           "tag": [ 
@@ -78,14 +63,14 @@
         {
           "path": "clinicalStatus",
           "name": "Status",
-          "description": "‘Actief’, ‘Niet meer aanwezig’, ‘Achterhaald’. ‘Foutief’ status wordt niet getoond in de Zorgviewer (wordt uitgefilterd). Indien geen extensie aanwezig, dan worden de waarden als volgt gemapped: Active -> Actief; InActive -> Achterhaald; Resolved -> Niet meer aanwezig",
+          "description": "<code>Actief</code>, <code>Niet meer aanwezig</code>, <code>Achterhaald</code> en <code>Foutief</code> status wordt niet getoond in de Zorgviewer (wordt uitgefilterd). Indien geen extensie aanwezig, dan worden de waarden als volgt gemapped: <code>active</code> -> <code>Actief</code>; <code>inactive</code> -> <code>Achterhaald</code>; <code>resolved</code> -> <code>Niet meer aanwezig</code>",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "AllergieStatus" } ]
         },
         {
           "path": "clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
           "name": "StatusCS",
-          "description": "Zie AllergieStatus",
+          "description": "Zie Status",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "AllergieStatus" } ]
         },

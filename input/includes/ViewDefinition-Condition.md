@@ -57,7 +57,7 @@
 <td><samp>clinicalStatus</samp></td>
 <td><code>code</code></td>
 <td>ProbleemStatus</td>
-<td>Actueel (active) = groene rijen, dikgedrukt<br/>Niet actueel (inactive) = grijze rijen</td>
+<td>Actueel (<code>active</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive</code>) = grijze rijen</td>
 </tr>
 </tbody>
 </table>

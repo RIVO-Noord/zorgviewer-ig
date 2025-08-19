@@ -55,7 +55,7 @@
 <td><samp>status</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
-<td>Mapping: <code>active</code> naar <code>actueel</code>; <code>in-active</code> naar <code>niet actueel</code> Uitgefilterd: <code>entered-in-error</code> wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.</td>
+<td>Mapping: <code>active</code> naar <code>actueel</code>; <code>inactive</code> naar <code>niet actueel</code> Uitgefilterd: <code>entered-in-error</code> wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.</td>
 </tr>
 </tbody>
 </table>
