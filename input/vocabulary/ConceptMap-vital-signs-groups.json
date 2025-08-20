@@ -1,0 +1,170 @@
+{
+    "resourceType": "ConceptMap",
+    "id": "vital-signs-groups",
+    "url": "http://fhir.hl7.nl/zorgviewer/ConceptMap/vital-signs-groups",
+    "version": "0.1.0",
+    "name": "vitalsignsgroups",
+    "title": "Vitale Gegevens Categorisering Mapping",
+    "status": "active",
+    "experimental": false,
+    "description": "Deze ConceptMap representeert de mappings van de vitale gegevens codes van LOINC en NHG tabel 45 naar LOINC 'categorie' codes.",
+    "purpose": "Deze ConceptMap mappings worden gebruikt om vitale gegevens te groeperen. Groep (adhv LOINC code) opzoeken door eerste `equal` te mappen van NHG naar LOINC en dan de `wider` mapping te nemen of als die er niet is de `equal` LOINC code.",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "NL"
+                }
+            ]
+        }
+    ],
+    "sourceUri": "Bronsysteem",
+    "targetUri": "http://loinc.org",
+    "group": [
+        {
+            "source": "http://loinc.org",
+            "target": "http://loinc.org",
+            "element": [
+                {
+                    "code": "8480-6",
+                    "display": "Systolic",
+                    "target": [
+                        {
+                            "code": "85354-9",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "8462-4",
+                    "display": "Diastolic",
+                    "target": [
+                        {
+                            "code": "85354-9",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "8478-0",
+                    "display": "MAP",
+                    "target": [
+                        {
+                            "code": "85354-9",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen",
+            "target": "http://loinc.org",
+            "element": [
+                {
+                    "code": "2055",
+                    "display": "Systolic",
+                    "target": [
+                        {
+                            "code": "85354-9",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "2056",
+                    "display": "Diastolic",
+                    "target": [
+                        {
+                            "code": "85354-9",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "3963",
+                    "display": "Hartfrequentie",
+                    "target": [
+                        {
+                            "code": "8867-4",
+                            "display": "Hartfrequentie",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "1357",
+                    "display": "Temperatuur",
+                    "target": [
+                        {
+                            "code": "8310-5",
+                            "display": "Temperatuur",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "560",
+                    "display": "Lengte",
+                    "target": [
+                        {
+                            "code": "8302-2",
+                            "display": "Lengte",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "2408",
+                    "display": "Gewicht",
+                    "target": [
+                        {
+                            "code": "29463-7",
+                            "display": "Gewicht",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "2680",
+                    "display": "Zuurstofsaturatie",
+                    "target": [
+                        {
+                            "code": "59408-5",
+                            "display": "Zuurstofsaturatie",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "2055",
+                    "display": "Systolic",
+                    "target": [
+                        {
+                            "code": "8480-6",
+                            "display": "Systolic",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "2056",
+                    "display": "Diastolic",
+                    "target": [
+                        {
+                            "code": "8462-4",
+                            "display": "Diastolic",
+                            "equivalence": "equal"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
