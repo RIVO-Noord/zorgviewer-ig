@@ -86,5 +86,13 @@
 <td>MetingNaam</td>
 <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code></td>
 </tr>
+<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
+<tr style="background-color:#d6dce5">
+<td>(GroepCode)</td>
+<td><samp>'0000-0'</samp></td>
+<td><code>code</code></td>
+<td>nvt</td>
+<td>Lookup groep LOINC code middels <code>&lt;terminologie-base&gt;/ConceptMap/vital-signs-groups$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.</td>
+</tr>
 </tbody>
 </table>
