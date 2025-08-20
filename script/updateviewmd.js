@@ -168,7 +168,20 @@ function doExampleRows(select, md_ui) {
             const examples = [];
             // If this is a Bundle split into individual resources
             if (raw_example.resourceType == "Bundle") {
-                raw_example.entry.forEach(entry => examples.push(entry.resource));
+                // only keep if resourceType is queried resourceType
+                // this prevents including resources referenced inside a Bundle as a separate example
+                // e.g. EpisodeOfCare.diagnosis.condition or Flag.condition
+                if (raw_example.link) {
+                    var q = raw_example.link[0].url.indexOf('?');
+                    if (q == -1) q = raw_example.link[0].url.length;
+                    const urlNoQ = raw_example.link[0].url.substring(0, q);
+                    const queriedType = urlNoQ.substring(urlNoQ.lastIndexOf('/') + 1);
+                    raw_example.entry.filter(entry => entry.resource.resourceType == queriedType).forEach(entry => examples.push(entry.resource));
+                }
+                else {
+                    // cannot determine queriedType, so keep all
+                    raw_example.entry.forEach(entry => examples.push(entry.resource));
+                }
             }
             else {
                 examples.push(raw_example);

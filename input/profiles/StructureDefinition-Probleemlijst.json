@@ -1,0 +1,83 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Probleemlijst",
+    "name": "Probleemlijst",
+    "title": "Probleemlijst",
+    "status": "active",
+    "experimental": false,
+    "description": "Probleemlijst",
+    "kind": "resource",
+    "abstract": true,
+    "type": "Bundle",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+    "derivation": "constraint",
+    "differential": {
+        "element":  [
+            {
+                "id": "Bundle.type",
+                "path": "Bundle.type",
+                "short": "searchset",
+                "fixedCode": "searchset"
+            },
+            {
+                "id": "Bundle.entry",
+                "path": "Bundle.entry",
+                "slicing": {
+                    "discriminator":  [
+                        {
+                            "type": "type",
+                            "path": "resource"
+                        }
+                    ],
+                    "rules": "open"
+                }
+            },
+            {
+                "id": "Bundle.entry:Condition",
+                "path": "Bundle.entry",
+                "sliceName": "Condition",
+                "short": "Condition"
+            },
+            {
+                "id": "Bundle.entry:Condition.fullUrl",
+                "path": "Bundle.entry.fullUrl",
+                "min": 1
+            },
+            {
+                "id": "Bundle.entry:Condition.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Probleem",
+                "min": 1,
+                "type":  [
+                    {
+                        "code": "Condition",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:EpisodeOfCare",
+                "path": "Bundle.entry",
+                "sliceName": "EpisodeOfCare",
+                "short": "EpisodeOfCare"
+            },
+            {
+                "id": "Bundle.entry:EpisodeOfCare.fullUrl",
+                "path": "Bundle.entry.fullUrl",
+                "min": 1
+            },
+            {
+                "id": "Bundle.entry:EpisodeOfCare.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Zorgepisode",
+                "min": 1,
+                "type":  [
+                    {
+                        "code": "EpisodeOfCare",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/EpisodeOfCare"
+                    }
+                ]
+            }
+        ]
+    }
+}

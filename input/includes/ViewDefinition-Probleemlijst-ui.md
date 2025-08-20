@@ -48,5 +48,30 @@
 <b>Diagnose</b><br/>http://snomed.info/sct#31641000146105 fractuur van pols<br/>
 <b>Toelichting</b><br/>Gevallen op kunstijsbaan<br/>
 </td></tr>
+<tr><th>&gt;&lt;</th>
+<th>Bron</th>
+<th>Datum</th>
+<th>Diagnose</th>
+<th>Status</th>
+<th>(regelkleur)</th>
+</tr>
+<tr><td>+</td>
+<td>Sanday-Bundle</td>
+<td>2025-08-07</td>
+<td>Hernia inguinalis</td>
+<td>active</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>http://hl7.org/fhir/sid/icpc-1-nl#D89 Hernia inguinalis<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday-Bundle</td>
+<td>2025-04-01</td>
+<td>Keelpijn</td>
+<td>active</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>http://hl7.org/fhir/sid/icpc-1-nl#R21.01 Keelpijn<br/>
+</td></tr>
 </tbody>
 </table>
