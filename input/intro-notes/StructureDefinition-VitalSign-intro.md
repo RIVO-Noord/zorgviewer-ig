@@ -26,8 +26,22 @@ De volgende zibs vallen min of meer onder het thema vitale gegevens.
 
 ### Request
 
+N.B. Eerste request is optimaal en wordt ondersteund door Epic en Sanday. De andere requests zijn de "officiele" BgZ requests en zijn nodig voor uitvragen van Zorgplatform.
+
 1. Opvragen (search) vitale gegevens
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&category=vital-signs`
+
+1. Opvragen (search) bloeddruk (BgZ)
+
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://loinc.org|85354-9`
+
+1. Opvragen (search) gewicht (BgZ)
+
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://loinc.org|29463-7`
+
+1. Opvragen (search) lengte (BgZ)
+
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://loinc.org|8302-2,http://loinc.org|8306-3,http://loinc.org|8308-9`
 
 {% include bronsysteem-herkennen.md %}
