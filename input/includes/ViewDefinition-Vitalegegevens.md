@@ -50,13 +50,6 @@
 <td>Auteur</td>
 <td></td>
 </tr>
-<tr>
-<td>Status</td>
-<td><samp>status</samp></td>
-<td><code>string</code></td>
-<td>nvt</td>
-<td></td>
-</tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Methode</td>
@@ -91,12 +84,19 @@
 <td><samp>comment | note.text</samp></td>
 <td><code>string</code></td>
 <td>Toelichting</td>
-<td></td>
+<td><b>LET OP:</b> note.text is een FHIR R4 veld</td>
 </tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
+<td>(Status)</td>
+<td><samp>status</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td></td>
+</tr>
+<tr style="background-color:#d6dce5">
 <td>(GroepCode)</td>
-<td><samp>'0000-0'</samp></td>
+<td><samp>'lookup'</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
 <td>Lookup groep LOINC code middels <code>&lt;terminologie-base&gt;/ConceptMap/vital-signs-groups$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.</td>
