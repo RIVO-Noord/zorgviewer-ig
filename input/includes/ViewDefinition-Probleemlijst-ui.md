@@ -73,5 +73,14 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>http://hl7.org/fhir/sid/icpc-1-nl#R21.01 Keelpijn<br/>
 </td></tr>
+<tr><td>+</td>
+<td>Sanday-Bundle</td>
+<td>2025-08-21</td>
+<td>Lokale infectie vinger/teen/paronychia</td>
+<td>active</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>http://hl7.org/fhir/sid/icpc-1-nl#S09 Lokale infectie vinger/teen/paronychia<br/>
+</td></tr>
 </tbody>
 </table>

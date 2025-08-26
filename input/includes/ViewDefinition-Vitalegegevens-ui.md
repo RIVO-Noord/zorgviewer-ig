@@ -157,6 +157,19 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic-Bundle</td>
+<td>26-8-2025</td>
+<td>Polsfrequentie</td>
+<td>60 /min</td>
+<td></td>
+<td>Arts. Interne Geneeskunde, Internist Oncoloog</td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
+<b>Toelichting</b><br/>Opmerking Zorgviewer<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-Bundle</td>
 <td>14-8-2025</td>
 <td>Polsfrequentie</td>
 <td>61 /min</td>
@@ -481,15 +494,282 @@
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
-<td>21-3-2024</td>
-<td>hartfrequentie (thuismeting)</td>
-<td>80 aantal/min</td>
+<td>7-8-2025</td>
+<td>gewicht patiënt</td>
+<td>81 kg</td>
 <td></td>
 <td></td>
 <td>final</td>
 <td>0000-0</td>
 </tr><tr><td></td><td colspan=8>
-<b>Meting</b><br/>NHG45#3963 hartfrequentie (thuismeting)<br/>
+<b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>gewicht patiënt</td>
+<td>43.535.0 kg</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>lengte patiënt</td>
+<td>1.81 m</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#560 lengte patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>lengte patiënt</td>
+<td>35.354.00 m</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#560 lengte patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>Quetelet-index (BMI) patiënt</td>
+<td>24.7 kg/m2</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#1272 Quetelet-index (BMI) patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>Quetelet-index (BMI) patiënt</td>
+<td>0 kg/m2</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#1272 Quetelet-index (BMI) patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>temperatuur patiënt</td>
+<td>37.3 °C</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#1357 temperatuur patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>temperatuur patiënt</td>
+<td>23 °C</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#1357 temperatuur patiënt<br/>
+<b>Toelichting</b><br/>Waarde aangepast van heel veel naar 23<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>roken</td>
+<td>nooit</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#1739 roken<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>diastolische bloeddruk</td>
+<td>80 mmHg</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#1740 diastolische bloeddruk<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>diastolische bloeddruk</td>
+<td>23 mmHg</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#1740 diastolische bloeddruk<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>systolische bloeddruk</td>
+<td>125 mmHg</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#1744 systolische bloeddruk<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>systolische bloeddruk</td>
+<td>23 mmHg</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#1744 systolische bloeddruk<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>polsfrequentie</td>
+<td>24.342 aantal/min</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#1875 polsfrequentie<br/>
+<b>Toelichting</b><br/>Dit is een opmerking<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>21-8-2025</td>
+<td>hoe vaak drinken van alcohol (FiveShot1)</td>
+<td>4 of meer keer per week (score 2)</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#2418 hoe vaak drinken van alcohol (FiveShot1)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>21-8-2025</td>
+<td>aantal alcoh. dranken op dag (FiveShot2)</td>
+<td>10 of meer (score 2)</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#2419 aantal alcoh. dranken op dag (FiveShot2)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>21-8-2025</td>
+<td>geërgerd aan opm. drankgew. (FiveShot3)</td>
+<td>ja (score 1)</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#2420 geërgerd aan opm. drankgew. (FiveShot3)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>21-8-2025</td>
+<td>schuldig over drankgewoonten (FiveShot4)</td>
+<td>ja (score 1)</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#2421 schuldig over drankgewoonten (FiveShot4)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>21-8-2025</td>
+<td>'s ochts drinken tegen kater (FiveShot5)</td>
+<td>ja (score 1)</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#2422 's ochts drinken tegen kater (FiveShot5)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>zuurstofsaturatie (pulsoximeter)</td>
+<td>23.424 %</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#2680 zuurstofsaturatie (pulsoximeter)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>21-8-2025</td>
+<td>perifeer (enkel) oedeem, pitting</td>
+<td>onduidelijk</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#3007 perifeer (enkel) oedeem, pitting<br/>
+<b>Toelichting</b><br/>test bepaling toevoegen<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>lichaamsoppervlakte</td>
+<td>2 m2</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#3017 lichaamsoppervlakte<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>lichaamsoppervlakte</td>
+<td>6.538.6 m2</td>
+<td></td>
+<td></td>
+<td>final</td>
+<td>0000-0</td>
+</tr><tr><td></td><td colspan=8>
+<b>Meting</b><br/>NHG45#3017 lichaamsoppervlakte<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>

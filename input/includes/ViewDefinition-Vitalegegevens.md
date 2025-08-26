@@ -86,6 +86,13 @@
 <td>MetingNaam</td>
 <td></td>
 </tr>
+<tr style="background-color:#b4c7e7">
+<td>+Toelichting</td>
+<td><samp>comment | note.text</samp></td>
+<td><code>string</code></td>
+<td>Toelichting</td>
+<td></td>
+</tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(GroepCode)</td>
