@@ -88,8 +88,8 @@
 </tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
-<td>(GroepCode)</td>
-<td><samp>code.coding.where(system='http://loinc.org' and code!='8716-3').translate('vital-signs-groups').target[0].code | code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').translate('vital-signs-groups').target[0].code</samp></td>
+<td>(Groep)</td>
+<td><samp>code.coding.where(system='http://loinc.org' and code!='8716-3').translate('vital-signs-groups').target[0].display | code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').translate('vital-signs-groups').target[0].display</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
 <td>Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;/ConceptMap/vital-signs-groups$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.</td>
