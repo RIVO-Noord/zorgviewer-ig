@@ -34,7 +34,7 @@
 <td><samp>clinicalStatus</samp></td>
 <td><code>code</code></td>
 <td>ProbleemStatus</td>
-<td></td>
+<td>Mapping: <code>active,recurrence</code> naar <code>Actueel</code>; <code>inactive,remission</code> naar <code>Niet actueel</code></td>
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
@@ -57,7 +57,7 @@
 <td><samp>clinicalStatus</samp></td>
 <td><code>code</code></td>
 <td>ProbleemStatus</td>
-<td>Actueel (<code>active</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive</code>) = grijze rijen</td>
+<td>Actueel (<code>active,recurrence</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive,remission,resolved</code>) = grijze rijen</td>
 </tr>
 </tbody>
 </table>

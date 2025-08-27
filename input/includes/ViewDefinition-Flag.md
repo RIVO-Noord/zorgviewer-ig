@@ -51,11 +51,18 @@
 <td></td>
 </tr>
 <tr>
-<td>Status</td>
+<td>Status(1)</td>
+<td><samp>extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.resolve().clinicalStatus</samp></td>
+<td><code>code</code></td>
+<td>Conditie::Probleem/ProbleemStatus</td>
+<td>Logica: als geen Status(1), dan Status(2)<br/>Mapping: <code>active,recurrence</code> naar <code>Actueel</code>; <code>inactive,remission</code> naar <code>Niet actueel</code></td>
+</tr>
+<tr>
+<td>Status(2)</td>
 <td><samp>status</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
-<td>Mapping: <code>active</code> naar <code>actueel</code>; <code>inactive</code> naar <code>niet actueel</code> Uitgefilterd: <code>entered-in-error</code> wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.</td>
+<td>Mapping: <code>active</code> naar <code>Actueel</code>; <code>inactive</code> naar <code>Niet actueel</code> Uitgefilterd: <code>entered-in-error</code> wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.</td>
 </tr>
 </tbody>
 </table>

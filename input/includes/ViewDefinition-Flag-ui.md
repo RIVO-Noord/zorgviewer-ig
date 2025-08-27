@@ -9,7 +9,8 @@
 <th>Voor(2)</th>
 <th>Voor(3)</th>
 <th>Categorie</th>
-<th>Status</th>
+<th>Status(1)</th>
+<th>Status(2)</th>
 </tr>
 <tr><td>+</td>
 <td>Chipsoft-OTH</td>
@@ -19,7 +20,8 @@
 <td>other</td>
 <td>conditie</td>
 <td>active</td>
-</tr><tr><td></td><td colspan=7>
+<td>active</td>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft-OTH</td>
@@ -29,7 +31,8 @@
 <td>other</td>
 <td>conditie</td>
 <td>active</td>
-</tr><tr><td></td><td colspan=7>
+<td>active</td>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
@@ -38,8 +41,9 @@
 <td>Drager MRSA</td>
 <td></td>
 <td>waarschuwing</td>
+<td></td>
 <td>active</td>
-</tr><tr><td></td><td colspan=7>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -48,8 +52,9 @@
 <td>TBC</td>
 <td></td>
 <td>Infection Flag</td>
+<td></td>
 <td>inactive</td>
-</tr><tr><td></td><td colspan=7>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
@@ -58,8 +63,9 @@
 <td>LET OP!!!!!<br/>Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP ...</td>
 <td></td>
 <td>Waarschuwing</td>
+<td></td>
 <td>active</td>
-</tr><tr><td></td><td colspan=7>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -68,8 +74,9 @@
 <td>Keelpijn</td>
 <td>Keelpijn</td>
 <td>Alert</td>
+<td></td>
 <td>active</td>
-</tr><tr><td></td><td colspan=7>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 </tbody>
 </table>
