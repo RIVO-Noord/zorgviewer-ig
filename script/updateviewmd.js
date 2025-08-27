@@ -11,41 +11,73 @@ const mdPath = "../input/includes/";
 
 // Need stu3_model as param to work
 // eg fhirpath.evaluate(example, `${column.path}`, null, fhirpath_stu3_model, { userInvocationTable }); }
+const examplesCache = {};
 function resolveFn(inputs) {
     if (!inputs || inputs.length === 0) {
-        console.error("resolve() called on undefined path");
+        // console.error("resolve() called on undefined path");
         return null;
     }
     const reference = inputs[0].reference;
     const id = reference.split('/').pop();
-    // try to find an example with a matching id 
-    const examplesPath = "../input/examples";
-    var resolved;
-    fs.readdirSync(examplesPath).forEach(file => {
-        if (!file.endsWith(".json")) return;
-        const example_filePath = path.join(examplesPath, file);
-        const raw_example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
+    var resolved = examplesCache[id];
+    if (!resolved) {
+        console.log(`Resolving reference ${reference}`);
+        // try to find an example with a matching id 
+        const examplesPath = "../input/examples";
+        var resolved;
+        fs.readdirSync(examplesPath).forEach(file => {
+            if (!file.endsWith(".json")) return;
+            const example_filePath = path.join(examplesPath, file);
+            const raw_example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
 
-        const examples = [];
-        // If this is a Bundle split into individual resources
-        if (raw_example.resourceType == "Bundle") {
-            raw_example.entry.forEach(entry => examples.push(entry.resource));
+            const examples = [];
+            // If this is a Bundle split into individual resources
+            if (raw_example.resourceType == "Bundle") {
+                raw_example.entry.forEach(entry => examples.push(entry.resource));
+            }
+            else {
+                examples.push(raw_example);
+            }
+            var match = examples.find(example => example.id === id);
+            if (match) {
+                resolved = match;
+            }
+        });
+        if (resolved) {
+            examplesCache[id] = resolved;
         }
-        else {
-            examples.push(raw_example);
-        }
-        var match = examples.find(example => example.id === id);
-        if (match) {
-            resolved = match;
-        }
-    });
+    }
     if (!resolved) {
         console.error(`No example found for reference: ${reference}`);
     }
     return resolved;
 }
+// translate a Coding using a ConceptMap; results in an array of ConceptMap.group.element
+const conceptMapCache = {};
+function translateFn(inputs, conceptMapId) {
+    if (!inputs || inputs.length === 0) {
+        // console.error("translate() called on undefined path");
+        return null;
+    }
+    const code = inputs[0].code; // expect Coding as first input
+
+    var conceptMap = conceptMapCache[conceptMapId];
+    if (!conceptMap) {
+        console.log(`Loading ConceptMap ${conceptMapId} from file`);
+        const vocabularyPath = "../input/vocabulary";
+        const vocabulary_filePath = path.join(vocabularyPath, `ConceptMap-${conceptMapId}.json`);
+        conceptMap = JSON.parse(fs.readFileSync(vocabulary_filePath, 'utf8'));
+        conceptMapCache[conceptMapId] = conceptMap;
+    }
+
+    try { result = fhirpath.evaluate(conceptMap, `group.element.where(code='${code}')`); }
+    catch { }
+    console.log(`Translated code ${code} using ConceptMap ${conceptMapId} to ${result.length} target codes`);
+    return result; // array of ConceptMap.group.element
+}
 const userInvocationTable = {
-    resolve: { fn: resolveFn }
+    resolve: { fn: resolveFn },
+    translate: { fn: translateFn, arity: { 1: ['String']}}
 };
 
 fs.readdirSync(viewDefPath).forEach(file => {

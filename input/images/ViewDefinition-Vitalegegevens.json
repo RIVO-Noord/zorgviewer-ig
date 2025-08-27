@@ -77,9 +77,9 @@
           "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
         },
         {
-          "path": "'lookup'",
+          "path": "code.coding.where(system='http://loinc.org' and code!='8716-3').translate('vital-signs-groups').target[0].code | code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').translate('vital-signs-groups').target[0].code",
           "name": "(GroepCode)",
-          "description": "Lookup groep LOINC code middels <code>&lt;terminologie-base&gt;/ConceptMap/vital-signs-groups$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.",
+          "description": "Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;/ConceptMap/vital-signs-groups$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }

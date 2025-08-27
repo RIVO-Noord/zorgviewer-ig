@@ -24,6 +24,11 @@ De volgende zibs vallen min of meer onder het thema vitale gegevens.
 
 {% include ViewDefinition-Vitalegegevens.md %}
 
+### Zoeken naar codes
+
+* [NHG Tabel 45 Diagnostische Bepalingen](https://bepalingen.nhg.org/labcodes/determinations) `system=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen`
+* [LOINC](https://search.loinc.org/) - `system=http://loinc.org`
+
 ### Request
 
 N.B. Eerste request is optimaal en wordt ondersteund door Epic en Sanday. De andere requests zijn de "officiele" BgZ requests en zijn nodig voor uitvragen van Zorgplatform.
