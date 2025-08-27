@@ -16,7 +16,6 @@
 <td>active</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>http://hl7.org/fhir/v3/NullFlavor#OTH other<br/>
 <b>Toelichting</b><br/>Gevallen op kunstijsbaan.<br/>
 </td></tr>
 <tr><td>+</td>
@@ -26,7 +25,7 @@
 <td>active</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>http://hl7.org/fhir/sid/icd-10-nl#F43.1 <br/>
+<b>Diagnose</b><br/>ICD-10#F43.1 <br/>
 <b>Toelichting</b><br/>2022-02: ziekte van Crohn<br/>2021-07: Complicatie ANPY infectie lokaal<br/>2021...<br/>
 </td></tr>
 <tr><td>+</td>
@@ -36,7 +35,7 @@
 <td>active</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>http://hl7.org/fhir/sid/icd-10-nl#T12.0 <br/>
+<b>Diagnose</b><br/>ICD-10#T12.0 <br/>
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
@@ -45,7 +44,7 @@
 <td>inactive</td>
 <td>inactive</td>
 </tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>http://snomed.info/sct#31641000146105 fractuur van pols<br/>
+<b>Diagnose</b><br/>SNOMED CT#31641000146105 fractuur van pols<br/>
 <b>Toelichting</b><br/>Gevallen op kunstijsbaan<br/>
 </td></tr>
 </tbody>

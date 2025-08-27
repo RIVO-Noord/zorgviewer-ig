@@ -40,7 +40,7 @@
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Diagnose</td>
-<td><samp>code.coding[0].select(system+'#' + code + ' ' + iif(exists(display),display,''))</samp></td>
+<td><samp>code.coding[0].select(system.lookup('CodeSystems').display+'#' + code + ' ' + iif(exists(display),display,''))</samp></td>
 <td><code>string</code></td>
 <td>ProbleemNaam</td>
 <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code></td>
@@ -92,7 +92,7 @@
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Diagnose</td>
-<td><samp>diagnosis.condition.resolve().select(code.coding[0].select(system+'#' + code + ' ' + iif(exists(display),display,'')))</samp></td>
+<td><samp>diagnosis.condition.resolve().select(code.coding[0].select(system.lookup('CodeSystems')[0].display+'#' + code + ' ' + iif(exists(display),display,'')))</samp></td>
 <td><code>string</code></td>
 <td>Probleem/ProbleemNaam</td>
 <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code></td>

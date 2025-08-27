@@ -56,7 +56,7 @@
               ]
             },
             {
-              "path": "code.coding[0].select(system+'#' + code + ' ' + iif(exists(display),display,''))",
+              "path": "code.coding[0].select(system.lookup('CodeSystems').display+'#' + code + ' ' + iif(exists(display),display,''))",
               "name": "+Diagnose",
               "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
               "type": "string",
@@ -143,7 +143,7 @@
               ]
             },
             {
-              "path": "diagnosis.condition.resolve().select(code.coding[0].select(system+'#' + code + ' ' + iif(exists(display),display,'')))",
+              "path": "diagnosis.condition.resolve().select(code.coding[0].select(system.lookup('CodeSystems')[0].display+'#' + code + ' ' + iif(exists(display),display,'')))",
               "name": "+Diagnose",
               "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
               "type": "string",

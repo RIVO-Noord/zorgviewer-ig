@@ -75,9 +75,33 @@ function translateFn(inputs, conceptMapId) {
     console.log(`Translated code ${code} using ConceptMap ${conceptMapId} to ${result.length} target codes`);
     return result; // array of ConceptMap.group.element
 }
+// lookup a code in a ValueSet; results in an array of ValueSet.compose.include.concept
+const valueSetCache = {};
+function lookupFn(inputs, valueSetId) {
+    if (!inputs || inputs.length === 0) {
+        // console.error("translate() called on undefined path");
+        return null;
+    }
+    const code = inputs[0]; // expect system as first input
+
+    var valueSet = valueSetCache[valueSetId];
+    if (!valueSet) {
+        console.log(`Loading ValueSet ${valueSetId} from file`);
+        const vocabularyPath = "../input/vocabulary";
+        const vocabulary_filePath = path.join(vocabularyPath, `ValueSet-${valueSetId}.json`);
+        valueSet = JSON.parse(fs.readFileSync(vocabulary_filePath, 'utf8'));
+        valueSetCache[valueSetId] = valueSet;
+    }
+
+    try { result = fhirpath.evaluate(valueSet, `compose.include.concept.where(code='${code}')`); }
+    catch { }
+    console.log(`Lookup concept ${code} using ValueSet ${valueSetId} to ${result.length} concepts`);
+    return result; // array of ConceptMap.group.element
+}
 const userInvocationTable = {
     resolve: { fn: resolveFn },
-    translate: { fn: translateFn, arity: { 1: ['String']}}
+    translate: { fn: translateFn, arity: { 1: ['String']}},
+    lookup: { fn: lookupFn, arity: { 1: ['String']}}
 };
 
 fs.readdirSync(viewDefPath).forEach(file => {
