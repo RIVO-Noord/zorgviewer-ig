@@ -16,6 +16,7 @@
 <td>active</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>NullFlavor#OTH other<br/>
 <b>Toelichting</b><br/>Gevallen op kunstijsbaan.<br/>
 </td></tr>
 <tr><td>+</td>
