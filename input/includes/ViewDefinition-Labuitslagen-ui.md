@@ -18,7 +18,7 @@
 <td>Chloride</td>
 <td>109</td>
 <td></td>
-<td></td>
+<td>99 - 108</td>
 <td>Serum</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -29,7 +29,7 @@
 <td>INR</td>
 <td>1</td>
 <td></td>
-<td></td>
+<td>0.9 - 1.1</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -40,7 +40,7 @@
 <td>INR</td>
 <td>10</td>
 <td></td>
-<td></td>
+<td>0.9 - 1.1</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>

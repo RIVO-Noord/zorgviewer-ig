@@ -45,7 +45,7 @@
 </tr>
 <tr>
 <td>Onder- en bovengrens</td>
-<td><samp>referenceRange.low.value.toString() + ' - ' + referenceRange.high.value.toString() + ' ' + referenceRange.high.unit</samp></td>
+<td><samp>referenceRange.low.value.toString() + ' - ' + referenceRange.high.value.toString() + iif(referenceRange.high.unit.exists(),' ' + referenceRange.high.unit,'')</samp></td>
 <td><code>string</code></td>
 <td>ReferentieOndergrens, ReferentieBovengrens</td>
 <td>Indien <code>low.unit</code> en <code>high.unit</code> niet gelijk zijn aan elkaar toon dan <code>unit</code> bij beide.</td>

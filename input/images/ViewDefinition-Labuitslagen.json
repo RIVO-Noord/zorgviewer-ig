@@ -41,7 +41,7 @@
           "tag": [ { "name": "Zib element", "value": "InterpretatieVlaggen" } ]
         },
         {
-          "path": "referenceRange.low.value.toString() + ' - ' + referenceRange.high.value.toString() + ' ' + referenceRange.high.unit",
+          "path": "referenceRange.low.value.toString() + ' - ' + referenceRange.high.value.toString() + iif(referenceRange.high.unit.exists(),' ' + referenceRange.high.unit,'')",
           "name": "Onder- en bovengrens",
           "description": "Indien <code>low.unit</code> en <code>high.unit</code> niet gelijk zijn aan elkaar toon dan <code>unit</code> bij beide.",
           "type": "string",
