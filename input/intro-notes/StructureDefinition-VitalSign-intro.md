@@ -26,8 +26,8 @@ De volgende zibs vallen min of meer onder het thema vitale gegevens.
 
 ### Zoeken naar codes
 
-* [NHG Tabel 45 Diagnostische Bepalingen](https://bepalingen.nhg.org/labcodes/determinations) `system=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen`
-* [LOINC](https://search.loinc.org/) - `system=http://loinc.org`
+* [LOINC](https://terminologie.nictiz.nl/art-decor/loinc) - `system=http://loinc.org`
+* [NHG Tabel 45 Diagnostische Bepalingen Diagnostisch](https://bepalingen.nhg.org/labcodes/determinations?q%5Bapplication_kind_cont%5D=D) `system=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen`
 
 ### Request
 

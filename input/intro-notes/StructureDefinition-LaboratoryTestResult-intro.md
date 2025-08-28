@@ -15,6 +15,7 @@
 ### Zoeken naar codes
 
 * [LOINC lab-uitslagen](https://terminologie.nictiz.nl/art-decor/loinc) - `system=http://loinc.org`
+* [NHG Tabel 45 Diagnostische Bepalingen Labcodes](https://bepalingen.nhg.org/labcodes/determinations?q%5Bapplication_kind_cont%5D=L) `system=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen`
 
 ### Request
 
