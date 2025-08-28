@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>Labuitslagen</b>
+<b>Laboratoriumuitslagen</b>
 <table class="grid">
 <tbody>
 <tr><th>&gt;&lt;</th>
@@ -21,6 +21,61 @@
 <td></td>
 <td>Serum</td>
 <td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-Bundle</td>
+<td>20-2-2024</td>
+<td>INR</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td>Bloed</td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-Bundle</td>
+<td>20-2-2024</td>
+<td>INR</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td>Bloed</td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-Bundle</td>
+<td>18-12-2023</td>
+<td>Kalium</td>
+<td>60 mmol/L</td>
+<td></td>
+<td>3.5 - 5 mmol/L</td>
+<td>Bloed</td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-Bundle</td>
+<td>20-2-2024</td>
+<td>Sirolimus (Volbloed)</td>
+<td>6 ug/L</td>
+<td></td>
+<td></td>
+<td>Bloed</td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-Bundle</td>
+<td>20-2-2024</td>
+<td>Sirolimus (Volbloed)</td>
+<td>Volgt</td>
+<td></td>
+<td></td>
+<td>Bloed</td>
+<td>unknown</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
