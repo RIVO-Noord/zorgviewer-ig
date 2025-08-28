@@ -22,9 +22,9 @@
 
     `GET <ontsluiten-bronsysteem-base>/Observation/$lastn?patient=<fhir_patient_id>&category=http://snomed.info/sct|275711006&_include=Observation:specimen`
 
-1. **Sanday:** Opvragen (search) laatst bekende labuitslag per type voor een patient
+1. **Sanday:** Opvragen (search) labuitslagen per type voor een patient
 
-    `GET <ontsluiten-bronsysteem-base>/Observation/$lastn?patient=<fhir_patient_id>&category=http://hl7.org/fhir/observation-category|laboratory`
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&category=http://hl7.org/fhir/observation-category|laboratory`
 
     <blockquote class="stu-note" markdown="1">
     N.B. Alleen klinische chemie resultaten zijn op dit moment beschikbaar.
