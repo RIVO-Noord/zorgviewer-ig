@@ -17,7 +17,7 @@
 <td>30-9-2022</td>
 <td>Chloride</td>
 <td>109</td>
-<td></td>
+<td>Boven referentiewaarde</td>
 <td>99 - 108</td>
 <td>Serum</td>
 <td>final</td>
@@ -39,7 +39,7 @@
 <td>20-2-2024</td>
 <td>INR</td>
 <td>10</td>
-<td></td>
+<td>Hoog</td>
 <td>0.9 - 1.1</td>
 <td>Bloed</td>
 <td>final</td>
@@ -50,7 +50,7 @@
 <td>18-12-2023</td>
 <td>Kalium</td>
 <td>60 mmol/L</td>
-<td></td>
+<td>Kritiek</td>
 <td>3.5 - 5 mmol/L</td>
 <td>Bloed</td>
 <td>final</td>
@@ -161,7 +161,7 @@
 <td>1-7-2021</td>
 <td>Kalium</td>
 <td>8 mmol/L</td>
-<td></td>
+<td>Kritiek</td>
 <td>3.5 - 5 mmol/L</td>
 <td></td>
 <td>final</td>

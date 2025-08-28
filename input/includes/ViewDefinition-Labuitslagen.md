@@ -38,7 +38,7 @@
 </tr>
 <tr>
 <td>Interpretatie</td>
-<td><samp>interpretation.code</samp></td>
+<td><samp>interpretation.text</samp></td>
 <td><code>string</code></td>
 <td>InterpretatieVlaggen</td>
 <td><code>AA</code>: uitroepteken icon, kritiek<br/><code>281302008</code> of <code>H</code>: pijl omhoog, boven de bovengrens<br/><code>281300000</code> of <code>L</code>: pijl naar beneden, onder de ondergrens<br/>N.B. <code>Resistent</code>, <code>Intermediar</code> en <code>Sensitief</code> vanuit de standaard zijn niet van toepassing op de klinische chemie.</td>
