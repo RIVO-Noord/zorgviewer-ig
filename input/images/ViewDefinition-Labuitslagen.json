@@ -1,0 +1,79 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Labuitslagen",
+  "title": "Labuitslagen",
+  "profile": "http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "specimen.resolve().collection.collectedDateTime | effectiveDateTime",
+          "name": "Afnamedatum",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "Monster/ AfnameDatumTijd" } ]
+        },
+        {
+          "path": "code.text | code.coding[0].display",
+          "name": "Test",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "TestCode" } ]
+        },
+        {
+          "path": "valueString | valueQuantity.value.toString() + iif(valueQuantity.unit.exists(),' ' + valueQuantity.unit,'')",
+          "name": "Testuitslag",
+          "description": "<b>Epic:</b> Indien lab-order geannuleerd, dan krijgt dit alsnog de status <code>Definitief</code> met een Testuitslag van <code>GEANNULEERD</code>. Dit is voor nu akkoord bevonden door stuurgroep Zorgviewer.",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "TestUitslag" } ]
+        },
+        {
+          "path": "interpretation.code",
+          "name": "Interpretatie",
+          "description": "<code>AA</code>: uitroepteken icon, kritiek<br/><code>281302008</code> of <code>H</code>: pijl omhoog, boven de bovengrens<br/><code>281300000</code> of <code>L</code>: pijl naar beneden, onder de ondergrens<br/>N.B. <code>Resistent</code>, <code>Intermediar</code> en <code>Sensitief</code> vanuit de standaard zijn niet van toepassing op de klinische chemie.",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "InterpretatieVlaggen" } ]
+        },
+        {
+          "path": "referenceRange.low.value.toString() + ' - ' + referenceRange.high.value.toString() + ' ' + referenceRange.high.unit",
+          "name": "Onder- en bovengrens",
+          "description": "Indien <code>low.unit</code> en <code>high.unit</code> niet gelijk zijn aan elkaar toon dan <code>unit</code> bij beide.",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "ReferentieOndergrens, ReferentieBovengrens" } ]
+        },
+        {
+          "path": "specimen.resolve().type.text",
+          "name": "Materiaal",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Monster/ Monstermateriaal" } ]
+        },
+        {
+          "path": "status",
+          "name": "Status",
+          "description": "<b>Epic:</b> Indien lab-order geannuleerd, dan krijgt dit alsnog de status <code>Definitief</code> met een Testuitslag van <code>GEANNULEERD</code>. Dit is voor nu akkoord bevonden door stuurgroep Zorgviewer.",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "ResultaatStatus" } ]
+        },
+        {
+          "path": "comment",
+          "name": "+Commentaar",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
+        },
+        {
+          "path": "specimen.resolve().note.text",
+          "name": "+Toelichting materiaal",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Monster/ Toelichting" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Observation' and (meta.profile='http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation' or category.coding.code='laboratory'))"
+    }
+  ]
+}

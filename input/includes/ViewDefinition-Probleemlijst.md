@@ -72,14 +72,14 @@
 <td>Datum</td>
 <td><samp>diagnosis.condition.resolve().select(onsetPeriod.start | onsetDateTime)</samp></td>
 <td><code>Period</code> of <code>dateTime</code></td>
-<td>Probleem/ProbleemBeginDatum</td>
+<td>Probleem/ ProbleemBeginDatum</td>
 <td>Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn</td>
 </tr>
 <tr>
 <td>Diagnose</td>
 <td><samp>diagnosis.condition.resolve().select(code.text | code.coding[0].display)</samp></td>
 <td><code>string</code></td>
-<td>Probleem/ProbleemNaam</td>
+<td>Probleem/ ProbleemNaam</td>
 <td></td>
 </tr>
 <tr>
@@ -94,14 +94,14 @@
 <td>+Diagnose</td>
 <td><samp>diagnosis.condition.resolve().select(code.coding[0].select(system.lookup('CodeSystems')[0].display+'#' + code + ' ' + iif(exists(display),display,'')))</samp></td>
 <td><code>string</code></td>
-<td>Probleem/ProbleemNaam</td>
+<td>Probleem/ ProbleemNaam</td>
 <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code></td>
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+Toelichting</td>
 <td><samp>diagnosis.condition.resolve().note.text</samp></td>
 <td><code>string</code></td>
-<td>Probleem/Toelichting</td>
+<td>Probleem/ Toelichting</td>
 <td></td>
 </tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>

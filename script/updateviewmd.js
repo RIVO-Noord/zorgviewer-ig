@@ -259,7 +259,7 @@ function doExampleRows(select, md_ui) {
                 if (match3) {
                     var result;
                     try { result = fhirpath.evaluate(example, match3[1]); }
-                    catch { }
+                    catch (err) { console.error ("Error evaluating where clause", match3[1], err.message); }
                     if (result[0]) {
                         const values = select.column.map(column => {
                             var result;
