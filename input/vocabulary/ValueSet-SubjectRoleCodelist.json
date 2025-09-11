@@ -1,0 +1,100 @@
+{
+    "resourceType": "ValueSet",
+    "id": "SubjectRoleCodelist",
+    "meta": {
+        "profile":  [
+            "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+        ]
+    },
+    "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/SubjectRoleCodelist",
+    "name": "SubjectRoleCodelist",
+    "title": "Subject rol (beroepen) waardelijst",
+    "status": "active",
+    "experimental": false,
+    "description": "Subject rol waardelijst. Deze rol is nodig voor autorisatie bij de bron",
+    "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "concept":  [
+                    {
+                        "code": "309343006",
+                        "display": "Medical doctor",
+                        "designation":  [
+                            {
+                                "language": "nl-NL",
+                                "use": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "900000000000013009",
+                                    "display": "Synonym"
+                                },
+                                "value": "arts"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "449161006",
+                        "display": "Physician assistant",
+                        "designation":  [
+                            {
+                                "language": "nl-NL",
+                                "use": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "900000000000013009",
+                                    "display": "Synonym"
+                                },
+                                "value": "physician assistant"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "224571005",
+                        "display": "Nurse practitioner",
+                        "designation":  [
+                            {
+                                "language": "nl-NL",
+                                "use": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "900000000000013009",
+                                    "display": "Synonym"
+                                },
+                                "value": "verpleegkundige specialist"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "62247001",
+                        "display": "Family medicine specialist",
+                        "designation":  [
+                            {
+                                "language": "nl-NL",
+                                "use": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "900000000000013009",
+                                    "display": "Synonym"
+                                },
+                                "value": "huisarts"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "394572006",
+                        "display": "Medical secretary",
+                        "designation":  [
+                            {
+                                "language": "nl-NL",
+                                "use": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "900000000000013009",
+                                    "display": "Synonym"
+                                },
+                                "value": "medisch secretaresse/mma"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
