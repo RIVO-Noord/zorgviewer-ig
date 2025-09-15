@@ -23,7 +23,7 @@
         {
           "path": "extension.where('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.resolve().code.text",
           "name": "Voor(1)",
-          "description": "Als geen Voor(1), dan Voor(2), als geen Voor(2) dan Voor(3).<br/><i>De Condition resolve in de resultaat Bundle.</i>",
+          "description": "Als geen Voor(1), dan Voor(2), als geen Voor(2) dan Voor(3).<br/><i>De flag-detail Condition opzoeken in de resultaat Bundle.</i>",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Conditie::Probleem" } ]
         },
@@ -46,9 +46,16 @@
           "tag": [ { "name": "Zib element", "value": "AlertType" } ]
         },
         {
+          "path": "extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.resolve().clinicalStatus",
+          "name": "Status(1)",
+          "description": "Logica: als geen Status(1), dan Status(2)<br/>Mapping: <code>active,recurrence</code> naar <code>Actueel</code>; <code>inactive,remission</code> naar <code>Niet actueel</code>",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "Conditie::Probleem/ProbleemStatus" } ]
+        },
+        {
           "path": "status",
-          "name": "Status",
-          "description": "Mapping: <code>active</code> naar <code>actueel</code>; <code>in-active</code> naar <code>niet actueel</code> Uitgefilterd: <code>entered-in-error</code> wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.",
+          "name": "Status(2)",
+          "description": "Mapping: <code>active</code> naar <code>Actueel</code>; <code>inactive</code> naar <code>Niet actueel</code> Uitgefilterd: <code>entered-in-error</code> wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }

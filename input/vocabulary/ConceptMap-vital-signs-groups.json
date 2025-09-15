@@ -1,0 +1,408 @@
+{
+    "resourceType": "ConceptMap",
+    "id": "vital-signs-groups",
+    "url": "http://fhir.hl7.nl/zorgviewer/ConceptMap/vital-signs-groups",
+    "version": "0.1.0",
+    "name": "vitalsignsgroups",
+    "title": "Vitale Gegevens Groep Mapping",
+    "status": "active",
+    "experimental": false,
+    "description": "Deze ConceptMap representeert de mappings van de vitale gegevens codes van LOINC en NHG tabel 45 naar LOINC 'groep' codes.",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "NL"
+                }
+            ]
+        }
+    ],
+    "sourceUri": "Bronsysteem",
+    "targetUri": "http://loinc.org",
+    "group": [
+        {
+            "source": "http://loinc.org",
+            "target": "http://loinc.org",
+            "element": [
+                {
+                    "code": "55284-4",
+                    "display": "Blood pressure systolic and diastolic",
+                    "target": [
+                        {
+                            "code": "35094-2",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "85354-9",
+                    "display": "RR",
+                    "target": [
+                        {
+                            "code": "35094-2",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "8480-6",
+                    "display": "Systolic",
+                    "target": [
+                        {
+                            "code": "35094-2",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "8462-4",
+                    "display": "Diastolic",
+                    "target": [
+                        {
+                            "code": "35094-2",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "8478-0",
+                    "display": "MAP",
+                    "target": [
+                        {
+                            "code": "35094-2",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "9279-1",
+                    "display": "Respiratory rate",
+                    "target": [
+                        {
+                            "code": "9279-1",
+                            "display": "Ademhaling",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                                {
+                    "code": "2708-6",
+                    "display": "Oxygen saturation in Arterial blood",
+                    "target": [
+                        {
+                            "code": "9279-1",
+                            "display": "Ademhaling",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "59408-5",
+                    "display": "Oxygen saturation in Arterial blood by Pulse oximetry",
+                    "target": [
+                        {
+                            "code": "9279-1",
+                            "display": "Ademhaling",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "8867-4",
+                    "display": "Heart rate",
+                    "target": [
+                        {
+                            "code": "LG33055-1",
+                            "display": "Hartslag",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "8893-0",
+                    "display": "Heart rate Peripheral artery by Palpation",
+                    "target": [
+                        {
+                            "code": "LG33055-1",
+                            "display": "Hartslag",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "8302-2",
+                    "target": [
+                        {
+                            "code": "LG70-5",
+                            "display": "Lichaamsmaten",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "29463-7",
+                    "target": [
+                        {
+                            "code": "LG70-5",
+                            "display": "Lichaamsmaten",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "8310-5",
+                    "target": [
+                        {
+                            "code": "LG33052-8",
+                            "display": "Temperatuur",
+                            "equivalence": "wider"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen",
+            "target": "http://loinc.org",
+            "element": [
+                {
+                    "code": "1744",
+                    "display": "systolische bloeddruk",
+                    "target": [
+                        {
+                            "code": "35094-2",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "1740",
+                    "display": "diastolische bloeddruk",
+                    "target": [
+                        {
+                            "code": "35094-2",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "2055",
+                    "display": "systolic",
+                    "target": [
+                        {
+                            "code": "35094-2",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "2056",
+                    "display": "diastolic",
+                    "target": [
+                        {
+                            "code": "35094-2",
+                            "display": "Bloeddruk",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "2680",
+                    "display": "zuurstofsaturatie (pulsoximeter)",
+                    "target": [
+                        {
+                            "code": "9279-1",
+                            "display": "Ademhaling",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "3963",
+                    "display": "hartfrequentie",
+                    "target": [
+                        {
+                            "code": "LG33055-1",
+                            "display": "Hartslag",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "1875",
+                    "display": "polsfrequentie",
+                    "target": [
+                        {
+                            "code": "LG33055-1",
+                            "display": "Hartslag",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "357",
+                    "display": "gewicht patiënt",
+                    "target": [
+                        {
+                            "code": "LG70-5",
+                            "display": "Lichaamsmaten",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "560",
+                    "display": "lengte patiënt",
+                    "target": [
+                        {
+                            "code": "LG70-5",
+                            "display": "Lichaamsmaten",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "1272",
+                    "display": "Quetelet-index (BMI) patiënt",
+                    "target": [
+                        {
+                            "code": "LG70-5",
+                            "display": "Lichaamsmaten",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "3017",
+                    "display": "lichaamsoppervlakte",
+                    "target": [
+                        {
+                            "code": "LG70-5",
+                            "display": "Lichaamsmaten",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "1357",
+                    "display": "temperatuur patiënt",
+                    "target": [
+                        {
+                            "code": "LG33052-8",
+                            "display": "Temperatuur",
+                            "equivalence": "wider"
+                        }
+                    ]
+                },
+                {
+                    "code": "3963",
+                    "display": "hartfrequentie",
+                    "target": [
+                        {
+                            "code": "8867-4",
+                            "display": "Hartfrequentie",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "1357",
+                    "display": "temperatuur",
+                    "target": [
+                        {
+                            "code": "8310-5",
+                            "display": "Temperatuur",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "560",
+                    "display": "lengte patiënt",
+                    "target": [
+                        {
+                            "code": "8302-2",
+                            "display": "Lengte",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "2408",
+                    "display": "gewicht patiënt",
+                    "target": [
+                        {
+                            "code": "29463-7",
+                            "display": "Gewicht",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "2680",
+                    "display": "zuurstofsaturatie (pulsoximeter)",
+                    "target": [
+                        {
+                            "code": "59408-5",
+                            "display": "Zuurstofsaturatie",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "1740",
+                    "display": "diastolische bloeddruk",
+                    "target": [
+                        {
+                            "code": "8480-6",
+                            "display": "Diastolic",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "1744",
+                    "display": "systolische bloeddruk",
+                    "target": [
+                        {
+                            "code": "8462-4",
+                            "display": "Systolic",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "2055",
+                    "display": "systolic",
+                    "target": [
+                        {
+                            "code": "8480-6",
+                            "display": "Systolic",
+                            "equivalence": "equal"
+                        }
+                    ]
+                },
+                {
+                    "code": "2056",
+                    "display": "diastolic",
+                    "target": [
+                        {
+                            "code": "8462-4",
+                            "display": "Diastolic",
+                            "equivalence": "equal"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

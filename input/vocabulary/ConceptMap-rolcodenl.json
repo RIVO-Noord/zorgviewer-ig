@@ -1,0 +1,54 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "rolcodenl",
+  "url": "http://fhir.hl7.nl/zorgviewer/ConceptMap/rolcodenl",
+  "version": "0.1.0",
+  "name": "rolcodenl",
+  "title": "RolCodeNL naar SNOMED-CT Mapping",
+  "status": "active",
+  "experimental": false,
+  "description": "Deze ConceptMap representeert de mapping tussen RolCodeNL naar een SNOMED-CT code. N.B. hier betekent een '*' in de code een wildcard.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "NL"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "source": "urn:oid:2.16.840.1.113883.2.4.15.111",
+      "sourceVersion": "RolCodeNL",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "01.*",
+          "display": "Arts",
+          "target": [
+            {
+              "code": "309343006",
+              "display": "Medical doctor",
+              "equivalence": "narrower",
+              "comment": "Allemaal artsen"
+            }
+          ]
+        },
+        {
+          "code": "02.054",
+          "display": "Kaakchirurg",
+          "target": [
+            {
+              "code": "309343006",
+              "display": "Medical doctor",
+              "equivalence": "narrower",
+              "comment": "Een kaakchirurg is een arts"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@
         {
           "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
           "name": "Bron",
-          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
@@ -44,12 +44,6 @@
           "tag": [ { "name": "Zib element", "value": "Auteur" } ]
         },
         {
-          "path": "status",
-          "name": "Status",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "nvt" } ]
-        },
-        {
           "path": "method.text",
           "name": "+Methode",
           "type": "string",
@@ -64,16 +58,30 @@
         {
           "path": "code.coding.where(system='http://loinc.org').select('LOINC#' + code + ' ' + display)",
           "name": "+Meting",
-          "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
+          "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "MetingNaam" } ]
         },
         {
           "path": "code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').select('NHG45#' + code + ' ' + display)",
           "name": "+Meting",
-          "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
+          "description": "",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "MetingNaam" } ]
+        },
+        {
+          "path": "comment | note.text",
+          "name": "+Toelichting",
+          "description": "<b>LET OP:</b> <code>note.text</code> is een FHIR R4 veld",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
+        },
+        {
+          "path": "code.coding.where(system='http://loinc.org' and code!='8716-3').translate('vital-signs-groups').target[0].display | code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').translate('vital-signs-groups').target[0].display",
+          "name": "(Groep)",
+          "description": "Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;/ConceptMap/vital-signs-groups$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br>Verberg regels die <b>GEEN</b> groep hebben.",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Observation' and category.coding.code='vital-signs')"

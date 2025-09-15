@@ -1,0 +1,186 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Probleemlijst",
+  "title": "Problemen (incl. diagnosen)",
+  "select": [
+    {
+      "unionAll": [
+        {
+          "column": [
+            {
+              "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+              "name": "Bron",
+              "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "nvt"
+                }
+              ]
+            },
+            {
+              "path": "onsetPeriod.start | onsetDateTime",
+              "name": "Datum",
+              "description": "Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn",
+              "type": "Period/dateTime",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "ProbleemBeginDatum"
+                }
+              ]
+            },
+            {
+              "path": "code.text | code.coding[0].display",
+              "name": "Diagnose",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "ProbleemNaam"
+                }
+              ]
+            },
+            {
+              "path": "clinicalStatus",
+              "name": "Status",
+              "description": "Mapping: <code>active,recurrence</code> naar <code>Actueel</code>; <code>inactive,remission</code> naar <code>Niet actueel</code>",
+              "type": "code",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "ProbleemStatus"
+                }
+              ]
+            },
+            {
+              "path": "code.coding[0].select(system.lookup('CodeSystems').display+'#' + code + ' ' + iif(exists(display),display,''))",
+              "name": "+Diagnose",
+              "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "ProbleemNaam"
+                }
+              ]
+            },
+            {
+              "path": "note.text",
+              "name": "+Toelichting",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "Toelichting"
+                }
+              ]
+            },
+            {
+              "path": "clinicalStatus",
+              "name": "(regelkleur)",
+              "description": "Actueel (<code>active</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive</code>) = grijze rijen",
+              "type": "code",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "ProbleemStatus"
+                }
+              ]
+            }
+          ],
+          "forEach": "entry.resource.where(resourceType='Condition')"
+        },
+        {
+          "column": [
+            {
+              "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+              "name": "Bron",
+              "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "nvt"
+                }
+              ]
+            },
+            {
+              "path": "diagnosis.condition.resolve().select(onsetPeriod.start | onsetDateTime)",
+              "name": "Datum",
+              "description": "Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn",
+              "type": "Period/dateTime",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "Probleem/ ProbleemBeginDatum"
+                }
+              ]
+            },
+            {
+              "path": "diagnosis.condition.resolve().select(code.text | code.coding[0].display)",
+              "name": "Diagnose",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "Probleem/ ProbleemNaam"
+                }
+              ]
+            },
+            {
+              "path": "status",
+              "name": "Status",
+              "description": "Mapping: <code>active</code> naar <code>Actueel</code>",
+              "type": "code",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "nvt"
+                }
+              ]
+            },
+            {
+              "path": "diagnosis.condition.resolve().select(code.coding[0].select(system.lookup('CodeSystems')[0].display+'#' + code + ' ' + iif(exists(display),display,'')))",
+              "name": "+Diagnose",
+              "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "Probleem/ ProbleemNaam"
+                }
+              ]
+            },
+            {
+              "path": "diagnosis.condition.resolve().note.text",
+              "name": "+Toelichting",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "Probleem/ Toelichting"
+                }
+              ]
+            },
+            {
+              "path": "status",
+              "name": "(regelkleur)",
+              "description": "Actueel (<code>active</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive</code>) = grijze rijen",
+              "type": "code",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "nvt"
+                }
+              ]
+            }
+          ],
+          "forEach": "entry.resource.where(resourceType='EpisodeOfCare')"
+        }
+      ]
+    }
+  ]
+}

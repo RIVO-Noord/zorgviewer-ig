@@ -27,7 +27,7 @@
 <td><samp>extension.where('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.resolve().code.text</samp></td>
 <td><code>string</code></td>
 <td>Conditie::Probleem</td>
-<td>Als geen Voor(1), dan Voor(2), als geen Voor(2) dan Voor(3).<br/><i>De Condition resolve in de resultaat Bundle.</i></td>
+<td>Als geen Voor(1), dan Voor(2), als geen Voor(2) dan Voor(3).<br/><i>De flag-detail Condition opzoeken in de resultaat Bundle.</i></td>
 </tr>
 <tr>
 <td>Voor(2)</td>
@@ -51,11 +51,18 @@
 <td></td>
 </tr>
 <tr>
-<td>Status</td>
+<td>Status(1)</td>
+<td><samp>extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.resolve().clinicalStatus</samp></td>
+<td><code>code</code></td>
+<td>Conditie::Probleem/ProbleemStatus</td>
+<td>Logica: als geen Status(1), dan Status(2)<br/>Mapping: <code>active,recurrence</code> naar <code>Actueel</code>; <code>inactive,remission</code> naar <code>Niet actueel</code></td>
+</tr>
+<tr>
+<td>Status(2)</td>
 <td><samp>status</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
-<td>Mapping: <code>active</code> naar <code>actueel</code>; <code>in-active</code> naar <code>niet actueel</code> Uitgefilterd: <code>entered-in-error</code> wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.</td>
+<td>Mapping: <code>active</code> naar <code>Actueel</code>; <code>inactive</code> naar <code>Niet actueel</code> Uitgefilterd: <code>entered-in-error</code> wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.</td>
 </tr>
 </tbody>
 </table>

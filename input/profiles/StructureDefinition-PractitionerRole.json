@@ -8,7 +8,7 @@
     "kind": "resource",
     "abstract": false,
     "type": "PractitionerRole",
-    "baseDefinition" : "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole",
+    "baseDefinition": "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole",
     "derivation": "constraint",
     "differential": {
         "element": [
@@ -28,8 +28,29 @@
             {
                 "id": "PractitionerRole.code",
                 "path": "PractitionerRole.code",
-                "definition": "Zie [ConceptMap-epic-rolcode](ConceptMap-epic-rolcode.html)",
-                "mustSupport": true
+                "definition": "Zie [ConceptMap-epic-rolcode](ConceptMap-epic-rolcode.html) en [ConceptMap-rolcodenl](ConceptMap-rolcodenl.html)",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "description": "A custom code defined by a concept map.",
+                    "valueSetReference": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap",
+                                "valueReference": {
+                                    "reference": "http://fhir.hl7.nl/zorgviewer/ConceptMap/rolcodenl"
+                                }
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap",
+                                "valueReference": {
+                                    "reference": "http://fhir.hl7.nl/zorgviewer/ConceptMap/epic-rolcode"
+                                }
+                            }
+                        ],
+                        "reference": "http://fhir.hl7.nl/zorgviewer/ValueSet/SubjectRoleCodelist"
+                    }
+                }
             },
             {
                 "id": "PractitionerRole.specialty.coding:SpecialtyAGB",

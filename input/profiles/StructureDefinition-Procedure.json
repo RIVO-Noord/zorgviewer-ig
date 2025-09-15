@@ -18,10 +18,11 @@
                 "mustSupport": true
             },
             {
-                "id": "Procedure.code.coding",
+                "id": "Procedure.code.coding:VerrichtingTypeCodelijst",
                 "path": "Procedure.code.coding",
+                "sliceName": "VerrichtingTypeCodelijst",
                 "binding": {
-                    "strength": "extensible",
+                    "strength": "required",
                     "valueSetReference": {
                         "reference": "http://fhir.hl7.nl/zorgviewer/ValueSet/VerrichtingTypeCodelist"
                     }
@@ -65,8 +66,9 @@
                 "path": "Procedure.bodySite"
             },
             {
-                "id": "Procedure.bodySite.extension:Laterality",
+                "id": "Procedure.bodySite.extension:ProcedureLaterality",
                 "path": "Procedure.bodySite.extension",
+                "sliceName": "ProcedureLaterality",
                 "mustSupport": true
             }
         ]

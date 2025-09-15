@@ -1,0 +1,37 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/EpisodeOfCare",
+    "name": "EpisodeOfCare",
+    "title": "EpisodeOfCare",
+    "status": "draft",
+    "description": "Zorgepisode",
+    "kind": "resource",
+    "abstract": false,
+    "type": "EpisodeOfCare",
+    "baseDefinition": "http://fhir.nl/fhir/StructureDefinition/nl-core-episodeofcare",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "EpisodeOfCare",
+                "path": "EpisodeOfCare"
+            },
+            {
+                "id": "EpisodeOfCare.status",
+                "path": "EpisodeOfCare.status",
+                "mustSupport": true
+            },
+            {
+                "id": "EpisodeOfCare.diagnosis.condition",
+                "path": "EpisodeOfCare.diagnosis.condition",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition"
+                    }
+                ],
+                "mustSupport": true
+            }
+        ]
+    }
+}
