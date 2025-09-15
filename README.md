@@ -78,22 +78,25 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 ### Afhechten van een Release
 
 1. Werk de volgende files bij: 
-  1. ``input/pagecontent/changes.md`` (github links, comparison version en change bullets)
-  1. ``input/images/package-feed.xml`` (datum, versie, IG publisher versie; zodat nieuwe versie opgenomen wordt in de fhir package registries)
-  1. ``fhir.hl7.nl/package-list.json`` (datum, versie, IG publisher versie en upload naar fhir.hl7.nl/zorgviewer; used for version comparison!)
-  1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
-  1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
-1. ``> git commit -a -m "afhechten release"; git push``
+    1. ``input/pagecontent/changes.md`` (github links, comparison version en change bullets)
+    1. ``input/images/package-feed.xml`` (datum, versie, IG publisher versie; zodat nieuwe versie opgenomen wordt in de fhir package registries)
+    1. ``fhir.hl7.nl/package-list.json`` (datum, versie, IG publisher versie en upload naar fhir.hl7.nl/zorgviewer; used for version comparison!)
+    1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
+    1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
+1. ``> git commit -a -m "afhechten sprintX"; git push``
+1. (optionally) Generate changelog using Gemini
+    1. First update tags and then `> git pull`
+    1. Then use `gemini` with the following prompt: `Generate a changelog for the changes from the last tag up to the HEAD and summerize this in a short bullet list`
 1. Create tag "1.M.R-sprintX" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
-  1. Tags
-  1. Releases
-  1. Draft new release
-  1. Choose a tag: "1.M.R-sprintX"
-  1. Create a new tag
-  1. Release title: "1.M.R-sprintX"
-  1. Description: generate release notes -> "{github changes link}"
-  1. Vink aan: Set as the latest release
-  1. Publish release
+    1. Tags
+    1. Releases
+    1. Draft new release
+    1. Choose a tag: "1.M.R-sprintX"
+    1. Create a new tag
+    1. Release title: "1.M.R-sprintX"
+    1. Description: generate release notes -> "{github changes link}"
+    1. Vink aan: Set as the latest release
+    1. Publish release
 
 ### Vrijgeven van de laatste Release
 
@@ -107,7 +110,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 1. Zet release label in zorgviewer-ig.json op "sprintX"
 ```
 > vi input/zorgviewer-ig.json
-> git commit -a -m "snapshot publication"
+> git commit -a -m "publication sprintX"
 > git push
 ```
 1. En werk verder in de master branch
