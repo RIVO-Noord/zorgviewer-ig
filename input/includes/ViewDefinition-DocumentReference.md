@@ -17,10 +17,10 @@
 </tr>
 <tr>
 <td>Datum</td>
-<td><samp>iif(exists(context.period.start), context.period.start, indexed+' &#9432;')</samp></td>
+<td><samp>iif(exists(context.period.start), context.period.start, indexed)</samp></td>
 <td><code>dateTime</code></td>
 <td>nvt</td>
-<td>N.B. tijd is GMT, dus omzetten naar CET. Ter info: indien datum uit <code>indexed</code> komt, wordt deze gemarkeerd met een icoontje &#9432;</td>
+<td>N.B. tijd is GMT, dus omzetten naar CET. Ter info: indien datum uit <code>indexed</code> komt, deze markeren met een icoontje &#9432;</td>
 </tr>
 <tr>
 <td>Type</td>

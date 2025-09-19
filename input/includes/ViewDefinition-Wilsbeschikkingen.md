@@ -24,9 +24,16 @@
 </tr>
 <tr>
 <td>Type</td>
-<td><samp>category[1].text</samp></td>
+<td><samp>category[1].coding.display</samp></td>
 <td><code>string</code></td>
 <td>WilsverklaringType</td>
+<td></td>
+</tr>
+<tr>
+<td>Toelichting</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/Comment').valueString</samp></td>
+<td><code>string</code></td>
+<td>Toelichting</td>
 <td></td>
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>

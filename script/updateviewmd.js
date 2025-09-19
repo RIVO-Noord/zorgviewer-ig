@@ -48,7 +48,7 @@ function resolveFn(inputs) {
         }
     }
     if (!resolved) {
-        console.error(`No example found for reference: ${reference}`);
+        console.log(`No example found for reference: ${reference}`);
     }
     return resolved;
 }
@@ -252,7 +252,7 @@ function doExampleRows(select, md_ui) {
                     // var text = dosageToString(example.dosageInstruction[0]);
                     var text = dosageToStringGemini(example.dosageInstruction[0]);
                     if (text.includes("undefined")) {
-                        console.error("Some expected dosage parts undefined?", JSON.stringify(example.dosageInstruction));
+                        console.error("ERROR: Some expected dosage parts undefined?", JSON.stringify(example.dosageInstruction));
                     }
                     example.dosageInstruction[0].text = text + ' &#9432;';
                 }
@@ -262,12 +262,12 @@ function doExampleRows(select, md_ui) {
                 if (match3) {
                     var result;
                     try { result = fhirpath.evaluate(example, match3[1]); }
-                    catch (err) { console.error ("Error evaluating where clause", match3[1], err.message); }
+                    catch (err) { console.error ("ERROR: Error evaluating where clause", match3[1], err.message); }
                     if (result[0]) {
                         const values = select.column.map(column => {
                             var result;
                             try { result = fhirpath.evaluate(example, `${column.path}`, null, fhirpath_stu3_model, { userInvocationTable }); }
-                            catch (err) { console.error(column.name, err.message, column.path); }
+                            catch (err) { console.error("ERROR:", column.name, err.message, column.path); }
                             var value = "";
                             if (result && result.length > 0) {
                                 if (column.type == "date" || column.type == "dateTime") {
