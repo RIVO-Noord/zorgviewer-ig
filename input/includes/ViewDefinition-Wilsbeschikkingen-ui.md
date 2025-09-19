@@ -11,14 +11,14 @@
 <tr><td>+</td>
 <td>Chipsoft-Bundle</td>
 <td>28-6-2019</td>
-<td>other</td>
+<td>Patiëntinformatie - Wilsbeschikkingen</td>
 <td></td>
 </tr><tr><td></td><td colspan=4>
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
 <td>9-4-2018</td>
-<td>other</td>
+<td>Patiëntinformatie - Wilsbeschikkingen</td>
 <td>Niet-reanimerenpenning</td>
 </tr><tr><td></td><td colspan=4>
 </td></tr>

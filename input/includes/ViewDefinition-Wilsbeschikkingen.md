@@ -24,7 +24,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td><samp>category[1].coding.display</samp></td>
+<td><samp>category[1].text | category[1].coding.display</samp></td>
 <td><code>string</code></td>
 <td>WilsverklaringType</td>
 <td></td>
