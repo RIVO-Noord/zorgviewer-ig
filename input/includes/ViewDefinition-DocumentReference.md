@@ -23,22 +23,8 @@
 <td>N.B. tijd is GMT, dus omzetten naar CET. Ter info: indien datum uit <code>indexed</code> komt, deze markeren met een icoontje &#9432;</td>
 </tr>
 <tr>
-<td>Type</td>
-<td><samp>iif(type.text.startsWith('2.16.840.1.113883.'), type.coding[0].code, type.text)</samp></td>
-<td><code>string</code></td>
-<td>nvt</td>
-<td></td>
-</tr>
-<tr>
-<td>Class</td>
-<td><samp>iif(class.text.startsWith('2.16.840.1.113883.'), class.coding[0].code, class.text)</samp></td>
-<td><code>string</code></td>
-<td>nvt</td>
-<td></td>
-</tr>
-<tr>
 <td>Beschrijving</td>
-<td><samp>iif(exists(description), description, content.attachment.title)</samp></td>
+<td><samp>iif(exists(description), description, content.attachment.title.replace('.pdf',''))</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td>Tijdelijk voor Zorgplatform: gebruik <code>content.attachment.title</code> voor de beschrijving van documenten inclusief het strippen van de <code>.pdf</code> extensie</td>
@@ -64,6 +50,13 @@
 <td><code>code</code></td>
 <td>nvt</td>
 <td>Alleen <code>application/pdf</code> tonen</td>
+</tr>
+<tr style="background-color:#d6dce5">
+<td>(Type)</td>
+<td><samp>iif(type.text.startsWith('2.16.840.1.113883.'), type.coding[0].code, type.text)</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td></td>
 </tr>
 </tbody>
 </table>
