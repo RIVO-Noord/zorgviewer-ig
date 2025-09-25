@@ -24,7 +24,7 @@
 </tr>
 <tr>
 <td>Beschrijving</td>
-<td><samp>iif(exists(description), description, content.attachment.title.replace('.pdf',''))</samp></td>
+<td><samp>iif(exists(description), description, content.attachment.title.replace('.pdf',''))+iif(exists(context.encounter.display),' '+context.encounter.display,'')</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td>Tijdelijk voor Zorgplatform: gebruik <code>content.attachment.title</code> voor de beschrijving van documenten inclusief het strippen van de <code>.pdf</code> extensie</td>

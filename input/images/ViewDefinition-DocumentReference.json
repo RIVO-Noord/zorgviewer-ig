@@ -21,7 +21,7 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "iif(exists(description), description, content.attachment.title.replace('.pdf',''))",
+          "path": "iif(exists(description), description, content.attachment.title.replace('.pdf',''))+iif(exists(context.encounter.display),' '+context.encounter.display,'')",
           "name": "Beschrijving",
           "description": "Tijdelijk voor Zorgplatform: gebruik <code>content.attachment.title</code> voor de beschrijving van documenten inclusief het strippen van de <code>.pdf</code> extensie",
           "type": "string",
