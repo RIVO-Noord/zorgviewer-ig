@@ -27,13 +27,13 @@
         },
         {
           "path": "valueQuantity.value.toString()+' '+valueQuantity.unit | valueString | valueCodeableConcept.coding.display",
-          "name": "Value",
+          "name": "Waarde",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Uitslag/Waarde" } ]
         },
         {
           "path": "component.valueQuantity.value.select(toString()).join('/')+' '+component[0].valueQuantity.unit",
-          "name": "Components",
+          "name": "Waarde componenten",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
         },
@@ -79,7 +79,7 @@
         {
           "path": "code.coding.where(system='http://loinc.org' and code!='8716-3').translate('vital-signs-groups').target[0].display | code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').translate('vital-signs-groups').target[0].display",
           "name": "(Groep)",
-          "description": "Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;/ConceptMap/vital-signs-groups$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br>Verberg regels die <b>GEEN</b> groep hebben.",
+          "description": "Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;<a href='ConceptMap-vital-signs-groups.html'>/ConceptMap/vital-signs-groups</a>$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br>Verberg regels die <b>GEEN</b> groep hebben.",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }

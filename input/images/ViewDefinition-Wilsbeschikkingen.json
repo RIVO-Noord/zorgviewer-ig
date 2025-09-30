@@ -21,10 +21,16 @@
           "tag": [ { "name": "Zib element", "value": "WilsverklaringDatum" } ]
         },
         {
-          "path": "category[1].text",
+          "path": "category[1].text | category[1].coding.display",
           "name": "Type",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "WilsverklaringType" } ]
+        },
+        {
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/Comment').valueString",
+          "name": "Toelichting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
         },
         {
           "path": "sourceAttachement.data",
@@ -33,7 +39,7 @@
           "tag": [ { "name": "Zib element", "value": "WilsverklaringDocument" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='Consent' and category.coding.first().code='11341000146107')"
+      "forEach": "entry.resource.where(resourceType='Consent' and category.coding.where(code='11341000146107'))"
     }
   ]
 }

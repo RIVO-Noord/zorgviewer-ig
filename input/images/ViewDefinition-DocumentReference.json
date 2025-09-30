@@ -14,26 +14,14 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "iif(exists(context.period.start), context.period.start, indexed+' &#9432;')",
+          "path": "iif(exists(context.period.start), context.period.start, indexed)",
           "name": "Datum",
-          "description": "N.B. tijd is GMT, dus omzetten naar CET. Ter info: indien datum uit <code>indexed</code> komt, wordt deze gemarkeerd met een icoontje &#9432;",
+          "description": "N.B. tijd is GMT, dus omzetten naar CET. Ter info: indien datum uit <code>indexed</code> komt, deze markeren met een icoontje &#9432;",
           "type": "dateTime",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "iif(type.text.startsWith('2.16.840.1.113883.'), type.coding[0].code, type.text)",
-          "name": "Type",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "nvt" } ]
-        },
-        {
-          "path": "iif(class.text.startsWith('2.16.840.1.113883.'), class.coding[0].code, class.text)",
-          "name": "Class",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "nvt" } ]
-        },
-        {
-          "path": "iif(exists(description), description, content.attachment.title)",
+          "path": "iif(exists(description), description, content.attachment.title.replace('.pdf',''))+iif(exists(context.encounter.display),', '+context.encounter.display,'')",
           "name": "Beschrijving",
           "description": "Tijdelijk voor Zorgplatform: gebruik <code>content.attachment.title</code> voor de beschrijving van documenten inclusief het strippen van de <code>.pdf</code> extensie",
           "type": "string",
@@ -58,6 +46,12 @@
           "name": "(MimeType)",
           "description": "Alleen <code>application/pdf</code> tonen",
           "type": "code",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "iif(type.text.startsWith('2.16.840.1.113883.'), type.coding[0].code, type.text)",
+          "name": "(Type)",
+          "type": "string",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }
       ],

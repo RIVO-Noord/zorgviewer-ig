@@ -6,8 +6,8 @@
 <th>Bron</th>
 <th>Datum</th>
 <th>Meting</th>
-<th>Value</th>
-<th>Components</th>
+<th>Waarde</th>
+<th>Waarde componenten</th>
 <th>Uitvoerder</th>
 <th>(Groep)</th>
 </tr>
