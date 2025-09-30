@@ -1,11 +1,12 @@
 ### Versies
 
-[Resource comparison with version v1.18.0](comparison-v1.18.0/index.html)
+[Resource comparison with version v1.19.0](comparison-v1.18.0/index.html)
 
 |Versie|Datum|Changes|
 |---|---|---|
-|1.20.0-sprint68|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.19.0-sprint67...||
-|1.19.0-sprint67|15-sep-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.18.0-sprint65...|1.19.0-sprint67|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.18.0-sprint65...master)<br/>* Probleemlijst, Vitale gegevens en Labuitslagen updates door toevoegen huisartsgegevens (n.b. FHIR R4)<br/>* Wireframes uit ViewDefinitions en (Bundled) Examples en $lookup en $translate van codes<br/>* Verschillende kleine verbeteringen en aanvullingen|
+|1.21.0-sprint69|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.19.0-sprint67...HEAD)||
+|1.20.0-sprint68|30-sep-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.20.0-sprint68...1.19.0-sprint67)||
+|1.19.0-sprint67|15-sep-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.18.0-sprint65...1.19.0-speint67)<br/>* Probleemlijst, Vitale gegevens en Labuitslagen updates door toevoegen huisartsgegevens (n.b. FHIR R4)<br/>* Wireframes uit ViewDefinitions en (Bundled) Examples en $lookup en $translate van codes<br/>* Verschillende kleine verbeteringen en aanvullingen|
 |1.18.0-sprint65|18-aug-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.17.0-sprint64...1.18.0-sprint65)<br/>* Sanday (van alles) en Chipsoft (vitale gegevens) voorbeelden toegevoegd<br/>* Mockup generatie script kan nu omgaan met Bundled voorbeelden<br/>* Kleinere optimalisaties en Nexus foutje|
 |1.17.0-sprint64|2-aug-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.16.0-sprint61...1.17.0-sprint64)<br/>* Medicatie toegevoegd ivm medicatie vorm<br/>* Vitale gegevens aanzet|
 |1.16.0-sprint61|20-jun-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.15.0-sprint58...1.16.0-sprint61)<br/>* Mainly minor corrections and Sanday comparison start|
