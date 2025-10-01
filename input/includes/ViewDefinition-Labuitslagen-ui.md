@@ -13,6 +13,84 @@
 <th>Status</th>
 </tr>
 <tr><td>+</td>
+<td>Chipsoft-Bundle</td>
+<td>30-8-2019</td>
+<td>eGFR/1.73 m2</td>
+<td>74 mL/min</td>
+<td></td>
+<td></td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Chipsoft-Bundle</td>
+<td>30-8-2019</td>
+<td>Kreatinine</td>
+<td>90 umol/L</td>
+<td></td>
+<td>50 - 110 umol/L</td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Chipsoft-Bundle</td>
+<td>30-8-2019</td>
+<td>Kalium</td>
+<td>4.2 mmol/L</td>
+<td></td>
+<td>3.5 - 5 mmol/L</td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Chipsoft-Bundle</td>
+<td>30-8-2019</td>
+<td>CRP</td>
+<td>8 mg/L</td>
+<td>Boven referentiewaarde</td>
+<td></td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+<b>Commentaar</b><br/>Toelichting: t.b.v. VIPP ;<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Chipsoft-Bundle</td>
+<td>30-8-2019</td>
+<td>Natrium</td>
+<td>140 mmol/L</td>
+<td></td>
+<td>135 - 145 mmol/L</td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Chipsoft-Bundle</td>
+<td>30-8-2019</td>
+<td>Bezinking (BSE)</td>
+<td>18 mm/h</td>
+<td></td>
+<td></td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Chipsoft-Bundle</td>
+<td>30-8-2019</td>
+<td>Hemoglobine</td>
+<td>10 mmol/L</td>
+<td></td>
+<td>8.5 - 11 mmol/L</td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft</td>
 <td>30-9-2022</td>
 <td>Chloride</td>
