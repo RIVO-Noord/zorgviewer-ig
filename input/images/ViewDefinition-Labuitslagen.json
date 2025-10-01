@@ -18,34 +18,34 @@
           "path": "specimen.resolve().collection.collectedDateTime | effectiveDateTime",
           "name": "Afnamedatum",
           "type": "dateTime",
-          "tag": [ { "name": "Zib element", "value": "Monster/ AfnameDatumTijd" } ]
+          "tag": [ { "name": "Zib element", "value": "Monster/ AfnameDatumTijd, LaboratoriumTest/ TestDatumTijd" } ]
         },
         {
           "path": "code.text | code.coding[0].display",
           "name": "Test",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "TestCode" } ]
+          "tag": [ { "name": "Zib element", "value": "LaboratoriumTest/ TestCode" } ]
         },
         {
           "path": "valueString | valueQuantity.value.toString() + iif(valueQuantity.unit.exists(),' ' + valueQuantity.unit,'')",
           "name": "Testuitslag",
           "description": "<b>Epic:</b> Indien lab-order geannuleerd, dan krijgt dit alsnog de status <code>Definitief</code> met een Testuitslag van <code>GEANNULEERD</code>. Dit is voor nu akkoord bevonden door stuurgroep Zorgviewer.",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "TestUitslag" } ]
+          "tag": [ { "name": "Zib element", "value": "LaboratoriumTest/ TestUitslag" } ]
         },
         {
           "path": "interpretation.text",
           "name": "Interpretatie",
           "description": "<code>AA</code>: uitroepteken icon, kritiek<br/><code>281302008</code> of <code>H</code>: pijl omhoog, boven de bovengrens<br/><code>281300000</code> of <code>L</code>: pijl naar beneden, onder de ondergrens<br/>N.B. <code>Resistent</code>, <code>Intermediar</code> en <code>Sensitief</code> vanuit de standaard zijn niet van toepassing op de klinische chemie.",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "InterpretatieVlaggen" } ]
+          "tag": [ { "name": "Zib element", "value": "LaboratoriumTest/ InterpretatieVlaggen" } ]
         },
         {
           "path": "referenceRange.low.value.toString() + ' - ' + referenceRange.high.value.toString() + iif(referenceRange.high.unit.exists(),' ' + referenceRange.high.unit,'')",
           "name": "Onder- en bovengrens",
           "description": "Indien <code>low.unit</code> en <code>high.unit</code> niet gelijk zijn aan elkaar toon dan <code>unit</code> bij beide.",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "ReferentieOndergrens, ReferentieBovengrens" } ]
+          "tag": [ { "name": "Zib element", "value": "LaboratoriumTest/ReferentieOndergrens, LaboratoriumTest/ ReferentieBovengrens" } ]
         },
         {
           "path": "specimen.resolve().type.text",
