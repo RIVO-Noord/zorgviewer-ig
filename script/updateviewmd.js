@@ -282,8 +282,10 @@ function doExampleRows(select, md_ui) {
                                     }
                                 }
                                 else {
-                                    value = result[0].replace(/\r?\n/g, "<br/>");
-                                    if (value.length > 80) value = `${value.substring(0,80)}...`;    
+                                    value = result[0];
+                                    if (value.length > 80) value = `${value.substring(0,80)}...`;
+                                    value = value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                                    value = value.replace(/\r?\n/g, "<br/>");
                                 }
                             }
                             return value;

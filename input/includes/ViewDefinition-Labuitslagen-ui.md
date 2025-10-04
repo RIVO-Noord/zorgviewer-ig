@@ -132,13 +132,13 @@
 <td>Chipsoft-Bundle2</td>
 <td>17-10-2022</td>
 <td>AKI alert</td>
-<td><Memo></td>
+<td>&lt;Memo&gt;</td>
 <td></td>
 <td></td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
-<b>Commentaar</b><br/>Toelichting: Niet te beoordelen.<br/>Volgens KDIGO-richtlijn niet te berekenen<b...<br/>
+<b>Commentaar</b><br/>Toelichting: Niet te beoordelen.<br/>Volgens KDIGO-richtlijn niet te berekenen<br/>want ...<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft-Bundle2</td>
@@ -247,7 +247,7 @@
 <td>Chipsoft-Bundle2</td>
 <td>17-10-2022</td>
 <td>Amylase</td>
-<td><20</td>
+<td>&lt;20</td>
 <td>Onder referentiewaarde</td>
 <td>30 - 640 U/L</td>
 <td>Urine portie</td>
@@ -313,13 +313,13 @@
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
-<b>Commentaar</b><br/>Toelichting: Ochtend                  0.25 - 0.83   µmol/L<br/>Middag           ...<br/>
+<b>Commentaar</b><br/>Toelichting: Ochtend                  0.25 - 0.83   µmol/L<br/>Middag               ...<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft-Bundle2</td>
 <td>17-10-2022</td>
 <td>Engels raaigras</td>
-<td><0.35</td>
+<td>&lt;0.35</td>
 <td></td>
 <td></td>
 <td>Bloed</td>
@@ -343,7 +343,7 @@
 <td>Chipsoft-Bundle2</td>
 <td>17-10-2022</td>
 <td>Bijvoet</td>
-<td><0.35</td>
+<td>&lt;0.35</td>
 <td></td>
 <td></td>
 <td>Bloed</td>
@@ -355,7 +355,7 @@
 <td>Chipsoft-Bundle2</td>
 <td>17-10-2022</td>
 <td>Huismijt</td>
-<td><0.35</td>
+<td>&lt;0.35</td>
 <td></td>
 <td></td>
 <td>Bloed</td>
@@ -379,7 +379,7 @@
 <td>Chipsoft-Bundle2</td>
 <td>17-10-2022</td>
 <td>Timotheegras</td>
-<td><0.35</td>
+<td>&lt;0.35</td>
 <td></td>
 <td></td>
 <td>Bloed</td>
@@ -391,7 +391,7 @@
 <td>Chipsoft-Bundle2</td>
 <td>17-10-2022</td>
 <td>Huisstofmijt</td>
-<td><0.35</td>
+<td>&lt;0.35</td>
 <td></td>
 <td></td>
 <td>Bloed</td>

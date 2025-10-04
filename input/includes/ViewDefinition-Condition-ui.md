@@ -27,7 +27,7 @@
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>ICD-10#F43.1 <br/>
-<b>Toelichting</b><br/>2022-02: ziekte van Crohn<br/>2021-07: Complicatie ANPY infectie lokaal<br/>2021...<br/>
+<b>Toelichting</b><br/>2022-02: ziekte van Crohn<br/>2021-07: Complicatie ANPY infectie lokaal<br/>2021-03: z...<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
