@@ -10,17 +10,17 @@ Het doel van de test cases is om de bestaande Zorgviewer kolommen te voorzien va
 
 **Toevoegen wat wel/niet wordt getoond (disclaimer).**
 
-Hennie: bron kolommen verwijderen
 Hennie: italic nog aanvullen met haakjes
 
 Check bij Lieke: begrijpbare lay-out? (duidelijk wat er gevraagd wordt om in te vullen?). Niet alle velden zijn waarschijnlijk 1:1 in het bronsysteem in te vullen. Bijvoorbeeld de status 'niet actueel' kan worden herleid door hoe dit in het bronsysteem is geregistreerd.
 
-### Testpatiënt 1    
+### Testpatiënt 1
+
 Omschrijving testpatiënt 1: alle hieronder genoemde testcases kunnen bij testpatiënt 1 worden geregistreerd.
 
 
 
-#### Patiëntgegevens  
+#### Patiëntgegevens 
 
 | Testpatiënt 1 | Patiëntgegevens  | |
 | --- | --- | --|
@@ -36,7 +36,6 @@ Scenario: maak een verwijsbrief aan als arts voor testpatiënt 1. Includeer in d
  
 | Testpatiënt 1 | Correspondentie - verwijsbrief |
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum | _Datum van vandaag_ | 
 | Beschrijving| Verwijsbrief | 
 | Auteur | _Naam ingelogde zorgverlener_| 
@@ -48,7 +47,6 @@ Scenario: maak een verwijsbrief aan als arts voor testpatiënt 1. Includeer in d
 Gebruik voor het registreren van de problemen/ diagnoses de beschikbare DHD variant. 
 | Testpatiënt 1 | Problemen (incl. diagnoses) - status actief|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum | 10-08-2012 | 
 | Diagnose | Oedeem| 
 | Status | Actueel/Actief | 
@@ -57,7 +55,6 @@ Gebruik voor het registreren van de problemen/ diagnoses de beschikbare DHD vari
 
 | Testpatiënt 1 | Problemen (incl. diagnoses) - status inactief|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum | 15-11-2012 | 
 | Diagnose | Kortademigheid| 
 | Status | Niet actueel/ Inactief | 
@@ -66,7 +63,6 @@ Gebruik voor het registreren van de problemen/ diagnoses de beschikbare DHD vari
 
 | Testpatiënt 1 | Problemen (incl. diagnoses) - status inactief, met einddatum|
 | --- | --- | 
-| Bron | {_Eigen systeem_} | 
 | Datum | 20-04-2011 | 
 | Diagnose | Polsfractuur| 
 | Status | Niet actueel/ Inactief |
@@ -86,7 +82,6 @@ Gebruik voor het registreren van de verrichtingen de beschikbare DHD Verrichting
 
 | Testpatiënt 1 | Klinische verrichting|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum | 05-06-2012 | 
 | Verrichting | implantatie van polsprothese |
 | Locatie |UMCG| 
@@ -96,7 +91,6 @@ Gebruik voor het registreren van de verrichtingen de beschikbare DHD Verrichting
 
 | Testpatiënt 1 | Poliklinische verrichting|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum |  | 
 | Verrichting |  |
 | Locatie || 
@@ -116,7 +110,6 @@ minimaal 1 die niet op onze lijst staat (negatieve test)
 
 | Testpatiënt 1 | Behandelaanwijzingen, |
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum |11-9-2012  | 
 | Behandeling |Opname op Intensive Care| 
 | Behandeling toegestaan |Ja| 
@@ -128,7 +121,6 @@ minimaal 1 die niet op onze lijst staat (negatieve test)
 
 | Testpatiënt 1 | Behandelaanwijzingen, |
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum |  | 
 | Behandeling || 
 | Behandeling toegestaan || 
@@ -150,7 +142,6 @@ Maak een wilsverklaring document aan.
 
 | Testpatiënt 1 | Wilsverklaring|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum | 15-08-2021  | 
 | Type |Niet reanimeren verklaring| 
 | Toelichting |Test tekst Zorgviewer| 
@@ -165,7 +156,6 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 
 | Testpatiënt 1 | Laboratoriumuitslagen|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Afnamedatum | {_Vandaag_} |
 | Test | Natrium| 
 | Testuitslag | 138 mmol/l |
@@ -184,7 +174,6 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 
 | Testpatiënt 1 | Alerts/waarschuwingen, actueel|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum | 01-12-2023 |
 | Voor | Drager van besmettelijke ziekte | 
 | Categorie | | 
@@ -193,7 +182,6 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 
 | Testpatiënt 1 | Alerts/waarschuwingen, niet actueel|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum | 18-03-2024 |
 | Voor | Drager MRSA | 
 | Status | Inactief/ niet actueel |  
@@ -206,7 +194,6 @@ Willen we nog specifieke voorbeelden t.b.v. voor uitvragen gezien de logica in z
 
 | Testpatiënt 1 | Allergieën en intoleranties|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum | 08-11-2008 |
 | Stof |Bijengif| 
 | Toelichting || 
@@ -218,7 +205,6 @@ Willen we nog specifieke voorbeelden t.b.v. voor uitvragen gezien de logica in z
 
 | Testpatiënt 1 | Allergieën en intoleranties|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum | 02-06-1998 |
 | Stof |Penicilline| 
 | Toelichting |Details onbekend| 
@@ -232,7 +218,6 @@ Willen we nog specifieke voorbeelden t.b.v. voor uitvragen gezien de logica in z
 
 | Testpatiënt 1 | Medicatie, medicatie afspraak|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum | 8-9-2025 |
 | Medicatie | Lisinopril tablet 10mg| 
 | Dosering en instructies | Van 8-9-2025 tot 18-9-2025 1x per dag 1 stuk.| 
@@ -245,7 +230,6 @@ Willen we nog specifieke voorbeelden t.b.v. voor uitvragen gezien de logica in z
 
 | Testpatiënt 1 | Medicatie, medicatie gebruik|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum |  |
 | Medicatie |Paracetamol tablet 500 mg | 
 | Dosering en instructies |In de maand september heb ik regelmatig paracetamol gebruikt. | 
@@ -264,7 +248,6 @@ bewust biologicals en chemo niet uitgevraagd.
 
 | Testpatiënt 1 | Vaccinaties|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum | 03-06-2023 |
 | Product | Hepatitis A vaccin|
 | Toelichting | Bezoek aan Guatemala. |
@@ -274,7 +257,6 @@ bewust biologicals en chemo niet uitgevraagd.
 
 | Testpatiënt 1 | Vitale gegevens|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum |  |
 | Meting | | 
 | Waarde | |
@@ -286,7 +268,6 @@ bewust biologicals en chemo niet uitgevraagd.
 
 | Testpatiënt 1 | Vitale gegevens|
 | --- | --- | 
-| Bron | _Eigen systeem_ | 
 | Datum |  _Vandaag_ |
 | Meting | Bloeddruk | 
 | Waarde | 125/75 mmHg |
