@@ -2,6 +2,10 @@
 
 Het doel van de test cases is om de bestaande Zorgviewer kolommen te voorzien van data zodat er gecontroleerd kan worden of ingevulde data in het bronsysteem zichtbaar is in Zorgviewer. Er zijn enkele negatieve tests opgenomen, de registraties in het bronsysteem zullen dan juist niet getoond worden in Zorgviewer.
 
+Hallo
+Hallo
+
+
 ### Algemeen
 
 - Voor het registreren van onderstaande test cases geldt in alle gevallen, gebruik de werkwijze voor registratie zoals deze door de zorgverleners worden gebruikt. Vul de gevraagde gegevens bijvoorbeeld niet in onder een beheerdersaccount of via een methode die niet door de zorgverleners kan worden gebruikt in productie. 
