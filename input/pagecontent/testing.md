@@ -1,5 +1,9 @@
 Zie in de FHIR specificaties: [Testing FHIR](https://hl7.org/fhir/STU3/testing.html)
 
+### Zorgviewer Test Cases
+
+* [Test Cases](testcases.html)
+
 ### Sandboxes
 
 * [Official HL7 Logica Sandbox](https://www.logicahealth.org/)
@@ -33,17 +37,21 @@ How-to:
 3. paste een resultaat Bundle rechts onder "Test Resource Id"
 4. druk op de "&#9658; Play" button rechts boven en druk op "RESULTS" om de tabel te zien
 
-ViewDefinition voor ...:
-* [... Problemen](ViewDefinition-Condition.json)
-* [... Alerts](ViewDefinition-Flag.json)
-* [... Allergieën en Intoleranties](ViewDefinition-AllergyIntolerance.json)
-* [... Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
-* [... Correspondentie](ViewDefinition-DocumentReference.json)
-* [... Vaccinatie](ViewDefinition-Immunization.json)
-* [... Medicatiegegevens](ViewDefinition-Medicatiegegevens.json) - samengevoegd MedicationRequest en MedicationStatement
-* [... Medicatie Afspraak](ViewDefinition-MedicationRequest.json)
-* [... Medicatie Gebruik](ViewDefinition-MedicationStatement.json)
-* [... Verrichting](ViewDefinition-Procedure.json)
+ViewDefinition voor:
+* [Problemenlijst](ViewDefinition-Probleemlijst.json)
+    * [Problemen](ViewDefinition-Condition.json)
+* [Alerts](ViewDefinition-Flag.json)
+* [Allergieën en Intoleranties](ViewDefinition-AllergyIntolerance.json)
+* [Behandelaanwijzingen](ViewDefinition-Behandelaanwijzingen.json)
+* [Correspondentie](ViewDefinition-DocumentReference.json)
+* [Vaccinatie](ViewDefinition-Immunization.json)
+* [Medicatiegegevens](ViewDefinition-Medicatiegegevens.json) - samengevoegd MedicationRequest en MedicationStatement
+    * [Medicatie Afspraak](ViewDefinition-MedicationRequest.json)
+    * [Medicatie Gebruik](ViewDefinition-MedicationStatement.json)
+* [Verrichting](ViewDefinition-Procedure.json)
+* [Laboratorium Uitslagen](ViewDefinition-Labuitslagen.json)
+* [Afspraken](ViewDefinition-Appointment.json)
+* [Vitale Gegevens](ViewDefinition-Vitalegegevens.json)
 
 ### FHIR Validator Web
 
