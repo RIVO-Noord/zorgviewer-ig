@@ -9,6 +9,7 @@ Het doel van de test cases is om de bestaande Zorgviewer kolommen te voorzien va
 - De voorbeelddata is grotendeels gebaseerd op voorbeelddata uit ZIB2017 en is mogelijk niet klinisch relevant.
 
 ### Testpatiënten
+
 | Testpatiënt nummer | Type testpatiënt                                                                        | Aan te maken test data                                                   | Verwacht resultaat                                                  |
 | ------------------ | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------- |
 | 1                  | Patiënt met consent   <br>Bij voorkeur: BSN 000004881  <br>T.E.S.T. Zorgviewer 1-2-1973 | Alle in zorgviewer getoonde informatie                                   | Data wordt getoond conform EPD                                      |
