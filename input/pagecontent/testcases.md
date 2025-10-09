@@ -1,12 +1,10 @@
-### Doel
-
-Het doel van de test cases is om de bestaande Zorgviewer kolommen te voorzien van data zodat er gecontroleerd kan worden of ingevulde data in het bronsysteem zichtbaar is in Zorgviewer. Er zijn enkele negatieve tests opgenomen, de registraties in het bronsysteem zullen dan juist niet getoond worden in Zorgviewer.
-
 ### Algemeen
+Deze pagina beschrijft testcases die gebruikt worden om de werking van de Zorgviewer te toetsen op basis van de bestaande Zorgviewer kolommen. Door een gestandaardiseerde "basis patiënt" in te voeren in alle aangesloten systemen, kunnen we controleren of gegevens correct en consistent worden weergegeven in de Zorgviewer. Er zijn enkele negatieve tests opgenomen, de registraties in het bronsysteem zullen dan juist niet getoond worden in Zorgviewer.
 
-- Voor het registreren van onderstaande test cases geldt in alle gevallen, gebruik de werkwijze voor registratie zoals deze door de zorgverleners worden gebruikt. Vul de gevraagde gegevens bijvoorbeeld niet in onder een beheerdersaccount of via een methode die niet door de zorgverleners kan worden gebruikt in productie. 
+### Instructie
+- Voor het registreren van de test cases geldt in alle gevallen, gebruik de werkwijze voor registratie zoals deze door de zorgverleners in het eigen systeem worden gebruikt. Vul de gevraagde gegevens bijvoorbeeld niet in onder een beheerdersaccount of via een methode die niet door de zorgverleners kan worden gebruikt in productie. 
 - Voor de testcases veronderstellen wij dat de gegevens worden ingevuld door een arts.
-- De voorbeelddata is grotendeels gebaseerd op voorbeelddata uit ZIB2017 en is mogelijk niet klinisch relevant.
+- De voorbeelddata is grotendeels gebaseerd op voorbeelddata uit [ZIB2017](https://zibs.nl/wiki/ZIB_Publicatie_2017(NL)) en is mogelijk niet klinisch relevant.
 
 ### Testpatiënten
 
@@ -48,6 +46,7 @@ Scenario: maak een verwijsbrief aan als arts voor testpatiënt 1. Includeer in d
 #### Problemen (incl. diagnoses)
 
 Scenario: gebruik voor het registreren van de problemen/ diagnoses de beschikbare DHD variant. 
+
 | Testpatiënt 1 | Problemen (incl. diagnoses) - status actief                             |
 | ------------- | ----------------------------------------------------------------------- |
 | Datum         | 10-08-2012                                                              |
