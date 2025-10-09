@@ -26,7 +26,7 @@ Omschrijving testpatiënt 1: alle hieronder genoemde testcases kunnen bij testpa
 | --- | --- | --|
 | **Veld** | **Waarde** | **Opmerkingen**|
 | Naam | T.E.S.T. Zorgviewer ||
-| Test BSN | 000004881 |_Indien dit test BSN niet beschikbaar is, noteren welk BSN is gebruikt._ |
+| Test BSN | 000004881 |_{Indien dit test BSN niet beschikbaar is, noteren welk BSN is gebruikt.}_ |
 | Geboortedatum | 01-02-1973 ||
 {: .grid .table-striped}
 
@@ -36,10 +36,10 @@ Scenario: maak een verwijsbrief aan als arts voor testpatiënt 1. Includeer in d
  
 | Testpatiënt 1 | Correspondentie - verwijsbrief |
 | --- | --- | 
-| Datum | _Datum van vandaag_ | 
+| Datum | _{Datum van vandaag}_ | 
 | Beschrijving| Verwijsbrief | 
-| Auteur | _Naam ingelogde zorgverlener_| 
-| Specialisme | _Specialisme ingelogde zorgverlener_ |
+| Auteur | _{Naam ingelogde zorgverlener}_| 
+| Specialisme | _{Specialisme ingelogde zorgverlener}_ |
 {: .grid .table-striped}
 
 #### Problemen (incl. diagnoses)
@@ -58,7 +58,7 @@ Gebruik voor het registreren van de problemen/ diagnoses de beschikbare DHD vari
 | Datum | 15-11-2012 | 
 | Diagnose | Kortademigheid| 
 | Status | Niet actueel/ Inactief | 
-| Toelichting | _Geen_  | 
+| Toelichting | _{Geen}_  | 
 {: .grid .table-striped}
 
 | Testpatiënt 1 | Problemen (incl. diagnoses) - status inactief, met einddatum|
@@ -85,7 +85,7 @@ Gebruik voor het registreren van de verrichtingen de beschikbare DHD Verrichting
 | Datum | 05-06-2012 | 
 | Verrichting | implantatie van polsprothese |
 | Locatie |UMCG| 
-| Uitgevoerd door | {_Naam orthopeed_}|
+| Uitgevoerd door | {_{Naam orthopeed}_}|
 | Lateraliteit | Links | 
 {: .grid .table-striped}
 
@@ -156,15 +156,15 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 
 | Testpatiënt 1 | Laboratoriumuitslagen|
 | --- | --- | 
-| Afnamedatum | {_Vandaag_} |
+| Afnamedatum | {_{Vandaag}_} |
 | Test | Natrium| 
 | Testuitslag | 138 mmol/l |
 | Interpretatie | | 
 | Onder- en bovengrens |136 - 146 mmol/l | 
 | Materiaal | Bloed | 
 | Status | Definitief | 
-| Commentaar | {_vrije tekst_}| 
-| Toelichting materiaal |{_vrije tekst_}|  
+| Commentaar | {_{vrije tekst}_}| 
+| Toelichting materiaal |{_{vrije tekst}_}|  
 {: .grid .table-striped}
 
 **Interpretatie een veld wat Zorgviewer zelf vult? > let op, zit logica in. Dus vier voorbeelden uitvragen, eentje binnen de waarden, eentje erboven, eentje eronder, eentje kritiek**
@@ -225,7 +225,7 @@ Willen we nog specifieke voorbeelden t.b.v. voor uitvragen gezien de logica in z
 | Stop type | Definitief| 
 | Medicatie vorm | Tablet|
 | Afspraakdatum (bij medicatieafspraak)| |
-| Voorschrijver | _Naam zorgverlener_ |
+| Voorschrijver | _{Naam zorgverlener}_ |
 {: .grid .table-striped}
 
 | Testpatiënt 1 | Medicatie, medicatie gebruik|
@@ -268,10 +268,10 @@ bewust biologicals en chemo niet uitgevraagd.
 
 | Testpatiënt 1 | Vitale gegevens|
 | --- | --- | 
-| Datum |  _Vandaag_ |
+| Datum |  _{Vandaag}_ |
 | Meting | Bloeddruk | 
 | Waarde | 125/75 mmHg |
-| Uitvoerder | _Zorgverlener_ |
+| Uitvoerder | _{Zorgverlener}_ |
 | Methode | Non-invasive |
 | Meetlocatie | rechter bovenarm| 
 | Toelichting | Liggend gemeten tijdens onderzoek |
