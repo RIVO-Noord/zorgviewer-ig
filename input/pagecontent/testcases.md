@@ -3,7 +3,7 @@ Deze pagina beschrijft testcases die gebruikt worden om de werking van de Zorgvi
 
 ### Instructie
 - Voor het registreren van de test cases geldt in alle gevallen, gebruik de werkwijze voor registratie zoals deze door de zorgverleners in het eigen systeem worden gebruikt. Vul de gevraagde gegevens bijvoorbeeld niet in onder een beheerdersaccount of via een methode die niet door de zorgverleners kan worden gebruikt in productie. 
-- Voor de testcases veronderstellen wij dat de gegevens worden ingevuld door een arts.
+- Voor de testcases veronderstellen wij dat de gegevens worden ingevuld door het type zorgverlener die dit ook in productie doet.
 - De voorbeelddata is grotendeels gebaseerd op voorbeelddata uit [ZIB2017](https://zibs.nl/wiki/ZIB_Publicatie_2017(NL)) en is mogelijk niet klinisch relevant.
 
 ### Testpatiënten
@@ -11,7 +11,6 @@ Deze pagina beschrijft testcases die gebruikt worden om de werking van de Zorgvi
 | Testpatiënt nummer | Type testpatiënt                                                                        | Aan te maken test data                                                   | Verwacht resultaat                                                  |
 | ------------------ | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------- |
 | 1                  | Patiënt met consent   <br>Bij voorkeur: BSN 000004881  <br>T.E.S.T. Zorgviewer 1-2-1973 | Alle in zorgviewer getoonde informatie                                   | Data wordt getoond conform EPD                                      |
-| 1.1                | Patiënt die **tijdens test** toestemming intrekt                                        |                                                                          | Wordt geen data getoond in de Zorgviewer                            |
 | 2                  | Patiënt zonder consent                                                                  | 1 Zib bijvoorbeeld: probleem registratie (of andere zib die in scope is) | Wordt geen data getoond in de Zorgviewer                            |
 | 3                  | Patiënt met ongeverieerde BSN                                                           | Geen data vereist voor de test                                           | BSN waarschuwing#1 wordt getoond in Zorgviewer en geen data getoond |
 | 4                  | 2 of meer patiënten met zelfde BSN                                                      | Geen data vereist voor de test                                           | BSN waarschuwing#2 wordt getoond in Zorgviewer en geen data getoond |
@@ -33,7 +32,7 @@ Omschrijving testpatiënt 1: alle hieronder genoemde testcases kunnen bij testpa
 
 #### Correspondentie
 
-Scenario: maak een verwijsbrief aan als arts voor testpatiënt 1. Includeer in de verwijsbrief de opmerking 'test Zorgviewer'. 
+Maak een verwijsbrief aan als arts voor testpatiënt 1. Includeer in de verwijsbrief de opmerking 'test Zorgviewer'. 
  
 | Testpatiënt 1 | Correspondentie - verwijsbrief         |
 | ------------- | -------------------------------------- |
@@ -45,7 +44,7 @@ Scenario: maak een verwijsbrief aan als arts voor testpatiënt 1. Includeer in d
 
 #### Problemen (incl. diagnoses)
 
-Scenario: gebruik voor het registreren van de problemen/ diagnoses de beschikbare DHD variant. 
+Gebruik voor het registreren van de problemen/ diagnoses de beschikbare DHD variant. 
 
 | Testpatiënt 1 | Problemen (incl. diagnoses) - status actief                             |
 | ------------- | ----------------------------------------------------------------------- |
@@ -74,7 +73,7 @@ Scenario: gebruik voor het registreren van de problemen/ diagnoses de beschikbar
 
 #### Verrichtingen
 
-Scenario: gebruik voor het registreren van de verrichtingen de beschikbare DHD Verrichtingenthesaurus variant. 
+Gebruik voor het registreren van de verrichtingen de beschikbare DHD Verrichtingenthesaurus variant. 
 
 | Testpatiënt 1   | Klinische verrichting        |
 | --------------- | ---------------------------- |
@@ -141,7 +140,7 @@ Scenario: gebruik voor het registreren van de verrichtingen de beschikbare DHD V
 
 #### Wilsverklaringen
 
-Scenario: maak een wilsverklaring document aan. 
+Maak een wilsverklaring document aan. 
 
 | Testpatiënt 1 | Wilsverklaring             |
 | ------------- | -------------------------- |
@@ -152,7 +151,7 @@ Scenario: maak een wilsverklaring document aan.
 
 #### Laboratoriumuitslagen
 
-Scenario: gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
+Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 
 | Testpatiënt 1         | Laboratoriumuitslagen |
 | --------------------- | --------------------- |
@@ -246,19 +245,19 @@ Scenario: gebruik de normale workflow voor het genereren van laboratoriumuitslag
 
 | Testpatiënt 1                         | Medicatie, medicatie afspraak                 |
 | ------------------------------------- | --------------------------------------------- |
-| Datum                                 | 8-9-2025                                      |
+| Datum                                 | {_Vandaag_}                                     |
 | Medicatie                             | Lisinopril tablet 10mg                        |
 | Dosering en instructies               | Van 8-9-2025 tot 18-9-2025 1x per dag 1 stuk. |
-| Toedieningsweg                        |                                               |
+| Toedieningsweg                        |      Oraal                                         |
 | Stop type                             | Definitief                                    |
 | Medicatie vorm                        | Tablet                                        |
-| Afspraakdatum (bij medicatieafspraak) |                                               |
+| Afspraakdatum (bij medicatieafspraak) |                                               {_Vandaag_}
 | Voorschrijver                         | _{Zorgverlener}_                              |
 {: .grid .table-striped}
 
 | Testpatiënt 1                            | Medicatie, medicatie gebruik                                  |
 | ---------------------------------------- | ------------------------------------------------------------- |
-| Datum                                    |                                                               |
+| Datum                                    |       {_Vandaag_}                                                        |
 | Medicatie                                | Paracetamol tablet 500 mg                                     |
 | Dosering en instructies                  | In de maand september heb ik regelmatig paracetamol gebruikt. |
 | Toedieningsweg                           | Oraal                                                         |
@@ -310,13 +309,13 @@ Scenario: gebruik de normale workflow voor het genereren van laboratoriumuitslag
 
 Patiënt zonder consent | Bijvoorbeeld probleem registratie | Wordt geen data getoond in de Zorgviewer |
 
-Scenario: gebruik een testpatiënt die geen consent heeft en bijvoorbeeld wel een geregistreerd probleem, controleer of er geen data wordt getoond in Zorgviewer.
+Gebruik een testpatiënt die geen consent heeft en bijvoorbeeld wel een geregistreerd probleem, controleer of er geen data wordt getoond in Zorgviewer.
 
 ### Testpatiënt 3
 
 Patiënt met ongeverieerde BSN | Geen data vereist voor de test | BSN waarschuwing#1 wordt getoond in Zorgviewer en geen data getoond |
 
-Scenario: gebruik een testpatiënt met een ongeverifieerde BSN. De patiënt hoeft geen registraties in het dossier te hebben. Controleer of de BSN waarschuwing wordt getoond in Zorgviewer.
+Gebruik een testpatiënt met een ongeverifieerde BSN. De patiënt hoeft geen registraties in het dossier te hebben. Controleer of de BSN waarschuwing wordt getoond in Zorgviewer.
 
 Waarschuwing: 'Deze patiënt heeft een ongeldig of nog niet gevalideerd BSN nummer'
 
@@ -324,6 +323,6 @@ Waarschuwing: 'Deze patiënt heeft een ongeldig of nog niet gevalideerd BSN numm
 
 2 of meer patiënten met zelfde BSN | Geen data vereist voor de test | BSN waarschuwing#2 wordt getoond in Zorgviewer en geen data getoond |
 
-Scenario: maak twee of meer testpatiënten aan met hetzelfde BSN. Deze testpatiënten hoeven geen registraties in het dossier te hebben. Controleer of de BSN waarschuwing wordt getoond. 
+Maak twee of meer testpatiënten aan met hetzelfde BSN. Deze testpatiënten hoeven geen registraties in het dossier te hebben. Controleer of de BSN waarschuwing wordt getoond. 
 
 Waarschuwing: 'Bron '_{Eigen systeem}_ bevat meerdere patiënten met dit BSN nummer.'
