@@ -87,7 +87,7 @@
 <td><samp>status</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
-<td>Mapping: <code>active</code> naar <code>Actueel</code></td>
+<td>Mapping: <code>active</code> naar <code>Actueel</code>; <code>finished</code> naar <code>Niet actueel</code></td>
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
