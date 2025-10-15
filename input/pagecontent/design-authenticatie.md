@@ -17,9 +17,9 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 | Patient Birthdate | `patient.geboortedatum` | *zie FHIR Path* | `client.birthdate` | *zie FHIR Path* | `19700101` | Patient.birthDate |
 {: .grid .table-striped}
 
-(1) Omzetten naar SNOMED CT rolcode adhv Zorgverlener.functie.omschrijving
+(1) Omzetten naar SNOMED CT rolcode adhv `zorgverlener.functie.omschrijving`
 
-(2) Opzoeken OID adhv Zorgverlener.praktijkURA
+(2) Opzoeken OID adhv `zorgverlener.praktijkURA`
 
 (3) Adhv [Patient/$match](StructureDefinition-Patient.html#requests) (optie 3)
 
