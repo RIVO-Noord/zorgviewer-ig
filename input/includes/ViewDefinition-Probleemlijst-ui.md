@@ -56,7 +56,7 @@
 <th>(regelkleur)</th>
 </tr>
 <tr><td>+</td>
-<td>Sanday-Bundle</td>
+<td>Sanday-US315638</td>
 <td>2025-08-07</td>
 <td>Hernia inguinalis</td>
 <td>active</td>
@@ -65,7 +65,7 @@
 <b>Diagnose</b><br/>ICPC#D89 Hernia inguinalis<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday-Bundle</td>
+<td>Sanday-US315638</td>
 <td>2025-04-01</td>
 <td>Keelpijn</td>
 <td>active</td>
@@ -74,13 +74,22 @@
 <b>Diagnose</b><br/>ICPC#R21.01 Keelpijn<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday-Bundle</td>
+<td>Sanday-US315638</td>
 <td>2025-08-21</td>
 <td>Lokale infectie vinger/teen/paronychia</td>
 <td>active</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>ICPC#S09 Lokale infectie vinger/teen/paronychia<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday-US315638</td>
+<td>2025-02-13</td>
+<td>Maagpijn</td>
+<td>finished</td>
+<td>finished</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#D02 Maagpijn<br/>
 </td></tr>
 </tbody>
 </table>

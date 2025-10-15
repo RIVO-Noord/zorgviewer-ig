@@ -110,7 +110,7 @@
 <td><samp>status</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
-<td>Actueel (<code>active</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive</code>) = grijze rijen</td>
+<td>Actueel (<code>active</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>finished</code>) = grijze rijen</td>
 </tr>
 </tbody>
 </table>

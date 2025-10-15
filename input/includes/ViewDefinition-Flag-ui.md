@@ -68,11 +68,22 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday</td>
+<td>Sanday-US315638</td>
 <td>1-4-2025</td>
 <td></td>
 <td>Keelpijn</td>
 <td>Keelpijn</td>
+<td>Alert</td>
+<td></td>
+<td>active</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday-US315638</td>
+<td>13-2-2025</td>
+<td></td>
+<td>Maagpijn</td>
+<td>Maagpijn</td>
 <td>Alert</td>
 <td></td>
 <td>active</td>
