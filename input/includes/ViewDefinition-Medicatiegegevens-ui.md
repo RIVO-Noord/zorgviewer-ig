@@ -67,6 +67,7 @@
 <th>Medicatie</th>
 <th>Dosering & instructies</th>
 <th>Toedieningsweg</th>
+<th>Stop type</th>
 </tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -75,7 +76,8 @@
 <td>simvastatine 20mg tablet</td>
 <td>innemen. s Avonds innemen; Bij dit middel GEEN grapefruit(sap) gebruiken</td>
 <td>Oraal</td>
-</tr><tr><td></td><td colspan=6>
+<td></td>
+</tr><tr><td></td><td colspan=7>
 <b>Registratiedatum</b><br/>15-3-2018<br/>
 <b>Type</b><br/>huidig<br/>
 </td></tr>

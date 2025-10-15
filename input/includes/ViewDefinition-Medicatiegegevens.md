@@ -123,6 +123,13 @@
 <td>Gebruiksinstructie/Toedieningsweg</td>
 <td></td>
 </tr>
+<tr>
+<td>Stop type</td>
+<td><samp>''</samp></td>
+<td><code>string</code></td>
+<td><i>nvt</i></td>
+<td>Niet van toepassing bij MedicationStatement</td>
+</tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Medicatie vorm</td>
