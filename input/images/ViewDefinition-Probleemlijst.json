@@ -44,9 +44,9 @@
               ]
             },
             {
-              "path": "clinicalStatus",
+              "path": "clinicalStatus.lookup('ProbleemStatus').display",
               "name": "Status",
-              "description": "Mapping: <code>active,recurrence</code> naar <code>Actueel</code>; <code>inactive,remission</code> naar <code>Niet actueel</code>",
+              "description": "Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a>",
               "type": "code",
               "tag": [
                 {
@@ -58,7 +58,7 @@
             {
               "path": "code.coding[0].select(system.lookup('CodeSystems').display+'#' + code + ' ' + iif(exists(display),display,''))",
               "name": "+Diagnose",
-              "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
+              "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>.display</code><br/>Zie voor labels: <a href='ValueSet-CodeSystems.html'>ValueSet-CodeSystems</a>",
               "type": "string",
               "tag": [
                 {
@@ -81,7 +81,7 @@
             {
               "path": "clinicalStatus",
               "name": "(regelkleur)",
-              "description": "Actueel (<code>active</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive</code>) = grijze rijen",
+              "description": "Actueel (<code>active,recurrence</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive,remission,resolved</code>) = grijze rijen",
               "type": "code",
               "tag": [
                 {
@@ -131,9 +131,9 @@
               ]
             },
             {
-              "path": "status",
+              "path": "status.lookup('ProbleemStatus').display",
               "name": "Status",
-              "description": "Mapping: <code>active</code> naar <code>Actueel</code>; <code>finished</code> naar <code>Niet actueel</code>",
+              "description": "Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a>",
               "type": "code",
               "tag": [
                 {
@@ -145,7 +145,7 @@
             {
               "path": "diagnosis.condition.resolve().select(code.coding[0].select(system.lookup('CodeSystems')[0].display+'#' + code + ' ' + iif(exists(display),display,'')))",
               "name": "+Diagnose",
-              "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
+              "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>.display</code><br/>Zie voor labels: <a href='ValueSet-CodeSystems.html'>ValueSet-CodeSystems</a>",
               "type": "string",
               "tag": [
                 {

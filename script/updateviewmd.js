@@ -115,7 +115,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
             "<table class=\"grid\">",
             "<thead>",
             "<th>Kolom label</th>",
-            "<th width=\"25%\">FHIR Path</th>",
+            "<th>FHIR Path</th>",
             "<th>FHIR Type</th>",
             "<th>Zib element</th>",
             "<th>Toelichting of regels</th>",

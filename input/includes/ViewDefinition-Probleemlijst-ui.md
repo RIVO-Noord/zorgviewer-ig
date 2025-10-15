@@ -13,7 +13,7 @@
 <td>Chipsoft</td>
 <td>2001-01-01</td>
 <td>fractuur van pols</td>
-<td>active</td>
+<td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>NullFlavor#OTH other<br/>
@@ -23,7 +23,7 @@
 <td>Epic-note</td>
 <td>2023-02-23</td>
 <td>posttraumatische stressstoornis (incl. de posttraumatische-stressstoornis bij ki...</td>
-<td>active</td>
+<td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>ICD-10#F43.1 <br/>
@@ -33,7 +33,7 @@
 <td>Epic</td>
 <td>2012-08-16</td>
 <td>fractuur van onderste extremiteit</td>
-<td>active</td>
+<td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>ICD-10#T12.0 <br/>
@@ -42,7 +42,7 @@
 <td>Nexus</td>
 <td>2001</td>
 <td>fractuur van pols</td>
-<td>inactive</td>
+<td>Niet actueel</td>
 <td>inactive</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>SNOMED CT#31641000146105 fractuur van pols<br/>
@@ -59,7 +59,7 @@
 <td>Sanday-US315638</td>
 <td>2025-08-07</td>
 <td>Hernia inguinalis</td>
-<td>active</td>
+<td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>ICPC#D89 Hernia inguinalis<br/>
@@ -68,7 +68,7 @@
 <td>Sanday-US315638</td>
 <td>2025-04-01</td>
 <td>Keelpijn</td>
-<td>active</td>
+<td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>ICPC#R21.01 Keelpijn<br/>
@@ -77,7 +77,7 @@
 <td>Sanday-US315638</td>
 <td>2025-08-21</td>
 <td>Lokale infectie vinger/teen/paronychia</td>
-<td>active</td>
+<td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>ICPC#S09 Lokale infectie vinger/teen/paronychia<br/>
@@ -86,7 +86,7 @@
 <td>Sanday-US315638</td>
 <td>2025-02-13</td>
 <td>Maagpijn</td>
-<td>finished</td>
+<td>Niet actueel</td>
 <td>finished</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>ICPC#D02 Maagpijn<br/>

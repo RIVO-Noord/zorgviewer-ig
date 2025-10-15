@@ -2,7 +2,7 @@
 <table class="grid">
 <thead>
 <th>Kolom label</th>
-<th width="25%">FHIR Path</th>
+<th>FHIR Path</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
 <th>Toelichting of regels</th>
@@ -32,10 +32,10 @@
 </tr>
 <tr>
 <td>Status</td>
-<td><samp>clinicalStatus</samp></td>
+<td><samp>clinicalStatus.lookup('ProbleemStatus').display</samp></td>
 <td><code>code</code></td>
 <td>ProbleemStatus</td>
-<td>Mapping: <code>active,recurrence</code> naar <code>Actueel</code>; <code>inactive,remission</code> naar <code>Niet actueel</code></td>
+<td>Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a></td>
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
@@ -43,7 +43,7 @@
 <td><samp>code.coding[0].select(system.lookup('CodeSystems').display+'#' + code + ' ' + iif(exists(display),display,''))</samp></td>
 <td><code>string</code></td>
 <td>ProbleemNaam</td>
-<td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code></td>
+<td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>.display</code><br/>Zie voor labels: <a href='ValueSet-CodeSystems.html'>ValueSet-CodeSystems</a></td>
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+Toelichting</td>
@@ -84,10 +84,10 @@
 </tr>
 <tr>
 <td>Status</td>
-<td><samp>status</samp></td>
+<td><samp>status.lookup('ProbleemStatus').display</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
-<td>Mapping: <code>active</code> naar <code>Actueel</code>; <code>finished</code> naar <code>Niet actueel</code></td>
+<td>Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a></td>
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
@@ -95,7 +95,7 @@
 <td><samp>diagnosis.condition.resolve().select(code.coding[0].select(system.lookup('CodeSystems')[0].display+'#' + code + ' ' + iif(exists(display),display,'')))</samp></td>
 <td><code>string</code></td>
 <td>Probleem/ ProbleemNaam</td>
-<td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code></td>
+<td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>.display</code><br/>Zie voor labels: <a href='ValueSet-CodeSystems.html'>ValueSet-CodeSystems</a></td>
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+Toelichting</td>

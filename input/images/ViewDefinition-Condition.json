@@ -27,16 +27,16 @@
           "tag": [ { "name": "Zib element", "value": "ProbleemNaam" } ]
         },
         {
-          "path": "clinicalStatus",
+          "path": "clinicalStatus.lookup('ProbleemStatus').display",
           "name": "Status",
-          "description": "Mapping: <code>active,recurrence</code> naar <code>Actueel</code>; <code>inactive,remission</code> naar <code>Niet actueel</code>",
+          "description": "Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a>",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "ProbleemStatus" } ]
         },
         {
           "path": "code.coding[0].select(system.lookup('CodeSystems')[0].display+'#' + code + ' ' + iif(exists(display),display,''))",
           "name": "+Diagnose",
-          "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>CodeSystem.title</code>",
+          "description": "Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>.display</code><br/>Zie voor labels: <a href='ValueSet-CodeSystems.html'>ValueSet-CodeSystems</a>",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "ProbleemNaam" } ]
         },
