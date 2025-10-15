@@ -38,7 +38,7 @@
 </tr>
 <tr>
 <td>Dosering & instructies</td>
-<td><samp>dosageInstruction.text</samp></td>
+<td><samp>dosageInstruction.text | extension('http://nictiz.nl/fhir/StructureDefinition/ext-RenderedDosageInstruction').valueString</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie</td>
 <td>N.B. Als text niet beschikbaar dan samenstellen uit discrete informatie en markeren met een icoontje &#9432;</td>
@@ -74,10 +74,10 @@
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+Voorschrijver</td>
-<td><samp>requester.agent.display</samp></td>
+<td><samp>requester.agent.display | requester.display</samp></td>
 <td><code>string</code></td>
 <td>Voorschrijver::Zorgverlener</td>
-<td></td>
+<td><b>LET OP:</b> <code>requester.display</code> is een FHIR R4 veld</td>
 </tr>
 </tbody>
 </table>

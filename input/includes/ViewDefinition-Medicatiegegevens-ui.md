@@ -22,7 +22,6 @@
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>30-9-2022<br/>
 <b>Voorschrijver</b><br/>Peter van Pulver<br/>
-<b>Type</b><br/>voorgeschreven<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -36,7 +35,6 @@
 <b>Medicatie vorm</b><br/>tablet<br/>
 <b>Afspraakdatum</b><br/>27-11-2020<br/>
 <b>Voorschrijver</b><br/>M Crop<br/>
-<b>Type</b><br/>voorgeschreven<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
@@ -49,19 +47,18 @@
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>3-10-2023<br/>
 <b>Voorschrijver</b><br/>Aalders, JCA (CAR)<br/>
-<b>Type</b><br/>voorgeschreven<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
 <td></td>
 <td></td>
 <td>PANTOPRAZOL TABLET MSR 40MG</td>
-<td></td>
+<td>2 maal per dag 1 tablet;1 TABLET 1 UUR VOOR DE MAALTIJD</td>
 <td></td>
 <td></td>
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>6-8-2025<br/>
-<b>Type</b><br/>voorgeschreven<br/>
+<b>Voorschrijver</b><br/>Jenneke van der Vecht<br/>
 </td></tr>
 <tr><th>&gt;&lt;</th>
 <th>Bron</th>

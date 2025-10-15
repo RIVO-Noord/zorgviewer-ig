@@ -53,11 +53,12 @@
 <td></td>
 <td></td>
 <td>PANTOPRAZOL TABLET MSR 40MG</td>
-<td></td>
+<td>2 maal per dag 1 tablet;1 TABLET 1 UUR VOOR DE MAALTIJD</td>
 <td></td>
 <td></td>
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>6-8-2025<br/>
+<b>Voorschrijver</b><br/>Jenneke van der Vecht<br/>
 </td></tr>
 </tbody>
 </table>

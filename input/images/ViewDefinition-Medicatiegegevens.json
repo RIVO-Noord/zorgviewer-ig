@@ -47,6 +47,7 @@
                         {
                             "path": "medication.display",
                             "name": "Medicatie",
+                            "description": "",
                             "type": "string",
                             "tag": [
                                 {
@@ -56,9 +57,9 @@
                             ]
                         },
                         {
-                            "path": "dosageInstruction.text",
+                            "path": "dosageInstruction.text | extension('http://nictiz.nl/fhir/StructureDefinition/ext-RenderedDosageInstruction').valueString",
                             "name": "Dosering & instructies",
-                            "description": "N.B. Als gegenereerd uit discrete informatie dan wordt deze gemarkeerd met een icoontje &#9432;",
+                            "description": "N.B. Als text niet beschikbaar dan samenstellen uit discrete informatie en markeren met een icoontje &#9432;",
                             "type": "string",
                             "tag": [
                                 {
@@ -93,7 +94,12 @@
                             "path": "medication.resolve().form.coding.display",
                             "name": "+Medicatie vorm",
                             "type": "string",
-                            "tag": [ { "name": "Zib element", "value": "Afgesprokengeneesmiddel::FarmaceutischProduct/FarmaceutischeVorm" } ]
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "Afgesprokengeneesmiddel::FarmaceutischProduct/FarmaceutischeVorm"
+                                }
+                            ]
                         },
                         {
                             "path": "authoredOn",
@@ -105,10 +111,11 @@
                                     "value": "MedicatieafspraakDatumTijd"
                                 }
                             ]
-                        },                        
+                        },
                         {
-                            "path": "requester.agent.display",
+                            "path": "requester.agent.display | requester.display",
                             "name": "+Voorschrijver",
+                            "description": "<b>LET OP:</b> <code>requester.display</code> is een FHIR R4 veld",
                             "type": "string",
                             "tag": [
                                 {
@@ -116,11 +123,6 @@
                                     "value": "Voorschrijver::Zorgverlener"
                                 }
                             ]
-                        },
-                        {
-                            "path": "'voorgeschreven'",
-                            "name": "+Type",
-                            "type": "string"
                         }
                     ],
                     "forEach": "entry.resource.where(resourceType='MedicationRequest')"
@@ -201,7 +203,12 @@
                             "path": "medication.resolve().form.coding.display",
                             "name": "+Medicatie vorm",
                             "type": "string",
-                            "tag": [ { "name": "Zib element", "value": "Gebruiksproduct::FarmaceutischProduct/FarmaceutischeVorm" } ]
+                            "tag": [
+                                {
+                                    "name": "Zib element",
+                                    "value": "Gebruiksproduct::FarmaceutischProduct/FarmaceutischeVorm"
+                                }
+                            ]
                         },
                         {
                             "path": "dateAsserted",
