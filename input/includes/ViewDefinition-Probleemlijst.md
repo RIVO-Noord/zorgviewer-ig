@@ -2,7 +2,7 @@
 <table class="grid">
 <thead>
 <th>Kolom label</th>
-<th>FHIR Path</th>
+<th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
 <th>Toelichting of regels</th>
@@ -58,7 +58,7 @@
 <td><samp>clinicalStatus</samp></td>
 <td><code>code</code></td>
 <td>ProbleemStatus</td>
-<td>Actueel (<code>active</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive</code>) = grijze rijen</td>
+<td>Actueel (<code>active,recurrence</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive,remission,resolved</code>) = grijze rijen</td>
 </tr>
 <tr><td colspan=5><i>EpisodeOfCare</i></td></tr>
 <tr>
