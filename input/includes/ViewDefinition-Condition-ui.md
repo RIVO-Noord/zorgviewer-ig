@@ -11,7 +11,7 @@
 </tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
-<td>2001-01-01</td>
+<td>1-1-2001</td>
 <td>fractuur van pols</td>
 <td>Actueel</td>
 <td>active</td>
@@ -21,7 +21,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic-note</td>
-<td>2023-02-23</td>
+<td>23-2-2023</td>
 <td>posttraumatische stressstoornis (incl. de posttraumatische-stressstoornis bij ki...</td>
 <td>Actueel</td>
 <td>active</td>
@@ -31,7 +31,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
-<td>2012-08-16</td>
+<td>16-8-2012</td>
 <td>fractuur van onderste extremiteit</td>
 <td>Actueel</td>
 <td>active</td>
@@ -40,7 +40,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
-<td>2001</td>
+<td>1-1-2001</td>
 <td>fractuur van pols</td>
 <td>Niet actueel</td>
 <td>inactive</td>
