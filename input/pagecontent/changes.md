@@ -1,24 +1,21 @@
 ### Laatste Wijzigingen
 
 * General:
-       * Updates to origin information and tooltip placement.
-       * Various corrections, system fixes, and cosmetic updates.
-       * Textual adjustments and layout improvements.
-       * Fixed an issue with HTML escaping.
-
-   * Integration & Mapping:
-       * Added and updated Sanday SSO attributes and examples.
-       * Converted problem status mapping to a valueset.
-       * Added mappings for several healthcare roles.
-       * Added a subject role code for the care platform.
-
-   * Testing:
-       * Restructured and improved test cases.
-       * Added new test cases for Zorgviewer.
-
-   * Dependencies:
-       * Fixed an IG publisher bug.
-       * Updated the zib package dependency, and rolled back a version to fix a bug.
+    * Updates to origin information and tooltip placement.
+    * Various corrections, system fixes, and cosmetic updates.
+    * Textual adjustments and layout improvements.
+    * Fixed an issue with HTML escaping.
+* Integration & Mapping:
+    * Added and updated Sanday SSO attributes and examples.
+    * Converted problem status mapping to a valueset.
+    * Added mappings for several healthcare roles.
+    * Added a subject role code for the care platform.
+* Testing:
+    * Restructured and improved test cases.
+    * Added new test cases for Zorgviewer.
+* Dependencies:
+    * Fixed an IG publisher bug.
+    * Updated the zib package dependency, and rolled back a version to fix a bug.
 
 ### Versies
 
