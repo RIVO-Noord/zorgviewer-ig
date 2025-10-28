@@ -35,7 +35,7 @@
           "tag": [ { "name": "Zib element", "value": "Afgesprokengeneesmiddel::Product" } ]
         },
         {
-          "path": "dosageInstruction.text",
+          "path": "dosageInstruction.text | extension('http://nictiz.nl/fhir/StructureDefinition/ext-RenderedDosageInstruction').valueString",
           "name": "Dosering & instructies",
           "description": "N.B. Als text niet beschikbaar dan samenstellen uit discrete informatie en markeren met een icoontje &#9432;",
           "type": "string",
@@ -66,8 +66,9 @@
           "tag": [ { "name": "Zib element", "value": "MedicatieafspraakDatumTijd" } ]
         },
         {
-          "path": "requester.agent.display",
+          "path": "requester.agent.display | requester.display",
           "name": "+Voorschrijver",
+          "description": "<b>LET OP:</b> <code>requester.display</code> is een FHIR R4 veld",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Voorschrijver::Zorgverlener" } ]
         }

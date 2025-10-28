@@ -2,20 +2,26 @@
 
 In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (SAML, SMART-on-FHIR, FHIR).
 
-| Item | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Value | FHIR Path |
-|--|--|--|--|--|--|
-| Workflow ID | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
-| Practitioner ID | Subject/NameID | Subject/NameID | Practitioner read adhv token.practitioner / *zie FHIR Path* | `177578` | Practitioner.identifier |
-| Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials | ^^ / *zie FHIR Path* | `L.` | Practitioner.name.given[extension=IN] |
-| Practitioner Name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.family_name | ^^ / *zie FHIR Path* | `Arts` | Practitioner.name.family |
-| Practitioner Role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | PractitionerRole read adhv token.practitioner | `code=62247001 display=huisarts system=SNOMED CT` | PractitionerRole.code[system=sct] n.b. via [ConceptMap-epic-rolcode](ConceptMap-epic-rolcode.html) |
-| Organization OID | urn:oasis:names:tc:xspa:1.0:subject:organization-id | organization-id | ^^ / *zie FHIR Path* | `2.16.840.1.113883.2.4.3.8` | Practitioner.meta[extension=source] |
-| Patient BSN | urn:oasis:names:tc:xacml:1.0:resource:resource-id | client.bsn | Patient read adhv token.patient / *zie FHIR Path* | `999911120` | Patient.identifier[system=bsn] |
-| Patient FHIR ID | patient-fhir-id uit Task.reference read adhv workflow-id |  | token.patient / *zie FHIR Path* | `9819C39260647B5DE61609CDF1FA1C` | Patient.id |
-| Patient Name | ^^ / *zie FHIR Path* | client.initials | ^^ / *zie FHIR Path* | `J.` | Patient.name.given[extension=IN] |
-| Patient Name | ^^ / *zie FHIR Path* | client.family_name | ^^ / *zie FHIR Path* | `Fictief` | Patient.name.family |
-| Patient Birthdate | ^^ / *zie FHIR Path* | client.birthdate | ^^ / *zie FHIR Path* | `19700101` | Patient.birthDate |
+| Item | Sanday (SAML) | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Example | FHIR Path |
+|--|--|--|--|--|--| --|
+| Workflow ID | nvt | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
+| Practitioner ID | `Subject/NameID` | `Subject/NameID` | `Subject/NameID` | Practitioner read adhv `token.practitioner` | `177578` | Practitioner.identifier |
+| Practitioner Name Initials | nvt | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | `professional.initials` | *zie FHIR Path* | `L.` | Practitioner.name.given[extension=IN] |
+| Practitioner Name | `zorgverlener.volledigenaam` | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | `professional.family_name` | *zie FHIR Path* | `Arts` | Practitioner.name.family |
+| Practitioner Role | (1) | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | PractitionerRole read adhv `token.practitioner` | `code=62247001 display=huisarts system=SNOMED CT` | PractitionerRole.code[system=sct] n.b. via [ConceptMap-epic-rolcode](ConceptMap-epic-rolcode.html) |
+| Organization OID | (2) | urn:oasis:names:tc:xspa:1.0:subject:organization-id | `organization-id` | *zie FHIR Path* | `2.16.840.1.113883.2.4.3.8` | Practitioner.meta[extension=source] |
+| Patient BSN | `patient.BSN` | urn:oasis:names:tc:xacml:1.0:resource:resource-id | `client.bsn` | Patient read adhv `token.patient` | `999911120` | Patient.identifier[system=bsn] |
+| Patient FHIR ID | (3) | `patient-fhir-id` uit Task.reference read adhv `workflow-id` |  | `token.patient` | `9819C39260647B5DE61609CDF1FA1C` | Patient.id |
+| Patient Name Initials | `patient.voorletters` | Patient.read adhv `patient-fhir-id` / *zie FHIR Path* | `client.initials` | *zie FHIR Path* | `J.` | Patient.name.given[extension=IN] |
+| Patient Name | `patient.volledigenaam` | *zie FHIR Path* | `client.family_name` | *zie FHIR Path* | `Fictief` | Patient.name.family |
+| Patient Birthdate | `patient.geboortedatum` | *zie FHIR Path* | `client.birthdate` | *zie FHIR Path* | `19700101` | Patient.birthDate |
 {: .grid .table-striped}
+
+(1) Omzetten naar SNOMED CT rolcode adhv `zorgverlener.functie.omschrijving`
+
+(2) Opzoeken OID adhv `zorgverlener.praktijkURA`
+
+(3) Adhv [Patient/$match](StructureDefinition-Patient.html#requests) (optie 3)
 
 ### Verkrijgen bronsysteem access token
 

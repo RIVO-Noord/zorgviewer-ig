@@ -16,7 +16,7 @@
 <td>15-8-2016</td>
 <td>14-9-2016</td>
 <td>METOCLOPRAMIDE ZETPIL 10MG</td>
-<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met...</td>
+<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alc...</td>
 <td>RECTAAL</td>
 <td>Definitief</td>
 </tr><tr><td></td><td colspan=7>
@@ -53,11 +53,12 @@
 <td></td>
 <td></td>
 <td>PANTOPRAZOL TABLET MSR 40MG</td>
-<td></td>
+<td>2 maal per dag 1 tablet;1 TABLET 1 UUR VOOR DE MAALTIJD</td>
 <td></td>
 <td></td>
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>6-8-2025<br/>
+<b>Voorschrijver</b><br/>Jenneke van der Vecht<br/>
 </td></tr>
 </tbody>
 </table>

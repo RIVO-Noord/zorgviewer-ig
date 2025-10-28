@@ -60,7 +60,7 @@
 <td>Nexus</td>
 <td>16-5-2022</td>
 <td></td>
-<td>LET OP!!!!!<br/>Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP ...</td>
+<td>LET OP!!!!!<br/>Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5. ...</td>
 <td></td>
 <td>Waarschuwing</td>
 <td></td>
@@ -68,11 +68,22 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday</td>
+<td>Sanday-US315638</td>
 <td>1-4-2025</td>
 <td></td>
 <td>Keelpijn</td>
 <td>Keelpijn</td>
+<td>Alert</td>
+<td></td>
+<td>active</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday-US315638</td>
+<td>13-2-2025</td>
+<td></td>
+<td>Maagpijn</td>
+<td>Maagpijn</td>
 <td>Alert</td>
 <td></td>
 <td>active</td>

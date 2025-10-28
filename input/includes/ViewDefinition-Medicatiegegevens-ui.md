@@ -16,13 +16,12 @@
 <td>15-8-2016</td>
 <td>14-9-2016</td>
 <td>METOCLOPRAMIDE ZETPIL 10MG</td>
-<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met...</td>
+<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alc...</td>
 <td>RECTAAL</td>
 <td>Definitief</td>
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>30-9-2022<br/>
 <b>Voorschrijver</b><br/>Peter van Pulver<br/>
-<b>Type</b><br/>voorgeschreven<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -36,7 +35,6 @@
 <b>Medicatie vorm</b><br/>tablet<br/>
 <b>Afspraakdatum</b><br/>27-11-2020<br/>
 <b>Voorschrijver</b><br/>M Crop<br/>
-<b>Type</b><br/>voorgeschreven<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
@@ -49,19 +47,18 @@
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>3-10-2023<br/>
 <b>Voorschrijver</b><br/>Aalders, JCA (CAR)<br/>
-<b>Type</b><br/>voorgeschreven<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
 <td></td>
 <td></td>
 <td>PANTOPRAZOL TABLET MSR 40MG</td>
-<td></td>
+<td>2 maal per dag 1 tablet;1 TABLET 1 UUR VOOR DE MAALTIJD</td>
 <td></td>
 <td></td>
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>6-8-2025<br/>
-<b>Type</b><br/>voorgeschreven<br/>
+<b>Voorschrijver</b><br/>Jenneke van der Vecht<br/>
 </td></tr>
 <tr><th>&gt;&lt;</th>
 <th>Bron</th>
@@ -70,6 +67,7 @@
 <th>Medicatie</th>
 <th>Dosering & instructies</th>
 <th>Toedieningsweg</th>
+<th>Stop type</th>
 </tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -78,7 +76,8 @@
 <td>simvastatine 20mg tablet</td>
 <td>innemen. s Avonds innemen; Bij dit middel GEEN grapefruit(sap) gebruiken</td>
 <td>Oraal</td>
-</tr><tr><td></td><td colspan=6>
+<td></td>
+</tr><tr><td></td><td colspan=7>
 <b>Registratiedatum</b><br/>15-3-2018<br/>
 <b>Type</b><br/>huidig<br/>
 </td></tr>
