@@ -1,11 +1,34 @@
+### Laatste Wijzigingen
+
+* General:
+       * Updates to origin information and tooltip placement.
+       * Various corrections, system fixes, and cosmetic updates.
+       * Textual adjustments and layout improvements.
+       * Fixed an issue with HTML escaping.
+
+   * Integration & Mapping:
+       * Added and updated Sanday SSO attributes and examples.
+       * Converted problem status mapping to a valueset.
+       * Added mappings for several healthcare roles.
+       * Added a subject role code for the care platform.
+
+   * Testing:
+       * Restructured and improved test cases.
+       * Added new test cases for Zorgviewer.
+
+   * Dependencies:
+       * Fixed an IG publisher bug.
+       * Updated the zib package dependency, and rolled back a version to fix a bug.
+
 ### Versies
 
 [Resource comparison with version v1.19.0](comparison-v1.18.0/index.html)
 
 |Versie|Datum|Changes|
 |---|---|---|
-|1.21.0-sprint69|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.20.0-sprint68...HEAD)||
-|1.20.0-sprint68|30-sep-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.20.0-sprint68...1.19.0-sprint67)||
+|1.22.0-sprint71|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.21.0-sprint70...HEAD)||
+|1.21.0-sprint70|28-okt-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.20.0-sprint68...1.21.0-sprint70)||
+|1.20.0-sprint68|30-sep-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.19.0-sprint67...1.20.0-sprint68)||
 |1.19.0-sprint67|15-sep-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.18.0-sprint65...1.19.0-speint67)<br/>* Probleemlijst, Vitale gegevens en Labuitslagen updates door toevoegen huisartsgegevens (n.b. FHIR R4)<br/>* Wireframes uit ViewDefinitions en (Bundled) Examples en $lookup en $translate van codes<br/>* Verschillende kleine verbeteringen en aanvullingen|
 |1.18.0-sprint65|18-aug-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.17.0-sprint64...1.18.0-sprint65)<br/>* Sanday (van alles) en Chipsoft (vitale gegevens) voorbeelden toegevoegd<br/>* Mockup generatie script kan nu omgaan met Bundled voorbeelden<br/>* Kleinere optimalisaties en Nexus foutje|
 |1.17.0-sprint64|2-aug-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.16.0-sprint61...1.17.0-sprint64)<br/>* Medicatie toegevoegd ivm medicatie vorm<br/>* Vitale gegevens aanzet|
