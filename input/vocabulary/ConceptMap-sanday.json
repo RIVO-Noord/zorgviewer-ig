@@ -1,0 +1,150 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "sanday",
+  "url": "http://fhir.hl7.nl/zorgviewer/ConceptMap/sanday",
+  "version": "0.1.0",
+  "name": "sanday",
+  "title": "Sanday functies naar SNOMED-CT Mapping",
+  "status": "active",
+  "experimental": false,
+  "description": 
+    "Deze ConceptMap beschrijft hoe lokale functiecoden uit het Sanday-systeem zijn gekoppeld aan SNOMED CT-codes. \nPer broncode vindt u de voorgestelde SNOMED-CT doelcode(s), de weergavetekst, de relatie (bijv. 'wider' of 'equivalent') en eventuele toelichting. \n\nDoel: ondersteuning bij interoperabiliteit, berichtuitwisseling en gegevensanalyse door lokale rollen te vertalen naar een gestandaardiseerd terminologiestelsel.\n\nLet op! Dit is een tijdelijke mapping; Sanday maakt op dit moment enkel gebruik van strings voor functies en niet van codes. \nDe gebruikte codes in deze mapping hebben geen betekenis buiten de context van de Zorgviewer.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "NL"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "source": "Sanday",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "1",
+          "display": "Huisarts",
+          "target": [
+            {
+              "code": "62247001",
+              "display": "huisarts",
+              "equivalence": "equal",
+              "comment": "Huisarts"
+            }
+          ]
+        },
+        {
+          "code": "2",
+          "display": "Dokstersassistente",
+          "target": [
+            {
+              "code": "22515006",
+              "display": "medisch assistent",
+              "equivalence": "equal",
+              "comment": "Doktersassistent(e)"
+            }
+          ]
+        },
+        {
+          "code": "3",
+          "display": "Arts in opleiding (HAIO / AIOS)",
+          "target": [
+            {
+              "code": "405277009",
+              "display": "arts-assistent",
+              "equivalence": "equal",
+              "comment": "Arts in opleiding"
+            }
+          ]
+        },
+        {
+          "code": "4",
+          "display": "Dokstersassistente in opleiding",
+          "target": [
+            {
+              "code": "224610007",
+              "display": "personeel voor ondersteunende diensten",
+              "equivalence": "wider",
+              "comment": "Ondersteunend personeel (breder concept)"
+            }
+          ]
+        },
+        {
+          "code": "5",
+          "display": "Praktijkverpleegkundige",
+          "target": [
+            {
+              "code": "159002008",
+              "display": "praktijkverpleegkundige",
+              "equivalence": "equal",
+              "comment": "Praktijkverpleegkundige"
+            }
+          ]
+        },
+        {
+          "code": "6",
+          "display": "Administratieve medewerker",
+          "target": [
+            {
+              "code": "106353008",
+              "display": "administratief medewerker",
+              "equivalence": "equal",
+              "comment": "Administratief medewerker"
+            }
+          ]
+        },
+        {
+          "code": "7",
+          "display": "Financiële medewerker",
+          "target": [
+            {
+              "code": "63804002",
+              "display": "financieel medewerker",
+              "equivalence": "equal",
+              "comment": "Financieel medewerker"
+            }
+          ]
+        },
+        {
+          "code": "8",
+          "display": "Praktijkondersteuner",
+          "target": [
+            {
+              "code": "224610007",
+              "display": "personeel voor ondersteunende diensten",
+              "equivalence": "wider",
+              "comment": "Ondersteunend personeel (breder concept)"
+            }
+          ]
+        },
+        {
+          "code": "9",
+          "display": "Systeembeheerder",
+          "target": [
+            {
+              "code": "224610007",
+              "display": "personeel voor ondersteunende diensten",
+              "equivalence": "wider",
+              "comment": "Ondersteunend personeel (breder concept)"
+            }
+          ]
+        },
+        {
+          "code": "10",
+          "display": "Praktijkbeheerder",
+          "target": [
+            {
+              "code": "159481007",
+              "display": "praktijkmanager",
+              "equivalence": "equal",
+              "comment": "Praktijkbeheerder / praktijkmanager"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
