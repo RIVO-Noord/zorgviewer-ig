@@ -8,7 +8,7 @@ participant Logging
 participant Behandelplan
 box "Andere zorgaanbieder"
 participant "Bronsysteem ontsluiting" as Bron
-participant Authenticatie
+participant Autorisatie
 participant Bronsysteem
 end box
 
@@ -28,7 +28,7 @@ loop voor iedere zorgaanbieder
   activate Zorgviewer
   Zorgviewer->Bron : verkrijg ""patient_fhir_id"" adhv BSN\n""<bronsysteem-ontsluiting-base>/Patient?identifier=<BSN>""
   activate Bron
-  Bron->Authenticatie : verkrijgen access token [[design-authenticatie.html#bevragen-bronsysteem-summary-table zie tabel]]
+  Bron->Autorisatie : verkrijgen access token [[design-autorisatie.html#bevragen-bronsysteem-summary-table zie tabel]]
   note right Bron
     auth_token bij access token request:
     { ...
@@ -69,7 +69,7 @@ via Patient.managingOrganization.identifier
     Zorgviewer->Bron: gegevensverzoek\n""<bronsysteem-ontsluiting-base>/<resource>?patient=<patient_fhir_id>&<filter>""
     activate Bron
     opt als token verlopen
-      Bron->Authenticatie : verkrijgen access token (zie stap #7)
+      Bron->Autorisatie : verkrijgen access token (zie stap #7)
     end opt
     Bron->Bronsysteem : gegevensverzoek (per zib)
     activate Bronsysteem

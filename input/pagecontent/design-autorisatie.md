@@ -1,3 +1,5 @@
+Na authenticatie in het eigen systeem (Zorgviewer Host) van de zorgverlener kan de zorgviewer worden opgestart. Daarvoor zijn bepaalde attributen nodig (1ste tabel) die al dan niet met een mapping of lookup worden omgezet in minimaal vereiste attributen i.h.k.v. wettelijke Logging bij het bevragen van de andere Bronsystemen (2de tabel).
+
 ### Opstarten zorgviewer: Summary Table
 
 In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (SAML, SMART-on-FHIR, FHIR).
