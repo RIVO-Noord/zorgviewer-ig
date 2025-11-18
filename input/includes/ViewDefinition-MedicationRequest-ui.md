@@ -50,8 +50,8 @@
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
-<td></td>
-<td></td>
+<td>7-8-2025</td>
+<td>20-9-2025</td>
 <td>PANTOPRAZOL TABLET MSR 40MG</td>
 <td>2 maal per dag 1 tablet;1 TABLET 1 UUR VOOR DE MAALTIJD</td>
 <td></td>

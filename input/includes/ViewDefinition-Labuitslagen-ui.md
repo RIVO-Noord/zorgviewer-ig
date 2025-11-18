@@ -4,7 +4,7 @@
 <tbody>
 <tr><th>&gt;&lt;</th>
 <th>Bron</th>
-<th>Afnamedatum</th>
+<th>Datum</th>
 <th>Test</th>
 <th>Testuitslag</th>
 <th>Interpretatie</th>

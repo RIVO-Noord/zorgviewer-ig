@@ -20,7 +20,7 @@
 <td><samp>iif(exists(context.period.start), context.period.start, indexed)</samp></td>
 <td><code>dateTime</code></td>
 <td>nvt</td>
-<td>N.B. tijd is GMT, dus omzetten naar CET. Ter info: indien datum uit <code>indexed</code> komt, deze markeren met een icoontje &#9432;</td>
+<td>N.B. tijd is GMT, dus omzetten naar CET.</td>
 </tr>
 <tr>
 <td>Beschrijving</td>
