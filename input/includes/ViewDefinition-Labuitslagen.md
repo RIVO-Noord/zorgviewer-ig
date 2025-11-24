@@ -55,7 +55,7 @@
 <td><samp>specimen.resolve().type.text</samp></td>
 <td><code>string</code></td>
 <td>Monster/ Monstermateriaal</td>
-<td></td>
+<td><b>Sanday:</b> Levert geen type materiaal</td>
 </tr>
 <tr>
 <td>Status</td>
