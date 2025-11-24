@@ -568,6 +568,7 @@
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
+<b>Commentaar</b><br/>test lab<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -579,6 +580,7 @@
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
+<b>Commentaar</b><br/>test lab<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>

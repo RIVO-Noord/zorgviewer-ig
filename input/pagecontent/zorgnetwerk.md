@@ -17,18 +17,19 @@ Inzage in het zorgnetwerk van een patiënt/cliënt binnen het zorgdomein.
 
 In onderstaande tabel staat een overzicht van gegevens die mogelijk het zorgnetwerk voor een patient vormen. 
 Zowel de bron in de zib als de bron in FHIR, waar soms meer in staat dan in de zib.
-De laatste 4 kolommen (Zorgviewer, Epic, Zorgplatform, Nexus) geeft per systeem aan of dat gegeven via FHIR beschikbaar is (Persoon, Zorginstelling, Contactdatums). De 3 legenda waarden gaan over beschikbaarheid van de gegevens. '111' betekent dat het gegeven in de kolom Persoon, Zorginstellen als Contactdatums beschikbaar is.
+De laatste 5 kolommen (Zorgviewer, Epic, Zorgplatform, Nexus, Sanday) geeft per systeem aan of dat gegeven via FHIR beschikbaar is (Persoon, Zorginstelling, Contactdatums). De 3 legenda waarden gaan over beschikbaarheid van de gegevens. '111' betekent dat het gegeven in de kolom Persoon, Zorginstellen als Contactdatums beschikbaar is.
 
 <table border="1" cellpadding="5">
-<tr><th>Zib / FHIR</th>
+<tr><th>Zib (FHIR Resource)</th>
 <th>Persoon</th>
 <th>Zorginstelling</th>
 <th>Contactdatums</th>
 <th>Zorgviewer</th>
 <th>Epic</th>
 <th>Zorgplatform</th>
-<th>Nexus</th></tr>
-<tr><td>Patient / Patient</td>
+<th>Nexus</th>
+<th>Sanday</th></tr>
+<tr><td>Patient (Patient)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -45,7 +46,7 @@ De laatste 4 kolommen (Zorgviewer, Epic, Zorgplatform, Nexus) geeft per systeem 
 <td>11-</td>
 <td>11-</td>
 <td>11-</td></tr>
-<tr><td>ContactPersoon / Patient.contact</td>
+<tr><td>ContactPersoon (Patient.contact)</td>
 <td>e.g. wife / Patient.contact</td>
 <td>nvt</td>
 <td>nvt</td>
@@ -54,7 +55,7 @@ De laatste 4 kolommen (Zorgviewer, Epic, Zorgplatform, Nexus) geeft per systeem 
 <td>1--</td>
 <td>1--</td>
 </tr><tr><td>
-Problemen / Condition 
+Problemen (Condition)
 </td>
 <td>
 Diagnosesteller 
@@ -71,7 +72,7 @@ Condition.assertedDate 
 <td>0-1</td>
 <td>1-1</td>
 <td>0-0</td></tr>
-<tr><td>Verrichtingen / Procedure</td>
+<tr><td>Verrichtingen (Procedure)</td>
 <td>Procedure.performer (Practitioner)</td>
 <td>
 Procedure.performer (Location) 
@@ -83,7 +84,7 @@ Procedure.performer (Location) 
 <td>111</td>
 <td>111</td>
 <td>111</td></tr>
-<tr><td>VG Procedure (special case)</td>
+<tr><td>VG Verrichtingen (Procedure) - vaak niet gecodeerd</td>
 <td>Procedure.performer (Practitioner)</td>
 <td>Procedure.performer (Location)</td>
 <td>Procedure.performedDateTime</td>
@@ -92,7 +93,7 @@ Procedure.performer (Location) 
 <td>???</td>
 <td>???</td></tr>
 <tr><td>
-Contact / Encounter 
+Contact (Encounter)
 </td>
 <td>
 Met 
@@ -106,14 +107,14 @@ Encounter.serviceProvider (Organization) 
 
 (Epic uses Encounter.location) 
 
-UMCGheeft ook nog afdeling als 2de locatie! 
+UMCG heeft ook nog afdeling als 2de locatie! 
 </td>
 <td>Encounter.period</td>
 <td>000</td>
 <td>111</td>
 <td>111</td>
 <td>111</td></tr>
-<tr><td>MedicationRequest / Medicatieafspraak</td>
+<tr><td>Medicatieafspraak (MedicationRequest)</td>
 <td>Voorschrijver MedicationRequest.requester.agent</td>
 <td></td>
 <td>MedicationRequest.authoredOn</td>
@@ -122,13 +123,17 @@ UMCGheeft ook nog afdeling als 2de locatie! 
 <td>1--</td>
 <td>?--</td>
 </tr>
+<tr><td>Medicatiegebruik (MedicationStatement)</td></tr>
+<tr><td>Vitale Gegevens (Observation)</td></tr>
+<tr><td>Behandelaanwijzingen & Wilsbeschikkingen (Consent)</td></tr>
+<tr><td>Correspondentie (DocumentReference)</td></tr>
 </table>
 
 Legenda:<br/>
-'-' = nvt<br/>
-'0' = gegeven niet beschikbaar<br/>
-'1' gegeven beschikbaar<br/>
-'?' = nog uitzoeken<br/>
+'-' : nvt<br/>
+'0' : gegeven niet beschikbaar<br/>
+'1' : gegeven beschikbaar<br/>
+'?' : nog uitzoeken<br/>
 
 ### AGB en Fysieke Locatie
 

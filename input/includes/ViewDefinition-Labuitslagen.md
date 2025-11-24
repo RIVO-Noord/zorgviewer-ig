@@ -67,10 +67,10 @@
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Commentaar</td>
-<td><samp>comment</samp></td>
+<td><samp>comment | note.text</samp></td>
 <td><code>string</code></td>
 <td>Toelichting</td>
-<td></td>
+<td><b>LET OP:</b> <code>note.text</code> is een FHIR R4 veld</td>
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+Toelichting materiaal</td>
