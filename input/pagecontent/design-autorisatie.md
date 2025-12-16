@@ -9,16 +9,16 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 |--|--|--|--|--|--|--|--|
 | Workflow ID | nvt | nvt | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
 | Practitioner ID | `Subject/NameID` | `Subject/NameID` | `Subject/NameID` | `Subject/NameID` | Practitioner read adhv `token.practitioner` | `177578` | Practitioner.identifier |
-| Practitioner Name Initials | | ?? | | `professional.initials` | *zie FHIR Path* | `L.` | Practitioner.name.given[extension=IN] |
-| Practitioner Family Name | | ?? | | `professional.family_name` | *zie FHIR Path* | `Arts` | Practitioner.name.family |
+| Practitioner Name Initials | - | ?? | - | `professional.initials` | *zie FHIR Path* | `L.` | Practitioner.name.given[extension=IN] |
+| Practitioner Family Name | - | ?? | - | `professional.family_name` | *zie FHIR Path* | `Arts` | Practitioner.name.family |
 | Practitioner Name | `zorgverlener.volledigenaam` | ?? | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name |  | *zie FHIR Path* | `L. Arts` | Practitioner.name |
 | Practitioner Role | (1) | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | PractitionerRole read adhv `token.practitioner` | `code=62247001 display=huisarts system=SNOMED CT` of [ConceptMap-rolcodenl](ConceptMap-rolcodenl.html) `urn:oid:2.16.840.1.113883.2.4.15.111.01.000` | PractitionerRole.code[system=sct] n.b. via [ConceptMap-epic-rolcode](ConceptMap-epic-rolcode.html) |
 | Organization OID | (2) | urn:oasis:names:tc:xspa:1.0:subject:organization-id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | `organization-id` | *zie FHIR Path* | `2.16.840.1.113883.2.4.3.8` | Practitioner.meta[extension=source] |
 | Patient BSN | `patient.BSN` | `client.bsn` | urn:oasis:names:tc:xacml:1.0:resource:resource-id | `client.bsn` | Patient read adhv `token.patient` | `999911120` | Patient.identifier[system=bsn] |
 | Patient FHIR ID | (3) |  ?? |`patient-fhir-id` uit Task.reference read adhv `workflow-id` |  | `token.patient` | `9819C39260647B5DE61609CDF1FA1C` | Patient.id |
-| Patient Name Initials | `patient.voorletters` | `client.initials` | Patient.read adhv `patient-fhir-id` / *zie FHIR Path* | `client.initials` | *zie FHIR Path* | `J.` | Patient.name.given[extension=IN] |
-| Patient Family Name |  | `client.family_name` | *zie FHIR Path* | `client.family_name` | *zie FHIR Path* | `Fictief` | Patient.name.family |
-| Patient Name | `patient.volledigenaam` | | *zie FHIR Path* | | *zie FHIR Path* | `J. Fictief` | Patient.name |
+| Patient Name Initials | - | `client.initials` | Patient.read adhv `patient-fhir-id` / *zie FHIR Path* | `client.initials` | *zie FHIR Path* | `J.` | Patient.name.given[extension=IN] |
+| Patient Family Name | - | `client.family_name` | *zie FHIR Path* | `client.family_name` | *zie FHIR Path* | `Fictief` | Patient.name.family |
+| Patient Name | `patient.volledigenaam` | - | *zie FHIR Path* | - | *zie FHIR Path* | `J. Fictief` | Patient.name |
 | Patient Birthdate | `patient.geboortedatum` | `client.birthdate` | *zie FHIR Path* | `client.birthdate` | *zie FHIR Path* | `19700101` | Patient.birthDate |
 {: .grid .table-striped}
 
