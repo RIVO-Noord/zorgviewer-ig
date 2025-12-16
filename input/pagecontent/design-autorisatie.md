@@ -1,4 +1,5 @@
 Na authenticatie in het eigen systeem (Zorgviewer Host) van de zorgverlener kan de zorgviewer worden opgestart. Daarvoor zijn bepaalde attributen nodig (1ste tabel) die al dan niet met een mapping of lookup worden omgezet in minimaal vereiste attributen i.h.k.v. wettelijke Logging bij het bevragen van de andere Bronsystemen (2de tabel).
+De 1ste tabel toont de attributen ontvangen door de Zorgviewer van de Zorgviewer Host en de 2de tabel toont de attributen zoals ze worden meegestuurd bij bevragen bronsystemen.
 
 ### Opstarten zorgviewer: Summary Table
 
