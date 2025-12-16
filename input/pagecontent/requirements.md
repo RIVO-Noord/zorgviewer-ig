@@ -5,6 +5,7 @@
 1. Informatie blijft primair bij de bron en wordt zo min mogelijk gerepliceerd
     * Registratie aan de Bron - zorg voor juiste bron registratie, ontsluit wat er is
     * Aanpassen aan de bron, mappings in de bron en bron corrigeren als mogelijk
+1. We doen geen interpretaties of aanpassingen aan de informatie, b.v. labuitslagen binnen of buiten de referentiewaarden
 1. De Zorgviewer wordt opgestart vanuit de eigen informatieomgeving
 1. *TOEKOMST* Informatie kan worden overgenomen in het eigen informatiesysteem wanneer daaraan behoefte is
 1. De informatie wordt gefilterd op basis van de specifieke informatiebehoefte, bijvoorbeeld:
