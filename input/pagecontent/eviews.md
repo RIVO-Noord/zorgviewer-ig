@@ -1,4 +1,4 @@
-<div class="dragon">
+<div class="dragon" markdown="1">
 Op deze pagina staan de experimentele OpenEHR View renderings van de profielen.
 </div>
 
