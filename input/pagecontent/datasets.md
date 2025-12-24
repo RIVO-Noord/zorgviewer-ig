@@ -101,3 +101,7 @@ Voor de volledige dataset, kijk op [Nictiz ART-DECOR](https://decor.nictiz.nl/ar
 ### Verpleegkundige Overdracht
 
 ...
+
+### EHDS EPS
+
+Als voorbereiding op de EHDS hebben we naast de voorbeelden uit de aangesloten systemen een voorbeeld EPS uit het [Syndrai Project - Synthetic Data Examples – Realistic – using AI](https://synderai.net/index.php?menu=examples/EPS) gebruikt bij het genereren van de wireframes voor ieder profiel. Herkenbaar aan "EPS" in de bron kolom.

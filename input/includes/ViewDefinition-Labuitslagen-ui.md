@@ -13,6 +13,50 @@
 <th>Status</th>
 </tr>
 <tr><td>+</td>
+<td>EPS</td>
+<td>30-10-2022</td>
+<td>Cholesterol [Mass/volume] in Serum or Plasma</td>
+<td>122.5 mg/dL</td>
+<td></td>
+<td>125 - 200</td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>30-10-2022</td>
+<td>Triglyceride [Mass/volume] in Serum or Plasma</td>
+<td>125.3 mg/dL</td>
+<td></td>
+<td>35 - 150</td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>30-10-2022</td>
+<td>Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay</td>
+<td>42 mg/dL</td>
+<td></td>
+<td>0 - 130</td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>30-10-2022</td>
+<td>Cholesterol in HDL [Mass/volume] in Serum or Plasma</td>
+<td>55.5 mg/dL</td>
+<td></td>
+<td>45 - 95</td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft-Bundle2</td>
 <td>4-2-2025</td>
 <td>Substantie</td>

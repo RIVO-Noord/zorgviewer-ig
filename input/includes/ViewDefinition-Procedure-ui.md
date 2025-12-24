@@ -10,6 +10,24 @@
 <th>Uitgevoerd door</th>
 </tr>
 <tr><td>+</td>
+<td>EPS</td>
+<td></td>
+<td>Epidural anesthesia</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+<b>Verrichtingcode</b><br/>SNOMED CT#18946005 Epidural anesthesia<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td></td>
+<td>Parturition</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+<b>Verrichtingcode</b><br/>SNOMED CT#66348005 Childbirth<br/>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft</td>
 <td>5-6-2012</td>
 <td>implantatie van totale knieprothese</td>
