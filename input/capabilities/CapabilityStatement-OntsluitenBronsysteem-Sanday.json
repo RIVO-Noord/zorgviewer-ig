@@ -1,13 +1,20 @@
 {
   "resourceType": "CapabilityStatement",
-  "url": "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteemSanday",
+  "url": "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem-Sanday",
   "name": "OntsluitenBronsysteemSanday",
   "title": "Ontsluiten Bronsysteem - Sanday",
   "status": "active",
   "date": "2025-12-24",
   "description": "Deze CapabilityStatement beschrijft Ontsluiten Bronsysteem voor Sanday.",
   "copyright": "CC0",
-  "kind": "requirements",
+  "kind": "capability",
+  "instantiates": [
+    "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem"
+  ],
+  "software": {
+    "name": "Sanday FHIR GP Data Services",
+    "version": "1.11"
+  },
   "fhirVersion": "4.0.1",
   "acceptUnknown": "both",
   "format": [
@@ -44,7 +51,7 @@
             "coding": [
               {
                 "system": "http://hl7.org/fhir/restful-security-service",
-                "code": "OAuth"
+                "code": "OAuth2"
               },
               {
                 "system": "http://hl7.org/fhir/restful-security-service",
