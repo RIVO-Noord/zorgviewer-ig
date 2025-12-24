@@ -58,7 +58,7 @@ Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende orga
 
 In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (Zorgviewer, SAML, SMART-on-FHIR, TA Notified Pull).
 
-| Item | Generiek (HTTP-Header) | **TA Notified Pull** | Sanday (SAML) | Nexus (SAML) | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Example | FHIR Path |
+| Item | Generiek (HTTP-Header) | **TA Notified Pull** | [Sanday (SAML)](CapabilityStatement-OntsluitenBronsysteem-Sanday.html) | Nexus (SAML) | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Example | FHIR Path |
 |--|--|--|--|--|--|--|--|--|--|
 | PurposeOfUse |   | *FHIR Task.code* | nvt | nvt | urn:oasis:names:tc:xspa:1.0:subject:purposeofuse | nvt | nvt | `TREATMENT` | nvt |
 | Workflow ID |   | *FHIR Task.identifier* | nvt | nvt | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
