@@ -4,20 +4,7 @@
     "name": "Terminologie",
     "title": "Terminologie",
     "status": "active",
-    "publisher": "RIVO-Noord",
     "date": "2023-09-04",
-    "contact": [
-        {
-            "name": "RIVO-Noord",
-            "telecom": [
-                {
-                    "system": "url",
-                    "value": "https://www.rivo-noord.nl",
-                    "use": "work"
-                }
-            ]
-        }
-    ],
     "description": "Deze CapabilityStatement beschrijft de minimale requirements voor het Terminologie Bouwblok.",
     "copyright": "CC0",
     "kind": "requirements",
@@ -38,15 +25,35 @@
                             "valueCode": "SHALL"
                         }
                     ],
+                    "type": "ConceptMap",
+                    "interaction": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHALL"
+                                }
+                            ],
+                            "code": "search-type"
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                            "valueCode": "SHALL"
+                        }
+                    ],
                     "type": "CodeSystem",
                     "interaction": [
                         {
                             "extension": [
                                 {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                  "valueCode": "SHALL"
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHALL"
                                 }
-                              ],
+                            ],
                             "code": "search-type"
                         }
                     ]
@@ -63,13 +70,27 @@
                         {
                             "extension": [
                                 {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                  "valueCode": "SHALL"
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHALL"
                                 }
-                              ],
+                            ],
                             "code": "search-type"
                         }
                     ]
+                }
+            ],
+            "operation": [
+                {
+                    "name": "lookup",
+                    "definition": {
+                        "reference": "http://hl7.org/fhir/OperationDefinition/CodeSystem-lookup"
+                    }
+                },
+                {
+                    "name": "translate",
+                    "definition": {
+                        "reference": "http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"
+                    }
                 }
             ]
         }
