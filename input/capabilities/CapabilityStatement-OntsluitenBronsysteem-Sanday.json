@@ -67,28 +67,64 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHOULD NOT"
+              "valueCode": "SHOULD-NOT"
             }
           ],
-          "type": "DocumentReference"
+          "type": "DocumentReference",
+          "documentation": "Documenten worden niet ontsloten naar zorgverleners.",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD-NOT"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
         },
         {
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHOULD NOT"
+              "valueCode": "SHOULD-NOT"
             }
           ],
-          "type": "Immunization"
+          "type": "Immunization",
+          "documentation": "Vaccinaties worden niet geregistreerd.",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD-NOT"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
         },
         {
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHOULD NOT"
+              "valueCode": "SHOULD-NOT"
             }
           ],
-          "type": "Flag"
+          "type": "Flag",
+          "documentation": "Alerts worden gebruikt als attentieflag ipv waarschuwing voor e.g. infectiegevaar.",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD-NOT"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
         },
         {
           "extension": [
