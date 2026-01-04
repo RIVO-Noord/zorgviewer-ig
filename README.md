@@ -84,7 +84,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
     1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
 1. (optionally) Generate changelog using Gemini
     1. First update tags `> git pull`
-    1. Then use `gemini` with the following prompt: `Generate a changelog for the changes from the last tag up to the HEAD and summerize this in a short bullet list`
+    1. Then use `gemini` (CLI) with the following prompt: `Generate a changelog for the changes from the last tag up to the HEAD and summerize this in a short bullet list`
     1. Plaatst output onder "Laatste Wijzigingen" in `changes.md`
 1. ``> git commit -a -m "afhechten sprintX"; git push``
 1. Create tag "1.M.R-sprintX" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 

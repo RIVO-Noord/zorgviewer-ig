@@ -19,7 +19,7 @@
 
 ### Versies
 
-[Resource comparison with version v1.19.0](comparison-v1.18.0/index.html)
+[Resource comparison with version v1.21.0](comparison-v1.21.0/index.html)
 
 |Versie|Datum|Changes|
 |---|---|---|

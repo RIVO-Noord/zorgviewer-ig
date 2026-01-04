@@ -1,4 +1,4 @@
-### Bevragen bronsysteem: Summary Table
+### Bevragen bronsysteem: Autorisatie
 
 In onderstaande tabel staan de benodigde SAML attributen voor bevragen van een Sanday systeem vanuit de Zorgviewer.
 
@@ -8,3 +8,8 @@ In onderstaande tabel staan de benodigde SAML attributen voor bevragen van een S
 | Requesting Organization (OID) | context-requester-org-id | `2.16.528.1.1007.3.3.15123` | Practitioner.meta[extension=source] |
 | Target Organization (AGB) | context-target-org-id | [`01010813`](https://www.vektis.nl/agb-register/onderneming-01010813) | system=http://fhir.nl/fhir/NamingSystem/agb-z
 {: .grid .table-striped}
+
+### Bevragen bronsysteem: Requests
+
+* Niet Flag (Alerts), Immunization (Vaccinaties) en DocumentRefernces (Correspondentie) uitvragen.
+* Zie ook specifieke Requests voor [VitalSigns](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/StructureDefinition-VitalSign.html#request), [LaboratoryTestResult](StructureDefinition-LaboratoryTestResult.html#request) en [AllergyIntolerance](StructureDefinition-AllergyIntolerance.html#request).
