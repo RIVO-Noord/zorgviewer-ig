@@ -8,9 +8,9 @@ Statements:
 * Binnen Zorgviewer hebben we bij voorkeur als codering voor PractitionerRole.code de SNOMED CT beroepen - [ValueSet-SubjectRoleCodelist](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/ValueSet-SubjectRoleCodelist.html)
     * en de (UZI) RolcodeNL erbij: [Nictiz R4 Zib2020 | RoleCodeNLZorgverlenertypen - SIMPLIFIER.NET](https://simplifier.net/nictiz-r4-zib2020/uzi-rolcode)
 * Deze zijn niet altijd zo gecodeer in bronsystemen, daarom hier mappings:
-    * [Epic -> SCT](ConceptMap-epic-rolcode.html)
-    * [Nexus -> SCT](ConceptMap-rolcodenl.html)
-    * [Sanday -> SCT](ConceptMap-sanday.html)
+    * [Epic Provider Type -> SNOMED CT beroepen](ConceptMap-epic-rolcode.html)
+    * [Nexus rolcodenl -> SNOMED CT beroepen](ConceptMap-rolcodenl.html)
+    * [Sanday functie omschrijvingen -> SNOMED CT beroepen](ConceptMap-sanday.html)
 
 <div>
 {% include img.html img="gebruikerscontext.png" width="70%" %}
