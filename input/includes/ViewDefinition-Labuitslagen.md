@@ -31,7 +31,7 @@
 </tr>
 <tr>
 <td>Testuitslag</td>
-<td><samp>valueString | valueQuantity.value.toString() + iif(valueQuantity.unit.exists(),' ' + valueQuantity.unit,'')</samp></td>
+<td><samp>valueString | valueQuantity.value.toString() + iif(valueQuantity.code.exists(),' ' + valueQuantity.code,'')</samp></td>
 <td><code>string</code></td>
 <td>LaboratoriumTest/ TestUitslag</td>
 <td><b>Epic:</b> Indien lab-order geannuleerd, dan krijgt dit alsnog de status <code>Definitief</code> met een Testuitslag van <code>GEANNULEERD</code>. Dit is voor nu akkoord bevonden door stuurgroep Zorgviewer.</td>
@@ -45,10 +45,10 @@
 </tr>
 <tr>
 <td>Onder- en bovengrens</td>
-<td><samp>referenceRange.low.value.toString() + ' - ' + referenceRange.high.value.toString() + iif(referenceRange.high.unit.exists(),' ' + referenceRange.high.unit,'')</samp></td>
+<td><samp>referenceRange.low.value.toString() + ' - ' + referenceRange.high.value.toString() + iif(referenceRange.high.code.exists(),' ' + referenceRange.high.code,'')</samp></td>
 <td><code>string</code></td>
 <td>LaboratoriumTest/ReferentieOndergrens, LaboratoriumTest/ ReferentieBovengrens</td>
-<td>Indien <code>low.unit</code> en <code>high.unit</code> niet gelijk zijn aan elkaar toon dan <code>unit</code> bij beide.</td>
+<td>Indien <code>low.code</code> en <code>high.code</code> niet gelijk zijn aan elkaar toon dan <code>code</code> bij beide.</td>
 </tr>
 <tr>
 <td>Materiaal</td>

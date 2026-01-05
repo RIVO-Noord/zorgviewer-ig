@@ -18,7 +18,7 @@
 <td>Cholesterol [Mass/volume] in Serum or Plasma</td>
 <td>122.5 mg/dL</td>
 <td></td>
-<td>125 - 200</td>
+<td>125 - 200 mg/dL</td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -29,7 +29,7 @@
 <td>Triglyceride [Mass/volume] in Serum or Plasma</td>
 <td>125.3 mg/dL</td>
 <td></td>
-<td>35 - 150</td>
+<td>35 - 150 mg/dL</td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -40,7 +40,7 @@
 <td>Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay</td>
 <td>42 mg/dL</td>
 <td></td>
-<td>0 - 130</td>
+<td>0 - 130 mg/dL</td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -51,7 +51,7 @@
 <td>Cholesterol in HDL [Mass/volume] in Serum or Plasma</td>
 <td>55.5 mg/dL</td>
 <td></td>
-<td>45 - 95</td>
+<td>45 - 95 mg/dL</td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
