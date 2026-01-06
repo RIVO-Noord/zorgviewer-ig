@@ -232,7 +232,7 @@
 <td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=7>
 <b>Methode</b><br/>Non-invasive<br/>
-<b>MeetLocatie</b><br/>Body Site<br/>
+<b>MeetLocatie</b><br/>structuur van linker bovenbeen (lichaamsstructuur)<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 </td></tr>
 <tr><td>+</td>
@@ -245,7 +245,7 @@
 <td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=7>
 <b>Methode</b><br/>Non-invasive<br/>
-<b>MeetLocatie</b><br/>Body Site<br/>
+<b>MeetLocatie</b><br/>gehele rechter onderste extremiteit (lichaamsstructuur)<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 </td></tr>
 <tr><td>+</td>
@@ -258,7 +258,7 @@
 <td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=7>
 <b>Methode</b><br/>Non-invasive<br/>
-<b>MeetLocatie</b><br/>Body Site<br/>
+<b>MeetLocatie</b><br/>gehele linker bovenarm (lichaamsstructuur)<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 </td></tr>
 <tr><td>+</td>
@@ -283,7 +283,7 @@
 <td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=7>
 <b>Methode</b><br/>Non-invasive<br/>
-<b>MeetLocatie</b><br/>Body Site<br/>
+<b>MeetLocatie</b><br/>gehele rechter bovenarm (lichaamsstructuur)<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 </td></tr>
 <tr><td>+</td>
