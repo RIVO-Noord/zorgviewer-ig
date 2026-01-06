@@ -9,6 +9,11 @@ In onderstaande tabel staan de benodigde SAML attributen voor bevragen van een S
 | Target Organization (AGB) | context-target-org-id | [`01010813`](https://www.vektis.nl/agb-register/onderneming-01010813) | system=http://fhir.nl/fhir/NamingSystem/agb-z
 {: .grid .table-striped}
 
+### Bevragen bronsysteem: Patient id
+
+1. Opzoeken patient FHIR id middels Patient/$match en de BSN van de patient
+1. Meegeven patient FHIR id bij elke request als parameter "patient"
+
 ### Bevragen bronsysteem: Requests
 
 * Niet Flag (Alerts), Immunization (Vaccinaties) en DocumentRefernces (Correspondentie) uitvragen.
