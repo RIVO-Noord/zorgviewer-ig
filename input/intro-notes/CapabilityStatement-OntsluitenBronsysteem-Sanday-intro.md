@@ -1,6 +1,6 @@
 ### Bevragen bronsysteem: Autorisatie
 
-In onderstaande tabel staan de benodigde SAML attributen voor bevragen van een Sanday systeem vanuit de Zorgviewer.
+In onderstaande tabel staan de benodigde attributen voor bevragen van een Sanday systeem vanuit de Zorgviewer.
 
 | Item | Sanday (SAML) | Example | FHIR Path |
 |--|--|--|--|
@@ -9,7 +9,7 @@ In onderstaande tabel staan de benodigde SAML attributen voor bevragen van een S
 | Target Organization (AGB) | context-target-org-id | [`01010813`](https://www.vektis.nl/agb-register/onderneming-01010813) | system=http://fhir.nl/fhir/NamingSystem/agb-z
 {: .grid .table-striped}
 
-### Bevragen bronsysteem: Patient id
+### Bevragen bronsysteem: Patient identificatie
 
 1. Opzoeken patient FHIR id middels Patient/$match en de BSN van de patient
 1. Meegeven patient FHIR id bij elke request als parameter "patient"
