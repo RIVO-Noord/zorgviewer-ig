@@ -47,7 +47,7 @@
 <td>Onder- en bovengrens</td>
 <td><samp>referenceRange.low.value.toString() + ' - ' + referenceRange.high.value.toString() + iif(referenceRange.high.code.exists(),' ' + referenceRange.high.code,'')</samp></td>
 <td><code>string</code></td>
-<td>LaboratoriumTest/ReferentieOndergrens, LaboratoriumTest/ ReferentieBovengrens</td>
+<td>LaboratoriumTest/ ReferentieOndergrens, LaboratoriumTest/ ReferentieBovengrens</td>
 <td>Indien <code>low.code</code> en <code>high.code</code> niet gelijk zijn aan elkaar toon dan <code>code</code> bij beide.</td>
 </tr>
 <tr>
