@@ -16,5 +16,5 @@ In onderstaande tabel staan de benodigde attributen voor bevragen van een Sanday
 
 ### Bevragen bronsysteem: Requests
 
-* Niet Flag (Alerts), Immunization (Vaccinaties) en DocumentRefernces (Correspondentie) uitvragen.
+* Niet Flag (Alerts), Immunization (Vaccinaties) en DocumentReferences (Correspondentie) uitvragen.
 * Zie ook specifieke Requests voor [VitalSigns](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/StructureDefinition-VitalSign.html#request), [LaboratoryTestResult](StructureDefinition-LaboratoryTestResult.html#request) en [AllergyIntolerance](StructureDefinition-AllergyIntolerance.html#request).
