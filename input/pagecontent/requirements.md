@@ -181,7 +181,7 @@ Er zijn meerdere niveau's van autorisatie, namelijk:
 
 ### Technische Requirements
 
-1. Alle implementaties dienen zich te houden aan **Postel's law, Robustness principle** [Grahame Grieve](http://www.healthintersections.com.au/?p=2403) of [Correct Use](https://hl7.org/fhir/R4/validation.html#correct-use)
+1. Alle implementaties dienen zich te houden aan **Postel's law, Robustness principle** [Grahame Grieve](https://www.healthintersections.com.au/2015/12/08/fhir-and-postels-robustness-principle.html) of [Correct Use](https://hl7.org/fhir/R4/validation.html#correct-use)
 1. Niet valideren tegen de profiles at-runtime, alleen bij aansluit (zelf) certificeren aan de hand van de [CapabilityStatements](artifacts.html#1) in deze implementatiegids.
 
 ### EHR-S FM Requirements Mapping
