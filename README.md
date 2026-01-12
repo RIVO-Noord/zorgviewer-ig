@@ -84,22 +84,21 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
     1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
 1. (optionally) Generate changelog using Gemini
     1. First update tags `> git pull`
-    1. Then use `gemini` (CLI) with the following prompt: `Generate a changelog for the changes from the last tag up to the HEAD and summerize this in a short bullet list`
+    1. Then use `gemini` (CLI) with the following prompt: `Generate a changelog for the changes from the last tag up to the HEAD and summerize this in a short bullet list in Dutch`
     1. Plaatst output onder "Laatste Wijzigingen" in `changes.md`
-1. ``> git commit -a -m "afhechten sprintX"; git push``
+1. ``> git commit -a -m "afhechten release 1.M.R"; git push``
 1. Create tag "1.M.R-sprintX" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
     1. Tags
     1. Releases
     1. Draft new release
-    1. Choose a tag: "1.M.R-sprintX"
+    1. Choose a tag: "1.M.R"
     1. Create a new tag
-    1. Release title: "1.M.R-sprintX"
+    1. Release title: "1.M.R"
     1. Description: generate release notes -> "{github changes link}"
     1. Vink aan: Set as the latest release
     1. Publish release
 1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
     Edit file in your fork and create a PR.
-
 
 ### Vrijgeven van de laatste Release
 
@@ -108,12 +107,12 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 > cd {temp-folder}
 (eerste keer: git clone https://github.com/RIVO-Noord/zorgviewer-ig.git ; git checkout snapshot)
 > git pull
-> git merge 1.M.R-sprintX
+> git merge 1.M.R
 ```
-1. Zet release label in zorgviewer-ig.json op "sprintX"
+1. Zet release label in zorgviewer-ig.json op "release"
 ```
 > vi input/zorgviewer-ig.json
-> git commit -a -m "publication sprintX"
+> git commit -a -m "publication 1.M.R"
 > git push
 ```
 1. En werk verder in de master branch
