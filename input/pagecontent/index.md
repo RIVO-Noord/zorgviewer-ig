@@ -15,7 +15,7 @@ De Zorgviewer ondersteunt netwerkzorg en ketenzorg, waarbij meerdere organisatie
 
 ### Achtergrond
 
-Zorg wordt steeds vaker geleverd in netwerken. Ondersteund met kreten als 'Juiste Zorg op de Juiste Plaats door de Juiste Zorgverlener <strong>met de Juiste (Technische) Ondersteuning</strong>`. Samen met RIVO en regionale architecten (RAO) is in 2020 een [netwerkzorgarchitectuur](https://jimdo-storage.global.ssl.fastly.net/file/a647b7db-1537-4f74-a4c0-b56066ae9d07/Netwerkzorgarchitectuur%201.0.pdf) opgesteld. Het doel: een compleet beeld van de patiënt.
+Zorg wordt steeds vaker geleverd in netwerken. Ondersteund met kreten als 'Juiste Zorg op de Juiste Plaats door de Juiste Zorgverlener <strong>met de Juiste (Technische) Ondersteuning</strong>`. Samen met RIVO en regionale architecten (RAO) is in 2020 een [netwerkzorgarchitectuur](https://storage.e.jimdo.com/file/a647b7db-1537-4f74-a4c0-b56066ae9d07/Netwerkzorgarchitectuur%201.0.pdf) opgesteld. Het doel: een compleet beeld van de patiënt.
 
 [Deze video](https://www.youtube.com/watch?v=3C2ol2i4w9s) laat in het kort zien wat de Zorgviewer is.
 

@@ -71,5 +71,33 @@
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>9-8-1977</td>
+<td>Allergy to substance</td>
+<td></td>
+<td>environment</td>
+<td></td>
+<td></td>
+<td></td>
+<td>undefined</td>
+<td></td>
+<td>undefined</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>9-8-1977</td>
+<td>Shellfish</td>
+<td></td>
+<td>food</td>
+<td></td>
+<td>severe</td>
+<td></td>
+<td>undefined</td>
+<td></td>
+<td>undefined</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
 </tbody>
 </table>

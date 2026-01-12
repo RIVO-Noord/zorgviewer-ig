@@ -10,6 +10,69 @@
 <th>(regelkleur)</th>
 </tr>
 <tr><td>+</td>
+<td>EPS</td>
+<td>21-1-2020</td>
+<td>Osteoarthritis of knee</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>SNOMED CT#239873007 Osteoarthritis of knee (disorder)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>4-2-2014</td>
+<td>Fibromyalgia</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>SNOMED CT#203082005 Fibromyalgia (disorder)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>29-1-2002</td>
+<td>Chronic sinusitis</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>SNOMED CT#40055000 Chronic sinusitis (disorder)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>20-4-2022</td>
+<td>Acute viral pharyngitis</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>SNOMED CT#195662009 Acute viral pharyngitis (disorder)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>21-2-2020</td>
+<td>Viral sinusitis</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>SNOMED CT#444814009 Viral sinusitis (disorder)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>9-6-2019</td>
+<td>Miscarriage in first trimester</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>SNOMED CT#19169002 Miscarriage in first trimester (disorder)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>9-6-2019</td>
+<td>Complete miscarriage</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>SNOMED CT#156073000 Complete miscarriage (disorder)<br/>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft</td>
 <td>1-1-2001</td>
 <td>fractuur van pols</td>

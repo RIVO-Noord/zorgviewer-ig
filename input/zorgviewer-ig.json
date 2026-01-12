@@ -3,7 +3,7 @@
   "id": "hl7.fhir.nl.zorgviewer",
   "language": "en-US",
   "url": "http://fhir.hl7.nl/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer",
-  "version": "1.21.0",
+  "version": "1.22.0",
   "name": "ZorgviewerIG",
   "title": "RIVO-Noord Zorgviewer Implementation Guide",
   "status": "active",
@@ -533,7 +533,7 @@
           "reference": "MedicationRequest/2.16.840.1.113883.2.4.3.124.7.10160.01230000013923"
         },
         "name": "Chipsoft MedicationRequest Example",
-        "description": "Dit is een MedicationRequest voorbeeld uit Chuipsoft.",
+        "description": "Dit is een MedicationRequest voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationRequest"
       },
       {
@@ -635,8 +635,13 @@
               "generation": "markdown"
             },
             {
-              "nameUrl": "design-authenticatie.html",
-              "title": "Authenticatie Bouwblok Design",
+              "nameUrl": "design-autorisatie.html",
+              "title": "Autorisatie Bouwblok Design",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "design-practitioner-role.html",
+              "title": "Practitioner Role Design",
               "generation": "markdown"
             },
             {
@@ -758,12 +763,28 @@
         "value": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source"
       },
       {
+        "code": "extension-domain",
+        "value": "http://open.epic.com"
+      },
+      {
+        "code": "extension-domain",
+        "value": "https://open.epic.com"
+      },
+      {
+        "code": "extension-domain",
+        "value": "http://nictiz.nl"
+      },
+      {
+        "code": "extension-domain",
+        "value": "http://hl7.org"
+      },
+      {
         "code": "path-expansion-params",
         "value": "resources/Parameters-exp-params.json"
       },
       {
         "code": "version-comparison-master",
-        "value": "1.20.0"
+        "value": "1.21.0"
       }
     ]
   }

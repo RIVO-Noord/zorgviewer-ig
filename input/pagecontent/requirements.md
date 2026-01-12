@@ -5,6 +5,7 @@
 1. Informatie blijft primair bij de bron en wordt zo min mogelijk gerepliceerd
     * Registratie aan de Bron - zorg voor juiste bron registratie, ontsluit wat er is
     * Aanpassen aan de bron, mappings in de bron en bron corrigeren als mogelijk
+1. We doen geen interpretaties van of aanpassingen aan de informatie, b.v. bepalen of labuitslagen binnen of buiten de referentiewaarden vallen
 1. De Zorgviewer wordt opgestart vanuit de eigen informatieomgeving
 1. *TOEKOMST* Informatie kan worden overgenomen in het eigen informatiesysteem wanneer daaraan behoefte is
 1. De informatie wordt gefilterd op basis van de specifieke informatiebehoefte, bijvoorbeeld:
@@ -180,7 +181,7 @@ Er zijn meerdere niveau's van autorisatie, namelijk:
 
 ### Technische Requirements
 
-1. Alle implementaties dienen zich te houden aan **Postel's law, Robustness principle** [Grahame Grieve](http://www.healthintersections.com.au/?p=2403) of [Mark Kramer](https://lightmyfhir.org/2016/05/25/postels-law-and-fhir-profiles/)
+1. Alle implementaties dienen zich te houden aan **Postel's law, Robustness principle** [Grahame Grieve](https://www.healthintersections.com.au/2015/12/08/fhir-and-postels-robustness-principle.html) of [Correct Use](https://hl7.org/fhir/R4/validation.html#correct-use)
 1. Niet valideren tegen de profiles at-runtime, alleen bij aansluit (zelf) certificeren aan de hand van de [CapabilityStatements](artifacts.html#1) in deze implementatiegids.
 
 ### EHR-S FM Requirements Mapping

@@ -1,29 +1,28 @@
 ### Laatste Wijzigingen
 
-* General:
-    * Updates to origin information and tooltip placement.
-    * Various corrections, system fixes, and cosmetic updates.
-    * Textual adjustments and layout improvements.
-    * Fixed an issue with HTML escaping.
-* Integration & Mapping:
-    * Added and updated Sanday SSO attributes and examples.
-    * Converted problem status mapping to a valueset.
-    * Added mappings for several healthcare roles.
-    * Added a subject role code for the care platform.
-* Testing:
-    * Restructured and improved test cases.
-    * Added new test cases for Zorgviewer.
-* Dependencies:
-    * Fixed an IG publisher bug.
-    * Updated the zib package dependency, and rolled back a version to fix a bug.
+* Functioneel:
+    * Er is een "plain language" beschrijving toegevoegd.
+    * Toegang voor Physician Assistant is toegevoegd en voor administratief medewerkers verwijderd (na afstemming met Sanday).
+    * De verwerking van autorisatierollen in de ConceptMap is aangepast.
+    * Extra rolcode-informatie toegevoegd.
+    * Er is een workaround voor de meetlocatie van Vitale Functies voor Epic gedefinieerd.
+    * Aanpassingen gedaan in gegevensherkomst voor EPS (European Patient Summary)
+    
+* Technisch & Documentatie:
+    * Diverse links, afbeeldingen en documentatie zijn bijgewerkt.
+    * Er zijn verbeteringen doorgevoerd aan de CapabilityStatements.
+    * Specifieke aanpassingen en correcties voor Sanday, o.a. voor labuitslagen en het materiaaltype.
+    * De zoekpagina is gecorrigeerd.
+    * De volgorde van menu-items is aangepast.
 
 ### Versies
 
-[Resource comparison with version v1.19.0](comparison-v1.18.0/index.html)
+[Resource comparison with version v1.21.0](comparison-v1.21.0/index.html)
 
 |Versie|Datum|Changes|
 |---|---|---|
-|1.22.0-sprint71|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.21.0-sprint70...HEAD)||
+|1.23.0|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.22.0...HEAD)||
+|1.22.0|12-jan-2026|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.21.0-sprint70...1.22.0)||
 |1.21.0-sprint70|28-okt-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.20.0-sprint68...1.21.0-sprint70)||
 |1.20.0-sprint68|30-sep-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.19.0-sprint67...1.20.0-sprint68)||
 |1.19.0-sprint67|15-sep-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.18.0-sprint65...1.19.0-speint67)<br/>* Probleemlijst, Vitale gegevens en Labuitslagen updates door toevoegen huisartsgegevens (n.b. FHIR R4)<br/>* Wireframes uit ViewDefinitions en (Bundled) Examples en $lookup en $translate van codes<br/>* Verschillende kleine verbeteringen en aanvullingen|

@@ -1,0 +1,154 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "sanday",
+  "url": "http://fhir.hl7.nl/zorgviewer/ConceptMap/sanday",
+  "version": "0.1.0",
+  "name": "sanday",
+  "title": "Sanday functies naar SNOMED-CT Mapping",
+  "status": "active",
+  "experimental": false,
+  "description": "Deze ConceptMap beschrijft de functiebenamingen die in Sanday worden gebruikt en koppelt deze aan SNOMED CT-codes. Let op: dit is een tijdelijke mapping. Sanday gebruikt momenteel functienaam-strings in plaats van gestandaardiseerde codes. De in deze mapping gebruikte codes hebben alleen betekenis binnen de context van de Zorgviewer.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "NL"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "source": "Sanday",
+      "sourceVersion": "Sanday",
+      "target": "http://fhir.hl7.nl/zorgviewer/ValueSet/SubjectRoleCodelist",
+      "element": [
+        {
+          "code": "1",
+          "display": "Huisarts",
+          "target": [
+            {
+              "code": "62247001",
+              "display": "huisarts",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "2",
+          "display": "Doktersassistente",
+          "target": [
+            {
+              "code": "22515006",
+              "display": "medisch assistent",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "3",
+          "display": "Arts in opleiding (HAIO / AIOS)",
+          "target": [
+            {
+              "code": "405277009",
+              "display": "arts-assistent",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "4",
+          "display": "Doktersassistente in opleiding",
+          "target": [
+            {
+              "code": "224610007",
+              "display": "personeel voor ondersteunende diensten",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "5",
+          "display": "Praktijkverpleegkundige",
+          "target": [
+            {
+              "code": "159002008",
+              "display": "praktijkverpleegkundige",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "6",
+          "display": "Administratieve medewerker",
+          "target": [
+            {
+              "code": "106353008",
+              "display": "administratief medewerker",
+              "equivalence": "equal",
+              "comment": "Geen toegang"
+            }
+          ]
+        },
+        {
+          "code": "7",
+          "display": "Financiële medewerker",
+          "target": [
+            {
+              "code": "63804002",
+              "display": "financieel medewerker",
+              "equivalence": "equal",
+              "comment": "Geen toegang"
+            }
+          ]
+        },
+        {
+          "code": "8",
+          "display": "Praktijkondersteuner",
+          "target": [
+            {
+              "code": "224610007",
+              "display": "personeel voor ondersteunende diensten",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "9",
+          "display": "Systeembeheerder",
+          "target": [
+            {
+              "code": "224610007",
+              "display": "personeel voor ondersteunende diensten",
+              "equivalence": "wider",
+              "comment": "Geen toegang"
+            }
+          ]
+        },
+        {
+          "code": "10",
+          "display": "Praktijkbeheerder",
+          "target": [
+            {
+              "code": "159481007",
+              "display": "praktijkmanager",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "11",
+          "display": "Physician assistant",
+          "target": [
+            {
+              "code": "449161006",
+              "display": "physician assistant",
+              "equivalence": "equal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

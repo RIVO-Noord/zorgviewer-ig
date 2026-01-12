@@ -70,6 +70,17 @@
 <th>Stop type</th>
 </tr>
 <tr><td>+</td>
+<td>EPS</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Type</b><br/>huidig<br/>
+</td></tr>
+<tr><td>+</td>
 <td>Epic</td>
 <td></td>
 <td></td>

@@ -60,7 +60,7 @@
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+MeetLocatie</td>
-<td><samp>bodySite.text</samp></td>
+<td><samp>iif(bodySite.text='Body Site',bodySite.coding[1].display,bodySite.text)</samp></td>
 <td><code>string</code></td>
 <td>MeetLocatie</td>
 <td></td>

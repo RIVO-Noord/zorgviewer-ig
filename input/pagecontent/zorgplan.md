@@ -1,5 +1,5 @@
-<div class="dragon">
-<b>Dit is een RIVO Architectuur Overleg onderwerp.</b>
+<div class="dragon" markdown="1">
+**Dit is een RIVO Architectuur Overleg onderwerp.**
 </div>
 
 ### Zorgplan ondersteuning

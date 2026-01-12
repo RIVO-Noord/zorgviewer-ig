@@ -12,6 +12,182 @@
 <th>(Groep)</th>
 </tr>
 <tr><td>+</td>
+<td>EPS</td>
+<td>10-11-2024</td>
+<td>Body Height</td>
+<td>168.1 cm</td>
+<td></td>
+<td></td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8302-2 Body Height<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>10-11-2024</td>
+<td>Pain severity - 0-10 verbal numeric rating [Score] - Reported</td>
+<td>3 {score}</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#72514-3 Pain severity - 0-10 verbal numeric rating [Score] - Reported<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>10-11-2024</td>
+<td>Body Weight</td>
+<td>85.5 kg</td>
+<td></td>
+<td></td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#29463-7 Body Weight<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>10-11-2024</td>
+<td>Body mass index (BMI) [Ratio]</td>
+<td>30.3 kg/m2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#39156-5 Body mass index (BMI) [Ratio]<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>10-11-2024</td>
+<td>Diastolic Blood Pressure</td>
+<td>92 mm[Hg]</td>
+<td></td>
+<td></td>
+<td>Bloeddruk</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8462-4 Diastolic Blood Pressure<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>10-11-2024</td>
+<td>Systolic Blood Pressure</td>
+<td>113 mm[Hg]</td>
+<td></td>
+<td></td>
+<td>Bloeddruk</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8480-6 Systolic Blood Pressure<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>10-11-2024</td>
+<td>Heart rate</td>
+<td>90 /min</td>
+<td></td>
+<td></td>
+<td>Hartslag</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8867-4 Heart rate<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>10-11-2024</td>
+<td>Respiratory rate</td>
+<td>14 /min</td>
+<td></td>
+<td></td>
+<td>Ademhaling</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#9279-1 Respiratory rate<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>5-11-2023</td>
+<td>Body Height</td>
+<td>168.1 cm</td>
+<td></td>
+<td></td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8302-2 Body Height<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>5-11-2023</td>
+<td>Pain severity - 0-10 verbal numeric rating [Score] - Reported</td>
+<td>1 {score}</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#72514-3 Pain severity - 0-10 verbal numeric rating [Score] - Reported<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>5-11-2023</td>
+<td>Body Weight</td>
+<td>84.4 kg</td>
+<td></td>
+<td></td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#29463-7 Body Weight<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>5-11-2023</td>
+<td>Body mass index (BMI) [Ratio]</td>
+<td>29.9 kg/m2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#39156-5 Body mass index (BMI) [Ratio]<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>5-11-2023</td>
+<td>Diastolic Blood Pressure</td>
+<td>88 mm[Hg]</td>
+<td></td>
+<td></td>
+<td>Bloeddruk</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8462-4 Diastolic Blood Pressure<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>5-11-2023</td>
+<td>Systolic Blood Pressure</td>
+<td>121 mm[Hg]</td>
+<td></td>
+<td></td>
+<td>Bloeddruk</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8480-6 Systolic Blood Pressure<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>5-11-2023</td>
+<td>Heart rate</td>
+<td>96 /min</td>
+<td></td>
+<td></td>
+<td>Hartslag</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8867-4 Heart rate<br/>
+</td></tr>
+<tr><td>+</td>
+<td>EPS</td>
+<td>5-11-2023</td>
+<td>Respiratory rate</td>
+<td>15 /min</td>
+<td></td>
+<td></td>
+<td>Ademhaling</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#9279-1 Respiratory rate<br/>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft-Bundle</td>
 <td>8-2-2013</td>
 <td>Body height</td>
@@ -56,7 +232,7 @@
 <td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=7>
 <b>Methode</b><br/>Non-invasive<br/>
-<b>MeetLocatie</b><br/>Body Site<br/>
+<b>MeetLocatie</b><br/>structuur van linker bovenbeen (lichaamsstructuur)<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 </td></tr>
 <tr><td>+</td>
@@ -69,7 +245,7 @@
 <td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=7>
 <b>Methode</b><br/>Non-invasive<br/>
-<b>MeetLocatie</b><br/>Body Site<br/>
+<b>MeetLocatie</b><br/>gehele rechter onderste extremiteit (lichaamsstructuur)<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 </td></tr>
 <tr><td>+</td>
@@ -82,7 +258,7 @@
 <td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=7>
 <b>Methode</b><br/>Non-invasive<br/>
-<b>MeetLocatie</b><br/>Body Site<br/>
+<b>MeetLocatie</b><br/>gehele linker bovenarm (lichaamsstructuur)<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 </td></tr>
 <tr><td>+</td>
@@ -107,7 +283,7 @@
 <td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=7>
 <b>Methode</b><br/>Non-invasive<br/>
-<b>MeetLocatie</b><br/>Body Site<br/>
+<b>MeetLocatie</b><br/>gehele rechter bovenarm (lichaamsstructuur)<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 </td></tr>
 <tr><td>+</td>
