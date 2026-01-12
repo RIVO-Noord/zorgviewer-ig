@@ -118,7 +118,8 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 1. En werk verder in de master branch
 1. Update input/zorgviewer-ig.json 
   * version naar volgende minor "1.M+1.0" 
-  * parameter/version-comparison-master naar (vorige versie) "1.M.0" 
+  * parameter/version-comparison-master naar (vorige versie) "1.M.0"
+    * ook in input/pagecontent/changes.md
 
 ### Handmatig publish implementatiegids.zorgviewer.nl
 
