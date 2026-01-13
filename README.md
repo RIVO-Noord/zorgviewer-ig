@@ -87,7 +87,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
     1. Then use `gemini` (CLI) with the following prompt: `Generate a changelog for the changes from the last tag up to the HEAD and summerize this in a short bullet list in Dutch`
     1. Plaatst output onder "Laatste Wijzigingen" in `changes.md`
 1. ``> git commit -a -m "afhechten release 1.M.R"; git push``
-1. Create tag "1.M.R-sprintX" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
+1. Create tag "1.M.R" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
     1. Tags
     1. Releases
     1. Draft new release
@@ -99,6 +99,14 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
     1. Publish release
 1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
     Edit file in your fork and create a PR.
+1. Wiki (met o.a. de bijbehorende FO's)
+    1. (eerste keer: git clone https://PAT@dev.azure.com/UMCG-MIT/Zorgviewer/_git/Zorgviewer.wiki)
+    1. `> git pull`
+    1. `> git tag ig-1.M.R`
+    1. Optioneel FO changelog
+    1. `> git log -p ig-1.21.0-sprint70..ig-1.22 -- Functionele-Ontwerpen-\(FO\) > wiki-fo-diff.txt`
+    1. `> gemini`
+    1. Gemini CLI `Generate a summary of changes from @wiki-fo-diff.txt as a short bullet list in Dutch`
 
 ### Vrijgeven van de laatste Release
 
@@ -151,7 +159,7 @@ Zorgt voor beschikbaar komen in de searches:
 - https://fhir.org/guides/registry/
 - https://registry.fhir.org/
 
-### EViews (hidden from menu)
+## EViews (hidden from menu)
 
 Update inhoud van input/eviews.md middels volgende commando (manually remove extension):
 ```

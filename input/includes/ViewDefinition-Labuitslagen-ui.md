@@ -8,7 +8,7 @@
 <th>Test</th>
 <th>Testuitslag</th>
 <th>Interpretatie</th>
-<th>Onder- en bovengrens</th>
+<th>Referentiewaarden</th>
 <th>Materiaal</th>
 <th>Status</th>
 </tr>
@@ -18,7 +18,7 @@
 <td>Cholesterol [Mass/volume] in Serum or Plasma</td>
 <td>122.5 mg/dL</td>
 <td></td>
-<td>125 - 200 mg/dL</td>
+<td>125 .. 200 mg/dL</td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -29,7 +29,7 @@
 <td>Triglyceride [Mass/volume] in Serum or Plasma</td>
 <td>125.3 mg/dL</td>
 <td></td>
-<td>35 - 150 mg/dL</td>
+<td>35 .. 150 mg/dL</td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -40,7 +40,7 @@
 <td>Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay</td>
 <td>42 mg/dL</td>
 <td></td>
-<td>0 - 130 mg/dL</td>
+<td>0 .. 130 mg/dL</td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -51,7 +51,7 @@
 <td>Cholesterol in HDL [Mass/volume] in Serum or Plasma</td>
 <td>55.5 mg/dL</td>
 <td></td>
-<td>45 - 95 mg/dL</td>
+<td>45 .. 95 mg/dL</td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -62,7 +62,7 @@
 <td>Substantie</td>
 <td>faeces</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -73,7 +73,7 @@
 <td>Rapport</td>
 <td>faeces</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -84,7 +84,7 @@
 <td>Schistosoma microscopie</td>
 <td>Negatief</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -95,7 +95,7 @@
 <td>Materiaal</td>
 <td>faeces</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -106,7 +106,7 @@
 <td>Glucose</td>
 <td>7.2 mmol/L</td>
 <td>Boven referentiewaarde</td>
-<td>4.5 - 6.1 mmol/L</td>
+<td>4.5 .. 6.1 mmol/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -118,7 +118,7 @@
 <td>Ureum</td>
 <td>6.3 mmol/L</td>
 <td></td>
-<td>3 - 7.5 mmol/L</td>
+<td>3 .. 7.5 mmol/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -130,7 +130,7 @@
 <td>Creatinine</td>
 <td>65 µmol/L</td>
 <td></td>
-<td>49 - 90 µmol/L</td>
+<td>49 .. 90 µmol/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -142,7 +142,7 @@
 <td>eGFR (creat)</td>
 <td>81 mL/min/1.73m2</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -154,7 +154,7 @@
 <td>Kalium</td>
 <td>3.8 mmol/L</td>
 <td></td>
-<td>3.8 - 5 mmol/L</td>
+<td>3.8 .. 5 mmol/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -166,7 +166,7 @@
 <td>Natrium</td>
 <td>142 mmol/L</td>
 <td></td>
-<td>136 - 146 mmol/L</td>
+<td>136 .. 146 mmol/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -178,7 +178,7 @@
 <td>AKI alert</td>
 <td>&lt;Memo&gt;</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -190,7 +190,7 @@
 <td>Magnesium</td>
 <td>0.98 mmol/L</td>
 <td></td>
-<td>0.7 - 1 mmol/L</td>
+<td>0.7 .. 1 mmol/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -202,7 +202,7 @@
 <td>Cytomegalovirus IgM (ELFA)</td>
 <td>0.72/Grens</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -213,7 +213,7 @@
 <td>Hepatitis B virus core IgG (CMIA)</td>
 <td>0.09/Neg</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -225,7 +225,7 @@
 <td>Materiaal</td>
 <td>Stolbloed (r</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -237,7 +237,7 @@
 <td>Cytomegalovirus IgG (ELFK)</td>
 <td>30/Pos</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -248,7 +248,7 @@
 <td>HSV-2 IgG (VirClia)</td>
 <td>0.613/Neg</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -259,7 +259,7 @@
 <td>HSV-2 IgM (VirClia)</td>
 <td>0.652/Neg</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -270,7 +270,7 @@
 <td>HSV-1 IgG (VirClia)</td>
 <td>0.261/Neg</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -282,7 +282,7 @@
 <td>HSV-1 IgM (VirClia)</td>
 <td>0.260/Neg</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -293,7 +293,7 @@
 <td>Amylase</td>
 <td>&lt;20</td>
 <td>Onder referentiewaarde</td>
-<td>30 - 640 U/L</td>
+<td>30 .. 640 U/L</td>
 <td>Urine portie</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -305,7 +305,7 @@
 <td>Creatinine</td>
 <td>9.5 mmol/L</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td>Urine portie</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -317,7 +317,7 @@
 <td>Kalium</td>
 <td>38 mmol/L</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td>Urine portie</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -329,7 +329,7 @@
 <td>Ureum</td>
 <td>86 mmol/L</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td>Urine portie</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -341,7 +341,7 @@
 <td>Natrium</td>
 <td>127 mmol/L</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td>Urine portie</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -353,7 +353,7 @@
 <td>Cortisol</td>
 <td>0.39 µmol/L</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -365,7 +365,7 @@
 <td>Engels raaigras</td>
 <td>&lt;0.35</td>
 <td></td>
-<td></td>
+<td> .. 0.35 kU/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -377,7 +377,7 @@
 <td>Berk</td>
 <td>40 kU/L</td>
 <td>Boven referentiewaarde</td>
-<td></td>
+<td> .. 0.35 kU/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -389,7 +389,7 @@
 <td>Bijvoet</td>
 <td>&lt;0.35</td>
 <td></td>
-<td></td>
+<td> .. 0.35 kU/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -401,7 +401,7 @@
 <td>Huismijt</td>
 <td>&lt;0.35</td>
 <td></td>
-<td></td>
+<td> .. 0.35 kU/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -413,7 +413,7 @@
 <td>Schildklier (anti-TPO)</td>
 <td>37 U/mL</td>
 <td>Boven referentiewaarde</td>
-<td></td>
+<td> .. 35 U/mL</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -425,7 +425,7 @@
 <td>Timotheegras</td>
 <td>&lt;0.35</td>
 <td></td>
-<td></td>
+<td> .. 0.35 kU/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -437,7 +437,7 @@
 <td>Huisstofmijt</td>
 <td>&lt;0.35</td>
 <td></td>
-<td></td>
+<td> .. 0.35 kU/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -449,7 +449,7 @@
 <td>Kopramijt</td>
 <td>1.6 kU/L</td>
 <td>Boven referentiewaarde</td>
-<td></td>
+<td> .. 0.35 kU/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -461,7 +461,7 @@
 <td>Hemoglobine</td>
 <td>8.9 mmol/L</td>
 <td></td>
-<td>7.4 - 9.6 mmol/L</td>
+<td>7.4 .. 9.6 mmol/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -473,7 +473,7 @@
 <td>Hematocriet</td>
 <td>0.41 L/L</td>
 <td></td>
-<td>0.36 - 0.46 L/L</td>
+<td>0.36 .. 0.46 L/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -485,7 +485,7 @@
 <td>TSH</td>
 <td>4.2</td>
 <td></td>
-<td>0.35 - 5</td>
+<td>0.35 .. 5</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -497,7 +497,7 @@
 <td>Chloride</td>
 <td>109</td>
 <td>Boven referentiewaarde</td>
-<td>99 - 108</td>
+<td>99 .. 108</td>
 <td>Serum</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -508,7 +508,7 @@
 <td>INR</td>
 <td>1</td>
 <td></td>
-<td>0.9 - 1.1</td>
+<td>0.9 .. 1.1</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -519,7 +519,7 @@
 <td>INR</td>
 <td>10</td>
 <td>Hoog</td>
-<td>0.9 - 1.1</td>
+<td>0.9 .. 1.1</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -530,7 +530,7 @@
 <td>Kalium</td>
 <td>60 mmol/L</td>
 <td>Kritiek</td>
-<td>3.5 - 5 mmol/L</td>
+<td>3.5 .. 5 mmol/L</td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -541,7 +541,7 @@
 <td>Sirolimus (Volbloed)</td>
 <td>6 ug/L</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -552,7 +552,7 @@
 <td>Sirolimus (Volbloed)</td>
 <td>Volgt</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td>Bloed</td>
 <td>unknown</td>
 </tr><tr><td></td><td colspan=8>
@@ -563,7 +563,7 @@
 <td>Chloride</td>
 <td>109 mmol/L</td>
 <td></td>
-<td>99 - 108 mmol/L</td>
+<td>99 .. 108 mmol/L</td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -574,7 +574,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -586,7 +586,7 @@
 <td>glucose niet nuchter, veneus (lab)</td>
 <td>1 mmol/l</td>
 <td></td>
-<td>3.5 - 7.8 mmol/l</td>
+<td>3.5 .. 7.8 mmol/l</td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -597,7 +597,7 @@
 <td>glucose nuchter, veneus (lab)</td>
 <td>4 mmol/l</td>
 <td></td>
-<td>4 - 6.1 mmol/l</td>
+<td>4 .. 6.1 mmol/l</td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -608,7 +608,7 @@
 <td>schildklier cytoplasma antistoffen</td>
 <td>12</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -620,7 +620,7 @@
 <td>vitamine D</td>
 <td>23.443.00</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -632,7 +632,7 @@
 <td>HbA1c (glycohemoglobine) IFCC</td>
 <td>0 mmol/mol</td>
 <td></td>
-<td></td>
+<td> .. </td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -643,7 +643,7 @@
 <td>Kalium</td>
 <td>8 mmol/L</td>
 <td>Kritiek</td>
-<td>3.5 - 5 mmol/L</td>
+<td>3.5 .. 5 mmol/L</td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
