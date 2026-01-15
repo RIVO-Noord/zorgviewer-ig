@@ -8,7 +8,7 @@
 <th>Test</th>
 <th>Testuitslag</th>
 <th>Interpretatie</th>
-<th>Referentiewaarden</th>
+<th>Onder- en bovengrens</th>
 <th>Materiaal</th>
 <th>Status</th>
 </tr>

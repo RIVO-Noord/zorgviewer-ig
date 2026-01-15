@@ -44,7 +44,7 @@
 <td><code>AA</code>: uitroepteken icon, kritiek<br/><code>281302008</code> of <code>H</code>: pijl omhoog, boven de bovengrens<br/><code>281300000</code> of <code>L</code>: pijl naar beneden, onder de ondergrens<br/>N.B. <code>Resistent</code>, <code>Intermediar</code> en <code>Sensitief</code> vanuit de standaard zijn niet van toepassing op de klinische chemie.</td>
 </tr>
 <tr>
-<td>Referentiewaarden</td>
+<td>Onder- en bovengrens</td>
 <td><samp>iif(referenceRange.low.exists(),referenceRange.low.value.toString(),'') + ' .. ' + iif(referenceRange.high.exists(),referenceRange.high.value.toString(),'') + iif(referenceRange.high.code.exists(),' ' + referenceRange.high.code,'')</samp></td>
 <td><code>string</code></td>
 <td>LaboratoriumTest/ ReferentieOndergrens, LaboratoriumTest/ ReferentieBovengrens</td>
