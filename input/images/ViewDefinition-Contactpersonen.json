@@ -1,0 +1,50 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Contactpersonen",
+  "title": "Contactpersonen",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "contact.relationship.where(coding.system='urn:oid:2.16.840.1.113883.2.4.3.11.22.472').select(text | coding.display)",
+          "name": "Rol",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Rol" } ]
+        },
+        {
+          "path": "contact.relationship.where(coding.system='http://hl7.org/fhir/v3/RoleCode').select(text | coding.display)",
+          "name": "Relatie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Relatie" } ]
+        },
+        {
+          "path": "contact.name.select(text | given.join(' ') + ' ' + family)",
+          "name": "Naam",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Naamgegevens" } ]
+        },
+        {
+          "path": "contact.telecom.where(system='phone').value",
+          "name": "Telefoonnummer",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Contactgegevens.Telefoonnummers.Telefoonnummer" } ]
+        },
+        {
+          "path": "contact.telecom.where(system='email').value",
+          "name": "Emailadres",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Contactgegevens.EmailAdressen.EmailAdres" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Patient' and contact.exists())"
+    }
+  ]
+}
