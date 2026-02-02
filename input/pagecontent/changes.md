@@ -1,4 +1,4 @@
-### Changelog
+### Samenvatting Changes
 
 {% include generated-changelog.md %}
 
