@@ -1,19 +1,6 @@
-### Laatste Wijzigingen
+### Changelog
 
-* Functioneel:
-    * Er is een "plain language" beschrijving toegevoegd.
-    * Toegang voor Physician Assistant is toegevoegd en voor administratief medewerkers verwijderd (na afstemming met Sanday).
-    * De verwerking van autorisatierollen in de ConceptMap is aangepast.
-    * Extra rolcode-informatie toegevoegd.
-    * Er is een workaround voor de meetlocatie van Vitale Functies voor Epic gedefinieerd.
-    * Aanpassingen gedaan in gegevensherkomst voor EPS (European Patient Summary)
-    
-* Technisch & Documentatie:
-    * Diverse links, afbeeldingen en documentatie zijn bijgewerkt.
-    * Er zijn verbeteringen doorgevoerd aan de CapabilityStatements.
-    * Specifieke aanpassingen en correcties voor Sanday, o.a. voor labuitslagen en het materiaaltype.
-    * De zoekpagina is gecorrigeerd.
-    * De volgorde van menu-items is aangepast.
+{% include generated-changelog.md %}
 
 ### Versies
 
