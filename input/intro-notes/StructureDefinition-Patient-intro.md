@@ -4,6 +4,16 @@
 
 [ZIB Patient](https://zibs.nl/wiki/Patient-v3.1(2017NL))
 
+### View Definition
+
+#### Contactpersonen
+
+* [ViewDefinition voor Contactpersonen](ViewDefinition-Contactpersonen.json)
+
+{% include ViewDefinition-Contactpersonen-ui.md %}
+
+{% include ViewDefinition-Contactpersonen.md %}
+
 ### Patient.name algoritme
 
 Bovenop constraint **zv-pat-1**:
