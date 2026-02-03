@@ -1,0 +1,20 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-LivingSituation",
+  "title": "Woonsituatie",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Observation' and code.coding.where(code='365508006'))"
+    }
+  ]
+}

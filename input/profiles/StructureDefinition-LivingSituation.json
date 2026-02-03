@@ -1,0 +1,27 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/LivingSituation",
+    "name": "LivingSituation",
+    "title": "LivingSituation",
+    "status": "active",
+    "description": "Woonsituatie",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Observation.valueCodeableConcept.text",
+                "path": "Observation.valueCodeableConcept.text",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.comment",
+                "path": "Observation.comment",
+                "mustSupport": true
+            }
+        ]
+    }
+}

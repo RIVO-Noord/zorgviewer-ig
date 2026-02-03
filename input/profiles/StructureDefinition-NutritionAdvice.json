@@ -1,0 +1,22 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/NutritionAdvice",
+    "name": "NutritionAdvice",
+    "title": "NutritionAdvice",
+    "status": "active",
+    "description": "VoedingsAdvies",
+    "kind": "resource",
+    "abstract": false,
+    "type": "NutritionOrder",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "NutritionOrder.oralDiet.type.text",
+                "path": "NutritionOrder.oralDiet.type.text",
+                "mustSupport": true
+            }
+        ]
+    }
+}
