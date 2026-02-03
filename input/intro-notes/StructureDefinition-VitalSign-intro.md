@@ -1,6 +1,6 @@
 {% include profile-note.md %}
 
-### Zorginformatiebouwsteen
+### Zorginformatiebouwstenen
 
 De volgende zibs vallen min of meer onder het thema vitale gegevens.
 
