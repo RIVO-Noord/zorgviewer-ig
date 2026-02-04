@@ -21,11 +21,20 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic-CP</td>
-<td>Wettelijke verzorger</td>
+<td></td>
 <td>Husband</td>
 <td>Noodcontact,Joost</td>
 <td>+31 6 11 22 33 44</td>
 <td>noodcontact@joost.nl</td>
+</tr><tr><td></td><td colspan=6>
+</td></tr>
+<tr><td>+</td>
+<td>Epic-CP</td>
+<td>Wettelijke verzorger</td>
+<td>Daughter</td>
+<td>Wettelijk,Heleen</td>
+<td>+31 6 22 33 44 55</td>
+<td>Wettelijk@heleen.nl</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
