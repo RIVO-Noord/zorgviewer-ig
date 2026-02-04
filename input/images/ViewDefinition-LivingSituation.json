@@ -12,6 +12,18 @@
           "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "valueCodeableConcept.text",
+          "name": "Woningtype",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "WoningType" } ]
+        },
+        {
+          "path": "comment",
+          "name": "Toelichting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Observation' and code.coding.where(code='365508006'))"

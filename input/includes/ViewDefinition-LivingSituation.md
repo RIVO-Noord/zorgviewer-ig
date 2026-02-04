@@ -15,5 +15,19 @@
 <td>nvt</td>
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
+<tr>
+<td>Woningtype</td>
+<td><samp>valueCodeableConcept.text</samp></td>
+<td><code>string</code></td>
+<td>WoningType</td>
+<td></td>
+</tr>
+<tr>
+<td>Toelichting</td>
+<td><samp>comment</samp></td>
+<td><code>string</code></td>
+<td>Toelichting</td>
+<td></td>
+</tr>
 </tbody>
 </table>

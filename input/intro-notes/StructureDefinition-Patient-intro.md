@@ -7,15 +7,15 @@
 
 ### View Definition
 
-<div class="dragon" markdown="1">
-N.B. Er is alleen voor het onderdeel contactpersonen van Patient een view gedefinieerd** 
-</div>
+**N.B. Er is alleen een View gedefinieerd voor het onderdeel <u>contactpersonen</u> van Patient.**
 
 * [ViewDefinition voor Contactpersonen](ViewDefinition-Contactpersonen.json)
 
 {% include ViewDefinition-Contactpersonen-ui.md %}
 
 {% include ViewDefinition-Contactpersonen.md %}
+
+**LET OP: paden zijn relatief aan `Patient.contact`.** 
 
 ### Patient.name algoritme
 
