@@ -17,7 +17,7 @@
 </tr>
 <tr>
 <td>Rol</td>
-<td><samp>contact.relationship.where(coding.system='urn:oid:2.16.840.1.113883.2.4.3.11.22.472').select(text | coding.display)</samp></td>
+<td><samp>contact.relationship.where(coding.system='urn:oid:2.16.840.1.113883.2.4.3.11.22.472' or coding.system='http://terminology.hl7.org/CodeSystem/v3-RoleClass').select(text | coding.display)</samp></td>
 <td><code>string</code></td>
 <td>Rol</td>
 <td></td>

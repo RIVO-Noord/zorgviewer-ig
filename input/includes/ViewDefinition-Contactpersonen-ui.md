@@ -20,6 +20,15 @@
 </tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
+<td>Epic-CP</td>
+<td>Wettelijke verzorger</td>
+<td>Husband</td>
+<td>Noodcontact,Joost</td>
+<td>+31 6 11 22 33 44</td>
+<td>noodcontact@joost.nl</td>
+</tr><tr><td></td><td colspan=6>
+</td></tr>
+<tr><td>+</td>
 <td>Epic</td>
 <td></td>
 <td>Wife</td>
