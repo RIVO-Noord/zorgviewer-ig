@@ -12,6 +12,24 @@
           "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "oralDiet.type.text",
+          "name": "DieetType",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "DieetType" } ]
+        },
+        {
+          "path": "oralDiet.texture.text | oralDiet.fluidConsistencyType.text",
+          "name": "Consistentie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Consistentie" } ]
+        },
+        {
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation').valueString",
+          "name": "Toelichting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='NutritionOrder')"

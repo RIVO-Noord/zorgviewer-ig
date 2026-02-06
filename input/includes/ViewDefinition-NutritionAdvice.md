@@ -15,5 +15,26 @@
 <td>nvt</td>
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
+<tr>
+<td>DieetType</td>
+<td><samp>oralDiet.type.text</samp></td>
+<td><code>string</code></td>
+<td>DieetType</td>
+<td></td>
+</tr>
+<tr>
+<td>Consistentie</td>
+<td><samp>oralDiet.texture.text | oralDiet.fluidConsistencyType.text</samp></td>
+<td><code>string</code></td>
+<td>Consistentie</td>
+<td></td>
+</tr>
+<tr>
+<td>Toelichting</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation').valueString</samp></td>
+<td><code>string</code></td>
+<td>Toelichting</td>
+<td></td>
+</tr>
 </tbody>
 </table>

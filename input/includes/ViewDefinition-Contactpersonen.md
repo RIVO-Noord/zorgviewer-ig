@@ -17,14 +17,14 @@
 </tr>
 <tr>
 <td>Rol</td>
-<td><samp>relationship.where(coding.system='urn:oid:2.16.840.1.113883.2.4.3.11.22.472' or coding.system='http://terminology.hl7.org/CodeSystem/v3-RoleClass').select(iif(exists(text), text, coding.display))</samp></td>
+<td><samp>relationship.where(coding.system='urn:oid:2.16.840.1.113883.2.4.3.11.22.472' or coding.system='http://terminology.hl7.org/CodeSystem/v3-RoleClass').select(text | coding.display)</samp></td>
 <td><code>string</code></td>
 <td>Rol</td>
 <td></td>
 </tr>
 <tr>
 <td>Relatie</td>
-<td><samp>relationship.where(coding.system='http://hl7.org/fhir/v3/RoleCode').select(iif(exists(text), text, coding.display))</samp></td>
+<td><samp>relationship.where(coding.system='http://hl7.org/fhir/v3/RoleCode').select(text | coding.display)</samp></td>
 <td><code>string</code></td>
 <td>Relatie</td>
 <td></td>

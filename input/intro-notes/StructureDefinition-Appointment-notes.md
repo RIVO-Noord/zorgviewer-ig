@@ -3,7 +3,8 @@
 
 Door een issue in de eAfspraak package van Nictiz kunnen we nu niet onderstaande toevoegen.
 Het issue heeft te maken met de dependency van eAfspraak met de wildcard versie 2.0.x van de zibs package.
-Dit is op het moment niet ondersteund door de IG Publisher.
+Tot 15-jan-2026 (IG Publisher v2.0.29) werkte het correct. Vanaf die datum lijkt het niet meer te werken.
+Na wat verder kijken lijkt het niet de IG Publisher versie te zijn, maar iets met de packages.
 
 StructureDefinition-Appointment.json:
 ```json

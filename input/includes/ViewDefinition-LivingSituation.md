@@ -17,7 +17,7 @@
 </tr>
 <tr>
 <td>Woningtype</td>
-<td><samp>valueCodeableConcept.text</samp></td>
+<td><samp>valueCodeableConcept.text | valueCodeableConcept.coding.display</samp></td>
 <td><code>string</code></td>
 <td>WoningType</td>
 <td></td>

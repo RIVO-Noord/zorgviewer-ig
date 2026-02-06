@@ -7,5 +7,11 @@
 <th>Woningtype</th>
 <th>Toelichting</th>
 </tr>
+<tr><td>+</td>
+<td>Nictiz</td>
+<td>Eengezinswoning</td>
+<td></td>
+</tr><tr><td></td><td colspan=3>
+</td></tr>
 </tbody>
 </table>
