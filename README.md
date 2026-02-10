@@ -44,14 +44,15 @@ flowchart BT
 > java -jar input-cache/validator_cli.jar -version 3.0.2 input/resources -ig input/resources -ig nictiz.fhir.nl.stu3.zib2017
 ```
 
-## To build the IG (need minimal version 1.2.31 dd 1-feb-2023 ivm zib2017 package fix)
+## To build the IG
+*Need minimal version 1.2.31 dd 1-feb-2023 ivm zib2017 package fix.*
 ```
 (initial) (Bash) > curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o input-cache/publisher.jar
 (initial) (Powershell) > Invoke-WebRequest -Uri "https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar" -OutFile "input-cache/publisher.jar"
 > java -jar input-cache/publisher.jar -ig ig.ini
 ```
 
-### Trigger FHIR auto-ig builder
+### Trigger FHIR auto-ig builder voor branch snapshot
 ```
 curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger" \
   -H "Content-type: application/json" \
