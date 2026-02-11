@@ -16,6 +16,13 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
+<td>Datum</td>
+<td><samp>dateTime</samp></td>
+<td><code>date</code></td>
+<td>nvt</td>
+<td></td>
+</tr>
+<tr>
 <td>DieetType</td>
 <td><samp>oralDiet.type.text</samp></td>
 <td><code>string</code></td>
