@@ -5,7 +5,7 @@ De 1ste tabel toont de attributen ontvangen door de Zorgviewer van de Zorgviewer
 
 In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (SAML, SMART-on-FHIR, FHIR).
 
-| Item | FHIR Path | Ideaal (SAML) | Sanday (SAML) | Nexus (SAML) | Chipsoft Zorgplaform (SAML) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Example |
+| Item | FHIR Path | Ideaal (SAML+FHIR) | Sanday (SAML) | Nexus (SAML) | Chipsoft Zorgplaform (SAML+FHIR) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Example |
 |--|--|--|--|--|--|--|--|--|
 | Workflow ID nvt | | nvt | nvt | nvt | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` |
 | Practitioner ID Practitioner.identifier | | `Subject/NameID` | `Subject/NameID` | `Subject/NameID` | `Subject/NameID` | `Subject/NameID` | Practitioner read adhv `token.practitioner` | `177578` |
