@@ -19,7 +19,7 @@
 <td>Datum</td>
 <td><samp>dateTime</samp></td>
 <td><code>date</code></td>
-<td>nvt</td>
+<td>DateTime</td>
 <td></td>
 </tr>
 <tr>

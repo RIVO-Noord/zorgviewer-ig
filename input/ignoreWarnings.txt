@@ -55,9 +55,11 @@ When HL7 is publishing a resource, the owning committee must be stated using the
 Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry
 
 # Examples not complete; accepted as is
-Unable to resolve resource with reference%
+Unable to resolve resource with reference %
+Unable to find ImplementationGuide.definition.resource.description for the resource %
+The Implementation Guide contains no examples for this profile
 
-# Because of Sanday R4 examples
+# Because of R4 examples (EPS and Sanday)
 Unrecognized property %
 This property must be a simple value, not an Object %
 
@@ -67,3 +69,11 @@ The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-Implementati
 
 # On purpose; for documentation only
 Bundle is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
+
+# IPS/EPS
+% has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
+Invalid Resource target type. Found PractitionerRole, but expected one of ([Practitioner, Patient, RelatedPerson])
+Invalid Resource target type. Found PractitionerRole, but expected one of ([Practitioner, Device, Patient, RelatedPerson])
+
+# Zorgplatform
+Code V4 is not a valid SNOMED CT Term, and neither could it be parsed as an expression (Concept not found (next char = "V", in "V4") at character 1)
