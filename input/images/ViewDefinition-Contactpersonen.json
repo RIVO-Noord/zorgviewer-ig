@@ -39,9 +39,16 @@
         },
         {
           "path": "telecom.where(system='email').value",
-          "name": "Emailadres",
+          "name": "+Emailadres",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Contactgegevens.EmailAdressen.EmailAdres" } ]
+        }
+        ,
+        {
+          "path": "address.line.extension.valueString.join(' ') + ' ' + address.postalCode + ' ' + address.city",
+          "name": "+Adres",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Contactgegevens.Adresgegevens" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Patient' and exists(contact)).contact"

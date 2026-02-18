@@ -43,11 +43,19 @@
 <td>Contactgegevens.Telefoonnummers.Telefoonnummer</td>
 <td></td>
 </tr>
-<tr>
-<td>Emailadres</td>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#b4c7e7">
+<td>+Emailadres</td>
 <td><samp>telecom.where(system='email').value</samp></td>
 <td><code>string</code></td>
 <td>Contactgegevens.EmailAdressen.EmailAdres</td>
+<td></td>
+</tr>
+<tr style="background-color:#b4c7e7">
+<td>+Adres</td>
+<td><samp>address.line.extension.valueString.join(' ') + ' ' + address.postalCode + ' ' + address.city</samp></td>
+<td><code>string</code></td>
+<td>Contactgegevens.Adresgegevens</td>
 <td></td>
 </tr>
 </tbody>
