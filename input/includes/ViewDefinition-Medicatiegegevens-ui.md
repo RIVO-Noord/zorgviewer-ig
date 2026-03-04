@@ -22,6 +22,7 @@
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>30-9-2022<br/>
 <b>Voorschrijver</b><br/>Peter van Pulver<br/>
+<b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -35,6 +36,20 @@
 <b>Medicatie vorm</b><br/>tablet<br/>
 <b>Afspraakdatum</b><br/>27-11-2020<br/>
 <b>Voorschrijver</b><br/>M Crop<br/>
+<b>Type</b><br/>afspraak<br/>
+</td></tr>
+<tr><td>+</td>
+<td>MP9</td>
+<td></td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td>1 stuk 2x elke 1 dag &#9432;</td>
+<td>oraal</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>11-11-2022<br/>
+<b>Voorschrijver</b><br/>Healthcare professional (role), Peter van Pulver, Huisartsen, niet nader gespeci...<br/>
+<b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
@@ -47,6 +62,7 @@
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>3-10-2023<br/>
 <b>Voorschrijver</b><br/>Aalders, JCA (CAR)<br/>
+<b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -59,6 +75,7 @@
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>6-8-2025<br/>
 <b>Voorschrijver</b><br/>Jenneke van der Vecht<br/>
+<b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><th>&gt;&lt;</th>
 <th>Bron</th>
@@ -90,6 +107,18 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 <b>Registratiedatum</b><br/>15-3-2018<br/>
+<b>Type</b><br/>huidig<br/>
+</td></tr>
+<tr><td>+</td>
+<td>MP9</td>
+<td>10-11-2022</td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Registratiedatum</b><br/>26-11-2022<br/>
 <b>Type</b><br/>huidig<br/>
 </td></tr>
 </tbody>

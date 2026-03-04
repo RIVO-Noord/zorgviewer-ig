@@ -37,6 +37,18 @@
 <b>Voorschrijver</b><br/>M Crop<br/>
 </td></tr>
 <tr><td>+</td>
+<td>MP9</td>
+<td>10-11-2022</td>
+<td>10-12-2022</td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td>1 stuk 2x elke 1 dag &#9432;</td>
+<td>oraal</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>11-11-2022<br/>
+<b>Voorschrijver</b><br/>Healthcare professional (role), Peter van Pulver, Huisartsen, niet nader gespeci...<br/>
+</td></tr>
+<tr><td>+</td>
 <td>Nexus</td>
 <td>3-10-2023</td>
 <td></td>

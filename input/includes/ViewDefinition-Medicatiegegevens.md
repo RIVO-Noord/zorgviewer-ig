@@ -80,6 +80,13 @@
 <td>Voorschrijver::Zorgverlener</td>
 <td><b>LET OP:</b> <code>requester.display</code> is een FHIR R4 veld</td>
 </tr>
+<tr style="background-color:#b4c7e7">
+<td>+Type</td>
+<td><samp>'afspraak'</samp></td>
+<td><code>string</code></td>
+<td><i>nvt</i></td>
+<td></td>
+</tr>
 <tr><td colspan=5><i>MedicationStatement</i></td></tr>
 <tr>
 <td>Bron</td>

@@ -1,0 +1,199 @@
+{
+    "resourceType": "MedicationRequest",
+    "id": "mp-MedAgr-mp9-MBH920mgexample-1-MA1",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/mp-MedicationAgreement"
+        ]
+    },
+    "extension": [
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/ext-MedicationAgreement.MedicationAgreementAdditionalInformation",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.2.14.2050",
+                        "code": "2",
+                        "display": "Bewust lage dosering"
+                    }
+                ]
+            }
+        },
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/ext-RenderedDosageInstruction",
+            "valueString": "Vanaf 11 nov 2022, tot en met 10 dec 2022, 2 maal per dag 1 stuk, oraal"
+        },
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period",
+            "valuePeriod": {
+                "start": "2022-11-11T00:00:00+01:00",
+                "end": "2022-12-10T23:59:59+01:00"
+            }
+        },
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/ext-PharmaceuticalTreatment.Identifier",
+            "valueIdentifier": {
+                "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.77.1.1",
+                "value": "MBH_920_mg_example-1-KST"
+            }
+        },
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/ext-Context-EpisodeOfCare",
+            "valueReference": {
+                "type": "EpisodeOfCare",
+                "identifier": {
+                    "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.66.9200",
+                    "value": "MBH_920_mg_example-1-episode0"
+                },
+                "display": "relatie naar zorgepisode met identificatie: MBH_920_mg_example-1-episode0 || 2.16.840.1.113883.2.4.3.11.999.66.9200"
+            }
+        }
+    ],
+    "identifier": [
+        {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.77.16076005.1",
+            "value": "MBH_920_mg_example-1-MA1"
+        }
+    ],
+    "status": "unknown",
+    "intent": "order",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "33633005",
+                    "display": "voorschrijven van geneesmiddel"
+                }
+            ]
+        }
+    ],
+    "medicationReference": {
+        "reference": "Medication/mp-PhPrd-mp9-216840111388324410-17469",
+        "type": "Medication",
+        "display": "IBUPROFEN TABLET 600MG"
+    },
+    "subject": {
+        "reference": "Patient/nl-core-Patient-mp9-XXX-Kester",
+        "type": "Patient",
+        "display": "Patient, B. van XXX_Kester"
+    },
+    "encounter": {
+        "type": "Encounter",
+        "identifier": {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.66.2709",
+            "value": "MBH_920_mg_example-1-contact0"
+        },
+        "display": "relatie naar contact met identificatie: MBH_920_mg_example-1-contact0 || 2.16.840.1.113883.2.4.3.11.999.66.2709"
+    },
+    "authoredOn": "2022-11-11T08:00:00+01:00",
+    "requester": {
+        "reference": "PractitionerRole/nl-core-HPrf-PracRol-mp9-PrcRol-2165281100731-000001111",
+        "type": "PractitionerRole",
+        "display": "Healthcare professional (role), Peter van Pulver, Huisartsen, niet nader gespecificeerd, Huisartsenpraktijk Pulver & Partners"
+    },
+    "reasonCode": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "112251000146103",
+                    "display": "te sterk effect van medicatie"
+                }
+            ]
+        }
+    ],
+    "reasonReference": [
+        {
+            "reference": "Condition/nl-core-Problem-mp9-c33f05ea-6a95-11ec-0000-020000000000",
+            "type": "Condition",
+            "display": "Problem"
+        }
+    ],
+    "basedOn": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/ext-RelationAdministrationAgreement",
+                    "valueReference": {
+                        "type": "MedicationDispense",
+                        "identifier": {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.77.422037009.1",
+                            "value": "MBH_920_mg_example-1-TA0"
+                        },
+                        "display": "relatie naar toedieningsafspraak met identificatie: MBH_920_mg_example-1-TA0 || 2.16.840.1.113883.2.4.3.11.999.77.422037009.1"
+                    }
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/ext-MedicationAgreement.RelationMedicationUse",
+                    "valueReference": {
+                        "type": "MedicationStatement",
+                        "identifier": {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.77.6.1",
+                            "value": "MBH_920_mg_example-1-MGB0"
+                        },
+                        "display": "relatie naar medicatiegebruik met identificatie: MBH_920_mg_example-1-MGB0 || 2.16.840.1.113883.2.4.3.11.999.77.6.1"
+                    }
+                }
+            ]
+        }
+    ],
+    "note": [
+        {
+            "text": "voorbeeld toelichting in vrije tekst"
+        }
+    ],
+    "dosageInstruction": [
+        {
+            "timing": {
+                "repeat": {
+                    "frequency": 2,
+                    "period": 1,
+                    "periodUnit": "d"
+                }
+            },
+            "route": {
+                "coding": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.4.9",
+                        "code": "9",
+                        "display": "oraal"
+                    }
+                ]
+            },
+            "doseAndRate": [
+                {
+                    "doseQuantity": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation",
+                                "valueQuantity": {
+                                    "value": 1,
+                                    "unit": "stuk",
+                                    "system": "urn:oid:2.16.840.1.113883.2.4.4.1.900.2",
+                                    "code": "245"
+                                }
+                            }
+                        ],
+                        "value": 1,
+                        "unit": "stuk",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "1"
+                    }
+                }
+            ]
+        }
+    ],
+    "priorPrescription": {
+        "type": "MedicationRequest",
+        "identifier": {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.77.16076005.1",
+            "value": "MBH_920_mg_example-1-MA0"
+        },
+        "display": "relatie naar medicatieafspraak: MBH_920_mg_example-1-MA0 || 2.16.840.1.113883.2.4.3.11.999.77.16076005.1"
+    }
+}

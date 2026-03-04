@@ -1,0 +1,194 @@
+{
+    "resourceType": "MedicationStatement",
+    "id": "mp-MedUse2-mp9-MBH920mgexample-1-MGB1",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/mp-MedicationUse2"
+        ]
+    },
+    "extension": [
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/ext-RenderedDosageInstruction",
+            "valueString": "Vanaf 11 nov 2022, gedurende 10 dagen, 1 maal per dag 2 stuks, oraal"
+        },
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/ext-MedicationUse2.Prescriber",
+            "valueReference": {
+                "reference": "PractitionerRole/nl-core-HPrf-PracRol-mp9-PrcRol-2165281100731-000001111",
+                "type": "PractitionerRole",
+                "display": "Healthcare professional (role), Peter van Pulver, Huisartsen, niet nader gespecificeerd, Huisartsenpraktijk Pulver & Partners"
+            }
+        },
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/ext-AsAgreedIndicator",
+            "valueBoolean": true
+        },
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/ext-PharmaceuticalTreatment.Identifier",
+            "valueIdentifier": {
+                "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.77.1.1",
+                "value": "MBH_920_mg_example-1-KST"
+            }
+        },
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/ext-MedicationUse2.Author",
+            "valueReference": {
+                "reference": "PractitionerRole/nl-core-HPrf-PracRol-mp9-PrcRol-2165281100731-000001111",
+                "type": "PractitionerRole",
+                "display": "Healthcare professional (role), Peter van Pulver, Huisartsen, niet nader gespecificeerd, Huisartsenpraktijk Pulver & Partners"
+            }
+        }
+    ],
+    "identifier": [
+        {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.77.6.1",
+            "value": "MBH_920_mg_example-1-MGB1"
+        }
+    ],
+    "status": "active",
+    "statusReason": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "405613005",
+                    "display": "geplande procedure"
+                }
+            ]
+        }
+    ],
+    "category": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "422979000",
+                "display": "bevinding betreffende gedrag met betrekking tot medicatieregime"
+            }
+        ]
+    },
+    "medicationReference": {
+        "reference": "Medication/mp-PhPrd-mp9-216840111388324410-17469",
+        "type": "Medication",
+        "display": "IBUPROFEN TABLET 600MG"
+    },
+    "subject": {
+        "reference": "Patient/nl-core-Patient-mp9-XXX-Kester",
+        "type": "Patient",
+        "display": "Patient, B. van XXX_Kester"
+    },
+    "context": {
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/ext-Context-EpisodeOfCare",
+                "valueReference": {
+                    "type": "EpisodeOfCare",
+                    "identifier": {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.66.9200",
+                        "value": "MBH_920_mg_example-1-episode0"
+                    },
+                    "display": "relatie naar zorgepisode met identificatie: MBH_920_mg_example-1-episode0 || 2.16.840.1.113883.2.4.3.11.999.66.9200"
+                }
+            }
+        ],
+        "type": "Encounter",
+        "identifier": {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.66.2709",
+            "value": "MBH_920_mg_example-1-contact0"
+        },
+        "display": "relatie naar contact met identificatie: MBH_920_mg_example-1-contact0 || 2.16.840.1.113883.2.4.3.11.999.66.2709"
+    },
+    "effectivePeriod": {
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Duration",
+                "valueDuration": {
+                    "value": 10,
+                    "unit": "dag",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "d"
+                }
+            }
+        ],
+        "start": "2022-11-11T00:00:00+01:00"
+    },
+    "dateAsserted": "2022-11-26T18:20:05+01:00",
+    "informationSource": {
+        "reference": "Patient/nl-core-Patient-mp9-XXX-Kester",
+        "type": "Patient",
+        "display": "Patient, B. van XXX_Kester"
+    },
+    "derivedFrom": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/ext-ResourceCategory",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "422037009",
+                                "display": "toedieningsafspraak"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "identifier": {
+                "system": "urn:oid:2.16.840.1.113883.2.4.3.11.999.77.422037009.1",
+                "value": "MBH_920_mg_example-1-TA1"
+            },
+            "display": "relatie naar toedieningsafspraak"
+        }
+    ],
+    "reasonCode": [
+        {
+            "text": "voorbeeld reden gebruik in vrije tekst"
+        }
+    ],
+    "note": [
+        {
+            "text": "voorbeeld toelichting in vrije tekst"
+        }
+    ],
+    "dosage": [
+        {
+            "timing": {
+                "repeat": {
+                    "frequency": 1,
+                    "period": 1,
+                    "periodUnit": "d"
+                }
+            },
+            "route": {
+                "coding": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.4.9",
+                        "code": "9",
+                        "display": "oraal"
+                    }
+                ]
+            },
+            "doseAndRate": [
+                {
+                    "doseQuantity": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation",
+                                "valueQuantity": {
+                                    "value": 2,
+                                    "unit": "stuk",
+                                    "system": "urn:oid:2.16.840.1.113883.2.4.4.1.900.2",
+                                    "code": "245"
+                                }
+                            }
+                        ],
+                        "value": 2,
+                        "unit": "stuk",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "1"
+                    }
+                }
+            ]
+        }
+    ]
+}

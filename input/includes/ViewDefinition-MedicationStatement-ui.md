@@ -29,5 +29,15 @@
 </tr><tr><td></td><td colspan=6>
 <b>Registratiedatum</b><br/>15-3-2018<br/>
 </td></tr>
+<tr><td>+</td>
+<td>MP9</td>
+<td>10-11-2022</td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=6>
+<b>Registratiedatum</b><br/>26-11-2022<br/>
+</td></tr>
 </tbody>
 </table>
