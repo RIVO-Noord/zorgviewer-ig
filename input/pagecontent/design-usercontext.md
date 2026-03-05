@@ -70,7 +70,7 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 | Requesting Organization (OID) | X-ZV-Subject-Organization-Id | auth_token.sub | context-requester-org-id |  |  urn:oasis:names:tc:xspa:1.0:subject:organization-id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | auth_token.subject_organization_id en HTTP-Header AORTA-ID org | `2.16.528.1.1007.3.3.15123` | Practitioner.meta[extension=source] |
 | Requesting Organization (URA) | X-ZV-Subject-Organization-Ura |  |  | auth_token.sub |  |  | auth_token.subject_organization_ura | `12345678` | Practitioner.meta[extension=source] system=http://fhir.nl/fhir/NamingSystem/ura |
 | Requesting Organization (Role) |  |  |  | auth_token.sub_role |  |  |  | `H1` huisartsinstelling | system=[http://nictiz.nl/fhir/NamingSystem/organization-type](https://simplifier.net/nictiz-r4-zib2020/organization-type) |
-| Target Organization (AGB) | | | context-target-org-id | | | | [`01010813`](https://www.vektis.nl/agb-register/onderneming-01010813) | system=http://fhir.nl/fhir/NamingSystem/agb-z |
+| Target Organization (AGB) | | | context-target-org-id | | | | | system=http://fhir.nl/fhir/NamingSystem/agb-z<br/>[`01010813`](https://www.vektis.nl/agb-register/onderneming-01010813) |
 | Correlation ID | X-Correlation-Id |   | &#8656; | &#8656; | &#8656; | &#8656; | HTTP-Header AORTA-ID cid | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `H54f_8b9d6bC` | nvt |
 | Request ID | X-Request-Id |   | &#8656; | &#8656; | &#8656; | &#8656; | HTTP-Header AORTA-ID rid | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `1b9d6bCd-bBf` | nvt |
 | Context | X-ZV-Context |   | &#8656; | &#8656; | &#8656; | &#8656; | &#8656; | zie boven |   |
