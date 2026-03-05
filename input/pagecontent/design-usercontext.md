@@ -31,7 +31,7 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 
 [^4]: Omzetten naar SNOMED CT in [ConceptMap-epic-rolcode](ConceptMap-epic-rolcode.html)
 
-[^5]: Omzetten naar SNOMED CT in [ConceptMap-nexus-rolcode](ConceptMap-nexus-rolcode.html)
+[^5]: Omzetten naar SNOMED CT in [ConceptMap-rolcodenl](ConceptMap-rolcodenl.html)
 
 ### Verkrijgen bronsysteem access token
 
