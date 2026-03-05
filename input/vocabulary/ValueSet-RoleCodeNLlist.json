@@ -1,0 +1,32 @@
+{
+    "resourceType": "ValueSet",
+    "id": "RoleCodelist",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+        ]
+    },
+    "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodelist",
+    "name": "RoleCodelist",
+    "title": "RolCodeNL waardelijst",
+    "status": "active",
+    "experimental": false,
+    "description": "Rol waardelijst. Deze lijst is nodig voor autorisatie opstarten Zorgviewer en is voor autorisatie bij het bronsystemen.",
+    "compose": {
+        "include": [
+            {
+                "system": "urn:oid:2.16.840.1.113883.2.4.15.111",
+                "concept": [
+                    {
+                        "code": "01.*",
+                        "display": "Arts"
+                    },
+                    {
+                        "code": "02.054",
+                        "display": "Kaakchirurg"
+                    }
+                ]
+            }
+        ]
+    }
+}

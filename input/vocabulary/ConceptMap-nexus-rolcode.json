@@ -4,10 +4,10 @@
   "url": "http://fhir.hl7.nl/zorgviewer/ConceptMap/rolcodenl",
   "version": "0.1.0",
   "name": "rolcodenl",
-  "title": "RolCodeNL naar SNOMED-CT Mapping",
+  "title": "Nexus RolCodeNL naar SNOMED-CT Mapping",
   "status": "active",
   "experimental": false,
-  "description": "Deze ConceptMap representeert de mapping tussen RolCodeNL naar een SNOMED-CT code. N.B. hier betekent een '*' in de code een wildcard.",
+  "description": "Deze ConceptMap representeert de mapping tussen Nexus RolCodeNL naar een SNOMED-CT code. N.B. hier betekent een '*' in de code een wildcard.",
   "jurisdiction": [
     {
       "coding": [
@@ -20,9 +20,8 @@
   ],
   "group": [
     {
-      "source": "urn:oid:2.16.840.1.113883.2.4.15.111",
-      "sourceVersion": "RolCodeNL",
-      "target": "http://fhir.hl7.nl/zorgviewer/ValueSet/SubjectRoleCodelist",
+      "source": "http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodeNLlist",
+      "target": "http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodelist",
       "element": [
         {
           "code": "01.*",
