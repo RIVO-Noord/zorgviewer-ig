@@ -1,0 +1,228 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "rolcodenl",
+  "url": "http://fhir.hl7.nl/zorgviewer/ConceptMap/rolcodenl",
+  "version": "0.1.0",
+  "name": "rolcodenl",
+  "title": "RolcodeNL naar SNOMED-CT Mapping",
+  "status": "active",
+  "experimental": false,
+  "description": "Deze ConceptMap representeert de mapping tussen Nexus en CGM RolcodeNL naar een SNOMED-CT code.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "NL"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "source": "http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodeNLlist",
+      "target": "http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodelist",
+      "element": [
+        {
+          "code": "01.*",
+          "display": "Arts",
+          "target": [
+            {
+              "code": "309343006",
+              "display": "Medical doctor",
+              "equivalence": "narrower",
+              "comment": "Allemaal artsen"
+            }
+          ]
+        },
+        {
+          "code": "02.054",
+          "display": "Kaakchirurg",
+          "target": [
+            {
+              "code": "309343006",
+              "display": "Medical doctor",
+              "equivalence": "narrower",
+              "comment": "Een kaakchirurg is een arts"
+            }
+          ]
+        },
+        {
+          "code": "01.004",
+          "display": "Apotheekhoudende huisarts",
+          "target": [
+            {
+              "code": "309343006",
+              "display": "Medical doctor",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "01.015",
+          "display": "Huisarts",
+          "target": [
+            {
+              "code": "62247001",
+              "display": "Family medicine specialist",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "17.000",
+          "display": "Apotheker",
+          "target": [
+            {
+              "code": "46255001",
+              "display": "Pharmacist",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "83.000",
+          "display": "Apothekersassistent",
+          "target": [
+            {
+              "code": "44652006",
+              "display": "Pharmaceutical assistant",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "17.060",
+          "display": "Ziekenhuisapotheker",
+          "target": [
+            {
+              "code": "46255001",
+              "display": "Pharmacist",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "17.075",
+          "display": "Openbaar apotheker",
+          "target": [
+            {
+              "code": "46255001",
+              "display": "Pharmacist",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "01.000",
+          "display": "Arts",
+          "target": [
+            {
+              "code": "309343006",
+              "display": "Medical doctor",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "30.000",
+          "display": "Verpleegkundige",
+          "target": [
+            {
+              "code": "106292003",
+              "display": "Professional nurse",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "00.000",
+          "display": "Geen rol",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "Dit betekent dat er geen rol is"
+            }
+          ]
+        },
+        {
+          "code": "30.065",
+          "display": "Verpl. spec. preventieve zorg bij somatische aandoeningen",
+          "target": [
+            {
+              "code": "224571005",
+              "display": "Nurse practitioner",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "30.066",
+          "display": "Verpl. spec. acute zorg bij somatische aandoeningen",
+          "target": [
+            {
+              "code": "224571005",
+              "display": "Nurse practitioner",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "30.067",
+          "display": "Verpl. spec. intensieve zorg bij somatische aandoeningen",
+          "target": [
+            {
+              "code": "224571005",
+              "display": "Nurse practitioner",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "30.068",
+          "display": "Verpl. spec. chronische zorg bij somatische aandoeningen",
+          "target": [
+            {
+              "code": "224571005",
+              "display": "Nurse practitioner",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "30.069",
+          "display": "Verpl. spec. geestelijke gezondheidszorg",
+          "target": [
+            {
+              "code": "224571005",
+              "display": "Nurse practitioner",
+              "equivalence": "narrower"
+            }
+          ]
+        },
+        {
+          "code": "81.000",
+          "display": "Physician assistant",
+          "target": [
+            {
+              "code": "449161006",
+              "display": "Physician assistant",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "30.076",
+          "display": "Verpl. spec. algemene gezondheidszorg",
+          "target": [
+            {
+              "code": "224571005",
+              "display": "Nurse practitioner",
+              "equivalence": "narrower"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
