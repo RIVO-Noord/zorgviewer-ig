@@ -1,14 +1,16 @@
 #### 🚀 Nieuw
-*   **Feedback Link:** Een feedback link is toegevoegd aan de oplossing.
-*   **AI-gestuurde Changelog Generatie:** Introductie van een nieuw mechanisme voor het genereren van de changelog met behulp van AI (Google Generative AI), inclusief de benodigde scripts, afhankelijkheden en documentatie.
+*   Introductie van een script voor het bijwerken van IG voorbeelden.
+*   Eerste implementatiestappen voor MP9 (SF#/343446).
+*   Toevoeging van een UMCG Epic voorbeeld.
+*   Nieuw voorbeeld toegevoegd, afkomstig uit zp-dev.
+*   Implementatie van een datumveld.
 
 #### 🛠️ Gewijzigd
-*   **Referentiewaarden Presentatie:** De weergave van referentiewaarden is robuuster gemaakt en gebruikt nu ".." in plaats van "-".
-*   **Changelog Structuur:** De structuur van de changelog-pagina is gewijzigd om dynamisch gegenereerde inhoud te includen, wat een overstap van statische naar geautomatiseerde changelog-updates impliceert.
+*   Diverse updates en aanpassingen gerelateerd aan CGM rolcodes (SF#330510).
+*   Updates en verbeteringen aan bestaande voorbeelden.
+*   Actualisatie van Epic rolcodes, inclusief specifieke updates voor non-productie omgevingen (SF#355759).
+*   Algemene wijzigingen en verfijningen naar aanleiding van de bouwreview.
+*   Het e-mailadres is verplaatst naar een uitklapbaar gedeelte en een adres is toegevoegd.
 
 #### 🧹 Onderhoud
-*   **Release Management:** Afronding van release 1.22.0 en het starten van de ontwikkelingscyclus voor versie 1.23.
-*   **Externe Afhankelijkheden:** De Nictiz zibs2017 FHIR IG afhankelijkheid is geüpdatet van versie 2.3.1 naar 2.3.2.
-*   **Rollen Opruiming:** Algemene opruimacties gerelateerd aan rollen zijn uitgevoerd.
-*   **Script Documentatie:** De README.md is bijgewerkt met essentiële setup-instructies voor Node.js en gedetailleerde gebruiksaanwijzingen voor de `updateviewmd.js` en de nieuwe `changelog.js` scripts.
-*   **Algemene Correcties:** Diverse algemene correcties en kleine verbeteringen zijn doorgevoerd.
+*   Een algemene bugfix is doorgevoerd.
