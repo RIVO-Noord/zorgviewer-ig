@@ -119,7 +119,7 @@
 <th>(regelkleur)</th>
 </tr>
 <tr><td>+</td>
-<td>Sanday-US315638</td>
+<td>Sanday-US315638-Bundle</td>
 <td>7-8-2025</td>
 <td>Hernia inguinalis</td>
 <td>Actueel</td>
@@ -128,7 +128,7 @@
 <b>Diagnose</b><br/>ICPC#D89 Hernia inguinalis<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday-US315638</td>
+<td>Sanday-US315638-Bundle</td>
 <td>1-4-2025</td>
 <td>Keelpijn</td>
 <td>Actueel</td>
@@ -137,7 +137,7 @@
 <b>Diagnose</b><br/>ICPC#R21.01 Keelpijn<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday-US315638</td>
+<td>Sanday-US315638-Bundle</td>
 <td>21-8-2025</td>
 <td>Lokale infectie vinger/teen/paronychia</td>
 <td>Actueel</td>
@@ -146,7 +146,7 @@
 <b>Diagnose</b><br/>ICPC#S09 Lokale infectie vinger/teen/paronychia<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday-US315638</td>
+<td>Sanday-US315638-Bundle</td>
 <td>13-2-2025</td>
 <td>Maagpijn</td>
 <td>Niet actueel</td>

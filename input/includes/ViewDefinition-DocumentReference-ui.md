@@ -252,7 +252,7 @@
 </tr><tr><td></td><td colspan=7>
 </td></tr>
 <tr><td>+</td>
-<td>Epic-PZP</td>
+<td>Epic-PZP-Bundle</td>
 <td>23-7-2025</td>
 <td>Artsenbrief, Proactieve zorgplanning</td>
 <td>RPHM. Muskens, Oogarts</td>

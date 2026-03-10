@@ -12,6 +12,26 @@
 <th>Stop type</th>
 </tr>
 <tr><td>+</td>
+<td>AORTA</td>
+<td></td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>AORTA</td>
+<td></td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft</td>
 <td>15-8-2016</td>
 <td>14-9-2016</td>

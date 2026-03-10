@@ -8,6 +8,7 @@ const dosageToStringGemini = require('./dosage').dosageToStringGemini;
 
 const viewDefPath = "../input/images/";
 const mdPath = "../input/includes/";
+const examplesPath = "../input/examples";
 
 // Need stu3_model as param to work
 // eg fhirpath.evaluate(example, `${column.path}`, null, fhirpath_stu3_model, { userInvocationTable }); }
@@ -23,7 +24,6 @@ function resolveFn(inputs) {
     if (!resolved) {
         console.log(`Resolving reference ${reference}`);
         // try to find an example with a matching id 
-        const examplesPath = "../input/examples";
         var resolved;
         fs.readdirSync(examplesPath).forEach(file => {
             if (!file.endsWith(".json")) return;
@@ -38,14 +38,12 @@ function resolveFn(inputs) {
             else {
                 examples.push(raw_example);
             }
+            examples.map(example => examplesCache[example.id] = example); // cache all examples by id for faster lookup next time
             var match = examples.find(example => example.id === id);
             if (match) {
                 resolved = match;
             }
         });
-        if (resolved) {
-            examplesCache[id] = resolved;
-        }
     }
     if (!resolved) {
         console.log(`No example found for reference: ${reference}`);
@@ -215,7 +213,6 @@ function doExampleRows(select, md_ui) {
     const match2 = select.forEach.match("resourceType='(.+)'");
     if (match2) {
         const resourceType = match2[1];
-        const examplesPath = "../input/examples";
         fs.readdirSync(examplesPath).forEach(exampleFileName => {
             if (!exampleFileName.endsWith(".json")) return;
             const example_filePath = path.join(examplesPath, exampleFileName);

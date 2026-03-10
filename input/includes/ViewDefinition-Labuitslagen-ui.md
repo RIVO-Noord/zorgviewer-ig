@@ -57,7 +57,7 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>4-2-2025</td>
 <td>Substantie</td>
 <td>faeces</td>
@@ -68,7 +68,7 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>4-2-2025</td>
 <td>Rapport</td>
 <td>faeces</td>
@@ -79,7 +79,7 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>4-2-2025</td>
 <td>Schistosoma microscopie</td>
 <td>Negatief</td>
@@ -90,7 +90,7 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>4-2-2025</td>
 <td>Materiaal</td>
 <td>faeces</td>
@@ -101,7 +101,7 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Glucose</td>
 <td>7.2 mmol/L</td>
@@ -113,7 +113,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Ureum</td>
 <td>6.3 mmol/L</td>
@@ -125,7 +125,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Creatinine</td>
 <td>65 µmol/L</td>
@@ -137,7 +137,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>eGFR (creat)</td>
 <td>81 mL/min/1.73m2</td>
@@ -149,7 +149,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Kalium</td>
 <td>3.8 mmol/L</td>
@@ -161,7 +161,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Natrium</td>
 <td>142 mmol/L</td>
@@ -173,7 +173,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>AKI alert</td>
 <td>&lt;Memo&gt;</td>
@@ -185,7 +185,7 @@
 <b>Commentaar</b><br/>Toelichting: Niet te beoordelen.<br/>Volgens KDIGO-richtlijn niet te berekenen<br/>want ...<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Magnesium</td>
 <td>0.98 mmol/L</td>
@@ -197,7 +197,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Cytomegalovirus IgM (ELFA)</td>
 <td>0.72/Grens</td>
@@ -208,7 +208,7 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Hepatitis B virus core IgG (CMIA)</td>
 <td>0.09/Neg</td>
@@ -220,7 +220,7 @@
 <b>Commentaar</b><br/>Toelichting: Serologisch GEEN aanwijzingen voor infectie met Hepatitis B virus ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Materiaal</td>
 <td>Stolbloed (r</td>
@@ -232,7 +232,7 @@
 <b>Commentaar</b><br/>Toelichting: Stolbloed (rood) 10 ml (Substantie=bloed, Rapport=Serum) ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Cytomegalovirus IgG (ELFK)</td>
 <td>30/Pos</td>
@@ -243,7 +243,7 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>HSV-2 IgG (VirClia)</td>
 <td>0.613/Neg</td>
@@ -254,7 +254,7 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>HSV-2 IgM (VirClia)</td>
 <td>0.652/Neg</td>
@@ -265,7 +265,7 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>HSV-1 IgG (VirClia)</td>
 <td>0.261/Neg</td>
@@ -277,7 +277,7 @@
 <b>Commentaar</b><br/>Toelichting: Serologisch GEEN aanwijzingen voor een in het verleden opgedane inf...<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>HSV-1 IgM (VirClia)</td>
 <td>0.260/Neg</td>
@@ -288,7 +288,7 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Amylase</td>
 <td>&lt;20</td>
@@ -300,7 +300,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Creatinine</td>
 <td>9.5 mmol/L</td>
@@ -312,7 +312,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Kalium</td>
 <td>38 mmol/L</td>
@@ -324,7 +324,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Ureum</td>
 <td>86 mmol/L</td>
@@ -336,7 +336,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Natrium</td>
 <td>127 mmol/L</td>
@@ -348,7 +348,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Cortisol</td>
 <td>0.39 µmol/L</td>
@@ -360,7 +360,7 @@
 <b>Commentaar</b><br/>Toelichting: Ochtend                  0.25 - 0.83   µmol/L<br/>Middag               ...<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Engels raaigras</td>
 <td>&lt;0.35</td>
@@ -372,7 +372,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Berk</td>
 <td>40 kU/L</td>
@@ -384,7 +384,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Bijvoet</td>
 <td>&lt;0.35</td>
@@ -396,7 +396,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Huismijt</td>
 <td>&lt;0.35</td>
@@ -408,7 +408,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Schildklier (anti-TPO)</td>
 <td>37 U/mL</td>
@@ -420,7 +420,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Timotheegras</td>
 <td>&lt;0.35</td>
@@ -432,7 +432,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Huisstofmijt</td>
 <td>&lt;0.35</td>
@@ -444,7 +444,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Kopramijt</td>
 <td>1.6 kU/L</td>
@@ -456,7 +456,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Hemoglobine</td>
 <td>8.9 mmol/L</td>
@@ -468,7 +468,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>Hematocriet</td>
 <td>0.41 L/L</td>
@@ -480,7 +480,7 @@
 <b>Commentaar</b><br/>Toelichting: Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft-Bundle2</td>
+<td>Chipsoft-Bundle</td>
 <td>17-10-2022</td>
 <td>TSH</td>
 <td>4.2</td>
