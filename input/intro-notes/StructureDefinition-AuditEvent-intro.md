@@ -12,7 +12,7 @@
 | datum en tijd | 1986‐09‐14T14:12:12 | `AuditEvent.recorded` |
 | **Gebruiker** | | `AuditEvent.agent` |
 | gebruikers-id | Schroder, CP, Arts en system urn:oid:2.16.840.1.113883.2.4.3.8<br/>of AGB-Z 06020101 met system http://fhir.nl/fhir/NamingSystem/agb-z | zorgaanbieder OID `AuditEvent.agent.userId.system`<br/>`AuditEvent.agent.userId.value `<br/>en `AuditEvent.agent.name` |
-| | Zelfde als voor ToestemmingConsent.policy:<br/>https://rivo-noord.nl/zorgviewer/toestemming | `AuditEvent.agent.policy` |
+| | `https://rivo-noord.nl/zorgviewer/toestemming` | `AuditEvent.agent.policy` |
 | gebruikersrol | 05 Directly involved healthcare professional | `AuditEvent.agent.role.coding.system`<br/>`AuditEvent.agent.role.coding.code`<br/>`AuditEvent.agent.role.coding.display` |
 | ID van verantwoordelijke gebruiker | zie gebruikers-id | |
 | Rol van verantwoordelijke gebruiker | zie gebruikersrol | |
