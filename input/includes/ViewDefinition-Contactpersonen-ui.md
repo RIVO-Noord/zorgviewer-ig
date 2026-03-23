@@ -21,7 +21,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic-CP</td>
-<td></td>
+<td>Contactpersoon bij nood</td>
 <td>Husband</td>
 <td>Noodcontact,Joost</td>
 <td>+31 6 11 22 33 44</td>
