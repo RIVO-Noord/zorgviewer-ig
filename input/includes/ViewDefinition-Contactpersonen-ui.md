@@ -45,7 +45,6 @@
 <td>06 12 34 56 78</td>
 </tr><tr><td></td><td colspan=5>
 <b>Emailadres</b><br/>xxx_helleman@hotmail.com<br/>
-<b>Adres</b><br/>Knolweg 1000 9999 XA Stitswerd<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
