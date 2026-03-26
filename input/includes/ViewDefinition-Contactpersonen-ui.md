@@ -18,7 +18,7 @@
 <td>+31612345678</td>
 <td>XXX_Helleman@hotmail.com</td>
 </tr><tr><td></td><td colspan=6>
-<b>Adres</b><br/>Knolweg 1000<br/>
+<b>Adres</b><br/>Knolweg 1000 9999XA STITSWERD<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic-CP</td>
@@ -56,7 +56,7 @@
 <td>06-12345678</td>
 <td>XXX_Helleman@hotmail.com</td>
 </tr><tr><td></td><td colspan=6>
-<b>Adres</b><br/>Knolweg 1000<br/>
+<b>Adres</b><br/>Knolweg 1000 9999XA STITSWERD<br/>
 </td></tr>
 </tbody>
 </table>
