@@ -109,7 +109,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
         const viewDef = JSON.parse(fs.readFileSync(viewDef_filePath, 'utf8'));
 
         const md_def = [
-            "### Kolom Definities",
+            "### Kolomdefinities",
             "<table class=\"grid\">",
             "<thead>",
             "<th>Kolom label</th>",

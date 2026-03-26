@@ -1,4 +1,4 @@
-### Kolom Definities
+### Kolomdefinities
 <table class="grid">
 <thead>
 <th>Kolom label</th>
@@ -43,17 +43,17 @@
 <td>Contactgegevens.Telefoonnummers.Telefoonnummer</td>
 <td></td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
-<tr style="background-color:#b4c7e7">
-<td>+Emailadres</td>
+<tr>
+<td>E-mail</td>
 <td><samp>telecom.where(system='email').value</samp></td>
 <td><code>string</code></td>
 <td>Contactgegevens.EmailAdressen.EmailAdres</td>
 <td></td>
 </tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Adres</td>
-<td><samp>(address.line | address.line.extension.valueString.join(' ')) + ' ' +  address.postalCode + ' ' + address.city</samp></td>
+<td><samp>address.line | address.line.extension.valueString.join(' ') + ' ' +  address.postalCode + ' ' + address.city</samp></td>
 <td><code>string</code></td>
 <td>Contactgegevens.Adresgegevens</td>
 <td></td>

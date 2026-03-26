@@ -39,13 +39,13 @@
         },
         {
           "path": "telecom.where(system='email').value",
-          "name": "+Emailadres",
+          "name": "E-mail",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Contactgegevens.EmailAdressen.EmailAdres" } ]
         }
         ,
         {
-          "path": "(address.line | address.line.extension.valueString.join(' ')) + ' ' +  address.postalCode + ' ' + address.city",
+          "path": "address.line | address.line.extension.valueString.join(' ') + ' ' +  address.postalCode + ' ' + address.city",
           "name": "+Adres",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Contactgegevens.Adresgegevens" } ]
