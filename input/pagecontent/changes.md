@@ -4,7 +4,7 @@
 
 ### Versies
 
-[Resource comparison with version v1.22.0](comparison-v1.22.0/index.html)
+[Resource comparison with version v1.23.0](comparison-v1.23.0/index.html)
 
 |Versie|Datum|Changes|
 |---|---|---|
