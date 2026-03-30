@@ -30,10 +30,10 @@
 <td></td>
 </tr>
 <tr>
-<td>ConcernLabel</td>
+<td>Label</td>
 <td><samp>type.text | type.coding[0].display</samp></td>
 <td><code>string</code></td>
-<td>ConcernLabel</td>
+<td>ZorgEpisodeNaam</td>
 <td></td>
 </tr>
 <tr>

@@ -120,7 +120,7 @@
               ]
             },
             {
-              "path": "diagnosis.condition.resolve().select(code.text | code.coding[0].display)",
+              "path": "diagnosis.condition.display | diagnosis.condition.resolve().select(code.text | code.coding[0].display)",
               "name": "Diagnose",
               "type": "string",
               "tag": [

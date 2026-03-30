@@ -6,7 +6,7 @@
 <th>Bron</th>
 <th>Begin</th>
 <th>Eind</th>
-<th>ConcernLabel</th>
+<th>Label</th>
 <th>Probleem</th>
 </tr>
 <tr><td>+</td>

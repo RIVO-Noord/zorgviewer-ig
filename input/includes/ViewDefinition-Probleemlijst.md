@@ -77,7 +77,7 @@
 </tr>
 <tr>
 <td>Diagnose</td>
-<td><samp>diagnosis.condition.resolve().select(code.text | code.coding[0].display)</samp></td>
+<td><samp>diagnosis.condition.display | diagnosis.condition.resolve().select(code.text | code.coding[0].display)</samp></td>
 <td><code>string</code></td>
 <td>Probleem/ ProbleemNaam</td>
 <td></td>
