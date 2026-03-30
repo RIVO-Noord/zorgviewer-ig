@@ -14,7 +14,7 @@
 
 ### Request
 
-1. Opvragen (search) definities
+1. Opvragen (search) medicatie afspraken
 
     `GET <ontsluiten-bronsysteem-base>/MedicationRequest?category=http://snomed.info/sct|16076005&_include=MedicationRequest:medication&patient=<fhir_patient_id>`
 
