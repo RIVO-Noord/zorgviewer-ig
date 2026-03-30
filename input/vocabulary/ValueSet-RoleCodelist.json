@@ -1,17 +1,17 @@
 {
     "resourceType": "ValueSet",
-    "id": "SubjectRoleCodelist",
+    "id": "RoleCodelist",
     "meta": {
         "profile":  [
             "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
         ]
     },
-    "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/SubjectRoleCodelist",
-    "name": "SubjectRoleCodelist",
-    "title": "Subject rol (beroepen) waardelijst",
+    "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodelist",
+    "name": "RoleCodelist",
+    "title": "Rol (beroepen) waardelijst",
     "status": "active",
     "experimental": false,
-    "description": "Subject rol waardelijst. Deze lijst is nodig voor autorisatie opstarten Zorgviewer en is voor autorisatie bij het bronsystemen.",
+    "description": "Rol waardelijst. Deze lijst is nodig voor autorisatie opstarten Zorgviewer en is voor autorisatie bij het bronsystemen.",
     "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
     "compose": {
         "include": [
@@ -32,7 +32,8 @@
                                 "value": "gezondheidszorgpersoneel"
                             }
                         ]
-                    },{
+                    },
+                    {
                         "code": "309343006",
                         "display": "Medical doctor",
                         "designation":  [
@@ -224,6 +225,66 @@
                                     "display": "Synonym"
                                 },
                                 "value": "verzorgende"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "22515006",
+                        "display": "Medical assistant",
+                        "designation": [
+                            {
+                                "language": "nl-NL",
+                                "use": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "900000000000013009",
+                                    "display": "Synonym"
+                                },
+                                "value": "medisch assistent"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "44652006",
+                        "display": "Pharmaceutical assistant",
+                        "designation": [
+                            {
+                                "language": "nl-NL",
+                                "use": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "900000000000013009",
+                                    "display": "Synonym"
+                                },
+                                "value": "apothekersassistent"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "310184004",
+                        "display": "Liaison nurse",
+                        "designation": [
+                            {
+                                "language": "nl-NL",
+                                "use": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "900000000000013009",
+                                    "display": "Synonym"
+                                },
+                                "value": "transferverpleegkundige"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "224597004",
+                        "display": "Trained nurse counselor",
+                        "designation": [
+                            {
+                                "language": "nl-NL",
+                                "use": {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "900000000000013009",
+                                    "display": "Synonym"
+                                },
+                                "value": "speciaal opgeleid verpleegkundig consulent"
                             }
                         ]
                     }

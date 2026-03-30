@@ -1,27 +1,15 @@
-### Laatste Wijzigingen
+### Samenvatting Changes
 
-* Functioneel:
-    * Er is een "plain language" beschrijving toegevoegd.
-    * Toegang voor Physician Assistant is toegevoegd en voor administratief medewerkers verwijderd (na afstemming met Sanday).
-    * De verwerking van autorisatierollen in de ConceptMap is aangepast.
-    * Extra rolcode-informatie toegevoegd.
-    * Er is een workaround voor de meetlocatie van Vitale Functies voor Epic gedefinieerd.
-    * Aanpassingen gedaan in gegevensherkomst voor EPS (European Patient Summary)
-    
-* Technisch & Documentatie:
-    * Diverse links, afbeeldingen en documentatie zijn bijgewerkt.
-    * Er zijn verbeteringen doorgevoerd aan de CapabilityStatements.
-    * Specifieke aanpassingen en correcties voor Sanday, o.a. voor labuitslagen en het materiaaltype.
-    * De zoekpagina is gecorrigeerd.
-    * De volgorde van menu-items is aangepast.
+{% include generated-changelog.md %}
 
 ### Versies
 
-[Resource comparison with version v1.21.0](comparison-v1.21.0/index.html)
+[Resource comparison with version v1.22.0](comparison-v1.22.0/index.html)
 
 |Versie|Datum|Changes|
 |---|---|---|
-|1.23.0|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.22.0...HEAD)||
+|1.24.0|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.23.0...HEAD)||
+|1.23.0|30-mar-2026|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.22.0...1.23.0)||
 |1.22.0|12-jan-2026|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.21.0-sprint70...1.22.0)||
 |1.21.0-sprint70|28-okt-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.20.0-sprint68...1.21.0-sprint70)||
 |1.20.0-sprint68|30-sep-2025|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.19.0-sprint67...1.20.0-sprint68)||

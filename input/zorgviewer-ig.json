@@ -3,7 +3,7 @@
   "id": "hl7.fhir.nl.zorgviewer",
   "language": "en-US",
   "url": "http://fhir.hl7.nl/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer",
-  "version": "1.22.0",
+  "version": "1.23.0",
   "name": "ZorgviewerIG",
   "title": "RIVO-Noord Zorgviewer Implementation Guide",
   "status": "active",
@@ -52,16 +52,10 @@
       "version": "5.3.0"
     },
     {
-      "id": "eafspraak",
-      "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.eafspraak/1.0.6",
-      "packageId": "nictiz.fhir.nl.stu3.eafspraak",
-      "version": "1.0.6"
-    },
-    {
       "id": "zibs2017",
-      "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.3.1",
+      "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.3.2",
       "packageId": "nictiz.fhir.nl.stu3.zib2017",
-      "version": "2.3.1"
+      "version": "2.3.2"
     }
   ],
   "definition": {
@@ -134,6 +128,14 @@
         },
         "name": "Epic Patient Example",
         "description": "Dit is een Patient voorbeeld uit Epic.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient"
+      },
+      {
+        "reference": {
+          "reference": "Patient/exP28OT74nh-rKySqgJS-rXvWI9uIIKywLaFWpcavTR83"
+        },
+        "name": "Epic Patient Example met 2 contactpersonen",
+        "description": "Dit is een Patient voorbeeld uit Epic met 2 contactpersonen.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient"
       },
       {
@@ -575,6 +577,110 @@
         "name": "Chipsoft VitalSign Example",
         "description": "Dit is een VitalSign voorbeeld uit Chipsoft.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/VitalSign"
+      },
+      {
+        "reference": {
+          "reference": "Appointment/2.16.840.1.113883.2.4.3.124.7.46240.80000006680"
+        },
+        "name": "Chipsoft Appointment Example",
+        "description": "Dit is een Appointment voorbeeld van Chipsoft.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Appointment"
+      },
+      {
+        "reference": {
+          "reference": "Appointment/euUwgaknEL2dCH5-hqEvSVp5BhPTmqDJUdEhZHe5uI-w3"
+        },
+        "name": "Epic Appointment Example",
+        "description": "Dit is een Appointment voorbeeld van Epic.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Appointment"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/2.16.840.1.113883.2.4.3.124.7.46240.81230000070144"
+        },
+        "name": "Chipsoft Encounter Example",
+        "description": "Dit is een Encounter voorbeeld van Chipsoft.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/evQjXbVOcndOjvpXB-f.z8A3"
+        },
+        "name": "Epic Encounter Example",
+        "description": "Dit is een Encounter voorbeeld van Epic.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/307375"
+        },
+        "name": "Nexus Encounter Example",
+        "description": "Dit is een Encounter voorbeeld van Nexus.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
+      },
+      {
+        "reference": {
+          "reference": "Observation/2.16.840.1.113883.2.4.3.124.7.3655080061230000300332"
+        },
+        "name": "Chipsoft LivingSituation Example",
+        "description": "Dit is een LivingSituation voorbeeld van Chipsoft.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/LivingSituation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/euikHHTWQq7NPr72BZcg9e7vTkGAH6KGH4T5adWC8bmbNJK9LrDNWIUbd8tS7fO903"
+        },
+        "name": "Epic LivingSituation Example",
+        "description": "Dit is een LivingSituation voorbeeld van Epic.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/LivingSituation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/zib-livingsituation-01"
+        },
+        "name": "Nictiz LivingSituation Example",
+        "description": "Dit is een LivingSituation voorbeeld van Nictiz.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/LivingSituation"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/mp-MedAgr-mp9-MBH920mgexample-1-MA1"
+        },
+        "name": "MP9 MedicationRequest Example",
+        "description": "Dit is een MedicationRequest voorbeeld van MP9.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationRequest"
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/mp-MedUse2-mp9-MBH920mgexample-1-MGB1"
+        },
+        "name": "MP9 MedicationStatement Example",
+        "description": "Dit is een MedicationStatement voorbeeld van MP9.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationStatement"
+      },
+      {
+        "reference": {
+          "reference": "NutritionOrder/2.16.840.1.113883.2.4.3.124.7.11816003.21230000000182"
+        },
+        "name": "Chipsoft NutritionAdvice Example",
+        "description": "Dit is een NutritionAdvice voorbeeld van Chipsoft.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/NutritionAdvice"
+      },
+      {
+        "reference": {
+          "reference": "NutritionOrder/zib-nutritionadvice-01"
+        },
+        "name": "Nictiz NutritionAdvice Example",
+        "description": "Dit is een NutritionAdvice voorbeeld van Nictiz.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/NutritionAdvice"
+      },
+      {
+        "reference": {
+          "reference": "Patient/B211BE58-949E-4950-9FE7-410B4D944E6F"
+        },
+        "name": "Sanday Patient Example",
+        "description": "Dit is een Patient voorbeeld van Sanday.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient"
       }
     ],
     "page": {
@@ -635,8 +741,8 @@
               "generation": "markdown"
             },
             {
-              "nameUrl": "design-autorisatie.html",
-              "title": "Autorisatie Bouwblok Design",
+              "nameUrl": "design-usercontext.html",
+              "title": "Gebruikerscontext Design",
               "generation": "markdown"
             },
             {
@@ -744,7 +850,7 @@
       },
       {
         "code": "copyrightyear",
-        "value": "2023+"
+        "value": "2026"
       },
       {
         "code": "excludettl",
@@ -784,7 +890,7 @@
       },
       {
         "code": "version-comparison-master",
-        "value": "1.21.0"
+        "value": "1.22.0"
       }
     ]
   }

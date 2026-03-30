@@ -18,7 +18,6 @@ Opvragen CodeSystems en ValueSets voor gebruik in de Zorgviewer.
 
 * Doel: landelijke MITZ open vraag
 * Inhoud: Toestemmingen van een patient (Consents)
-* Tijdelijk: Vullen [Toestemming Consent](StructureDefinition-ToestemmingConsent.html) dmv afvangen HL7 v2 toestemming berichten.
 
 ### [Zorgverlener Directory](CapabilityStatement-ZorgverlenerDirectory.html)
 

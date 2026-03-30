@@ -29,7 +29,7 @@ Zorgaanbiedercategorien (raadeplegende):
 * Laboratoria en diagnostische centra
 
 Gegevenscategorieën:
-* Behandelgegevens (medische gegevens)
-* Uitslagen (zit ook in #1)
-* Medicatiegegevens (zit ook in #1)
-* Alle gegevens
+1. Behandelgegevens (medische gegevens)
+1. Uitslagen (zit ook in #1)
+1. Medicatiegegevens (zit ook in #1)
+1. Alle gegevens

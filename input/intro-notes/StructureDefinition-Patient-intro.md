@@ -1,8 +1,21 @@
 {% include profile-note.md %}
 
-### Zorginformatiebouwsteen
+### Zorginformatiebouwstenen
 
-[ZIB Patient](https://zibs.nl/wiki/Patient-v3.1(2017NL))
+* [ZIB Patient](https://zibs.nl/wiki/Patient-v3.1(2017NL))
+* [ZIB Contactpersoon](https://zibs.nl/wiki/Contactpersoon-v3.1(2017NL))
+
+### View Definition
+
+**N.B. Er is alleen een View gedefinieerd voor het onderdeel <u>contactpersonen</u> van Patient.**
+
+* [ViewDefinition voor Contactpersonen](ViewDefinition-Contactpersonen.json)
+
+{% include ViewDefinition-Contactpersonen-ui.md %}
+
+{% include ViewDefinition-Contactpersonen.md %}
+
+**LET OP: paden zijn relatief aan `Patient.contact`.** 
 
 ### Patient.name algoritme
 

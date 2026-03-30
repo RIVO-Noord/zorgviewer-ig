@@ -6,6 +6,14 @@ N.B. ZorgEpisode komt uit de [Huisartsgegevensset](https://informatiestandaarden
 
 [ZIB ZorgEpisode](https://zibs.nl/wiki/ZorgEpisode-v1.0(2020NL))
 
+### View Definition
+
+[ViewDefinition voor EpisodeOfCare](ViewDefinition-EpisodeOfCare.json)
+
+{% include ViewDefinition-EpisodeOfCare-ui.md %}
+
+{% include ViewDefinition-EpisodeOfCare.md %}
+
 ### Request
 
 1. Opvragen (search) zorgepisodes inclusief problemen

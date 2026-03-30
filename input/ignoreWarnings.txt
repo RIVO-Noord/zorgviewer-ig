@@ -21,6 +21,9 @@ Best Practice Recommendation: In general, all observations should have a perform
 # Terminology server issue?
 Error performing tx3 operation 'validate-code: Cannot invoke "java.util.List.iterator()" because "headers" is null' (parameters = "")
 The code provided (nl-NL) could not be validated against the maximum value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|3.0.2), (error = Error performing tx3 operation 'validate-code: Cannot invoke "java.util.List.iterator()" because "headers" is null' (parameters = ""))
+Source Code System http://loinc.org is only supported on the terminology server, so the source codes are not validated for performance reasons
+Target Code System http://loinc.org is only supported on the terminology server, so the target codes are not validated for performance reasons
+The Target Code System http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodelist is not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed
 
 # FHIR core example issue
 if identifier.system is 'urn:ietf:rfc:3986', then the identifier.value must be a full URI (e.g. start with a scheme), not 'Local eCMS identifier'
@@ -55,9 +58,11 @@ When HL7 is publishing a resource, the owning committee must be stated using the
 Except for transactions and batches, each entry in a Bundle must have a fullUrl which is the identity of the resource in the entry
 
 # Examples not complete; accepted as is
-Unable to resolve resource with reference%
+Unable to resolve resource with reference %
+Unable to find ImplementationGuide.definition.resource.description for the resource %
+The Implementation Guide contains no examples for this profile
 
-# Because of Sanday R4 examples
+# Because of R4 examples (EPS and Sanday)
 Unrecognized property %
 This property must be a simple value, not an Object %
 
@@ -67,3 +72,11 @@ The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-Implementati
 
 # On purpose; for documentation only
 Bundle is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
+
+# IPS/EPS
+% has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
+Invalid Resource target type. Found PractitionerRole, but expected one of ([Practitioner, Patient, RelatedPerson])
+Invalid Resource target type. Found PractitionerRole, but expected one of ([Practitioner, Device, Patient, RelatedPerson])
+
+# Zorgplatform
+Code V4 is not a valid SNOMED CT Term, and neither could it be parsed as an expression (Concept not found (next char = "V", in "V4") at character 1)

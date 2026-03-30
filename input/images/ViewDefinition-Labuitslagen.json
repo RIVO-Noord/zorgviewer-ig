@@ -41,7 +41,7 @@
           "tag": [ { "name": "Zib element", "value": "LaboratoriumTest/ InterpretatieVlaggen" } ]
         },
         {
-          "path": "referenceRange.low.value.toString() + ' - ' + referenceRange.high.value.toString() + iif(referenceRange.high.code.exists(),' ' + referenceRange.high.code,'')",
+          "path": "iif(referenceRange.low.exists(),referenceRange.low.value.toString(),'') + ' .. ' + iif(referenceRange.high.exists(),referenceRange.high.value.toString(),'') + iif(referenceRange.high.code.exists(),' ' + referenceRange.high.code,'')",
           "name": "Onder- en bovengrens",
           "description": "Indien <code>low.code</code> en <code>high.code</code> niet gelijk zijn aan elkaar toon dan <code>code</code> bij beide.",
           "type": "string",

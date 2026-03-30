@@ -14,7 +14,7 @@
 
 ### Request
 
-1. Opvragen (search) definities
+1. Opvragen (search) medicatie gebruik
 
     `GET <ontsluiten-bronsysteem-base>/MedicationStatement?category=urn:oid:2.16.840.1.113883.2.4.3.11.60.20.77.5.3|6&_include=MedicationStatement:medication&patient=<fhir_patient_id>`
 

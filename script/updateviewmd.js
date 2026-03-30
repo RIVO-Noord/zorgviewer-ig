@@ -8,6 +8,7 @@ const dosageToStringGemini = require('./dosage').dosageToStringGemini;
 
 const viewDefPath = "../input/images/";
 const mdPath = "../input/includes/";
+const examplesPath = "../input/examples";
 
 // Need stu3_model as param to work
 // eg fhirpath.evaluate(example, `${column.path}`, null, fhirpath_stu3_model, { userInvocationTable }); }
@@ -23,7 +24,6 @@ function resolveFn(inputs) {
     if (!resolved) {
         console.log(`Resolving reference ${reference}`);
         // try to find an example with a matching id 
-        const examplesPath = "../input/examples";
         var resolved;
         fs.readdirSync(examplesPath).forEach(file => {
             if (!file.endsWith(".json")) return;
@@ -38,14 +38,12 @@ function resolveFn(inputs) {
             else {
                 examples.push(raw_example);
             }
+            examples.map(example => examplesCache[example.id] = example); // cache all examples by id for faster lookup next time
             var match = examples.find(example => example.id === id);
             if (match) {
                 resolved = match;
             }
         });
-        if (resolved) {
-            examplesCache[id] = resolved;
-        }
     }
     if (!resolved) {
         console.log(`No example found for reference: ${reference}`);
@@ -111,7 +109,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
         const viewDef = JSON.parse(fs.readFileSync(viewDef_filePath, 'utf8'));
 
         const md_def = [
-            "### Kolom Definities",
+            "### Kolomdefinities",
             "<table class=\"grid\">",
             "<thead>",
             "<th>Kolom label</th>",
@@ -215,10 +213,9 @@ function doExampleRows(select, md_ui) {
     const match2 = select.forEach.match("resourceType='(.+)'");
     if (match2) {
         const resourceType = match2[1];
-        const examplesPath = "../input/examples";
-        fs.readdirSync(examplesPath).forEach(file => {
-            if (!file.endsWith(".json")) return;
-            const example_filePath = path.join(examplesPath, file);
+        fs.readdirSync(examplesPath).forEach(exampleFileName => {
+            if (!exampleFileName.endsWith(".json")) return;
+            const example_filePath = path.join(examplesPath, exampleFileName);
             const raw_example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
 
             const examples = [];
@@ -258,59 +255,75 @@ function doExampleRows(select, md_ui) {
                 }
 
                 // only include in table when where clause applies
-                const match3 = select.forEach.match(".where\((.+)\)");
+                // examples are always resources, so ignore entry.resource prefix
+                const match3 = select.forEach.match(/\.where\((.+)\)(\.(\w+))?/);
                 if (match3) {
-                    var result;
-                    try { result = fhirpath.evaluate(example, match3[1]); }
+                    let whereResult;
+                    try { whereResult = fhirpath.evaluate(example, match3[1]); }
                     catch (err) { console.error ("ERROR: Error evaluating where clause", match3[1], err.message); }
-                    if (result[0]) {
-                        const values = select.column.map(column => {
-                            var result;
-                            try { result = fhirpath.evaluate(example, `${column.path}`, null, fhirpath_stu3_model, { userInvocationTable }); }
-                            catch (err) { console.error("ERROR:", column.name, err.message, column.path); }
-                            var value = "";
-                            if (result && result.length > 0) {
-                                if (column.type == "date" || column.type == "dateTime") {
-                                    const date = new Date(result[0]);
-                                    value = date.toLocaleDateString('nl-NL'); // + ' ' + date.toLocaleTimeString('nl-NL';
-                                }
-                                else if (column.type == "code") {
-                                    value = result[0];
-                                    // check if this is a CodeableConcept; sometimes w/ STU3 vs R4
-                                    if (typeof(result[0]) == "object") {
-                                        value = result[0].coding[0].display;
-                                    }
-                                }
-                                else {
-                                    value = result[0];
-                                    if (value.length > 80) value = `${value.substring(0,80)}...`;
-                                    value = value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-                                    value = value.replace(/\r?\n/g, "<br/>");
-                                }
-                            }
-                            return value;
-                        });
-                        // column 0 is altijd bron en set bron obv filename
-                        values[0] = file.substring(file.indexOf('-')+1, file.length-5);
-                        md_ui.push("<tr><td>+</td>");
-                        // add column values
-                        select.column.forEach((column,idx) => {
-                            if (column.name.charAt(0) != '+') {
-                                md_ui.push(`<td>${values[idx]}</td>`);
-                            }
-                        });
-                        // add uitklap values; only show if there is a value
-                        const colcount = select.column.filter(column => column.name.charAt(0) != '+').length;
-                        md_ui.push(`</tr><tr><td></td><td colspan=${colcount}>`);
-                        select.column.forEach((column,idx) => {
-                            if (column.name.charAt(0) == '+' && values[idx] != "") {
-                                md_ui.push(`<b>${column.name.slice(1)}</b><br/>${values[idx]}<br/>`);
-                            }
-                        });
-                        md_ui.push("</td></tr>");
+
+                    // does example match where clause?
+                    if (whereResult[0]) {
+                        // is there a further path to follow?
+                        if (match3[3]) {
+                            const columnResults = fhirpath.evaluate(example, match3[3], null, fhirpath_stu3_model);
+                            columnResults.forEach(columnResult => {
+                                doExampleRow(select, columnResult, exampleFileName, md_ui);
+                            });
+                        }
+                        else {
+                            doExampleRow(select, example, exampleFileName, md_ui);
+                        }
                     }
                 }
             });
         });
     }
+}
+
+function doExampleRow(select, example, exampleFileName, md_ui) {
+    const values = select.column.map(column => {
+        let columnResult;
+        try { columnResult = fhirpath.evaluate(example, column.path, null, fhirpath_stu3_model, { userInvocationTable }); }
+        catch (err) { console.error("ERROR:", column.name, err.message, column.path); }
+        var value = "";
+        if (columnResult && columnResult.length > 0) {
+            if (column.type == "date" || column.type == "dateTime") {
+                const date = new Date(columnResult[0]);
+                value = date.toLocaleDateString('nl-NL'); // + ' ' + date.toLocaleTimeString('nl-NL';
+            }
+            else if (column.type == "code") {
+                value = columnResult[0];
+                // check if this is a CodeableConcept; sometimes w/ STU3 vs R4
+                if (typeof (columnResult[0]) == "object") {
+                    value = columnResult[0].coding[0].display;
+                }
+            }
+            else {
+                value = columnResult[0].toString();
+                if (value.length > 80) value = `${value.substring(0, 80)}...`;
+                value = value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                value = value.replace(/\r?\n/g, "<br/>");
+            }
+        }
+        return value;
+    });
+    // column 0 is altijd bron en set bron obv filename
+    values[0] = exampleFileName.substring(exampleFileName.indexOf('-') + 1, exampleFileName.length - 5);
+    md_ui.push("<tr><td>+</td>");
+    // add column values
+    select.column.forEach((column, idx) => {
+        if (column.name.charAt(0) != '+') {
+            md_ui.push(`<td>${values[idx]}</td>`);
+        }
+    });
+    // add uitklap values; only show if there is a value
+    const colcount = select.column.filter(column => column.name.charAt(0) != '+').length;
+    md_ui.push(`</tr><tr><td></td><td colspan=${colcount}>`);
+    select.column.forEach((column, idx) => {
+        if (column.name.charAt(0) == '+' && values[idx] != "") {
+            md_ui.push(`<b>${column.name.slice(1)}</b><br/>${values[idx]}<br/>`);
+        }
+    });
+    md_ui.push("</td></tr>");
 }

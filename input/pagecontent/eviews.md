@@ -22,7 +22,6 @@ Op deze pagina staan de experimentele OpenEHR View renderings van de profielen.
 {% include StructureDefinition-PlanDefinition-eview.xhtml %}
 {% include StructureDefinition-PractitionerRole-eview.xhtml %}
 {% include StructureDefinition-Endpoint-eview.xhtml %}
-{% include StructureDefinition-ToestemmingConsent-eview.xhtml %}
 {% include StructureDefinition-AllergyIntolerance-eview.xhtml %}
 {% include StructureDefinition-Procedure-eview.xhtml %}
 {% include StructureDefinition-MedicationStatement-eview.xhtml %}

@@ -28,7 +28,7 @@
             {
                 "id": "PractitionerRole.code",
                 "path": "PractitionerRole.code",
-                "definition": "Zie [ConceptMap-epic-rolcode](ConceptMap-epic-rolcode.html) en [ConceptMap-rolcodenl](ConceptMap-rolcodenl.html)",
+                "definition": "Zie [ConceptMap-epic-rolcode](ConceptMap-epic-rolcode.html), [ConceptMap-rolcodenl](ConceptMap-rolcodenl.html) en [ConceptMap-sanday-rolcode](ConceptMap-sanday-rolcode.html) voor de mogelijke waarden.",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -38,7 +38,7 @@
                             {
                                 "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap",
                                 "valueReference": {
-                                    "reference": "http://fhir.hl7.nl/zorgviewer/ConceptMap/rolcodenl"
+                                    "reference": "http://fhir.hl7.nl/zorgviewer/ConceptMap/nexus-rolcode"
                                 }
                             },
                             {
@@ -46,9 +46,21 @@
                                 "valueReference": {
                                     "reference": "http://fhir.hl7.nl/zorgviewer/ConceptMap/epic-rolcode"
                                 }
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap",
+                                "valueReference": {
+                                    "reference": "http://fhir.hl7.nl/zorgviewer/ConceptMap/sanday-rolcode"
+                                }
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap",
+                                "valueReference": {
+                                    "reference": "http://fhir.hl7.nl/zorgviewer/ConceptMap/cgm-rolcode"
+                                }
                             }
                         ],
-                        "reference": "http://fhir.hl7.nl/zorgviewer/ValueSet/SubjectRoleCodelist"
+                        "reference": "http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodelist"
                     }
                 }
             },

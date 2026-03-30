@@ -44,14 +44,15 @@ flowchart BT
 > java -jar input-cache/validator_cli.jar -version 3.0.2 input/resources -ig input/resources -ig nictiz.fhir.nl.stu3.zib2017
 ```
 
-## To build the IG (need minimal version 1.2.31 dd 1-feb-2023 ivm zib2017 package fix)
+## To build the IG
+*Need minimal version 1.2.31 dd 1-feb-2023 ivm zib2017 package fix.*
 ```
 (initial) (Bash) > curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o input-cache/publisher.jar
 (initial) (Powershell) > Invoke-WebRequest -Uri "https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar" -OutFile "input-cache/publisher.jar"
 > java -jar input-cache/publisher.jar -ig ig.ini
 ```
 
-### Trigger FHIR auto-ig builder
+### Trigger FHIR auto-ig builder voor branch snapshot
 ```
 curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger" \
   -H "Content-type: application/json" \
@@ -84,10 +85,9 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
     1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
 1. (optionally) Generate changelog using Gemini
     1. First update tags `> git pull`
-    1. Then use `gemini` (CLI) with the following prompt: `Generate a changelog for the changes from the last tag up to the HEAD and summerize this in a short bullet list in Dutch`
-    1. Plaatst output onder "Laatste Wijzigingen" in `changes.md`
-1. ``> git commit -a -m "afhechten release 1.M.R"; git push``
-1. Create tag "1.M.R-sprintX" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
+    1. Update AI generated changelog `> cd script; node changelog.js`
+1. `> git commit -a -m "afhechten release 1.M.R"; git push`
+1. Create tag "1.M.R" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
     1. Tags
     1. Releases
     1. Draft new release
@@ -99,6 +99,14 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
     1. Publish release
 1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
     Edit file in your fork and create a PR.
+1. Wiki (met o.a. de bijbehorende FO's)
+    1. (eerste keer: git clone https://PAT@dev.azure.com/UMCG-MIT/Zorgviewer/_git/Zorgviewer.wiki)
+    1. `> git pull`
+    1. `> git tag ig-1.M.R`
+    1. Optioneel FO changelog
+    1. `> git log -p ig-1.21.0-sprint70..ig-1.22 -- Functionele-Ontwerpen-\(FO\) > wiki-fo-diff.txt`
+    1. `> gemini`
+    1. Gemini CLI `Generate a summary of changes from @wiki-fo-diff.txt as a short bullet list in Dutch`
 
 ### Vrijgeven van de laatste Release
 
@@ -118,7 +126,8 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 1. En werk verder in de master branch
 1. Update input/zorgviewer-ig.json 
   * version naar volgende minor "1.M+1.0" 
-  * parameter/version-comparison-master naar (vorige versie) "1.M.0" 
+  * parameter/version-comparison-master naar (vorige versie) "1.M.0"
+    * ook in input/pagecontent/changes.md
 
 ### Handmatig publish implementatiegids.zorgviewer.nl
 
@@ -150,7 +159,7 @@ Zorgt voor beschikbaar komen in de searches:
 - https://fhir.org/guides/registry/
 - https://registry.fhir.org/
 
-### EViews (hidden from menu)
+## EViews (hidden from menu)
 
 Update inhoud van input/eviews.md middels volgende commando (manually remove extension):
 ```

@@ -10,6 +10,42 @@
 <th>(regelkleur)</th>
 </tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>15-11-2012</td>
+<td></td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#R02 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>20-4-2011</td>
+<td></td>
+<td>Niet actueel</td>
+<td>inactive</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#L72 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td></td>
+<td></td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#A20 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>10-8-2012</td>
+<td></td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#K07 <br/>
+</td></tr>
+<tr><td>+</td>
 <td>EPS</td>
 <td>21-1-2020</td>
 <td>Osteoarthritis of knee</td>
@@ -119,7 +155,43 @@
 <th>(regelkleur)</th>
 </tr>
 <tr><td>+</td>
-<td>Sanday-US315638</td>
+<td>CGM</td>
+<td>15-11-2012</td>
+<td>Kortademigheid</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#R02 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>20-4-2011</td>
+<td>Polsfractuur</td>
+<td>Niet actueel</td>
+<td>finished</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#L72 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td></td>
+<td>Gesprek levenseinde/behandelwensen</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#A20 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>10-8-2012</td>
+<td>Oedeem</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#K07 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday-US315638-Bundle</td>
 <td>7-8-2025</td>
 <td>Hernia inguinalis</td>
 <td>Actueel</td>
@@ -128,7 +200,7 @@
 <b>Diagnose</b><br/>ICPC#D89 Hernia inguinalis<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday-US315638</td>
+<td>Sanday-US315638-Bundle</td>
 <td>1-4-2025</td>
 <td>Keelpijn</td>
 <td>Actueel</td>
@@ -137,7 +209,7 @@
 <b>Diagnose</b><br/>ICPC#R21.01 Keelpijn<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday-US315638</td>
+<td>Sanday-US315638-Bundle</td>
 <td>21-8-2025</td>
 <td>Lokale infectie vinger/teen/paronychia</td>
 <td>Actueel</td>
@@ -146,7 +218,7 @@
 <b>Diagnose</b><br/>ICPC#S09 Lokale infectie vinger/teen/paronychia<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday-US315638</td>
+<td>Sanday-US315638-Bundle</td>
 <td>13-2-2025</td>
 <td>Maagpijn</td>
 <td>Niet actueel</td>

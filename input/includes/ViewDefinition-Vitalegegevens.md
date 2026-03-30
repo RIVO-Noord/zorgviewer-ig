@@ -1,4 +1,4 @@
-### Kolom Definities
+### Kolomdefinities
 <table class="grid">
 <thead>
 <th>Kolom label</th>

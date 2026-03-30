@@ -1,0 +1,57 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Contactpersonen",
+  "title": "Contactpersonen",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "relationship.where(coding.system='urn:oid:2.16.840.1.113883.2.4.3.11.22.472' or coding.system='http://terminology.hl7.org/CodeSystem/v3-RoleClass' or coding.system='http://terminology.hl7.org/CodeSystem/v2-0131').select(text | coding.display)",
+          "name": "Rol",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Rol" } ]
+        },
+        {
+          "path": "relationship.where(coding.system='http://hl7.org/fhir/v3/RoleCode').select(text | coding.display)",
+          "name": "Relatie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Relatie" } ]
+        },
+        {
+          "path": "name.select(text | given.join(' ') + ' ' + family)",
+          "name": "Naam",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Naamgegevens" } ]
+        },
+        {
+          "path": "telecom.where(system='phone').value",
+          "name": "Telefoonnummer",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Contactgegevens.Telefoonnummers.Telefoonnummer" } ]
+        },
+        {
+          "path": "telecom.where(system='email').value",
+          "name": "E-mail",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Contactgegevens.EmailAdressen.EmailAdres" } ]
+        }
+        ,
+        {
+          "path": "address.line.select(iif(getValue().exists(), getValue(), extension.value.join(' '))) + ' ' +  address.postalCode + ' ' + address.city",
+          "name": "+Adres",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Contactgegevens.Adresgegevens" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Patient' and exists(contact)).contact"
+    }
+  ]
+}
