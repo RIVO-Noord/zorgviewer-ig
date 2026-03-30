@@ -10,6 +10,42 @@
 <th>(regelkleur)</th>
 </tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>15-11-2012</td>
+<td></td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#R02 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>20-4-2011</td>
+<td></td>
+<td>Niet actueel</td>
+<td>inactive</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#L72 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td></td>
+<td></td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#A20 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>10-8-2012</td>
+<td></td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>ICPC#K07 <br/>
+</td></tr>
+<tr><td>+</td>
 <td>EPS</td>
 <td>21-1-2020</td>
 <td>Osteoarthritis of knee</td>
