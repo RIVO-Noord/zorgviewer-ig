@@ -104,7 +104,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
     1. `> git pull`
     1. `> git tag ig-1.M.R`
     1. Optioneel FO changelog
-    1. `> git log -p ig-1.21.0-sprint70..ig-1.22 -- Functionele-Ontwerpen-\(FO\) > wiki-fo-diff.txt`
+    1. `> git log -p ig-1.22.0..ig-1.23.0 -- Functionele-Ontwerpen-\(FO's\) > wiki-fo-diff.txt`
     1. `> gemini`
     1. Gemini CLI `Generate a summary of changes from @wiki-fo-diff.txt as a short bullet list in Dutch`
 
