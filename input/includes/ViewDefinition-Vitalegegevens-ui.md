@@ -12,6 +12,53 @@
 <th>(Groep)</th>
 </tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>11-3-2025</td>
+<td>lengte patiënt</td>
+<td>1.53 m</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#560 lengte patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>11-3-2025</td>
+<td>gewicht patiënt</td>
+<td>72 kg</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
+<b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>diastolische bloeddruk</td>
+<td>75 mm[Hg]</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Bloeddruk</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8462-4 Diastolic blood pressure<br/>
+<b>Meting</b><br/>NHG45#1740 diastolische bloeddruk<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>systolische bloeddruk</td>
+<td>125 mm[Hg]</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Bloeddruk</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8480-6 Systolic blood pressure<br/>
+<b>Meting</b><br/>NHG45#1744 systolische bloeddruk<br/>
+</td></tr>
+<tr><td>+</td>
 <td>EPS</td>
 <td>10-11-2024</td>
 <td>Body Height</td>

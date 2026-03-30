@@ -84,7 +84,7 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='Observation' and category.coding.code='vital-signs')"
+      "forEach": "entry.resource.where(resourceType='Observation' and (category.coding.code='vital-signs' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult'))"
     }
   ]
 }
