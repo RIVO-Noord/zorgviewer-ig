@@ -1,16 +1,20 @@
 #### 🚀 Nieuw
-*   Introductie van een script voor het bijwerken van IG voorbeelden.
-*   Eerste implementatiestappen voor MP9 (SF#/343446).
-*   Toevoeging van een UMCG Epic voorbeeld.
-*   Nieuw voorbeeld toegevoegd, afkomstig uit zp-dev.
-*   Implementatie van een datumveld.
+*   Concept en verdere uitwerking van EpisodeOfCare.
+*   CGM voorbeeld Bundle toegevoegd.
+*   LSP functionaliteit toegevoegd.
+*   Extra Epic-specifieke RolCode (`http://terminology.hl7.org/CodeSystem/v2-0131`) toegevoegd.
+*   Initiële codebase opgezet.
+*   Eerste implementatie van AORTA-dataverwerking.
 
 #### 🛠️ Gewijzigd
-*   Diverse updates en aanpassingen gerelateerd aan CGM rolcodes (SF#330510).
-*   Updates en verbeteringen aan bestaande voorbeelden.
-*   Actualisatie van Epic rolcodes, inclusief specifieke updates voor non-productie omgevingen (SF#355759).
-*   Algemene wijzigingen en verfijningen naar aanleiding van de bouwreview.
-*   Het e-mailadres is verplaatst naar een uitklapbaar gedeelte en een adres is toegevoegd.
+*   Wireframes bijgewerkt.
+*   Diverse updates en algemene aanpassingen.
+*   Fixes en aanpassingen voor `address.line` paden, inclusief terugkeer naar oorspronkelijk FHIRPath voor `address.line.extension` en correctie voor `address.line.value`.
+*   Synchronisatie met FO en correcties in kolomdefinities van headers.
+*   Pad voor contactpersoonadres bijgewerkt.
 
 #### 🧹 Onderhoud
-*   Een algemene bugfix is doorgevoerd.
+*   Documentatie van scripts en `package.json` scripts bijgewerkt.
+*   Opschoning van `ToestemmingConsent`.
+*   Verouderde inhoud verwijderd.
+*   Diverse kleine aanpassingen.

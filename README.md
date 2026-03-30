@@ -85,9 +85,8 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
     1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
 1. (optionally) Generate changelog using Gemini
     1. First update tags `> git pull`
-    1. Then use `gemini` (CLI) with the following prompt: `Generate a changelog for the changes from the last tag up to the HEAD and summerize this in a short bullet list in Dutch`
-    1. Plaatst output onder "Laatste Wijzigingen" in `changes.md`
-1. ``> git commit -a -m "afhechten release 1.M.R"; git push``
+    1. Update AI generated changelog `> cd script; node changelog.js`
+1. `> git commit -a -m "afhechten release 1.M.R"; git push`
 1. Create tag "1.M.R" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
     1. Tags
     1. Releases
