@@ -1,0 +1,41 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/EncounterReport",
+    "name": "EncounterReport",
+    "title": "EncounterReport",
+    "status": "draft",
+    "description": "SOEPVerslag",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Composition",
+    "baseDefinition": "http://nictiz.nl/fhir/StructureDefinition/gp-EncounterReport",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Composition",
+                "path": "Composition"
+            },
+            {
+                "id": "Composition.date",
+                "path": "Composition.date",
+                "mustSupport": true
+            },
+            {
+                "id": "Composition.title",
+                "path": "Composition.title",
+                "mustSupport": true
+            },
+            {
+                "id": "Composition.author.display",
+                "path": "Composition.author.display",
+                "mustSupport": true
+            },
+            {
+                "id": "Composition.section.entry.display",
+                "path": "Composition.section.entry.display",
+                "mustSupport": true
+            }
+        ]
+    }
+}

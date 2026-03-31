@@ -1,0 +1,51 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-EncounterReport",
+  "title": "GP Encounter Report",
+  "profile": "http://nictiz.nl/fhir/StructureDefinition/gp-EncounterReport",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "date",
+          "name": "Datum",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "SOEPVerslagDatumTijd" } ]
+        },
+        {
+          "path": "title",
+          "name": "Titel",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "author.display",
+          "name": "Auteur",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Auteur" } ]
+        },
+        {
+          "path": "section.code.coding.display",
+          "name": "+Naam",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "SOEPRegelNaam" } ]
+        },
+        {
+          "path": "section.entry.where(reference.startsWith('Observation/')).display.join('\n')",
+          "name": "+Regel",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "SOEPRegelTekst" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Composition' and type.coding.code='67781-5')"
+    }
+  ]
+}
