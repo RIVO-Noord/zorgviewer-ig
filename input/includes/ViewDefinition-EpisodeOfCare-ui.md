@@ -12,7 +12,7 @@
 <tr><td>+</td>
 <td>CGM</td>
 <td>15-11-2012</td>
-<td></td>
+<td>15-11-2012</td>
 <td>Ziekte</td>
 <td>Kortademigheid</td>
 </tr><tr><td></td><td colspan=5>
@@ -20,15 +20,15 @@
 <tr><td>+</td>
 <td>CGM</td>
 <td>20-4-2011</td>
-<td>7-6-2011</td>
+<td>20-4-2011</td>
 <td>Ziekte</td>
 <td>Polsfractuur</td>
 </tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
-<td></td>
-<td></td>
+<td>4-3-2026</td>
+<td>4-3-2026</td>
 <td>Probleem</td>
 <td>Gesprek levenseinde/behandelwensen</td>
 </tr><tr><td></td><td colspan=5>
@@ -36,7 +36,7 @@
 <tr><td>+</td>
 <td>CGM</td>
 <td>10-8-2012</td>
-<td></td>
+<td>4-3-2026</td>
 <td>Ziekte</td>
 <td>Oedeem</td>
 </tr><tr><td></td><td colspan=5>
