@@ -38,18 +38,11 @@
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
-<td>+Naam</td>
-<td><samp>section.code.coding.display</samp></td>
-<td><code>string</code></td>
-<td>SOEPRegelNaam</td>
-<td></td>
-</tr>
-<tr style="background-color:#b4c7e7">
-<td>+Regel</td>
-<td><samp>section.entry.where(reference.startsWith('Observation/')).display.join('
+<td>+Regels</td>
+<td><samp>section.select('(' + code.coding.code + ') ' + text.`div`.replaceMatches('<[^>]*>', '')).join('
 ')</samp></td>
 <td><code>string</code></td>
-<td>SOEPRegelTekst</td>
+<td>SOEPRegel</td>
 <td></td>
 </tr>
 </tbody>

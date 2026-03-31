@@ -16,8 +16,8 @@ N.B. SOEPVerslag komt uit de [Huisartsgegevensset](https://informatiestandaarden
 
 ### Request
 
-1. Opvragen (search) zorgepisodes inclusief problemen
+1. Opvragen (search) SOEP verslagen
 
-    `GET <ontsluiten-bronsysteem-base>/Composition?patient=<fhir_patient_id>`
+    `GET <ontsluiten-bronsysteem-base>/Composition?patient=<fhir_patient_id>&type=http://loinc.org|67781-5`
 
 {% include bronsysteem-herkennen.md %}

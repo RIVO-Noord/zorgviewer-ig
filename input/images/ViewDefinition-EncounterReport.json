@@ -33,16 +33,10 @@
           "tag": [ { "name": "Zib element", "value": "Auteur" } ]
         },
         {
-          "path": "section.code.coding.display",
-          "name": "+Naam",
+          "path": "section.select('(' + code.coding.code + ') ' + text.`div`.replaceMatches('<[^>]*>', '')).join('\n')",
+          "name": "+Regels",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "SOEPRegelNaam" } ]
-        },
-        {
-          "path": "section.entry.where(reference.startsWith('Observation/')).display.join('\n')",
-          "name": "+Regel",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "SOEPRegelTekst" } ]
+          "tag": [ { "name": "Zib element", "value": "SOEPRegel" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Composition' and type.coding.code='67781-5')"
