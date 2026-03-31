@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>GP Encounter Report</b>
+<b>Huisarts SOEP Verslagen</b>
 <table class="grid">
 <tbody>
 <tr><th>&gt;&lt;</th>
