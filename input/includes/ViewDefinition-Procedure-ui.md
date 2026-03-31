@@ -16,7 +16,7 @@
 <td></td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Verrichtingcode</b><br/>SNOMED CT#18946005 Epidural anesthesia<br/>
+<b>Verrichtingcode</b><br/>(SNOMED CT) 18946005 Epidural anesthesia<br/>
 </td></tr>
 <tr><td>+</td>
 <td>EPS</td>
@@ -25,7 +25,7 @@
 <td></td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Verrichtingcode</b><br/>SNOMED CT#66348005 Childbirth<br/>
+<b>Verrichtingcode</b><br/>(SNOMED CT) 66348005 Childbirth<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
@@ -34,7 +34,7 @@
 <td>Drachten</td>
 <td>Lisette van Cruijningen de Winter</td>
 </tr><tr><td></td><td colspan=5>
-<b>Verrichtingcode</b><br/>CBV#00090991 implantatie van totale knieprothese<br/>
+<b>Verrichtingcode</b><br/>(CBV) 00090991 implantatie van totale knieprothese<br/>
 <b>Lateraliteit</b><br/>Links<br/>
 </td></tr>
 <tr><td>+</td>
@@ -44,7 +44,7 @@
 <td>UMCG</td>
 <td>MedMij Orthopedie, MD</td>
 </tr><tr><td></td><td colspan=5>
-<b>Verrichtingcode</b><br/>SNOMED CT#46866001 Gesloten repositie supra- of transcondylaire femur fractuur.<br/>
+<b>Verrichtingcode</b><br/>(SNOMED CT) 46866001 Gesloten repositie supra- of transcondylaire femur fractuur...<br/>
 <b>Lateraliteit</b><br/>Rechts<br/>
 </td></tr>
 <tr><td>+</td>
@@ -54,7 +54,7 @@
 <td></td>
 <td>Boonstra<br/>VIPP NEXUS Ziekenhuis</td>
 </tr><tr><td></td><td colspan=5>
-<b>Verrichtingcode</b><br/>NZa#038663 Prothese implantatie kniegewricht.<br/>
+<b>Verrichtingcode</b><br/>(NZa) 038663 Prothese implantatie kniegewricht.<br/>
 </td></tr>
 <tr><td>+</td>
 <td>VG-Epic</td>

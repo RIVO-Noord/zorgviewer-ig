@@ -12,54 +12,6 @@
 <th>Stop type</th>
 </tr>
 <tr><td>+</td>
-<td>AORTA</td>
-<td></td>
-<td></td>
-<td>IBUPROFEN TABLET 600MG</td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><td>+</td>
-<td>AORTA</td>
-<td></td>
-<td></td>
-<td>IBUPROFEN TABLET 600MG</td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>3-3-2026</td>
-<td>14-3-2026</td>
-<td>LISINOPRIL TABLET 10MG</td>
-<td>1 x PER DAG 1 TABLET<br/>van 4-3-2026 tot 14-3-2026</td>
-<td>ORAAL</td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Afspraakdatum</b><br/>3-3-2026<br/>
-<b>Voorschrijver</b><br/>Pharmeon acceptatie zorgverlener<br/>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>2-6-2023</td>
-<td>1-9-2023</td>
-<td>HEPATITIS-A-VACCIN VAQTA JR WWSP 0,5ML (50E/ML)</td>
-<td>gebruik bekend<br/>Omschudden vlak voor gebruik<br/>In koelkast bewaren (niet in vries...</td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Afspraakdatum</b><br/>2-6-2023<br/>
-<b>Voorschrijver</b><br/>Pharmeon acceptatie zorgverlener<br/>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><td>+</td>
 <td>Chipsoft</td>
 <td>15-8-2016</td>
 <td>14-9-2016</td>
@@ -123,6 +75,54 @@
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>6-8-2025<br/>
 <b>Voorschrijver</b><br/>Jenneke van der Vecht<br/>
+<b>Type</b><br/>afspraak<br/>
+</td></tr>
+<tr><td>+</td>
+<td>AORTA</td>
+<td></td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Type</b><br/>afspraak<br/>
+</td></tr>
+<tr><td>+</td>
+<td>AORTA</td>
+<td></td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Type</b><br/>afspraak<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>3-3-2026</td>
+<td>14-3-2026</td>
+<td>LISINOPRIL TABLET 10MG</td>
+<td>1 x PER DAG 1 TABLET<br/>van 4-3-2026 tot 14-3-2026</td>
+<td>ORAAL</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>3-3-2026<br/>
+<b>Voorschrijver</b><br/>Pharmeon acceptatie zorgverlener<br/>
+<b>Type</b><br/>afspraak<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>2-6-2023</td>
+<td>1-9-2023</td>
+<td>HEPATITIS-A-VACCIN VAQTA JR WWSP 0,5ML (50E/ML)</td>
+<td>gebruik bekend<br/>Omschudden vlak voor gebruik<br/>In koelkast bewaren (niet in vries...</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>2-6-2023<br/>
+<b>Voorschrijver</b><br/>Pharmeon acceptatie zorgverlener<br/>
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><th>&gt;&lt;</th>

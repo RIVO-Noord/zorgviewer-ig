@@ -72,34 +72,6 @@
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td>+</td>
-<td>CGM</td>
-<td>8-11-2008</td>
-<td>INSECTENALLERGEEN</td>
-<td>misselijk en braken</td>
-<td>medication</td>
-<td></td>
-<td>severe</td>
-<td></td>
-<td>active</td>
-<td></td>
-<td>confirmed</td>
-</tr><tr><td></td><td colspan=11>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>2-6-1998</td>
-<td>PENICILLINES</td>
-<td>Exantheem</td>
-<td>medication</td>
-<td></td>
-<td>mild</td>
-<td></td>
-<td>inactive</td>
-<td></td>
-<td>confirmed</td>
-</tr><tr><td></td><td colspan=11>
-</td></tr>
-<tr><td>+</td>
 <td>EPS</td>
 <td>9-8-1977</td>
 <td>Allergy to substance</td>
@@ -125,6 +97,34 @@
 <td>undefined</td>
 <td></td>
 <td>undefined</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>8-11-2008</td>
+<td>INSECTENALLERGEEN</td>
+<td>misselijk en braken</td>
+<td>medication</td>
+<td></td>
+<td>severe</td>
+<td></td>
+<td>active</td>
+<td></td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>2-6-1998</td>
+<td>PENICILLINES</td>
+<td>Exantheem</td>
+<td>medication</td>
+<td></td>
+<td>mild</td>
+<td></td>
+<td>inactive</td>
+<td></td>
+<td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 </tbody>

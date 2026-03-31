@@ -13,17 +13,6 @@
 <th>Status(2)</th>
 </tr>
 <tr><td>+</td>
-<td>CGM</td>
-<td></td>
-<td></td>
-<td></td>
-<td>A20: Gesprek levenseinde/behandelwensen</td>
-<td>waarschuwing</td>
-<td></td>
-<td>active</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
 <td>Chipsoft-OTH</td>
 <td>15-4-2019</td>
 <td>BRMO: Bewezen dragerschap</td>
@@ -74,6 +63,17 @@
 <td>LET OP!!!!!<br/>Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5. ...</td>
 <td></td>
 <td>Waarschuwing</td>
+<td></td>
+<td>active</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td></td>
+<td></td>
+<td></td>
+<td>A20: Gesprek levenseinde/behandelwensen</td>
+<td>waarschuwing</td>
 <td></td>
 <td>active</td>
 </tr><tr><td></td><td colspan=8>
