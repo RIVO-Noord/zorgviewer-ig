@@ -23,7 +23,7 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 | Patient Birthdate | Patient.birthDate | *zie FHIR Path* | `patient.geboortedatum` | `client.birthdate` | *zie FHIR Path* | `client.birthdate` | *zie FHIR Path* | `19700101` |
 {: .grid .table-striped}
 
-[^1]: Omzetten naar SNOMED CT adhv `zorgverlener.functie.omschrijving` in [ConceptMap-sanday](ConceptMap-sanday.html)
+[^1]: Omzetten naar SNOMED CT adhv `zorgverlener.functie.omschrijving` in [ConceptMap-sanday-rolcode](ConceptMap-sanday-rolcode.html)
 
 [^2]: Opzoeken OID adhv `zorgverlener.praktijkURA`
 
