@@ -10,14 +10,7 @@
 </tr>
 <tr><td>+</td>
 <td>CGM</td>
-<td>2012-08-10</td>
-<td>Contactverslag van Notitie/memo op 10 augustus 2012 met Pharmeon acceptatie zorg...</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-</tr><tr><td></td><td colspan=4>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>2026-03-04</td>
+<td>4-3-2026</td>
 <td>Contactverslag van Consult op 4 maart 2026 met Pharmeon acceptatie zorgverlener</td>
 <td>Pharmeon acceptatie zorgverlener</td>
 </tr><tr><td></td><td colspan=4>
@@ -25,36 +18,14 @@
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
-<td>2012-11-15</td>
-<td>Contactverslag van Notitie/memo op 15 november 2012 met Pharmeon acceptatie zorg...</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-</tr><tr><td></td><td colspan=4>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>2011-04-20</td>
-<td>Contactverslag van Notitie/memo op 20 april 2011 met Pharmeon acceptatie zorgver...</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-</tr><tr><td></td><td colspan=4>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>2011-04-20</td>
-<td>Contactverslag van Consult op 20 april 2011 met Pharmeon acceptatie zorgverlener</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-</tr><tr><td></td><td colspan=4>
-<b>Regels</b><br/>(P) verwijzing ziekenhuis voor gips<br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>2026-03-04</td>
+<td>4-3-2026</td>
 <td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
 <td>Pharmeon acceptatie zorgverlener</td>
 </tr><tr><td></td><td colspan=4>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
-<td>2026-03-04</td>
+<td>4-3-2026</td>
 <td>Contactverslag van Herhaalrecept op 4 maart 2026 met Pharmeon acceptatie zorgver...</td>
 <td>Pharmeon acceptatie zorgverlener</td>
 </tr><tr><td></td><td colspan=4>
@@ -62,7 +33,50 @@
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
-<td>2023-06-03</td>
+<td>4-3-2026</td>
+<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>26-2-2026</td>
+<td>Contactverslag van Contact op 26 februari 2026 met Pharmeon acceptatie zorgverle...</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>6-8-2025</td>
+<td>Rughernia</td>
+<td>J van der Vecht</td>
+</tr><tr><td></td><td colspan=4>
+<b>Regels</b><br/>(E) HNP	<br/>(P) Nogmaals verwijzing Cesar<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>11-3-2025</td>
+<td>Contactverslag van Consult op 11 maart 2025 met Pharmeon acceptatie zorgverlener</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>3-6-2023</td>
 <td>Contactverslag van Herhaalrecept op 3 juni 2023 met Pharmeon acceptatie zorgverl...</td>
 <td>Pharmeon acceptatie zorgverlener</td>
 </tr><tr><td></td><td colspan=4>
@@ -70,46 +84,32 @@
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
-<td>2025-03-11</td>
-<td>Contactverslag van Consult op 11 maart 2025 met Pharmeon acceptatie zorgverlener</td>
+<td>15-11-2012</td>
+<td>Contactverslag van Notitie/memo op 15 november 2012 met Pharmeon acceptatie zorg...</td>
 <td>Pharmeon acceptatie zorgverlener</td>
 </tr><tr><td></td><td colspan=4>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
-<td>2026-03-04</td>
-<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
+<td>10-8-2012</td>
+<td>Contactverslag van Notitie/memo op 10 augustus 2012 met Pharmeon acceptatie zorg...</td>
 <td>Pharmeon acceptatie zorgverlener</td>
 </tr><tr><td></td><td colspan=4>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
-<td>2026-03-04</td>
-<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
+<td>20-4-2011</td>
+<td>Contactverslag van Notitie/memo op 20 april 2011 met Pharmeon acceptatie zorgver...</td>
 <td>Pharmeon acceptatie zorgverlener</td>
 </tr><tr><td></td><td colspan=4>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
-<td>2026-03-04</td>
-<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
+<td>20-4-2011</td>
+<td>Contactverslag van Consult op 20 april 2011 met Pharmeon acceptatie zorgverlener</td>
 <td>Pharmeon acceptatie zorgverlener</td>
 </tr><tr><td></td><td colspan=4>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>2026-02-26</td>
-<td>Contactverslag van Contact op 26 februari 2026 met Pharmeon acceptatie zorgverle...</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-</tr><tr><td></td><td colspan=4>
-</td></tr>
-<tr><td>+</td>
-<td>Sanday</td>
-<td>2025-08-06T22:00:00+00:00</td>
-<td>Rughernia</td>
-<td>J van der Vecht</td>
-</tr><tr><td></td><td colspan=4>
-<b>Regels</b><br/>(E) HNP	<br/>(P) Nogmaals verwijzing Cesar<br/>
+<b>Regels</b><br/>(P) verwijzing ziekenhuis voor gips<br/>
 </td></tr>
 </tbody>
 </table>

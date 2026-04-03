@@ -13,17 +13,6 @@
 <th>Type</th>
 </tr>
 <tr><td>+</td>
-<td>Chipsoft</td>
-<td>14-8-2012</td>
-<td>15-8-2012</td>
-<td>J.H.R Peters</td>
-<td>Onbekende functiecode.</td>
-<td></td>
-<td>finished</td>
-<td>inpatient</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
 <td>Epic</td>
 <td>27-3-2025</td>
 <td>27-3-2025</td>
@@ -43,6 +32,17 @@
 <td></td>
 <td>finished</td>
 <td>Klinisch</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Chipsoft</td>
+<td>14-8-2012</td>
+<td>15-8-2012</td>
+<td>J.H.R Peters</td>
+<td>Onbekende functiecode.</td>
+<td></td>
+<td>finished</td>
+<td>inpatient</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 </tbody>

@@ -213,12 +213,12 @@ function doExampleRows(select, md_ui) {
     const match2 = select.forEach.match("resourceType='(.+)'");
     if (match2) {
         const resourceType = match2[1];
+        const examples = [];
         fs.readdirSync(examplesPath).forEach(exampleFileName => {
             if (!exampleFileName.endsWith(".json")) return;
             const example_filePath = path.join(examplesPath, exampleFileName);
             const raw_example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
 
-            const examples = [];
             // If this is a Bundle split into individual resources
             if (raw_example.resourceType == "Bundle") {
                 // only keep if resourceType is queried resourceType
@@ -232,51 +232,74 @@ function doExampleRows(select, md_ui) {
                     var o = urlNoQ.indexOf('$');
                     if (o != -1) urlNoQ = urlNoQ.substring(0, o-1); // remove $ operation and last '/'
                     const queriedType = urlNoQ.substring(urlNoQ.lastIndexOf('/') + 1);
-                    raw_example.entry.filter(entry => entry.resource.resourceType == queriedType).forEach(entry => examples.push(entry.resource));
+                    raw_example.entry.filter(entry => entry.resource.resourceType == queriedType).forEach(entry => {
+                        entry.resource.exampleFileName = exampleFileName; // keep track of source file for reference in UI
+                        examples.push(entry.resource)
+                    });
                 }
                 else {
                     // cannot determine queriedType, so keep all
-                    raw_example.entry.forEach(entry => examples.push(entry.resource));
+                    raw_example.entry.forEach(entry => { 
+                        entry.resource.exampleFileName = exampleFileName; // keep track of source file for reference in UI
+                        examples.push(entry.resource) 
+                    });
                 }
             }
             else {
+                raw_example.exampleFileName = exampleFileName; // keep track of source file for reference in UI
                 examples.push(raw_example);
             }
+        });
 
-            examples.forEach(example => {
-                // generate if dosageInstruction but no text; only for MedicationRequest/Statements
-                if (example.dosageInstruction && !example.dosageInstruction[0].text) {
-                    // var text = dosageToString(example.dosageInstruction[0]);
-                    var text = dosageToStringGemini(example.dosageInstruction[0]);
-                    if (text.includes("undefined")) {
-                        console.error("ERROR: Some expected dosage parts undefined?", JSON.stringify(example.dosageInstruction));
-                    }
-                    example.dosageInstruction[0].text = text + ' &#9432;';
+        // first sort the examples on the date property descending
+        const getSortDate = (r) => {
+            return r.date || 
+                   r.effectiveDateTime || 
+                   r.authoredOn || 
+                   r.recordedDate || 
+                   r.onsetDateTime || 
+                   r.performedDateTime || 
+                   r.context?.period?.start ||
+                   r.period?.start ||
+                   r.indexed ||
+                   "";
+        };
+        const sortedExamples = examples.sort((a, b) => {
+            return getSortDate(b).localeCompare(getSortDate(a));
+        });
+        sortedExamples.forEach(example => {
+            // generate if dosageInstruction but no text; only for MedicationRequest/Statements
+            if (example.dosageInstruction && !example.dosageInstruction[0].text) {
+                // var text = dosageToString(example.dosageInstruction[0]);
+                var text = dosageToStringGemini(example.dosageInstruction[0]);
+                if (text.includes("undefined")) {
+                    console.error("ERROR: Some expected dosage parts undefined?", JSON.stringify(example.dosageInstruction));
                 }
+                example.dosageInstruction[0].text = text + ' &#9432;';
+            }
 
-                // only include in table when where clause applies
-                // examples are always resources, so ignore entry.resource prefix
-                const match3 = select.forEach.match(/\.where\((.+)\)(\.(\w+))?/);
-                if (match3) {
-                    let whereResult;
-                    try { whereResult = fhirpath.evaluate(example, match3[1]); }
-                    catch (err) { console.error ("ERROR: Error evaluating where clause", match3[1], err.message); }
+            // only include in table when where clause applies
+            // examples are always resources, so ignore entry.resource prefix
+            const match3 = select.forEach.match(/\.where\((.+)\)(\.(\w+))?/);
+            if (match3) {
+                let whereResult;
+                try { whereResult = fhirpath.evaluate(example, match3[1]); }
+                catch (err) { console.error ("ERROR: Error evaluating where clause", match3[1], err.message); }
 
-                    // does example match where clause?
-                    if (whereResult[0]) {
-                        // is there a further path to follow?
-                        if (match3[3]) {
-                            const columnResults = fhirpath.evaluate(example, match3[3], null, fhirpath_stu3_model);
-                            columnResults.forEach(columnResult => {
-                                doExampleRow(select, columnResult, exampleFileName, md_ui);
-                            });
-                        }
-                        else {
-                            doExampleRow(select, example, exampleFileName, md_ui);
-                        }
+                // does example match where clause?
+                if (whereResult[0]) {
+                    // is there a further path to follow?
+                    if (match3[3]) {
+                        const columnResults = fhirpath.evaluate(example, match3[3], null, fhirpath_stu3_model);
+                        columnResults.forEach(columnResult => {
+                            doExampleRow(select, columnResult, example.exampleFileName, md_ui);
+                        });
+                    }
+                    else {
+                        doExampleRow(select, example, example.exampleFileName, md_ui);
                     }
                 }
-            });
+            }
         });
     }
 }

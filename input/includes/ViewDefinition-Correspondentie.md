@@ -70,7 +70,7 @@
 <tr>
 <td>Datum</td>
 <td><samp>date</samp></td>
-<td><code>string</code></td>
+<td><code>dateTime</code></td>
 <td>SOEPVerslagDatumTijd</td>
 <td></td>
 </tr>

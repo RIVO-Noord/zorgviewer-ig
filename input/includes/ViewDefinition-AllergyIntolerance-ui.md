@@ -16,6 +16,20 @@
 <th>(VStatus)</th>
 </tr>
 <tr><td>+</td>
+<td>Sanday</td>
+<td>6-8-2025</td>
+<td>HUISSTOFMIJTENALLERGEEN</td>
+<td>opmerking bij overgevoeligheid</td>
+<td>medication</td>
+<td>low</td>
+<td></td>
+<td></td>
+<td>active</td>
+<td></td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft</td>
 <td>12-11-2019</td>
 <td>ALLE NSAID'S (INCL. SALICYLATEN)</td>
@@ -27,20 +41,6 @@
 <td>active</td>
 <td>Actief</td>
 <td>unconfirmed</td>
-</tr><tr><td></td><td colspan=11>
-</td></tr>
-<tr><td>+</td>
-<td>Epic</td>
-<td>3-12-2017</td>
-<td>PINDA</td>
-<td></td>
-<td>food</td>
-<td></td>
-<td>moderate</td>
-<td>Erythrodermie</td>
-<td>active</td>
-<td></td>
-<td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td>+</td>
@@ -58,15 +58,29 @@
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday</td>
-<td>6-8-2025</td>
-<td>HUISSTOFMIJTENALLERGEEN</td>
-<td>opmerking bij overgevoeligheid</td>
+<td>CGM</td>
+<td>8-11-2008</td>
+<td>INSECTENALLERGEEN</td>
+<td>misselijk en braken</td>
 <td>medication</td>
-<td>low</td>
 <td></td>
+<td>severe</td>
 <td></td>
 <td>active</td>
+<td></td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>2-6-1998</td>
+<td>PENICILLINES</td>
+<td>Exantheem</td>
+<td>medication</td>
+<td></td>
+<td>mild</td>
+<td></td>
+<td>inactive</td>
 <td></td>
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
@@ -100,29 +114,15 @@
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td>+</td>
-<td>CGM</td>
-<td>8-11-2008</td>
-<td>INSECTENALLERGEEN</td>
-<td>misselijk en braken</td>
-<td>medication</td>
+<td>Epic</td>
+<td>3-12-2017</td>
+<td>PINDA</td>
 <td></td>
-<td>severe</td>
+<td>food</td>
 <td></td>
+<td>moderate</td>
+<td>Erythrodermie</td>
 <td>active</td>
-<td></td>
-<td>confirmed</td>
-</tr><tr><td></td><td colspan=11>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>2-6-1998</td>
-<td>PENICILLINES</td>
-<td>Exantheem</td>
-<td>medication</td>
-<td></td>
-<td>mild</td>
-<td></td>
-<td>inactive</td>
 <td></td>
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
