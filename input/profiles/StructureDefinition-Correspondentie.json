@@ -1,0 +1,83 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Correspondentie",
+    "name": "Correspondentie",
+    "title": "Correspondentie en SOEP verslagen",
+    "status": "active",
+    "experimental": false,
+    "description": "Correspondentie abstracte samenstelling voor het documenteren van de combinatie van DocumentReference en Composition (SOEP Verslagen).",
+    "kind": "resource",
+    "abstract": true,
+    "type": "Bundle",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+    "derivation": "constraint",
+    "differential": {
+        "element":  [
+            {
+                "id": "Bundle.type",
+                "path": "Bundle.type",
+                "short": "searchset",
+                "fixedCode": "searchset"
+            },
+            {
+                "id": "Bundle.entry",
+                "path": "Bundle.entry",
+                "slicing": {
+                    "discriminator":  [
+                        {
+                            "type": "type",
+                            "path": "resource"
+                        }
+                    ],
+                    "rules": "open"
+                }
+            },
+            {
+                "id": "Bundle.entry:DocumentReference",
+                "path": "Bundle.entry",
+                "sliceName": "DocumentReference",
+                "short": "DocumentReference"
+            },
+            {
+                "id": "Bundle.entry:DocumentReference.fullUrl",
+                "path": "Bundle.entry.fullUrl",
+                "min": 1
+            },
+            {
+                "id": "Bundle.entry:DocumentReference.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Correspondentie",
+                "min": 1,
+                "type":  [
+                    {
+                        "code": "DocumentReference",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DocumentReference"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:EncounterReport",
+                "path": "Bundle.entry",
+                "sliceName": "EncounterReport",
+                "short": "EncounterReport"
+            },
+            {
+                "id": "Bundle.entry:EncounterReport.fullUrl",
+                "path": "Bundle.entry.fullUrl",
+                "min": 1
+            },
+            {
+                "id": "Bundle.entry:EncounterReport.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "SOEPVerslag",
+                "min": 1,
+                "type":  [
+                    {
+                        "code": "Composition",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/EncounterReport"
+                    }
+                ]
+            }
+        ]
+    }
+}
