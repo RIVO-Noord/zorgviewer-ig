@@ -13,6 +13,50 @@
 <th>Status</th>
 </tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>kalium</td>
+<td>60</td>
+<td></td>
+<td>3.5 .. 5</td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>magnesium</td>
+<td>0.2</td>
+<td></td>
+<td> .. </td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>chloride</td>
+<td>138</td>
+<td></td>
+<td> .. </td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>natrium</td>
+<td>138 mmol/L</td>
+<td></td>
+<td>135 .. 145</td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
 <td>Sanday</td>
 <td>27-8-2025</td>
 <td>vitamine D</td>
