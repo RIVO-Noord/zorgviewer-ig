@@ -91,7 +91,7 @@
               ]
             }
           ],
-          "forEach": "entry.resource.where(resourceType='Condition')"
+          "forEach": "entry.resource.where(resourceType='Condition' and code.coding.display.exists())"
         },
         {
           "column": [

@@ -64,33 +64,6 @@
 <b>Diagnose</b><br/>(SNOMED CT) 203082005 Fibromyalgia (disorder)<br/>
 </td></tr>
 <tr><td>+</td>
-<td>CGM</td>
-<td>15-11-2012</td>
-<td></td>
-<td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) R02 <br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>10-8-2012</td>
-<td></td>
-<td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) K07 <br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>20-4-2011</td>
-<td></td>
-<td>Niet actueel</td>
-<td>inactive</td>
-</tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) L72 <br/>
-</td></tr>
-<tr><td>+</td>
 <td>EPS</td>
 <td>29-1-2002</td>
 <td>Chronic sinusitis</td>
@@ -118,34 +91,6 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(SNOMED CT) 31641000146105 fractuur van pols<br/>
 <b>Toelichting</b><br/>Gevallen op kunstijsbaan<br/>
-</td></tr>
-<tr><td>+</td>
-<td>Epic-note</td>
-<td>23-2-2023</td>
-<td>posttraumatische stressstoornis (incl. de posttraumatische-stressstoornis bij ki...</td>
-<td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICD-10) F43.1 <br/>
-<b>Toelichting</b><br/>2022-02: ziekte van Crohn<br/>2021-07: Complicatie ANPY infectie lokaal<br/>2021-03: z...<br/>
-</td></tr>
-<tr><td>+</td>
-<td>Epic</td>
-<td>16-8-2012</td>
-<td>fractuur van onderste extremiteit</td>
-<td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICD-10) T12.0 <br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td></td>
-<td></td>
-<td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) A20 <br/>
 </td></tr>
 </tbody>
 </table>
