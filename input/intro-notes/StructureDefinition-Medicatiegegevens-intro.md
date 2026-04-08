@@ -19,10 +19,18 @@ Er is geen request waarmee je beide resources in 1 keer kan opvragen. Je moet hi
 
 1. Zie [MedicationRequest](StructureDefinition-MedicationRequest.html#request) en [MedicationStatement](StructureDefinition-MedicationStatement.html#request)
 
-1. **[LSP](https://aorta-on-fhir.public.vzvz.nl/aorta-on-fhir-specificaties/Working-version/interfaces-resource-broker-za#get-aorta-data):** Opvragen (search) medicatiegegevens
+1. **[LSP](https://aorta-on-fhir.public.vzvz.nl/aorta-on-fhir-specificaties/Working-version/interfaces-resource-broker-vnc#get-aorta-data):** Opvragen (search) medicatiegegevens
 
     `GET <ontsluiten-bronsysteem-base>/$get-aorta-data?context=MEDGEG`
 
      <blockquote class="stu-note" markdown="1">
     N.B. In de response Bundle zitten naast MedicationRequest en MedicationStatement ook MedicationDispense (Toedieningsafspraak of MedicatieToediening2).
+
+    N.B. De bovenstaande paden zijn relatief aan de Bundle in het element "result"
+    ```json
+    {
+    "format": "",
+    "result": ""
+    }
+    ```
     </blockquote>
