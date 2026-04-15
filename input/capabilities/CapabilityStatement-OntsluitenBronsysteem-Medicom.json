@@ -150,7 +150,21 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read"
+              "code": "search-type"
+            }
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/Patient-identifier",
+              "type": "token",
+              "documentation": "The server **SHALL** support search based on BSN, system=http://fhir.nl/fhir/NamingSystem/bsn"
             }
           ]
         },
