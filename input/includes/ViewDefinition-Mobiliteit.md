@@ -16,31 +16,38 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
-<td>Begin</td>
-<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-DateFirstEncounter').valueDateTime | period.start</samp></td>
+<td>Datum</td>
+<td><samp>effectiveDateTime</samp></td>
 <td><code>dateTime</code></td>
-<td>BeginDatumTijd</td>
+<td>ObservationDateTime</td>
 <td></td>
 </tr>
 <tr>
-<td>Eind</td>
-<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-DateLastEncounter').valueDateTime | period.end</samp></td>
-<td><code>dateTime</code></td>
-<td>EindDatumTijd</td>
-<td></td>
-</tr>
-<tr>
-<td>Probleem</td>
-<td><samp>diagnosis.condition.display</samp></td>
+<td>Lopen</td>
+<td><samp>component.where(code.coding.exists(code='282097004')).select(value.coding.display | value.text)</samp></td>
 <td><code>string</code></td>
-<td>FocusZorgEpisode::Probleem/ ProbleemNaam</td>
+<td>Walking</td>
 <td></td>
 </tr>
 <tr>
-<td>Concern</td>
-<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString</samp></td>
+<td>Rolstoelgebruik</td>
+<td><samp>component.where(code.coding.exists(code='16581000146103')).select(value.coding.display | value.text)</samp></td>
 <td><code>string</code></td>
-<td>ZorgEpisodeNaam</td>
+<td>WheelchairUse</td>
+<td></td>
+</tr>
+<tr>
+<td>Hulpmiddelen</td>
+<td><samp>component.where(code.coding.exists(code='183135000')).select(value.coding.display | value.text)</samp></td>
+<td><code>string</code></td>
+<td>MobilityAids</td>
+<td></td>
+</tr>
+<tr>
+<td>Toelichting</td>
+<td><samp>comment | note[0].text</samp></td>
+<td><code>string</code></td>
+<td>Comment</td>
 <td></td>
 </tr>
 </tbody>

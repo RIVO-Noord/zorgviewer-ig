@@ -59,7 +59,7 @@ Path: `input/images/ViewDefinition-<ZibName>.json`
           "tag": [ { "name": "Zib element", "value": "<ZibElement>" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='<ResourceName>' and status!='entered-in-error')"
+      "forEach": "entry.resource.where(resourceType='<ResourceName>')"
     }
   ]
 }
@@ -71,6 +71,9 @@ Path: `input/intro-notes/StructureDefinition-<ZibName>-intro.md`
 
 ```markdown
 {% include profile-note.md %}
+<div class="dragon" markdown="1">
+**De specificatie op deze pagina is gegenereerd en work-in-progress.**
+</div>
 
 ### Zorginformatiebouwsteen
 

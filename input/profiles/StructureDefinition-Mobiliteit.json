@@ -1,0 +1,47 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Mobiliteit",
+    "name": "Mobiliteit",
+    "title": "Mobiliteit",
+    "status": "active",
+    "description": "Mobiliteit (Observation)",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition": "http://nictiz.nl/fhir/StructureDefinition/zib-Mobility",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Observation.status",
+                "path": "Observation.status",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.code",
+                "path": "Observation.code",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.effective[x]",
+                "path": "Observation.effective[x]",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component",
+                "path": "Observation.component",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component.code",
+                "path": "Observation.component.code",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component.value[x]",
+                "path": "Observation.component.value[x]",
+                "mustSupport": true
+            }
+        ]
+    }
+}

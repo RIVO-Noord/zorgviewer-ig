@@ -18,3 +18,5 @@ Genereer artifacts voor de zib-Mobiliteit profile
 TODO
 - Laat zibs.nl en simplifier gebruiken voor definities. Zibs 2017 of 2020.
 - Laat alleen die files maken en kijk niet verder. Wil nu ook gegenereerde includes maken.
+- Gebruik alleen de codes in de zib definities.
+- De query code parameters moeten in de ViewDefinition where worden meegenomen.
