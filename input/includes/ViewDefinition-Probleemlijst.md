@@ -91,6 +91,13 @@
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
+<td>+Concern</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString</samp></td>
+<td><code>string</code></td>
+<td>ZorgEpisodeNaam</td>
+<td></td>
+</tr>
+<tr style="background-color:#b4c7e7">
 <td>+Diagnose</td>
 <td><samp>diagnosis.condition.resolve().select('(' + code.coding[0].select(system.lookup('CodeSystems')[0].display + ') ' + code + ' ' + iif(exists(display),display,'')))</samp></td>
 <td><code>string</code></td>

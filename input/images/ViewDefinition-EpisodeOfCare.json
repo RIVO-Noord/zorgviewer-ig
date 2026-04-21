@@ -28,18 +28,18 @@
           "tag": [ { "name": "Zib element", "value": "EindDatumTijd" } ]
         },
         {
-          "path": "type.text | type.coding[0].display",
-          "name": "Label",
-          "description": "",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "ZorgEpisodeNaam" } ]
-        },
-        {
           "path": "diagnosis.condition.display",
           "name": "Probleem",
           "description": "",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "Probleem" } ]
+          "tag": [ { "name": "Zib element", "value": "FocusZorgEpisode::Probleem/ ProbleemNaam" } ]
+        },
+        {
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString",
+          "name": "+Concern",
+          "description": "",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "ZorgEpisodeNaam" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='EpisodeOfCare')"

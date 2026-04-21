@@ -30,17 +30,18 @@
 <td></td>
 </tr>
 <tr>
-<td>Label</td>
-<td><samp>type.text | type.coding[0].display</samp></td>
-<td><code>string</code></td>
-<td>ZorgEpisodeNaam</td>
-<td></td>
-</tr>
-<tr>
 <td>Probleem</td>
 <td><samp>diagnosis.condition.display</samp></td>
 <td><code>string</code></td>
-<td>Probleem</td>
+<td>FocusZorgEpisode::Probleem/ ProbleemNaam</td>
+<td></td>
+</tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#b4c7e7">
+<td>+Concern</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString</samp></td>
+<td><code>string</code></td>
+<td>ZorgEpisodeNaam</td>
 <td></td>
 </tr>
 </tbody>

@@ -100,40 +100,76 @@
 <th>(regelkleur)</th>
 </tr>
 <tr><td>+</td>
-<td>Sanday-US315638</td>
-<td>21-8-2025</td>
+<td>Sanday</td>
+<td></td>
+<td>Acute tonsillitis/peritonsillair abces</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Concern</b><br/>Episode zonder contacten<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td></td>
+<td>Furunkel/abces neus</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Concern</b><br/>Episode met twee contacten <br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td></td>
+<td>Moeheid/zwakte</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Concern</b><br/>Vermoeidheid<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td></td>
+<td>Influenza [ex. R81]</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Concern</b><br/>Influenze vaccinatie<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td></td>
 <td>Lokale infectie vinger/teen/paronychia</td>
 <td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) S09 Lokale infectie vinger/teen/paronychia<br/>
+<b>Concern</b><br/>Heropende wond poging 2<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday-US315638</td>
-<td>7-8-2025</td>
+<td>Sanday</td>
+<td></td>
 <td>Hernia inguinalis</td>
 <td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) D89 Hernia inguinalis<br/>
+<b>Concern</b><br/>Rughernia<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday-US315638</td>
-<td>1-4-2025</td>
+<td>Sanday</td>
+<td></td>
 <td>Keelpijn</td>
 <td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) R21.01 Keelpijn<br/>
+<b>Concern</b><br/>Keelpijn<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday-US315638</td>
-<td>13-2-2025</td>
+<td>Sanday</td>
+<td></td>
 <td>Maagpijn</td>
 <td>Niet actueel</td>
 <td>finished</td>
 </tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) D02 Maagpijn<br/>
+<b>Concern</b><br/>Maagpijn<br/>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
