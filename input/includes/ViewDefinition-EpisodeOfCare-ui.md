@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>EpisodeOfCare</b>
+<b>Zorgepisodes</b>
 <table class="grid">
 <tbody>
 <tr><th>&gt;&lt;</th>
