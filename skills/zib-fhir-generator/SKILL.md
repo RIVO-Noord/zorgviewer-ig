@@ -9,6 +9,14 @@ description: Generates ViewDefinition, StructureDefinition (must-support), and m
 
 This skill automates the creation of Zorgviewer-specific FHIR artifacts based on Nictiz ZIB profiles. It ensures consistency across ViewDefinitions, StructureDefinitions with Must-Support flags, and documentation intros.
 
+## Constraints
+
+* Only search for definitions on zibs.nl and simplifier.net.
+* Generate only the templated files for the specified ZIB, without creating or changing additional includes or unrelated artifacts.
+* Use only the codes defined in the ZIB profiles for mapping.
+* Ensure that query code parameters are included in the ViewDefinition's `where` clause for accurate data retrieval.
+* Retrieve example instances from simplifier.net and save them in `input/examples/<ZibName>-Nictiz.json` for reference.
+
 ## Workflow
 
 When given a ZIB FHIR profile (e.g., `http://nictiz.nl/fhir/StructureDefinition/zib-Alert`):

@@ -64,9 +64,32 @@
         "id": "group-zs",
         "name": "Zorgviewer Services Content",
         "description": "Zie [Zorgviewer Services pagina](zorgviewer-services.html) voor details."
+      },
+      {
+        "id": "group-sam",
+        "name": "Samenstellingen",
+        "description": "Samenstelingen van zibs."
       }
     ],
     "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/Correspondentie"
+        },
+        "groupingId": "group-sam"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Medicatiegegevens"
+        },
+        "groupingId": "group-sam"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Probleemlijst"
+        },
+        "groupingId": "group-sam"
+      },
       {
         "reference": {
           "reference": "Parameters/exp-params"
