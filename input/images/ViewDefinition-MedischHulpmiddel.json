@@ -1,0 +1,57 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-MedischHulpmiddel",
+  "title": "Medische Hulpmiddelen",
+  "profile": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "device.display",
+          "name": "Hulpmiddel",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Product" } ]
+        },
+        {
+          "path": "whenUsed.start",
+          "name": "Begin datum",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "BeginDatum" } ]
+        },
+        {
+          "path": "bodySite.text | bodySite.coding[0].display",
+          "name": "Anatomische locatie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "AnatomischeLocatie" } ]
+        },
+        {
+          "path": "bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.coding[0].display",
+          "name": "+Lateraliteit",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Lateraliteit" } ]
+        },
+        {
+          "path": "indication[0].display | indication[0].text",
+          "name": "Indicatie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Indicatie" } ]
+        },
+        {
+          "path": "note[0].text",
+          "name": "Toelichting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='DeviceUseStatement')"
+    }
+  ]
+}

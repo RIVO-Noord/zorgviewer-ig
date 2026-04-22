@@ -12,6 +12,7 @@ This skill automates the creation of Zorgviewer-specific FHIR artifacts based on
 ## Constraints
 
 * Only search for definitions on zibs.nl and simplifier.net.
+* Use FHIR STU3 as the base version for all generated artifacts and FHIR R4 when a STU3 version is not available.
 * Generate only the templated files for the specified ZIB, without creating or changing additional includes or unrelated artifacts.
 * Use only the codes defined in the ZIB profiles for mapping.
 * Ensure that query code parameters are included in the ViewDefinition's `where` clause for accurate data retrieval.

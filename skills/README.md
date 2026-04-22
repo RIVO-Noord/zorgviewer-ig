@@ -17,13 +17,13 @@ Genereer artifacts voor de zib-Mobiliteit profile
 ---
 ## Constraints
 - Laat zibs.nl en simplifier gebruiken voor definities.
+- Gebruik Zibs 2017 STU3 of als STU3 niet bestaat dan zibs 2020 R4.
 - Laat alleen de templated files maken.
 - Gebruik alleen de codes in de zib definities.
 - De query code parameters moeten in de ViewDefinition where worden meegenomen.
 - Also get the example from simplifier and add it in `input/examples/<ZibName>-Nictiz.json`
 
 ## TODO
-- Constrain op Zibs 2017 STU3 of 2020 R4.
 - Niet door script gegenereerde includes maken (run updateviewmd.js)
 - Hij update zelf wel zorgviewer-ig.js met examples!
 - Markeer alleen must support elementen die worden gebruikt in de gegevensherkomst.

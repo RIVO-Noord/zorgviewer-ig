@@ -1,0 +1,123 @@
+{
+  "resourceType": "Bundle",
+  "id": "MedischHulpmiddel-Nictiz",
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://example.org/DeviceUseStatement?patient=example-patient"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://example.org/DeviceUseStatement/example-medicaldevice-stent",
+      "resource": {
+        "resourceType": "DeviceUseStatement",
+        "id": "example-medicaldevice-stent",
+        "meta": {
+          "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Organization",
+            "valueReference": {
+              "reference": "Organization/example-hospital",
+              "display": "General Hospital"
+            }
+          },
+          {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Practitioner",
+            "valueReference": {
+              "reference": "Practitioner/example-surgeon",
+              "display": "Dr. Smith"
+            }
+          }
+        ],
+        "status": "active",
+        "subject": {
+          "reference": "Patient/example-patient",
+          "display": "Hendrik Hartman"
+        },
+        "whenUsed": {
+          "start": "2021-09-01"
+        },
+        "device": {
+          "reference": "Device/example-stent-product",
+          "display": "Cardiac Stent - Model X123"
+        },
+        "bodySite": {
+          "extension": [
+            {
+              "url": "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "24028007",
+                    "display": "Right"
+                  }
+                ]
+              }
+            }
+          ],
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "53085002",
+              "display": "Right coronary artery"
+            }
+          ],
+          "text": "Right coronary artery"
+        },
+        "indication": [
+          {
+            "display": "Atherosclerose"
+          }
+        ],
+        "note": [
+          {
+            "text": "Implanted during angioplasty procedure."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Device/example-stent-product",
+      "resource": {
+        "resourceType": "Device",
+        "id": "example-stent-product",
+        "meta": {
+          "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDeviceProduct"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.840.114350.1.13.1",
+            "value": "STENT-998877"
+          }
+        ],
+        "udi": {
+          "deviceIdentifier": "00822409025305"
+        },
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "413712001",
+              "display": "Coronary artery stent"
+            }
+          ],
+          "text": "Cardiac Stent"
+        },
+        "lotNumber": "LOT12345",
+        "manufacturer": "MedTech Corp",
+        "modelNumber": "X123",
+        "expirationDate": "2030-01-01"
+      }
+    }
+  ]
+}
