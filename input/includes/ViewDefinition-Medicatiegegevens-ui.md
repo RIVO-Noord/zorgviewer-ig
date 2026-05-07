@@ -169,5 +169,27 @@
 <b>Registratiedatum</b><br/>26-11-2022<br/>
 <b>Type</b><br/>huidig<br/>
 </td></tr>
+<tr><th>&gt;&lt;</th>
+<th>Bron</th>
+<th>Start</th>
+<th>Eind</th>
+<th>Medicatie</th>
+<th>Dosering & instructies</th>
+<th>Toedieningsweg</th>
+<th>Stop type</th>
+</tr>
+<tr><td>+</td>
+<td>MP9</td>
+<td></td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td>1 stuk 1x elke 1 dag &#9432;</td>
+<td>oraal</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>11-11-2022<br/>
+<b>Uitvoerder</b><br/>Healthcare provider (organization), Apotheek de Gulle Gaper<br/>
+<b>Type</b><br/>toedieningsafspraak<br/>
+</td></tr>
 </tbody>
 </table>
