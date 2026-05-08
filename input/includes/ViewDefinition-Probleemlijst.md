@@ -8,7 +8,7 @@
 <th>Toelichting of regels</th>
 </thead>
 <tbody>
-<tr><td colspan=5><i>Condition</i></td></tr>
+<tr style="background-color:#000000; color:white"><td colspan=5><i>Condition</i></td></tr>
 <tr>
 <td>Bron</td>
 <td><samp>meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri</samp></td>
@@ -60,7 +60,7 @@
 <td>ProbleemStatus</td>
 <td>Actueel (<code>active,recurrence</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive,remission,resolved</code>) = grijze rijen</td>
 </tr>
-<tr><td colspan=5><i>EpisodeOfCare</i></td></tr>
+<tr style="background-color:#000000; color:white"><td colspan=5><i>EpisodeOfCare</i></td></tr>
 <tr>
 <td>Bron</td>
 <td><samp>meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri</samp></td>

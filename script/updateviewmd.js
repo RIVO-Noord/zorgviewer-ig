@@ -140,7 +140,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
                 const match = union.forEach.match("resourceType='(.+)'");
                 if (match) {
                     const resourceType = match[1];
-                    md_def.push(`<tr><td colspan=5><i>${resourceType}</i></td></tr>`);
+                    md_def.push(`<tr style="background-color:#000000; color:white"><td colspan=5><i>${resourceType}</i></td></tr>`);
                 }
                 doColumnDefs(union.column, md_def);
                 extractExampleRows(union, allExtractedRows);
