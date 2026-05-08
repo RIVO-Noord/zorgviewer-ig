@@ -44,6 +44,20 @@
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td>+</td>
+<td>Epic</td>
+<td>3-12-2017</td>
+<td>PINDA</td>
+<td></td>
+<td>food</td>
+<td></td>
+<td>moderate</td>
+<td>Erythrodermie</td>
+<td>active</td>
+<td></td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
 <td>Nexus</td>
 <td>8-11-2008</td>
 <td>Bijengif</td>
@@ -94,9 +108,9 @@
 <td></td>
 <td></td>
 <td></td>
-<td>undefined</td>
 <td></td>
-<td>undefined</td>
+<td></td>
+<td></td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td>+</td>
@@ -108,23 +122,9 @@
 <td></td>
 <td>severe</td>
 <td></td>
-<td>undefined</td>
 <td></td>
-<td>undefined</td>
-</tr><tr><td></td><td colspan=11>
-</td></tr>
-<tr><td>+</td>
-<td>Epic</td>
-<td>3-12-2017</td>
-<td>PINDA</td>
 <td></td>
-<td>food</td>
 <td></td>
-<td>moderate</td>
-<td>Erythrodermie</td>
-<td>active</td>
-<td></td>
-<td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 </tbody>

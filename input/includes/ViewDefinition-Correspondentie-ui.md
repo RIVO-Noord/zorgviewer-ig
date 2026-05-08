@@ -13,12 +13,84 @@
 </tr>
 <tr><td>+</td>
 <td>CGM</td>
+<td>4-3-2026</td>
+<td>Contactverslag van Consult op 4 maart 2026 met Pharmeon acceptatie zorgverlener</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Huisarts</td>
+<td></td>
+<td>67781-5</td>
+</tr><tr><td></td><td colspan=7>
+<b>Regels</b><br/>(P) Dit is een p - regel die wel zichtbaar wordt binnen H-EPD<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Huisarts</td>
+<td></td>
+<td>67781-5</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>Contactverslag van Herhaalrecept op 4 maart 2026 met Pharmeon acceptatie zorgver...</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Huisarts</td>
+<td></td>
+<td>67781-5</td>
+</tr><tr><td></td><td colspan=7>
+<b>Regels</b><br/>(P) LISINOPRIL TABLET 10MG / 10,00 ST / 1D1T; VAN 4-3-2026 TOT 14-3-2026<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Huisarts</td>
+<td></td>
+<td>67781-5</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Huisarts</td>
+<td></td>
+<td>67781-5</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Huisarts</td>
+<td></td>
+<td>67781-5</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
 <td>3-3-2026</td>
 <td>Tipp: Test zorgviewer - Verwijsbrief, Notitie/memo op 4 maart 2026 met Pharmeon ...</td>
 <td>Pharmeon acceptatie zorgverlener</td>
 <td></td>
 <td>application/pdf</td>
 <td>Verwijsbrief</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>26-2-2026</td>
+<td>Contactverslag van Contact op 26 februari 2026 met Pharmeon acceptatie zorgverle...</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Huisarts</td>
+<td></td>
+<td>67781-5</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
 <tr><td>+</td>
@@ -70,6 +142,17 @@
 <td>application/pdf</td>
 <td>51852-2</td>
 </tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>6-8-2025</td>
+<td>Rughernia</td>
+<td>J van der Vecht</td>
+<td>Huisarts</td>
+<td></td>
+<td>67781-5</td>
+</tr><tr><td></td><td colspan=7>
+<b>Regels</b><br/>(E) HNP	<br/>(P) Nogmaals verwijzing Cesar<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
@@ -162,6 +245,16 @@
 </tr><tr><td></td><td colspan=7>
 </td></tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>11-3-2025</td>
+<td>Contactverslag van Consult op 11 maart 2025 met Pharmeon acceptatie zorgverlener</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Huisarts</td>
+<td></td>
+<td>67781-5</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft</td>
 <td>18-12-2024</td>
 <td>Radiologie</td>
@@ -242,6 +335,17 @@
 </tr><tr><td></td><td colspan=7>
 </td></tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>3-6-2023</td>
+<td>Contactverslag van Herhaalrecept op 3 juni 2023 met Pharmeon acceptatie zorgverl...</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Huisarts</td>
+<td></td>
+<td>67781-5</td>
+</tr><tr><td></td><td colspan=7>
+<b>Regels</b><br/>(P) HEPATITIS-A-VACCIN VAQTA JR WWSP 0,5ML (50E/ML) / 1,00 ST / GB<br/>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft</td>
 <td>21-8-2022</td>
 <td>Letter</td>
@@ -280,119 +384,6 @@
 <td>application/pdf</td>
 <td>Patiëntenbrief</td>
 </tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><th>&gt;&lt;</th>
-<th>Bron</th>
-<th>Datum</th>
-<th>Beschrijving</th>
-<th>Auteur</th>
-<th>Specialisme</th>
-<th>(MimeType)</th>
-<th>(Type)</th>
-</tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>Contactverslag van Consult op 4 maart 2026 met Pharmeon acceptatie zorgverlener</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisarts</td>
-<td></td>
-<td>67781-5</td>
-</tr><tr><td></td><td colspan=7>
-<b>Regels</b><br/>(P) Dit is een p - regel die wel zichtbaar wordt binnen H-EPD<br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisarts</td>
-<td></td>
-<td>67781-5</td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>Contactverslag van Herhaalrecept op 4 maart 2026 met Pharmeon acceptatie zorgver...</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisarts</td>
-<td></td>
-<td>67781-5</td>
-</tr><tr><td></td><td colspan=7>
-<b>Regels</b><br/>(P) LISINOPRIL TABLET 10MG / 10,00 ST / 1D1T; VAN 4-3-2026 TOT 14-3-2026<br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisarts</td>
-<td></td>
-<td>67781-5</td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisarts</td>
-<td></td>
-<td>67781-5</td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>Contactverslag van Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverl...</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisarts</td>
-<td></td>
-<td>67781-5</td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>26-2-2026</td>
-<td>Contactverslag van Contact op 26 februari 2026 met Pharmeon acceptatie zorgverle...</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisarts</td>
-<td></td>
-<td>67781-5</td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td>+</td>
-<td>Sanday</td>
-<td>6-8-2025</td>
-<td>Rughernia</td>
-<td>J van der Vecht</td>
-<td>Huisarts</td>
-<td></td>
-<td>67781-5</td>
-</tr><tr><td></td><td colspan=7>
-<b>Regels</b><br/>(E) HNP	<br/>(P) Nogmaals verwijzing Cesar<br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>11-3-2025</td>
-<td>Contactverslag van Consult op 11 maart 2025 met Pharmeon acceptatie zorgverlener</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisarts</td>
-<td></td>
-<td>67781-5</td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>3-6-2023</td>
-<td>Contactverslag van Herhaalrecept op 3 juni 2023 met Pharmeon acceptatie zorgverl...</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisarts</td>
-<td></td>
-<td>67781-5</td>
-</tr><tr><td></td><td colspan=7>
-<b>Regels</b><br/>(P) HEPATITIS-A-VACCIN VAQTA JR WWSP 0,5ML (50E/ML) / 1,00 ST / GB<br/>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>

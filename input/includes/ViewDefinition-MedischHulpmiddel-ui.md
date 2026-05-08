@@ -39,6 +39,16 @@
 <b>Lateraliteit</b><br/>Right<br/>
 </td></tr>
 <tr><td>+</td>
+<td>Epic</td>
+<td>GMRS TIBIAL INSERT SMALL 10MM - S1148130801</td>
+<td>5-6-2012</td>
+<td>Knie</td>
+<td></td>
+<td>Implantant, Gen 2 Tibia Insert 5 / 6-9mm</td>
+</tr><tr><td></td><td colspan=6>
+<b>Lateraliteit</b><br/>Links<br/>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft</td>
 <td>Onbekend serienummer.</td>
 <td>4-6-2012</td>
@@ -47,15 +57,6 @@
 <td>Implantant, Gen 2 Tibia Insert 5/6-9mm</td>
 </tr><tr><td></td><td colspan=6>
 <b>Lateraliteit</b><br/>Left<br/>
-</td></tr>
-<tr><td>+</td>
-<td>Chipsoft</td>
-<td>Onbekend serienummer.</td>
-<td>31-12-2006</td>
-<td></td>
-<td></td>
-<td>Presbyacusis. Apparaat niet zichtbaar (diep in de gehooringang)</td>
-</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -68,16 +69,6 @@
 <b>Lateraliteit</b><br/>Rechts<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Epic</td>
-<td>GMRS TIBIAL INSERT SMALL 10MM - S1148130801</td>
-<td>5-6-2012</td>
-<td>Knie</td>
-<td></td>
-<td>Implantant, Gen 2 Tibia Insert 5 / 6-9mm</td>
-</tr><tr><td></td><td colspan=6>
-<b>Lateraliteit</b><br/>Links<br/>
-</td></tr>
-<tr><td>+</td>
 <td>Nexus</td>
 <td>Gehoorapparaat</td>
 <td>1-1-2007</td>
@@ -86,6 +77,15 @@
 <td>Apparaat niet zichtbaar (diep in de gehooringang)</td>
 </tr><tr><td></td><td colspan=6>
 <b>Lateraliteit</b><br/>rechts<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Chipsoft</td>
+<td>Onbekend serienummer.</td>
+<td>31-12-2006</td>
+<td></td>
+<td></td>
+<td>Presbyacusis. Apparaat niet zichtbaar (diep in de gehooringang)</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>

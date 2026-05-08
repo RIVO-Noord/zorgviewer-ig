@@ -64,6 +64,33 @@
 <b>Diagnose</b><br/>(SNOMED CT) 203082005 Fibromyalgia (disorder)<br/>
 </td></tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>15-11-2012</td>
+<td>Kortademigheid</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) R02 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>10-8-2012</td>
+<td>Oedeem</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) K07 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>20-4-2011</td>
+<td>Polsfractuur</td>
+<td>Niet actueel</td>
+<td>finished</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) L72 <br/>
+</td></tr>
+<tr><td>+</td>
 <td>EPS</td>
 <td>29-1-2002</td>
 <td>Chronic sinusitis</td>
@@ -92,57 +119,14 @@
 <b>Diagnose</b><br/>(SNOMED CT) 31641000146105 fractuur van pols<br/>
 <b>Toelichting</b><br/>Gevallen op kunstijsbaan<br/>
 </td></tr>
-<tr><th>&gt;&lt;</th>
-<th>Bron</th>
-<th>Datum</th>
-<th>Diagnose</th>
-<th>Status</th>
-<th>(regelkleur)</th>
-</tr>
 <tr><td>+</td>
-<td>Sanday</td>
+<td>CGM</td>
 <td></td>
-<td>Acute tonsillitis/peritonsillair abces</td>
+<td>Gesprek levenseinde/behandelwensen</td>
 <td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Episode zonder contacten<br/>
-</td></tr>
-<tr><td>+</td>
-<td>Sanday</td>
-<td></td>
-<td>Furunkel/abces neus</td>
-<td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Episode met twee contacten <br/>
-</td></tr>
-<tr><td>+</td>
-<td>Sanday</td>
-<td></td>
-<td>Moeheid/zwakte</td>
-<td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Vermoeidheid<br/>
-</td></tr>
-<tr><td>+</td>
-<td>Sanday</td>
-<td></td>
-<td>Influenza [ex. R81]</td>
-<td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Influenze vaccinatie<br/>
-</td></tr>
-<tr><td>+</td>
-<td>Sanday</td>
-<td></td>
-<td>Lokale infectie vinger/teen/paronychia</td>
-<td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Heropende wond poging 2<br/>
+<b>Diagnose</b><br/>(ICPC) A20 <br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -165,6 +149,15 @@
 <tr><td>+</td>
 <td>Sanday</td>
 <td></td>
+<td>Lokale infectie vinger/teen/paronychia</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Concern</b><br/>Heropende wond poging 2<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td></td>
 <td>Maagpijn</td>
 <td>Niet actueel</td>
 <td>finished</td>
@@ -172,40 +165,40 @@
 <b>Concern</b><br/>Maagpijn<br/>
 </td></tr>
 <tr><td>+</td>
-<td>CGM</td>
-<td>15-11-2012</td>
-<td>Kortademigheid</td>
-<td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) R02 <br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>10-8-2012</td>
-<td>Oedeem</td>
-<td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) K07 <br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>20-4-2011</td>
-<td>Polsfractuur</td>
-<td>Niet actueel</td>
-<td>finished</td>
-</tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) L72 <br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
+<td>Sanday</td>
 <td></td>
-<td>Gesprek levenseinde/behandelwensen</td>
+<td>Influenza [ex. R81]</td>
 <td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) A20 <br/>
+<b>Concern</b><br/>Influenze vaccinatie<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td></td>
+<td>Moeheid/zwakte</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Concern</b><br/>Vermoeidheid<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td></td>
+<td>Acute tonsillitis/peritonsillair abces</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Concern</b><br/>Episode zonder contacten<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td></td>
+<td>Furunkel/abces neus</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Concern</b><br/>Episode met twee contacten <br/>
 </td></tr>
 </tbody>
 </table>

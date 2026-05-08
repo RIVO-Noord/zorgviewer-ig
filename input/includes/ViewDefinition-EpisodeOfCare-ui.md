@@ -26,6 +26,14 @@
 </tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>4-3-2026</td>
+<td>Gesprek levenseinde/behandelwensen</td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+</td></tr>
+<tr><td>+</td>
 <td>Sanday</td>
 <td>15-12-2025</td>
 <td></td>
@@ -94,14 +102,6 @@
 <td>20-4-2011</td>
 <td>20-4-2011</td>
 <td>Polsfractuur</td>
-<td></td>
-</tr><tr><td></td><td colspan=5>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>4-3-2026</td>
-<td>Gesprek levenseinde/behandelwensen</td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
 </td></tr>

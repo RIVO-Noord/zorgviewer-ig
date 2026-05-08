@@ -72,18 +72,6 @@
 <b>Voorschrijver</b><br/>Healthcare professional (role), Peter van Pulver, Huisartsen, niet nader gespeci...<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft</td>
-<td>15-8-2016</td>
-<td>14-9-2016</td>
-<td>METOCLOPRAMIDE ZETPIL 10MG</td>
-<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alc...</td>
-<td>RECTAAL</td>
-<td>Definitief</td>
-</tr><tr><td></td><td colspan=7>
-<b>Afspraakdatum</b><br/>30-9-2022<br/>
-<b>Voorschrijver</b><br/>Peter van Pulver<br/>
-</td></tr>
-<tr><td>+</td>
 <td>Epic</td>
 <td>27-11-2020</td>
 <td></td>
@@ -95,6 +83,18 @@
 <b>Medicatie vorm</b><br/>tablet<br/>
 <b>Afspraakdatum</b><br/>27-11-2020<br/>
 <b>Voorschrijver</b><br/>M Crop<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Chipsoft</td>
+<td>15-8-2016</td>
+<td>14-9-2016</td>
+<td>METOCLOPRAMIDE ZETPIL 10MG</td>
+<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alc...</td>
+<td>RECTAAL</td>
+<td>Definitief</td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>30-9-2022<br/>
+<b>Voorschrijver</b><br/>Peter van Pulver<br/>
 </td></tr>
 <tr><td>+</td>
 <td>AORTA</td>
