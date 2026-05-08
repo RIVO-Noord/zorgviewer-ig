@@ -6,7 +6,7 @@
 
 ### View Definition
 
-[ViewDefinition voor Encounter](ViewDefinition-ContactenEpisodes.json)
+[ViewDefinition voor Contacten en Episodes](ViewDefinition-ContactenEpisodes.json)
 
 {% include ViewDefinition-ContactenEpisodes-ui.md %}
 
