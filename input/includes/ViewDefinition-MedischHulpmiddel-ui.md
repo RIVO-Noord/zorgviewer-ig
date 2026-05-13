@@ -4,16 +4,16 @@
 <tbody>
 <tr><th>&gt;&lt;</th>
 <th>Bron</th>
-<th>Hulpmiddel</th>
 <th>Begin datum</th>
+<th>Hulpmiddel</th>
 <th>Anatomische locatie</th>
 <th>Indicatie</th>
 <th>Toelichting</th>
 </tr>
 <tr><td>+</td>
 <td>EPS</td>
-<td>Walker (physical object)</td>
 <td></td>
+<td>Walker (physical object)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -21,8 +21,8 @@
 </td></tr>
 <tr><td>+</td>
 <td>EPS</td>
-<td>Home nebulizer (physical object)</td>
 <td></td>
+<td>Home nebulizer (physical object)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -30,8 +30,8 @@
 </td></tr>
 <tr><td>+</td>
 <td>Nictiz</td>
-<td>Cardiac Stent - Model X123</td>
 <td>1-9-2021</td>
+<td>Cardiac Stent - Model X123</td>
 <td>Right coronary artery</td>
 <td>Atherosclerose</td>
 <td>Implanted during angioplasty procedure.</td>
@@ -40,8 +40,8 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
-<td>GMRS TIBIAL INSERT SMALL 10MM - S1148130801</td>
 <td>5-6-2012</td>
+<td>GMRS TIBIAL INSERT SMALL 10MM - S1148130801</td>
 <td>Knie</td>
 <td></td>
 <td>Implantant, Gen 2 Tibia Insert 5 / 6-9mm</td>
@@ -50,8 +50,8 @@
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
-<td>Onbekend serienummer.</td>
 <td>4-6-2012</td>
+<td>Onbekend serienummer.</td>
 <td>Knee region structure (body structure)</td>
 <td></td>
 <td>Implantant, Gen 2 Tibia Insert 5/6-9mm</td>
@@ -60,8 +60,8 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
-<td>Gehoorimplantaten - Actief Middenoor Implantaat-1-1-2007</td>
 <td>1-1-2007</td>
+<td>Gehoorimplantaten - Actief Middenoor Implantaat-1-1-2007</td>
 <td>Oor</td>
 <td></td>
 <td>Apparaat niet zichtbaar (diep in de gehooringang)</td>
@@ -70,8 +70,8 @@
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
-<td>Gehoorapparaat</td>
 <td>1-1-2007</td>
+<td>Gehoorapparaat</td>
 <td>Oor</td>
 <td></td>
 <td>Apparaat niet zichtbaar (diep in de gehooringang)</td>
@@ -80,8 +80,8 @@
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
-<td>Onbekend serienummer.</td>
 <td>31-12-2006</td>
+<td>Onbekend serienummer.</td>
 <td></td>
 <td></td>
 <td>Presbyacusis. Apparaat niet zichtbaar (diep in de gehooringang)</td>
@@ -89,8 +89,8 @@
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
-<td>Kniegewrichtsprothese</td>
 <td></td>
+<td>Kniegewrichtsprothese</td>
 <td>knie</td>
 <td></td>
 <td>Implantant, Gen 2 Tibia Insert 5/6-9mm</td>

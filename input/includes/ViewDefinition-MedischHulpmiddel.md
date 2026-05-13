@@ -16,17 +16,17 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
-<td>Hulpmiddel</td>
-<td><samp>device.display</samp></td>
-<td><code>string</code></td>
-<td>Product</td>
-<td></td>
-</tr>
-<tr>
 <td>Begin datum</td>
 <td><samp>whenUsed.start</samp></td>
 <td><code>dateTime</code></td>
 <td>BeginDatum</td>
+<td></td>
+</tr>
+<tr>
+<td>Hulpmiddel</td>
+<td><samp>device.display</samp></td>
+<td><code>string</code></td>
+<td>Product</td>
 <td></td>
 </tr>
 <tr>
