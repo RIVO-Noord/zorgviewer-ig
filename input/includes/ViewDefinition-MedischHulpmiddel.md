@@ -30,17 +30,17 @@
 <td></td>
 </tr>
 <tr>
-<td>Anatomische locatie</td>
-<td><samp>bodySite.text | bodySite.coding[0].display</samp></td>
-<td><code>string</code></td>
-<td>AnatomischeLocatie</td>
-<td></td>
-</tr>
-<tr>
 <td>Indicatie</td>
 <td><samp>indication[0].display | indication[0].text</samp></td>
 <td><code>string</code></td>
 <td>Indicatie</td>
+<td></td>
+</tr>
+<tr>
+<td>Anatomische locatie</td>
+<td><samp>bodySite.text | bodySite.coding[0].display</samp></td>
+<td><code>string</code></td>
+<td>AnatomischeLocatie</td>
 <td></td>
 </tr>
 <tr>

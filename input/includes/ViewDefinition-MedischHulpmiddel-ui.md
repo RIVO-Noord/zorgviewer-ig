@@ -6,8 +6,8 @@
 <th>Bron</th>
 <th>Begin datum</th>
 <th>Hulpmiddel</th>
-<th>Anatomische locatie</th>
 <th>Indicatie</th>
+<th>Anatomische locatie</th>
 <th>Toelichting</th>
 </tr>
 <tr><td>+</td>
@@ -32,8 +32,8 @@
 <td>Nictiz</td>
 <td>1-9-2021</td>
 <td>Cardiac Stent - Model X123</td>
-<td>Right coronary artery</td>
 <td>Atherosclerose</td>
+<td>Right coronary artery</td>
 <td>Implanted during angioplasty procedure.</td>
 </tr><tr><td></td><td colspan=6>
 <b>Lateraliteit</b><br/>Right<br/>
@@ -42,8 +42,8 @@
 <td>Epic</td>
 <td>5-6-2012</td>
 <td>GMRS TIBIAL INSERT SMALL 10MM - S1148130801</td>
-<td>Knie</td>
 <td></td>
+<td>Knie</td>
 <td>Implantant, Gen 2 Tibia Insert 5 / 6-9mm</td>
 </tr><tr><td></td><td colspan=6>
 <b>Lateraliteit</b><br/>Links<br/>
@@ -52,8 +52,8 @@
 <td>Chipsoft</td>
 <td>4-6-2012</td>
 <td>Onbekend serienummer.</td>
-<td>Knee region structure (body structure)</td>
 <td></td>
+<td>Knee region structure (body structure)</td>
 <td>Implantant, Gen 2 Tibia Insert 5/6-9mm</td>
 </tr><tr><td></td><td colspan=6>
 <b>Lateraliteit</b><br/>Left<br/>
@@ -62,8 +62,8 @@
 <td>Epic</td>
 <td>1-1-2007</td>
 <td>Gehoorimplantaten - Actief Middenoor Implantaat-1-1-2007</td>
-<td>Oor</td>
 <td></td>
+<td>Oor</td>
 <td>Apparaat niet zichtbaar (diep in de gehooringang)</td>
 </tr><tr><td></td><td colspan=6>
 <b>Lateraliteit</b><br/>Rechts<br/>
@@ -72,8 +72,8 @@
 <td>Nexus</td>
 <td>1-1-2007</td>
 <td>Gehoorapparaat</td>
-<td>Oor</td>
 <td></td>
+<td>Oor</td>
 <td>Apparaat niet zichtbaar (diep in de gehooringang)</td>
 </tr><tr><td></td><td colspan=6>
 <b>Lateraliteit</b><br/>rechts<br/>
@@ -91,8 +91,8 @@
 <td>Nexus</td>
 <td></td>
 <td>Kniegewrichtsprothese</td>
-<td>knie</td>
 <td></td>
+<td>knie</td>
 <td>Implantant, Gen 2 Tibia Insert 5/6-9mm</td>
 </tr><tr><td></td><td colspan=6>
 <b>Lateraliteit</b><br/>links<br/>
