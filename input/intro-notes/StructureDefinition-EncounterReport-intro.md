@@ -8,7 +8,7 @@ N.B. SOEPVerslag komt uit de [Huisartsgegevensset](https://informatiestandaarden
 
 ### View Definition
 
-[ViewDefinition voor EpisodeOfCare](ViewDefinition-EncounterReport.json)
+[ViewDefinition voor EncounterReport](ViewDefinition-EncounterReport.json)
 
 {% include ViewDefinition-EncounterReport-ui.md %}
 
