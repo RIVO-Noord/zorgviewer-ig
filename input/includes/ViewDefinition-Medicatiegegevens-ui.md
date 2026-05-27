@@ -12,6 +12,72 @@
 <th>Stop type</th>
 </tr>
 <tr><td>+</td>
+<td>Nexus</td>
+<td>3-10-2023</td>
+<td></td>
+<td>GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML</td>
+<td> 1x elke 1 dag om 08:00:00 &#9432;</td>
+<td>INTRAVENEUS</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>3-10-2023<br/>
+<b>Voorschrijver</b><br/>Aalders, JCA (CAR)<br/>
+<b>Type</b><br/>afspraak<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Epic</td>
+<td>27-11-2020</td>
+<td></td>
+<td>metoPROLOL 50mg tablet</td>
+<td>1x per dag 50 mg innemen.</td>
+<td>Oraal</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Medicatie vorm</b><br/>tablet<br/>
+<b>Afspraakdatum</b><br/>27-11-2020<br/>
+<b>Voorschrijver</b><br/>M Crop<br/>
+<b>Type</b><br/>afspraak<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Chipsoft</td>
+<td>15-8-2016</td>
+<td>14-9-2016</td>
+<td>METOCLOPRAMIDE ZETPIL 10MG</td>
+<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alc...</td>
+<td>RECTAAL</td>
+<td>Definitief</td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>30-9-2022<br/>
+<b>Voorschrijver</b><br/>Peter van Pulver<br/>
+<b>Type</b><br/>afspraak<br/>
+</td></tr>
+<tr><td>+</td>
+<td>MP9</td>
+<td></td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td>1 stuk 2x elke 1 dag &#9432;</td>
+<td>oraal</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>11-11-2022<br/>
+<b>Voorschrijver</b><br/>Healthcare professional (role), Peter van Pulver, Huisartsen, niet nader gespeci...<br/>
+<b>Type</b><br/>afspraak<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td></td>
+<td></td>
+<td>PANTOPRAZOL TABLET MSR 40MG</td>
+<td>2 maal per dag 1 tablet;1 TABLET 1 UUR VOOR DE MAALTIJD</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>6-8-2025<br/>
+<b>Voorschrijver</b><br/>Jenneke van der Vecht<br/>
+<b>Type</b><br/>afspraak<br/>
+</td></tr>
+<tr><td>+</td>
 <td>AORTA</td>
 <td></td>
 <td></td>
@@ -60,81 +126,6 @@
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Chipsoft</td>
-<td>15-8-2016</td>
-<td>14-9-2016</td>
-<td>METOCLOPRAMIDE ZETPIL 10MG</td>
-<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alc...</td>
-<td>RECTAAL</td>
-<td>Definitief</td>
-</tr><tr><td></td><td colspan=7>
-<b>Afspraakdatum</b><br/>30-9-2022<br/>
-<b>Voorschrijver</b><br/>Peter van Pulver<br/>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><td>+</td>
-<td>Epic</td>
-<td>27-11-2020</td>
-<td></td>
-<td>metoPROLOL 50mg tablet</td>
-<td>1x per dag 50 mg innemen.</td>
-<td>Oraal</td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Medicatie vorm</b><br/>tablet<br/>
-<b>Afspraakdatum</b><br/>27-11-2020<br/>
-<b>Voorschrijver</b><br/>M Crop<br/>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><td>+</td>
-<td>MP9</td>
-<td></td>
-<td></td>
-<td>IBUPROFEN TABLET 600MG</td>
-<td>1 stuk 2x elke 1 dag &#9432;</td>
-<td>oraal</td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Afspraakdatum</b><br/>11-11-2022<br/>
-<b>Voorschrijver</b><br/>Healthcare professional (role), Peter van Pulver, Huisartsen, niet nader gespeci...<br/>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><td>+</td>
-<td>Nexus</td>
-<td>3-10-2023</td>
-<td></td>
-<td>GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML</td>
-<td> 1x elke 1 dag om 08:00:00 &#9432;</td>
-<td>INTRAVENEUS</td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Afspraakdatum</b><br/>3-10-2023<br/>
-<b>Voorschrijver</b><br/>Aalders, JCA (CAR)<br/>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><td>+</td>
-<td>Sanday</td>
-<td></td>
-<td></td>
-<td>PANTOPRAZOL TABLET MSR 40MG</td>
-<td>2 maal per dag 1 tablet;1 TABLET 1 UUR VOOR DE MAALTIJD</td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Afspraakdatum</b><br/>6-8-2025<br/>
-<b>Voorschrijver</b><br/>Jenneke van der Vecht<br/>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><th>&gt;&lt;</th>
-<th>Bron</th>
-<th>Start</th>
-<th>Eind</th>
-<th>Medicatie</th>
-<th>Dosering & instructies</th>
-<th>Toedieningsweg</th>
-<th>Stop type</th>
-</tr>
-<tr><td>+</td>
 <td>EPS</td>
 <td></td>
 <td></td>
@@ -168,6 +159,19 @@
 </tr><tr><td></td><td colspan=7>
 <b>Registratiedatum</b><br/>26-11-2022<br/>
 <b>Type</b><br/>huidig<br/>
+</td></tr>
+<tr><td>+</td>
+<td>MP9</td>
+<td></td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td>1 stuk 1x elke 1 dag &#9432;</td>
+<td>oraal</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>11-11-2022<br/>
+<b>Uitvoerder</b><br/>Healthcare provider (organization), Apotheek de Gulle Gaper<br/>
+<b>Type</b><br/>toedieningsafspraak<br/>
 </td></tr>
 </tbody>
 </table>

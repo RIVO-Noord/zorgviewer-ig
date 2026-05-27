@@ -2,7 +2,7 @@
   "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
   "resource": "Bundle",
   "id": "ViewDefinition-EpisodeOfCare",
-  "title": "EpisodeOfCare",
+  "title": "Zorgepisodes",
   "select": [
     {
       "column": [
@@ -14,32 +14,32 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "period.start",
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-DateFirstEncounter').valueDateTime | period.start",
           "name": "Begin",
           "description": "",
           "type": "dateTime",
           "tag": [ { "name": "Zib element", "value": "BeginDatumTijd" } ]
         },
         {
-          "path": "period.end",
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-DateLastEncounter').valueDateTime | period.end",
           "name": "Eind",
           "description": "",
           "type": "dateTime",
           "tag": [ { "name": "Zib element", "value": "EindDatumTijd" } ]
         },
         {
-          "path": "type.text | type.coding[0].display",
-          "name": "Label",
-          "description": "",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "ZorgEpisodeNaam" } ]
-        },
-        {
           "path": "diagnosis.condition.display",
           "name": "Probleem",
           "description": "",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "Probleem" } ]
+          "tag": [ { "name": "Zib element", "value": "FocusZorgEpisode::Probleem/ ProbleemNaam" } ]
+        },
+        {
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString",
+          "name": "Concern",
+          "description": "",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "ZorgEpisodeNaam" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='EpisodeOfCare')"

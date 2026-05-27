@@ -5,7 +5,7 @@
     "title": "Medicatiegegevens",
     "status": "active",
     "experimental": false,
-    "description": "Medicatiegegevens abstract samenstelling voor het documenteren van de combinatie van Medicatieafspraak en Medicatie Gebruik",
+    "description": "Medicatiegegevens samenstelling voor het documenteren van de combinatie van Medicatieafspraak en Medicatie Gebruik",
     "kind": "resource",
     "abstract": true,
     "type": "Bundle",
@@ -53,7 +53,8 @@
                         "code": "MedicationRequest",
                         "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationRequest"
                     }
-                ]
+                ],
+                "mustSupport": true
             },
             {
                 "id": "Bundle.entry:MedicationStatement",
@@ -76,7 +77,8 @@
                         "code": "MedicationStatement",
                         "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationStatement"
                     }
-                ]
+                ],
+                "mustSupport": true
             }
         ]
     }

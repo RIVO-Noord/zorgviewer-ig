@@ -8,7 +8,7 @@
 <th>Toelichting of regels</th>
 </thead>
 <tbody>
-<tr><td colspan=5><i>Condition</i></td></tr>
+<tr style="background-color:#000000; color:white"><td colspan=5><i>Condition</i></td></tr>
 <tr>
 <td>Bron</td>
 <td><samp>meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri</samp></td>
@@ -40,7 +40,7 @@
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Diagnose</td>
-<td><samp>code.coding[0].select(system.lookup('CodeSystems').display+'#' + code + ' ' + iif(exists(display),display,''))</samp></td>
+<td><samp>code.coding[0].select('(' + system.lookup('CodeSystems').display + ') ' + code + ' ' + iif(exists(display),display,''))</samp></td>
 <td><code>string</code></td>
 <td>ProbleemNaam</td>
 <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>.display</code><br/>Zie voor labels: <a href='ValueSet-CodeSystems.html'>ValueSet-CodeSystems</a></td>
@@ -60,7 +60,7 @@
 <td>ProbleemStatus</td>
 <td>Actueel (<code>active,recurrence</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive,remission,resolved</code>) = grijze rijen</td>
 </tr>
-<tr><td colspan=5><i>EpisodeOfCare</i></td></tr>
+<tr style="background-color:#000000; color:white"><td colspan=5><i>EpisodeOfCare</i></td></tr>
 <tr>
 <td>Bron</td>
 <td><samp>meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri</samp></td>
@@ -91,8 +91,15 @@
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">
+<td>+Concern</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString</samp></td>
+<td><code>string</code></td>
+<td>ZorgEpisodeNaam</td>
+<td></td>
+</tr>
+<tr style="background-color:#b4c7e7">
 <td>+Diagnose</td>
-<td><samp>diagnosis.condition.resolve().select(code.coding[0].select(system.lookup('CodeSystems')[0].display+'#' + code + ' ' + iif(exists(display),display,'')))</samp></td>
+<td><samp>diagnosis.condition.resolve().select('(' + code.coding[0].select(system.lookup('CodeSystems')[0].display + ') ' + code + ' ' + iif(exists(display),display,'')))</samp></td>
 <td><code>string</code></td>
 <td>Probleem/ ProbleemNaam</td>
 <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>.display</code><br/>Zie voor labels: <a href='ValueSet-CodeSystems.html'>ValueSet-CodeSystems</a></td>

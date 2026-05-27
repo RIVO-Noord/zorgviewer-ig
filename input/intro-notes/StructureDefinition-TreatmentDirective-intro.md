@@ -18,7 +18,7 @@ Als bron voor de must-support flags is gebruikt: [Fit-gap analyse behandelaanwij
 *Synoniem = Proactieve zorgplanning*
 
 Eerder in datasets onder het kopje [Advanced Care Planning (ACP)](datasets.html#advanced-care-planning) is uitgelegd waar het formulier en de dataset uit bestaat. 
-Vanuit de landelijke organisatie rondom palliatieve zorg is er een aanvulling nodig van de BehandelingCodelijst, komende uit de zib BehandelAanwijzing. Toegevoegd zijn drie nieuwe categorieen met SNOMED CT codering. Deze lijst kun je vinden op [ACP TreatmentCodelist](ValueSet-ACPTreatmentCodelist.html) pagina.
+Vanuit de landelijke organisatie rondom palliatieve zorg en uit de RIVO regio is er een aanvulling nodig van de BehandelingCodelijst, komende uit de zib BehandelAanwijzing. Toegevoegd zijn deze (4) nieuwe categorieen met SNOMED CT codering. Deze lijst kun je vinden op [ACP TreatmentCodelist](ValueSet-ACPTreatmentCodelist.html) pagina.
 
 ### View Definition
 
@@ -29,8 +29,6 @@ Vanuit de landelijke organisatie rondom palliatieve zorg is er een aanvulling no
 {% include ViewDefinition-Behandelaanwijzingen.md %}
 
 ### User-Interface Mockup
-
-**! Belangrijk dat de UI Schets van Behandelaanwijzing en de UI Schets van Wilsverklaring in één scherm te tonen.**
 
 Een schets van het scherm met labels en sortering informatie:
 <div style="clear:both;"><img src="UI-Schets-BehandelAanwijzingenWilsverklaring1.png" class="figure-img img-responsive img-rounded center-block"></div>

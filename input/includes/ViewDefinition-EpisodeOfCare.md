@@ -17,30 +17,30 @@
 </tr>
 <tr>
 <td>Begin</td>
-<td><samp>period.start</samp></td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-DateFirstEncounter').valueDateTime | period.start</samp></td>
 <td><code>dateTime</code></td>
 <td>BeginDatumTijd</td>
 <td></td>
 </tr>
 <tr>
 <td>Eind</td>
-<td><samp>period.end</samp></td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-DateLastEncounter').valueDateTime | period.end</samp></td>
 <td><code>dateTime</code></td>
 <td>EindDatumTijd</td>
-<td></td>
-</tr>
-<tr>
-<td>Label</td>
-<td><samp>type.text | type.coding[0].display</samp></td>
-<td><code>string</code></td>
-<td>ZorgEpisodeNaam</td>
 <td></td>
 </tr>
 <tr>
 <td>Probleem</td>
 <td><samp>diagnosis.condition.display</samp></td>
 <td><code>string</code></td>
-<td>Probleem</td>
+<td>FocusZorgEpisode::Probleem/ ProbleemNaam</td>
+<td></td>
+</tr>
+<tr>
+<td>Concern</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString</samp></td>
+<td><code>string</code></td>
+<td>ZorgEpisodeNaam</td>
 <td></td>
 </tr>
 </tbody>

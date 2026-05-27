@@ -1,0 +1,64 @@
+{
+    "resourceType": "Bundle",
+    "id": "51d5bf85-3d32-42e7-a315-7d5370dc5f2a",
+    "meta": {
+        "lastUpdated": "2024-07-05T15:46:37.141+00:00"
+    },
+    "type": "searchset",
+    "total": 26,
+    "link": [
+        {
+            "relation": "self",
+            "url": "https://gp-data-service-acc.azurewebsites.net/fhir/r4/Encounter?patient=6F872FD1-BC0A-4A4C-A48E-D2B7C17142BE"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "https://gp-data-service-acc.azurewebsites.net/fhir/r4/Encounter/c4022cde-b98d-4d2f-9473-a6509e802b2d",
+            "resource": {
+                "resourceType": "Encounter",
+                "id": "c4022cde-b98d-4d2f-9473-a6509e802b2d",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/nl-core-Encounter"
+                    ]
+                },
+                "status": "finished",
+                "class": {
+                    "system": "urn:oid:2.16.840.1.113883.5.4",
+                    "code": "OTH",
+                    "display": "Other"
+                },
+                "subject": {
+                    "reference": "Patient/6F872FD1-BC0A-4A4C-A48E-D2B7C17142BE",
+                    "identifier": {
+                        "value": "6F872FD1-BC0A-4A4C-A48E-D2B7C17142BE"
+                    },
+                    "display": "J van Xxx_cevat"
+                },
+                "episodeOfCare": [
+                    {
+                        "reference": "EpisodeOfCare/ccb7874b-ded0-4a37-a1b5-d328f4a78a2f",
+                        "identifier": {
+                            "value": "ccb7874b-ded0-4a37-a1b5-d328f4a78a2f"
+                        },
+                        "display": "Keelpijn"
+                    }
+                ],
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/b80608b1-851d-47e4-a0ef-c52b30e5aa2d",
+                            "identifier": {
+                                "value": "b80608b1-851d-47e4-a0ef-c52b30e5aa2d"
+                            }
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2024-07-04T22:00:00+00:00"
+                }
+            }
+        }
+    ]
+}

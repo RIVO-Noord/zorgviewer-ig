@@ -16,6 +16,20 @@
 <th>(VStatus)</th>
 </tr>
 <tr><td>+</td>
+<td>Sanday</td>
+<td>6-8-2025</td>
+<td>HUISSTOFMIJTENALLERGEEN</td>
+<td>opmerking bij overgevoeligheid</td>
+<td>medication</td>
+<td>low</td>
+<td></td>
+<td></td>
+<td>active</td>
+<td></td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft</td>
 <td>12-11-2019</td>
 <td>ALLE NSAID'S (INCL. SALICYLATEN)</td>
@@ -51,20 +65,6 @@
 <td></td>
 <td>high</td>
 <td>severe</td>
-<td></td>
-<td>active</td>
-<td></td>
-<td>confirmed</td>
-</tr><tr><td></td><td colspan=11>
-</td></tr>
-<tr><td>+</td>
-<td>Sanday</td>
-<td>6-8-2025</td>
-<td>HUISSTOFMIJTENALLERGEEN</td>
-<td>opmerking bij overgevoeligheid</td>
-<td>medication</td>
-<td>low</td>
-<td></td>
 <td></td>
 <td>active</td>
 <td></td>
@@ -108,9 +108,9 @@
 <td></td>
 <td></td>
 <td></td>
-<td>undefined</td>
 <td></td>
-<td>undefined</td>
+<td></td>
+<td></td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td>+</td>
@@ -122,9 +122,9 @@
 <td></td>
 <td>severe</td>
 <td></td>
-<td>undefined</td>
 <td></td>
-<td>undefined</td>
+<td></td>
+<td></td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 </tbody>

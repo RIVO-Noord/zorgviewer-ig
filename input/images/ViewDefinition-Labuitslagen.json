@@ -75,7 +75,7 @@
           "tag": [ { "name": "Zib element", "value": "Monster/ Toelichting" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='Observation' and (meta.profile='http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation' or category.coding.code='laboratory'))"
+      "forEach": "entry.resource.where(resourceType='Observation' and (category.coding.code='laboratory' or meta.profile='http://nictiz.nl/fhir/StructureDefinition/zib-LaboratoryTestResult-Observation' or meta.profile='http://nictiz.nl/fhir/StructureDefinition/gp-LaboratoryResult'))"
     }
   ]
 }

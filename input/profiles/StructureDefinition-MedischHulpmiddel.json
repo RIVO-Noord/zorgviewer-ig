@@ -1,0 +1,42 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedischHulpmiddel",
+    "name": "MedischHulpmiddel",
+    "title": "MedischHulpmiddel",
+    "status": "active",
+    "description": "MedischHulpmiddel (DeviceUseStatement)",
+    "kind": "resource",
+    "abstract": false,
+    "type": "DeviceUseStatement",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "DeviceUseStatement.device",
+                "path": "DeviceUseStatement.device",
+                "mustSupport": true
+            },
+            {
+                "id": "DeviceUseStatement.whenUsed",
+                "path": "DeviceUseStatement.whenUsed",
+                "mustSupport": true
+            },
+            {
+                "id": "DeviceUseStatement.bodySite",
+                "path": "DeviceUseStatement.bodySite",
+                "mustSupport": true
+            },
+            {
+                "id": "DeviceUseStatement.indication",
+                "path": "DeviceUseStatement.indication",
+                "mustSupport": true
+            },
+            {
+                "id": "DeviceUseStatement.note",
+                "path": "DeviceUseStatement.note",
+                "mustSupport": true
+            }
+        ]
+    }
+}

@@ -3,7 +3,7 @@
   "id": "hl7.fhir.nl.zorgviewer",
   "language": "en-US",
   "url": "http://fhir.hl7.nl/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer",
-  "version": "1.23.0",
+  "version": "1.24.0",
   "name": "ZorgviewerIG",
   "title": "RIVO-Noord Zorgviewer Implementation Guide",
   "status": "active",
@@ -47,13 +47,13 @@
   "dependsOn": [
     {
       "id": "terminology",
-      "uri": "https://simplifier.net/packages/hl7.terminology.r3/5.3.0",
+      "uri": "https://simplifier.net/packages/hl7.terminology.r3",
       "packageId": "hl7.terminology.r3",
       "version": "5.3.0"
     },
     {
       "id": "zibs2017",
-      "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.3.2",
+      "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017",
       "packageId": "nictiz.fhir.nl.stu3.zib2017",
       "version": "2.3.2"
     }
@@ -64,9 +64,38 @@
         "id": "group-zs",
         "name": "Zorgviewer Services Content",
         "description": "Zie [Zorgviewer Services pagina](zorgviewer-services.html) voor details."
+      },
+      {
+        "id": "group-sam",
+        "name": "Samenstellingen",
+        "description": "Samenstelingen van zibs."
       }
     ],
     "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/Correspondentie"
+        },
+        "groupingId": "group-sam"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ContactenEpisodes"
+        },
+        "groupingId": "group-sam"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Medicatiegegevens"
+        },
+        "groupingId": "group-sam"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Probleemlijst"
+        },
+        "groupingId": "group-sam"
+      },
       {
         "reference": {
           "reference": "Parameters/exp-params"
@@ -681,6 +710,14 @@
         "name": "Sanday Patient Example",
         "description": "Dit is een Patient voorbeeld van Sanday.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient"
+      },
+      {
+        "reference": {
+          "reference": "Observation/zib-mobility-01"
+        },
+        "name": "Nictiz Mobiliteit Example",
+        "description": "Dit is een Mobiliteit voorbeeld van Nictiz.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Mobiliteit"
       }
     ],
     "page": {
@@ -890,7 +927,7 @@
       },
       {
         "code": "version-comparison-master",
-        "value": "1.22.0"
+        "value": "1.23.0"
       }
     ]
   }

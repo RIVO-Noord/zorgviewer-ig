@@ -1,0 +1,51 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Mobiliteit",
+  "title": "Mobiliteit",
+  "profile": "http://nictiz.nl/fhir/StructureDefinition/zib-Mobility",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "effectiveDateTime",
+          "name": "Datum",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "ObservationDateTime" } ]
+        },
+        {
+          "path": "component.where(code.coding.exists(code='282097004')).select(value.coding.display | value.text)",
+          "name": "Lopen",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Walking" } ]
+        },
+        {
+          "path": "component.where(code.coding.exists(code='16581000146103')).select(value.coding.display | value.text)",
+          "name": "Rolstoelgebruik",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "WheelchairUse" } ]
+        },
+        {
+          "path": "component.where(code.coding.exists(code='183135000')).select(value.coding.display | value.text)",
+          "name": "Hulpmiddelen",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "MobilityAids" } ]
+        },
+        {
+          "path": "comment | note[0].text",
+          "name": "Toelichting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Comment" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Observation' and code.coding.exists(code='301438001'))"
+    }
+  ]
+}

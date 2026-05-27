@@ -9,10 +9,11 @@ const dosageToStringGemini = require('./dosage').dosageToStringGemini;
 const viewDefPath = "../input/images/";
 const mdPath = "../input/includes/";
 const examplesPath = "../input/examples";
+const examplesCache = [];
 
 // Need stu3_model as param to work
 // eg fhirpath.evaluate(example, `${column.path}`, null, fhirpath_stu3_model, { userInvocationTable }); }
-const examplesCache = {};
+const examplesById = {};
 function resolveFn(inputs) {
     if (!inputs || inputs.length === 0) {
         // console.error("resolve() called on undefined path");
@@ -20,7 +21,7 @@ function resolveFn(inputs) {
     }
     const reference = inputs[0].reference;
     const id = reference.split('/').pop();
-    var resolved = examplesCache[id];
+    var resolved = examplesById[id];
     if (!resolved) {
         console.log(`Resolving reference ${reference}`);
         // try to find an example with a matching id 
@@ -38,7 +39,7 @@ function resolveFn(inputs) {
             else {
                 examples.push(raw_example);
             }
-            examples.map(example => examplesCache[example.id] = example); // cache all examples by id for faster lookup next time
+            examples.map(example => examplesById[example.id] = example); // cache all examples by id for faster lookup next time
             var match = examples.find(example => example.id === id);
             if (match) {
                 resolved = match;
@@ -128,9 +129,10 @@ fs.readdirSync(viewDefPath).forEach(file => {
          ];
 
         // add column names for select
+        const allExtractedRows = [];
         if (viewDef.select[0].column) {
-            doColumns(viewDef.select[0].column, md_ui, md_def);
-            doExampleRows(viewDef.select[0], md_ui);
+            doColumnDefs(viewDef.select[0].column, md_def);
+            extractExampleRows(viewDef.select[0], allExtractedRows);
         }
         if (viewDef.select[0].unionAll) {
             // assume first unions columns is the final list of columns
@@ -138,12 +140,13 @@ fs.readdirSync(viewDefPath).forEach(file => {
                 const match = union.forEach.match("resourceType='(.+)'");
                 if (match) {
                     const resourceType = match[1];
-                    md_def.push(`<tr><td colspan=5><i>${resourceType}</i></td></tr>`);
+                    md_def.push(`<tr style="background-color:#000000; color:white"><td colspan=5><i>${resourceType}</i></td></tr>`);
                 }
-                doColumns(union.column, md_ui, md_def);
-                doExampleRows(union, md_ui);
+                doColumnDefs(union.column, md_def);
+                extractExampleRows(union, allExtractedRows);
             });
         }
+        doExampleRows(allExtractedRows, md_ui);
         md_def.push("</tbody>",
             "</table>");
 
@@ -158,16 +161,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
     }
 });
 
-function doColumns(columns, md_ui, md_def) {
-    // Add column names for UI wireframe
-    md_ui.push("<tr><th>&gt;&lt;</th>");
-    columns.forEach(column => { 
-        if (column.name.charAt(0) != '+') {
-            md_ui.push(`<th>${column.name}</th>`);
-        }
-    });
-    md_ui.push("</tr>");
-
+function doColumnDefs(columns, md_def) {
     // Add column definitions
     columns.forEach(column => { 
         if (column.name.charAt(0) != '+' && column.name.charAt(0) != '(') {
@@ -208,121 +202,185 @@ function doColumn(column, md) {
     md.push(`<td>${column.description||""}</td>`);
 }
 
-function doExampleRows(select, md_ui) {
-    // Add column examples based on examples
-    const match2 = select.forEach.match("resourceType='(.+)'");
-    if (match2) {
-        const resourceType = match2[1];
+function getExamples() {
+    if (examplesCache.length == 0) {
         fs.readdirSync(examplesPath).forEach(exampleFileName => {
             if (!exampleFileName.endsWith(".json")) return;
             const example_filePath = path.join(examplesPath, exampleFileName);
-            const raw_example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
+            const example = JSON.parse(fs.readFileSync(example_filePath, 'utf8'));
 
-            const examples = [];
             // If this is a Bundle split into individual resources
-            if (raw_example.resourceType == "Bundle") {
+            if (example.resourceType == "Bundle") {
                 // only keep if resourceType is queried resourceType
                 // this prevents including resources referenced inside a Bundle as a separate example
                 // e.g. _included EpisodeOfCare.diagnosis.condition or Flag.condition
                 // also make sure to ignore the operation part, like Observation/$lastn
-                if (raw_example.link) {
-                    var q = raw_example.link[0].url.indexOf('?');
-                    if (q == -1) q = raw_example.link[0].url.length;
-                    var urlNoQ = raw_example.link[0].url.substring(0, q);
+                if (example.link) {
+                    var q = example.link[0].url.indexOf('?');
+                    if (q == -1) q = example.link[0].url.length;
+                    var urlNoQ = example.link[0].url.substring(0, q);
                     var o = urlNoQ.indexOf('$');
                     if (o != -1) urlNoQ = urlNoQ.substring(0, o-1); // remove $ operation and last '/'
                     const queriedType = urlNoQ.substring(urlNoQ.lastIndexOf('/') + 1);
-                    raw_example.entry.filter(entry => entry.resource.resourceType == queriedType).forEach(entry => examples.push(entry.resource));
+                    example.entry.filter(entry => entry.resource.resourceType == queriedType).forEach(entry => {
+                        entry.resource.exampleFileName = exampleFileName; // keep track of source file for reference in UI
+                        examplesCache.push(entry.resource)
+                    });
                 }
                 else {
                     // cannot determine queriedType, so keep all
-                    raw_example.entry.forEach(entry => examples.push(entry.resource));
+                    example.entry.forEach(entry => { 
+                        entry.resource.exampleFileName = exampleFileName; // keep track of source file for reference in UI
+                        examplesCache.push(entry.resource) 
+                    });
                 }
             }
             else {
-                examples.push(raw_example);
+                example.exampleFileName = exampleFileName; // keep track of source file for reference in UI
+                examplesCache.push(example);
+            }
+        });
+    }
+    return examplesCache;
+}
+
+function extractExampleRows(select, allExtractedRows) {
+    // Add column examples based on examples
+    const match2 = select.forEach.match("resourceType='(.+)'");
+    if (match2) {
+        const resourceType = match2[1];
+        // const examples = getExamples().filter(example => example.resourceType == resourceType);
+        getExamples().forEach(example => {
+            // generate if dosageInstruction but no text; only for MedicationRequest/Statements
+            if (example.dosageInstruction && !example.dosageInstruction[0].text) {
+                var text = dosageToStringGemini(example.dosageInstruction[0]);
+                if (text.includes("undefined")) {
+                    console.error("ERROR: Some expected dosage parts undefined?", JSON.stringify(example.dosageInstruction));
+                }
+                example.dosageInstruction[0].text = text + ' &#9432;';
             }
 
-            examples.forEach(example => {
-                // generate if dosageInstruction but no text; only for MedicationRequest/Statements
-                if (example.dosageInstruction && !example.dosageInstruction[0].text) {
-                    // var text = dosageToString(example.dosageInstruction[0]);
-                    var text = dosageToStringGemini(example.dosageInstruction[0]);
-                    if (text.includes("undefined")) {
-                        console.error("ERROR: Some expected dosage parts undefined?", JSON.stringify(example.dosageInstruction));
+            // only include in table when where clause applies
+            // examples are always resources, so ignore entry.resource prefix
+            const match3 = select.forEach.match(/\.where\((.+)\)(\.(\w+))?/);
+            if (match3) {
+                let whereResult;
+                try { whereResult = fhirpath.evaluate(example, match3[1]); }
+                catch (err) { console.error ("ERROR: Error evaluating where clause", match3[1], err.message); }
+
+                // does example match where clause?
+                if (whereResult[0]) {
+                    // is there a further path to follow?
+                    if (match3[3]) {
+                        const columnResults = fhirpath.evaluate(example, match3[3], null, fhirpath_stu3_model);
+                        columnResults.forEach(columnResult => {
+                            const extractedData = extractExampleData(select, columnResult, example.exampleFileName);
+                            allExtractedRows.push(extractedData);
+                        });
                     }
-                    example.dosageInstruction[0].text = text + ' &#9432;';
-                }
-
-                // only include in table when where clause applies
-                // examples are always resources, so ignore entry.resource prefix
-                const match3 = select.forEach.match(/\.where\((.+)\)(\.(\w+))?/);
-                if (match3) {
-                    let whereResult;
-                    try { whereResult = fhirpath.evaluate(example, match3[1]); }
-                    catch (err) { console.error ("ERROR: Error evaluating where clause", match3[1], err.message); }
-
-                    // does example match where clause?
-                    if (whereResult[0]) {
-                        // is there a further path to follow?
-                        if (match3[3]) {
-                            const columnResults = fhirpath.evaluate(example, match3[3], null, fhirpath_stu3_model);
-                            columnResults.forEach(columnResult => {
-                                doExampleRow(select, columnResult, exampleFileName, md_ui);
-                            });
-                        }
-                        else {
-                            doExampleRow(select, example, exampleFileName, md_ui);
-                        }
+                    else {
+                        const extractedData = extractExampleData(select, example, example.exampleFileName);
+                        allExtractedRows.push(extractedData);
                     }
                 }
-            });
+            } else { // if no where clause, still extract and add to allExtractedRows
+                const extractedData = extractExampleData(select, example, example.exampleFileName);
+                allExtractedRows.push(extractedData);
+            }
         });
     }
 }
 
-function doExampleRow(select, example, exampleFileName, md_ui) {
-    const values = select.column.map(column => {
-        let columnResult;
-        try { columnResult = fhirpath.evaluate(example, column.path, null, fhirpath_stu3_model, { userInvocationTable }); }
-        catch (err) { console.error("ERROR:", column.name, err.message, column.path); }
-        var value = "";
-        if (columnResult && columnResult.length > 0) {
+function doExampleRows(allExtractedRows, md_ui) {
+    // Add column names for UI wireframe
+    md_ui.push("<tr><th>&gt;&lt;</th>");
+    allExtractedRows[0].forEach(column => { 
+        if (column.name.charAt(0) != '+') {
+            md_ui.push(`<th>${column.name}</th>`);
+        }
+    });
+    md_ui.push("</tr>");
+
+    // Find the index of the first date or dateTime column for sorting
+    const sortColumnIndex = allExtractedRows.length > 0 ? allExtractedRows[0].findIndex(column => column.type === "date" || column.type === "dateTime") : -1;
+
+    // Sort allExtractedRows by the first date column if found, otherwise no specific sorting
+    if (sortColumnIndex !== -1) {
+        allExtractedRows.sort((a, b) => {
+            const dateA = new Date(a[sortColumnIndex].value);
+            const dateB = new Date(b[sortColumnIndex].value);
+            // Sort in descending order (newest first)
+            return dateB.getTime() - dateA.getTime();
+        });
+    }
+
+    // Now, iterate through the sorted data and generate markdown
+    allExtractedRows.forEach(extractedData => {
+        doExampleRow(extractedData, md_ui);
+    });
+}
+
+function extractExampleData(select, example, exampleFileName) {
+    const extractedValues = select.column.map(column => {
+        let evalResult;
+        try { 
+            evalResult = fhirpath.evaluate(example, column.path, null, fhirpath_stu3_model, { userInvocationTable }); 
+        } catch (err) { 
+            console.error("ERROR:", column.name, err.message, column.path); 
+        }
+        
+        let value = "";
+        if (evalResult && evalResult.length > 0) {
             if (column.type == "date" || column.type == "dateTime") {
-                const date = new Date(columnResult[0]);
-                value = date.toLocaleDateString('nl-NL'); // + ' ' + date.toLocaleTimeString('nl-NL';
-            }
-            else if (column.type == "code") {
-                value = columnResult[0];
-                // check if this is a CodeableConcept; sometimes w/ STU3 vs R4
-                if (typeof (columnResult[0]) == "object") {
-                    value = columnResult[0].coding[0].display;
+                value = evalResult[0]; // Store raw date value
+            } else if (column.type == "code") {
+                value = evalResult[0];
+                if (typeof (evalResult[0]) == "object" && evalResult[0].coding && evalResult[0].coding[0]) {
+                    value = evalResult[0].coding[0].display;
+                    if (!value) value = "";
                 }
-            }
-            else {
-                value = columnResult[0].toString();
+            } else {
+                value = evalResult[0].toString();
                 if (value.length > 80) value = `${value.substring(0, 80)}...`;
-                value = value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-                value = value.replace(/\r?\n/g, "<br/>");
+                value = value.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\r?\n/g, "<br/>");
             }
         }
-        return value;
+        return { name: column.name, type: column.type, value: value };
     });
+
     // column 0 is altijd bron en set bron obv filename
-    values[0] = exampleFileName.substring(exampleFileName.indexOf('-') + 1, exampleFileName.length - 5);
+    // Assuming the first column is always the source and should be set based on the filename
+    if (extractedValues.length > 0) {
+        extractedValues[0].value = exampleFileName.substring(exampleFileName.indexOf('-') + 1, exampleFileName.length - 5);
+    }
+    
+    return extractedValues;
+}
+
+function doExampleRow(extractedData, md_ui) {
     md_ui.push("<tr><td>+</td>");
     // add column values
-    select.column.forEach((column, idx) => {
+    extractedData.forEach((column, idx) => {
         if (column.name.charAt(0) != '+') {
-            md_ui.push(`<td>${values[idx]}</td>`);
+            let displayValue = extractedData[idx].value;
+            if ((column.type == "date" || column.type == "dateTime") && displayValue) {
+                const date = new Date(displayValue);
+                displayValue = date.toLocaleDateString('nl-NL');
+            }
+            md_ui.push(`<td>${displayValue}</td>`);
         }
     });
     // add uitklap values; only show if there is a value
-    const colcount = select.column.filter(column => column.name.charAt(0) != '+').length;
+    const colcount = extractedData.filter(column => column.name.charAt(0) != '+').length;
     md_ui.push(`</tr><tr><td></td><td colspan=${colcount}>`);
-    select.column.forEach((column, idx) => {
-        if (column.name.charAt(0) == '+' && values[idx] != "") {
-            md_ui.push(`<b>${column.name.slice(1)}</b><br/>${values[idx]}<br/>`);
+    extractedData.forEach((column, idx) => {
+        if (column.name.charAt(0) == '+' && extractedData[idx].value != "") {
+            let displayValue = extractedData[idx].value;
+            if ((column.type == "date" || column.type == "dateTime") && displayValue) {
+                const date = new Date(displayValue);
+                displayValue = date.toLocaleDateString('nl-NL');
+            }
+            md_ui.push(`<b>${column.name.slice(1)}</b><br/>${displayValue}<br/>`);
         }
     });
     md_ui.push("</td></tr>");
