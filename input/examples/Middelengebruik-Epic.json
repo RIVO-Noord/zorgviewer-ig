@@ -1,0 +1,276 @@
+{
+    "resourceType": "Bundle",
+    "type": "searchset",
+    "total": 3,
+    "link": [
+        {
+            "relation": "self",
+            "url": "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Observation?patient=e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3&category=social-history&_format=json"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "https://example.org/fhir/Observation/fVIVWJve5VqVPnQmG3NeH22GjMF1BrykGCJVTdwdcQMw4",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "fVIVWJve5VqVPnQmG3NeH22GjMF1BrykGCJVTdwdcQMw4",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse"
+                    ]
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/observation-category",
+                                "code": "social-history",
+                                "display": "Social History"
+                            }
+                        ],
+                        "text": "Social History"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "11331-6",
+                            "display": "Alcohol Use History"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "228273003",
+                            "display": "Finding relating to alcohol drinking behavior (finding)"
+                        }
+                    ],
+                    "text": "Alcohol Use History"
+                },
+                "subject": {
+                    "reference": "https://wg-t-iris.umcg.nl/api/fhir/Patient/eXxP1o8ZlOz21F6HXS9puLA3",
+                    "display": "XXX-Helleman, Johan"
+                },
+                "issued": "2022-05-26T22:00:00Z",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "219006",
+                            "display": "Current drinker of alcohol (finding)"
+                        }
+                    ],
+                    "text": "Ja"
+                },
+                "component": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "160573003",
+                                    "display": "Alcohol intake (observable entity)"
+                                }
+                            ],
+                            "text": "Alcohol intake (observable entity)"
+                        },
+                        "valueQuantity": {
+                            "value": 0.57,
+                            "unit": "alcoholic_units/day",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "{alcoholic_units}/d"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "link": [
+                {
+                    "relation": "self",
+                    "url": "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Observation/fscRObO9FtA9sseD.plgP7KxXVtTyjKyEG1V7fND7q8o4"
+                }
+            ],
+            "fullUrl": "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Observation/fscRObO9FtA9sseD.plgP7KxXVtTyjKyEG1V7fND7q8o4",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "fscRObO9FtA9sseD.plgP7KxXVtTyjKyEG1V7fND7q8o4",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse"
+                    ]
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/observation-category",
+                                "code": "social-history",
+                                "display": "Social History"
+                            }
+                        ],
+                        "text": "Social History"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "72166-2",
+                            "display": "Tobacco smoking status"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "365980008",
+                            "display": "Finding of tobacco use and exposure (finding)"
+                        }
+                    ],
+                    "text": "Smoking History"
+                },
+                "subject": {
+                    "reference": "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3",
+                    "display": "Fictief, Jan"
+                },
+                "issued": "2021-10-26T22:00:00Z",
+                "performer": [
+                    {
+                        "reference": "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Practitioner/eYsrfO8FjxQmaRQcFFp7IbimYRj9h.U39hCdbwg4fw403",
+                        "display": "M Crop"
+                    }
+                ],
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "449868002",
+                            "display": "Smokes tobacco daily"
+                        }
+                    ],
+                    "text": "Dagelijks"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "link": [
+                {
+                    "relation": "self",
+                    "url": "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Observation/fscRObO9FtA9sseD.plgP7K24thzmPT0TDPu6NQMPhY84"
+                }
+            ],
+            "fullUrl": "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Observation/fscRObO9FtA9sseD.plgP7K24thzmPT0TDPu6NQMPhY84",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "fscRObO9FtA9sseD.plgP7K24thzmPT0TDPu6NQMPhY84",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse"
+                    ]
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/observation-category",
+                                "code": "social-history",
+                                "display": "Social History"
+                            }
+                        ],
+                        "text": "Social History"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "11343-1",
+                            "display": "Drug Use History"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "228366006",
+                            "display": "Finding relating to drug misuse behavior (finding)"
+                        }
+                    ],
+                    "text": "Drug Use History"
+                },
+                "subject": {
+                    "reference": "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3",
+                    "display": "Fictief, Jan"
+                },
+                "issued": "2021-10-26T22:00:00Z",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "361055000",
+                            "display": "Misuses drugs (finding)"
+                        }
+                    ],
+                    "text": "Ja"
+                },
+                "component": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "63643-1",
+                                    "display": "Drug type used in your lifetime [AUDADIS-IV]"
+                                },
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "410942007",
+                                    "display": "Drug or medicament (substance)"
+                                }
+                            ],
+                            "text": "Type"
+                        },
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "387499002",
+                                    "display": "METHAMFETAMINE"
+                                }
+                            ],
+                            "text": "Crack, base coke"
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:00000000-0128-2f09-a657-949e99ebfefd",
+            "resource": {
+                "resourceType": "OperationOutcome",
+                "issue": [
+                    {
+                        "severity": "warning",
+                        "code": "processing",
+                        "details": {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:1.2.840.114350.1.13.485.2.7.2.657369",
+                                    "code": "4119",
+                                    "display": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                                }
+                            ],
+                            "text": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "outcome"
+            }
+        }
+    ]
+}
