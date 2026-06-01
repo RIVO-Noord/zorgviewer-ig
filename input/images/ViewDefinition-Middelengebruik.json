@@ -1,0 +1,46 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Middelengebruik",
+  "title": "Middelengebruik",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "effectiveDateTime",
+          "name": "Datum",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "*DatumTijd" } ]
+        },
+        {
+          "path": "code.text | code.coding[0].display",
+          "name": "Soort gebruik",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "NVT" } ],
+          "description": "Code van de ZIB voor middelengebruik"
+        },
+        {
+          "path": "valueQuantity.value.toString()+' '+valueQuantity.unit | valueString | valueCodeableConcept.coding.display",
+          "name": "Status",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Status" } ]
+        },
+        {
+          "path": "comment | note.text",
+          "name": "+Toelichting",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
+        }
+        // extra kolommen vanuit zibs
+      ],
+      "forEach": "entry.resource.where(resourceType='Observation' and (category.coding.code='vital-signs' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult'))"
+    }
+  ]
+}
