@@ -38,9 +38,8 @@
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
         }
-        // extra kolommen vanuit zibs
       ],
-      "forEach": "entry.resource.where(resourceType='Observation' and (category.coding.code='vital-signs' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult'))"
+      "forEach": "entry.resource.where(resourceType='Observation' and category.coding.code='social-history')"
     }
   ]
 }
