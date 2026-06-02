@@ -3,7 +3,8 @@
 ### Zorginformatiebouwsteen
 
 * [ZIB Medicatieafspraak](StructureDefinition-MedicationRequest.html#zorginformatiebouwsteen)
-* [ZIB Medicatie Gebruik2](StructureDefinition-MedicationStatement.html#zorginformatiebouwsteen) 
+* [ZIB Medicatie Gebruik2](StructureDefinition-MedicationStatement.html#zorginformatiebouwsteen)
+* [ZIB Toedieningsafspraak](StructureDefinition-Toedieningsafspraak.html#zorginformatiebouwsteen)
 
 ### View Definition
 
