@@ -365,7 +365,7 @@ function doExampleRow(extractedData, md_ui) {
             let displayValue = extractedData[idx].value;
             if ((column.type == "date" || column.type == "dateTime") && displayValue) {
                 const date = new Date(displayValue);
-                displayValue = date.toLocaleDateString('nl-NL');
+                displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'UTC' });
             }
             md_ui.push(`<td>${displayValue}</td>`);
         }
@@ -378,7 +378,7 @@ function doExampleRow(extractedData, md_ui) {
             let displayValue = extractedData[idx].value;
             if ((column.type == "date" || column.type == "dateTime") && displayValue) {
                 const date = new Date(displayValue);
-                displayValue = date.toLocaleDateString('nl-NL');
+                displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'UTC' });
             }
             md_ui.push(`<b>${column.name.slice(1)}</b><br/>${displayValue}<br/>`);
         }
