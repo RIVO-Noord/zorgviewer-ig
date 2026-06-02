@@ -6,7 +6,7 @@
 
 ### View Definition
 
-[ViewDefinition voor MedicationDispense](ViewDefinition-Toedieningsafspraak.json)
+[ViewDefinition voor Toedieningsafspraak](ViewDefinition-Toedieningsafspraak.json)
 
 {% include ViewDefinition-Toedieningsafspraak-ui.md %}
 
