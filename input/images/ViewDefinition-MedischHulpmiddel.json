@@ -39,16 +39,16 @@
           "tag": [ { "name": "Zib element", "value": "AnatomischeLocatie" } ]
         },
         {
+          "path": "bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.coding[0].display",
+          "name": "Lateraliteit",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Lateraliteit" } ]
+        },
+        {
           "path": "note[0].text",
           "name": "Toelichting",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
-        },
-        {
-          "path": "bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.coding[0].display",
-          "name": "+Lateraliteit",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "Lateraliteit" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='DeviceUseStatement')"
