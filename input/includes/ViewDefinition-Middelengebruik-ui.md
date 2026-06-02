@@ -7,34 +7,35 @@
 <th>Datum</th>
 <th>Soort gebruik</th>
 <th>Status</th>
+<th>Soort</th>
+<th>Hoeveelheid</th>
 </tr>
-<tr><td>+</td>
-<td>Epic</td>
-<td></td>
-<td>Finding of residence and accommodation circumstances (finding)</td>
-<td>Eengezinswoning</td>
-</tr><tr><td></td><td colspan=4>
-</td></tr>
 <tr><td>+</td>
 <td>Epic</td>
 <td></td>
 <td>Alcohol Use History</td>
 <td>Current drinker of alcohol (finding)</td>
-</tr><tr><td></td><td colspan=4>
+<td></td>
+<td>0.57 alcoholic_units/day</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
 <td></td>
 <td>Smoking History</td>
 <td>Smokes tobacco daily</td>
-</tr><tr><td></td><td colspan=4>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
 <td></td>
 <td>Drug Use History</td>
 <td>Misuses drugs (finding)</td>
-</tr><tr><td></td><td colspan=4>
+<td>METHAMFETAMINE</td>
+<td></td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 </tbody>
 </table>

@@ -27,10 +27,22 @@
           "description": "Code van de ZIB voor middelengebruik"
         },
         {
-          "path": "valueQuantity.value.toString()+' '+valueQuantity.unit | valueString | valueCodeableConcept.coding.display",
+          "path": "valueCodeableConcept.coding[0].display",
           "name": "Status",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Status" } ]
+        },
+        {
+          "path": "iif(component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.exists(), component.where(code.coding.where(code='410942007').exists() or code.coding.where(code='53661000146106').exists()).valueCodeableConcept.coding[0].display + ' ' + component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.coding[0].display, component.where(code.coding.where(code='410942007').exists() or code.coding.where(code='53661000146106').exists()).valueCodeableConcept.coding[0].display)",
+          "name": "Soort",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Soort" } ]
+        },
+        {
+          "path": "iif(component.where(code.coding.where(code='401201003').exists()).exists(), component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.unit+' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.unit)",
+          "name": "Hoeveelheid",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Hoeveelheid" } ]
         },
         {
           "path": "comment | note.text",
@@ -39,7 +51,7 @@
           "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='Observation' and category.coding.code='social-history')"
+      "forEach": "entry.resource.where(resourceType='Observation' and code.coding.where(code='228273003').exists() or code.coding.where(code='228366006').exists() or code.coding.where(code='365980008').exists())"
     }
   ]
 }

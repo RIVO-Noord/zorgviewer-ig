@@ -31,9 +31,23 @@
 </tr>
 <tr>
 <td>Status</td>
-<td><samp>valueQuantity.value.toString()+' '+valueQuantity.unit | valueString | valueCodeableConcept.coding.display</samp></td>
+<td><samp>valueCodeableConcept.coding[0].display</samp></td>
 <td><code>string</code></td>
 <td>Status</td>
+<td></td>
+</tr>
+<tr>
+<td>Soort</td>
+<td><samp>iif(component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.exists(), component.where(code.coding.where(code='410942007').exists() or code.coding.where(code='53661000146106').exists()).valueCodeableConcept.coding[0].display + ' ' + component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.coding[0].display, component.where(code.coding.where(code='410942007').exists() or code.coding.where(code='53661000146106').exists()).valueCodeableConcept.coding[0].display)</samp></td>
+<td><code>string</code></td>
+<td>Soort</td>
+<td></td>
+</tr>
+<tr>
+<td>Hoeveelheid</td>
+<td><samp>iif(component.where(code.coding.where(code='401201003').exists()).exists(), component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.unit+' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.unit)</samp></td>
+<td><code>string</code></td>
+<td>Hoeveelheid</td>
 <td></td>
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
