@@ -20,10 +20,10 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 
 1. Opvragen (search) allergieen en intoleranties
 
-    `GET <ontsluiten-bronsysteem-base>/AllergyIntolerance/?patient=<fhir_patient_id>`
+    `GET <ontsluiten-bronsysteem-base>/AllergyIntolerance?patient=<fhir_patient_id>`
 
 1. **Sanday:** Opvragen (search) allergieen en intoleranties, alleen medicatie categorie
 
-    `GET <ontsluiten-bronsysteem-base>/AllergyIntolerance/?patient=<fhir_patient_id>&category=medication`
+    `GET <ontsluiten-bronsysteem-base>/AllergyIntolerance?patient=<fhir_patient_id>&category=medication`
 
 {% include bronsysteem-herkennen.md %}
