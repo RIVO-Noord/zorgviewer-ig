@@ -17,10 +17,17 @@
 </tr>
 <tr>
 <td>Datum</td>
-<td><samp>effectiveDateTime</samp></td>
+<td><samp>issued</samp></td>
 <td><code>dateTime</code></td>
-<td>*DatumTijd</td>
-<td></td>
+<td>WaarnemingGebruik</td>
+<td>Datum van de vaststelling van het gebruik.</td>
+</tr>
+<tr>
+<td>Gebruiksperiode</td>
+<td><samp>iif(effectivePeriod.start.exists() and effectivePeriod.end.exists(), effectivePeriod.start+' tot '+effectivePeriod.end, iif(effectivePeriod.start.exists(), 'vanaf '+effectivePeriod.start, iif(effectivePeriod.end.exists(), 'tot '+effectivePeriod.end, 'vanaf '+effectiveDateTime)))</samp></td>
+<td><code>dateTime</code></td>
+<td>WaarnemingGebruik</td>
+<td>EffectivePeriod is voorgeschreven in de ZIB, maar in veel gevallen zal de data geen periode bevatten. In die gevallen is de datum van vaststelling bepalend voor interpretatie.</td>
 </tr>
 <tr>
 <td>Soort gebruik</td>
@@ -34,21 +41,21 @@
 <td><samp>valueCodeableConcept.coding[0].display</samp></td>
 <td><code>string</code></td>
 <td>Status</td>
-<td></td>
+<td>Indicatie of in het heden of verleden sprake is (geweest) van middelengebruik.</td>
 </tr>
 <tr>
-<td>Soort</td>
+<td>Middel</td>
 <td><samp>iif(component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.exists(), component.where(code.coding.where(code='410942007').exists() or code.coding.where(code='53661000146106').exists()).valueCodeableConcept.coding[0].display + ' ' + component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.coding[0].display, component.where(code.coding.where(code='410942007').exists() or code.coding.where(code='53661000146106').exists()).valueCodeableConcept.coding[0].display)</samp></td>
 <td><code>string</code></td>
-<td>Soort</td>
-<td></td>
+<td>Middel</td>
+<td>Soort middel en toedieningsvorm</td>
 </tr>
 <tr>
 <td>Hoeveelheid</td>
 <td><samp>iif(component.where(code.coding.where(code='401201003').exists()).exists(), component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.unit+' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.unit)</samp></td>
 <td><code>string</code></td>
 <td>Hoeveelheid</td>
-<td></td>
+<td>Het aantal eenheden (glazen, sigaretten, pillen, shots etc.) per dag, week, maand of jaar of de freqentie van gebruik.</td>
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
 <tr style="background-color:#b4c7e7">

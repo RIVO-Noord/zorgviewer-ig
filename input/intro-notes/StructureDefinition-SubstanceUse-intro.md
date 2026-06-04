@@ -2,13 +2,11 @@
 
 ### Zorginformatiebouwstenen
 
-De volgende zibs vallen min of meer onder het thema vitale gegevens.
+De volgende zibs vallen min of meer onder het thema middelengebruik.
 
-| Gegevensset | zib | Zib element met de hoofd waarde |
-| ----------- | --- | ------------------------------- |
-| BgZ, eOverdracht | [ZIB Alcoholgebruik](https://zibs.nl/wiki/AlcoholGebruik-v3.1(2017NL)) | |
-| BgZ, eOverdracht | [ZIB Drugsgebruik](https://zibs.nl/wiki/DrugsGebruik-v3.2(2017NL))) | |
-| BgZ, eOverdracht | [ZIB Tabakgebruik](https://zibs.nl/wiki/TabakGebruik-v3.1(2017NL)) | |
+[ZIB Alcoholgebruik](https://zibs.nl/wiki/AlcoholGebruik-v3.1(2017NL))
+[ZIB Drugsgebruik](https://zibs.nl/wiki/DrugsGebruik-v3.2(2017NL))
+[ZIB Tabakgebruik](https://zibs.nl/wiki/TabakGebruik-v3.1(2017NL))
 
 ### View Definition
 
@@ -20,22 +18,22 @@ De volgende zibs vallen min of meer onder het thema vitale gegevens.
 
 ### Request
 
-N.B. Eerste request is optimaal en wordt ondersteund door Epic en Sanday. De andere requests zijn de "officiele" BgZ requests en zijn nodig voor uitvragen van Zorgplatform.
+N.B. Bij een request met 'category=social-history' komen er ook andere obervaties mee dan alleen het middelengebruik. Daarom is het algemene request simpelweg de optelling van de afzonderlijke requests. 
 
-1. Opvragen (search) vitale gegevens
+1. Opvragen (search) middelengebruik
 
-    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&category=social-history`
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://snomed.info/sct|228273003,http://snomed.info/sct|228366006,http://snomed.info/sct|365980008`
 
-1. Opvragen (search) alcoholgebruik (BgZ) -> opzoeken op zibs.nl bij bgz-2017
+1. Opvragen (search) alcoholgebruik (BgZ)
 
-    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://loinc.org|85354-9`
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://snomed.info/sct|228273003`
 
 1. Opvragen (search) drugsgebruik (BgZ)
 
-    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://loinc.org|29463-7`
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://snomed.info/sct|228366006`
 
 1. Opvragen (search) tabakgebruik (BgZ)
 
-    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://loinc.org|8302-2,http://loinc.org|8306-3,http://loinc.org|8308-9`
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://snomed.info/sct|365980008`
 
 {% include bronsysteem-herkennen.md %}

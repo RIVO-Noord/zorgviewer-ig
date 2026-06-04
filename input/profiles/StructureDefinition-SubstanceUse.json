@@ -28,18 +28,44 @@
                 "mustSupport": true
             },
             {
-                "id": "Observation.effectiveDateTime",
+                "id": "Observation.effectivePeriod",
                 "path": "Observation.effective[x]",
                 "mustSupport": true
             },
             {
-                "id": "Observation.performer",
-                "path": "Observation.performer",
+                "id": "Observation.issued",
+                "path": "Observation.issued",
                 "mustSupport": true
             },
             {
                 "id": "Observation.value",
                 "path": "Observation.value[x]",
+                "type": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.comment",
+                "path": "Observation.comment",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component.code",
+                "path": "Observation.component.code",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component.value",
+                "path": "Observation.component.value[x]",
                 "type": [
                     {
                         "extension": [
@@ -58,46 +84,6 @@
                             }
                         ],
                         "code": "CodeableConcept"
-                    },
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "string"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.comment",
-                "path": "Observation.comment",
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.bodySite",
-                "path": "Observation.bodySite",
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.method",
-                "path": "Observation.method",
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.component.value",
-                "path": "Observation.component.value[x]",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "Quantity"
                     }
                 ],
                 "mustSupport": true
