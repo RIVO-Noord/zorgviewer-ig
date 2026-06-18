@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pneumokokken-risicoconditie",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pneumokokken-risicoconditie",
+  "version": "1.0.0",
+  "name": "PneumokokkenRisicoconditie",
+  "title": "Pneumokokken Vaccinatie - Risicoconditie (Groep 2)",
+  "status": "draft",
+  "description": "Medische risicogroepen voor pneumokokkenvaccinatie conform RIVM-richtlijn. Diagnosen die een indicatie vormen voor pneumokokkenvaccinatie ongeacht leeftijd.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          { "code": "38096003",   "display": "Functional asplenia (disorder)" },
+          { "code": "234422006",  "display": "Absence of spleen (disorder)" },
+          { "code": "700250006",  "display": "Hyposplenia (disorder)" },
+          { "code": "230745008",  "display": "Cerebrospinal fluid leak (disorder)" },
+          { "code": "709044004",  "display": "Chronic kidney disease (disorder)" },
+          { "code": "52254009",   "display": "Nephrotic syndrome (disorder)" },
+          { "code": "73211009",   "display": "Diabetes mellitus (disorder)" },
+          { "code": "84114007",   "display": "Heart failure (disorder)" },
+          { "code": "13645005",   "display": "Chronic obstructive lung disease (disorder)" },
+          { "code": "19943007",   "display": "Cirrhosis of liver (disorder)" },
+          { "code": "86406008",   "display": "Human immunodeficiency virus infection (disorder)" },
+          { "code": "370388006",  "display": "Patient immunocompromised (finding)" },
+          { "code": "234532001",  "display": "Immunodeficiency disorder (disorder)" },
+          { "code": "417357006",  "display": "Sickling disorder due to hemoglobin S (disorder)" },
+          { "code": "363346000",  "display": "Malignant neoplastic disease (disorder)" },
+          { "code": "1119303003", "display": "Post-acute sequelae of COVID-19 (disorder)" }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-nl",
+        "concept": [
+          { "code": "D73.8",  "display": "Overige gespecificeerde ziekten van milt (functionele asplenie)" },
+          { "code": "Q89.01", "display": "Asplenie (congenitaal)" },
+          { "code": "G96.0",  "display": "Liquorlekkage" },
+          { "code": "N18",    "display": "Chronische nierziekte" },
+          { "code": "N04",    "display": "Nefrotisch syndroom" },
+          { "code": "E10",    "display": "Diabetes mellitus type 1" },
+          { "code": "E11",    "display": "Diabetes mellitus type 2" },
+          { "code": "I50",    "display": "Hartfalen" },
+          { "code": "J44",    "display": "Andere chronische obstructieve longziekte (COPD)" },
+          { "code": "K74",    "display": "Fibrose en cirrose van lever" },
+          { "code": "B20",    "display": "HIV-infectie met infectieziekten en parasitaire ziekten" },
+          { "code": "D57",    "display": "Sikkelcelaandoeningen" },
+          { "code": "U09.9",  "display": "Post-COVID-19 aandoening, niet gespecificeerd" }
+        ]
+      }
+    ]
+  }
+}

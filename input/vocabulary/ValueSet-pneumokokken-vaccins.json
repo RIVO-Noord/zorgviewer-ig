@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pneumokokken-vaccins",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pneumokokken-vaccins",
+  "version": "1.0.0",
+  "name": "PneumokokkenVaccins",
+  "title": "Pneumokokken Vaccins (ATC J07AH)",
+  "status": "draft",
+  "description": "Pneumokokkenvaccins conform ATC-klasse J07AH. Omvat polysacharidevaccins (PPV23) en geconjugeerde vaccins (PCV13, PCV15, PCV20).",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.whocc.no/atc",
+        "concept": [
+          { "code": "J07AH01", "display": "Pneumococcal vaccine, purified polysaccharides antigen (PPV23)" },
+          { "code": "J07AH04", "display": "Pneumococcal vaccine, purified polysaccharides antigen conjugated (PCV13)" },
+          { "code": "J07AH08", "display": "Pneumococcal vaccine, purified polysaccharides antigen, 15-valent conjugated (PCV15)" },
+          { "code": "J07AH09", "display": "Pneumococcal vaccine, purified polysaccharides antigen, 20-valent conjugated (PCV20)" }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          { "code": "333598008", "display": "Pneumococcal vaccine (product)" },
+          { "code": "12866006",  "display": "Pneumococcal polysaccharide vaccine (product)" }
+        ]
+      }
+    ]
+  }
+}

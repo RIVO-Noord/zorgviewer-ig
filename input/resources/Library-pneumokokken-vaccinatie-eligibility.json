@@ -1,0 +1,84 @@
+{
+  "resourceType": "Library",
+  "id": "pneumokokken-vaccinatie-eligibility",
+  "url": "http://fhir.hl7.nl/zorgviewer/Library/pneumokokken-vaccinatie-eligibility",
+  "version": "1.0.0",
+  "name": "PneumokokkenVaccinatieEligibility",
+  "title": "Pneumokokken Vaccinatie - Eligibility CQL Library",
+  "status": "draft",
+  "type": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/library-type",
+        "code": "logic-library",
+        "display": "Logic Library"
+      }
+    ]
+  },
+  "description": "CQL-logica voor het bepalen van de indicatie voor pneumokokkenvaccinatie conform RIVM-richtlijn. Evalueert groep 1 (leeftijd >= 60) en groep 2 (medische risicogroepen) en de vaccinatiestatus.",
+  "relatedArtifact": [
+    {
+      "type": "depends-on",
+      "display": "FHIRHelpers 3.0.0",
+      "resource": { "reference": "Library/FHIRHelpers" }
+    },
+    {
+      "type": "depends-on",
+      "display": "Pneumokokken Risicoconditie ValueSet",
+      "resource": { "reference": "ValueSet/pneumokokken-risicoconditie" }
+    },
+    {
+      "type": "depends-on",
+      "display": "Pneumokokken Vaccins ValueSet",
+      "resource": { "reference": "ValueSet/pneumokokken-vaccins" }
+    },
+    {
+      "type": "depends-on",
+      "display": "Cochleair Implantaat ValueSet",
+      "resource": { "reference": "ValueSet/pneumokokken-implantaat" }
+    }
+  ],
+  "dataRequirement": [
+    { "type": "Patient" },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSetReference": {
+            "reference": "ValueSet/pneumokokken-risicoconditie"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Device",
+      "codeFilter": [
+        {
+          "path": "type",
+          "valueSetReference": {
+            "reference": "ValueSet/pneumokokken-implantaat"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Immunization",
+      "codeFilter": [
+        {
+          "path": "vaccineCode",
+          "valueSetReference": {
+            "reference": "ValueSet/pneumokokken-vaccins"
+          }
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "contentType": "text/cql",
+      "url": "Library-pneumokokken-vaccinatie-eligibility.cql",
+      "title": "Pneumokokken Vaccinatie Eligibility CQL"
+    }
+  ]
+}

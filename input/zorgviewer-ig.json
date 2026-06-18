@@ -69,6 +69,11 @@
         "id": "group-sam",
         "name": "Samenstellingen",
         "description": "Samenstelingen van zibs."
+      },
+      {
+        "id": "group-pnv",
+        "name": "Pneumokokken Vaccinatie Indicatie",
+        "description": "Zorgpad voor pneumokokkenvaccinatie-indicatie conform RIVM-richtlijn."
       }
     ],
     "resource": [
@@ -726,6 +731,62 @@
         "name": "MP9 Toedieningsafspraak Example",
         "description": "Dit is een Toedieningsafspraak voorbeeld van MP9.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Toedieningsafspraak"
+      },
+      {
+        "reference": {
+          "reference": "PlanDefinition/pneumokokken-vaccinatie-indicatie"
+        },
+        "name": "PlanDefinition Pneumokokken Vaccinatie Indicatie",
+        "description": "Zorgpad voor pneumokokkenvaccinatie-indicatie conform RIVM-richtlijn. ECA-rule met CQL-eligibility voor groep 1 (leeftijd ≥ 60) en groep 2 (medische risicogroepen).",
+        "groupingId": "group-pnv"
+      },
+      {
+        "reference": {
+          "reference": "Library/pneumokokken-vaccinatie-eligibility"
+        },
+        "name": "Library Pneumokokken Vaccinatie Eligibility",
+        "description": "CQL-logica voor het bepalen van de indicatie voor pneumokokkenvaccinatie conform RIVM-richtlijn.",
+        "groupingId": "group-pnv"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pneumokokken-vaccineren"
+        },
+        "name": "ActivityDefinition Pneumokokken Vaccineren",
+        "description": "Toediening van een pneumokokkenvaccin (PPV23 of geconjugeerd PCV).",
+        "groupingId": "group-pnv"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pneumokokken-informed-consent"
+        },
+        "name": "ActivityDefinition Pneumokokken Informed Consent",
+        "description": "Communicatie over de gevolgen van pneumokokkenvaccinatie met de patiënt.",
+        "groupingId": "group-pnv"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/pneumokokken-risicoconditie"
+        },
+        "name": "ValueSet Pneumokokken Risicoconditie",
+        "description": "Medische risicogroepen voor pneumokokkenvaccinatie (groep 2) conform RIVM-richtlijn.",
+        "groupingId": "group-pnv"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/pneumokokken-vaccins"
+        },
+        "name": "ValueSet Pneumokokken Vaccins",
+        "description": "Pneumokokkenvaccins conform ATC-klasse J07AH (PPV23, PCV13, PCV15, PCV20).",
+        "groupingId": "group-pnv"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/pneumokokken-implantaat"
+        },
+        "name": "ValueSet Pneumokokken Implantaat",
+        "description": "Cochleaire implantaten als indicatie voor pneumokokkenvaccinatie.",
+        "groupingId": "group-pnv"
       }
     ],
     "page": {
