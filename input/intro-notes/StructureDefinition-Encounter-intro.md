@@ -16,6 +16,6 @@
 
 1. Opvragen (search) contacten inclusief ziekenhuis opnames
 
-    `GET <ontsluiten-bronsysteem-base>/Encounter?class=http://hl7.org/fhir/v3/ActCode|IMP,http://hl7.org/fhir/v3/ActCode|ACUTE,http://hl7.org/fhir/v3/ActCode|NONAC`
+    `GET <ontsluiten-bronsysteem-base>/Encounter?class=http://hl7.org/fhir/v3/ActCode|IMP,http://hl7.org/fhir/v3/ActCode|ACUTE,http://hl7.org/fhir/v3/ActCode|NONAC,http://hl7.org/fhir/v3/ActCode|AMB`
 
 {% include bronsysteem-herkennen.md %}

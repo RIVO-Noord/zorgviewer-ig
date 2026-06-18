@@ -1,0 +1,205 @@
+{
+    "id": "40bbb218-2bcf-4851-a104-dfb910408587",
+    "meta": {
+        "profile": [
+            "http://fhir.nl/fhir/StructureDefinition/nl-core-patient"
+        ]
+    },
+    "name": [
+        {
+            "use": "official",
+            "text": "Dhr. P. Patient-4",
+            "given": [
+                "Piet",
+                "P."
+            ],
+            "_given": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                            "valueCode": "CL"
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                            "valueCode": "IN"
+                        }
+                    ]
+                }
+            ],
+            "family": "Patient-4",
+            "prefix": [
+                "Dhr."
+            ],
+            "_family": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                        "valueString": "Patient-4"
+                    }
+                ]
+            },
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                    "valueCode": "NL1"
+                }
+            ]
+        }
+    ],
+    "text": {
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Id 60362 (CGM Huisarts patiënt ID), Piet P. Patient-4, Man, 1 januari 2010</div><div><a href=\"tel:0123456789\">0123456789</a> (Tel Mobiel)</div><div>Teststraat 2 L, 1234LL, Testplaats, NL (Bezoek)</div><div>Huisarts: Pharmeon acceptatie zorgverlener</div></div>",
+        "status": "generated"
+    },
+    "gender": "male",
+    "_gender": {
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "M",
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "display": "Man"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "address": [
+        {
+            "city": "Testplaats",
+            "line": [
+                "Teststraat 2 L"
+            ],
+            "text": "Teststraat 2 L, 1234LL, Testplaats, NL",
+            "type": "both",
+            "_line": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                            "valueString": "Teststraat"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                            "valueString": "2"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                            "valueString": "L"
+                        }
+                    ]
+                }
+            ],
+            "country": "NL",
+            "_country": {
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "code": "NL",
+                                    "system": "urn:oid:1.0.3166.1.2.2",
+                                    "display": "Nederland"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "code": "PHYS",
+                                "system": "http://hl7.org/fhir/v3/AddressUse",
+                                "display": "Woon-/verblijfadres"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "postalCode": "1234LL"
+        }
+    ],
+    "telecom": [
+        {
+            "use": "mobile",
+            "value": "0123456789",
+            "system": "phone",
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "code": "MC",
+                                "system": "http://hl7.org/fhir/v3/AddressUse",
+                                "display": "Mobiel telefoonnummer"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "birthDate": "2010-01-01",
+    "extension": [
+        {
+            "url": "https://portavita.nl/fhir/StructureDefinition/SendVitalSignsAllowed-Period",
+            "valuePeriod": {
+                "end": "2099-12-30T22:00:00+00:00",
+                "start": "2025-09-17T20:00:00+00:00"
+            }
+        },
+        {
+            "url": "https://portavita.nl/fhir/StructureDefinition/FirstPermittedEhrDisclosure-DateTime",
+            "valueDateTime": "2026-06-17T11:25:49.674353824Z"
+        }
+    ],
+    "identifier": [
+        {
+            "system": "http://cgmhuisarts.cgm.nl/fhir/NamingSystem/patientID",
+            "value": "60362"
+        },
+        {
+            "system": "https://cgm.com/nl/externNumber",
+            "value": "10003846"
+        }
+    ],
+    "resourceType": "Patient",
+    "deceasedBoolean": false,
+    "generalPractitioner": [
+        {
+            "display": "Pharmeon acceptatie zorgverlener",
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                    "valueReference": {
+                        "display": "Huisartsen, niet apotheekhoudend",
+                        "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410"
+                    }
+                }
+            ],
+            "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767"
+        }
+    ],
+    "managingOrganization": {
+        "display": "Pharmeon-praktijk acceptatieomgeving",
+        "reference": "Organization/33524c46-eb35-4cfd-a9bc-7860c47225a0",
+        "identifier": {
+            "value": "01990140",
+            "system": "urn:oid:2.16.840.1.113883.2.4.6.1"
+        }
+    }
+}
