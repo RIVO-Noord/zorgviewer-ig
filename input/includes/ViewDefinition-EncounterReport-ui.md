@@ -69,6 +69,14 @@
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
+<td>26-3-2025</td>
+<td>jicht</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+</tr><tr><td></td><td colspan=4>
+<b>Regels</b><br/>(E) jicht<br/>(P) test proactief econsult p regel<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
 <td>11-3-2025</td>
 <td>Contactverslag van Consult op 11 maart 2025 met Pharmeon acceptatie zorgverlener</td>
 <td>Pharmeon acceptatie zorgverlener</td>

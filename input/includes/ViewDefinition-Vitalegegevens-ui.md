@@ -13,6 +13,19 @@
 </tr>
 <tr><td>+</td>
 <td>CGM</td>
+<td>2-6-2026</td>
+<td>gewicht patiënt</td>
+<td>75 kg</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
+<b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
+<b>Toelichting</b><br/>dit is de opmerking voor de patient bij het gewicht<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
 <td>4-3-2026</td>
 <td>diastolische bloeddruk</td>
 <td>75 mm[Hg]</td>

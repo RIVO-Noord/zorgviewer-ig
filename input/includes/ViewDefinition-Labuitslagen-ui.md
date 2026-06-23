@@ -14,6 +14,17 @@
 </tr>
 <tr><td>+</td>
 <td>CGM</td>
+<td>26-5-2026</td>
+<td>LDL-cholesterol</td>
+<td>5 mmol/L</td>
+<td></td>
+<td> .. 2.5</td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
 <td>4-3-2026</td>
 <td>kalium</td>
 <td>60</td>

@@ -16,6 +16,20 @@
 <th>(VStatus)</th>
 </tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>3-3-2026</td>
+<td>VERAPAMIL</td>
+<td></td>
+<td>medication</td>
+<td></td>
+<td></td>
+<td></td>
+<td>active</td>
+<td></td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
 <td>Sanday</td>
 <td>6-8-2025</td>
 <td>HUISSTOFMIJTENALLERGEEN</td>
