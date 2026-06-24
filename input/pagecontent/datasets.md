@@ -98,6 +98,18 @@ Vanuit project Zorgviewer is de ACP deels in scope, namelijk de BehandelAanwijzi
 
 Voor de volledige dataset, kijk op [Nictiz ART-DECOR](https://decor.nictiz.nl/art-decor/decor-project--pall-izppz-)
 
+### Pneumokokkenvaccinatie
+
+De pneumokokkenvaccinatie is een preventieve vaccinatie conform de RIVM-richtlijn voor twee doelgroepen: personen van 60 jaar en ouder (groep 1) en personen met een medische risicoconditie zoals asplenie, cochleaire implantaten of immuundeficiëntie (groep 2).
+
+Het zorgpad beschrijft een ECA-regel (Event-Condition-Action) die op basis van CQL-logica de indicatie bepaalt en de volgende stappen ondersteunt:
+
+* Bepalen van de vaccinatie-indicatie op basis van leeftijd of medische risicoconditie;
+* Toediening van een pneumokokkenvaccin (PPV23 of geconjugeerd PCV);
+* Informed consent communicatie met de patiënt.
+
+Zie [PlanDefinition pneumokokkenvaccinatie-indicatie](PlanDefinition-pneumokokken-vaccinatie-indicatie.html) voor de FHIR-representatie van dit zorgpad.
+
 ### Verpleegkundige Overdracht
 
 ...

@@ -3,6 +3,7 @@
 ### Example
 
 * [BgZ2017 DataRequirements in scope voor MVP2](PlanDefinition-BgZ2017.html)
+* [Pneumokokkenvaccinatie-indicatie zorgpad](PlanDefinition-pneumokokken-vaccinatie-indicatie.html)
 
 ### Request
 

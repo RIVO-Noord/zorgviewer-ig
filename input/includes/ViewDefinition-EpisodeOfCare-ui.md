@@ -34,6 +34,14 @@
 </tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>2-3-2026</td>
+<td>2-3-2026</td>
+<td>Keelpijn</td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+</td></tr>
+<tr><td>+</td>
 <td>Sanday</td>
 <td>15-12-2025</td>
 <td></td>
