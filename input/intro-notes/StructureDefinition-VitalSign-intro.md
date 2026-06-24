@@ -12,6 +12,9 @@ De volgende zibs vallen min of meer onder het thema vitale gegevens.
 | eOverdracht | [ZIB Temperatuur](https://zibs.nl/wiki/Lichaamstemperatuur-v3.1(2017NL)) | TemperatuurWaarde |
 | eOverdracht | [ZIB Ademhaling](https://zibs.nl/wiki/Ademhaling-v3.1(2017NL)) | Ademfrequentie |
 | eOverdracht | [ZIB Polsfrequentie](https://zibs.nl/wiki/Polsfrequentie-v3.1(2017NL)) | PolsfrequentieWaarde |
+| BgZ, eOverdracht | [ZIB Alcoholgebruik](https://zibs.nl/wiki/AlcoholGebruik-v3.1(2017NL))
+| BgZ, eOverdracht | [ZIB Drugsgebruik](https://zibs.nl/wiki/DrugsGebruik-v3.2(2017NL))
+| BgZ, eOverdracht | [ZIB Tabakgebruik](https://zibs.nl/wiki/TabakGebruik-v3.1(2017NL))
 | Huisarts zelfmetingen | [ZIB AlgemeneMeting](https://zibs.nl/wiki/AlgemeneMeting-v3.0(2017NL)) | Uitslag/UitslagWaarde |
 | nvt | [ZIB O2Saturatie](https://zibs.nl/wiki/O2Saturatie-v3.1(2017NL)) | SpO2Waarde |
 | nvt | [ZIB Hartfrequentie](https://zibs.nl/wiki/Hartfrequentie-v3.1(2017NL)) | HartfrequentieWaarde |
@@ -31,7 +34,7 @@ De volgende zibs vallen min of meer onder het thema vitale gegevens.
 
 ### Request
 
-N.B. Eerste request is optimaal en wordt ondersteund door Epic en Sanday. De andere requests zijn de "officiele" BgZ requests en zijn nodig voor uitvragen van Zorgplatform.
+N.B. Eerste request is optimaal en wordt ondersteund door Epic (deels) en Sanday. De andere requests zijn de "officiele" BgZ requests en zijn nodig voor uitvragen van Zorgplatform. Voor Epic gelden deze requests ook voor middelengebruik, want deze komen niet mee met filter 'category=vital-signs'
 
 1. Opvragen (search) vitale gegevens
 
@@ -48,5 +51,17 @@ N.B. Eerste request is optimaal en wordt ondersteund door Epic en Sanday. De and
 1. Opvragen (search) lengte (BgZ)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://loinc.org|8302-2,http://loinc.org|8306-3,http://loinc.org|8308-9`
+
+1. Opvragen (search) alcoholgebruik (BgZ/Epic)
+
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://snomed.info/sct|228273003`
+
+1. Opvragen (search) drugsgebruik (BgZ/Epic)
+
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://snomed.info/sct|228366006`
+
+1. Opvragen (search) tabakgebruik (BgZ/Epic)
+
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://snomed.info/sct|365980008`
 
 {% include bronsysteem-herkennen.md %}

@@ -129,6 +129,14 @@
 <b>Diagnose</b><br/>(ICPC) A20 <br/>
 </td></tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td></td>
+<td>Keelpijn</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+</td></tr>
+<tr><td>+</td>
 <td>Sanday</td>
 <td></td>
 <td>Hernia inguinalis</td>

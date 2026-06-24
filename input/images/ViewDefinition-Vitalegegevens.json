@@ -84,7 +84,7 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='Observation' and (category.coding.code='vital-signs' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult'))"
+      "forEach": "entry.resource.where(resourceType='Observation' and (category.coding.code='vital-signs' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse'))"
     }
   ]
 }
