@@ -21,9 +21,9 @@
           "description": "Datum van de vaststelling van het gebruik."
         },
         {
-          "path": "iif(effectivePeriod.start.exists() and effectivePeriod.end.exists(), effectivePeriod.start+' tot '+effectivePeriod.end, iif(effectivePeriod.start.exists(), 'vanaf '+effectivePeriod.start, iif(effectivePeriod.end.exists(), 'tot '+effectivePeriod.end, 'vanaf '+effectiveDateTime)))",
-          "name": "Gebruiksperiode",          
-          "type": "dateTime",
+          "path": "iif(effectivePeriod.start.exists() and effectivePeriod.end.exists(), effectivePeriod.start.toString()+' tot '+effectivePeriod.end.toString(), iif(effectivePeriod.start.exists(), 'vanaf '+effectivePeriod.start.toString(), iif(effectivePeriod.end.exists(), 'tot '+effectivePeriod.end.toString(), 'vanaf '+effectiveDateTime.toString())))",
+          "name": "Gebruiksperiode",
+          "type": "string",
           "tag": [ { "name": "Zib element", "value": "WaarnemingGebruik" } ],
           "description": "EffectivePeriod is voorgeschreven in de ZIB, maar in veel gevallen zal de data geen periode bevatten. In die gevallen is de datum van vaststelling bepalend voor interpretatie."
         },

@@ -113,6 +113,17 @@
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
+<td>2-3-2026</td>
+<td>2-3-2026</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Episode</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
 <td>26-2-2026</td>
 <td>26-2-2026</td>
 <td>Pharmeon acceptatie zorgverlener</td>

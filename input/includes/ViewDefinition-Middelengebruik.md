@@ -24,8 +24,8 @@
 </tr>
 <tr>
 <td>Gebruiksperiode</td>
-<td><samp>iif(effectivePeriod.start.exists() and effectivePeriod.end.exists(), effectivePeriod.start+' tot '+effectivePeriod.end, iif(effectivePeriod.start.exists(), 'vanaf '+effectivePeriod.start, iif(effectivePeriod.end.exists(), 'tot '+effectivePeriod.end, 'vanaf '+effectiveDateTime)))</samp></td>
-<td><code>dateTime</code></td>
+<td><samp>iif(effectivePeriod.start.exists() and effectivePeriod.end.exists(), effectivePeriod.start.toString()+' tot '+effectivePeriod.end.toString(), iif(effectivePeriod.start.exists(), 'vanaf '+effectivePeriod.start.toString(), iif(effectivePeriod.end.exists(), 'tot '+effectivePeriod.end.toString(), 'vanaf '+effectiveDateTime.toString())))</samp></td>
+<td><code>string</code></td>
 <td>WaarnemingGebruik</td>
 <td>EffectivePeriod is voorgeschreven in de ZIB, maar in veel gevallen zal de data geen periode bevatten. In die gevallen is de datum van vaststelling bepalend voor interpretatie.</td>
 </tr>

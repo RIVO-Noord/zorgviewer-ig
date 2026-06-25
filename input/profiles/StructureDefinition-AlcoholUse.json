@@ -1,14 +1,14 @@
 {
     "resourceType": "StructureDefinition",
-    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/SubstanceUse",
-    "name": "SubstanceUse",
-    "title": "SubstanceUse",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AlcoholUse",
+    "name": "AlcoholUse",
+    "title": "AlcoholUse",
     "status": "active",
-    "description": "Middelengebruik",
+    "description": "Alcoholgebruik",
     "kind": "resource",
     "abstract": false,
     "type": "Observation",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+    "baseDefinition": "http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse",
     "derivation": "constraint",
     "differential": {
         "element": [
@@ -40,17 +40,6 @@
             {
                 "id": "Observation.value",
                 "path": "Observation.value[x]",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "CodeableConcept"
-                    }
-                ],
                 "mustSupport": true
             },
             {
@@ -66,26 +55,6 @@
             {
                 "id": "Observation.component.value",
                 "path": "Observation.component.value[x]",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "Quantity"
-                    },
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "CodeableConcept"
-                    }
-                ],
                 "mustSupport": true
             }
         ]
