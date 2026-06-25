@@ -62,7 +62,7 @@
           "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='Observation' and (code.coding.where(code='228273003').exists() or code.coding.where(code='228366006').exists() or code.coding.where(code='365980008').exists()))"
+      "forEach": "entry.resource.where(resourceType='Observation' and (code.coding.where(system='http://snomed.info/sct' and (code='228273003' or code='228366006' or code='365980008')).exists() or code.coding.where(system='http://loinc.org' and (code='11331-6' or code='72166-2' or code='11343-1')).exists() or code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and (code='1739' or code='1591' or code='2418' or code='2419' or code='2420' or code='2421' or code='2422' or code='3022')).exists()))"
     }
   ]
 }
