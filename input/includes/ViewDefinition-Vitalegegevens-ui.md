@@ -13,6 +13,39 @@
 </tr>
 <tr><td>+</td>
 <td>CGM</td>
+<td>4-6-2026</td>
+<td>roken</td>
+<td>ja</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1739 roken<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-6-2026</td>
+<td>drugsgebruik</td>
+<td>nooit</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#3022 drugsgebruik<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-6-2026</td>
+<td>alcoholgebruik</td>
+<td>1 /d</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1591 alcoholgebruik<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
 <td>2-6-2026</td>
 <td>gewicht patiënt</td>
 <td>75 kg</td>
