@@ -126,19 +126,6 @@
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>+</td>
-<td>CGM</td>
-<td>2-6-2023</td>
-<td>1-9-2023</td>
-<td>HEPATITIS-A-VACCIN VAQTA JR WWSP 0,5ML (50E/ML)</td>
-<td>gebruik bekend<br/>Omschudden vlak voor gebruik<br/>In koelkast bewaren (niet in vries...</td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Afspraakdatum</b><br/>2-6-2023<br/>
-<b>Voorschrijver</b><br/>Pharmeon acceptatie zorgverlener<br/>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><td>+</td>
 <td>EPS</td>
 <td></td>
 <td></td>

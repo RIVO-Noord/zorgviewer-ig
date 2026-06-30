@@ -30,7 +30,7 @@
 <td>4-3-2026</td>
 <td>4-3-2026</td>
 <td>Gesprek levenseinde/behandelwensen</td>
-<td></td>
+<td>Gesprek levenseinde/behandelwensen</td>
 </tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td>+</td>
@@ -38,7 +38,7 @@
 <td>2-3-2026</td>
 <td>2-3-2026</td>
 <td>Keelpijn</td>
-<td></td>
+<td>Keelpijn</td>
 </tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td>+</td>
@@ -94,7 +94,7 @@
 <td>15-11-2012</td>
 <td>15-11-2012</td>
 <td>Kortademigheid</td>
-<td></td>
+<td>Kortademigheid</td>
 </tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td>+</td>
@@ -102,7 +102,7 @@
 <td>10-8-2012</td>
 <td>4-3-2026</td>
 <td>Oedeem</td>
-<td></td>
+<td>Oedeem</td>
 </tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td>+</td>
@@ -110,7 +110,7 @@
 <td>20-4-2011</td>
 <td>20-4-2011</td>
 <td>Polsfractuur</td>
-<td></td>
+<td>Polsfractuur</td>
 </tr><tr><td></td><td colspan=5>
 </td></tr>
 </tbody>

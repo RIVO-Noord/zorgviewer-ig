@@ -23,9 +23,9 @@
 <td>medication</td>
 <td></td>
 <td></td>
-<td></td>
+<td>Overig</td>
 <td>active</td>
-<td></td>
+<td>Actief</td>
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
@@ -79,9 +79,9 @@
 <td></td>
 <td>high</td>
 <td>severe</td>
-<td></td>
+<td>Misselijk en braken</td>
 <td>active</td>
-<td></td>
+<td>Actief</td>
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
@@ -93,9 +93,9 @@
 <td>medication</td>
 <td></td>
 <td>severe</td>
-<td></td>
+<td>Overig</td>
 <td>active</td>
-<td></td>
+<td>Actief</td>
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
@@ -107,9 +107,9 @@
 <td>medication</td>
 <td></td>
 <td>mild</td>
-<td></td>
+<td>Overig</td>
 <td>inactive</td>
-<td></td>
+<td>Niet meer aanwezig</td>
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
@@ -135,7 +135,7 @@
 <td>food</td>
 <td></td>
 <td>severe</td>
-<td></td>
+<td>Anaphylaxis (disorder)</td>
 <td></td>
 <td></td>
 <td></td>

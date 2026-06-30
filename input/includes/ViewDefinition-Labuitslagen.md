@@ -52,10 +52,10 @@
 </tr>
 <tr>
 <td>Materiaal</td>
-<td><samp>specimen.resolve().type.text</samp></td>
+<td><samp>specimen.resolve().type.text | specimen.display</samp></td>
 <td><code>string</code></td>
 <td>Monster/ Monstermateriaal</td>
-<td><b>Sanday:</b> Levert geen type materiaal</td>
+<td><b>Sanday, CGM:</b> Levert geen type materiaal</td>
 </tr>
 <tr>
 <td>Status</td>
