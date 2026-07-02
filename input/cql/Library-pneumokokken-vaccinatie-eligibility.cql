@@ -18,7 +18,7 @@ valueset "Cochleair Implantaat":
 context Patient
 
 // ---------------------------------------------------------------------------
-// Groep 1 – Leeftijdsgebonden risico
+// Groep 1 - Leeftijdsgebonden risico
 // ---------------------------------------------------------------------------
 
 define "Leeftijd":
@@ -28,7 +28,7 @@ define "Groep 1 Eligible":
   "Leeftijd" >= 60
 
 // ---------------------------------------------------------------------------
-// Groep 2 – Medische risicogroepen
+// Groep 2 - Medische risicogroepen
 // ---------------------------------------------------------------------------
 
 // In STU3, Condition.clinicalStatus is a code (not CodeableConcept)
@@ -94,7 +94,7 @@ define "Nooit Gevaccineerd":
   "Laatste Vaccinatie Datum" is null
 
 // Hervaccinatie-interval: PPV23 eenmalig voor groep 1 en de meeste groep 2.
-// Voor (functionele) asplenie gelden aanvullende regels – zie Speciale Instructies.
+// Voor (functionele) asplenie gelden aanvullende regels - zie Speciale Instructies.
 define "Hervaccinatie Interval Verstreken":
   "Laatste Vaccinatie Datum" is not null
     and years between "Laatste Vaccinatie Datum" and Today() >= 5
@@ -104,7 +104,7 @@ define "Vaccinatie Aanbevolen":
     and ("Nooit Gevaccineerd" or "Hervaccinatie Interval Verstreken")
 
 // ---------------------------------------------------------------------------
-// Speciale groep: (functionele) asplenie – extra vaccinatieschema vereist
+// Speciale groep: (functionele) asplenie - extra vaccinatieschema vereist
 // ---------------------------------------------------------------------------
 
 define "Heeft Asplenie":

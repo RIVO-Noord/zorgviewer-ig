@@ -1,0 +1,284 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "pancreas-resectabiliteit-en-behandelpad",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Pancreastumoren - Resectabiliteit en Behandelpad</b> (ECA Rule, draft)</p><p>Computable deelverzameling van het Regionaal Zorgpad Pancreastumoren (versie 0.98): resectabiliteitsclassificatie op basis van vaatbetrokkenheid, de indicatie voor biliaire drainage op basis van bilirubine, aanvullende diagnostiek, doorlooptijd-streefnormen en postoperatieve vervolgstappen. De inhoud van hoofdstuk 5 (verwijzing naar het regionale MDO) is in de brondocumentatie nog niet vastgesteld (conform SONCOS 2026) en daarom hier niet gemodelleerd; zie de narratieve pagina voor de volledige scope-afbakening.</p><ol><li><b>Stap 1</b> - Aanmelding en MDO-bespreking (streefnorm: binnen 10 dagen)</li><li><b>Stap 2</b> - Radiologische stadiëring: CT-abdomen pancreasprotocol (streefnorm verslag: binnen 1 week), met optioneel <b>Stap 2a</b> aanvullende MRI</li><li><b>Stap 3</b> - Resectabiliteitsclassificatie (resectabel / borderline resectabel / lokaal gevorderd)</li><li><b>Stap 4</b> - Pathologische bevestiging (EUS-FNB), indien kandidaat systeemtherapie</li><li><b>Stap 5</b> - Biliaire drainage (ERCP), indien geïndiceerd op basis van bilirubine, met <b>Stap 5a</b> PTCD en <b>Stap 5b</b> EUS-geleide galwegdrainage als alternatief bij falen ERCP</li><li><b>Stap 6</b> - Systeemtherapie, indien borderline resectabel of lokaal gevorderd (streefnorm start: binnen 4 weken na beeldvorming)</li><li><b>Stap 7</b> - Operatieve resectie, indien resectabel (streefnorm: binnen 6 weken na MDO, uitsluitend in het pancreascentrum), met <b>Stap 7a</b> adjuvante systeemtherapie en <b>Stap 7b</b> postoperatieve follow-up</li></ol></div>"
+  },
+  "url": "http://fhir.hl7.nl/zorgviewer/PlanDefinition/pancreas-resectabiliteit-en-behandelpad",
+  "version": "1.0.0",
+  "name": "PancreasResectabiliteitEnBehandelpad",
+  "title": "Pancreastumoren - Resectabiliteit en Behandelpad",
+  "type": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/plan-definition-type",
+        "code": "eca-rule",
+        "display": "ECA Rule"
+      }
+    ]
+  },
+  "status": "draft",
+  "date": "2026-07-02",
+  "publisher": "RIVO-Noord",
+  "description": "Computable deelverzameling van het Regionaal Zorgpad Pancreastumoren (Oncologienetwerk Groningen-Drenthe & Oncologienetwerk Friesland, TTN Pancreascarcinoom, versie 0.98 maart 2026): resectabiliteitsclassificatie, biliaire drainage-indicatie (met ERCP, PTCD en EUS-g als gedocumenteerde alternatieven), aanvullende diagnostiek (MRI, EUS-FNB), doorlooptijd-streefnormen, en postoperatieve vervolgstappen (adjuvante systeemtherapie, follow-upschema). Enkele stappen (aanvullende MRI, EUS-FNB buiten de systeemtherapie-indicatie, PTCD/EUS-g bij falen ERCP, adjuvante systeemtherapie-fitheid, LAPC-subclassificatie) zijn wel als actie opgenomen maar berusten op klinische beoordeling en zijn daarom niet aan een CQL-conditie gekoppeld. Bewust buiten scope: de multidisciplinaire MDO-verwijzing (Hoofdstuk 5, in de brondocumentatie zelf nog niet vastgesteld), systeemtherapie bij definitief irresectabel/gemetastaseerd pancreascarcinoom (geen metastaseringsstatus in het datamodel), pijnbestrijding, lokale ablatie en coördinatie van zorg tussen centra (Hoofdstuk 10-11).",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "NL"
+        }
+      ]
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "citation",
+      "display": "Regionaal Zorgpad Pancreastumoren, CONCEPT versie 0.98 maart 2026 (Oncologienetwerk Groningen-Drenthe & Oncologienetwerk Friesland, TTN Pancreascarcinoom)"
+    }
+  ],
+  "library": [
+    {
+      "reference": "Library/pancreas-resectabiliteit-en-drainage"
+    }
+  ],
+  "action": [
+    {
+      "id": "aanmelding-mdo",
+      "label": "Stap 1 - Aanmelding en MDO-bespreking",
+      "title": "Determine Care Needs - Aanmelding en Bespreking Regionaal MDO",
+      "description": "Patiënt met (verdenking op) pancreastumor wordt na work-up in het verwijzend centrum aangemeld voor het regionale MDO. Streefnorm: bespreking binnen 10 dagen (bij voorkeur eerstvolgend MDO). De inhoud/checklist van deze verwijzing (Hoofdstuk 5) is in de brondocumentatie nog niet vastgesteld en wordt hier daarom niet verder gemodelleerd."
+    },
+    {
+      "id": "ct-stadiering",
+      "label": "Stap 2 - Radiologische Stadiëring",
+      "title": "Diagnose - CT-abdomen Pancreasprotocol",
+      "description": "CT-abdomen met vroegportale en portoveneuze fase, bij voorkeur inclusief CT-thorax, vóór eventuele galwegdrainage. Streefnorm: verslag binnen 1 week na aanmelding.",
+      "relatedAction": [
+        {
+          "actionId": "aanmelding-mdo",
+          "relationship": "after-start",
+          "offsetDuration": { "value": 7, "unit": "d", "system": "http://unitsofmeasure.org", "code": "d" }
+        }
+      ],
+      "definition": {
+        "reference": "ActivityDefinition/pancreas-ct-abdomen-pancreasprotocol"
+      },
+      "action": [
+        {
+          "id": "mri-aanvullend",
+          "label": "Stap 2a - Aanvullende MRI (indien geïndiceerd)",
+          "title": "Diagnose - MRI volgens Pancreasprotocol",
+          "description": "Bij twijfel over de diagnose of onvoldoende afgrenzing van de tumor op CT, bij verdenking pancreascyste, of bij een op CT niet nader te classificeren leverlaesie: MRI vóór eventuele galwegdrainage. Indicatiestelling is een klinische beoordeling en wordt hier niet als CQL-conditie gemodelleerd.",
+          "definition": {
+            "reference": "ActivityDefinition/pancreas-mri-pancreasprotocol"
+          }
+        }
+      ]
+    },
+    {
+      "id": "resectabiliteitsclassificatie",
+      "label": "Stap 3 - Resectabiliteitsclassificatie",
+      "title": "Diagnose - Vaststellen Resectabiliteitscategorie",
+      "description": "Classificeer de tumor als resectabel, borderline resectabel of lokaal gevorderd op basis van de vaatbetrokkenheid (AMS, truncus coeliacus, arteria hepatica, VMS/vena porta) conform Tabel 4 (Dutch Pancreatic Cancer Group).",
+      "condition": [
+        {
+          "kind": "applicability",
+          "language": "text/cql",
+          "expression": "Alle Vaatcontacten Beschikbaar"
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "ct-stadiering",
+          "relationship": "after-end"
+        }
+      ],
+      "action": [
+        {
+          "id": "categorie-resectabel",
+          "label": "Stap 3a - Resectabel",
+          "title": "Geen of beperkt (≤ 90°) vaatcontact conform Tabel 4",
+          "condition": [
+            {
+              "kind": "applicability",
+              "language": "text/cql",
+              "expression": "Resectabel"
+            }
+          ]
+        },
+        {
+          "id": "categorie-borderline",
+          "label": "Stap 3b - Borderline Resectabel",
+          "title": "Vaatcontact conform Tabel 4-criteria voor borderline resectabiliteit",
+          "condition": [
+            {
+              "kind": "applicability",
+              "language": "text/cql",
+              "expression": "Borderline Resectabel"
+            }
+          ]
+        },
+        {
+          "id": "categorie-lokaal-gevorderd",
+          "label": "Stap 3c - Lokaal Gevorderd (LAPC)",
+          "title": "Vaatcontact conform Tabel 4-criteria voor lokaal gevorderd pancreascarcinoom",
+          "description": "LAPC wordt in het pancreascentrum verder onderverdeeld in LAPC-1, -2 of -3 op basis van MDO-beoordeling (LAPC-3: nauwelijks tot geen kans op toekomstige resectie; LAPC-1: 20-30% kans). Deze subclassificatie is een klinische MDO-beoordeling en wordt hier niet als CQL-conditie gemodelleerd.",
+          "condition": [
+            {
+              "kind": "applicability",
+              "language": "text/cql",
+              "expression": "Lokaal Gevorderd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eus-fnb",
+      "label": "Stap 4 - Pathologische Bevestiging (EUS-FNB)",
+      "title": "Diagnose - EUS met Fine Needle Biopsy",
+      "description": "EUS met FNB voor pathologische bevestiging bij klinisch fitte (WHO 0/1) patiënten die kandidaat zijn voor systeemtherapie (borderline resectabel of lokaal gevorderd). Ook geïndiceerd wanneer de CT geen laesie laat zien of bij een negatieve brush bij een tumor in de pancreaskop (klinische beoordeling, niet als aparte CQL-conditie gemodelleerd). NB: niet gebruiken ter beoordeling van vasculaire betrokkenheid.",
+      "condition": [
+        {
+          "kind": "applicability",
+          "language": "text/cql",
+          "expression": "Kandidaat Systeemtherapie (Borderline Of Lokaal Gevorderd)"
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "resectabiliteitsclassificatie",
+          "relationship": "after-end"
+        }
+      ],
+      "definition": {
+        "reference": "ActivityDefinition/pancreas-eus-fnb"
+      }
+    },
+    {
+      "id": "biliaire-drainage",
+      "label": "Stap 5 - Biliaire Drainage",
+      "title": "Treat - ERCP Indien Geïndiceerd",
+      "description": "ERCP met biliaire drainage indien cholangitis, icterus-jeukklachten, of bilirubine boven de drempelwaarde (> 100 µmol/L algemeen, > 25 µmol/L voorafgaand aan FOLFIRINOX). Wordt altijd uitgevoerd ná de CT-abdomen.",
+      "condition": [
+        {
+          "kind": "applicability",
+          "language": "text/cql",
+          "expression": "ERCP Geindiceerd"
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "ct-stadiering",
+          "relationship": "after-end",
+          "offsetDuration": { "value": 7, "unit": "d", "system": "http://unitsofmeasure.org", "code": "d" }
+        }
+      ],
+      "definition": {
+        "reference": "ActivityDefinition/pancreas-ercp-biliaire-drainage"
+      },
+      "action": [
+        {
+          "id": "biliaire-drainage-ptcd",
+          "label": "Stap 5a - PTCD (bij falen ERCP)",
+          "title": "Treat - Percutane Transhepatische Cholangiografische Drainage",
+          "description": "Alternatief wanneer ERCP niet mogelijk of niet succesvol is, in overleg met een MDL-arts uit het echelon-1 ziekenhuis. Trigger (falen ERCP) is niet als CQL-conditie gemodelleerd.",
+          "definition": {
+            "reference": "ActivityDefinition/pancreas-ptcd"
+          }
+        },
+        {
+          "id": "biliaire-drainage-eus-g",
+          "label": "Stap 5b - EUS-geleide Galwegdrainage (bij falen ERCP, palliatief, expertcentrum)",
+          "title": "Treat - EUS-geleide Galwegdrainage",
+          "description": "Alternatief voor PTCD bij falen van ERCP in de palliatieve setting, uitsluitend in een expertcentrum met voldoende ervaring. Trigger (falen ERCP, palliatief beleid) is niet als CQL-conditie gemodelleerd.",
+          "definition": {
+            "reference": "ActivityDefinition/pancreas-eus-galwegdrainage"
+          }
+        }
+      ]
+    },
+    {
+      "id": "systeemtherapie",
+      "label": "Stap 6 - Systeemtherapie",
+      "title": "Treat - Start Systeemtherapie (Borderline Resectabel / Lokaal Gevorderd)",
+      "description": "Start inductie-systeemtherapie bij borderline resectabele of lokaal gevorderde tumoren. Streefnorm: start binnen 4 weken na de beeldvorming die de classificatie heeft bepaald; bij overschrijding dient de beeldvorming herhaald te worden.",
+      "condition": [
+        {
+          "kind": "applicability",
+          "language": "text/cql",
+          "expression": "Kandidaat Systeemtherapie (Borderline Of Lokaal Gevorderd)"
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "ct-stadiering",
+          "relationship": "after-end",
+          "offsetDuration": { "value": 28, "unit": "d", "system": "http://unitsofmeasure.org", "code": "d" }
+        }
+      ],
+      "definition": {
+        "reference": "ActivityDefinition/pancreas-systeemtherapie-inductie"
+      }
+    },
+    {
+      "id": "operatie",
+      "label": "Stap 7 - Operatieve Resectie",
+      "title": "Treat - Operatieve Resectie (Resectabel)",
+      "description": "Operatieve resectie van de pancreastumor, uitsluitend in het pancreascentrum (echelon-1: UMCG). Streefnorm: binnen 6 weken na bespreking in het MDO, conform SONCOS-normering.",
+      "condition": [
+        {
+          "kind": "applicability",
+          "language": "text/cql",
+          "expression": "Resectabel"
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "aanmelding-mdo",
+          "relationship": "after-end",
+          "offsetDuration": { "value": 42, "unit": "d", "system": "http://unitsofmeasure.org", "code": "d" }
+        }
+      ],
+      "definition": {
+        "reference": "ActivityDefinition/pancreas-resectie"
+      },
+      "action": [
+        {
+          "id": "systeemtherapie-adjuvant",
+          "label": "Stap 7a - Adjuvante Systeemtherapie (indien fit)",
+          "title": "Treat - Adjuvante Systeemtherapie",
+          "description": "Bij chemotherapie-fitte patiënten (WHO 0/1): start adjuvante systeemtherapie. Streefnorm: binnen 12 weken postoperatief indien geen neoadjuvante/inductietherapie is gegeven. De fitheidsbeoordeling is een klinische beoordeling en wordt hier niet als CQL-conditie gemodelleerd.",
+          "relatedAction": [
+            {
+              "actionId": "operatie",
+              "relationship": "after-end",
+              "offsetDuration": { "value": 84, "unit": "d", "system": "http://unitsofmeasure.org", "code": "d" }
+            }
+          ],
+          "definition": {
+            "reference": "ActivityDefinition/pancreas-systeemtherapie-adjuvant"
+          }
+        },
+        {
+          "id": "postoperatieve-follow-up",
+          "label": "Stap 7b - Postoperatieve Follow-up",
+          "title": "Follow-up - Postoperatieve Controle",
+          "description": "Standaard follow-up schema: eerste controle na 2 weken, daarna elke 3 maanden (jaar 1), elke 6 maanden (jaar 2), elke 12 maanden (jaar 3-5); totale duur 5 jaar. Plaatsvindend in het UMCG of Frisius MC locatie Leeuwarden.",
+          "relatedAction": [
+            {
+              "actionId": "operatie",
+              "relationship": "after-end",
+              "offsetDuration": { "value": 14, "unit": "d", "system": "http://unitsofmeasure.org", "code": "d" }
+            }
+          ],
+          "definition": {
+            "reference": "ActivityDefinition/pancreas-postoperatieve-follow-up"
+          }
+        }
+      ]
+    }
+  ]
+}

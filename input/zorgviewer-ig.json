@@ -74,6 +74,11 @@
         "id": "group-pnv",
         "name": "Pneumokokken Vaccinatie Indicatie",
         "description": "Zorgpad voor pneumokokkenvaccinatie-indicatie conform RIVM-richtlijn."
+      },
+      {
+        "id": "group-panc",
+        "name": "Pancreastumoren - Resectabiliteit en Behandelpad",
+        "description": "Computable deelverzameling van het Regionaal Zorgpad Pancreastumoren: resectabiliteitsclassificatie, biliaire drainage-indicatie en doorlooptijd-streefnormen."
       }
     ],
     "resource": [
@@ -787,6 +792,126 @@
         "name": "ValueSet Pneumokokken Implantaat",
         "description": "Cochleaire implantaten als indicatie voor pneumokokkenvaccinatie.",
         "groupingId": "group-pnv"
+      },
+      {
+        "reference": {
+          "reference": "PlanDefinition/pancreas-resectabiliteit-en-behandelpad"
+        },
+        "name": "PlanDefinition Pancreastumoren Resectabiliteit en Behandelpad",
+        "description": "Computable deelverzameling van het Regionaal Zorgpad Pancreastumoren: resectabiliteitsclassificatie, biliaire drainage-indicatie en doorlooptijd-streefnormen.",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "Library/pancreas-resectabiliteit-en-drainage"
+        },
+        "name": "Library Pancreas Resectabiliteit en Drainage",
+        "description": "CQL-logica voor het bepalen van de resectabiliteitscategorie en de indicatie voor biliaire drainage (ERCP).",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pancreas-ct-abdomen-pancreasprotocol"
+        },
+        "name": "ActivityDefinition Pancreas CT-abdomen Pancreasprotocol",
+        "description": "CT-abdomen volgens pancreasprotocol voor radiologische stadiëring.",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pancreas-ercp-biliaire-drainage"
+        },
+        "name": "ActivityDefinition Pancreas ERCP Biliaire Drainage",
+        "description": "ERCP met biliaire drainage.",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pancreas-systeemtherapie-inductie"
+        },
+        "name": "ActivityDefinition Pancreas Systeemtherapie Inductie",
+        "description": "Inductie-systeemtherapie bij borderline resectabel of lokaal gevorderd pancreascarcinoom.",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pancreas-resectie"
+        },
+        "name": "ActivityDefinition Pancreas Resectie",
+        "description": "Operatieve resectie van de pancreastumor.",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pancreas-mri-pancreasprotocol"
+        },
+        "name": "ActivityDefinition Pancreas MRI Pancreasprotocol",
+        "description": "Aanvullende MRI vóór eventuele galwegdrainage (diagnostische twijfel, cystesuspectie, onduidelijke leverlaesie).",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pancreas-eus-fnb"
+        },
+        "name": "ActivityDefinition Pancreas EUS FNB",
+        "description": "EUS met fine needle biopsy voor pathologische bevestiging.",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pancreas-ptcd"
+        },
+        "name": "ActivityDefinition Pancreas PTCD",
+        "description": "Percutane transhepatische cholangiografische drainage, alternatief bij falen ERCP.",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pancreas-eus-galwegdrainage"
+        },
+        "name": "ActivityDefinition Pancreas EUS Galwegdrainage",
+        "description": "EUS-geleide galwegdrainage in expertcentrum, alternatief bij falen ERCP in palliatieve setting.",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pancreas-systeemtherapie-adjuvant"
+        },
+        "name": "ActivityDefinition Pancreas Systeemtherapie Adjuvant",
+        "description": "Adjuvante systeemtherapie (mFOLFIRINOX) na operatieve resectie.",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pancreas-systeemtherapie-palliatief"
+        },
+        "name": "ActivityDefinition Pancreas Systeemtherapie Palliatief",
+        "description": "Systeemtherapie bij definitief irresectabel of gemetastaseerd pancreascarcinoom (documentair, niet gewired in de PlanDefinition).",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/pancreas-postoperatieve-follow-up"
+        },
+        "name": "ActivityDefinition Pancreas Postoperatieve Follow-up",
+        "description": "Standaard follow-up schema na resectie, inclusief voeding/suppletie en recidiefbeoordeling.",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/pancreas-vaten"
+        },
+        "name": "ValueSet Pancreas Vaten",
+        "description": "Vaten (SNOMED CT) voor vaatbetrokkenheidsbeoordeling conform Tabel 4.",
+        "groupingId": "group-panc"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/pancreas-vaatcontact-graad"
+        },
+        "name": "CodeSystem Pancreas Vaatcontact Graad",
+        "description": "Gradaties van tumorcontact met een vat conform Tabel 4.",
+        "groupingId": "group-panc"
       }
     ],
     "page": {
@@ -822,6 +947,11 @@
             {
               "nameUrl": "zorgpad-pneumokokken-vaccinatie.html",
               "title": "Zorgpad Pneumokokkenvaccinatie",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "zorgpad-pancreastumoren.html",
+              "title": "Zorgpad Pancreastumoren",
               "generation": "markdown"
             },
             {

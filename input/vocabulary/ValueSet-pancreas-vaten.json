@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pancreas-vaten",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-vaten",
+  "version": "1.0.0",
+  "name": "PancreasVaten",
+  "title": "Pancreastumor - Vaten voor Vaatbetrokkenheidsbeoordeling",
+  "status": "draft",
+  "description": "SNOMED CT-codes voor de vaten die conform het CT-pancreasprotocol (Tabel 4, Dutch Pancreatic Cancer Group resectabiliteitscriteria, Regionaal Zorgpad Pancreastumoren) worden beoordeeld op tumorcontact. Gebruikt als Observation.code voor een per-vat vaatbetrokkenheid-Observation (zie CodeSystem pancreas-vaatcontact-graad voor Observation.valueCodeableConcept). Vena mesenterica superior en vena porta worden in Tabel 4 als één beoordelingslocatie (VMS/vena porta-confluens) gehanteerd; beide SNOMED CT-codes zijn daarom opgenomen.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          { "code": "42258001", "display": "Superior mesenteric artery structure" },
+          { "code": "57850000", "display": "Structure of celiac trunk" },
+          { "code": "76015000", "display": "Structure of hepatic artery" },
+          { "code": "90771006", "display": "Structure of superior mesenteric vein" },
+          { "code": "32764006", "display": "Structure of portal vein" }
+        ]
+      }
+    ]
+  }
+}

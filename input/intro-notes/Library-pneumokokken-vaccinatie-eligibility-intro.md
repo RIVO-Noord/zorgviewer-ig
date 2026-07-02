@@ -16,4 +16,4 @@ CQL-bibliotheek die de eligibility-logica bevat voor het [pneumokokkenvaccinatie
 | `Groep 1 Eligible` | Leeftijd ≥ 60 jaar |
 | `Groep 2 Eligible` | Actieve risicoconditie of cochleair implantaat |
 | `Vaccinatie Aanbevolen` | Eligible én nooit gevaccineerd of interval verstreken |
-| `Speciale Instructies Vereist` | Functionele asplenie — extra vaccinatieschema |
+| `Speciale Instructies Vereist` | Functionele asplenie - extra vaccinatieschema |

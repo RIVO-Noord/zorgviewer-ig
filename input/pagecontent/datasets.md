@@ -110,10 +110,22 @@ Het zorgpad beschrijft een ECA-regel (Event-Condition-Action) die op basis van C
 
 Zie [PlanDefinition pneumokokkenvaccinatie-indicatie](PlanDefinition-pneumokokken-vaccinatie-indicatie.html) voor de FHIR-representatie van dit zorgpad.
 
+### Pancreastumoren
+
+Het Regionaal Zorgpad Pancreastumoren (Oncologienetwerk Groningen-Drenthe & Oncologienetwerk Friesland, TTN Pancreascarcinoom) is een uitgebreid, meerdere ziekenhuizen omvattend zorgpad waarin pancreasresecties conform het IZA zijn geconcentreerd in het UMCG (echelon-1). Grote delen van dit zorgpad berusten op multidisciplinair overleg en klinische afweging en lenen zich niet voor een eenduidige ECA-regel; deze IG modelleert daarom een computable kern, aangevuld met vervolgstappen die wél als actie zijn opgenomen maar afhankelijk zijn van klinische beoordeling:
+
+* Resectabiliteitsclassificatie (resectabel / borderline resectabel / lokaal gevorderd) op basis van vaatbetrokkenheid per vat, conform de resectabiliteitscriteria van de Dutch Pancreatic Cancer Group;
+* Indicatie voor biliaire drainage (ERCP, met PTCD en EUS-geleide drainage als gedocumenteerde alternatieven bij falen) op basis van bilirubinewaarde;
+* Aanvullende diagnostiek (MRI, EUS met FNB), doorlooptijd-streefnormen, en postoperatieve vervolgstappen (adjuvante systeemtherapie, follow-upschema).
+
+De MDO-verwijzing (inclusief aan te leveren gegevens) is in de brondocumentatie zelf nog niet vastgesteld (in afwachting van het werkpakket MDO conform SONCOS 2026) en is daarom niet gemodelleerd, evenals systeemtherapie bij metastasering (geen metastaseringsstatus in het datamodel), regimekeuze binnen systeemtherapie, operatieve details, lokale ablatie/pijnbestrijding en de coördinatie van zorg tussen centra.
+
+Zie [PlanDefinition pancreas-resectabiliteit-en-behandelpad](PlanDefinition-pancreas-resectabiliteit-en-behandelpad.html) en de [zorgpad narratief pagina](zorgpad-pancreastumoren.html) voor de volledige scope-afbakening.
+
 ### Verpleegkundige Overdracht
 
 ...
 
 ### EHDS EPS
 
-Als voorbereiding op de EHDS hebben we naast de voorbeelden uit de aangesloten systemen een voorbeeld EPS uit het [Syndrai Project - Synthetic Data Examples – Realistic – using AI](https://synderai.net/index.php?menu=examples/EPS) gebruikt bij het genereren van de wireframes voor ieder profiel. Herkenbaar aan "EPS" in de bron kolom.
+Als voorbereiding op de EHDS hebben we naast de voorbeelden uit de aangesloten systemen een voorbeeld EPS uit het [Syndrai Project - Synthetic Data Examples - Realistic - using AI](https://synderai.net/index.php?menu=examples/EPS) gebruikt bij het genereren van de wireframes voor ieder profiel. Herkenbaar aan "EPS" in de bron kolom.

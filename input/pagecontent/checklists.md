@@ -68,7 +68,7 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence
 	* EpicCare Ambulatory security point 1-Patient Search/Select
 	* EpicCare Ambulatory security point 16-Chart Review
 	* EpicCare Ambulatory security point 54-Demographics
-	* EpicCare Ambulatory security point 94-Chart Review – Order Tabs
+	* EpicCare Ambulatory security point 94-Chart Review - Order Tabs
 	* EpicCare Ambulatory security point 111-Problem List
 	* EpicCare Ambulatory security point 176-Review Procedure Reports
 	* EpicCare Ambulatory security point 262-View Only Demographics
@@ -84,7 +84,7 @@ De frontend is een SMART-on-FHIR integratie, waarbij de standaard [Epic sequence
 	* EpicCare Inpatient security point 184-View Procedure Reports
 	* Nurse Triage/Call Management security point 902-Chart Review
 	* Nurse Triage/Call Management security point 903-Demographics
-	* MyChart - Hyperspace User security point 47 – Third Party View Questionnaires
+	* MyChart - Hyperspace User security point 47 - Third Party View Questionnaires
 	* Care Everywhere security point 4-View Documents
 	* Cadence security point 5105-Edit Patient Record
 	* Cadence security point 5201-Open Patient Record

@@ -3,7 +3,7 @@
 
 Welkom op de implementatiegids van de Zorgviewer. Deze implementatiegids hoort bij de [Zorgviewer](https://www.rivo-noord.nl/ontwikkelingen/zorgviewer) en beschrijft de functies, technische achtergrond en implementatie van de Zorgviewer. De implementatiegids is voornamelijk bedoeld voor (regionale) architecten, ontwikkelaars, IT-specialisten, functionele ontwerpers en Projectleiders.
 
-De Zorgviewer heeft als missie om zorgverleners snel, veilig en overzichtelijk toegang te geven tot actuele medische informatie van de patiënt – ongeacht waar deze informatie is opgeslagen.
+De Zorgviewer heeft als missie om zorgverleners snel, veilig en overzichtelijk toegang te geven tot actuele medische informatie van de patiënt - ongeacht waar deze informatie is opgeslagen.
 
 Door gegevens uit verschillende zorgsystemen samen te brengen, helpt de Zorgviewer bij:
 - Betere samenwerking tussen zorgverleners

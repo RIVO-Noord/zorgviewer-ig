@@ -1,0 +1,22 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "pancreas-systeemtherapie-palliatief",
+  "url": "http://fhir.hl7.nl/zorgviewer/ActivityDefinition/pancreas-systeemtherapie-palliatief",
+  "version": "1.0.0",
+  "name": "PancreasSysteemtherapiePalliatief",
+  "title": "Systeemtherapie bij Definitief Irresectabel of Gemetastaseerd Pancreascarcinoom",
+  "status": "draft",
+  "description": "Palliatieve systeemtherapie bij patiënten met een definitief irresectabel of gemetastaseerd pancreascarcinoom (Hoofdstuk 6):\n- Overweeg FOLFIRINOX als eerste keus bij WHO-performance score 0 of 1 met een behandelwens.\n- Overweeg een combinatie van nab-paclitaxel en gemcitabine als eerste keus bij WHO-performance score 2, mits chemotherapie-fit.\n- Overweeg nanoliposomaal irinotecan met 5FU, of oxaliplatin met 5FU, bij progressie onder gemcitabine-gebaseerde therapie en een behandelwens.\n\nDeze ActivityDefinition is uitsluitend documentair: metastasering en definitieve irresectabiliteit (bijvoorbeeld peroperatief vastgesteld, of tijdens follow-up) worden niet afgeleid uit de vaatbetrokkenheid-gebaseerde resectabiliteitsclassificatie in Library pancreas-resectabiliteit-en-drainage, en dit is daarom geen actie in de PlanDefinition pancreas-resectabiliteit-en-behandelpad.",
+  "kind": "MedicationRequest",
+  "dosage": [
+    {
+      "text": "FOLFIRINOX (WHO 0/1) of Gemcitabine + Nab-paclitaxel (WHO 2); bij progressie nanoliposomaal irinotecan + 5FU of Oxaliplatin + 5FU. Exact schema, keuze en dosering conform klinische beoordeling en lokaal protocol."
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "citation",
+      "display": "Regionaal Zorgpad Pancreastumoren v0.98 - Hoofdstuk 6 (Definitief irresectabel of gemetastaseerd pancreascarcinoom)"
+    }
+  ]
+}

@@ -9,7 +9,7 @@
 | **Gebeurtenis** | | `AuditEvent` |
 | gebeurteniscode | DCM,110110,'Patient Record' | `AuditEvent.type.coding.system = http://dicom.nema.org/resources/ontology/DCM`<br/>`AuditEvent.type.coding.code = 110110`<br/>`AuditEvent.type.coding.code = Patient Record` |
 | actiecode | R | `AuditEvent.action = R` |
-| datum en tijd | 1986‐09‐14T14:12:12 | `AuditEvent.recorded` |
+| datum en tijd | 1986-09-14T14:12:12 | `AuditEvent.recorded` |
 | **Gebruiker** | | `AuditEvent.agent` |
 | gebruikers-id | Schroder, CP, Arts en system urn:oid:2.16.840.1.113883.2.4.3.8<br/>of AGB-Z 06020101 met system http://fhir.nl/fhir/NamingSystem/agb-z | zorgaanbieder OID `AuditEvent.agent.userId.system`<br/>`AuditEvent.agent.userId.value `<br/>en `AuditEvent.agent.name` |
 | | `https://rivo-noord.nl/zorgviewer/toestemming` | `AuditEvent.agent.policy` |
