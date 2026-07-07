@@ -14,8 +14,8 @@
           "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>"
         },
         {
-          "path": "issued",
-          "name": "Datum",          
+          "path": "effectiveDateTime | issued",
+          "name": "Datum",
           "type": "dateTime",
           "tag": [ { "name": "Zib element", "value": "WaarnemingGebruik" } ],
           "description": "Datum van de vaststelling van het gebruik."
@@ -35,7 +35,7 @@
           "description": "Code van de ZIB voor middelengebruik"
         },
         {
-          "path": "valueCodeableConcept.text | valueCodeableConcept.coding[0].display",
+          "path": "valueCodeableConcept.text | valueCodeableConcept.coding[0].display | valueString",
           "name": "Status",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Status" } ],
@@ -49,7 +49,7 @@
           "description": "Soort middel en toedieningsvorm"
         },
         {
-          "path": "iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and (code='1591' or code='2418' or code='2419' or code='2420' or code='2421' or code='2422')).exists(), valueCodeableConcept.text | valueCodeableConcept.coding[0].display, component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.unit+iif(component.where(code.coding.where(code='401201003').exists()).exists(), ' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', ''))",
+          "path": "iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and (code='2418' or code='2419' or code='2420' or code='2421' or code='2422')).exists(), valueCodeableConcept.text | valueCodeableConcept.coding[0].display, iif(component.exists(), component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.unit+iif(component.where(code.coding.where(code='401201003').exists()).exists(), ' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', ''), valueQuantity.value.toString()+' '+valueQuantity.unit))",
           "name": "Hoeveelheid/Antwoord",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Hoeveelheid" } ],

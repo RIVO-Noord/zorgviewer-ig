@@ -1,0 +1,100 @@
+{
+  "resourceType": "Consent",
+  "id": "b7e2c890-3d4f-4a1e-8c6b-2f9e1d7a5c83",
+  "meta": {
+    "lastUpdated": "2026-02-20T10:30:00.000+01:00",
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Consent. Patient: Dhr. P. Patient-4. Category: <span title=\"Behandelingsinstructies (artefact opnemen) (11291000146105 - SNOMED CT)\">Behandelingsinstructies (artefact opnemen)</span>, Status: active</caption><tbody><tr><th>Periode</th><td>Vanaf 20 februari 2026</td></tr><tr><th>Datum</th><td>20 februari 2026</td></tr><tr><th>Geverifieerd</th><td>ja - 20 februari 2026 - <span title=\"Gevolmachtigde (8601000146109 - SNOMED CT)\">Gevolmachtigde</span></td></tr><tr><th><span title=\"Kunstmatige beademing (40617009 - SNOMED CT)\">Kunstmatige beademing</span></th><td><span title=\"Behandeling niet toegestaan en/of wenselijk (NEE - 2.16.840.1.113883.2.4.3.11.60.40.4)\">Behandeling niet toegestaan en/of wenselijk</span></td></tr></tbody></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Verification",
+      "extension": [
+        {
+          "url": "Verified",
+          "valueBoolean": true
+        },
+        {
+          "url": "VerifiedWith",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "8601000146109",
+                "display": "Gevolmachtigde"
+              }
+            ]
+          }
+        },
+        {
+          "url": "VerificationDate",
+          "valueDateTime": "2026-02-20"
+        }
+      ]
+    },
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/Comment",
+      "valueString": "Patiënt wenst geen kunstmatige beademing."
+    },
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "40617009",
+            "display": "Kunstmatige beademing"
+          }
+        ]
+      }
+    }
+  ],
+  "modifierExtension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-TreatmentPermitted",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4",
+            "code": "NEE",
+            "display": "Behandeling niet toegestaan en/of wenselijk"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": {
+    "system": "http://cgmhuisarts.cgm.nl/fhir/NamingSystem/consentID",
+    "value": "cgm-treatment-directive-001"
+  },
+  "status": "active",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "11291000146105",
+          "display": "Behandelingsinstructies (artefact opnemen)"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/40bbb218-2bcf-4851-a104-dfb910408587",
+    "display": "Dhr. P. Patient-4"
+  },
+  "period": {
+    "start": "2026-02-20"
+  },
+  "dateTime": "2026-02-20T10:30:00+01:00",
+  "policy": [
+    {
+      "uri": "http://wetten.overheid.nl/"
+    }
+  ]
+}

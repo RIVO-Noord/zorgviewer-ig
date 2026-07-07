@@ -38,7 +38,7 @@
 </tr>
 <tr>
 <td>Concern</td>
-<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString</samp></td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString | extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-Title').valueString</samp></td>
 <td><code>string</code></td>
 <td>ZorgEpisodeNaam</td>
 <td></td>

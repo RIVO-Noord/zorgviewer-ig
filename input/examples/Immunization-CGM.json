@@ -1,0 +1,54 @@
+{
+  "resourceType": "Immunization",
+  "id": "d2f8a567-4b3e-4d6c-a9e7-1c5b8f2d3a91",
+  "meta": {
+    "lastUpdated": "2026-03-10T08:45:00.000+01:00",
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Immunization. Patient: Dhr. P. Patient-4. Status: completed</caption><tbody><tr><th><span title=\"influenzavaccin (J07BB02 - http://www.whocc.no/atc)\">influenzavaccin</span></th><td><div>Toegediend: ja (10 maart 2026)</div></td></tr><tr><th>Uitvoerende</th><td>Pharmeon acceptatie zorgverlener<div>Zorgverlenerrol: Huisartsen, niet apotheekhoudend</div></td></tr></tbody></table></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://cgmhuisarts.cgm.nl/fhir/NamingSystem/immunizationID",
+      "value": "cgm-immunization-001"
+    }
+  ],
+  "status": "completed",
+  "notGiven": false,
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "http://www.whocc.no/atc",
+        "code": "J07BB02",
+        "display": "influenzavaccin"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/40bbb218-2bcf-4851-a104-dfb910408587",
+    "display": "Dhr. P. Patient-4"
+  },
+  "date": "2026-03-10",
+  "primarySource": true,
+  "practitioner": [
+    {
+      "actor": {
+        "extension": [
+          {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+            "valueReference": {
+              "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410",
+              "display": "Huisartsen, niet apotheekhoudend"
+            }
+          }
+        ],
+        "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767",
+        "display": "Pharmeon acceptatie zorgverlener"
+      }
+    }
+  ]
+}

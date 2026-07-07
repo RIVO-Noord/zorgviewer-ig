@@ -37,6 +37,13 @@
 </tr><tr><td></td><td colspan=4>
 </td></tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>10-3-2026</td>
+<td>influenzavaccin</td>
+<td></td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
 <td>Epic</td>
 <td>2-8-2021</td>
 <td>COVID-19 Vaccin (Type Algemeen)</td>

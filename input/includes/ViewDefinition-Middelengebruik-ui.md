@@ -34,6 +34,36 @@
 <b>Toelichting</b><br/>Moeite met stoppen<br/>
 </td></tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>4-6-2026</td>
+<td>2026-06-04</td>
+<td>roken</td>
+<td>ja</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-6-2026</td>
+<td>2026-06-04</td>
+<td>drugsgebruik</td>
+<td>nooit</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-6-2026</td>
+<td>2026-06-04</td>
+<td>alcoholgebruik</td>
+<td></td>
+<td></td>
+<td>1 /d</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
 <td>Sanday</td>
 <td>21-8-2025</td>
 <td>2025-08-21T13:13:29+00:00</td>

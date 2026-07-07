@@ -1,6 +1,6 @@
 {
     "resourceType": "Observation",
-    "id": "3009316",
+    "id": "LaboratoryTestResult-Nexus",
     "meta": {
       "lastUpdated": "2024-04-17T11:57:34.749+02:00",
       "profile": [
@@ -13,13 +13,8 @@
     },
     "contained": [
       {
-        "resourceType": "ProcedureRequest",
+        "resourceType": "ServiceRequest",
         "id": "1",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/StructureDefinition/ProcedureRequest"
-          ]
-        },
         "status": "active",
         "intent": "order",
         "code": {
@@ -31,11 +26,12 @@
             }
           ]
         },
+        "subject": {
+          "reference": "Patient/330073"
+        },
         "requester": {
-          "agent": {
-            "reference": "http://example.org/Practitioner/729",
-            "display": "Jutte"
-          }
+          "reference": "http://example.org/Practitioner/729",
+          "display": "Jutte"
         }
       }
     ],
@@ -48,7 +44,7 @@
     "basedOn": [
       {
         "reference": "#1",
-        "display": "ProcedureRequest"
+        "display": "ServiceRequest"
       }
     ],
     "status": "final",

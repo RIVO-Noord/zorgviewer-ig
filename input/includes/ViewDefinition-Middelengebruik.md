@@ -17,7 +17,7 @@
 </tr>
 <tr>
 <td>Datum</td>
-<td><samp>issued</samp></td>
+<td><samp>effectiveDateTime | issued</samp></td>
 <td><code>dateTime</code></td>
 <td>WaarnemingGebruik</td>
 <td>Datum van de vaststelling van het gebruik.</td>
@@ -38,7 +38,7 @@
 </tr>
 <tr>
 <td>Status</td>
-<td><samp>valueCodeableConcept.text | valueCodeableConcept.coding[0].display</samp></td>
+<td><samp>valueCodeableConcept.text | valueCodeableConcept.coding[0].display | valueString</samp></td>
 <td><code>string</code></td>
 <td>Status</td>
 <td>Indicatie of in het heden of verleden sprake is (geweest) van middelengebruik.</td>
@@ -52,7 +52,7 @@
 </tr>
 <tr>
 <td>Hoeveelheid/Antwoord</td>
-<td><samp>iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and (code='1591' or code='2418' or code='2419' or code='2420' or code='2421' or code='2422')).exists(), valueCodeableConcept.text | valueCodeableConcept.coding[0].display, component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.unit+iif(component.where(code.coding.where(code='401201003').exists()).exists(), ' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', ''))</samp></td>
+<td><samp>iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and (code='2418' or code='2419' or code='2420' or code='2421' or code='2422')).exists(), valueCodeableConcept.text | valueCodeableConcept.coding[0].display, iif(component.exists(), component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.unit+iif(component.where(code.coding.where(code='401201003').exists()).exists(), ' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', ''), valueQuantity.value.toString()+' '+valueQuantity.unit))</samp></td>
 <td><code>string</code></td>
 <td>Hoeveelheid</td>
 <td>Het aantal eenheden (glazen, sigaretten, pillen, shots etc.) per dag, week, maand of jaar of de freqentie van gebruik, met eventueel de pack years voor roken. Of het antwoord op de vraag in de 5-shot vragenlijst.</td>
