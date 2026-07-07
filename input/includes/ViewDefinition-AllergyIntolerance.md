@@ -59,7 +59,7 @@
 </tr>
 <tr>
 <td>Reacties</td>
-<td><samp>reaction[0].manifestation[0].text</samp></td>
+<td><samp>reaction[0].manifestation[0].text | reaction[0].manifestation[0].coding[0].display</samp></td>
 <td><code>string</code></td>
 <td>Reactie/Symptoom</td>
 <td></td>
@@ -73,7 +73,7 @@
 </tr>
 <tr>
 <td>StatusCS</td>
-<td><samp>clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text</samp></td>
+<td><samp>clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text | clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.coding[0].display</samp></td>
 <td><code>code</code></td>
 <td>AllergieStatus</td>
 <td>Zie Status</td>

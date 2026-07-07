@@ -12,6 +12,16 @@
 <th>Type</th>
 </tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>15-7-2026</td>
+<td>15-7-2026</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td></td>
+<td>booked</td>
+<td>e-consult</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft</td>
 <td>12-10-2022</td>
 <td>12-10-2022</td>

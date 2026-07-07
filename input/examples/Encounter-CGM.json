@@ -1,0 +1,55 @@
+{
+    "id": "7e705c5d-d0a3-4af7-993a-12fdc77d9f67",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/gp-Encounter"
+        ]
+    },
+    "text": {
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Contact.<br/>Patiënt: Dhr. P. Patient-4<br/>Status: beëindigd</caption><tbody><tr><th>Type contact</th><td><div><span title=\"Ambulatory (AMB - http://hl7.org/fhir/v3/ActCode)\">Ambulatory</span></div><span title=\"e-consult (12 - https://referentiemodel.nhg.org/tabellen/nhg-tabel-14-contactwijze)\">e-consult</span></td></tr><tr><th>Periode</th><td>Vanaf 30 september 2025 t/m 30 september 2025</td></tr><tr><th>Participant</th><td><div>Uitvoerende: Pharmeon acceptatie zorgverlener<div>Zorgverlenerrol: Huisartsen, niet apotheekhoudend</div></div></td></tr></tbody></table></div>",
+        "status": "generated"
+    },
+    "type": [
+        {
+            "coding": [
+                {
+                    "code": "12",
+                    "system": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-14-contactwijze",
+                    "display": "e-consult"
+                }
+            ]
+        }
+    ],
+    "class": {
+        "code": "AMB",
+        "system": "http://hl7.org/fhir/v3/ActCode",
+        "display": "Ambulatory"
+    },
+    "period": {
+        "end": "2025-09-30",
+        "start": "2025-09-30"
+    },
+    "status": "finished",
+    "subject": {
+        "display": "Dhr. P. Patient-4",
+        "reference": "Patient/40bbb218-2bcf-4851-a104-dfb910408587"
+    },
+    "participant": [
+        {
+            "individual": {
+                "display": "Pharmeon acceptatie zorgverlener",
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                        "valueReference": {
+                            "display": "Huisartsen, niet apotheekhoudend",
+                            "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410"
+                        }
+                    }
+                ],
+                "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767"
+            }
+        }
+    ],
+    "resourceType": "Encounter"
+}

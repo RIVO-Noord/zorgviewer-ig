@@ -12,6 +12,18 @@
 <th>(status)</th>
 </tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>20-2-2026</td>
+<td>Kunstmatige beademing</td>
+<td>Behandeling niet toegestaan en/of wenselijk</td>
+<td></td>
+<td></td>
+<td>active</td>
+</tr><tr><td></td><td colspan=7>
+<b>Toelichting</b><br/>Patiënt wenst geen kunstmatige beademing.<br/>
+<b>Categorie</b><br/>Behandelingsinstructies (artefact opnemen)<br/>
+</td></tr>
+<tr><td>+</td>
 <td>Nexus</td>
 <td>5-5-2023</td>
 <td>Kunstmatige beademing</td>

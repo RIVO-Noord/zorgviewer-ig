@@ -18,7 +18,7 @@ De volgende zibs vallen min of meer onder het thema middelengebruik.
 
 ### Request
 
-N.B. Epic gebruikt de categorie 'social-history' en Sanday gebruikt 'vital-signs' voor het middelengebruik.
+N.B. Epic gebruikt de categorie 'social-history' en Sanday/CGM gebruikt 'vital-signs' voor het middelengebruik.
 
 1. Opvragen (search) middelengebruik
 
@@ -32,19 +32,23 @@ N.B. Epic gebruikt de categorie 'social-history' en Sanday gebruikt 'vital-signs
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|1591,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2418,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2419,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2420,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2421,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2422`
 
-1. Opvragen (search) drugsgebruik (Epic)
+1. **CGM:** Opvragen (search) alcoholgebruik. CGM slaat alcoholgebruik op zonder SNOMED-CT code; gebruik NHG Tabel 45 code 1591.
+
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|1591`
+
+1. Opvragen (search) drugsgebruik (Epic/CGM)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://snomed.info/sct|228366006`
 
-1. Opvragen (search) drugsgebruik (Sanday)
+1. Opvragen (search) drugsgebruik (Sanday/CGM)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|3022`
 
-1. Opvragen (search) tabakgebruik (Epic)
+1. Opvragen (search) tabakgebruik (Epic/CGM)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://snomed.info/sct|365980008`
 
-1. Opvragen (search) tabakgebruik (Sanday)
+1. Opvragen (search) tabakgebruik (Sanday/CGM)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|1739`
 

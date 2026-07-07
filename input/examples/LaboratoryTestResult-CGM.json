@@ -1,0 +1,100 @@
+{
+    "id": "006bd587-e76c-427c-8fd0-3ecf05c7bb2d",
+    "code": {
+        "coding": [
+            {
+                "code": "542",
+                "system": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen",
+                "display": "LDL-cholesterol"
+            }
+        ]
+    },
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/gp-LaboratoryResult"
+        ],
+        "versionId": "1.0.1"
+    },
+    "text": {
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Bepaling: Laboratoriumuitslag<br/>Patiënt: Mevr. TEST Zorgviewer<br/>Uitvoerende: Pharmeon acceptatie zorgverlener<br/>Zorgverlenerrol: Huisartsen, niet apotheekhoudend<br/>Status: definitief</caption><tbody><tr><th>Context</th><td>Consult op 26 mei 2026 met Pharmeon acceptatie zorgverlener</td></tr><tr><th>Bepalingdatum/tijd</th><td>26 mei 2026</td></tr><tr><th>Code</th><th>Waarde</th><th>Interpretatie</th><th>Referentiewaarden</th></tr><tr><td><span title=\"LDL-cholesterol (542 - https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen)\">LDL-cholesterol</span></td><td>5 mmol/L</td><td><span title=\"Abnormaal (A - http://hl7.org/fhir/v3/ObservationInterpretation)\">Abnormaal</span></td><td>normal (referencerange-meaning) - 2,50 mmol/L</td></tr></tbody></table></div>",
+        "status": "generated"
+    },
+    "status": "final",
+    "context": {
+        "display": "Consult op 26 mei 2026 met Pharmeon acceptatie zorgverlener",
+        "reference": "Encounter/1b05ef89-9539-476e-9571-de42e0483f49"
+    },
+    "subject": {
+        "display": "Mevr. TEST Zorgviewer",
+        "reference": "Patient/5dbca76d-8ca1-4192-b0f4-5e27ac1f0606"
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "code": "laboratory",
+                    "system": "http://hl7.org/fhir/observation-category",
+                    "display": "Laboratory"
+                }
+            ]
+        }
+    ],
+    "extension": [
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/extension-context-nl-core-episodeofcare",
+            "valueReference": {
+                "display": "FHIR",
+                "reference": "EpisodeOfCare/314c5e12-a909-4b43-9c0e-f22d94092de1"
+            }
+        }
+    ],
+    "performer": [
+        {
+            "display": "Pharmeon acceptatie zorgverlener",
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                    "valueReference": {
+                        "display": "Huisartsen, niet apotheekhoudend",
+                        "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410"
+                    }
+                }
+            ],
+            "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767"
+        }
+    ],
+    "resourceType": "Observation",
+    "valueQuantity": {
+        "code": "mmol/L",
+        "unit": "mmol/L",
+        "value": 5,
+        "system": "http://unitsofmeasure.org"
+    },
+    "interpretation": {
+        "coding": [
+            {
+                "code": "A",
+                "system": "http://hl7.org/fhir/v3/ObservationInterpretation",
+                "display": "Abnormaal"
+            }
+        ]
+    },
+    "referenceRange": [
+        {
+            "high": {
+                "unit": "mmol/L",
+                "value": 2.5
+            },
+            "type": {
+                "coding": [
+                    {
+                        "code": "normal",
+                        "system": "http://hl7.org/fhir/referencerange-meaning",
+                        "display": "Normal Range"
+                    }
+                ]
+            }
+        }
+    ],
+    "effectiveDateTime": "2026-05-26"
+}
