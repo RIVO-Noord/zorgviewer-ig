@@ -18,33 +18,37 @@ De volgende zibs vallen min of meer onder het thema middelengebruik.
 
 ### Request
 
-N.B. Epic gebruikt de categorie 'social-history' en Sanday gebruikt 'vital-signs' voor het middelengebruik.
+N.B. Epic gebruikt de categorie 'social-history' en Sanday gebruikt 'vital-signs' voor het middelengebruik. Bij deze algemene queries komen altijd teveel gegevens terug.
 
-1. Opvragen (search) middelengebruik
+1. Opvragen (search) middelengebruik (BgZ)
 
-    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&category=vital-signs,social-history`
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&category=social-history`
 
-1. Opvragen (search) alcoholgebruik (Epic)
+1. Opvragen (search) middelengebruik (huisartsgegevens)
+
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&category=vital-signs`
+
+1. Opvragen (search) alcoholgebruik (BgZ)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://snomed.info/sct|228273003`
 
-1. Opvragen (search) alcoholgebruik (Sanday). Sanday includeert ook de FiveShot vragenlijst antwoorden.
+1. Opvragen (search) alcoholgebruik (huisartsgegevens). HIS'en includeren ook de FiveShot vragenlijst antwoorden. Let op dat de komma-notatie van codes niet altijd wordt ondersteund.
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|1591,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2418,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2419,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2420,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2421,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2422`
 
-1. Opvragen (search) drugsgebruik (Epic)
+1. Opvragen (search) drugsgebruik (BgZ)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://snomed.info/sct|228366006`
 
-1. Opvragen (search) drugsgebruik (Sanday)
+1. Opvragen (search) drugsgebruik (huisartsgegevens)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|3022`
 
-1. Opvragen (search) tabakgebruik (Epic)
+1. Opvragen (search) tabakgebruik (BgZ)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=http://snomed.info/sct|365980008`
 
-1. Opvragen (search) tabakgebruik (Sanday)
+1. Opvragen (search) tabakgebruik (huisartsgegevens)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|1739`
 
