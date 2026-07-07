@@ -1,0 +1,93 @@
+{
+    "id": "f9e40d47-b728-462e-8a33-1bd2911e2f22",
+    "meta": {
+        "profile": [
+            "http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Minimal.DocumentReference"
+        ]
+    },
+    "text": {
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>DocumentReference.<br/>Patiënt: Mevr. TEST Zorgviewer.<br/>Set-Id: 33524c46-eb35-4cfd-a9bc-7860c47225a0.64521 (http://cgmhuisarts.cgm.nl/fhir/NamingSystem/DocumentReferenceMasterID)<br/>Status: actueel<br/><span style=\"display: block;\">Auteur: Pharmeon acceptatie zorgverlener</span></caption><tbody><tr><th>Type</th><td><span title=\"Referral note (57133-1 - LOINC)\">Referral note</span></td></tr><tr><th>Geïndexeerd</th><td>4 maart 2026</td></tr><tr><th>Omschrijving</th><td>Tipp: Test zorgviewer - Verwijsbrief</td></tr></tbody></table></div>",
+        "status": "generated"
+    },
+    "type": {
+        "text": "Verwijsbrief",
+        "coding": [
+            {
+                "code": "57133-1",
+                "system": "http://loinc.org",
+                "display": "Referral note"
+            }
+        ]
+    },
+    "author": [
+        {
+            "display": "Pharmeon acceptatie zorgverlener",
+            "reference": "#p1"
+        }
+    ],
+    "status": "current",
+    "content": [
+        {
+            "attachment": {
+                "url": "https://portal-api.alpha.portavita.nl/Binary/cbe71d74-1aab-49c2-a68f-48b80dca3f1a",
+                "title": "Tipp: Test zorgviewer - Verwijsbrief",
+                "language": "nl-NL",
+                "contentType": "application/pdf"
+            }
+        }
+    ],
+    "context": {
+        "related": [
+            {
+                "ref": {
+                    "display": "Oedeem",
+                    "reference": "EpisodeOfCare/d44c45b6-4941-4945-a25f-162c6b0505de"
+                }
+            }
+        ],
+        "encounter": {
+            "display": "Notitie/memo op 4 maart 2026 met Pharmeon acceptatie zorgverlener",
+            "reference": "Encounter/3354a7f1-9700-463b-9e13-83c95d7b148f"
+        }
+    },
+    "indexed": "2026-03-03T23:00:00+00:00",
+    "subject": {
+        "display": "Mevr. TEST Zorgviewer",
+        "reference": "Patient/5dbca76d-8ca1-4192-b0f4-5e27ac1f0606"
+    },
+    "contained": [
+        {
+            "id": "p1",
+            "name": [
+                {
+                    "use": "official",
+                    "text": "Pharmeon acceptatie zorgverlener",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                            "valueCode": "UNK"
+                        }
+                    ]
+                }
+            ],
+            "resourceType": "Practitioner"
+        }
+    ],
+    "description": "Tipp: Test zorgviewer - Verwijsbrief",
+    "resourceType": "DocumentReference",
+    "securityLabel": [
+        {
+            "coding": [
+                {
+                    "code": "V",
+                    "system": "http://hl7.org/fhir/v3/Confidentiality",
+                    "display": "very restricted"
+                }
+            ]
+        }
+    ],
+    "masterIdentifier": {
+        "value": "33524c46-eb35-4cfd-a9bc-7860c47225a0.64521",
+        "system": "http://cgmhuisarts.cgm.nl/fhir/NamingSystem/DocumentReferenceMasterID"
+    }
+}

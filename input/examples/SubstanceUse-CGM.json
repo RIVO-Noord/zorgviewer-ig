@@ -1,0 +1,245 @@
+{
+    "resourceType": "Bundle",
+    "id": "substanceuse-cgm-bundle",
+    "type": "searchset",
+    "total": 3,
+    "link": [
+        {
+            "relation": "self",
+            "url": "https://portal-api.alpha.portavita.nl/Observation?patient=5dbca76d-8ca1-4192-b0f4-5e27ac1f0606&code=http://snomed.info/sct|228273003,http://snomed.info/sct|228366006,http://snomed.info/sct|365980008"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "https://portal-api.alpha.portavita.nl/Observation/c9a97fd5-3ffd-4206-945e-fe255ef21378",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "c9a97fd5-3ffd-4206-945e-fe255ef21378",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult"
+                    ],
+                    "versionId": "1.0.1"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Bepaling: Algemene meting<br/>Patiënt: Mevr. TEST Zorgviewer<br/>Uitvoerende: Pharmeon acceptatie zorgverlener<br/>Zorgverlenerrol: Huisartsen, niet apotheekhoudend<br/>Status: definitief</caption><tbody><tr><th>Context</th><td>Notitie/memo op 4 juni 2026 met Pharmeon acceptatie zorgverlener</td></tr><tr><th>Bepalingdatum/tijd</th><td>4 juni 2026</td></tr><tr><th>Code</th><th>Waarde</th><th>Interpretatie</th></tr><tr><td><span title=\"roken (1739 - https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen)\">roken</span></td><td>ja</td><td><span title=\"Normaal (N - http://hl7.org/fhir/v3/ObservationInterpretation)\">Normaal</span></td></tr></tbody></table></div>"
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/observation-category",
+                                "code": "vital-signs",
+                                "display": "Vital Signs"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen",
+                            "code": "1739",
+                            "display": "roken"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "365980008",
+                            "display": "bevinding betreffende tabakgebruik en blootstelling aan tabaksrook"
+                        }
+                    ]
+                },
+                "subject": {
+                    "display": "Mevr. TEST Zorgviewer",
+                    "reference": "Patient/5dbca76d-8ca1-4192-b0f4-5e27ac1f0606"
+                },
+                "context": {
+                    "display": "Notitie/memo op 4 juni 2026 met Pharmeon acceptatie zorgverlener",
+                    "reference": "Encounter/ad8b4e92-baee-464e-b91b-aa79054bcc54"
+                },
+                "effectiveDateTime": "2026-06-04",
+                "performer": [
+                    {
+                        "display": "Pharmeon acceptatie zorgverlener",
+                        "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767",
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                                "valueReference": {
+                                    "display": "Huisartsen, niet apotheekhoudend",
+                                    "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "valueString": "ja",
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/ObservationInterpretation",
+                            "code": "N",
+                            "display": "Normaal"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "fullUrl": "https://portal-api.alpha.portavita.nl/Observation/b72c3348-174f-4ddf-b69d-0760c2fbb093",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "b72c3348-174f-4ddf-b69d-0760c2fbb093",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult"
+                    ],
+                    "versionId": "1.0.1"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Bepaling: Algemene meting<br/>Patiënt: Mevr. TEST Zorgviewer<br/>Uitvoerende: Pharmeon acceptatie zorgverlener<br/>Zorgverlenerrol: Huisartsen, niet apotheekhoudend<br/>Status: definitief</caption><tbody><tr><th>Context</th><td>Notitie/memo op 4 juni 2026 met Pharmeon acceptatie zorgverlener</td></tr><tr><th>Bepalingdatum/tijd</th><td>4 juni 2026</td></tr><tr><th>Code</th><th>Waarde</th><th>Interpretatie</th></tr><tr><td><span title=\"drugsgebruik (3022 - https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen)\">drugsgebruik</span></td><td>nooit</td><td><span title=\"Normaal (N - http://hl7.org/fhir/v3/ObservationInterpretation)\">Normaal</span></td></tr></tbody></table></div>"
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/observation-category",
+                                "code": "vital-signs",
+                                "display": "Vital Signs"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen",
+                            "code": "3022",
+                            "display": "drugsgebruik"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "228366006",
+                            "display": "bevinding betreffende drugsgebruik"
+                        }
+                    ]
+                },
+                "subject": {
+                    "display": "Mevr. TEST Zorgviewer",
+                    "reference": "Patient/5dbca76d-8ca1-4192-b0f4-5e27ac1f0606"
+                },
+                "context": {
+                    "display": "Notitie/memo op 4 juni 2026 met Pharmeon acceptatie zorgverlener",
+                    "reference": "Encounter/ad8b4e92-baee-464e-b91b-aa79054bcc54"
+                },
+                "effectiveDateTime": "2026-06-04",
+                "performer": [
+                    {
+                        "display": "Pharmeon acceptatie zorgverlener",
+                        "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767",
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                                "valueReference": {
+                                    "display": "Huisartsen, niet apotheekhoudend",
+                                    "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "valueString": "nooit",
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/ObservationInterpretation",
+                            "code": "N",
+                            "display": "Normaal"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "fullUrl": "https://portal-api.alpha.portavita.nl/Observation/e920830a-4ac4-46fc-85bf-49d123fded7d",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "e920830a-4ac4-46fc-85bf-49d123fded7d",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult"
+                    ],
+                    "versionId": "1.0.1"
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Bepaling: Algemene meting<br/>Patiënt: Mevr. TEST Zorgviewer<br/>Uitvoerende: Pharmeon acceptatie zorgverlener<br/>Zorgverlenerrol: Huisartsen, niet apotheekhoudend<br/>Status: definitief</caption><tbody><tr><th>Context</th><td>Notitie/memo op 4 juni 2026 met Pharmeon acceptatie zorgverlener</td></tr><tr><th>Bepalingdatum/tijd</th><td>4 juni 2026</td></tr><tr><th>Code</th><th>Waarde</th><th>Interpretatie</th></tr><tr><td><span title=\"alcoholgebruik (1591 - https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen)\">alcoholgebruik</span></td><td>1 /d</td><td><span title=\"Normaal (N - http://hl7.org/fhir/v3/ObservationInterpretation)\">Normaal</span></td></tr></tbody></table></div>"
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/observation-category",
+                                "code": "vital-signs",
+                                "display": "Vital Signs"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen",
+                            "code": "1591",
+                            "display": "alcoholgebruik"
+                        }
+                    ]
+                },
+                "subject": {
+                    "display": "Mevr. TEST Zorgviewer",
+                    "reference": "Patient/5dbca76d-8ca1-4192-b0f4-5e27ac1f0606"
+                },
+                "context": {
+                    "display": "Notitie/memo op 4 juni 2026 met Pharmeon acceptatie zorgverlener",
+                    "reference": "Encounter/ad8b4e92-baee-464e-b91b-aa79054bcc54"
+                },
+                "effectiveDateTime": "2026-06-04",
+                "performer": [
+                    {
+                        "display": "Pharmeon acceptatie zorgverlener",
+                        "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767",
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                                "valueReference": {
+                                    "display": "Huisartsen, niet apotheekhoudend",
+                                    "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "valueQuantity": {
+                    "value": 1,
+                    "unit": "/d",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "/d"
+                },
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/ObservationInterpretation",
+                            "code": "N",
+                            "display": "Normaal"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

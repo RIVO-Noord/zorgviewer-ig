@@ -1,0 +1,55 @@
+{
+  "resourceType": "Consent",
+  "id": "a3f5e234-7c89-4b2d-9e1f-6d8c5b4a3e27",
+  "meta": {
+    "lastUpdated": "2026-01-15T09:14:33.000+01:00",
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Consent. Patient: Dhr. P. Patient-4. Category: <span title=\"Wilsverklaring (artefact opnemen) (11341000146107 - SNOMED CT)\">Wilsverklaring (artefact opnemen)</span>, <span title=\"niet-reanimerenbeschikking (NRB - 2.16.840.1.113883.2.4.3.11.60.40.4.14.1)\">niet-reanimerenbeschikking</span>, Status: active</caption><tbody><tr><th>Datum</th><td>15 januari 2026</td></tr></tbody></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/Comment",
+      "valueString": "Niet reanimeren conform vastgelegde wens patiënt."
+    }
+  ],
+  "identifier": {
+    "system": "http://cgmhuisarts.cgm.nl/fhir/NamingSystem/consentID",
+    "value": "cgm-advance-directive-001"
+  },
+  "status": "active",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "11341000146107",
+          "display": "Wilsverklaring (artefact opnemen)"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1",
+          "code": "NRB",
+          "display": "niet-reanimerenbeschikking"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/40bbb218-2bcf-4851-a104-dfb910408587",
+    "display": "Dhr. P. Patient-4"
+  },
+  "dateTime": "2026-01-15",
+  "policy": [
+    {
+      "uri": "http://wetten.overheid.nl/"
+    }
+  ]
+}

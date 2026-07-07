@@ -13,6 +13,17 @@
 <th>Status(2)</th>
 </tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td></td>
+<td></td>
+<td>Jicht</td>
+<td>T92: Jicht</td>
+<td>waarschuwing</td>
+<td></td>
+<td>active</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft-OTH</td>
 <td>19-7-2024</td>
 <td>MRSA: Bewezen dragerschap</td>

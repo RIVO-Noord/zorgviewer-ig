@@ -14,6 +14,17 @@
 </tr>
 <tr><td>+</td>
 <td>CGM</td>
+<td>26-5-2026</td>
+<td>LDL-cholesterol</td>
+<td>5 mmol/L</td>
+<td></td>
+<td> .. 2.5</td>
+<td></td>
+<td>final</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
 <td>4-3-2026</td>
 <td>kalium</td>
 <td>60</td>
@@ -120,7 +131,7 @@
 <td>faeces</td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>4770527f-37f2-4bf0-9d66-6d55bd928df8</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -131,7 +142,7 @@
 <td>faeces</td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>d9f74743-b578-4662-bedd-86d942ac8671</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -142,7 +153,7 @@
 <td>Negatief</td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>10f68e17-c591-4a81-9304-e844b7e2da5d</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -153,7 +164,7 @@
 <td>faeces</td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>d63a4038-1101-4224-b584-c213f0be076f</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -219,7 +230,7 @@
 <td></td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>Materiaal: Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 <b>Toelichting materiaal</b><br/>Monster bij LaboratoriumUitslag (LaboratoryTestResult) [bgz-patA-labresult2]<br/>
@@ -275,7 +286,7 @@
 <td>0.72/Grens</td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>363ec0bb-5b08-483a-8e19-dab489fe79f8</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -286,7 +297,7 @@
 <td>0.09/Neg</td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>a86a5476-fc87-4f5f-bc2d-65d2585a8524</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 <b>Commentaar</b><br/>Toelichting: Serologisch GEEN aanwijzingen voor infectie met Hepatitis B virus ;<br/>
@@ -298,7 +309,7 @@
 <td>Stolbloed (r</td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>99de0dc4-06a0-4b97-af5d-b758dd3bc840</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 <b>Commentaar</b><br/>Toelichting: Stolbloed (rood) 10 ml (Substantie=bloed, Rapport=Serum) ;<br/>
@@ -310,7 +321,7 @@
 <td>30/Pos</td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>d75a1607-a253-4f3a-98eb-bb6d9fb73f3f</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -321,7 +332,7 @@
 <td>0.613/Neg</td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>ebf153c4-a574-474d-9830-378a34678bf8</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -332,7 +343,7 @@
 <td>0.652/Neg</td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>fb4922da-05f2-4552-a68b-7963b189e316</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -343,7 +354,7 @@
 <td>0.261/Neg</td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>0a411880-1aca-4b1f-84e1-11ab2845fd69</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 <b>Commentaar</b><br/>Toelichting: Serologisch GEEN aanwijzingen voor een in het verleden opgedane inf...<br/>
@@ -355,7 +366,7 @@
 <td>0.260/Neg</td>
 <td></td>
 <td> .. </td>
-<td></td>
+<td>d5adfcef-b302-49b7-8b0f-8468c97a440f</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -677,7 +688,7 @@
 <td>109 mmol/L</td>
 <td></td>
 <td>99 .. 108 mmol/L</td>
-<td></td>
+<td>Specimen 112793350</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -688,7 +699,7 @@
 <td>8 mmol/L</td>
 <td>Kritiek</td>
 <td>3.5 .. 5 mmol/L</td>
-<td></td>
+<td>Specimen 92069404</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>

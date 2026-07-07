@@ -1,0 +1,59 @@
+{
+    "id": "71648039-9cc1-468d-99e4-33a987cefbc3",
+    "code": {
+        "coding": [
+            {
+                "code": "T92",
+                "system": "http://hl7.org/fhir/sid/icpc-1-nl",
+                "display": "Jicht"
+            }
+        ]
+    },
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-Alert"
+        ],
+        "versionId": "1.0.1"
+    },
+    "text": {
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Attentievlag<br/>Patiënt: Dhr. P. Patient-4<br/>Categorie: <span title=\"waarschuwing (74018-3 - LOINC)\">waarschuwing</span><br/>Status: actief</caption><tbody><tr><th>Code</th><td><span title=\"Jicht (T92 - http://hl7.org/fhir/sid/icpc-1-nl)\">Jicht</span></td></tr></tbody></table></div>",
+        "status": "generated"
+    },
+    "author": {
+        "display": "Pharmeon acceptatie zorgverlener",
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                "valueReference": {
+                    "display": "Huisartsen, niet apotheekhoudend",
+                    "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410"
+                }
+            }
+        ],
+        "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767"
+    },
+    "status": "active",
+    "subject": {
+        "display": "Dhr. P. Patient-4",
+        "reference": "Patient/40bbb218-2bcf-4851-a104-dfb910408587"
+    },
+    "category": {
+        "coding": [
+            {
+                "code": "74018-3",
+                "system": "http://loinc.org",
+                "display": "waarschuwing"
+            }
+        ]
+    },
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/flag-detail",
+            "valueReference": {
+                "display": "T92: Jicht",
+                "reference": "EpisodeOfCare/d94d072a-be50-426e-8c69-005623b6bcc8"
+            }
+        }
+    ],
+    "resourceType": "Flag"
+}

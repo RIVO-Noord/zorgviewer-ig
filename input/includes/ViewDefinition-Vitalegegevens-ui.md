@@ -13,6 +13,52 @@
 </tr>
 <tr><td>+</td>
 <td>CGM</td>
+<td>4-6-2026</td>
+<td>roken</td>
+<td>ja</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1739 roken<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-6-2026</td>
+<td>drugsgebruik</td>
+<td>nooit</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#3022 drugsgebruik<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-6-2026</td>
+<td>alcoholgebruik</td>
+<td>1 /d</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1591 alcoholgebruik<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>2-6-2026</td>
+<td>gewicht patiënt</td>
+<td>75 kg</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
+<b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
+<b>Toelichting</b><br/>dit is de opmerking voor de patient bij het gewicht<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
 <td>4-3-2026</td>
 <td>diastolische bloeddruk</td>
 <td>75 mm[Hg]</td>
@@ -58,6 +104,17 @@
 </tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>NHG45#3007 perifeer (enkel) oedeem, pitting<br/>
 <b>Toelichting</b><br/>test bepaling toevoegen<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>21-8-2025</td>
+<td>hoe vaak drinken van alcohol (FiveShot1)</td>
+<td>4 of meer keer per week (score 2)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#2418 hoe vaak drinken van alcohol (FiveShot1)<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -330,6 +387,17 @@
 <td>Hartslag</td>
 </tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>roken</td>
+<td>nooit</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1739 roken<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>

@@ -60,4 +60,6 @@ Zie het Excelbestand tab "classCode+decision tree" voor LOINC codes:
 
     `GET <ontsluiten-bronsysteem-base>/DocumentReference?patient=<fhir_patient_id>&status=current`
 
+1. **CGM:** Ondersteunt de generieke query. CGM gebruikt een eigen `masterIdentifier` systeem (`http://cgmhuisarts.cgm.nl/fhir/NamingSystem/DocumentReferenceMasterID`).
+
 {% include bronsysteem-herkennen.md %}

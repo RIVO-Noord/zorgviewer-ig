@@ -145,6 +145,17 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>30-9-2025</td>
+<td>30-9-2025</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Huisartsen, niet apotheekhoudend</td>
+<td></td>
+<td>finished</td>
+<td>Ambulatory</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
 <td>Sanday</td>
 <td>21-8-2025</td>
 <td></td>
