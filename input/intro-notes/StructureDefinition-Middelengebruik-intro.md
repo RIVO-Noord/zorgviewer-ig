@@ -18,7 +18,7 @@ De volgende zibs vallen min of meer onder het thema middelengebruik.
 
 ### Request
 
-N.B. Epic gebruikt de categorie 'social-history' en Sanday/CGM gebruikt 'vital-signs' voor het middelengebruik. Bij deze algemene queries komen altijd teveel gegevens terug.
+N.B. BgZ gebruikt de categorie 'social-history' en HIS'en gebruiken 'vital-signs' voor het middelengebruik. Bij deze algemene queries komen altijd teveel gegevens terug.
 
 1. Opvragen (search) middelengebruik (BgZ)
 
