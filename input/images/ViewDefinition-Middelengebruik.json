@@ -21,39 +21,39 @@
           "description": "Datum van de vaststelling van het gebruik."
         },
         {
-          "path": "iif(effectivePeriod.start.exists() and effectivePeriod.end.exists(), effectivePeriod.start.toString()+' tot '+effectivePeriod.end.toString(), iif(effectivePeriod.start.exists(), 'vanaf '+effectivePeriod.start.toString(), iif(effectivePeriod.end.exists(), 'tot '+effectivePeriod.end.toString(), 'vanaf '+effectiveDateTime.toString())))",
+          "path": "iif(effectivePeriod.start.exists() and effectivePeriod.end.exists(), effectivePeriod.start.toString()+' - '+effectivePeriod.end.toString(), (effectivePeriod.start | effectivePeriod.end | effectiveDateTime).toString())",
           "name": "Gebruiksperiode",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "WaarnemingGebruik" } ],
+          "tag": [ { "name": "Zib element", "value": "StartDatum/StopDatum" } ],
           "description": "EffectivePeriod is voorgeschreven in de ZIB, maar in veel gevallen zal de data geen periode bevatten. In die gevallen is de datum van vaststelling bepalend voor interpretatie."
         },
         {
           "path": "code.text | code.coding[0].display",
           "name": "Soort gebruik",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "NVT" } ],
+          "tag": [ { "name": "Zib element", "value": "WaarnemingGebruik" } ],
           "description": "Code van de ZIB voor middelengebruik"
         },
         {
-          "path": "valueCodeableConcept.coding[0].display | valueString",
+          "path": "valueCodeableConcept.text | valueCodeableConcept.coding[0].display | valueString",
           "name": "Status",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Status" } ],
           "description": "Indicatie of in het heden of verleden sprake is (geweest) van middelengebruik."
         },
         {
-          "path": "iif(component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.exists(), component.where(code.coding.where(code='410942007').exists() or code.coding.where(code='53661000146106').exists()).valueCodeableConcept.coding[0].display + ' ' + component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.coding[0].display, component.where(code.coding.where(code='410942007').exists() or code.coding.where(code='53661000146106').exists()).valueCodeableConcept.coding[0].display)",
+          "path": "component.where(code.coding.where(code='410942007' or code='53661000146106').exists()).valueCodeableConcept.coding[0].display + iif(component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.exists(), ' ' + component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.coding[0].display, '')",
           "name": "Middel",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Middel" } ],
           "description": "Soort middel en toedieningsvorm"
         },
         {
-          "path": "iif(component.exists(), iif(component.where(code.coding.where(code='401201003').exists()).exists(), component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.unit+' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002').exists() or code.coding.where(code='228390007').exists() or code.coding.where(code='160573003').exists()).valueQuantity.unit), valueQuantity.value.toString()+' '+valueQuantity.unit)",
-          "name": "Hoeveelheid",
+          "path": "iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and (code='2418' or code='2419' or code='2420' or code='2421' or code='2422')).exists(), valueCodeableConcept.text | valueCodeableConcept.coding[0].display, iif(component.exists(), component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.unit+iif(component.where(code.coding.where(code='401201003').exists()).exists(), ' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', ''), valueQuantity.value.toString()+' '+valueQuantity.unit))",
+          "name": "Hoeveelheid/Antwoord",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Hoeveelheid" } ],
-          "description": "Het aantal eenheden (glazen, sigaretten, pillen, shots etc.) per dag, week, maand of jaar of de freqentie van gebruik."
+          "description": "Het aantal eenheden (glazen, sigaretten, pillen, shots etc.) per dag, week, maand of jaar of de freqentie van gebruik, met eventueel de pack years voor roken. Of het antwoord op de vraag in de 5-shot vragenlijst."
         },
         {
           "path": "comment | note.text",

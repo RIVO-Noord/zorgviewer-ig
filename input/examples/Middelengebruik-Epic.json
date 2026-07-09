@@ -11,10 +11,16 @@
     ],
     "entry": [
         {
-            "fullUrl": "https://example.org/fhir/Observation/fVIVWJve5VqVPnQmG3NeH22GjMF1BrykGCJVTdwdcQMw4",
+            "link": [
+                {
+                    "relation": "self",
+                    "url": "https://wg-t-iris.umcg.nl/zorgviewer-backend/api/FHIR/STU3/Observation/e7CpAdcXBIxFrYSaL-c5PzGrE9uyLBbDQrMIM5zaR.TRSnXlrF4R0-3FFHNaip7Rm3"
+                }
+            ],
+            "fullUrl": "https://wg-t-iris.umcg.nl/zorgviewer-backend/api/FHIR/STU3/Observation/e7CpAdcXBIxFrYSaL-c5PzGrE9uyLBbDQrMIM5zaR.TRSnXlrF4R0-3FFHNaip7Rm3",
             "resource": {
                 "resourceType": "Observation",
-                "id": "fVIVWJve5VqVPnQmG3NeH22GjMF1BrykGCJVTdwdcQMw4",
+                "id": "e7CpAdcXBIxFrYSaL-c5PzGrE9uyLBbDQrMIM5zaR.TRSnXlrF4R0-3FFHNaip7Rm3",
                 "meta": {
                     "profile": [
                         "http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse"
@@ -49,10 +55,10 @@
                     "text": "Alcohol Use History"
                 },
                 "subject": {
-                    "reference": "https://wg-t-iris.umcg.nl/api/fhir/Patient/eXxP1o8ZlOz21F6HXS9puLA3",
-                    "display": "XXX-Helleman, Johan"
+                    "reference": "https://wg-t-iris.umcg.nl/zorgviewer-backend/api/FHIR/STU3/Patient/eUJLBDPRRRok6OlBWD8vXwmyFvUMP-J.5coGhRHKACeY3",
+                    "display": "Xxx-Aansluittest-B, B."
                 },
-                "issued": "2022-05-26T22:00:00Z",
+                "issued": "2026-07-02T22:00:00Z",
                 "valueCodeableConcept": {
                     "coding": [
                         {
@@ -63,6 +69,7 @@
                     ],
                     "text": "Ja"
                 },
+                "comment": "alleen sterke drank",
                 "component": [
                     {
                         "code": {
@@ -76,26 +83,29 @@
                             "text": "Alcohol intake (observable entity)"
                         },
                         "valueQuantity": {
-                            "value": 0.57,
+                            "value": 1.43,
                             "unit": "alcoholic_units/day",
                             "system": "http://unitsofmeasure.org",
                             "code": "{alcoholic_units}/d"
                         }
                     }
                 ]
+            },
+            "search": {
+                "mode": "match"
             }
         },
         {
             "link": [
                 {
                     "relation": "self",
-                    "url": "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Observation/fscRObO9FtA9sseD.plgP7KxXVtTyjKyEG1V7fND7q8o4"
+                    "url": "https://wg-t-iris.umcg.nl/zorgviewer-backend/api/FHIR/STU3/Observation/e7CpAdcXBIxFrYSaL-c5PzGrE9uyLBbDQrMIM5zaR.TR.x6RVB-brRL6ZF7lY5nCO3"
                 }
             ],
-            "fullUrl": "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Observation/fscRObO9FtA9sseD.plgP7KxXVtTyjKyEG1V7fND7q8o4",
+            "fullUrl": "https://wg-t-iris.umcg.nl/zorgviewer-backend/api/FHIR/STU3/Observation/e7CpAdcXBIxFrYSaL-c5PzGrE9uyLBbDQrMIM5zaR.TR.x6RVB-brRL6ZF7lY5nCO3",
             "resource": {
                 "resourceType": "Observation",
-                "id": "fscRObO9FtA9sseD.plgP7KxXVtTyjKyEG1V7fND7q8o4",
+                "id": "e7CpAdcXBIxFrYSaL-c5PzGrE9uyLBbDQrMIM5zaR.TR.x6RVB-brRL6ZF7lY5nCO3",
                 "meta": {
                     "profile": [
                         "http://nictiz.nl/fhir/StructureDefinition/zib-TobaccoUse"
@@ -130,26 +140,100 @@
                     "text": "Smoking History"
                 },
                 "subject": {
-                    "reference": "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Patient/e52TXUJRLVxP2kvdXvNgS7euM1.HY8bVBMNNhsLwftTo3",
-                    "display": "Fictief, Jan"
+                    "reference": "https://wg-t-iris.umcg.nl/zorgviewer-backend/api/FHIR/STU3/Patient/eUJLBDPRRRok6OlBWD8vXwmyFvUMP-J.5coGhRHKACeY3",
+                    "display": "Xxx-Aansluittest-B, B."
                 },
-                "issued": "2021-10-26T22:00:00Z",
+                "effectivePeriod": {
+                    "start": "2026-05-25",
+                    "end": "2026-07-01"
+                },
+                "issued": "2026-07-02T22:00:00Z",
                 "performer": [
                     {
-                        "reference": "https://example.org/PRD-OAUTH2/api/FHIR/STU3/Practitioner/eYsrfO8FjxQmaRQcFFp7IbimYRj9h.U39hCdbwg4fw403",
-                        "display": "M Crop"
+                        "reference": "https://wg-t-iris.umcg.nl/zorgviewer-backend/api/FHIR/STU3/Practitioner/e-fLnBq-lBzq8jPEBkxuqjA3",
+                        "display": "Arts. Interne Geneeskunde, Arts"
                     }
                 ],
                 "valueCodeableConcept": {
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "449868002",
-                            "display": "Smokes tobacco daily"
+                            "code": "230059006",
+                            "display": "Occasional cigarette smoker (finding)"
                         }
                     ],
-                    "text": "Dagelijks"
-                }
+                    "text": "Soms"
+                },
+                "comment": "Moeite met stoppen",
+                "component": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "81228-9",
+                                    "display": "Tobacco product"
+                                },
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "53661000146106",
+                                    "display": "Type of tobacco used (observable entity)"
+                                }
+                            ],
+                            "text": "Type"
+                        },
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "65568007",
+                                    "display": "Cigarette Smoker"
+                                }
+                            ],
+                            "text": "Sigaretten"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "81228-9",
+                                    "display": "Tobacco product"
+                                },
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "53661000146106",
+                                    "display": "Type of tobacco used (observable entity)"
+                                }
+                            ],
+                            "text": "Type"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "Rookt shag"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "81228-9",
+                                    "display": "Tobacco product"
+                                },
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "53661000146106",
+                                    "display": "Type of tobacco used (observable entity)"
+                                }
+                            ],
+                            "text": "Type"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "Rookt e-sigaret"
+                        }
+                    }
+                ]
             },
             "search": {
                 "mode": "match"
