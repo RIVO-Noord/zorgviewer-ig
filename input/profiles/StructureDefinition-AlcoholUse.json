@@ -1,0 +1,73 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AlcoholUse",
+    "name": "AlcoholUse",
+    "title": "AlcoholUse",
+    "status": "active",
+    "description": "Alcoholgebruik",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition": "http://nictiz.nl/fhir/StructureDefinition/zib-AlcoholUse",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Observation.code",
+                "path": "Observation.code",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.code.coding",
+                "path": "Observation.code.coding",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.code.text",
+                "path": "Observation.code.text",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.effectivePeriod",
+                "path": "Observation.effective[x]",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.issued",
+                "path": "Observation.issued",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.value",
+                "path": "Observation.value[x]",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.comment",
+                "path": "Observation.comment",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:Amount",
+                "path": "Observation.component",
+                "sliceName": "Amount",
+                "short": "Hoeveelheid alcohol"
+            },
+            {
+                "id": "Observation.component:Amount.code",
+                "path": "Observation.component.code",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:Amount.code.coding.code",
+                "path": "Observation.component.code.coding.code",
+                "patternCode": "160573003"
+            },
+            {
+                "id": "Observation.component:Amount.value[x]",
+                "path": "Observation.component.value[x]",
+                "mustSupport": true
+            }
+        ]
+    }
+}

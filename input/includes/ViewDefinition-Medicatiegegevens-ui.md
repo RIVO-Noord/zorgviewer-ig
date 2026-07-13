@@ -25,6 +25,19 @@
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>2-6-2023</td>
+<td>1-9-2023</td>
+<td>HEPATITIS-A-VACCIN VAQTA JR WWSP 0,5ML (50E/ML)</td>
+<td>gebruik bekend<br/>Omschudden vlak voor gebruik<br/>In koelkast bewaren (niet in vries...</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Afspraakdatum</b><br/>2-6-2023<br/>
+<b>Voorschrijver</b><br/>Pharmeon acceptatie zorgverlener<br/>
+<b>Type</b><br/>afspraak<br/>
+</td></tr>
+<tr><td>+</td>
 <td>Epic</td>
 <td>27-11-2020</td>
 <td></td>
@@ -113,19 +126,6 @@
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>+</td>
-<td>CGM</td>
-<td>2-6-2023</td>
-<td>1-9-2023</td>
-<td>HEPATITIS-A-VACCIN VAQTA JR WWSP 0,5ML (50E/ML)</td>
-<td>gebruik bekend<br/>Omschudden vlak voor gebruik<br/>In koelkast bewaren (niet in vries...</td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Afspraakdatum</b><br/>2-6-2023<br/>
-<b>Voorschrijver</b><br/>Pharmeon acceptatie zorgverlener<br/>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><td>+</td>
 <td>EPS</td>
 <td></td>
 <td></td>
@@ -162,15 +162,15 @@
 </td></tr>
 <tr><td>+</td>
 <td>MP9</td>
-<td></td>
+<td>10-11-2022</td>
 <td></td>
 <td>IBUPROFEN TABLET 600MG</td>
-<td>1 stuk 1x elke 1 dag &#9432;</td>
+<td>Vanaf 11 nov 2022, gedurende 3 weken, 1 maal per dag 1 stuk, oraal</td>
 <td>oraal</td>
 <td></td>
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>11-11-2022<br/>
-<b>Uitvoerder</b><br/>Healthcare provider (organization), Apotheek de Gulle Gaper<br/>
+<b>Verstrekker</b><br/>Healthcare provider (organization), Apotheek de Gulle Gaper<br/>
 <b>Type</b><br/>toedieningsafspraak<br/>
 </td></tr>
 </tbody>

@@ -64,7 +64,9 @@ curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/i
 ### Lokaal
 
 1. (optioneel) maak de docker om de IG lokaal te bouwen
-Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?er=221886#jdk21-linux
+Download de Debian jdk van https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb
+N.B. Als je Powershell gebruikt let er dan op dat Docker Desktop draait!  
+
 ```
 > cd {zorgviewer-ig}
 > (Bash) docker run --name=zv -it -v "$(pwd)":/app ubuntu:latest /bin/bash
@@ -72,7 +74,7 @@ Download de Debian jdk van https://www.oracle.com/java/technologies/downloads/?e
 @> cd /app
 @> apt update
 @> apt install jekyll graphviz
-@> dpkg -i jdk-24_linux-x64_bin.deb
+@> dpkg -i jdk-25_linux-x64_bin.deb
 ```
 1. (optioneel) bouw lokaal de IG en check output - zie "To build the IG"
 

@@ -1,0 +1,56 @@
+{
+  "resourceType": "Appointment",
+  "id": "c9d4b123-8e7f-4c5d-b2a1-3f6e9d2c8b47",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/eAfspraak-Appointment"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Appointment. Patient: Dhr. P. Patient-4.</caption><tbody><tr><th>Status</th><td>booked</td></tr><tr><th>Type</th><td><span title=\"e-consult (12 - https://referentiemodel.nhg.org/tabellen/nhg-tabel-14-contactwijze)\">e-consult</span></td></tr><tr><th>Periode</th><td>15 juli 2026 10:00 - 15 juli 2026 10:15</td></tr><tr><th>Zorgverlener</th><td>Pharmeon acceptatie zorgverlener</td></tr></tbody></table></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://cgmhuisarts.cgm.nl/fhir/NamingSystem/appointmentID",
+      "value": "cgm-appointment-001"
+    }
+  ],
+  "status": "booked",
+  "appointmentType": {
+    "coding": [
+      {
+        "system": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-14-contactwijze",
+        "code": "12",
+        "display": "e-consult"
+      }
+    ]
+  },
+  "start": "2026-07-15T10:00:00+02:00",
+  "end": "2026-07-15T10:15:00+02:00",
+  "participant": [
+    {
+      "actor": {
+        "reference": "Patient/40bbb218-2bcf-4851-a104-dfb910408587",
+        "display": "Dhr. P. Patient-4"
+      },
+      "status": "accepted"
+    },
+    {
+      "actor": {
+        "extension": [
+          {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+            "valueReference": {
+              "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410",
+              "display": "Huisartsen, niet apotheekhoudend"
+            }
+          }
+        ],
+        "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767",
+        "display": "Pharmeon acceptatie zorgverlener"
+      },
+      "status": "accepted"
+    }
+  ]
+}

@@ -176,17 +176,17 @@
 </tr>
 <tr>
 <td>Start</td>
-<td><samp>''</samp></td>
-<td><code>string</code></td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period').valuePeriod.start</samp></td>
+<td><code>dateTime</code></td>
 <td>Gebruiksperiode::TijdsInterval/startDatumTijd</td>
-<td>niet beschikbaar</td>
+<td></td>
 </tr>
 <tr>
 <td>Eind</td>
-<td><samp>''</samp></td>
-<td><code>string</code></td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period').valuePeriod.end</samp></td>
+<td><code>dateTime</code></td>
 <td>Gebruiksperiode::TijdsInterval/eindDatumTijd</td>
-<td>niet beschikbaar</td>
+<td></td>
 </tr>
 <tr>
 <td>Medicatie</td>
@@ -197,7 +197,7 @@
 </tr>
 <tr>
 <td>Dosering & instructies</td>
-<td><samp>dosageInstruction.text | extension('http://nictiz.nl/fhir/StructureDefinition/ext-RenderedDosageInstruction').valueString</samp></td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-RenderedDosageInstruction').valueString | dosageInstruction.text</samp></td>
 <td><code>string</code></td>
 <td>Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie</td>
 <td>N.B. Als text niet beschikbaar dan samenstellen uit discrete informatie en markeren met een icoontje &#9432;</td>
@@ -232,10 +232,10 @@
 <td></td>
 </tr>
 <tr style="background-color:#b4c7e7">
-<td>+Uitvoerder</td>
+<td>+Verstrekker</td>
 <td><samp>performer.actor.display</samp></td>
 <td><code>string</code></td>
-<td>???</td>
+<td>Verstrekker::Zorgverlener</td>
 <td></td>
 </tr>
 <tr style="background-color:#b4c7e7">

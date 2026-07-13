@@ -251,7 +251,7 @@
                     ],
                     "forEach": "entry.resource.where(resourceType='MedicationStatement')"
                 },
-                                {
+                {
                     "column": [
                         {
                             "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
@@ -266,10 +266,10 @@
                             ]
                         },
                         {
-                            "path": "''",
+                            "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period').valuePeriod.start",
                             "name": "Start",
-                            "description": "niet beschikbaar",
-                            "type": "string",
+                            "description": "",
+                            "type": "dateTime",
                             "tag": [
                                 {
                                     "name": "Zib element",
@@ -278,10 +278,10 @@
                             ]
                         },
                         {
-                            "path": "''",
+                            "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period').valuePeriod.end",
                             "name": "Eind",
-                            "description": "niet beschikbaar",
-                            "type": "string",
+                            "description": "",
+                            "type": "dateTime",
                             "tag": [
                                 {
                                     "name": "Zib element",
@@ -302,7 +302,7 @@
                             ]
                         },
                         {
-                            "path": "dosageInstruction.text | extension('http://nictiz.nl/fhir/StructureDefinition/ext-RenderedDosageInstruction').valueString",
+                            "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-RenderedDosageInstruction').valueString | dosageInstruction.text",
                             "name": "Dosering & instructies",
                             "description": "N.B. Als text niet beschikbaar dan samenstellen uit discrete informatie en markeren met een icoontje &#9432;",
                             "type": "string",
@@ -360,13 +360,13 @@
                         },
                         {
                             "path": "performer.actor.display",
-                            "name": "+Uitvoerder",
+                            "name": "+Verstrekker",
                             "description": "",
                             "type": "string",
                             "tag": [
                                 {
                                     "name": "Zib element",
-                                    "value": "???"
+                                    "value": "Verstrekker::Zorgverlener"
                                 }
                             ]
                         },

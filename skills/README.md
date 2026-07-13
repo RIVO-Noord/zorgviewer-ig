@@ -26,6 +26,7 @@ Genereer artifacts voor de zib-Mobiliteit profile
 - Niet door script gegenereerde includes maken (run updateviewmd.js)
 - Hij update zelf wel zorgviewer-ig.js met examples!
 - Markeer alleen must support elementen die worden gebruikt in de gegevensherkomst.
+- Stijlgids toevoegen (als we die hebben), maar in ieder geval: Bron kolom altijd als eerste en daarna "logische" datum kolom en dan de rest.
 
 ## fo-generator
 
@@ -43,8 +44,8 @@ Die is gemaakt adhv de zib fhir profiel AllergyIntolerance gevonden op https://b
 > cd _local/Zorgviewer.wiki
 > gemini skill install fo-generator
 
-Gebruik prompt:
-Genereer FO voor het Medisch Hulpmiddel profile
+Gebruik prompt voorbeeld:
+"Genereer FO voor het Medisch Hulpmiddel profile"
 
 ### Bevindingen
 - Use Cases en Test Cases missen in template

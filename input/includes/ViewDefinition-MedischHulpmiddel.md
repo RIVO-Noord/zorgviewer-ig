@@ -16,13 +16,6 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
-<td>Hulpmiddel</td>
-<td><samp>device.display</samp></td>
-<td><code>string</code></td>
-<td>Product</td>
-<td></td>
-</tr>
-<tr>
 <td>Begin datum</td>
 <td><samp>whenUsed.start</samp></td>
 <td><code>dateTime</code></td>
@@ -30,10 +23,10 @@
 <td></td>
 </tr>
 <tr>
-<td>Anatomische locatie</td>
-<td><samp>bodySite.text | bodySite.coding[0].display</samp></td>
+<td>Hulpmiddel</td>
+<td><samp>device.display</samp></td>
 <td><code>string</code></td>
-<td>AnatomischeLocatie</td>
+<td>Product</td>
 <td></td>
 </tr>
 <tr>
@@ -44,18 +37,24 @@
 <td></td>
 </tr>
 <tr>
+<td>Anatomische locatie</td>
+<td><samp>bodySite.text | bodySite.coding[0].display</samp></td>
+<td><code>string</code></td>
+<td>AnatomischeLocatie</td>
+<td></td>
+</tr>
+<tr>
+<td>Lateraliteit</td>
+<td><samp>bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.coding[0].display</samp></td>
+<td><code>string</code></td>
+<td>Lateraliteit</td>
+<td></td>
+</tr>
+<tr>
 <td>Toelichting</td>
 <td><samp>note[0].text</samp></td>
 <td><code>string</code></td>
 <td>Toelichting</td>
-<td></td>
-</tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
-<tr style="background-color:#b4c7e7">
-<td>+Lateraliteit</td>
-<td><samp>bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.coding[0].display</samp></td>
-<td><code>string</code></td>
-<td>Lateraliteit</td>
 <td></td>
 </tr>
 </tbody>

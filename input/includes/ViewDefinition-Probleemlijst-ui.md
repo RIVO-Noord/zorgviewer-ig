@@ -66,6 +66,15 @@
 <tr><td>+</td>
 <td>CGM</td>
 <td>15-11-2012</td>
+<td>Dyspnoe/benauwdheid toegeschreven aan luchtwegen [ex. K02]</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) R02 Dyspnoe/benauwdheid toegeschreven aan luchtwegen [ex. K02]<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>15-11-2012</td>
 <td>Kortademigheid</td>
 <td>Actueel</td>
 <td>active</td>
@@ -127,6 +136,14 @@
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(ICPC) A20 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td></td>
+<td>Keelpijn</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
