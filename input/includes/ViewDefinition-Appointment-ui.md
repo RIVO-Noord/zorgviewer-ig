@@ -22,6 +22,16 @@
 </tr><tr><td></td><td colspan=7>
 </td></tr>
 <tr><td>+</td>
+<td>WZA</td>
+<td>13-7-2026</td>
+<td>13-7-2026</td>
+<td>M.C. Gordinou de Gouberville</td>
+<td>Wilhelmina Ziekenhuis</td>
+<td>pending</td>
+<td>Ambulatory</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft</td>
 <td>12-10-2022</td>
 <td>12-10-2022</td>
