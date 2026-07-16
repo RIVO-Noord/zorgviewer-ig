@@ -1,0 +1,684 @@
+{
+    "resourceType": "Bundle",
+    "id": "4bc1dc7a-97e9-479c-962a-f2eae90a5974",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Bundle"
+        ]
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "https://api.zorgplatform.online/fhir/Appointment?status=booked,pending,proposed"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "https://api.zorgplatform.online/Appointment/2.16.840.1.113883.2.4.3.124.7.46240.8151930014976972",
+            "resource": {
+                "resourceType": "Appointment",
+                "id": "2.16.840.1.113883.2.4.3.124.7.46240.8151930014976972",
+                "meta": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
+                            "valueUri": "urn:oid:2.16.840.1.113883.2.4.3.124.8.50.96"
+                        }
+                    ],
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/eAfspraak-Appointment"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Appointment resource:</h3><ul><li><p><strong>Status:</strong> &#x27;Pending&#x27;</p></li><li><table><thead><tr><th>Encounter resource</th><th>Class</th><th>Participant</th><th>Period</th><th>Reason</th><th>Service provider</th></tr></thead><tbody><tr><td>Encounter resource 1</td><td>Ambulatory</td><td>(M.C.) Gordinou de Gouberville</td><td>Period with lower bound 13-7-2026 15:00&#x2B;0200 and upper bound 13-7-2026 15:05&#x2B;0200.</td><td>Not available</td><td>Wilhelmina Ziekenhuis</td></tr></tbody></table></li><li><p><strong>Requested period:</strong> &#x27;Period with lower bound 13-7-2026 15:00&#x2B;0200 and upper bound 13-7-2026 15:05&#x2B;0200.&#x27;</p></li><li><table><thead><tr><th>Practitioner participant</th><th>Identifications</th><th>Names</th><th>Contact data</th><th>Address</th></tr></thead><tbody><tr><td>Practitioner participant 1</td><td> 2.16.840.1.113883.2.4.6.1, 03311005,  2.16.528.1.1007.5.1, 59910446101,  2.16.840.1.113883.2.4.3.124.7.75476.2, 15193265</td><td>(M.C.) Gordinou de Gouberville</td><td>&#x2B;31592325555</td><td>Europaweg-Zuid 1, 9401RK Assen (ASSEN)</td></tr></tbody></table></li><li><table><thead><tr><th>Location participant</th><th>Name</th><th>Address</th><th>Identifications</th><th>Standard industry class code</th></tr></thead><tbody><tr><td>Location participant 1</td><td>Wilhelmina Ziekenhuis</td><td>Europaweg-Zuid 1, 9401RK ASSEN (ASSEN)</td><td> 2.16.528.1.1007.3.3, 00015193,  2.16.528.1.1007.3.3, 15193,  2.16.840.1.113883.2.4.6.1, 06010301,  2.16.840.1.113883.2.4.3.124.7.95364.6, 1519306010301007938</td><td>Algemeen ziekenhuis</td></tr></tbody></table></li><li><p><strong>Appointment type</strong> &#x27;Ambulatory&#x27;</p></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.3.124.7.46240.8",
+                        "value": "151930014976972"
+                    }
+                ],
+                "status": "pending",
+                "_status": {
+                    "extension": [
+                        {
+                            "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/v3/ActStatus",
+                                        "code": "active",
+                                        "display": "Pending"
+                                    }
+                                ],
+                                "text": "In afwachting van uitvoering"
+                            }
+                        }
+                    ]
+                },
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+                                "code": "0303",
+                                "display": "Medisch specialisten, chirurgie"
+                            }
+                        ],
+                        "text": "Medisch specialisten, chirurgie"
+                    }
+                ],
+                "appointmentType": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/ActCode",
+                            "code": "AMB",
+                            "display": "Ambulatory"
+                        }
+                    ],
+                    "text": "Poliklinisch"
+                },
+                "reason": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/v3/NullFlavor",
+                                "code": "NAVU",
+                                "display": "not available"
+                            }
+                        ],
+                        "text": "Niet beschikbaar"
+                    }
+                ],
+                "start": "2026-07-13T15:00:00+02:00",
+                "end": "2026-07-13T15:05:00+02:00",
+                "participant": [
+                    {
+                        "actor": {
+                            "reference": "Patient/3A84DF4F20C368ADEAEDB6CE8F6B12CFB680AF944321960B49FBC933277D5794",
+                            "display": "Anton van Zorgportaala"
+                        },
+                        "status": "accepted"
+                    },
+                    {
+                        "actor": {
+                            "extension": [
+                                {
+                                    "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                                    "valueReference": {
+                                        "reference": "PractitionerRole/C9AEAC061051137D07714D1CC56C4330F815FDF1F3E386346A949809AD55BD99",
+                                        "display": "Onbekende functiecode."
+                                    }
+                                }
+                            ],
+                            "reference": "Practitioner/D995F5FCFFD51F95B316A28ECAA12A3271B7DF18970AFC17CCF4567B4AE578B2",
+                            "display": "M.C. Gordinou de Gouberville"
+                        },
+                        "status": "accepted"
+                    },
+                    {
+                        "actor": {
+                            "reference": "Location/2.16.840.1.113883.2.4.3.124.7.95364.61519306010301007938",
+                            "display": "Wilhelmina Ziekenhuis"
+                        },
+                        "status": "accepted"
+                    }
+                ],
+                "requestedPeriod": [
+                    {
+                        "start": "2026-07-13T15:00:00+02:00",
+                        "end": "2026-07-13T15:05:00+02:00"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://api.zorgplatform.online/Practitioner/D995F5FCFFD51F95B316A28ECAA12A3271B7DF18970AFC17CCF4567B4AE578B2",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "D995F5FCFFD51F95B316A28ECAA12A3271B7DF18970AFC17CCF4567B4AE578B2",
+                "meta": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
+                            "valueUri": "urn:oid:2.16.840.1.113883.2.4.3.124.8.50.96"
+                        }
+                    ],
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Practitioner resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/agb-z</td><td>03311005</td></tr><tr><td>urn:oid:2.16.528.1.1007.5.1</td><td>59910446101</td></tr><tr><td>urn:oid:2.16.840.1.113883.2.4.3.124.7.75476.2</td><td>15193265</td></tr></tbody></table></li><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>(M.C.) Gordinou de Gouberville</td><td></td><td>Eigen geslachtsnaam</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Europaweg-Zuid 1, 9401RK Assen (ASSEN)</td><td>Work</td><td>Werkadres</td><td></td></tr></tbody></table></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "03311005"
+                    },
+                    {
+                        "system": "urn:oid:2.16.528.1.1007.5.1",
+                        "value": "59910446101"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.3.124.7.75476.2",
+                        "value": "15193265"
+                    }
+                ],
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "text": "M.C. Gordinou de Gouberville",
+                        "family": "Gordinou de Gouberville",
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Gordinou de Gouberville"
+                                }
+                            ]
+                        },
+                        "given": [
+                            "M.C."
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "IN"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "line": [
+                            "Europaweg-Zuid 1"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Europaweg-Zuid"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Assen",
+                        "district": "ASSEN",
+                        "postalCode": "9401RK"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://api.zorgplatform.online/Organization/2.16.840.1.113883.2.4.3.124.7.95364.61519306010301007938",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "2.16.840.1.113883.2.4.3.124.7.95364.61519306010301007938",
+                "meta": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
+                            "valueUri": "urn:oid:2.16.840.1.113883.2.4.3.124.8.50.96"
+                        }
+                    ],
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-organization"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Organization resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/ura</td><td>15193</td></tr><tr><td>http://fhir.nl/fhir/NamingSystem/agb-z</td><td>06010301</td></tr><tr><td>urn:oid:2.16.840.1.113883.2.4.3.124.7.95364.6</td><td>1519306010301007938</td></tr></tbody></table></li><li><p><strong>Type:</strong></p><table><tbody><tr><td>Algemeen ziekenhuis</td></tr></tbody></table></li><li><p><strong>Name:</strong> &#x27;Wilhelmina Ziekenhuis&#x27;</p></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Postbus 30001, 9400RA Assen (ASSEN)</td><td>Work</td><td>Werkadres</td><td></td></tr></tbody></table></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "15193"
+                    },
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "06010301"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.3.124.7.95364.6",
+                        "value": "1519306010301007938"
+                    }
+                ],
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.2.4.15.1060",
+                                "code": "V6",
+                                "display": "Algemeen ziekenhuis"
+                            }
+                        ],
+                        "text": "Algemeen ziekenhuis"
+                    }
+                ],
+                "name": "Wilhelmina Ziekenhuis",
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "line": [
+                            "Postbus 30001"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Postbus"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "30001"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Assen",
+                        "district": "ASSEN",
+                        "postalCode": "9400RA"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://api.zorgplatform.online/PractitionerRole/C9AEAC061051137D07714D1CC56C4330F815FDF1F3E386346A949809AD55BD99",
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "C9AEAC061051137D07714D1CC56C4330F815FDF1F3E386346A949809AD55BD99",
+                "meta": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
+                            "valueUri": "urn:oid:2.16.840.1.113883.2.4.3.124.8.50.96"
+                        }
+                    ],
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>PractitionerRole resource:</h3><ul><li><p><strong>Practitioner:</strong></p><table><thead><tr><th>Identifier</th><th>Display</th><th>Reference</th></tr></thead><tbody><tr><td></td><td>M.C. Gordinou de Gouberville</td><td>D995F5FCFFD51F95B316A28ECAA12A3271B7DF18970AFC17CCF4567B4AE578B2</td></tr></tbody></table></li><li><p><strong>Organization:</strong></p><table><thead><tr><th>Identifier</th><th>Display</th><th>Reference</th></tr></thead><tbody><tr><td></td><td>Wilhelmina Ziekenhuis</td><td>2.16.840.1.113883.2.4.3.124.7.95364.61519306010301007938</td></tr></tbody></table></li><li><p><strong>Specialism:</strong> &#x27;Medisch specialisten, chirurgie&#x27;</p></li></ul></div>"
+                },
+                "practitioner": {
+                    "reference": "Practitioner/D995F5FCFFD51F95B316A28ECAA12A3271B7DF18970AFC17CCF4567B4AE578B2",
+                    "display": "M.C. Gordinou de Gouberville"
+                },
+                "organization": {
+                    "reference": "Organization/2.16.840.1.113883.2.4.3.124.7.95364.61519306010301007938",
+                    "display": "Wilhelmina Ziekenhuis"
+                },
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+                                "code": "0303",
+                                "display": "Medisch specialisten, chirurgie"
+                            }
+                        ],
+                        "text": "Medisch specialisten, chirurgie"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://api.zorgplatform.online/Location/2.16.840.1.113883.2.4.3.124.7.95364.61519306010301007938",
+            "resource": {
+                "resourceType": "Location",
+                "id": "2.16.840.1.113883.2.4.3.124.7.95364.61519306010301007938",
+                "meta": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
+                            "valueUri": "urn:oid:2.16.840.1.113883.2.4.3.124.8.50.96"
+                        }
+                    ],
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-location"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Location resource:</h3><ul><li><table><thead><tr><th>Identifications</th></tr></thead><tbody><tr><td> 2.16.528.1.1007.3.3, 00015193</td></tr><tr><td> 2.16.528.1.1007.3.3, 15193</td></tr><tr><td> 2.16.840.1.113883.2.4.6.1, 06010301</td></tr><tr><td> 2.16.840.1.113883.2.4.3.124.7.95364.6, 1519306010301007938</td></tr></tbody></table></li><li><p><strong>Name:</strong> &#x27;Wilhelmina Ziekenhuis&#x27;</p></li><li><p><strong>Address</strong> &#x27;Europaweg-Zuid 1, 9401RK ASSEN (ASSEN)&#x27;</p></li><li><p><strong>Type:</strong> &#x27;Algemeen ziekenhuis&#x27;</p></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "00015193"
+                    },
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "15193"
+                    },
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "06010301"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.3.124.7.95364.6",
+                        "value": "1519306010301007938"
+                    }
+                ],
+                "name": "Wilhelmina Ziekenhuis",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.15.1060",
+                            "code": "V6",
+                            "display": "Algemeen ziekenhuis"
+                        }
+                    ],
+                    "text": "Algemeen ziekenhuis"
+                },
+                "address": {
+                    "extension": [
+                        {
+                            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/v3/AddressUse",
+                                        "code": "WP",
+                                        "display": "Work Place"
+                                    }
+                                ],
+                                "text": "Werkadres"
+                            }
+                        }
+                    ],
+                    "use": "work",
+                    "line": [
+                        "Europaweg-Zuid 1"
+                    ],
+                    "_line": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                    "valueString": "Europaweg-Zuid"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                    "valueString": "1"
+                                }
+                            ]
+                        }
+                    ],
+                    "city": "ASSEN",
+                    "district": "ASSEN",
+                    "postalCode": "9401RK"
+                }
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://api.zorgplatform.online/Patient/3A84DF4F20C368ADEAEDB6CE8F6B12CFB680AF944321960B49FBC933277D5794",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "3A84DF4F20C368ADEAEDB6CE8F6B12CFB680AF944321960B49FBC933277D5794",
+                "meta": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
+                            "valueUri": "urn:oid:2.16.840.1.113883.2.4.3.124.8.50.96"
+                        }
+                    ],
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-patient"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Patient resource:</h3><ul><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>Anton Joeri (A.) van Zorgportaala</td><td></td><td>Eigen geslachtsnaam</td></tr></tbody></table></li><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/bsn</td><td>900232936</td></tr><tr><td>urn:oid:2.16.840.1.113883.2.4.3.124.7.46106.1</td><td>01016080024</td></tr><tr><td>urn:oid:2.16.840.1.113883.2.4.3.124.7.51851.4</td><td>1519301016080024</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Europaweg-Zuid 1, 9401RK Assen (ASSEN)</td><td>Home</td><td>Officieel adres</td><td></td></tr></tbody></table></li><li><p><strong>Contact information:</strong></p><table><thead><tr><th>System</th><th>Use</th><th>Additional information</th><th>Value</th></tr></thead><tbody><tr><td>Phone</td><td>Mobile</td><td>Mobiel telefoonnummer</td><td>&#x2B;31616674789</td></tr><tr><td>Phone</td><td>Home</td><td></td><td>&#x2B;31592123456</td></tr><tr><td>Email</td><td>Home</td><td></td><td>hixbeheer@wza.nl</td></tr></tbody></table></li><li><p><strong>Gender:</strong> &#x27;Man&#x27;</p></li><li><p><strong>Birthdate:</strong> &#x27;1960-01-01&#x27;</p></li><li><p><strong>Deceased:</strong> &#x27;No&#x27;</p></li><li><p><strong>Marital status:</strong> &#x27;Gehuwd&#x27;</p></li><li><p><strong>Part of multiple birth:</strong> &#x27;No&#x27;</p></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "900232936"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.3.124.7.46106.1",
+                        "value": "01016080024"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.3.124.7.51851.4",
+                        "value": "1519301016080024"
+                    }
+                ],
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "text": "Anton Joeri A. van Zorgportaala",
+                        "family": "van Zorgportaala",
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Zorgportaala"
+                                }
+                            ]
+                        },
+                        "given": [
+                            "Anton",
+                            "Joeri",
+                            "A."
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "IN"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "MC",
+                                            "display": "Mobile Phone"
+                                        }
+                                    ],
+                                    "text": "Mobiel telefoonnummer"
+                                }
+                            }
+                        ],
+                        "system": "phone",
+                        "value": "+31616674789",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "+31592123456",
+                        "use": "home"
+                    },
+                    {
+                        "system": "email",
+                        "value": "hixbeheer@wza.nl",
+                        "use": "home"
+                    }
+                ],
+                "gender": "male",
+                "_gender": {
+                    "extension": [
+                        {
+                            "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                                        "code": "M",
+                                        "display": "Male"
+                                    }
+                                ],
+                                "text": "Man"
+                            }
+                        }
+                    ]
+                },
+                "birthDate": "1960-01-01",
+                "deceasedBoolean": false,
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "HP",
+                                            "display": "Primary Home"
+                                        }
+                                    ],
+                                    "text": "Officieel adres"
+                                }
+                            },
+                            {
+                                "url": "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "use": "home",
+                        "line": [
+                            "Europaweg-Zuid 1"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Europaweg-Zuid"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Assen",
+                        "district": "ASSEN",
+                        "postalCode": "9401RK"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                            "code": "M",
+                            "display": "Married"
+                        }
+                    ],
+                    "text": "Gehuwd"
+                },
+                "multipleBirthBoolean": false
+            },
+            "search": {
+                "mode": "include"
+            }
+        }
+    ]
+}

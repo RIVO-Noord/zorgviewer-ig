@@ -11,49 +11,96 @@
           "name": "Bron",
           "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "nvt"
+            }
+          ]
         },
         {
           "path": "start",
           "name": "Begin",
           "description": "",
           "type": "dateTime",
-          "tag": [ { "name": "Zib element", "value": "BeginDatumTijd" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "BeginDatumTijd"
+            }
+          ]
         },
         {
           "path": "end",
           "name": "Eind",
           "description": "",
           "type": "dateTime",
-          "tag": [ { "name": "Zib element", "value": "EindDatumTijd" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "EindDatumTijd"
+            }
+          ]
         },
         {
-          "path": "participant.where(actor.reference.contains('Practitioner/'))[0].actor.display",
+          "path": "participant.actor.where(reference.contains('Practitioner/'))[0].display",
           "name": "Met",
           "description": "",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "ContactMet::Zorgverlener" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "ContactMet::Zorgverlener"
+            }
+          ]
         },
         {
-          "path": "participant.where(actor.reference.contains('Location/'))[0].actor.display",
+          "path": "participant.actor.where(reference.contains('Practitioner/'))[0].extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display",
+          "name": "Rol",
+          "description": "",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "ContactMet::Zorgverlener/ZorgverlenersRol"
+            }
+          ]
+        },
+        {
+          "path": "participant.actor.where(reference.contains('Location/'))[0].display",
           "name": "Locatie",
           "description": "",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "Locatie::Zorgaanbieder" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Locatie::Zorgaanbieder"
+            }
+          ]
         },
         {
           "path": "status",
           "name": "Status",
           "description": "",
           "type": "code",
-          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "nvt"
+            }
+          ]
         },
         {
           "path": "appointmentType.coding.display",
           "name": "Type",
           "description": "",
           "type": "code",
-          "tag": [ { "name": "Zib element", "value": "ContactType" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "ContactType"
+            }
+          ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Appointment' and (status='proposed' or status='pending' or status='booked'))"
