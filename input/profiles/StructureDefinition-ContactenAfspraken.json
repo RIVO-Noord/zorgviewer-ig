@@ -1,18 +1,18 @@
 {
     "resourceType": "StructureDefinition",
-    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/ContactenEpisodes",
-    "name": "ContactenEpisodes",
-    "title": "Contacten en Episodes",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/ContactenAfspraken",
+    "name": "ContactenAfspraken",
+    "title": "Contacten en Afspraken",
     "status": "active",
     "experimental": false,
-    "description": "Contacten en Episodes samenstelling voor het documenteren van de combinatie van Contact en Episode",
+    "description": "Contacten en Afspraken samenstelling voor het documenteren van de combinatie van Contact en Afspraak",
     "kind": "resource",
     "abstract": true,
     "type": "Bundle",
     "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
     "derivation": "constraint",
     "differential": {
-        "element":  [
+        "element": [
             {
                 "id": "Bundle.type",
                 "path": "Bundle.type",
@@ -23,7 +23,7 @@
                 "id": "Bundle.entry",
                 "path": "Bundle.entry",
                 "slicing": {
-                    "discriminator":  [
+                    "discriminator": [
                         {
                             "type": "type",
                             "path": "resource"
@@ -48,7 +48,7 @@
                 "path": "Bundle.entry.resource",
                 "comment": "Contact",
                 "min": 1,
-                "type":  [
+                "type": [
                     {
                         "code": "Encounter",
                         "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
@@ -56,27 +56,28 @@
                 ]
             },
             {
-                "id": "Bundle.entry:EpisodeOfCare",
+                "id": "Bundle.entry:Appointment",
                 "path": "Bundle.entry",
-                "sliceName": "EpisodeOfCare",
-                "short": "EpisodeOfCare"
+                "sliceName": "Appointment",
+                "short": "Appointment"
             },
             {
-                "id": "Bundle.entry:EpisodeOfCare.fullUrl",
+                "id": "Bundle.entry:Appointment.fullUrl",
                 "path": "Bundle.entry.fullUrl",
                 "min": 1
             },
             {
-                "id": "Bundle.entry:EpisodeOfCare.resource",
+                "id": "Bundle.entry:Appointment.resource",
                 "path": "Bundle.entry.resource",
-                "comment": "Episode",
+                "comment": "Afspraak",
                 "min": 1,
-                "type":  [
+                "type": [
                     {
-                        "code": "EpisodeOfCare",
-                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/EpisodeOfCare"
+                        "code": "Appointment",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Appointment"
                     }
                 ]
             }
         ]
-    }}
+    }
+}
