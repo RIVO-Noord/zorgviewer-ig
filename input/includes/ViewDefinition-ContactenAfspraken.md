@@ -32,16 +32,10 @@
 </tr>
 <tr>
 <td>Met</td>
-<td><samp>participant.individual.display</samp></td>
+<td><samp>participant.individual.select(display | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display).join('
+')</samp></td>
 <td><code>string</code></td>
-<td>ContactMet::Zorgverlener</td>
-<td></td>
-</tr>
-<tr>
-<td>Rol</td>
-<td><samp>participant.individual.extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display</samp></td>
-<td><code>string</code></td>
-<td>ContactMet::Zorgverlener/ZorgverlenersRol</td>
+<td>ContactMet::Zorgverlener, ContactMet::Zorgverlener/ZorgverlenersRol</td>
 <td></td>
 </tr>
 <tr>
@@ -60,7 +54,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td><samp>class.display</samp></td>
+<td><samp>class.display + ' ' + type.text</samp></td>
 <td><code>code</code></td>
 <td>ContactType</td>
 <td></td>
@@ -96,16 +90,10 @@
 </tr>
 <tr>
 <td>Met</td>
-<td><samp>participant.actor.where(reference.contains('Practitioner/'))[0].display</samp></td>
+<td><samp>participant.actor.where(reference.contains('Practitioner/')).select(display | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display).join('
+')</samp></td>
 <td><code>string</code></td>
-<td>ContactMet::Zorgverlener</td>
-<td></td>
-</tr>
-<tr>
-<td>Rol</td>
-<td><samp>participant.actor.where(reference.contains('Practitioner/'))[0].extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display</samp></td>
-<td><code>string</code></td>
-<td>ContactMet::Zorgverlener/ZorgverlenersRol</td>
+<td>ContactMet::Zorgverlener, ContactMet::Zorgverlener/ZorgverlenersRol</td>
 <td></td>
 </tr>
 <tr>
