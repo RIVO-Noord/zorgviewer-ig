@@ -43,26 +43,14 @@
           ]
         },
         {
-          "path": "participant.actor.where(reference.contains('Practitioner/'))[0].display",
+          "path": "participant.actor.where(reference.contains('Practitioner/')).select(display | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display).join('\n')",
           "name": "Met",
           "description": "",
           "type": "string",
           "tag": [
             {
               "name": "Zib element",
-              "value": "ContactMet::Zorgverlener"
-            }
-          ]
-        },
-        {
-          "path": "participant.actor.where(reference.contains('Practitioner/'))[0].extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display",
-          "name": "Rol",
-          "description": "",
-          "type": "string",
-          "tag": [
-            {
-              "name": "Zib element",
-              "value": "ContactMet::Zorgverlener/ZorgverlenersRol"
+              "value": "ContactMet::Zorgverlener, ContactMet::Zorgverlener/ZorgverlenersRol"
             }
           ]
         },
@@ -99,6 +87,18 @@
             {
               "name": "Zib element",
               "value": "ContactType"
+            }
+          ]
+        },
+        {
+          "path": "reason.text | indication.display",
+          "name": "Reden",
+          "description": "DeviatingResult or Problem or Condition<br/>n.b. dit is geen ZIB.",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "nvt"
             }
           ]
         }

@@ -11,56 +11,96 @@
           "name": "Bron",
           "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "nvt"
+            }
+          ]
         },
         {
           "path": "period.start",
           "name": "Begin",
           "description": "",
           "type": "dateTime",
-          "tag": [ { "name": "Zib element", "value": "BeginDatumTijd" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "BeginDatumTijd"
+            }
+          ]
         },
         {
           "path": "period.end",
           "name": "Eind",
           "description": "",
           "type": "dateTime",
-          "tag": [ { "name": "Zib element", "value": "EindDatumTijd" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "EindDatumTijd"
+            }
+          ]
         },
         {
-          "path": "participant.individual.display",
+          "path": "participant.individual.select(display | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display).join('\n')",
           "name": "Met",
           "description": "",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "ContactMet::Zorgverlener" } ]
-        },
-        {
-          "path": "participant.individual.extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display",
-          "name": "Rol",
-          "description": "",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "ContactMet::Zorgverlener, ContactMet::Zorgverlener/ZorgverlenersRol"
+            }
+          ]
         },
         {
           "path": "location.location.display",
           "name": "Locatie",
           "description": "",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "Locatie::Zorgaanbieder" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Locatie::Zorgaanbieder"
+            }
+          ]
         },
         {
           "path": "status",
           "name": "Status",
           "description": "",
           "type": "code",
-          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "nvt"
+            }
+          ]
         },
         {
-          "path": "class.display",
+          "path": "class.display + ' ' + type.text",
           "name": "Type",
           "description": "",
           "type": "code",
-          "tag": [ { "name": "Zib element", "value": "ContactType" } ]
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "ContactType"
+            }
+          ]
+        },
+        {
+          "path": "episodeOfCare.display | reason.text | diagnosis.condition.display",
+          "name": "Reden",
+          "description": "Uit huisarts gekoppelde Episode or DeviatingResult or Problem or Condition",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "nvt"
+            }
+          ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Encounter')"
