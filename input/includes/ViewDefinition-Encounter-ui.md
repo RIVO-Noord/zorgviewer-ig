@@ -25,61 +25,6 @@
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
-<td>4-3-2026</td>
-<td>4-3-2026</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>4-3-2026</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>4-3-2026</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>4-3-2026</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>4-3-2026</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
 <td>26-2-2026</td>
 <td>26-2-2026</td>
 <td>Pharmeon acceptatie zorgverlener</td>
@@ -131,17 +76,6 @@
 <td></td>
 <td>finished</td>
 <td>Other</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>3-6-2023</td>
-<td>3-6-2023</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
