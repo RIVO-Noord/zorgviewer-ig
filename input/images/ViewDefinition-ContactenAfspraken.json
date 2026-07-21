@@ -103,6 +103,18 @@
                   "value": "ContactType"
                 }
               ]
+            },
+            {
+              "path": "episodeOfCare.display | reason.text | diagnosis.condition.display",
+              "name": "Reden",
+              "description": "Uit huisarts gekoppelde Episode or DeviatingResult or Problem or Condition",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "nvt"
+                }
+              ]
             }
           ],
           "forEach": "entry.resource.where(resourceType='Encounter')"
@@ -197,11 +209,23 @@
               "path": "appointmentType.coding.display",
               "name": "Type",
               "description": "",
-              "type": "code",
+              "type": "string",
               "tag": [
                 {
                   "name": "Zib element",
                   "value": "ContactType"
+                }
+              ]
+            },
+            {
+              "path": "reason.text | indication.display",
+              "name": "Reden",
+              "description": "DeviatingResult or Problem or Condition<br/>n.b. dit is geen ZIB.",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "nvt"
                 }
               ]
             }

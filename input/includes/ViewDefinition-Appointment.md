@@ -60,7 +60,7 @@
 <tr>
 <td>Type</td>
 <td><samp>appointmentType.coding.display</samp></td>
-<td><code>code</code></td>
+<td><code>string</code></td>
 <td>ContactType</td>
 <td></td>
 </tr>

@@ -2,7 +2,8 @@
 
 ### Zorginformatiebouwsteen
 
-[ZIB Contact](https://zibs.nl/wiki/Contact-v3.1(2017NL))
+* [ZIB OverdrachtGeplandeZorgActiviteit/Afspraak:Contact](https://www.zibs.nl/wiki/OverdrachtGeplandeZorgActiviteit-v3.1(2017NL))
+* [eAfspraak Appointment](https://simplifier.net/packages/nictiz.fhir.nl.stu3.eafspraak/1.0.6/files/714361)
 
 ### View Definition
 

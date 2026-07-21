@@ -11,6 +11,7 @@
 <th>Locatie</th>
 <th>Status</th>
 <th>Type</th>
+<th>Reden</th>
 </tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -21,7 +22,8 @@
 <td></td>
 <td>booked</td>
 <td>e-consult</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>WZA</td>
@@ -32,7 +34,8 @@
 <td>Wilhelmina Ziekenhuis</td>
 <td>pending</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td>Niet beschikbaar</td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -43,7 +46,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -54,7 +58,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -65,7 +70,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -76,7 +82,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -87,7 +94,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -98,7 +106,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -109,7 +118,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -120,7 +130,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -131,7 +142,8 @@
 <td>UMCG HC</td>
 <td>unknown</td>
 <td>Inpatient Encounter</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -142,7 +154,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -153,7 +166,8 @@
 <td></td>
 <td>finished</td>
 <td>Other</td>
-</tr><tr><td></td><td colspan=8>
+<td>Keelpijn</td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -164,7 +178,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
@@ -175,7 +190,8 @@
 <td>Ziekenhuis Apotheek</td>
 <td>pending</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td>Niet beschikbaar</td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -186,7 +202,8 @@
 <td>Maag- Darm- Leverziekten</td>
 <td>pending</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -197,7 +214,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
@@ -208,7 +226,8 @@
 <td></td>
 <td>finished</td>
 <td>Klinisch</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
@@ -219,7 +238,8 @@
 <td></td>
 <td>finished</td>
 <td>inpatient</td>
-</tr><tr><td></td><td colspan=8>
+<td>other</td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -230,7 +250,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -241,7 +262,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -252,7 +274,8 @@
 <td></td>
 <td>finished</td>
 <td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
+<td></td>
+</tr><tr><td></td><td colspan=9>
 </td></tr>
 </tbody>
 </table>

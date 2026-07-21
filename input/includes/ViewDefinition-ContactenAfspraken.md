@@ -65,6 +65,13 @@
 <td>ContactType</td>
 <td></td>
 </tr>
+<tr>
+<td>Reden</td>
+<td><samp>episodeOfCare.display | reason.text | diagnosis.condition.display</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td>Uit huisarts gekoppelde Episode or DeviatingResult or Problem or Condition</td>
+</tr>
 <tr style="background-color:#000000; color:white"><td colspan=5><i>Appointment' and (status='proposed' or status='pending' or status='booked</i></td></tr>
 <tr>
 <td>Bron</td>
@@ -118,9 +125,16 @@
 <tr>
 <td>Type</td>
 <td><samp>appointmentType.coding.display</samp></td>
-<td><code>code</code></td>
+<td><code>string</code></td>
 <td>ContactType</td>
 <td></td>
+</tr>
+<tr>
+<td>Reden</td>
+<td><samp>reason.text | indication.display</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td>DeviatingResult or Problem or Condition<br/>n.b. dit is geen ZIB.</td>
 </tr>
 </tbody>
 </table>
