@@ -305,6 +305,61 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 | Toelichting   | Liggend gemeten tijdens onderzoek |
 {: .grid .table-striped}
 
+#### Voedingsadvies
+| Testpatiënt 1 | Voedingsadvies |
+| ------------- | ----------------------- |
+| Datum         | 11-07-2026              |
+| Dieettype     | Energie verrijkt        |
+| Consistentie  | Dikvloeibaar            |
+| Toelichting   | Sinds een week dieet veranderd in energieverrijkt.|
+{: .grid .table-striped}
+
+#### Woonsituatie
+| Testpatiënt 1 | Woonsituatie |
+| ------------- | ----------------------- |
+| Datum         | 11-07-2026              |
+| Woningtype    | Bovenwoning             |
+| Toelichting   | De bovenwoning is een probleem vanwege ontbreken lift. De patiënt staat op de wachtlijst voor een benedenwoning. |
+{: .grid .table-striped}
+
+#### Contactpersonen
+| Testpatiënt 1 | Contactpersonen |
+| ------------- | ----------------------- |
+| Rol           | Eerste contactpersoon   |
+| Relatie       | Dochter                 |
+| Naam          | J.P.M. (Jannie) van Putten |
+| Telefoonnummer | +31611234567            |
+| E-mail        | voorbeeld@voorbeeld.vb  | 
+| Adres         | Voorbeeldstraat 1 1111AA Voorbeeld | 
+{: .grid .table-striped}
+
+#### Middelengebruik
+| Testpatiënt 1 | Middelengebruik, alcoholgebruik |
+| ------------- | ----------------------- |
+| (Start)Datum  | 05-05-2015              |
+| Status        | Drinkt alcohol          | 
+| Hoeveelheid/Antwoord |  3 eenheden per dag | 
+| Toelichting   | Drinkt bij het avondeten   | 
+{: .grid .table-striped}
+
+| Testpatiënt 1 | Middelengebruik, drugsgebruik |
+| ------------- | ----------------------- |
+| Gebruiksperiode |  01-01-2010 - 01-01-2020 |
+| Status        | misbruikt drugs         | 
+| Middel        | XTC                     | 
+| Hoeveelheid/Antwoord | 2x per maand     | 
+| Toelichting   | 	Op feestjes en in uitgaanscircuit. Vroeger wat meer dan tegenwoordig. | 
+{: .grid .table-striped}
+
+| Testpatiënt 1 | Middelengebruik, tabakgebruik |
+| ------------- | ----------------------- |
+| (Start)Datum  | 2020                    |
+| Soort gebruik | Rookt shag              | 
+| Status        | Rookt dagelijks         | 
+| Hoeveelheid/Antwoord | 350 g per week   | 
+| Toelichting   | Probeert te stoppen. Thuis wordt ook door partner gerookt. | 
+{: .grid .table-striped}
+
 ### Testpatiënt 2
 
 Patiënt zonder consent | Bijvoorbeeld probleem registratie | Wordt geen data getoond in de Zorgviewer |
