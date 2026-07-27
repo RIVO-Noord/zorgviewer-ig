@@ -330,7 +330,7 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 | Naam          | J.P.M. (Jannie) van Putten |
 | Telefoonnummer | +31611234567            |
 | E-mail        | voorbeeld@voorbeeld.vb  | 
-| Adres         | Voorbeeldstraat 1 1111AA Voorbeeld | 
+| Adres         | Hanzeplein 1, 9713 GZ, Groningen | 
 {: .grid .table-striped}
 
 #### Middelengebruik
