@@ -1,7 +1,9 @@
 ### Algemeen
+
 Deze pagina beschrijft testcases die gebruikt worden om de werking van de Zorgviewer te toetsen op basis van de bestaande Zorgviewer kolommen. Door een gestandaardiseerde "basis patiënt" in te voeren in alle aangesloten systemen, kunnen we controleren of gegevens correct en consistent worden weergegeven in de Zorgviewer. Er zijn enkele negatieve tests opgenomen, de registraties in het bronsysteem zullen dan juist niet getoond worden in Zorgviewer.
 
 ### Instructie
+
 - Voor het registreren van de test cases geldt in alle gevallen, gebruik de werkwijze voor registratie zoals deze door de zorgverleners in het eigen systeem worden gebruikt. Vul de gevraagde gegevens bijvoorbeeld niet in onder een beheerdersaccount of via een methode die niet door de zorgverleners kan worden gebruikt in productie. 
 - Voor de testcases veronderstellen wij dat de gegevens worden ingevuld door het type zorgverlener die dit ook in productie doet.
 - De voorbeelddata is grotendeels gebaseerd op voorbeelddata uit [ZIB2017](https://zibs.nl/wiki/ZIB_Publicatie_2017(NL)) en is mogelijk niet klinisch relevant.
@@ -303,6 +305,65 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 | Methode       | Non-invasive                      |
 | Meetlocatie   | rechter bovenarm                  |
 | Toelichting   | Liggend gemeten tijdens onderzoek |
+{: .grid .table-striped}
+
+#### Voedingsadvies
+
+| Testpatiënt 1 | Voedingsadvies |
+| ------------- | ----------------------- |
+| Datum         | 11-07-2026              |
+| Dieettype     | Energie verrijkt        |
+| Consistentie  | Dikvloeibaar            |
+| Toelichting   | Sinds een week dieet veranderd in energieverrijkt.|
+{: .grid .table-striped}
+
+#### Woonsituatie
+
+| Testpatiënt 1 | Woonsituatie |
+| ------------- | ----------------------- |
+| Datum         | 11-07-2026              |
+| Woningtype    | Bovenwoning             |
+| Toelichting   | De bovenwoning is een probleem vanwege ontbreken lift. De patiënt staat op de wachtlijst voor een benedenwoning. |
+{: .grid .table-striped}
+
+#### Contactpersonen
+
+| Testpatiënt 1 | Contactpersonen |
+| ------------- | ----------------------- |
+| Rol           | Eerste contactpersoon   |
+| Relatie       | Dochter                 |
+| Naam          | J.P.M. (Jannie) van Putten |
+| Telefoonnummer | +31611234567            |
+| E-mail        | voorbeeld@voorbeeld.vb  | 
+| Adres         | Hanzeplein 1, 9713 GZ, Groningen | 
+{: .grid .table-striped}
+
+#### Middelengebruik
+
+| Testpatiënt 1 | Middelengebruik, alcoholgebruik |
+| ------------- | ----------------------- |
+| (Start)Datum  | 05-05-2015              |
+| Status        | Drinkt alcohol          | 
+| Hoeveelheid/Antwoord |  3 eenheden per dag | 
+| Toelichting   | Drinkt bij het avondeten   | 
+{: .grid .table-striped}
+
+| Testpatiënt 1 | Middelengebruik, drugsgebruik |
+| ------------- | ----------------------- |
+| Gebruiksperiode |  01-01-2010 - 01-01-2020 |
+| Status        | misbruikt drugs         | 
+| Middel        | XTC                     | 
+| Hoeveelheid/Antwoord | 2x per maand     | 
+| Toelichting   | 	Op feestjes en in uitgaanscircuit. Vroeger wat meer dan tegenwoordig. | 
+{: .grid .table-striped}
+
+| Testpatiënt 1 | Middelengebruik, tabakgebruik |
+| ------------- | ----------------------- |
+| (Start)Datum  | 2020                    |
+| Soort gebruik | Rookt shag              | 
+| Status        | Rookt dagelijks         | 
+| Hoeveelheid/Antwoord | 350 g per week   | 
+| Toelichting   | Probeert te stoppen. Thuis wordt ook door partner gerookt. | 
 {: .grid .table-striped}
 
 ### Testpatiënt 2
