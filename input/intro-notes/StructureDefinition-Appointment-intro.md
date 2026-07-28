@@ -5,10 +5,6 @@
 * [ZIB OverdrachtGeplandeZorgActiviteit/Afspraak:Contact](https://www.zibs.nl/wiki/OverdrachtGeplandeZorgActiviteit-v3.1(2017NL))
 * [eAfspraak Appointment](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_eAfspraak)
 
-<blockquote class="stu-note" markdown="1">
-De Afspraak in een GeplandeZorgActiviteit is in FHIR gemapped op de eAfspraak Appointment Profiel, dus NIET op Encounter. Door een technische fout in de eAfspraak FHIR Package moeten we het profiel op de core FHIR Appointment baseren.
-</blockquote>
-
 ### View Definition
 
 [ViewDefinition voor Appointment](ViewDefinition-Appointment.json)
