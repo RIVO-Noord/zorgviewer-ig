@@ -1,7 +1,9 @@
 ### Algemeen
+
 Deze pagina beschrijft testcases die gebruikt worden om de werking van de Zorgviewer te toetsen op basis van de bestaande Zorgviewer kolommen. Door een gestandaardiseerde "basis patiënt" in te voeren in alle aangesloten systemen, kunnen we controleren of gegevens correct en consistent worden weergegeven in de Zorgviewer. Er zijn enkele negatieve tests opgenomen, de registraties in het bronsysteem zullen dan juist niet getoond worden in Zorgviewer.
 
 ### Instructie
+
 - Voor het registreren van de test cases geldt in alle gevallen, gebruik de werkwijze voor registratie zoals deze door de zorgverleners in het eigen systeem worden gebruikt. Vul de gevraagde gegevens bijvoorbeeld niet in onder een beheerdersaccount of via een methode die niet door de zorgverleners kan worden gebruikt in productie. 
 - Voor de testcases veronderstellen wij dat de gegevens worden ingevuld door het type zorgverlener die dit ook in productie doet.
 - De voorbeelddata is grotendeels gebaseerd op voorbeelddata uit [ZIB2017](https://zibs.nl/wiki/ZIB_Publicatie_2017(NL)) en is mogelijk niet klinisch relevant.
@@ -306,6 +308,7 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 {: .grid .table-striped}
 
 #### Voedingsadvies
+
 | Testpatiënt 1 | Voedingsadvies |
 | ------------- | ----------------------- |
 | Datum         | 11-07-2026              |
@@ -315,6 +318,7 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 {: .grid .table-striped}
 
 #### Woonsituatie
+
 | Testpatiënt 1 | Woonsituatie |
 | ------------- | ----------------------- |
 | Datum         | 11-07-2026              |
@@ -323,6 +327,7 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 {: .grid .table-striped}
 
 #### Contactpersonen
+
 | Testpatiënt 1 | Contactpersonen |
 | ------------- | ----------------------- |
 | Rol           | Eerste contactpersoon   |
@@ -334,6 +339,7 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 {: .grid .table-striped}
 
 #### Middelengebruik
+
 | Testpatiënt 1 | Middelengebruik, alcoholgebruik |
 | ------------- | ----------------------- |
 | (Start)Datum  | 05-05-2015              |
