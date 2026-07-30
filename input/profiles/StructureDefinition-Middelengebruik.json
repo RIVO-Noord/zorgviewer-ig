@@ -12,6 +12,71 @@
     "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
     "derivation": "constraint",
     "differential": {
-        "element": []
+        "element": [
+            {
+                "id": "Bundle.entry",
+                "path": "Bundle.entry",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "type",
+                            "path": "resource"
+                        }
+                    ],
+                    "rules": "open"
+                }
+            },
+            {
+                "id": "Bundle.entry:TobaccoUse",
+                "path": "Bundle.entry",
+                "sliceName": "TobaccoUse"
+            },
+            {
+                "id": "Bundle.entry:TobaccoUse.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Tabakgebruik",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Observation",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/TobaccoUse"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:AlcoholUse",
+                "path": "Bundle.entry",
+                "sliceName": "AlcoholUse"
+            },
+            {
+                "id": "Bundle.entry:AlcoholUse.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Alcoholgebruik",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Observation",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AlcoholUse"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:DrugUse",
+                "path": "Bundle.entry",
+                "sliceName": "DrugUse"
+            },
+            {
+                "id": "Bundle.entry:DrugUse.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Drugsgebruik",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Observation",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DrugUse"
+                    }
+                ]
+            }
+        ]
     }
 }

@@ -14,12 +14,6 @@
     "differential": {
         "element":  [
             {
-                "id": "Bundle.type",
-                "path": "Bundle.type",
-                "short": "searchset",
-                "fixedCode": "searchset"
-            },
-            {
                 "id": "Bundle.entry",
                 "path": "Bundle.entry",
                 "slicing": {
@@ -39,11 +33,6 @@
                 "short": "MedicationRequest"
             },
             {
-                "id": "Bundle.entry:MedicationRequest.fullUrl",
-                "path": "Bundle.entry.fullUrl",
-                "min": 1
-            },
-            {
                 "id": "Bundle.entry:MedicationRequest.resource",
                 "path": "Bundle.entry.resource",
                 "comment": "Medicationafspraak",
@@ -53,19 +42,13 @@
                         "code": "MedicationRequest",
                         "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationRequest"
                     }
-                ],
-                "mustSupport": true
+                ]
             },
             {
                 "id": "Bundle.entry:MedicationStatement",
                 "path": "Bundle.entry",
                 "sliceName": "MedicationStatement",
                 "short": "MedicationStatement"
-            },
-            {
-                "id": "Bundle.entry:MedicationStatement.fullUrl",
-                "path": "Bundle.entry.fullUrl",
-                "min": 1
             },
             {
                 "id": "Bundle.entry:MedicationStatement.resource",
@@ -77,8 +60,7 @@
                         "code": "MedicationStatement",
                         "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationStatement"
                     }
-                ],
-                "mustSupport": true
+                ]
             }
         ]
     }

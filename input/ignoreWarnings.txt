@@ -24,6 +24,7 @@ The code provided (nl-NL) could not be validated against the maximum value set '
 Source Code System http://loinc.org is only supported on the terminology server, so the source codes are not validated for performance reasons
 Target Code System http://loinc.org is only supported on the terminology server, so the target codes are not validated for performance reasons
 The Target Code System http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodelist is not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed
+Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
 
 # FHIR core example issue
 if identifier.system is 'urn:ietf:rfc:3986', then the identifier.value must be a full URI (e.g. start with a scheme), not 'Local eCMS identifier'
@@ -85,3 +86,8 @@ Code V4 is not a valid SNOMED CT Term, and neither could it be parsed as an expr
 
 # We don't care about OIDs
 % could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+% should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+
+# We are not doing R5
+The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
