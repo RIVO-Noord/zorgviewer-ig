@@ -38,6 +38,12 @@
           "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
         },
         {
+          "path": "component.valueQuantity.value.toString() + ' ' + component.valueQuantity.unit",
+          "name": "Waarde componenten1",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
+        },
+        {
           "path": "performer.display",
           "name": "Uitvoerder",
           "type": "string",
@@ -68,6 +74,12 @@
           "description": "",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "MetingNaam" } ]
+        },
+        {
+          "path": "component.valueCodeableConcept.coding.display.select(toString()).join('\n')",
+          "name": "+Context",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "overige context" } ]
         },
         {
           "path": "comment | note.text",

@@ -44,6 +44,13 @@
 <td></td>
 </tr>
 <tr>
+<td>Waarde componenten1</td>
+<td><samp>component.valueQuantity.value.toString() + ' ' + component.valueQuantity.unit</samp></td>
+<td><code>string</code></td>
+<td>*Waarde</td>
+<td></td>
+</tr>
+<tr>
 <td>Uitvoerder</td>
 <td><samp>performer.display</samp></td>
 <td><code>string</code></td>
@@ -77,6 +84,14 @@
 <td><samp>code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').select('NHG45#' + code + ' ' + display)</samp></td>
 <td><code>string</code></td>
 <td>MetingNaam</td>
+<td></td>
+</tr>
+<tr style="background-color:#b4c7e7">
+<td>+Context</td>
+<td><samp>component.valueCodeableConcept.coding.display.select(toString()).join('
+')</samp></td>
+<td><code>string</code></td>
+<td>overige context</td>
 <td></td>
 </tr>
 <tr style="background-color:#b4c7e7">
