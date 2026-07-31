@@ -13,39 +13,6 @@
 </tr>
 <tr><td>+</td>
 <td>CGM</td>
-<td>4-6-2026</td>
-<td>roken</td>
-<td>ja</td>
-<td></td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Meting</b><br/>NHG45#1739 roken<br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-6-2026</td>
-<td>drugsgebruik</td>
-<td>nooit</td>
-<td></td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Meting</b><br/>NHG45#3022 drugsgebruik<br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-6-2026</td>
-<td>alcoholgebruik</td>
-<td>1 /d</td>
-<td></td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Meting</b><br/>NHG45#1591 alcoholgebruik<br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
 <td>2-6-2026</td>
 <td>gewicht patiënt</td>
 <td>75 kg</td>
@@ -56,6 +23,41 @@
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 <b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
 <b>Toelichting</b><br/>dit is de opmerking voor de patient bij het gewicht<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>18-3-2026</td>
+<td>respiratoire evaluatie</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ademhaling</td>
+</tr><tr><td></td><td colspan=7>
+<b>Toelichting</b><br/>De ademhaling lijkt oppervlakkiger dan de vorige meting.<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>diastolische bloeddruk</td>
+<td>75 mm[Hg]</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Bloeddruk</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8462-4 Diastolic blood pressure<br/>
+<b>Meting</b><br/>NHG45#1740 diastolische bloeddruk<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-3-2026</td>
+<td>systolische bloeddruk</td>
+<td>125 mm[Hg]</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Bloeddruk</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#8480-6 Systolic blood pressure<br/>
+<b>Meting</b><br/>NHG45#1744 systolische bloeddruk<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -71,14 +73,104 @@
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
-<td>21-8-2025</td>
-<td>hoe vaak drinken van alcohol (FiveShot1)</td>
-<td>4 of meer keer per week (score 2)</td>
+<td>20-8-2025</td>
+<td>gewicht patiënt</td>
+<td>43.535.0 kg</td>
 <td></td>
 <td></td>
-<td></td>
+<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=7>
-<b>Meting</b><br/>NHG45#2418 hoe vaak drinken van alcohol (FiveShot1)<br/>
+<b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>lengte patiënt</td>
+<td>35.354.00 m</td>
+<td></td>
+<td></td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#560 lengte patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>Quetelet-index (BMI) patiënt</td>
+<td>0 kg/m2</td>
+<td></td>
+<td></td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1272 Quetelet-index (BMI) patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>temperatuur patiënt</td>
+<td>23 °C</td>
+<td></td>
+<td></td>
+<td>Temperatuur</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1357 temperatuur patiënt<br/>
+<b>Toelichting</b><br/>Waarde aangepast van heel veel naar 23<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>diastolische bloeddruk</td>
+<td>23 mmHg</td>
+<td></td>
+<td></td>
+<td>Bloeddruk</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1740 diastolische bloeddruk<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>systolische bloeddruk</td>
+<td>23 mmHg</td>
+<td></td>
+<td></td>
+<td>Bloeddruk</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1744 systolische bloeddruk<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>polsfrequentie</td>
+<td>24.342 aantal/min</td>
+<td></td>
+<td></td>
+<td>Hartslag</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1875 polsfrequentie<br/>
+<b>Toelichting</b><br/>Dit is een opmerking<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>zuurstofsaturatie (pulsoximeter)</td>
+<td>23.424 %</td>
+<td></td>
+<td></td>
+<td>Ademhaling</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#2680 zuurstofsaturatie (pulsoximeter)<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>20-8-2025</td>
+<td>lichaamsoppervlakte</td>
+<td>6.538.6 m2</td>
+<td></td>
+<td></td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#3017 lichaamsoppervlakte<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -199,13 +291,79 @@
 <tr><td>+</td>
 <td>Sanday</td>
 <td>7-8-2025</td>
-<td>roken</td>
-<td>nooit</td>
+<td>gewicht patiënt</td>
+<td>81 kg</td>
 <td></td>
 <td></td>
-<td></td>
+<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=7>
-<b>Meting</b><br/>NHG45#1739 roken<br/>
+<b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>lengte patiënt</td>
+<td>1.81 m</td>
+<td></td>
+<td></td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#560 lengte patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>Quetelet-index (BMI) patiënt</td>
+<td>24.7 kg/m2</td>
+<td></td>
+<td></td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1272 Quetelet-index (BMI) patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>temperatuur patiënt</td>
+<td>37.3 °C</td>
+<td></td>
+<td></td>
+<td>Temperatuur</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1357 temperatuur patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>diastolische bloeddruk</td>
+<td>80 mmHg</td>
+<td></td>
+<td></td>
+<td>Bloeddruk</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1740 diastolische bloeddruk<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>systolische bloeddruk</td>
+<td>125 mmHg</td>
+<td></td>
+<td></td>
+<td>Bloeddruk</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#1744 systolische bloeddruk<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>lichaamsoppervlakte</td>
+<td>2 m2</td>
+<td></td>
+<td></td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#3017 lichaamsoppervlakte<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -387,6 +545,61 @@
 <b>Meting</b><br/>LOINC#2708-6 Oxygen saturation in Arterial blood<br/>
 </td></tr>
 <tr><td>+</td>
+<td>Nedap</td>
+<td>17-7-2025</td>
+<td>respiratoire evaluatie</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ademhaling</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>20-6-2025</td>
+<td>respiratoire evaluatie</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ademhaling</td>
+</tr><tr><td></td><td colspan=7>
+<b>Toelichting</b><br/>zonder performer<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>30-3-2025</td>
+<td>respiratoire evaluatie</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ademhaling</td>
+</tr><tr><td></td><td colspan=7>
+<b>Toelichting</b><br/>erer<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>11-3-2025</td>
+<td>lengte patiënt</td>
+<td>1.53 m</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>NHG45#560 lengte patiënt<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>11-3-2025</td>
+<td>gewicht patiënt</td>
+<td>72 kg</td>
+<td></td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Lichaamsmaten</td>
+</tr><tr><td></td><td colspan=7>
+<b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
+<b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
+</td></tr>
+<tr><td>+</td>
 <td>EPS</td>
 <td>10-11-2024</td>
 <td>Body Height</td>
@@ -400,17 +613,6 @@
 <tr><td>+</td>
 <td>EPS</td>
 <td>10-11-2024</td>
-<td>Pain severity - 0-10 verbal numeric rating [Score] - Reported</td>
-<td>3 {score}</td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Meting</b><br/>LOINC#72514-3 Pain severity - 0-10 verbal numeric rating [Score] - Reported<br/>
-</td></tr>
-<tr><td>+</td>
-<td>EPS</td>
-<td>10-11-2024</td>
 <td>Body Weight</td>
 <td>85.5 kg</td>
 <td></td>
@@ -418,17 +620,6 @@
 <td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#29463-7 Body Weight<br/>
-</td></tr>
-<tr><td>+</td>
-<td>EPS</td>
-<td>10-11-2024</td>
-<td>Body mass index (BMI) [Ratio]</td>
-<td>30.3 kg/m2</td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Meting</b><br/>LOINC#39156-5 Body mass index (BMI) [Ratio]<br/>
 </td></tr>
 <tr><td>+</td>
 <td>EPS</td>
@@ -499,17 +690,6 @@
 <tr><td>+</td>
 <td>EPS</td>
 <td>5-11-2023</td>
-<td>Pain severity - 0-10 verbal numeric rating [Score] - Reported</td>
-<td>1 {score}</td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Meting</b><br/>LOINC#72514-3 Pain severity - 0-10 verbal numeric rating [Score] - Reported<br/>
-</td></tr>
-<tr><td>+</td>
-<td>EPS</td>
-<td>5-11-2023</td>
 <td>Body Weight</td>
 <td>84.4 kg</td>
 <td></td>
@@ -517,17 +697,6 @@
 <td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=7>
 <b>Meting</b><br/>LOINC#29463-7 Body Weight<br/>
-</td></tr>
-<tr><td>+</td>
-<td>EPS</td>
-<td>5-11-2023</td>
-<td>Body mass index (BMI) [Ratio]</td>
-<td>29.9 kg/m2</td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-<b>Meting</b><br/>LOINC#39156-5 Body mass index (BMI) [Ratio]<br/>
 </td></tr>
 <tr><td>+</td>
 <td>EPS</td>

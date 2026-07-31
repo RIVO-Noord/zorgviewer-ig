@@ -77,14 +77,14 @@
           "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
         },
         {
-          "path": "code.coding.where(system='http://loinc.org' and code!='8716-3').translate('vital-signs-groups').target[0].display | code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').translate('vital-signs-groups').target[0].display",
+          "path": "code.coding.where((system='http://loinc.org' and code!='8716-3') or system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' or system='http://snomed.info/sct').translate('vital-signs-groups').target[0].display",
           "name": "(Groep)",
           "description": "Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;<a href='ConceptMap-vital-signs-groups.html'>/ConceptMap/vital-signs-groups</a>$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br>Verberg regels die <b>GEEN</b> groep hebben.",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='Observation' and (category.coding.code='vital-signs' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult'))"
+      "forEach": "entry.resource.where(resourceType='Observation' and (category.coding.code='vital-signs' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult') or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/zib-Respiration')"
     }
   ]
 }
