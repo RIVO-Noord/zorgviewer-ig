@@ -34,14 +34,14 @@
 <td><samp>code.text | code.coding[0].display</samp></td>
 <td><code>string</code></td>
 <td>WaarnemingGebruik</td>
-<td>Code van de ZIB voor middelengebruik</td>
+<td>De middelengebruik groep (roken, alcohol, drugs)</td>
 </tr>
 <tr>
 <td>Status</td>
 <td><samp>valueCodeableConcept.text | valueCodeableConcept.coding[0].display | valueString</samp></td>
 <td><code>string</code></td>
-<td>Status</td>
-<td>Indicatie of in het heden of verleden sprake is (geweest) van middelengebruik.</td>
+<td>*Status</td>
+<td>De status van het middelengebruik</td>
 </tr>
 <tr>
 <td>Middel</td>

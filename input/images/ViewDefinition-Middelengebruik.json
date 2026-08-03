@@ -32,14 +32,14 @@
           "name": "Soort gebruik",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "WaarnemingGebruik" } ],
-          "description": "Code van de ZIB voor middelengebruik"
+          "description": "De middelengebruik groep (roken, alcohol, drugs)"
         },
         {
           "path": "valueCodeableConcept.text | valueCodeableConcept.coding[0].display | valueString",
           "name": "Status",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "Status" } ],
-          "description": "Indicatie of in het heden of verleden sprake is (geweest) van middelengebruik."
+          "tag": [ { "name": "Zib element", "value": "*Status" } ],
+          "description": "De status van het middelengebruik"
         },
         {
           "path": "component.where(code.coding.where(code='410942007' or code='53661000146106').exists()).valueCodeableConcept.coding[0].display + iif(component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.exists(), ' ' + component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.coding[0].display, '')",
