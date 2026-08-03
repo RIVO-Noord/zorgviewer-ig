@@ -1,0 +1,214 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-ContactenAfspraken",
+  "title": "Contacten en Afspraken",
+  "select": [
+    {
+      "unionAll": [
+        {
+          "column": [
+            {
+              "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+              "name": "Bron",
+              "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "nvt"
+                }
+              ]
+            },
+            {
+              "path": "period.start",
+              "name": "Begin",
+              "description": "",
+              "type": "dateTime",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "BeginDatumTijd"
+                }
+              ]
+            },
+            {
+              "path": "period.end",
+              "name": "Eind",
+              "description": "",
+              "type": "dateTime",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "EindDatumTijd"
+                }
+              ]
+            },
+            {
+              "path": "participant.individual.select(display | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display).join('\n')",
+              "name": "Met",
+              "description": "",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "ContactMet::Zorgverlener, ContactMet::Zorgverlener/ZorgverlenersRol"
+                }
+              ]
+            },
+            {
+              "path": "location.location.display",
+              "name": "Locatie",
+              "description": "",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "Locatie::Zorgaanbieder"
+                }
+              ]
+            },
+            {
+              "path": "status",
+              "name": "Status",
+              "description": "",
+              "type": "code",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "nvt"
+                }
+              ]
+            },
+            {
+              "path": "class.display + ' ' + type.text",
+              "name": "Type",
+              "description": "",
+              "type": "code",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "ContactType"
+                }
+              ]
+            },
+            {
+              "path": "episodeOfCare.display | reason.text | diagnosis.condition.display",
+              "name": "Reden",
+              "description": "Uit huisarts gekoppelde Episode or DeviatingResult or Problem or Condition",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "nvt"
+                }
+              ]
+            }
+          ],
+          "forEach": "entry.resource.where(resourceType='Encounter')"
+        },
+        {
+          "column": [
+            {
+              "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+              "name": "Bron",
+              "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "nvt"
+                }
+              ]
+            },
+            {
+              "path": "start",
+              "name": "Begin",
+              "description": "",
+              "type": "dateTime",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "BeginDatumTijd"
+                }
+              ]
+            },
+            {
+              "path": "end",
+              "name": "Eind",
+              "description": "",
+              "type": "dateTime",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "EindDatumTijd"
+                }
+              ]
+            },
+            {
+              "path": "participant.actor.where(reference.contains('Practitioner/')).select(display | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display).join('\n')",
+              "name": "Met",
+              "description": "",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "ContactMet::Zorgverlener, ContactMet::Zorgverlener/ZorgverlenersRol"
+                }
+              ]
+            },
+            {
+              "path": "participant.actor.where(reference.contains('Location/'))[0].display",
+              "name": "Locatie",
+              "description": "",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "Locatie::Zorgaanbieder"
+                }
+              ]
+            },
+            {
+              "path": "status",
+              "name": "Status",
+              "description": "",
+              "type": "code",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "nvt"
+                }
+              ]
+            },
+            {
+              "path": "appointmentType.coding.display",
+              "name": "Type",
+              "description": "",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "ContactType"
+                }
+              ]
+            },
+            {
+              "path": "reason.text | indication.display",
+              "name": "Reden",
+              "description": "DeviatingResult or Problem or Condition<br/>n.b. dit is geen ZIB.",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "nvt"
+                }
+              ]
+            }
+          ],
+          "forEach": "entry.resource.where(resourceType='Appointment' and (status='proposed' or status='pending' or status='booked'))"
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>Contacten</b>
+<b>Contacten en Afspraken</b>
 <table class="grid">
 <tbody>
 <tr><th>&gt;&lt;</th>
@@ -12,6 +12,28 @@
 <th>Type</th>
 <th>Reden</th>
 </tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>15-7-2026</td>
+<td>15-7-2026</td>
+<td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
+<td></td>
+<td>booked</td>
+<td>e-consult</td>
+<td></td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>WZA</td>
+<td>13-7-2026</td>
+<td>13-7-2026</td>
+<td>M.C. Gordinou de Gouberville<br/>Onbekende functiecode.</td>
+<td>Wilhelmina Ziekenhuis</td>
+<td>pending</td>
+<td>Ambulatory</td>
+<td>Niet beschikbaar</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
 <tr><td>+</td>
 <td>CGM</td>
 <td>4-3-2026</td>
@@ -68,17 +90,6 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>CGM</td>
-<td>11-3-2025</td>
-<td>11-3-2025</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
 <td>Sanday</td>
 <td>4-7-2024</td>
 <td></td>
@@ -90,6 +101,28 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
+<td>Chipsoft</td>
+<td>12-10-2022</td>
+<td>12-10-2022</td>
+<td></td>
+<td>Ziekenhuis Apotheek</td>
+<td>pending</td>
+<td>Ambulatory</td>
+<td>Niet beschikbaar</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Epic</td>
+<td>20-4-2018</td>
+<td>20-4-2018</td>
+<td>G. Dijkstra, MDL arts</td>
+<td>Maag- Darm- Leverziekten</td>
+<td>pending</td>
+<td>Ambulatory</td>
+<td></td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
 <td>CGM</td>
 <td>15-11-2012</td>
 <td>15-11-2012</td>
@@ -98,17 +131,6 @@
 <td>finished</td>
 <td></td>
 <td></td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>15-11-2012</td>
-<td>15-11-2012</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -164,28 +186,6 @@
 <td>finished</td>
 <td></td>
 <td></td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>20-4-2011</td>
-<td>20-4-2011</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>20-4-2011</td>
-<td>20-4-2011</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 </tbody>
