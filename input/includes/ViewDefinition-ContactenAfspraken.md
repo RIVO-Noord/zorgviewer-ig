@@ -54,7 +54,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td><samp>class.display + ' ' + iif(exists(type.text), type.text, type.coding.display)</samp></td>
+<td><samp>class.display + iif(exists(type), ' ' + (type.text | type.coding.display), '')</samp></td>
 <td><code>code</code></td>
 <td>ContactType</td>
 <td></td>

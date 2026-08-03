@@ -96,7 +96,7 @@
 <td></td>
 <td></td>
 <td>finished</td>
-<td></td>
+<td>Other</td>
 <td>Keelpijn</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -140,7 +140,7 @@
 <td>Wit<br/>Orthopedie</td>
 <td></td>
 <td>finished</td>
-<td></td>
+<td>Klinisch</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -151,7 +151,7 @@
 <td>J.H.R Peters<br/>Onbekende functiecode.</td>
 <td></td>
 <td>finished</td>
-<td></td>
+<td>inpatient</td>
 <td>other</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
