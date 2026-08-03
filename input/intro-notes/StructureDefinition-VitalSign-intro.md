@@ -56,8 +56,11 @@ N.B. Eerste request is optimaal en wordt ondersteund door Epic, Sanday en CGM. D
 1. Opvragen (search) vital signs (NUTS HA-VVT UC1)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&_profile=http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure&_sort=-date&_count=5`
+
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&_profile=http://nictiz.nl/fhir/StructureDefinition/zib-BodyHeight&_sort=-date&_count=5`
+
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&_profile=http://nictiz.nl/fhir/StructureDefinition/zib-BodyTemperature&_sort=-date&_count=5`
-    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>}&_profile=http://nictiz.nl/fhir/StructureDefinition/zib-Respiration&_sort=-date&_count=5`
+    
+    `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&_profile=http://nictiz.nl/fhir/StructureDefinition/zib-Respiration&_sort=-date&_count=5`
 
 {% include bronsysteem-herkennen.md %}
