@@ -44,6 +44,13 @@
 <td></td>
 </tr>
 <tr>
+<td>Waarde componenten1</td>
+<td><samp>component.valueQuantity.value.toString() + ' ' + component.valueQuantity.unit</samp></td>
+<td><code>string</code></td>
+<td>*Waarde</td>
+<td></td>
+</tr>
+<tr>
 <td>Uitvoerder</td>
 <td><samp>performer.display</samp></td>
 <td><code>string</code></td>
@@ -80,6 +87,14 @@
 <td></td>
 </tr>
 <tr style="background-color:#b4c7e7">
+<td>+Context</td>
+<td><samp>component.valueCodeableConcept.coding.display.select(toString()).join('
+')</samp></td>
+<td><code>string</code></td>
+<td>overige context</td>
+<td></td>
+</tr>
+<tr style="background-color:#b4c7e7">
 <td>+Toelichting</td>
 <td><samp>comment | note.text</samp></td>
 <td><code>string</code></td>
@@ -89,7 +104,7 @@
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(Groep)</td>
-<td><samp>code.coding.where(system='http://loinc.org' and code!='8716-3').translate('vital-signs-groups').target[0].display | code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen').translate('vital-signs-groups').target[0].display</samp></td>
+<td><samp>code.coding.where((system='http://loinc.org' and code!='8716-3') or system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' or system='http://snomed.info/sct').translate('vital-signs-groups').target[0].display</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
 <td>Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;<a href='ConceptMap-vital-signs-groups.html'>/ConceptMap/vital-signs-groups</a>$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br>Verberg regels die <b>GEEN</b> groep hebben.</td>

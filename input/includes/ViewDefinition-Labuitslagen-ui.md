@@ -224,18 +224,6 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Nexus</td>
-<td>13-3-2023</td>
-<td></td>
-<td></td>
-<td></td>
-<td> .. </td>
-<td>Materiaal: Bloed</td>
-<td>final</td>
-</tr><tr><td></td><td colspan=8>
-<b>Toelichting materiaal</b><br/>Monster bij LaboratoriumUitslag (LaboratoryTestResult) [bgz-patA-labresult2]<br/>
-</td></tr>
-<tr><td>+</td>
 <td>EPS</td>
 <td>30-10-2022</td>
 <td>Cholesterol [Mass/volume] in Serum or Plasma</td>

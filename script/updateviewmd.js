@@ -266,10 +266,10 @@ function extractExampleRows(select, allExtractedRows) {
             if (match3) {
                 let whereResult;
                 try { whereResult = fhirpath.evaluate(example, match3[1]); }
-                catch (err) { console.error ("ERROR: Error evaluating where clause", match3[1], err.message); }
+                catch (err) { console.error (`ERROR: Error evaluating where clause in ${example.exampleFileName}`, match3[1], err.message); }
 
                 // does example match where clause?
-                if (whereResult[0]) {
+                if (whereResult && whereResult[0]) {
                     // is there a further path to follow?
                     if (match3[3]) {
                         const columnResults = fhirpath.evaluate(example, match3[3], null, fhirpath_stu3_model);
@@ -358,6 +358,11 @@ function extractExampleData(select, example, exampleFileName) {
 }
 
 function doExampleRow(extractedData, md_ui) {
+    // special case for (Groep) column; if no value, skip this row; used in vital-signs to hide rows without a group
+    if (extractedData.find(column => column.name == '(Groep)') && extractedData.find(column => column.name == '(Groep)').value == "") {
+        return;
+    }
+
     md_ui.push("<tr><td>+</td>");
     // add column values
     extractedData.forEach((column, idx) => {
