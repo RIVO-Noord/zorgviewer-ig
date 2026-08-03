@@ -19,7 +19,7 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
-<td></td>
+<td>Ambulatory notitie/memo</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -30,7 +30,7 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
-<td></td>
+<td>Ambulatory Anders</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -41,7 +41,7 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
-<td></td>
+<td>Ambulatory e-consult</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -63,19 +63,8 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
+<td>Ambulatory consult</td>
 <td></td>
-<td></td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>11-3-2025</td>
-<td>11-3-2025</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -96,19 +85,8 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
+<td>Ambulatory notitie/memo</td>
 <td></td>
-<td></td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>15-11-2012</td>
-<td>15-11-2012</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -140,18 +118,7 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>20-4-2011</td>
-<td>20-4-2011</td>
-<td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td></td>
+<td>Ambulatory notitie/memo</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -162,7 +129,7 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
-<td></td>
+<td>Ambulatory notitie/memo</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -170,22 +137,11 @@
 <td>CGM</td>
 <td>20-4-2011</td>
 <td>20-4-2011</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
+<td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>20-4-2011</td>
-<td>20-4-2011</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
+<td>Ambulatory consult</td>
 <td></td>
-<td>finished</td>
-<td>Ambulatory</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 </tbody>

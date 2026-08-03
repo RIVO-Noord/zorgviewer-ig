@@ -41,7 +41,7 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
-<td></td>
+<td>Ambulatory notitie/memo</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -52,7 +52,7 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
-<td></td>
+<td>Ambulatory Anders</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -63,7 +63,7 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
-<td></td>
+<td>Ambulatory e-consult</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -85,7 +85,7 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
-<td></td>
+<td>Ambulatory consult</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -129,7 +129,7 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
-<td></td>
+<td>Ambulatory notitie/memo</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -162,18 +162,7 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>20-4-2011</td>
-<td>20-4-2011</td>
-<td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td></td>
+<td>Ambulatory notitie/memo</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
@@ -184,7 +173,18 @@
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
+<td>Ambulatory notitie/memo</td>
 <td></td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>20-4-2011</td>
+<td>20-4-2011</td>
+<td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
+<td></td>
+<td>finished</td>
+<td>Ambulatory consult</td>
 <td></td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
