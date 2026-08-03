@@ -79,7 +79,7 @@
           ]
         },
         {
-          "path": "class.display + ' ' + iif(exists(type.text), type.text, type.coding.display)",
+          "path": "class.display + iif(exists(type), ' ' + (type.text | type.coding.display), '')",
           "name": "Type",
           "description": "",
           "type": "code",
