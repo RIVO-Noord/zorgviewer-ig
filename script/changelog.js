@@ -19,7 +19,7 @@ async function generateChangelog() {
 
     // 2. Craft the Agent's Prompt
     const prompt = `
-      Generate a list of changes from the git log and diff at the end.
+      Generate a list of changes from the git diff at the end.
       Make sure to also summarize changes per file.
       Format as a bullet list no intro and grouped by:
 
