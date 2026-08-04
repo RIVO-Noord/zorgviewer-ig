@@ -98,9 +98,17 @@ Vanuit project Zorgviewer is de ACP deels in scope, namelijk de BehandelAanwijzi
 
 Voor de volledige dataset, kijk op [Nictiz ART-DECOR](https://decor.nictiz.nl/art-decor/decor-project--pall-izppz-)
 
-### Verpleegkundige Overdracht
+### Verpleegkundige eOverdracht
 
 ...
+
+### Huisartsgegevensset
+
+
+
+### NUTS Zorgtoepassing: HA-VVT inzage dossier v1.1
+
+https://wiki.nuts.nl/books/samenwerken-huisarts-en-thuiszorg/page/zorgtoepassing-ha-vvt-inzage-dossier-v11
 
 ### EHDS EPS
 
