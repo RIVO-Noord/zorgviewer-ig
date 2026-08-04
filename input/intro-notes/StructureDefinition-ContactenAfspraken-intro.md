@@ -1,5 +1,7 @@
 {% include profile-note.md %}
 
+{% include future-note.md %}
+
 ### Zorginformatiebouwsteen
 
 * [ZIB Contact](https://zibs.nl/wiki/Contact-v1.0.1(2017NL))

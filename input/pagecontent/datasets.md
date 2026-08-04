@@ -104,11 +104,11 @@ Voor de volledige dataset, kijk op [Nictiz ART-DECOR](https://decor.nictiz.nl/ar
 
 ### Huisartsgegevensset
 
-
+[Huisartsgegevensset](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_GP_Data)
 
 ### NUTS Zorgtoepassing: HA-VVT inzage dossier v1.1
 
-https://wiki.nuts.nl/books/samenwerken-huisarts-en-thuiszorg/page/zorgtoepassing-ha-vvt-inzage-dossier-v11
+[HA-VVT inzage dossier v1.1](https://wiki.nuts.nl/books/samenwerken-huisarts-en-thuiszorg/page/zorgtoepassing-ha-vvt-inzage-dossier-v11)
 
 ### EHDS EPS
 
