@@ -24,35 +24,35 @@
 </tr>
 <tr>
 <td>Gebruiksperiode</td>
-<td><samp>iif(effectivePeriod.start.exists() and effectivePeriod.end.exists(), effectivePeriod.start.toString()+' - '+effectivePeriod.end.toString(), (effectivePeriod.start | effectivePeriod.end | effectiveDateTime).toString())</samp></td>
-<td><code>string</code></td>
+<td><samp>effectivePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | effectiveDateTime</samp></td>
+<td><code>Period</code></td>
 <td>StartDatum/StopDatum</td>
 <td>EffectivePeriod is voorgeschreven in de ZIB, maar in veel gevallen zal de data geen periode bevatten. In die gevallen is de datum van vaststelling bepalend voor interpretatie.</td>
 </tr>
 <tr>
 <td>Soort gebruik</td>
-<td><samp>code.text | code.coding[0].display</samp></td>
+<td><samp>code.text | code.coding.display</samp></td>
 <td><code>string</code></td>
 <td>WaarnemingGebruik</td>
 <td>De middelengebruik groep (roken, alcohol, drugs)</td>
 </tr>
 <tr>
 <td>Status</td>
-<td><samp>valueCodeableConcept.text | valueCodeableConcept.coding[0].display | valueString</samp></td>
+<td><samp>valueCodeableConcept.text | valueCodeableConcept.coding.display | valueString</samp></td>
 <td><code>string</code></td>
 <td>*Status</td>
 <td>De status van het middelengebruik</td>
 </tr>
 <tr>
 <td>Middel</td>
-<td><samp>component.where(code.coding.where(code='410942007' or code='53661000146106').exists()).valueCodeableConcept.coding[0].display + iif(component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.exists(), ' ' + component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.coding[0].display, '')</samp></td>
+<td><samp>component.where(code.coding.exists(code = '410942007' or code = '53661000146106')).valueCodeableConcept.coding.display.combine(component.where(code.coding.exists(code = '410675002')).valueCodeableConcept.coding.display).join(' ')</samp></td>
 <td><code>string</code></td>
 <td>Middel</td>
 <td>Soort middel en toedieningsvorm</td>
 </tr>
 <tr>
 <td>Hoeveelheid/Antwoord</td>
-<td><samp>iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and (code='2418' or code='2419' or code='2420' or code='2421' or code='2422')).exists(), valueCodeableConcept.text | valueCodeableConcept.coding[0].display, iif(component.exists(), component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.unit+iif(component.where(code.coding.where(code='401201003').exists()).exists(), ' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', ''), valueQuantity.value.toString()+' '+valueQuantity.unit))</samp></td>
+<td><samp>iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and code in ('2418' | '2419' | '2420' | '2421' | '2422')).exists(), valueCodeableConcept.text | valueCodeableConcept.coding.display, iif(component.exists(), component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.unit+iif(component.where(code.coding.where(code='401201003').exists()).exists(), ' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', ''), valueQuantity.value.toString()+' '+valueQuantity.unit))</samp></td>
 <td><code>string</code></td>
 <td>Hoeveelheid</td>
 <td>Het aantal eenheden (glazen, sigaretten, pillen, shots etc.) per dag, week, maand of jaar of de freqentie van gebruik, met eventueel de pack years voor roken. Of het antwoord op de vraag in de 5-shot vragenlijst.</td>

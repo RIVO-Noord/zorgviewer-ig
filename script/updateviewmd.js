@@ -372,6 +372,13 @@ function doExampleRow(extractedData, md_ui) {
                 const date = new Date(displayValue);
                 displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'UTC' });
             }
+            if (column.type == "Period" && displayValue) { // special case for Period; display as start - end
+                const period = displayValue.split(' - ');
+                displayValue = new Date(period[0]).toLocaleDateString('nl-NL', { timeZone: 'UTC' });
+                if (period[1]) {
+                    displayValue += ' - ' + new Date(period[1]).toLocaleDateString('nl-NL', { timeZone: 'UTC' });
+                }
+            }
             md_ui.push(`<td>${displayValue}</td>`);
         }
     });

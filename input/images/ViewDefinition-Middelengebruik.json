@@ -21,35 +21,35 @@
           "description": "Datum van de vaststelling van het gebruik."
         },
         {
-          "path": "iif(effectivePeriod.start.exists() and effectivePeriod.end.exists(), effectivePeriod.start.toString()+' - '+effectivePeriod.end.toString(), (effectivePeriod.start | effectivePeriod.end | effectiveDateTime).toString())",
+          "path": "effectivePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | effectiveDateTime",
           "name": "Gebruiksperiode",
-          "type": "string",
+          "type": "Period",
           "tag": [ { "name": "Zib element", "value": "StartDatum/StopDatum" } ],
           "description": "EffectivePeriod is voorgeschreven in de ZIB, maar in veel gevallen zal de data geen periode bevatten. In die gevallen is de datum van vaststelling bepalend voor interpretatie."
         },
         {
-          "path": "code.text | code.coding[0].display",
+          "path": "code.text | code.coding.display",
           "name": "Soort gebruik",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "WaarnemingGebruik" } ],
           "description": "De middelengebruik groep (roken, alcohol, drugs)"
         },
         {
-          "path": "valueCodeableConcept.text | valueCodeableConcept.coding[0].display | valueString",
+          "path": "valueCodeableConcept.text | valueCodeableConcept.coding.display | valueString",
           "name": "Status",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "*Status" } ],
           "description": "De status van het middelengebruik"
         },
         {
-          "path": "component.where(code.coding.where(code='410942007' or code='53661000146106').exists()).valueCodeableConcept.coding[0].display + iif(component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.exists(), ' ' + component.where(code.coding.where(code='410675002').exists()).valueCodeableConcept.coding[0].display, '')",
+          "path": "component.where(code.coding.exists(code = '410942007' or code = '53661000146106')).valueCodeableConcept.coding.display.combine(component.where(code.coding.exists(code = '410675002')).valueCodeableConcept.coding.display).join(' ')",
           "name": "Middel",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Middel" } ],
           "description": "Soort middel en toedieningsvorm"
         },
         {
-          "path": "iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and (code='2418' or code='2419' or code='2420' or code='2421' or code='2422')).exists(), valueCodeableConcept.text | valueCodeableConcept.coding[0].display, iif(component.exists(), component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.unit+iif(component.where(code.coding.where(code='401201003').exists()).exists(), ' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', ''), valueQuantity.value.toString()+' '+valueQuantity.unit))",
+          "path": "iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and code in ('2418' | '2419' | '2420' | '2421' | '2422')).exists(), valueCodeableConcept.text | valueCodeableConcept.coding.display, iif(component.exists(), component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='266918002' or code='228390007' or code='160573003').exists()).valueQuantity.unit+iif(component.where(code.coding.where(code='401201003').exists()).exists(), ' ('+component.where(code.coding.where(code='401201003').exists()).valueQuantity.value.toString()+' '+component.where(code.coding.where(code='401201003').exists()).valueQuantity.unit+')', ''), valueQuantity.value.toString()+' '+valueQuantity.unit))",
           "name": "Hoeveelheid/Antwoord",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Hoeveelheid" } ],
