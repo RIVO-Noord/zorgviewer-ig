@@ -81,30 +81,6 @@
 <tr><td>+</td>
 <td>Sanday</td>
 <td>20-8-2025</td>
-<td>gewicht patiënt</td>
-<td>43.535.0 kg</td>
-<td></td>
-<td></td>
-<td></td>
-<td>Lichaamsmaten</td>
-</tr><tr><td></td><td colspan=8>
-<b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
-</td></tr>
-<tr><td>+</td>
-<td>Sanday</td>
-<td>20-8-2025</td>
-<td>lengte patiënt</td>
-<td>35.354.00 m</td>
-<td></td>
-<td></td>
-<td></td>
-<td>Lichaamsmaten</td>
-</tr><tr><td></td><td colspan=8>
-<b>Meting</b><br/>NHG45#560 lengte patiënt<br/>
-</td></tr>
-<tr><td>+</td>
-<td>Sanday</td>
-<td>20-8-2025</td>
 <td>Quetelet-index (BMI) patiënt</td>
 <td>0 kg/m2</td>
 <td></td>
@@ -175,18 +151,6 @@
 <td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#2680 zuurstofsaturatie (pulsoximeter)<br/>
-</td></tr>
-<tr><td>+</td>
-<td>Sanday</td>
-<td>20-8-2025</td>
-<td>lichaamsoppervlakte</td>
-<td>6.538.6 m2</td>
-<td></td>
-<td></td>
-<td></td>
-<td>Lichaamsmaten</td>
-</tr><tr><td></td><td colspan=8>
-<b>Meting</b><br/>NHG45#3017 lichaamsoppervlakte<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
