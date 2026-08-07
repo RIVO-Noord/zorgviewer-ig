@@ -26,7 +26,7 @@
 <td>Gebruiksperiode</td>
 <td><samp>effectivePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | effectiveDateTime</samp></td>
 <td><code>Period</code></td>
-<td>StartDatum/StopDatum</td>
+<td>StartDatum - StopDatum</td>
 <td>EffectivePeriod is voorgeschreven in de ZIB, maar in veel gevallen zal de data geen periode bevatten. In die gevallen is de datum van vaststelling bepalend voor interpretatie.</td>
 </tr>
 <tr>
