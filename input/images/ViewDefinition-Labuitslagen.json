@@ -27,7 +27,7 @@
           "tag": [ { "name": "Zib element", "value": "LaboratoriumTest/ TestCode" } ]
         },
         {
-          "path": "valueString | valueQuantity.value.toString() + iif(valueQuantity.code.exists(),' ' + valueQuantity.code,'')",
+          "path": "valueString | valueQuantity.value.toString() + iif(valueQuantity.unit.exists(),' ' + valueQuantity.unit,'')",
           "name": "Testuitslag",
           "description": "<b>Epic:</b> Indien lab-order geannuleerd, dan krijgt dit alsnog de status <code>Definitief</code> met een Testuitslag van <code>GEANNULEERD</code>. Dit is voor nu akkoord bevonden door stuurgroep Zorgviewer.",
           "type": "string",

@@ -31,7 +31,7 @@
 </tr>
 <tr>
 <td>Testuitslag</td>
-<td><samp>valueString | valueQuantity.value.toString() + iif(valueQuantity.code.exists(),' ' + valueQuantity.code,'')</samp></td>
+<td><samp>valueString | valueQuantity.value.toString() + iif(valueQuantity.unit.exists(),' ' + valueQuantity.unit,'')</samp></td>
 <td><code>string</code></td>
 <td>LaboratoriumTest/ TestUitslag</td>
 <td><b>Epic:</b> Indien lab-order geannuleerd, dan krijgt dit alsnog de status <code>Definitief</code> met een Testuitslag van <code>GEANNULEERD</code>. Dit is voor nu akkoord bevonden door stuurgroep Zorgviewer.</td>
