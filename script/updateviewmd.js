@@ -99,8 +99,8 @@ function lookupFn(inputs, valueSetId) {
 }
 const userInvocationTable = {
     resolve: { fn: resolveFn },
-    translate: { fn: translateFn, arity: { 1: ['String']}},
-    lookup: { fn: lookupFn, arity: { 1: ['String']}}
+    translate: { fn: translateFn, arity: { 1: ['String'] } },
+    lookup: { fn: lookupFn, arity: { 1: ['String'] } }
 };
 
 fs.readdirSync(viewDefPath).forEach(file => {
@@ -126,7 +126,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
             `<b>${viewDef.title}</b>`,
             "<table class=\"grid\">",
             "<tbody>"
-         ];
+        ];
 
         // add column names for select
         const allExtractedRows = [];
@@ -152,7 +152,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
 
         md_ui.push("</tbody>",
             "</table>");
-    
+
         const md_def_filePath = path.join(mdPath, `${viewDef.id}.md`);
         fs.writeFileSync(md_def_filePath, md_def.join('\n'));
 
@@ -163,7 +163,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
 
 function doColumnDefs(columns, md_def) {
     // Add column definitions
-    columns.forEach(column => { 
+    columns.forEach(column => {
         if (column.name.charAt(0) != '+' && column.name.charAt(0) != '(') {
             md_def.push("<tr>");
             doColumn(column, md_def);
@@ -173,7 +173,7 @@ function doColumnDefs(columns, md_def) {
     // Add uitklap columns
     if (columns.find(column => column.name.charAt(0) == '+')) {
         md_def.push('<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>');
-        columns.forEach(column => { 
+        columns.forEach(column => {
             if (column.name.charAt(0) == '+') {
                 md_def.push("<tr style=\"background-color:#b4c7e7\">");
                 doColumn(column, md_def);
@@ -184,22 +184,22 @@ function doColumnDefs(columns, md_def) {
     // Add markering columns
     if (columns.find(column => column.name.charAt(0) == '(')) {
         md_def.push('<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>');
-        columns.forEach(column => { 
+        columns.forEach(column => {
             if (column.name.charAt(0) == '(') {
                 md_def.push("<tr style=\"background-color:#d6dce5\">");
                 doColumn(column, md_def);
                 md_def.push("</tr>");
             }
-        });    
+        });
     }
 }
 
 function doColumn(column, md) {
     md.push(`<td>${column.name}</td>`)
-    md.push(`<td><samp>${column.path}</samp></td>`)            
+    md.push(`<td><samp>${column.path}</samp></td>`)
     md.push(`<td><code>${column.type && column.type.split('/').join("</code> of <code>")}</code></td>`)
-    md.push(`<td>${column.tag?column.tag[0].value:"<i>nvt</i>"}</td>`)
-    md.push(`<td>${column.description||""}</td>`);
+    md.push(`<td>${column.tag ? column.tag[0].value : "<i>nvt</i>"}</td>`)
+    md.push(`<td>${column.description || ""}</td>`);
 }
 
 function getExamples() {
@@ -220,7 +220,7 @@ function getExamples() {
                     if (q == -1) q = example.link[0].url.length;
                     var urlNoQ = example.link[0].url.substring(0, q);
                     var o = urlNoQ.indexOf('$');
-                    if (o != -1) urlNoQ = urlNoQ.substring(0, o-1); // remove $ operation and last '/'
+                    if (o != -1) urlNoQ = urlNoQ.substring(0, o - 1); // remove $ operation and last '/'
                     const queriedType = urlNoQ.substring(urlNoQ.lastIndexOf('/') + 1);
                     example.entry.filter(entry => entry.resource.resourceType == queriedType).forEach(entry => {
                         entry.resource.exampleFileName = exampleFileName; // keep track of source file for reference in UI
@@ -229,9 +229,9 @@ function getExamples() {
                 }
                 else {
                     // cannot determine queriedType, so keep all
-                    example.entry.forEach(entry => { 
+                    example.entry.forEach(entry => {
                         entry.resource.exampleFileName = exampleFileName; // keep track of source file for reference in UI
-                        examplesCache.push(entry.resource) 
+                        examplesCache.push(entry.resource)
                     });
                 }
             }
@@ -266,7 +266,7 @@ function extractExampleRows(select, allExtractedRows) {
             if (match3) {
                 let whereResult;
                 try { whereResult = fhirpath.evaluate(example, match3[1]); }
-                catch (err) { console.error (`ERROR: Error evaluating where clause in ${example.exampleFileName}`, match3[1], err.message); }
+                catch (err) { console.error(`ERROR: Error evaluating where clause in ${example.exampleFileName}`, match3[1], err.message); }
 
                 // does example match where clause?
                 if (whereResult && whereResult[0]) {
@@ -294,7 +294,7 @@ function extractExampleRows(select, allExtractedRows) {
 function doExampleRows(allExtractedRows, md_ui) {
     // Add column names for UI wireframe
     md_ui.push("<tr><th>&gt;&lt;</th>");
-    allExtractedRows[0].forEach(column => { 
+    allExtractedRows[0].forEach(column => {
         if (column.name.charAt(0) != '+') {
             md_ui.push(`<th>${column.name}</th>`);
         }
@@ -323,12 +323,12 @@ function doExampleRows(allExtractedRows, md_ui) {
 function extractExampleData(select, example, exampleFileName) {
     const extractedValues = select.column.map(column => {
         let evalResult;
-        try { 
-            evalResult = fhirpath.evaluate(example, column.path, null, fhirpath_stu3_model, { userInvocationTable }); 
-        } catch (err) { 
-            console.error("ERROR:", column.name, err.message, column.path); 
+        try {
+            evalResult = fhirpath.evaluate(example, column.path, null, fhirpath_stu3_model, { userInvocationTable });
+        } catch (err) {
+            console.error("ERROR:", column.name, err.message, column.path);
         }
-        
+
         let value = "";
         if (evalResult && evalResult.length > 0) {
             if (column.type == "date" || column.type == "dateTime") {
@@ -353,7 +353,7 @@ function extractExampleData(select, example, exampleFileName) {
     if (extractedValues.length > 0) {
         extractedValues[0].value = exampleFileName.substring(exampleFileName.indexOf('-') + 1, exampleFileName.length - 5);
     }
-    
+
     return extractedValues;
 }
 
@@ -374,9 +374,42 @@ function doExampleRow(extractedData, md_ui) {
             }
             if (column.type == "Period" && displayValue) { // special case for Period; display as start - end
                 const period = displayValue.split(' - ');
-                displayValue = new Date(period[0]).toLocaleDateString('nl-NL', { timeZone: 'UTC' });
-                if (period[1]) {
-                    displayValue += ' - ' + new Date(period[1]).toLocaleDateString('nl-NL', { timeZone: 'UTC' });
+                const dateStart = new Date(period[0]);
+                const dateEnd = period[1] ? new Date(period[1]) : null;
+                // Check if dateEnd falls on the exact same UTC calendar day as dateStart
+                const isSameDay = dateEnd &&
+                    dateStart.getUTCFullYear() === dateEnd.getUTCFullYear() &&
+                    dateStart.getUTCMonth() === dateEnd.getUTCMonth() &&
+                    dateStart.getUTCDate() === dateEnd.getUTCDate();
+
+                // Check if dates are set to midnight (no time set)
+                const startIsMidnight = dateStart.getUTCHours() === 0 && dateStart.getUTCMinutes() === 0 && dateStart.getUTCSeconds() === 0;
+                const endIsMidnight = dateEnd && dateEnd.getUTCHours() === 0 && dateEnd.getUTCMinutes() === 0 && dateEnd.getUTCSeconds() === 0;
+
+                // Format start display
+                const displayStart = startIsMidnight
+                    ? dateStart.toLocaleDateString('nl-NL')
+                    : dateStart.toLocaleString('nl-NL', { year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+                // Format end display based on same-day status
+                let displayEnd = null;
+
+                if (dateEnd) {
+                    if (isSameDay) {
+                        // Hide end date: show time if present, or omit if midnight
+                        displayEnd = endIsMidnight
+                            ? null
+                            : dateEnd.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                    } else {
+                        // Different day: standard date or full date+time
+                        displayEnd = endIsMidnight
+                            ? dateEnd.toLocaleDateString('nl-NL')
+                            : dateEnd.toLocaleString('nl-NL', { year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                    }
+                }
+                displayValue = displayStart;
+                if (displayEnd) {
+                    displayValue += ' - ' + displayEnd;
                 }
             }
             md_ui.push(`<td>${displayValue}</td>`);

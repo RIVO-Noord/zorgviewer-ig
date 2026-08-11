@@ -21,26 +21,14 @@
               ]
             },
             {
-              "path": "period.start",
-              "name": "Begin",
+              "path": "period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
+              "name": "Datum",
               "description": "",
-              "type": "dateTime",
+              "type": "Period",
               "tag": [
                 {
                   "name": "Zib element",
-                  "value": "BeginDatumTijd"
-                }
-              ]
-            },
-            {
-              "path": "period.end",
-              "name": "Eind",
-              "description": "",
-              "type": "dateTime",
-              "tag": [
-                {
-                  "name": "Zib element",
-                  "value": "EindDatumTijd"
+                  "value": "BeginDatumTijd - EindDatumTijd"
                 }
               ]
             },
@@ -122,26 +110,14 @@
               ]
             },
             {
-              "path": "start",
-              "name": "Begin",
+              "path": "iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)",
+              "name": "Datum",
               "description": "",
-              "type": "dateTime",
+              "type": "Period",
               "tag": [
                 {
                   "name": "Zib element",
-                  "value": "BeginDatumTijd"
-                }
-              ]
-            },
-            {
-              "path": "end",
-              "name": "Eind",
-              "description": "",
-              "type": "dateTime",
-              "tag": [
-                {
-                  "name": "Zib element",
-                  "value": "EindDatumTijd"
+                  "value": "BeginDatumTijd - EindDatumTijd"
                 }
               ]
             },
