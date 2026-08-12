@@ -302,11 +302,20 @@ function doExampleRows(allExtractedRows, md_ui) {
     md_ui.push("</tr>");
 
     // Find the index of the first date or dateTime column for sorting
-    const sortColumnIndex = allExtractedRows.length > 0 ? allExtractedRows[0].findIndex(column => column.type === "date" || column.type === "dateTime") : -1;
+    const sortColumnIndex = allExtractedRows.length > 0 ? allExtractedRows[0].findIndex(column => column.type === "date" || column.type === "dateTime" || column.type === "Period") : -1;
 
     // Sort allExtractedRows by the first date column if found, otherwise no specific sorting
     if (sortColumnIndex !== -1) {
         allExtractedRows.sort((a, b) => {
+            // Handle Period type by using the start date for sorting
+            if (a[sortColumnIndex].type === "Period") {
+                const periodA = a[sortColumnIndex].value.split(' - ');
+                a[sortColumnIndex].value = periodA[0]; // Use start date for sorting
+            }
+            if (b[sortColumnIndex].type === "Period") {
+                const periodB = b[sortColumnIndex].value.split(' - ');
+                b[sortColumnIndex].value = periodB[0]; // Use start date for sorting
+            }
             const dateA = new Date(a[sortColumnIndex].value);
             const dateB = new Date(b[sortColumnIndex].value);
             // Sort in descending order (newest first)

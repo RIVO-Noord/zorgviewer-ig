@@ -23,8 +23,8 @@
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft-OTH</td>
-<td>15-4-2019</td>
-<td>BRMO: Bewezen dragerschap</td>
+<td>19-7-2024</td>
+<td>MRSA: Bewezen dragerschap</td>
 <td>Anders</td>
 <td>other</td>
 <td>conditie</td>
@@ -32,9 +32,29 @@
 </tr><tr><td></td><td colspan=7>
 </td></tr>
 <tr><td>+</td>
+<td>Nexus</td>
+<td>16-5-2022</td>
+<td></td>
+<td>LET OP!!!!!<br/>Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5. ...</td>
+<td></td>
+<td>Waarschuwing</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>Epic</td>
+<td>10-5-2022, 20:55:17</td>
+<td></td>
+<td>TBC</td>
+<td></td>
+<td>Infection Flag</td>
+<td>inactive</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft-OTH</td>
-<td>19-7-2024</td>
-<td>MRSA: Bewezen dragerschap</td>
+<td>15-4-2019</td>
+<td>BRMO: Bewezen dragerschap</td>
 <td>Anders</td>
 <td>other</td>
 <td>conditie</td>
@@ -48,26 +68,6 @@
 <td>Drager MRSA</td>
 <td></td>
 <td>waarschuwing</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td>+</td>
-<td>Epic</td>
-<td>10-5-2022, 20:55:17 - 20:55:43</td>
-<td></td>
-<td>TBC</td>
-<td></td>
-<td>Infection Flag</td>
-<td>inactive</td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td>+</td>
-<td>Nexus</td>
-<td>16-5-2022</td>
-<td></td>
-<td>LET OP!!!!!<br/>Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5. ...</td>
-<td></td>
-<td>Waarschuwing</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
