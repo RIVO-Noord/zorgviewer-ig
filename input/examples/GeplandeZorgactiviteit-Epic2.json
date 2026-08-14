@@ -1,0 +1,109 @@
+{
+	"resourceType": "Bundle",
+	"type": "searchset",
+	"total": 1,
+	"link": [{
+		"relation": "self",
+		"url": "http://ontmedmij-inlog.vzvz.nl/1.4.0/fhir/stu3/ProcedureRequest?status=active"
+	}],
+	"entry": [{
+		"link": [{
+			"relation": "self",
+			"url": "http://ontmedmij-inlog.vzvz.nl/1.4.0/fhir/stu3/ProcedureRequest?status=active"
+		}],
+		"fullUrl": "http://ontmedmij-inlog.vzvz.nl/1.4.0/fhir/stu3/90000752/ProcedureRequest/ekGorT8Y6qogj9eTbe-N34K3p7TL-TsQ4wnaCP5KtJpY3",
+		"resource": {
+			"resourceType": "ProcedureRequest",
+			"id": "ekGorT8Y6qogj9eTbe-N34K3p7TL-TsQ4wnaCP5KtJpY3",
+			"meta": {
+				"profile": ["http://nictiz.nl/fhir/StructureDefinition/zib-ProcedureRequest"]
+			},
+			"identifier": [{
+				"use": "usual",
+				"type": {
+					"coding": [{
+						"system": "http://hl7.org/fhir/identifier-type",
+						"code": "PLAC",
+						"display": "Placer Identifier"
+					}],
+					"text": "Placer Identifier"
+				},
+				"system": "urn:oid:1.2.840.114350.1.13.487.3.7.2.798268",
+				"value": "55162213"
+			}],
+			"status": "active",
+			"intent": "original-order",
+			"priority": "routine",
+			"code": {
+				"coding": [{
+					"system": "urn:oid:1.2.840.114350.1.13.487.3.7.2.696580",
+					"code": "131678",
+					"display": "DER VERRICHTING - BIOPT AFNEMEN"
+				}],
+				"text": "Afspraak Dermatologie"
+			},
+			"subject": {
+				"reference": "http://ontmedmij-inlog.vzvz.nl/1.4.0/fhir/stu3/Patient/eP916Xjx11RZnYCJO5QNPwrMjI5BwP2zoGgqxunjHH4o3",
+				"display": "XXX_Helleman, Johan"
+			},
+			"context": {
+				"reference": "https://test-antoniusziekenhuis.ezorg.aorta-zorg.nl/api/FHIR/STU3/Encounter/eyU02rfdVoKHDM6lTymCDTQ3",
+				"display": "Ziekenhuiscontact"
+			},
+			"occurrenceTiming": {
+				"repeat": {
+					"boundsPeriod": {
+						"start": "2022-03-24T23:00:00Z"
+					},
+					"count": 1
+				}
+			},
+			"authoredOn": "2022-03-25T12:19:02Z",
+			"requester": {
+				"agent": {
+					"reference": "https://test-antoniusziekenhuis.ezorg.aorta-zorg.nl/api/FHIR/STU3/Practitioner/eb12j3V.HZV1ojC8E60yDKHepR8yCGBtkB17yjrwdwkI3",
+					"display": "Wit, G.Z.M. de, Chirurg"
+				}
+			},
+			"note": [{
+				"text": "Naevus wang"
+			}],
+			"_status": {
+				"extension": [{
+					"valueCodeableConcept": {
+						"coding": [{
+							"system": "http://hl7.org/fhir/v3/ActStatus",
+							"code": "new",
+							"display": "Ordered"
+						}],
+						"text": "Ordered"
+					},
+					"url": "http://nictiz.nl/fhir/StructureDefinition/code-specification"
+				}]
+			}
+		},
+		"search": {
+			"mode": "match"
+		}
+	}, {
+		"fullUrl": "urn:uuid:00000000-0001-cbfb-db96-3051f4808b66",
+		"resource": {
+			"resourceType": "OperationOutcome",
+			"issue": [{
+				"severity": "warning",
+				"code": "processing",
+				"details": {
+					"coding": [{
+						"system": "urn:oid:1.2.840.114350.1.13.487.3.7.2.657369",
+						"code": "4119",
+						"display": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+					}],
+					"text": "This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system."
+				}
+			}]
+		},
+		"search": {
+			"mode": "outcome"
+		}
+	}]
+}

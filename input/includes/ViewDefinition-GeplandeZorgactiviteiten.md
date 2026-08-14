@@ -17,8 +17,8 @@
 </tr>
 <tr>
 <td>Beoogde datum</td>
-<td><samp>occurrencePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' t/m ' + end.toString(), start | end)) | occurrenceDateTime | scheduledPeriod.select(iif(start.exists() and end.exists(), start.toString() + ' t/m ' + end.toString(), start | end)) | scheduledDateTime</samp></td>
-<td><code>dateTime</code></td>
+<td><samp>occurrencePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | occurrenceDateTime | occurrenceTiming.repeat.boundsPeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end) | scheduledPeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | scheduledDateTime)</samp></td>
+<td><code>Period</code></td>
 <td>BeoogdeDatum</td>
 <td>Geplande datum, streefdatum of beoogde periode van de activiteit.</td>
 </tr>

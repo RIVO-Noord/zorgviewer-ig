@@ -23,10 +23,10 @@
           ]
         },
         {
-          "path": "occurrencePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' t/m ' + end.toString(), start | end)) | occurrenceDateTime | scheduledPeriod.select(iif(start.exists() and end.exists(), start.toString() + ' t/m ' + end.toString(), start | end)) | scheduledDateTime",
+          "path": "occurrencePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | occurrenceDateTime | occurrenceTiming.repeat.boundsPeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end) | scheduledPeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | scheduledDateTime)",
           "name": "Beoogde datum",
           "description": "Geplande datum, streefdatum of beoogde periode van de activiteit.",
-          "type": "dateTime",
+          "type": "Period",
           "tag": [
             {
               "name": "Zib element",
