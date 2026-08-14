@@ -23,6 +23,10 @@ Meest recente wijziging bovenaan
 | Naam (NL)                                                 | Versie   | Standaard        | FHIR Resource/profile   | Beschrijving concept                                                                                                                   |
 | --------------------------------------------------------- | ------------------ | ---------------- |  -------------| -------------------------------------------------------------------------------------------------------------------------------------- |
 |`Het FO ontwerpt op logisch niveaus tegen de zibs aan:`  <br>[Link naar de ZIBs](https://zibs.nl/wiki/ZIB_Hoofdpagina) | `Gebruikte Versie van de ZIB` | `Naam standaard, bv. BgZ of eOverdracht` |`Zibs worden in de praktijk (technische uitwerking) gevuld in de FHIR resources met een lokaal profiel. Die technische invulling wordt beschreven in de HL7 FHIR implementatiegids`  [Link implementatiegids](https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/artifacts.html#structures-resource-profiles) |`Plak hier een kopie van de beschrijving ('concept element) van de zib. Indien niet beschikbaar, een eigen eenduidige beschrijving.`<br>`We gebruiken de`.<br> [ZIB Publicatie 2017(NL) - Zorginformatiebouwstenen](https://zibs.nl/wiki/ZIB_Publicatie_2017(NL))).  |
+
+# Ontwerpbeslissingen
+`In deze paragraaf nemen we ontwerpbeslissingen op, denk aan informatie over waarom bepaalde velden wel of niet in een FHIR query zijn opgenomen of waarom van een uitgangspunt wordt afgeweken`
+
 # Disclaimer
 `De disclaimer is bedoeld om gebruikers te informeren over de beperkingen, verantwoordelijkheden en het gebruik van Zorgviewer en de getoonde informatie. Een disclaimer beschermt de aanbieder (zoals RIVO Noord) juridisch en informeert gebruikers over het juiste gebruik van de applicatie.` 
 `Doelen:`
