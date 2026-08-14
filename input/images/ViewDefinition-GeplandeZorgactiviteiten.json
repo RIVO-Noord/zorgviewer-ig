@@ -1,0 +1,185 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-GeplandeZorgactiviteiten",
+  "title": "Geplande zorgactiviteiten",
+  "profile": [
+    "http://nictiz.nl/fhir/StructureDefinition/zib-PlannedProcedure",
+    "http://nictiz.nl/fhir/StructureDefinition/eoverdracht-PlannedCareActivity"
+  ],
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "nvt"
+            }
+          ]
+        },
+        {
+          "path": "occurrencePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' t/m ' + end.toString(), start | end)) | occurrenceDateTime | scheduledPeriod.select(iif(start.exists() and end.exists(), start.toString() + ' t/m ' + end.toString(), start | end)) | scheduledDateTime",
+          "name": "Beoogde datum",
+          "description": "Geplande datum, streefdatum of beoogde periode van de activiteit.",
+          "type": "dateTime",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "BeoogdeDatum"
+            }
+          ]
+        },
+        {
+          "path": "code.text | code.coding[0].display",
+          "name": "Activiteit",
+          "description": "De geplande zorgactiviteit of verrichting (SNOMED CT / verpleegkundige interventie).",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Activiteit"
+            }
+          ]
+        },
+        {
+          "path": "performer.display | performerType.coding[0].display | performerType.text | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display",
+          "name": "Beoogde uitvoerder",
+          "description": "De beoogde zorgverlener, rol, discipline of zorgorganisatie die de activiteit zal uitvoeren.",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "BeoogdeUitvoerder"
+            }
+          ]
+        },
+        {
+          "path": "status.lookup('ProcedureStatus').display | status",
+          "name": "Status",
+          "description": "Status van de geplande activiteit (bijv. Actueel / Gepland / Aangevraagd).",
+          "type": "code",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "nvt"
+            }
+          ]
+        },
+        {
+          "path": "reasonCode[0].text | reasonCode[0].coding[0].display | reasonReference.display | reasonReference.resolve().select(code.text | code.coding[0].display)",
+          "name": "+Indicatie",
+          "description": "De medische of verpleegkundige indicatie / diagnose (zib Probleem) voor de geplande activiteit.",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Indicatie"
+            }
+          ]
+        },
+        {
+          "path": "bodySite.text | bodySite.coding[0].display",
+          "name": "+Anatomische locatie",
+          "description": "Anatomische locatie van de activiteit.",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "AnatomischeLocatie"
+            }
+          ]
+        },
+        {
+          "path": "bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.coding[0].display | bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.text",
+          "name": "+Lateraliteit",
+          "description": "Lateraliteit (bijv. links, rechts, tweezijdig).",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Lateraliteit"
+            }
+          ]
+        },
+        {
+          "path": "occurrenceTiming.repeat.frequency.select($this.toString() + 'x per ' + %context.occurrenceTiming.repeat.periodUnit) | occurrenceTiming.code.text | patientInstruction | note.text.join('\n')",
+          "name": "+Frequentie & instructies",
+          "description": "Frequentie, herhaling en specifieke instructies voor verpleegkundige zorg conform eOverdracht 3.1.",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Instructie"
+            }
+          ]
+        },
+        {
+          "path": "requester.agent.display | requester.display",
+          "name": "+Aanvrager",
+          "description": "De zorgverlener of organisatie die de activiteit heeft aangevraagd of gepland.",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Aanvrager"
+            }
+          ]
+        },
+        {
+          "path": "performer.where(reference.contains('Organization/')).display | extension('http://nictiz.nl/fhir/StructureDefinition/ext-Organization-Reference').valueReference.display",
+          "name": "+Ontvangende organisatie",
+          "description": "De ontvangende zorgaanbieder bij overdracht (eOverdracht 3.1).",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "OntvangendeOrganisatie"
+            }
+          ]
+        },
+        {
+          "path": "code.coding[0].select('(' + system.lookup('CodeSystems').display + ') ' + code + ' ' + iif(exists(display),display,''))",
+          "name": "+Activiteitcode",
+          "description": "Meerdere codes mogelijk (SNOMED CT). Lookup system label middels CodeSystem terminologie.",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Activiteit"
+            }
+          ]
+        },
+        {
+          "path": "note.text.join('\n')",
+          "name": "+Toelichting",
+          "description": "Aanvullende opmerkingen of toelichting.",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Toelichting"
+            }
+          ]
+        },
+        {
+          "path": "status",
+          "name": "(regelkleur)",
+          "description": "Actueel (active, requested, draft) = groene/actieve statuspil, Gepland (planned, accepted, received, in-progress) = geplande statuspil.",
+          "type": "code",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "nvt"
+            }
+          ]
+        }
+      ],
+      "forEach": "entry.resource.where((resourceType='ProcedureRequest' or resourceType='ServiceRequest') and (status='active' or status='draft' or status='requested' or status='received' or status='accepted' or status='in-progress' or status='planned'))"
+    }
+  ]
+}
