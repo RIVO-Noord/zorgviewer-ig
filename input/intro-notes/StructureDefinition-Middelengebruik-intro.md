@@ -4,9 +4,10 @@
 
 De volgende zibs vallen min of meer onder het thema middelengebruik.
 
-- [ZIB Alcoholgebruik](https://zibs.nl/wiki/AlcoholGebruik-v3.1(2017NL))
-- [ZIB Drugsgebruik](https://zibs.nl/wiki/DrugsGebruik-v3.2(2017NL))
-- [ZIB Tabakgebruik](https://zibs.nl/wiki/TabakGebruik-v3.1(2017NL))
+- [ZIB Alcoholgebruik](https://zibs.nl/wiki/AlcoholGebruik-v3.1(2017NL)) - BgZ
+- [ZIB Drugsgebruik](https://zibs.nl/wiki/DrugsGebruik-v3.2(2017NL)) - BgZ
+- [ZIB Tabakgebruik](https://zibs.nl/wiki/TabakGebruik-v3.1(2017NL)) - BgZ
+- [ZIB AlgemeneMeting](https://www.zibs.nl/wiki/AlgemeneMeting-v3.0(2017NL)) - Huisartsgegevens
 
 ### View Definition
 
