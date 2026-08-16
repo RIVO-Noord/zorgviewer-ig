@@ -307,6 +307,17 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 | Toelichting   | Liggend gemeten tijdens onderzoek |
 {: .grid .table-striped}
 
+| Testpatiënt 1 | Vitale gegevens, ademhaling       |
+| ------------- | --------------------------------- |
+| Datum         | _{Vandaag}_                       |
+| Meting        | Ademhaling                        |
+| Waarde        | 15/min                            |
+| Uitvoerder    | _{Zorgverlener}_                  |
+| Ritme         | Normaal ademhalingsritme          |
+| Diepte        | Normale ademhalingsdiepte         |
+| Afwijkend ademhalingspatroon   | Nee              |
+{: .grid .table-striped}
+
 #### Voedingsadvies
 
 | Testpatiënt 1 | Voedingsadvies |
