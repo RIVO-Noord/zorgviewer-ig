@@ -72,6 +72,104 @@
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td>+</td>
+<td>Nedap</td>
+<td>8-11-2008</td>
+<td>Bee venom - text</td>
+<td>Allergie</td>
+<td></td>
+<td>unable-to-assess</td>
+<td></td>
+<td>Nausea and vomiting - text</td>
+<td>active</td>
+<td>Actief</td>
+<td>unconfirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>8-11-2008</td>
+<td>Bee venom</td>
+<td>Allergie</td>
+<td></td>
+<td>high</td>
+<td></td>
+<td>Nausea and vomiting</td>
+<td>active</td>
+<td>Actief</td>
+<td>unconfirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>8-11-2008</td>
+<td>Bee venom</td>
+<td>Allergie: Notitie(s): <br/>Categorie: Allergy to substance<br/>Laatste reactie: Sun Nov ...</td>
+<td></td>
+<td>high</td>
+<td></td>
+<td>Nausea and vomiting</td>
+<td>active</td>
+<td>Actief</td>
+<td>unconfirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>2-6-1998</td>
+<td>PENICILLINES</td>
+<td>Exantheem</td>
+<td>medication</td>
+<td></td>
+<td>mild</td>
+<td>Overig</td>
+<td>inactive</td>
+<td>Niet meer aanwezig</td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>4-3-1932</td>
+<td>Haar/schilfers van dieren</td>
+<td>Allergie</td>
+<td></td>
+<td>high</td>
+<td></td>
+<td>Uitslag</td>
+<td>active</td>
+<td>Actief</td>
+<td>unconfirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td></td>
+<td>Lactose</td>
+<td>Allergie</td>
+<td></td>
+<td>unable-to-assess</td>
+<td></td>
+<td></td>
+<td>active</td>
+<td>Actief</td>
+<td>unconfirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td></td>
+<td>Amoxicilline</td>
+<td>Overgevoeligheid</td>
+<td></td>
+<td>unable-to-assess</td>
+<td></td>
+<td></td>
+<td>resolved</td>
+<td>Niet meer aanwezig</td>
+<td>unconfirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td>+</td>
 <td>Nexus</td>
 <td>8-11-2008</td>
 <td>Bijengif</td>
@@ -96,20 +194,6 @@
 <td>Overig</td>
 <td>active</td>
 <td>Actief</td>
-<td>confirmed</td>
-</tr><tr><td></td><td colspan=11>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>2-6-1998</td>
-<td>PENICILLINES</td>
-<td>Exantheem</td>
-<td>medication</td>
-<td></td>
-<td>mild</td>
-<td>Overig</td>
-<td>inactive</td>
-<td>Niet meer aanwezig</td>
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
