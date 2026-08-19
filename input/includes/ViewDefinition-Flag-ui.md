@@ -22,6 +22,36 @@
 </tr><tr><td></td><td colspan=7>
 </td></tr>
 <tr><td>+</td>
+<td>Nedap</td>
+<td>18-12-2025</td>
+<td></td>
+<td>Agressieve hond</td>
+<td></td>
+<td>Waarschuwing</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>18-12-2025</td>
+<td></td>
+<td>Agressie</td>
+<td></td>
+<td>Waarschuwing</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>18-12-2025</td>
+<td></td>
+<td>Agressieve hond</td>
+<td></td>
+<td>Waarschuwing</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
 <td>Chipsoft-OTH</td>
 <td>19-7-2024</td>
 <td>MRSA: Bewezen dragerschap</td>
@@ -29,6 +59,16 @@
 <td>other</td>
 <td>conditie</td>
 <td>active</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>9-3-2023</td>
+<td></td>
+<td>Agressie</td>
+<td></td>
+<td>Waarschuwing</td>
+<td>inactive</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
 <tr><td>+</td>
@@ -48,6 +88,16 @@
 <td>TBC</td>
 <td></td>
 <td>Infection Flag</td>
+<td>inactive</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>1-2-2021</td>
+<td></td>
+<td>Vuurwapengevaarlijk</td>
+<td></td>
+<td>Waarschuwing</td>
 <td>inactive</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
