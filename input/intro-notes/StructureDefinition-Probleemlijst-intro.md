@@ -3,7 +3,7 @@
 ### Zorginformatiebouwsteen
 
 * [ZIB Probleem](StructureDefinition-Condition.html#zorginformatiebouwsteen) 
-* [ZIB EpisodeOfCare/Condition](StructureDefinition-EpisodeOfCare.html#zorginformatiebouwsteen)
+* [ZIB ZorgEpisode](StructureDefinition-EpisodeOfCare.html#zorginformatiebouwsteen)
 
 ### View Definition
 
