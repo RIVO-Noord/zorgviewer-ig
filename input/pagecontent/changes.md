@@ -4,8 +4,6 @@
 
 ### Versies
 
-[Resource comparison with version v1.24.0](comparison-v1.24.0/index.html)
-
 |Versie|Datum|Changes|
 |---|---|---|
 |1.25.0|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.24.0...HEAD)|
