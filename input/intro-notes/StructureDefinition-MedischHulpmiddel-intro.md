@@ -1,7 +1,4 @@
 {% include profile-note.md %}
-<div class="dragon" markdown="1">
-**De specificatie op deze pagina is gegenereerd en work-in-progress.**
-</div>
 
 ### Zorginformatiebouwsteen
 
