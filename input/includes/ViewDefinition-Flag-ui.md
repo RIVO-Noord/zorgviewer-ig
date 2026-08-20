@@ -63,7 +63,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Nedap</td>
-<td>9-3-2023</td>
+<td>9-3-2023 - 17-12-2025</td>
 <td></td>
 <td>Agressie</td>
 <td></td>
@@ -83,7 +83,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
-<td>10-5-2022, 20:55:17</td>
+<td>10-5-2022, 22:55:17 - 22:55:43</td>
 <td></td>
 <td>TBC</td>
 <td></td>
@@ -93,7 +93,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Nedap</td>
-<td>1-2-2021</td>
+<td>1-2-2021 - 28-2-2021</td>
 <td></td>
 <td>Vuurwapengevaarlijk</td>
 <td></td>

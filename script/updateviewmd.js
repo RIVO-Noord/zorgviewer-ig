@@ -308,16 +308,18 @@ function doExampleRows(allExtractedRows, md_ui) {
     if (sortColumnIndex !== -1) {
         allExtractedRows.sort((a, b) => {
             // Handle Period type by using the start date for sorting
+            let aKey = a[sortColumnIndex].value;
+            let bKey = b[sortColumnIndex].value;
             if (a[sortColumnIndex].type === "Period") {
                 const periodA = a[sortColumnIndex].value.split(' - ');
-                a[sortColumnIndex].value = periodA[0]; // Use start date for sorting
+                aKey = periodA[0]; // Use start date for sorting
             }
             if (b[sortColumnIndex].type === "Period") {
                 const periodB = b[sortColumnIndex].value.split(' - ');
-                b[sortColumnIndex].value = periodB[0]; // Use start date for sorting
+                bKey = periodB[0]; // Use start date for sorting
             }
-            const dateA = new Date(a[sortColumnIndex].value);
-            const dateB = new Date(b[sortColumnIndex].value);
+            const dateA = new Date(aKey);
+            const dateB = new Date(bKey);
             // Sort in descending order (newest first)
             return dateB.getTime() - dateA.getTime();
         });
@@ -340,7 +342,7 @@ function extractExampleData(select, example, exampleFileName) {
 
         let value = "";
         if (evalResult && evalResult.length > 0) {
-            if (column.type == "date" || column.type == "dateTime") {
+            if (column.type == "date" || column.type == "dateTime" || column.type == "Period") {
                 value = evalResult[0]; // Store raw date value
             } else if (column.type == "code") {
                 value = evalResult[0];
@@ -379,9 +381,9 @@ function doExampleRow(extractedData, md_ui) {
             let displayValue = extractedData[idx].value;
             if ((column.type == "date" || column.type == "dateTime") && displayValue) {
                 const date = new Date(displayValue);
-                displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'UTC' });
+                displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'CET' });
             }
-            if (column.type == "Period" && displayValue) { // special case for Period; display as start - end
+            else if (column.type == "Period" && displayValue) { // special case for Period; display as start - end
                 const period = displayValue.split(' - ');
                 const dateStart = new Date(period[0]);
                 const dateEnd = period[1] ? new Date(period[1]) : null;
@@ -397,8 +399,8 @@ function doExampleRow(extractedData, md_ui) {
 
                 // Format start display
                 const displayStart = startIsMidnight
-                    ? dateStart.toLocaleDateString('nl-NL')
-                    : dateStart.toLocaleString('nl-NL', { year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                    ? dateStart.toLocaleDateString('nl-NL', { timeZone: 'CET' })
+                    : dateStart.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
 
                 // Format end display based on same-day status
                 let displayEnd = null;
@@ -408,12 +410,12 @@ function doExampleRow(extractedData, md_ui) {
                         // Hide end date: show time if present, or omit if midnight
                         displayEnd = endIsMidnight
                             ? null
-                            : dateEnd.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                            : dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit', second: '2-digit' });
                     } else {
                         // Different day: standard date or full date+time
                         displayEnd = endIsMidnight
-                            ? dateEnd.toLocaleDateString('nl-NL')
-                            : dateEnd.toLocaleString('nl-NL', { year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                            ? dateEnd.toLocaleDateString('nl-NL', { timeZone: 'CET' })
+                            : dateEnd.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
                     }
                 }
                 displayValue = displayStart;
@@ -432,7 +434,7 @@ function doExampleRow(extractedData, md_ui) {
             let displayValue = extractedData[idx].value;
             if ((column.type == "date" || column.type == "dateTime") && displayValue) {
                 const date = new Date(displayValue);
-                displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'UTC' });
+                displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'CET' });
             }
             md_ui.push(`<b>${column.name.slice(1)}</b><br/>${displayValue}<br/>`);
         }

@@ -53,7 +53,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
-<td>4-6-2012</td>
+<td>5-6-2012</td>
 <td>Onbekend serienummer.</td>
 <td></td>
 <td>Knee region structure (body structure)</td>
@@ -83,7 +83,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
-<td>31-12-2006</td>
+<td>1-1-2007</td>
 <td>Onbekend serienummer.</td>
 <td></td>
 <td></td>
