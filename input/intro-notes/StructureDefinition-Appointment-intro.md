@@ -1,5 +1,7 @@
 {% include profile-note.md %}
 
+{% include future-note.md %}
+
 ### Zorginformatiebouwsteen
 
 * [ZIB OverdrachtGeplandeZorgActiviteit/Afspraak:Contact](https://www.zibs.nl/wiki/OverdrachtGeplandeZorgActiviteit-v3.1(2017NL))
