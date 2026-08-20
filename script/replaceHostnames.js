@@ -67,15 +67,14 @@ function replaceInObject(obj, path = []) {
   if (obj && typeof obj === 'object') {
     for (const key of Object.keys(obj)) {
       const value = obj[key];
-      // helper to check if a name appears in the current path
-      const hasAncestor = (name) => path.includes(name);
-      // link.url (any ancestor named 'link')
-      if (key === 'url' && hasAncestor('link') && typeof value === 'string' && /^(http|https):\/\//i.test(value)) {
+      const parentKey = path.length > 0 ? path[path.length - 1] : null;
+      // link.url (parentKey === 'link')
+      if (key === 'url' && parentKey === 'link' && typeof value === 'string' && /^(http|https):\/\//i.test(value)) {
         obj[key] = replaceHostname(value);
         continue;
       }
-      // entry.fullUrl (any ancestor named 'entry')
-      if (key === 'fullUrl' && hasAncestor('entry') && typeof value === 'string' && /^(http|https):\/\//i.test(value)) {
+      // entry.fullUrl (parentKey === 'entry')
+      if (key === 'fullUrl' && parentKey === 'entry' && typeof value === 'string' && /^(http|https):\/\//i.test(value)) {
         obj[key] = replaceHostname(value);
         continue;
       }
