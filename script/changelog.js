@@ -13,8 +13,9 @@ async function generateChangelog() {
     let changes = execSync(`git diff 'HEAD@{${SINCE}}'`).toString();
 
     // Generate fo-diff using in the Zorgviewer.wiki git folder, which is a separate repository.
+    // `git pull`
     // `git diff 'HEAD@{2026-08-11}' -- Functionele-Ontwerpen-\(FO\'s\) > /tmp/fo-diff.log`
-    // and more in temp/fo-diff.log
+    // and move to zorgviewer-ig/temp/fo-diff.log
     if (fs.existsSync('temp/fo-diff.log')) {
       const foChanges = fs.readFileSync('temp/fo-diff.log', 'utf-8');
       changes = foChanges + '\n' + changes;
