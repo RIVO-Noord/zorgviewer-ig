@@ -1,38 +1,40 @@
 #### 🚀 Nieuw
 
 * **Functionele Ontwerpen (FO's)**:
-  * `Behandelaanwijzingen-&-Wilsverklaringen.md`: Nieuw FO waarin behandelaanwijzingen en wilsverklaringen zijn samengevoegd op één gecombineerd scherm.
-  * `Intoxicaties.md`: Nieuw FO opgesteld ter vervanging van Middelengebruik; combineert ZIB's Alcohol-, Drugs- en Tabakgebruik met NHG-metingen uit huisartsgegevens.
-  * `Medicatiegegevens.md`: Nieuw FO voor het gecombineerde overzicht van voorschriften, gebruik en toedieningen, inclusief LSP-medgeg integratie en een 12-maanden ophaalbeperking.
-* **Testdata & FHIR Voorbeelden**:
-  * `input/examples/`: Nieuwe Nedap voorbeeld-resources toegevoegd voor `AllergyIntolerance`, `Flag`, `LivingSituation` en `Patient`.
+  * `Behandelaanwijzingen-&-Wilsverklaringen.md`: Nieuw gecombineerd FO waarin behandelaanwijzingen en wilsverklaringen zijn samenvoeg op één gecombineerd scherm.
+  * `Intoxicaties.md`: Nieuw FO opgesteld ter vervanging van Middelengebruik; combineert ZIB's Alcohol-, Drugs- en Tabakgebruik met NHG-metingen uit de huisartsgegevensset.
+  * `Medicatiegegevens.md`: Nieuw FO voor het gecombineerde overzicht van voorschriften, gebruik en toedieningen (inclusief integratie van LSP medgeg).
+* **FHIR Voorbeelden & Tooling**:
+  * `input/examples/`: Nieuwe Nedap voorbeeld-resources toegevoegd (`AllergyIntolerance`, `Flag`, `LivingSituation`, `Patient`) evenals MedischHulpmiddel-voorbeelden voor Chipsoft, Epic en Nexus.
+  * `script/replaceHostnames.js`: Nieuw script toegevoegd voor het uniformiseren van hostnames in FHIR-voorbeelden naar `example.org`.
 
 #### 🛠️ Gewijzigd
 
 * **Functionele Ontwerpen (FO's)**:
-  * `Contacten-en-Afspraken.md`: Datum- en tijdweergave samengevoegd (Start en Eind gecombineerd), screenshots bijgewerkt en testcase-terminologie aangepast naar 'entries'.
-  * `Gezondheidstoestand.md`: Geïntegreerd met voeding en vocht naast mobiliteit, ontwerpbeslissingen toegevoegd en tijdlijnkaart voorlopig verwijderd.
-  * `Medische-hulpmiddelen.md`: Herwerkt naar het nieuwste FO-template; sorteerregels voor vage datums en kaartontwerp voor de tijdlijn toegevoegd.
-  * `Patiëntcontext.md`: Toelichtingen aangescherpt en nieuw basisschermvoorbeeld toegevoegd.
-  * `Vitale-gegevens.md`: Work items bijgewerkt, ademhalingstestcase toegevoegd en testcasestabel vervangen door een directe link naar de IG.
-* **FHIR Profiles & ViewDefinitions**:
-  * `ViewDefinition-Appointment.json`: Kolommen 'Begin' en 'Eind' samengevoegd tot één kolom 'Datum' (`Period`).
-  * `ViewDefinition-Condition.json` & `ViewDefinition-Probleemlijst.json`: Filterversoepeling door verwijdering van de `code.coding.display.exists()` eis, zodat ook condities zonder display-tekst worden meegenomen.
-  * `ViewDefinition-Mobiliteit.json`: Mappings en SNOMED-codes geactualiseerd voor Traplopen, Houding veranderen, Houding handhaven en Transfers.
+  * `Contacten-en-Afspraken.md`: Datum- en tijdweergave gecombineerd tot één veld 'Datum', schermmock-up bijgewerkt en testcase-terminologie verfijnd naar 'entries'.
+  * `Gezondheidstoestand.md`: Status bijgewerkt naar 'Gereviewed'; Voeding en Vocht geïntegreerd naast Mobiliteit, ontwerpbeslissingen toegevoegd en tijdlijnkaart verwijderd.
+  * `Medische-hulpmiddelen.md`: Geherstructureerd volgens het nieuwste FO-template; sorteerregels voor vage datums en details voor de tijdlijnkaart toegevoegd.
+  * `Patiëntcontext.md` & `Vitale-gegevens.md`: Screenshots en workitems bijgewerkt; ademhalingstestcase toegevoegd en testcasestabel vervangen door directe link naar de IG.
+  * `Template-Functioneel-Ontwerp.md`: Bestandsnaam hernoemd (sterretje verwijderd), sectie `# Ontwerpbeslissingen` toegevoegd en de sectie `# Testcases` verwijderd.
+* **ViewDefinitions & Data Weergave**:
+  * `ViewDefinition-Appointment.json` & `ViewDefinition-MedischHulpmiddel.json`: Losse start/eind-kolommen vervangen door een gecombineerde `Datum` (`Period`) expressie.
+  * `ViewDefinition-Condition.json` & `ViewDefinition-Probleemlijst.json`: Filterversoepeling door verwijdering van de `code.coding.display.exists()` eis, zodat alle condities getoond worden.
+  * `ViewDefinition-Mobiliteit.json`: Velden herzien conform de ZIB Mobiliteit (Traplopen, Houding veranderen, Houding handhaven, Uitvoeren transfer).
+* **FHIR Profiles & IG Configuratie**:
   * `StructureDefinition-EncounterReport.json`: Status gewijzigd van `draft` naar `active`.
+  * `input/zorgviewer-ig.json`: Release label ingesteld op `master` en Nedap Patient voorbeeld gekoppeld.
 * **Scripts & Generatie**:
-  * `script/updateviewmd.js`: Ondersteuning toegevoegd voor `Period`-datatypes en formattering/sortering op basis van CET-tijdzone.
-  * `script/changelog.js`: Logica bijgewerkt om ook diffs uit een tijdelijk FO-logbestand mee te nemen.
+  * `script/updateviewmd.js`: Ondersteuning voor `Period`-datatypes toegevoegd en datum/tijd-formattering naar CET-tijdzone aangepast.
+  * `script/changelog.js`: Diff-bereik en ondersteuning voor `fo-diff.log` bijgewerkt.
 
 #### 🧹 Onderhoud
 
-* **Herstructurering FO-documentatie**:
-  * Oude/vervallen FO's (`Behandelaanwijzing.md`, `Wilsverklaringen.md`, `Voeding-en-vocht.md`, `Medicatie.md`) verplaatst naar respectievelijke `Notities/` submappen.
-  * Het oude bestand `Middelengebruik.md` verwijderd ten gunste van `Intoxicaties.md`.
-  * Losse achtergrondbestanden (`*-Background.md`) hernoemd naar `Notities.md` over diverse FO-mappen (`Contacten-en-Afspraken`, `PZP-ACP`, `Vaccinaties`, `Verrichtingen`, `Patiëntcontext`, `Vitale-gegevens`).
-  * Lege of overbodige `.order`- en achtergrondbestanden opgeruimd (`Alerts-of-waarschuwingen`, `Correspondentie`, `Problemen`).
-* **Templates & Tooling**:
-  * `Template-Functioneel-Ontwerp.md`: Hernoemd (sterretje verwijderd) en uitgebreid met de sectie 'Ontwerpbeslissingen'.
-  * `skills/fo-generator/references/template.md`: Referentietemplate synchroon gebracht met de nieuwe sectie 'Ontwerpbeslissingen'.
-  * `README.md`: Handmatige stappen voor de Gemini FO-changelog verwijderd.
-  * Automatisch hergegenereerde Markdown-bestanden (`input/includes/ViewDefinition-*.md`) bijgewerkt op basis van de nieuwste voorbeelddata.
+* **Herstructurering Wiki & FO-documentatie**:
+  * Oude/vervallen FO-pagina's (`Behandelaanwijzing.md`, `Wilsverklaringen.md`, `Voeding-en-vocht.md`, oude Medicatie FO's) verplaatst naar `Notities/` submappen als referentie.
+  * Vervallen bestanden `Middelengebruik.md` en `Medicatie-Q3-2026.md` verwijderd.
+  * Achtergrondbestanden (`*-Background.md`) over diverse FO-mappen hernoemd naar `Notities.md`.
+  * Lege en ongebruikte `.order`- en achtergrondbestanden opgeruimd (`Alerts-of-waarschuwingen`, `Correspondentie`, `Problemen`).
+* **Code & Data Opschoning**:
+  * JSON-voorbeelden geherformatteerd (indeling gecorrigeerd), getalnotaties opgeschoond (bijv. `1.0` naar `1`) en ongeldige URL-prefixes (`https:///`) hersteld.
+  * Automatisch hergegenereerde Markdown-tabellen (`input/includes/ViewDefinition-*.md`) geactualiseerd.
+  * `README.md`: Handmatige wiki-diff stappen voor changelog-generatie opgeruimd.
