@@ -9,18 +9,18 @@
 
 ```mermaid
 flowchart BT
-    subgraph HL7 ci-build
+    subgraph HL7.org ci-build
         ci0[WIP]
         ci1[Snapshot Release]
         ci2[Releases]
-        ci3[Auto-IG Dashboard]
+        ci3(Dashboard)
     end
     subgraph GitHub
-        gh0[Source-main WIP]--release via merge-->gh1[Source-snapshot]
-        gh0--action-->gh2[WIP-pages]
-        gh4[VS Code]--edit-->gh0
+        gh0[main branch]--release via merge-->gh1[snapshot branch]
+        gh0--gh action-->gh2[WIP-pages]
+        gh4(Web VS Code)--edit-->gh0
     end
-    subgraph RIVO-noord.nl
+    subgraph RIVO-Noord
         rivo[Snapshot Release]
     end
     gh1--action-->rivo
