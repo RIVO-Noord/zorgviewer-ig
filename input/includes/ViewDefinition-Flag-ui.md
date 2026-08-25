@@ -12,16 +12,6 @@
 <th>Status</th>
 </tr>
 <tr><td>+</td>
-<td>CGM</td>
-<td></td>
-<td></td>
-<td>Jicht</td>
-<td>T92: Jicht</td>
-<td>waarschuwing</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td>+</td>
 <td>Nedap</td>
 <td>18-12-2025</td>
 <td></td>
@@ -117,16 +107,6 @@
 <td></td>
 <td>Drager MRSA</td>
 <td></td>
-<td>waarschuwing</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td></td>
-<td></td>
-<td></td>
-<td>A20: Gesprek levenseinde/behandelwensen</td>
 <td>waarschuwing</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=7>

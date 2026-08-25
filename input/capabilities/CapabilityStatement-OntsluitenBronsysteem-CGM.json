@@ -5,13 +5,12 @@
   "title": "Ontsluiten Bronsysteem - CGM",
   "status": "active",
   "date": "2026-06-29",
-  "description": "Deze CapabilityStatement beschrijft Ontsluiten Bronsysteem voor CGM Huisarts.",
+  "description": "Deze CapabilityStatement beschrijft Ontsluiten Bronsysteem voor CGM Huisarts. Zibs volgens Informatiestandaard Huisartsgegevens.",
   "copyright": "CC0",
   "kind": "capability",
   "instantiates": [
     "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem"
-  ],
-  "software": {
+  ],  "software": {
     "name": "CGM Huisarts"
   },
   "fhirVersion": "4.0.1",
@@ -47,10 +46,6 @@
     {
       "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination",
       "display": "zib-Vaccination"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/eAfspraak-Appointment",
-      "display": "eAfspraak-Appointment"
     }
   ],
   "rest": [
@@ -112,29 +107,6 @@
           "type": "Condition",
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition"
-          },
-          "interaction": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "code": "search-type"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHALL"
-            }
-          ],
-          "type": "Procedure",
-          "profile": {
-            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Procedure"
           },
           "interaction": [
             {
@@ -231,7 +203,7 @@
           ],
           "type": "Encounter",
           "profile": {
-            "reference": "http://nictiz.nl/fhir/StructureDefinition/gp-Encounter"
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
           },
           "documentation": "CGM gebruikt het gp-Encounter profiel en codeert het type contact via NHG Tabel 14 (contactwijze). Ondersteunt class=AMB.",
           "interaction": [
@@ -240,6 +212,29 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
                   "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            }
+          ],
+          "type": "Immunization",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Immunization"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
                 }
               ],
               "code": "search-type"
@@ -278,83 +273,13 @@
             }
           ],
           "type": "Flag",
-          "profile": {
-            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Flag"
-          },
-          "documentation": "CGM levert geen period.start (BeginDatumTijd); het Datum veld blijft leeg in de Zorgviewer.",
+          "documentation": "Huisarts Alert != BgZ Alert",
           "interaction": [
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "code": "search-type"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHOULD"
-            }
-          ],
-          "type": "Consent",
-          "documentation": "Wilsverklaringen (AdvanceDirective) en behandelingsinstructies (TreatmentDirective).",
-          "interaction": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHOULD"
-                }
-              ],
-              "code": "search-type"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHOULD"
-            }
-          ],
-          "type": "Immunization",
-          "profile": {
-            "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination"
-          },
-          "interaction": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHOULD"
-                }
-              ],
-              "code": "search-type"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHOULD"
-            }
-          ],
-          "type": "Appointment",
-          "profile": {
-            "reference": "http://nictiz.nl/fhir/StructureDefinition/eAfspraak-Appointment"
-          },
-          "interaction": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHOULD"
+                  "valueCode": "SHOULD-NOT"
                 }
               ],
               "code": "search-type"
