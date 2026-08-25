@@ -1,7 +1,5 @@
 {% include profile-note.md %}
 
-{% include future-note.md %}
-
 ### Zorginformatiebouwsteen
 
 * [ZIB Medicatieafspraak](StructureDefinition-MedicationRequest.html#zorginformatiebouwsteen)
