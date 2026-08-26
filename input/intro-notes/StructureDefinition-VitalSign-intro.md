@@ -35,9 +35,7 @@ De volgende zibs vallen min of meer onder het thema vitale gegevens.
 
 ### Request
 
-N.B. Eerste request is optimaal en wordt ondersteund door Epic, Sanday en CGM. De andere requests zijn de "officiele" BgZ requests en zijn nodig voor uitvragen van Zorgplatform.
-
-**CGM:** Ondersteunt de generieke query (`category=vital-signs`). CGM gebruikt NHG Tabel 45 codes voor vitale gegevens.
+N.B. Eerste request is optimaal en wordt ondersteund door **Epic, Sanday en CGM**. De "officiele" BgZ requests zijn nodig voor uitvragen van Zorgplatform.
 
 1. Opvragen (search) vitale gegevens
 
