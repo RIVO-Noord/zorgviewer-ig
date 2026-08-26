@@ -40,7 +40,7 @@
 <td>magnesium</td>
 <td>0.2</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -51,7 +51,7 @@
 <td>chloride</td>
 <td>138</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -73,7 +73,7 @@
 <td>vitamine D</td>
 <td>23.443.00</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -85,7 +85,7 @@
 <td>schildklier cytoplasma antistoffen</td>
 <td>12</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -119,7 +119,7 @@
 <td>HbA1c (glycohemoglobine) IFCC</td>
 <td>0 mmol/mol</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td></td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -130,7 +130,7 @@
 <td>Substantie</td>
 <td>faeces</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>4770527f-37f2-4bf0-9d66-6d55bd928df8</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -141,7 +141,7 @@
 <td>Rapport</td>
 <td>faeces</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>d9f74743-b578-4662-bedd-86d942ac8671</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -152,7 +152,7 @@
 <td>Schistosoma microscopie</td>
 <td>Negatief</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>10f68e17-c591-4a81-9304-e844b7e2da5d</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -163,7 +163,7 @@
 <td>Materiaal</td>
 <td>faeces</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>d63a4038-1101-4224-b584-c213f0be076f</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -196,7 +196,7 @@
 <td>Sirolimus (Volbloed)</td>
 <td>6 ug/L</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -207,7 +207,7 @@
 <td>Sirolimus (Volbloed)</td>
 <td>Volgt</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>Bloed</td>
 <td>unknown</td>
 </tr><tr><td></td><td colspan=8>
@@ -273,7 +273,7 @@
 <td>Cytomegalovirus IgM (ELFA)</td>
 <td>0.72/Grens</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>363ec0bb-5b08-483a-8e19-dab489fe79f8</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -284,7 +284,7 @@
 <td>Hepatitis B virus core IgG (CMIA)</td>
 <td>0.09/Neg</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>a86a5476-fc87-4f5f-bc2d-65d2585a8524</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -296,7 +296,7 @@
 <td>Materiaal</td>
 <td>Stolbloed (r</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>99de0dc4-06a0-4b97-af5d-b758dd3bc840</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -308,7 +308,7 @@
 <td>Cytomegalovirus IgG (ELFK)</td>
 <td>30/Pos</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>d75a1607-a253-4f3a-98eb-bb6d9fb73f3f</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -319,7 +319,7 @@
 <td>HSV-2 IgG (VirClia)</td>
 <td>0.613/Neg</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>ebf153c4-a574-474d-9830-378a34678bf8</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -330,7 +330,7 @@
 <td>HSV-2 IgM (VirClia)</td>
 <td>0.652/Neg</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>fb4922da-05f2-4552-a68b-7963b189e316</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -341,7 +341,7 @@
 <td>HSV-1 IgG (VirClia)</td>
 <td>0.261/Neg</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>0a411880-1aca-4b1f-84e1-11ab2845fd69</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -353,7 +353,7 @@
 <td>HSV-1 IgM (VirClia)</td>
 <td>0.260/Neg</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>d5adfcef-b302-49b7-8b0f-8468c97a440f</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -400,7 +400,7 @@
 <td>eGFR (creat)</td>
 <td>81 mL/min/1.73m2</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -436,7 +436,7 @@
 <td>AKI alert</td>
 <td>&lt;Memo&gt;</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -472,7 +472,7 @@
 <td>Creatinine</td>
 <td>9.5 mmol/L</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>Urine portie</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -484,7 +484,7 @@
 <td>Kalium</td>
 <td>38 mmol/L</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>Urine portie</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -496,7 +496,7 @@
 <td>Ureum</td>
 <td>86 mmol/L</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>Urine portie</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -508,7 +508,7 @@
 <td>Natrium</td>
 <td>127 mmol/L</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>Urine portie</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
@@ -520,7 +520,7 @@
 <td>Cortisol</td>
 <td>0.39 µmol/L</td>
 <td></td>
-<td> .. </td>
+<td></td>
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>

@@ -35,7 +35,7 @@ De volgende zibs vallen min of meer onder het thema vitale gegevens.
 
 ### Request
 
-N.B. Eerste request is optimaal en wordt ondersteund door **Epic, Sanday en CGM**. De "officiele" BgZ requests zijn nodig voor uitvragen van Zorgplatform.
+N.B. Eerste request is optimaal en wordt ondersteund door **Epic, Sanday en CGM**. De "officiele" BgZ requests zijn nodig voor uitvragen van **Zorgplatform**.
 
 1. Opvragen (search) vitale gegevens
 
