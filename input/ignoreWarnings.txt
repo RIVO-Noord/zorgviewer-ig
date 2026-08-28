@@ -71,6 +71,9 @@ This property must be a simple value, not an Object %
 The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence v3.0.2 from FHIR version 1.0 is not allowed to be used at this point (this element is [BackboneElement, ConceptMap.group.element.target]; allowed for this version = e:ConceptMap.element.target; this is a warning since contexts may be renamed between FHIR versions)
 The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId v3.0.2 from FHIR version 4.0 is not allowed to be used at this point (this element is [BackboneElement, ImplementationGuide.dependency]; allowed for this version = e:ImplementationGuide.dependsOn; this is a warning since contexts may be renamed between FHIR versions)
 The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version v3.0.2 from FHIR version 4.0 is not allowed to be used at this point (this element is [BackboneElement, ImplementationGuide.dependency]; allowed for this version = e:ImplementationGuide.dependsOn; this is a warning since contexts may be renamed between FHIR versions)
+The Extension 'http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet' definition allows for the types [uri] but found type Reference
+This element is not allowed by the profile http://hl7.org/fhir/StructureDefinition/uri
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
 
 # On purpose; for documentation only
 Bundle is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
@@ -94,3 +97,6 @@ The discriminator type 'pattern' is deprecated in R5+. For future compatibility,
 
 # Known. This is a zibs2020 R4 extension. 
 %http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName%
+
+# We want to be explicit
+Constraint failed: cpb-9: 'A given resource can only be described once per RESTful mode. (resource.select(type).isDistinct())'

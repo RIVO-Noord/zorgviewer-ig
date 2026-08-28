@@ -35,7 +35,6 @@
                 "id": "Bundle.entry:TobaccoUse.resource",
                 "path": "Bundle.entry.resource",
                 "comment": "Tabakgebruik",
-                "min": 1,
                 "type": [
                     {
                         "code": "Observation",
@@ -52,7 +51,6 @@
                 "id": "Bundle.entry:AlcoholUse.resource",
                 "path": "Bundle.entry.resource",
                 "comment": "Alcoholgebruik",
-                "min": 1,
                 "type": [
                     {
                         "code": "Observation",
@@ -69,11 +67,26 @@
                 "id": "Bundle.entry:DrugUse.resource",
                 "path": "Bundle.entry.resource",
                 "comment": "Drugsgebruik",
-                "min": 1,
                 "type": [
                     {
                         "code": "Observation",
                         "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DrugUse"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:DiagnosticResult",
+                "path": "Bundle.entry",
+                "sliceName": "DiagnosticResult"
+            },
+            {
+                "id": "Bundle.entry:DiagnosticResult.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Huisartsen registreren middelengebruik in de vorm van een DiagnosticResult",
+                "type": [
+                    {
+                        "code": "Observation",
+                        "profile": "http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult"
                     }
                 ]
             }
