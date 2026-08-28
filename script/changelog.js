@@ -17,6 +17,7 @@ async function generateChangelog() {
     // `git diff 'HEAD@{2026-08-11}' -- Functionele-Ontwerpen-\(FO\'s\) > /tmp/fo-diff.log`
     // and move to zorgviewer-ig/temp/fo-diff.log
     if (fs.existsSync('temp/fo-diff.log')) {
+      console.log("Including FO diff.")
       const foChanges = fs.readFileSync('temp/fo-diff.log', 'utf-8');
       changes = foChanges + '\n' + changes;
     }
