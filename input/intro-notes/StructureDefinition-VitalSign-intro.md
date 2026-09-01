@@ -21,11 +21,11 @@ De volgende zibs vallen min of meer onder het thema vitale gegevens.
 
 ### View Definition
 
-[ViewDefinition voor Vitale Gegevens](ViewDefinition-Vitalegegevens.json)
+[ViewDefinition voor Vitalegegevens](ViewDefinition-VitalSign.json)
 
-{% include ViewDefinition-Vitalegegevens-ui.md %}
+{% include ViewDefinition-VitalSign-ui.md %}
 
-{% include ViewDefinition-Vitalegegevens.md %}
+{% include ViewDefinition-VitalSign.md %}
 
 ### Zoeken naar codes
 
