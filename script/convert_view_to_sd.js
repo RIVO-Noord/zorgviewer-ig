@@ -92,9 +92,16 @@ function parseFhirPath(fp) {
         const left = extractFromAst(node.children?.[0]);
         const right = extractFromAst(node.children?.[1]);
 
+        // Propagate stop flag from left if already encountered
+        if (left && left.stop) return left;
+        // If right side is a resolve function, stop further processing
+        if (right && right.stop) return left;
+
         if (!left.chains.length) return right;
         if (!right.chains.length) return left;
 
+        // If function yields no further chain (e.g., resolve()), stop extending the path
+        // Returning left preserves the path up to the function call.
         let chains = [];
         for (const lc of left.chains) {
           for (const rc of right.chains) {
@@ -128,6 +135,11 @@ function parseFhirPath(fp) {
           return {
             chains: [ [{ name: 'extension', profile: profileUrl || null }] ]
           };
+        }
+
+        // Handle resolve function: stop further path resolution
+        if (funcName === 'resolve') {
+          return { chains: [], stop: true };
         }
 
         let chains = [];
