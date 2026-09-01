@@ -63,58 +63,58 @@ function parseFhirPath(fp) {
     const ast = fhirpath.parse(fp);
 
     function extractFromAst(node) {
-      if (!node) return { main: [], branch: [] };
+      if (!node) return { chains: [] };
       const type = node.type;
 
       if (type === 'EntireExpression') {
         return extractFromAst(node.children?.[0]);
       }
 
-      if (type === 'UnionExpression') {
-        let main = [];
-        let branch = [];
+      if (
+        type === 'UnionExpression' ||
+        type === 'AdditiveExpression' ||
+        type === 'MultiplicativeExpression' ||
+        type === 'EqualityExpression' ||
+        type === 'RelationalExpression' ||
+        type === 'AndExpression' ||
+        type === 'OrExpression' ||
+        type === 'ImpliesExpression'
+      ) {
+        let chains = [];
         for (const child of (node.children || [])) {
           const res = extractFromAst(child);
-          main = main.concat(res.main);
-          branch = branch.concat(res.branch);
+          chains = chains.concat(res.chains);
         }
-        return { main, branch };
+        return { chains };
       }
 
       if (type === 'InvocationExpression') {
         const left = extractFromAst(node.children?.[0]);
         const right = extractFromAst(node.children?.[1]);
 
-        let main = [];
-        let branch = [...left.branch, ...right.branch];
+        if (!left.chains.length) return right;
+        if (!right.chains.length) return left;
 
-        if (!left.main.length) {
-          main = right.main;
-        } else if (!right.main.length) {
-          main = left.main;
-        } else {
-          for (const lp of left.main) {
-            for (const rp of right.main) {
-              main.push([...lp, ...rp]);
-            }
+        let chains = [];
+        for (const lc of left.chains) {
+          for (const rc of right.chains) {
+            chains.push([...lc, ...rc]);
           }
         }
-        return { main, branch };
+        return { chains };
       }
 
       if (type === 'TermExpression' || type === 'InvocationTerm' || type === 'MemberInvocation') {
-        let main = [];
-        let branch = [];
+        let chains = [];
         for (const child of (node.children || [])) {
           const res = extractFromAst(child);
-          main = main.concat(res.main);
-          branch = branch.concat(res.branch);
+          chains = chains.concat(res.chains);
         }
-        return { main, branch };
+        return { chains };
       }
 
       if (type === 'Identifier') {
-        return { main: [ [{ name: node.text }] ], branch: [] };
+        return { chains: [ [{ name: node.text }] ] };
       }
 
       if (type === 'FunctionInvocation') {
@@ -122,40 +122,47 @@ function parseFhirPath(fp) {
         const ident = functn?.children?.find(c => c.type === 'Identifier');
         const funcName = ident ? ident.text : '';
 
-        let branch = [];
         if (funcName === 'extension') {
           const paramList = functn?.children?.find(c => c.type === 'ParamList');
           const profileUrl = extractStringLiteral(paramList);
           return {
-            main: [ [{ name: 'extension', profile: profileUrl || null }] ],
-            branch
+            chains: [ [{ name: 'extension', profile: profileUrl || null }] ]
           };
         }
 
+        let chains = [];
         const paramList = functn?.children?.find(c => c.type === 'ParamList');
         if (paramList) {
           const pRes = extractFromAst(paramList);
-          branch = branch.concat(pRes.main, pRes.branch);
+          chains = chains.concat(pRes.chains);
         }
 
-        return { main: [], branch };
+        return { chains };
+      }
+
+      if (
+        type === 'LiteralTerm' ||
+        type === 'StringLiteral' ||
+        type === 'NumberLiteral' ||
+        type === 'BooleanLiteral' ||
+        type === 'NullLiteral'
+      ) {
+        return { chains: [] };
       }
 
       if (node.children) {
-        let main = [];
-        let branch = [];
+        let chains = [];
         for (const child of node.children) {
           const res = extractFromAst(child);
-          main = main.concat(res.main);
-          branch = branch.concat(res.branch);
+          chains = chains.concat(res.chains);
         }
-        return { main, branch };
+        return { chains };
       }
 
-      return { main: [], branch: [] };
+      return { chains: [] };
     }
 
-    const { main, branch } = extractFromAst(ast);
+    const { chains } = extractFromAst(ast);
     const elementMap = new Map(); // path -> { path, profiles: Set }
 
     function addElement(pathStr, profile) {
@@ -167,20 +174,11 @@ function parseFhirPath(fp) {
       }
     }
 
-    for (const chain of main) {
+    for (const chain of chains) {
       let currentPath = '';
       for (const seg of chain) {
         currentPath = currentPath ? currentPath + '.' + seg.name : seg.name;
         addElement(currentPath, seg.profile);
-      }
-    }
-
-    if (main.length === 0) {
-      for (const b of branch) {
-        const parts = b.split('.').filter(Boolean);
-        for (let i = 1; i <= parts.length; i++) {
-          addElement(parts.slice(0, i).join('.'), null);
-        }
       }
     }
 
@@ -347,6 +345,95 @@ function processFile(filePath) {
   }
 }
 
+const PROFILES_DIR = '/app/input/profiles';
+
+/**
+ * Validate generated StructureDefinitions against existing profiles in PROFILES_DIR.
+ * Checks whether all elements in the generated StructureDefinition are present in the profile
+ * with mustSupport: true.
+ */
+function validateProfiles() {
+  console.log('\n========================================');
+  console.log('Validating Profiles for MustSupport Completeness');
+  console.log('========================================');
+
+  let genFiles;
+  try {
+    genFiles = fs.readdirSync(OUTPUT_DIR).filter(f => f.startsWith(SD_PREFIX) && f.endsWith('.json'));
+  } catch (e) {
+    console.error(`[ERROR] Cannot read generated directory ${OUTPUT_DIR}: ${e.message}`);
+    return;
+  }
+
+  let totalChecked = 0;
+  let totalMissingFiles = 0;
+  let totalIncomplete = 0;
+
+  genFiles.forEach(f => {
+    totalChecked++;
+    const profilePath = path.join(PROFILES_DIR, f);
+    if (!fs.existsSync(profilePath)) {
+      console.warn(`[WARN] Profile file not found: ${f}`);
+      totalMissingFiles++;
+      return;
+    }
+
+    let genData, profData;
+    try {
+      genData = JSON.parse(fs.readFileSync(path.join(OUTPUT_DIR, f), 'utf8'));
+      profData = JSON.parse(fs.readFileSync(profilePath, 'utf8'));
+    } catch (e) {
+      console.error(`[ERROR] Failed to read/parse ${f}: ${e.message}`);
+      return;
+    }
+
+    const resourceType = genData.type || genData.name;
+    const profElements = profData.differential?.element || profData.snapshot?.element || [];
+
+    // Collect all paths in profile that have mustSupport === true
+    const mustSupportPaths = new Set();
+    profElements.forEach(el => {
+      if (el.mustSupport === true) {
+        let p = el.path || el.id || '';
+        // Also strip slice names if present (e.g. extension:ConcernReference -> extension)
+        if (p.includes(':')) {
+          p = p.split(':')[0];
+        }
+        // Remove ResourceType prefix if present (e.g. AllergyIntolerance.code -> code)
+        if (p.startsWith(resourceType + '.')) {
+          p = p.slice(resourceType.length + 1);
+        } else if (p === resourceType) {
+          p = '';
+        }
+        if (p) mustSupportPaths.add(p);
+      }
+    });
+
+    const genElements = genData.differential?.element || [];
+    const missingMustSupport = [];
+
+    genElements.forEach(el => {
+      const p = el.path;
+      // Check if p or any parent path / choice representation is supported
+      if (!mustSupportPaths.has(p)) {
+        missingMustSupport.push(p);
+      }
+    });
+
+    if (missingMustSupport.length === 0) {
+      console.log(`[PASS] ${f} (all ${genElements.length} elements are mustSupport)`);
+    } else {
+      totalIncomplete++;
+      console.log(`[FAIL] ${f} - Missing mustSupport on ${missingMustSupport.length} elements:`);
+      missingMustSupport.forEach(mp => console.log(`       - ${mp}`));
+    }
+  });
+
+  console.log('========================================');
+  console.log(`Checked: ${totalChecked} | Incomplete: ${totalIncomplete} | Missing Profile: ${totalMissingFiles}`);
+  console.log('========================================\n');
+}
+
 function main() {
   let files;
   try {
@@ -360,8 +447,12 @@ function main() {
     return;
   }
   files.forEach(f => processFile(path.join(INPUT_DIR, f)));
+
+  // Validate generated structure definitions against profiles
+  validateProfiles();
 }
 
 if (require.main === module) {
   main();
 }
+
