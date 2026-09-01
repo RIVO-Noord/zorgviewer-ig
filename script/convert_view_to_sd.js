@@ -347,7 +347,8 @@ function processFile(filePath) {
   }));
 
   const baseName = path.basename(filePath, '.json').replace(`${VIEW_PREFIX}-`, '');
-  const sdObject = buildStructureDefinition(baseName, resourceType, finalElements);
+  const filteredElements = finalElements.filter(e => !e.path.startsWith('meta'));
+  const sdObject = buildStructureDefinition(baseName, resourceType, filteredElements);
   const outFile = path.join(OUTPUT_DIR, `${SD_PREFIX}-${baseName}.json`);
   try {
     fs.writeFileSync(outFile, JSON.stringify(sdObject, null, 2), 'utf8');
@@ -422,9 +423,10 @@ function validateProfiles() {
     });
 
     const genElements = genData.differential?.element || [];
+    const relevantElements = genElements.filter(el => !el.path.startsWith('meta'));
     const missingMustSupport = [];
 
-    genElements.forEach(el => {
+    relevantElements.forEach(el => {
       const p = el.path;
       // Check if p or any parent path / choice representation is supported
       if (!mustSupportPaths.has(p)) {
