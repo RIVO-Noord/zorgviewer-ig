@@ -65,5 +65,13 @@
 <td>Toelichting</td>
 <td></td>
 </tr>
+<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
+<tr style="background-color:#d6dce5">
+<td>(Groep)</td>
+<td><samp>code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' or system='http://snomed.info/sct').translate('middelengebruik-groups').target[0].display</samp></td>
+<td><code>code</code></td>
+<td>nvt</td>
+<td>Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;<a href='ConceptMap-middelengebruik-groups.html'>/ConceptMap/middelengebruik-groups</a>$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br>Verberg regels die <b>GEEN</b> groep hebben.</td>
+</tr>
 </tbody>
 </table>

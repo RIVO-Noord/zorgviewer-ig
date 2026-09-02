@@ -2,8 +2,13 @@
 
 ### Zorginformatiebouwsteen
 
-* [ZIB Probleem](StructureDefinition-Condition.html#zorginformatiebouwsteen) 
-* [ZIB ZorgEpisode](StructureDefinition-EpisodeOfCare.html#zorginformatiebouwsteen)
+De volgende zibs vallen onder het thema probleemlijst.
+
+- [ZIB Probleem](StructureDefinition-Condition.html#zorginformatiebouwsteen) - BgZ[^1]
+- [ZIB ZorgEpisode](StructureDefinition-EpisodeOfCare.html#zorginformatiebouwsteen) Huisartsgegevens[^2]
+
+[^1]: [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
+[^2]: [Huisartsgegevens](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_GP_Data)
 
 ### View Definition
 

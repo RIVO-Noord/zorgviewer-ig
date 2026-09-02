@@ -2,12 +2,15 @@
 
 ### Zorginformatiebouwstenen
 
-De volgende zibs vallen min of meer onder het thema middelengebruik.
+De volgende zibs vallen onder het thema middelengebruik.
 
-- [ZIB Alcoholgebruik](https://zibs.nl/wiki/AlcoholGebruik-v3.1(2017NL)) - BgZ
-- [ZIB Drugsgebruik](https://zibs.nl/wiki/DrugsGebruik-v3.2(2017NL)) - BgZ
-- [ZIB Tabakgebruik](https://zibs.nl/wiki/TabakGebruik-v3.1(2017NL)) - BgZ
-- [ZIB AlgemeneMeting](https://www.zibs.nl/wiki/AlgemeneMeting-v3.0(2017NL)) - Huisartsgegevens
+- [ZIB Alcoholgebruik](https://zibs.nl/wiki/AlcoholGebruik-v3.1(2017NL)) - BgZ[^1]
+- [ZIB Drugsgebruik](https://zibs.nl/wiki/DrugsGebruik-v3.2(2017NL)) - BgZ[^1]
+- [ZIB Tabakgebruik](https://zibs.nl/wiki/TabakGebruik-v3.1(2017NL)) - BgZ[^1]
+- [ZIB AlgemeneMeting](https://www.zibs.nl/wiki/AlgemeneMeting-v3.0(2017NL)) - Huisartsgegevens[^2]
+
+[^1]: [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
+[^2]: [Huisartsgegevens](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_GP_Data)
 
 ### View Definition
 
@@ -16,6 +19,10 @@ De volgende zibs vallen min of meer onder het thema middelengebruik.
 {% include ViewDefinition-Middelengebruik-ui.md %}
 
 {% include ViewDefinition-Middelengebruik.md %}
+
+### Zoeken naar codes
+
+* [NHG Tabel 45 Diagnostische Bepalingen Diagnostisch](https://bepalingen.nhg.org/labcodes/determinations?q%5Bapplication_kind_cont%5D=D) `system=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen`
 
 ### Request
 

@@ -1,0 +1,147 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "middelengebruik-groups",
+  "url": "http://fhir.hl7.nl/zorgviewer/ConceptMap/middelengebruik-groups",
+  "name": "middelengebruikgroups",
+  "title": "Middelengebruik Groep Mapping",
+  "status": "draft",
+  "experimental": false,
+  "description": "Deze ConceptMap representeert de mappings van de middelengebruik codes van LOINC en NHG tabel 45 naar LOINC 'groep' codes.",
+  "sourceUri": "Bronsysteem",
+  "targetUri": "http://loinc.org",
+  "group": [
+    {
+      "source": "http://snomed.info/sct",
+      "target": "http://loinc.org",
+      "element": [
+        {
+          "code": "365980008",
+          "display": "Tobacco smoking status",
+          "target": [
+            {
+              "code": "LG41856-2",
+              "display": "Smoking related terms",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "228273003",
+          "display": "Alcohol use",
+          "target": [
+            {
+              "code": "LG41855-4",
+              "display": "Alcohol related terms",
+              "equivalence": "wider"
+            }
+          ]
+        },
+        {
+          "code": "228366006",
+          "display": "Drug use",
+          "target": [
+            {
+              "code": "LG41857-0",
+              "display": "Drug use related terms",
+              "equivalence": "wider"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen",
+      "target": "http://loinc.org",
+        "element": [
+          {
+            "code": "1739",
+            "display": "Tobacco smoking",
+            "target": [
+              {
+                "code": "LG41856-2",
+                "display": "Smoking related terms",
+                "equivalence": "wider"
+              }
+            ]
+          },
+          {
+            "code": "1591",
+            "display": "Alcohol use",
+            "target": [
+              {
+                "code": "LG41855-4",
+                "display": "Alcohol related terms",
+                "equivalence": "wider"
+              }
+            ]
+          },
+          {
+            "code": "2418",
+            "display": "hoe vaak drinken van alcohol (FiveShot1)",
+            "target": [
+              {
+                "code": "LG41855-4",
+                "display": "Alcohol related terms",
+                "equivalence": "wider"
+              }
+            ]
+          },
+          {
+            "code": "2419",
+            "display": "aantal alcoh. dranken op dag (FiveShot2)",
+            "target": [
+              {
+                "code": "LG41855-4",
+                "display": "Alcohol related terms",
+                "equivalence": "wider"
+              }
+            ]
+          },
+          {
+            "code": "2420",
+            "display": "geërgerd aan opm. drankgew. (FiveShot3)",
+            "target": [
+              {
+                "code": "LG41855-4",
+                "display": "Alcohol related terms",
+                "equivalence": "wider"
+              }
+            ]
+          },
+          {
+            "code": "2421",
+            "display": "schuldig over drankgewoonten (FiveShot4)",
+            "target": [
+              {
+                "code": "LG41855-4",
+                "display": "Alcohol related terms",
+                "equivalence": "wider"
+              }
+            ]
+          },
+          {
+            "code": "2422",
+            "display": "'s ochts drinken tegen kater (FiveShot5)",
+            "target": [
+              {
+                "code": "LG41855-4",
+                "display": "Alcohol related terms",
+                "equivalence": "wider"
+              }
+            ]
+          },
+          {
+            "code": "3022",
+            "display": "Drug use",
+            "target": [
+              {
+                "code": "LG41857-0",
+                "display": "Drug use related terms",
+                "equivalence": "wider"
+              }
+            ]
+          }
+        ]
+    }
+  ]
+}

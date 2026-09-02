@@ -10,6 +10,7 @@
 <th>Status</th>
 <th>Middel</th>
 <th>Hoeveelheid/Antwoord</th>
+<th>(Groep)</th>
 </tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -19,7 +20,8 @@
 <td>Ja</td>
 <td></td>
 <td>1.43 alcoholic_units/day</td>
-</tr><tr><td></td><td colspan=7>
+<td>Alcohol related terms</td>
+</tr><tr><td></td><td colspan=8>
 <b>Toelichting</b><br/>alleen sterke drank<br/>
 </td></tr>
 <tr><td>+</td>
@@ -30,7 +32,8 @@
 <td>Soms</td>
 <td>Cigarette Smoker</td>
 <td></td>
-</tr><tr><td></td><td colspan=7>
+<td>Smoking related terms</td>
+</tr><tr><td></td><td colspan=8>
 <b>Toelichting</b><br/>Moeite met stoppen<br/>
 </td></tr>
 <tr><td>+</td>
@@ -41,7 +44,8 @@
 <td>ja</td>
 <td></td>
 <td></td>
-</tr><tr><td></td><td colspan=7>
+<td>Smoking related terms</td>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -51,7 +55,8 @@
 <td>nooit</td>
 <td></td>
 <td></td>
-</tr><tr><td></td><td colspan=7>
+<td>Drug use related terms</td>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -61,7 +66,8 @@
 <td></td>
 <td></td>
 <td>1 /d</td>
-</tr><tr><td></td><td colspan=7>
+<td>Alcohol related terms</td>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -71,7 +77,8 @@
 <td>4 of meer keer per week (score 2)</td>
 <td></td>
 <td>4 of meer keer per week (score 2)</td>
-</tr><tr><td></td><td colspan=7>
+<td>Alcohol related terms</td>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -81,7 +88,8 @@
 <td>10 of meer (score 2)</td>
 <td></td>
 <td>10 of meer (score 2)</td>
-</tr><tr><td></td><td colspan=7>
+<td>Alcohol related terms</td>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -91,7 +99,8 @@
 <td>ja (score 1)</td>
 <td></td>
 <td>ja (score 1)</td>
-</tr><tr><td></td><td colspan=7>
+<td>Alcohol related terms</td>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -101,7 +110,8 @@
 <td>ja (score 1)</td>
 <td></td>
 <td>ja (score 1)</td>
-</tr><tr><td></td><td colspan=7>
+<td>Alcohol related terms</td>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -111,7 +121,8 @@
 <td>ja (score 1)</td>
 <td></td>
 <td>ja (score 1)</td>
-</tr><tr><td></td><td colspan=7>
+<td>Alcohol related terms</td>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -121,7 +132,8 @@
 <td>nooit</td>
 <td></td>
 <td></td>
-</tr><tr><td></td><td colspan=7>
+<td>Smoking related terms</td>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
@@ -131,7 +143,8 @@
 <td>Ja</td>
 <td>METHAMFETAMINE</td>
 <td></td>
-</tr><tr><td></td><td colspan=7>
+<td>Drug use related terms</td>
+</tr><tr><td></td><td colspan=8>
 </td></tr>
 </tbody>
 </table>

@@ -60,6 +60,13 @@
           "name": "+Toelichting",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
+        },
+        {
+          "path": "code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' or system='http://snomed.info/sct').translate('middelengebruik-groups').target[0].display",
+          "name": "(Groep)",
+          "description": "Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;<a href='ConceptMap-middelengebruik-groups.html'>/ConceptMap/middelengebruik-groups</a>$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br>Verberg regels die <b>GEEN</b> groep hebben.",
+          "type": "code",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Observation' and (code.coding.where(system='http://snomed.info/sct' and (code='228273003' or code='228366006' or code='365980008')).exists() or code.coding.where(system='http://loinc.org' and (code='11331-6' or code='72166-2' or code='11343-1')).exists() or code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and (code='1739' or code='1591' or code='2418' or code='2419' or code='2420' or code='2421' or code='2422' or code='3022')).exists()))"
