@@ -307,6 +307,15 @@ function doExampleRows(allExtractedRows, md_ui) {
     // Sort allExtractedRows by the first date column if found, otherwise no specific sorting
     if (sortColumnIndex !== -1) {
         allExtractedRows.sort((a, b) => {
+            // if there is a (Groep) column, sort by that first, then by date
+            const groupColumnIndex = a.findIndex(column => column.name === "(Groep)");
+            if (groupColumnIndex !== -1) {
+                const groupA = a[groupColumnIndex].value || "";
+                const groupB = b[groupColumnIndex].value || "";
+                if (groupA !== groupB) {
+                    return groupA.localeCompare(groupB);
+                }
+            }
             // Handle Period type by using the start date for sorting
             let aKey = a[sortColumnIndex].value;
             let bKey = b[sortColumnIndex].value;
@@ -370,7 +379,7 @@ function extractExampleData(select, example, exampleFileName) {
 
 function doExampleRow(extractedData, md_ui) {
     // special case for (Groep) column; if no value, skip this row; used in vital-signs to hide rows without a group
-    if (extractedData.find(column => column.name == '(Groep)') && extractedData.find(column => column.name == '(Groep)').value == "") {
+    if (extractedData.find(column => column.name == '(Groep)')?.value == "") {
         return;
     }
 

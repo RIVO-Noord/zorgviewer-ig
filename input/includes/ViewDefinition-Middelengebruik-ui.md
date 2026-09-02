@@ -25,40 +25,6 @@
 <b>Toelichting</b><br/>alleen sterke drank<br/>
 </td></tr>
 <tr><td>+</td>
-<td>Epic</td>
-<td>3-7-2026</td>
-<td>25-5-2026 - 1-7-2026</td>
-<td>Smoking History</td>
-<td>Soms</td>
-<td>Cigarette Smoker</td>
-<td></td>
-<td>Smoking related terms</td>
-</tr><tr><td></td><td colspan=8>
-<b>Toelichting</b><br/>Moeite met stoppen<br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-6-2026</td>
-<td>4-6-2026</td>
-<td>roken</td>
-<td>ja</td>
-<td></td>
-<td></td>
-<td>Smoking related terms</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-6-2026</td>
-<td>4-6-2026</td>
-<td>drugsgebruik</td>
-<td>nooit</td>
-<td></td>
-<td></td>
-<td>Drug use related terms</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
 <td>CGM</td>
 <td>4-6-2026</td>
 <td>4-6-2026</td>
@@ -125,14 +91,14 @@
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
-<td>Sanday</td>
-<td>7-8-2025</td>
-<td>7-8-2025, 14:18:14</td>
-<td>roken</td>
+<td>CGM</td>
+<td>4-6-2026</td>
+<td>4-6-2026</td>
+<td>drugsgebruik</td>
 <td>nooit</td>
 <td></td>
 <td></td>
-<td>Smoking related terms</td>
+<td>Drug use related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -144,6 +110,40 @@
 <td>METHAMFETAMINE</td>
 <td></td>
 <td>Drug use related terms</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Epic</td>
+<td>3-7-2026</td>
+<td>25-5-2026 - 1-7-2026</td>
+<td>Smoking History</td>
+<td>Soms</td>
+<td>Cigarette Smoker</td>
+<td></td>
+<td>Smoking related terms</td>
+</tr><tr><td></td><td colspan=8>
+<b>Toelichting</b><br/>Moeite met stoppen<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>4-6-2026</td>
+<td>4-6-2026</td>
+<td>roken</td>
+<td>ja</td>
+<td></td>
+<td></td>
+<td>Smoking related terms</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>Sanday</td>
+<td>7-8-2025</td>
+<td>7-8-2025, 14:18:14</td>
+<td>roken</td>
+<td>nooit</td>
+<td></td>
+<td></td>
+<td>Smoking related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 </tbody>
