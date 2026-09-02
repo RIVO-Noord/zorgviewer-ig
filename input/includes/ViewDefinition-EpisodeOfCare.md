@@ -23,10 +23,10 @@
 <td></td>
 </tr>
 <tr>
-<td>Eind</td>
+<td>Laatste</td>
 <td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-DateLastEncounter').valueDateTime | period.end</samp></td>
 <td><code>dateTime</code></td>
-<td>EindDatumTijd</td>
+<td>EindDatum</td>
 <td></td>
 </tr>
 <tr>

@@ -5,7 +5,7 @@
 <tr><th>&gt;&lt;</th>
 <th>Bron</th>
 <th>Begin</th>
-<th>Eind</th>
+<th>Laatste</th>
 <th>Probleem</th>
 <th>Concern</th>
 </tr>

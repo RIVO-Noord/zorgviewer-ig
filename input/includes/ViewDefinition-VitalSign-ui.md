@@ -12,6 +12,7 @@
 <th>Uitvoerder</th>
 <th>(Groep)</th>
 </tr>
+<tr><td colspan=14><b>Ademhaling</b></td></tr>
 <tr><td>+</td>
 <td>Nedap</td>
 <td>18-3-2026</td>
@@ -159,6 +160,7 @@
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#9279-1 Respiratory rate<br/>
 </td></tr>
+<tr><td colspan=14><b>Bloeddruk</b></td></tr>
 <tr><td>+</td>
 <td>CGM</td>
 <td>4-3-2026</td>
@@ -381,6 +383,7 @@
 <b>Meting</b><br/>LOINC#85354-9 Blood pressure panel with all children optional<br/>
 <b>Context</b><br/>Sitting position<br/>Sitting position<br/>
 </td></tr>
+<tr><td colspan=14><b>Hartslag</b></td></tr>
 <tr><td>+</td>
 <td>Epic</td>
 <td>26-8-2025</td>
@@ -503,6 +506,7 @@
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8867-4 Heart rate<br/>
 </td></tr>
+<tr><td colspan=14><b>Lichaamsmaten</b></td></tr>
 <tr><td>+</td>
 <td>CGM</td>
 <td>2-6-2026</td>
@@ -771,6 +775,7 @@
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 <b>Context</b><br/>Minimal dressed<br/>
 </td></tr>
+<tr><td colspan=14><b>Temperatuur</b></td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
 <td>20-8-2025</td>

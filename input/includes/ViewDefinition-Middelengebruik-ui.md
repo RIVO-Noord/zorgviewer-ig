@@ -12,6 +12,7 @@
 <th>Hoeveelheid/Antwoord</th>
 <th>(Groep)</th>
 </tr>
+<tr><td colspan=9><b>Alcohol related terms</b></td></tr>
 <tr><td>+</td>
 <td>Epic</td>
 <td>3-7-2026</td>
@@ -90,6 +91,7 @@
 <td>Alcohol related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
+<tr><td colspan=9><b>Drug use related terms</b></td></tr>
 <tr><td>+</td>
 <td>CGM</td>
 <td>4-6-2026</td>
@@ -112,6 +114,7 @@
 <td>Drug use related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
+<tr><td colspan=9><b>Smoking related terms</b></td></tr>
 <tr><td>+</td>
 <td>Epic</td>
 <td>3-7-2026</td>

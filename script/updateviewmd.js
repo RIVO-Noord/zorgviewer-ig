@@ -335,7 +335,17 @@ function doExampleRows(allExtractedRows, md_ui) {
     }
 
     // Now, iterate through the sorted data and generate markdown
+    let lastGroupValue = null;
     allExtractedRows.forEach(extractedData => {
+        // If there is a (Groep) column, check if the value has changed and insert a header
+        const groupColumnIndex = extractedData.findIndex(column => column.name === "(Groep)");
+        if (groupColumnIndex !== -1) {
+            const currentGroupValue = extractedData[groupColumnIndex].value;
+            if (currentGroupValue && currentGroupValue !== lastGroupValue) {
+                md_ui.push(`<tr><td colspan=${extractedData.length}><b>${currentGroupValue}</b></td></tr>`);
+                lastGroupValue = currentGroupValue;
+            }
+        }
         doExampleRow(extractedData, md_ui);
     });
 }
