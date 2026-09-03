@@ -1,8 +1,8 @@
 {
   "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
   "resource": "Bundle",
-  "id": "ViewDefinition-Middelengebruik",
-  "title": "Middelengebruik",
+  "id": "ViewDefinition-Intoxicaties",
+  "title": "Intoxicaties",
   "select": [
     {
       "column": [
@@ -32,14 +32,14 @@
           "name": "Soort gebruik",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "WaarnemingGebruik" } ],
-          "description": "De middelengebruik groep (roken, alcohol, drugs)"
+          "description": "De intoxicaties groep (roken, alcohol, drugs)"
         },
         {
           "path": "valueCodeableConcept.text | valueCodeableConcept.coding.display | valueString",
           "name": "Status",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "*Status" } ],
-          "description": "De status van het middelengebruik"
+          "description": "De status van het intoxicaties"
         },
         {
           "path": "component.where(code.coding.exists(code = '410942007' or code = '53661000146106')).valueCodeableConcept.coding.display.combine(component.where(code.coding.exists(code = '410675002')).valueCodeableConcept.coding.display).join(' ')",
@@ -62,9 +62,9 @@
           "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
         },
         {
-          "path": "code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' or system='http://snomed.info/sct').translate('middelengebruik-groups').target[0].display",
+          "path": "code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' or system='http://snomed.info/sct').translate('intoxicaties-groups').target[0].display",
           "name": "(Groep)",
-          "description": "Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;<a href='ConceptMap-middelengebruik-groups.html'>/ConceptMap/middelengebruik-groups</a>$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br>Verberg regels die <b>GEEN</b> groep hebben.",
+          "description": "Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;<a href='ConceptMap-intoxicaties-groups.html'>/ConceptMap/intoxicaties-groups</a>$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br>Verberg regels die <b>GEEN</b> groep hebben.",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }

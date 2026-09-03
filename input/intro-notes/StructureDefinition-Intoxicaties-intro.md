@@ -2,7 +2,7 @@
 
 ### Zorginformatiebouwstenen
 
-De volgende zibs vallen onder het thema middelengebruik.
+De volgende zibs vallen onder het thema intoxicaties.
 
 - [ZIB Alcoholgebruik](https://zibs.nl/wiki/AlcoholGebruik-v3.1(2017NL)) - BgZ[^1]
 - [ZIB Drugsgebruik](https://zibs.nl/wiki/DrugsGebruik-v3.2(2017NL)) - BgZ[^1]
@@ -14,11 +14,11 @@ De volgende zibs vallen onder het thema middelengebruik.
 
 ### View Definition
 
-[ViewDefinition voor middelengebruik](ViewDefinition-Middelengebruik.json)
+[ViewDefinition voor intoxicaties](ViewDefinition-Intoxicaties.json)
 
-{% include ViewDefinition-Middelengebruik-ui.md %}
+{% include ViewDefinition-Intoxicaties-ui.md %}
 
-{% include ViewDefinition-Middelengebruik.md %}
+{% include ViewDefinition-Intoxicaties.md %}
 
 ### Zoeken naar codes
 
@@ -26,13 +26,13 @@ De volgende zibs vallen onder het thema middelengebruik.
 
 ### Request
 
-N.B. BgZ gebruikt de categorie 'social-history' en HIS'en gebruiken 'vital-signs' voor het middelengebruik. Bij deze algemene queries komen altijd teveel gegevens terug.
+N.B. BgZ gebruikt de categorie 'social-history' en HIS'en gebruiken 'vital-signs' voor het intoxicaties. Bij deze algemene queries komen altijd teveel gegevens terug.
 
-1. Opvragen (search) middelengebruik (BgZ)
+1. Opvragen (search) intoxicaties (BgZ)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&category=social-history`
 
-1. Opvragen (search) middelengebruik (huisartsgegevens)
+1. Opvragen (search) intoxicaties (huisartsgegevens)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&category=vital-signs`
 

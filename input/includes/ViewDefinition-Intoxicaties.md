@@ -34,14 +34,14 @@
 <td><samp>code.text | code.coding.display</samp></td>
 <td><code>string</code></td>
 <td>WaarnemingGebruik</td>
-<td>De middelengebruik groep (roken, alcohol, drugs)</td>
+<td>De intoxicaties groep (roken, alcohol, drugs)</td>
 </tr>
 <tr>
 <td>Status</td>
 <td><samp>valueCodeableConcept.text | valueCodeableConcept.coding.display | valueString</samp></td>
 <td><code>string</code></td>
 <td>*Status</td>
-<td>De status van het middelengebruik</td>
+<td>De status van het intoxicaties</td>
 </tr>
 <tr>
 <td>Middel</td>
@@ -68,10 +68,10 @@
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(Groep)</td>
-<td><samp>code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' or system='http://snomed.info/sct').translate('middelengebruik-groups').target[0].display</samp></td>
+<td><samp>code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' or system='http://snomed.info/sct').translate('intoxicaties-groups').target[0].display</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
-<td>Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;<a href='ConceptMap-middelengebruik-groups.html'>/ConceptMap/middelengebruik-groups</a>$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br>Verberg regels die <b>GEEN</b> groep hebben.</td>
+<td>Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;<a href='ConceptMap-intoxicaties-groups.html'>/ConceptMap/intoxicaties-groups</a>$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br>Verberg regels die <b>GEEN</b> groep hebben.</td>
 </tr>
 </tbody>
 </table>

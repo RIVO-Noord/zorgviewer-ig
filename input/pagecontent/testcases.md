@@ -349,9 +349,9 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 | Adres         | Hanzeplein 1, 9713 GZ, Groningen | 
 {: .grid .table-striped}
 
-#### Middelengebruik
+#### Intoxicaties
 
-| Testpatiënt 1 | Middelengebruik, alcoholgebruik |
+| Testpatiënt 1 | Intoxicaties, alcoholgebruik |
 | ------------- | ----------------------- |
 | (Start)Datum  | 05-05-2015              |
 | Status        | Drinkt alcohol          | 
@@ -359,7 +359,7 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 | Toelichting   | Drinkt bij het avondeten   | 
 {: .grid .table-striped}
 
-| Testpatiënt 1 | Middelengebruik, drugsgebruik |
+| Testpatiënt 1 | Intoxicaties, drugsgebruik |
 | ------------- | ----------------------- |
 | Gebruiksperiode |  01-01-2010 - 01-01-2020 |
 | Status        | misbruikt drugs         | 
@@ -368,7 +368,7 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 | Toelichting   | 	Op feestjes en in uitgaanscircuit. Vroeger wat meer dan tegenwoordig. | 
 {: .grid .table-striped}
 
-| Testpatiënt 1 | Middelengebruik, tabakgebruik |
+| Testpatiënt 1 | Intoxicaties, tabakgebruik |
 | ------------- | ----------------------- |
 | (Start)Datum  | 2020                    |
 | Soort gebruik | Rookt shag              | 
