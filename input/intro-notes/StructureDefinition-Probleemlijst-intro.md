@@ -1,7 +1,5 @@
 {% include profile-note.md %}
 
-{% include future-note.md %}
-
 ### Zorginformatiebouwsteen
 
 De volgende zibs vallen onder het thema probleemlijst. LET OP: Deze samenstelling heeft als focus het Probleem (Condition) in tegenstelling tot het [profiel EpisodeOfCare](StructureDefinition-EpisodeOfCare.html) die heeft als focus de Episode.

@@ -1,5 +1,7 @@
 {% include profile-note.md %}
 
+{% include future-note.md %}
+
 ### Zorginformatiebouwsteen
 
 [ZIB Probleem](https://zibs.nl/wiki/Probleem-v4.1(2017NL))
