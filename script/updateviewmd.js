@@ -455,6 +455,46 @@ function doExampleRow(extractedData, md_ui) {
                 const date = new Date(displayValue);
                 displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'CET' });
             }
+            else if (column.type == "Period" && displayValue) { // special case for Period; display as start - end
+                const period = displayValue.split(' - ');
+                const dateStart = new Date(period[0]);
+                const dateEnd = period[1] ? new Date(period[1]) : null;
+                // Check if dateEnd falls on the exact same UTC calendar day as dateStart
+                const isSameDay = dateEnd &&
+                    dateStart.getUTCFullYear() === dateEnd.getUTCFullYear() &&
+                    dateStart.getUTCMonth() === dateEnd.getUTCMonth() &&
+                    dateStart.getUTCDate() === dateEnd.getUTCDate();
+
+                // Check if dates are set to midnight (no time set)
+                const startIsMidnight = dateStart.getUTCHours() === 0 && dateStart.getUTCMinutes() === 0 && dateStart.getUTCSeconds() === 0;
+                const endIsMidnight = dateEnd && dateEnd.getUTCHours() === 0 && dateEnd.getUTCMinutes() === 0 && dateEnd.getUTCSeconds() === 0;
+
+                // Format start display
+                const displayStart = startIsMidnight
+                    ? dateStart.toLocaleDateString('nl-NL', { timeZone: 'CET' })
+                    : dateStart.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+                // Format end display based on same-day status
+                let displayEnd = null;
+
+                if (dateEnd) {
+                    if (isSameDay) {
+                        // Hide end date: show time if present, or omit if midnight
+                        displayEnd = endIsMidnight
+                            ? null
+                            : dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                    } else {
+                        // Different day: standard date or full date+time
+                        displayEnd = endIsMidnight
+                            ? dateEnd.toLocaleDateString('nl-NL', { timeZone: 'CET' })
+                            : dateEnd.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                    }
+                }
+                displayValue = displayStart;
+                if (displayEnd) {
+                    displayValue += ' - ' + displayEnd;
+                }
+            }
             md_ui.push(`<b>${column.name.slice(1)}</b><br/>${displayValue}<br/>`);
         }
     });

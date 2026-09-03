@@ -52,6 +52,27 @@
 <td>Toelichting</td>
 <td></td>
 </tr>
+<tr style="background-color:#b4c7e7">
+<td>+Episode-naam</td>
+<td><samp>''</samp></td>
+<td><code>string</code></td>
+<td><i>nvt</i></td>
+<td></td>
+</tr>
+<tr style="background-color:#b4c7e7">
+<td>+Episode-status</td>
+<td><samp>''</samp></td>
+<td><code>string</code></td>
+<td><i>nvt</i></td>
+<td></td>
+</tr>
+<tr style="background-color:#b4c7e7">
+<td>+Episode-datum</td>
+<td><samp>''</samp></td>
+<td><code>Period</code></td>
+<td><i>nvt</i></td>
+<td></td>
+</tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(regelkleur)</td>
@@ -111,10 +132,31 @@
 <td>Probleem/ Toelichting</td>
 <td></td>
 </tr>
+<tr style="background-color:#b4c7e7">
+<td>+Episode-naam</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString | extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-Title').valueString</samp></td>
+<td><code>string</code></td>
+<td>ZorgEpisodeNaam</td>
+<td></td>
+</tr>
+<tr style="background-color:#b4c7e7">
+<td>+Episode-status</td>
+<td><samp>status</samp></td>
+<td><code>string</code></td>
+<td><i>nvt</i></td>
+<td></td>
+</tr>
+<tr style="background-color:#b4c7e7">
+<td>+Episode-datum</td>
+<td><samp>period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))</samp></td>
+<td><code>Period</code></td>
+<td><i>nvt</i></td>
+<td></td>
+</tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(regelkleur)</td>
-<td><samp>status</samp></td>
+<td><samp>diagnosis.condition.resolve().clinicalStatus</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
 <td>Actueel (<code>active</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>finished</code>) = grijze rijen</td>

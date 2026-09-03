@@ -7,7 +7,7 @@
 <th>Begin</th>
 <th>Laatste</th>
 <th>Probleem</th>
-<th>Concern</th>
+<th>Naam</th>
 </tr>
 <tr><td>+</td>
 <td>Sanday</td>

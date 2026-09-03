@@ -22,6 +22,4 @@ De volgende zibs vallen onder het thema probleemlijst. LET OP: Deze samenstellin
 
 ### Requests
 
-Er is geen request waarmee je beide resources in 1 keer kan opvragen. Je moet hiervoor dus een request doen per resource.
-
-* Zie [Condition](StructureDefinition-Condition.html#request) en [EpisodeOfCare](StructureDefinition-EpisodeOfCare.html#request)
+Er is geen request waarmee je beide resources in 1 keer kan opvragen. Je moet hiervoor dus een request doen per profiel. Zie [Condition](StructureDefinition-Condition.html#request) en [EpisodeOfCare](StructureDefinition-EpisodeOfCare.html#request)
