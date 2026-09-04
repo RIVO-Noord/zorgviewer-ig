@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "url": "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem-Sanday",
   "name": "OntsluitenBronsysteemSanday",
-  "title": "Ontsluiten Bronsysteem - Sanday",
+  "title": "Sanday Bronsysteem",
   "status": "active",
   "date": "2025-12-24",
   "description": "Deze CapabilityStatement beschrijft Ontsluiten Bronsysteem voor Sanday.",
@@ -20,27 +20,9 @@
   "format": [
     "json"
   ],
-  "profile": [
-    {
-      "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
-      "display": "nl-core-patient"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Problem",
-      "display": "zib-Probleem"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance",
-      "display": "zib-AllergyIntolerance"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-GeneralMeasurement",
-      "display": "zib-GeneralMeasurement"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement",
-      "display": "zib-MedicationAgreement"
-    }
+  "implementationGuide": [
+    "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_GP_Data",
+    "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_PDFA"
   ],
   "rest": [
     {
@@ -184,9 +166,33 @@
               "valueCode": "SHALL"
             }
           ],
-          "type": "Procedure",
+          "type": "EpisodeOfCare",
           "profile": {
-            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Procedure"
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/EpisodeOfCare"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ],
+          "searchInclude": [ "Condition:diagnosis" ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Composition",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/EncounterReport"
           },
           "interaction": [
             {
@@ -234,6 +240,52 @@
           "type": "Observation",
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/LaboratoryTestResult"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Observation",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/VitalSign"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Observation",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Intoxicaties"
           },
           "interaction": [
             {

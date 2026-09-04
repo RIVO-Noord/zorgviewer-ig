@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "url": "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem-Medicom",
   "name": "OntsluitenBronsysteemMadicom",
-  "title": "Ontsluiten Bronsysteem - Medicom",
+  "title": "Medicom Bronsysteem",
   "status": "active",
   "date": "2026-04-15",
   "description": "Deze CapabilityStatement beschrijft Ontsluiten Bronsysteem voor Medicom.",
@@ -20,27 +20,9 @@
   "format": [
     "json"
   ],
-  "profile": [
-    {
-      "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
-      "display": "nl-core-patient"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Problem",
-      "display": "zib-Probleem"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance",
-      "display": "zib-AllergyIntolerance"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-GeneralMeasurement",
-      "display": "zib-GeneralMeasurement"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement",
-      "display": "zib-MedicationAgreement"
-    }
+  "implementationGuide": [
+    "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_GP_Data",
+    "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_PDFA"
   ],
   "rest": [
     {
