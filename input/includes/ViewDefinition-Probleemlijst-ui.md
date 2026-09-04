@@ -100,7 +100,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(ICPC) R02 <br/>
 <b>Episode-naam</b><br/>Kortademigheid<br/>
-<b>Episode-status</b><br/>active<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 <b>Episode-datum</b><br/>15-11-2012<br/>
 </td></tr>
 <tr><td>+</td>
@@ -130,7 +130,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(ICPC) K07 <br/>
 <b>Episode-naam</b><br/>Oedeem<br/>
-<b>Episode-status</b><br/>active<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 <b>Episode-datum</b><br/>10-8-2012<br/>
 </td></tr>
 <tr><td>+</td>
@@ -146,12 +146,12 @@
 <td>CGM</td>
 <td>20-4-2011</td>
 <td>Polsfractuur</td>
-<td>Niet actueel</td>
+<td>Afgesloten</td>
 <td>inactive</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(ICPC) L72 <br/>
 <b>Episode-naam</b><br/>Polsfractuur<br/>
-<b>Episode-status</b><br/>finished<br/>
+<b>Episode-status</b><br/>Afgesloten<br/>
 <b>Episode-datum</b><br/>20-4-2011 - 7-6-2011, 23:59:59<br/>
 </td></tr>
 <tr><td>+</td>
@@ -201,7 +201,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(ICPC) A20 <br/>
 <b>Episode-naam</b><br/>Gesprek levenseinde/behandelwensen<br/>
-<b>Episode-status</b><br/>active<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -212,7 +212,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Concern</b><br/>Rughernia<br/>
 <b>Episode-naam</b><br/>Rughernia<br/>
-<b>Episode-status</b><br/>active<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 <b>Episode-datum</b><br/>7-8-2025<br/>
 </td></tr>
 <tr><td>+</td>
@@ -224,7 +224,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Concern</b><br/>Keelpijn<br/>
 <b>Episode-naam</b><br/>Keelpijn<br/>
-<b>Episode-status</b><br/>active<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 <b>Episode-datum</b><br/>1-4-2025<br/>
 </td></tr>
 <tr><td>+</td>
@@ -236,19 +236,19 @@
 </tr><tr><td></td><td colspan=5>
 <b>Concern</b><br/>Heropende wond poging 2<br/>
 <b>Episode-naam</b><br/>Heropende wond poging 2<br/>
-<b>Episode-status</b><br/>active<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 <b>Episode-datum</b><br/>21-8-2025<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
 <td></td>
 <td>Maagpijn</td>
-<td>Niet actueel</td>
+<td>Afgesloten</td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
 <b>Concern</b><br/>Maagpijn<br/>
 <b>Episode-naam</b><br/>Maagpijn<br/>
-<b>Episode-status</b><br/>finished<br/>
+<b>Episode-status</b><br/>Afgesloten<br/>
 <b>Episode-datum</b><br/>13-2-2025 - 14-10-2025<br/>
 </td></tr>
 <tr><td>+</td>
@@ -260,7 +260,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Concern</b><br/>Influenze vaccinatie<br/>
 <b>Episode-naam</b><br/>Influenze vaccinatie<br/>
-<b>Episode-status</b><br/>active<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 <b>Episode-datum</b><br/>4-11-2025<br/>
 </td></tr>
 <tr><td>+</td>
@@ -272,7 +272,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Concern</b><br/>Vermoeidheid<br/>
 <b>Episode-naam</b><br/>Vermoeidheid<br/>
-<b>Episode-status</b><br/>active<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 <b>Episode-datum</b><br/>15-12-2025<br/>
 </td></tr>
 <tr><td>+</td>
@@ -284,7 +284,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Concern</b><br/>Episode zonder contacten<br/>
 <b>Episode-naam</b><br/>Episode zonder contacten<br/>
-<b>Episode-status</b><br/>active<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 <b>Episode-datum</b><br/>16-4-2026<br/>
 </td></tr>
 <tr><td>+</td>
@@ -296,7 +296,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Concern</b><br/>Episode met twee contacten <br/>
 <b>Episode-naam</b><br/>Episode met twee contacten <br/>
-<b>Episode-status</b><br/>active<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 <b>Episode-datum</b><br/>16-4-2026<br/>
 </td></tr>
 </tbody>

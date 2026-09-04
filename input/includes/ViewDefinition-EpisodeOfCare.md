@@ -43,5 +43,12 @@
 <td>ZorgEpisodeNaam</td>
 <td></td>
 </tr>
+<tr>
+<td>Status</td>
+<td><samp>status.lookup('ProbleemStatus').display</samp></td>
+<td><code>string</code></td>
+<td><i>nvt</i></td>
+<td>Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a></td>
+</tr>
 </tbody>
 </table>

@@ -141,10 +141,10 @@
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+Episode-status</td>
-<td><samp>status</samp></td>
+<td><samp>status.lookup('ProbleemStatus').display</samp></td>
 <td><code>string</code></td>
 <td><i>nvt</i></td>
-<td></td>
+<td>Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a></td>
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+Episode-datum</td>

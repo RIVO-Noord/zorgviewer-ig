@@ -40,6 +40,12 @@
           "description": "",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "ZorgEpisodeNaam" } ]
+        },
+        {
+          "path": "status.lookup('ProbleemStatus').display",
+          "name": "Status",
+          "description": "Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a>",
+          "type": "string"
         }
       ],
       "forEach": "entry.resource.where(resourceType='EpisodeOfCare')"
