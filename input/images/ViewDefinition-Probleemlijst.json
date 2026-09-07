@@ -79,6 +79,21 @@
               ]
             },
             {
+              "path": "''",
+              "name": "+Episode-naam",
+              "type": "string"
+            },
+            {
+              "path": "''",
+              "name": "+Episode-status",
+              "type": "string"
+            },
+            {
+              "path": "''",
+              "name": "+Episode-datum",
+              "type": "Period"
+            },
+            {
               "path": "clinicalStatus",
               "name": "(regelkleur)",
               "description": "Actueel (<code>active,recurrence</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive,remission,resolved</code>) = grijze rijen",
@@ -91,7 +106,7 @@
               ]
             }
           ],
-          "forEach": "entry.resource.where(resourceType='Condition' and code.coding.display.exists())"
+          "forEach": "entry.resource.where(resourceType='Condition')"
         },
         {
           "column": [
@@ -177,7 +192,25 @@
               ]
             },
             {
-              "path": "status",
+              "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString | extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-Title').valueString",
+              "name": "+Episode-naam",
+              "description": "",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "ZorgEpisodeNaam" } ]
+            },
+            {
+              "path": "status.lookup('ProbleemStatus').display",
+              "name": "+Episode-status",
+              "description": "Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a>",
+              "type": "string"
+            },
+            {
+              "path": "period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
+              "name": "+Episode-datum",
+              "type": "Period"
+            },
+            {
+              "path": "diagnosis.condition.resolve().clinicalStatus",
               "name": "(regelkleur)",
               "description": "Actueel (<code>active</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>finished</code>) = grijze rijen",
               "type": "code",

@@ -31,7 +31,7 @@
 </tr>
 <tr>
 <td>Testuitslag</td>
-<td><samp>valueString | valueQuantity.value.toString() + iif(valueQuantity.code.exists(),' ' + valueQuantity.code,'')</samp></td>
+<td><samp>valueString | valueQuantity.value.toString() + iif(valueQuantity.unit.exists(),' ' + valueQuantity.unit,'')</samp></td>
 <td><code>string</code></td>
 <td>LaboratoriumTest/ TestUitslag</td>
 <td><b>Epic:</b> Indien lab-order geannuleerd, dan krijgt dit alsnog de status <code>Definitief</code> met een Testuitslag van <code>GEANNULEERD</code>. Dit is voor nu akkoord bevonden door stuurgroep Zorgviewer.</td>
@@ -45,17 +45,17 @@
 </tr>
 <tr>
 <td>Onder- en bovengrens</td>
-<td><samp>iif(referenceRange.low.exists(),referenceRange.low.value.toString(),'') + ' .. ' + iif(referenceRange.high.exists(),referenceRange.high.value.toString(),'') + iif(referenceRange.high.code.exists(),' ' + referenceRange.high.code,'')</samp></td>
+<td><samp>iif(referenceRange.low.exists() or referenceRange.high.exists(), iif(referenceRange.low.exists(),referenceRange.low.value.toString(),'') + ' .. ' + iif(referenceRange.high.exists(),referenceRange.high.value.toString(),'') + iif(referenceRange.high.code.exists(),' ' + referenceRange.high.code,''), '')</samp></td>
 <td><code>string</code></td>
 <td>LaboratoriumTest/ ReferentieOndergrens, LaboratoriumTest/ ReferentieBovengrens</td>
 <td>Indien <code>low.code</code> en <code>high.code</code> niet gelijk zijn aan elkaar toon dan <code>code</code> bij beide.</td>
 </tr>
 <tr>
 <td>Materiaal</td>
-<td><samp>specimen.resolve().type.text</samp></td>
+<td><samp>specimen.resolve().type.text | specimen.display</samp></td>
 <td><code>string</code></td>
 <td>Monster/ Monstermateriaal</td>
-<td><b>Sanday:</b> Levert geen type materiaal</td>
+<td><b>Sanday, CGM:</b> Levert geen type materiaal</td>
 </tr>
 <tr>
 <td>Status</td>

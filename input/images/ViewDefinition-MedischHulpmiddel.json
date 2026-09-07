@@ -15,9 +15,9 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "whenUsed.start",
-          "name": "Begin datum",
-          "type": "dateTime",
+          "path": "whenUsed.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
+          "name": "Datum",
+          "type": "Period",
           "tag": [ { "name": "Zib element", "value": "BeginDatum" } ]
         },
         {
@@ -39,16 +39,16 @@
           "tag": [ { "name": "Zib element", "value": "AnatomischeLocatie" } ]
         },
         {
+          "path": "bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.coding[0].display",
+          "name": "Lateraliteit",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Lateraliteit" } ]
+        },
+        {
           "path": "note[0].text",
           "name": "Toelichting",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Toelichting" } ]
-        },
-        {
-          "path": "bodySite.extension('http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier').valueCodeableConcept.coding[0].display",
-          "name": "+Lateraliteit",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "Lateraliteit" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='DeviceUseStatement')"

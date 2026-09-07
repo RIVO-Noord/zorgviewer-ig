@@ -49,6 +49,51 @@
 <b>Adres</b><br/>Knolweg 1000 9999 XA Stitswerd<br/>
 </td></tr>
 <tr><td>+</td>
+<td>Nedap</td>
+<td>Eerste relatie / contactpersoon</td>
+<td>Echtgenoot</td>
+<td>Henk de Haas</td>
+<td>0612345990</td>
+<td>dehaas@work.com</td>
+</tr><tr><td></td><td colspan=6>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>Eerste relatie / contactpersoon</td>
+<td></td>
+<td>Hanneke de Haas-ter Boom</td>
+<td>06-22222222</td>
+<td>h.terboom@example.com</td>
+</tr><tr><td></td><td colspan=6>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>Eerste relatie / contactpersoon</td>
+<td></td>
+<td>Anne Jongeneel-</td>
+<td>06-98765432</td>
+<td>a.jongeneel@example.com</td>
+</tr><tr><td></td><td colspan=6>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>Eerste relatie / contactpersoon</td>
+<td></td>
+<td>Hans de Haas-</td>
+<td>06-99887766</td>
+<td>h.dehaas@example.com</td>
+</tr><tr><td></td><td colspan=6>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>Eerste relatie / contactpersoon</td>
+<td></td>
+<td>Sophie Vollebregt-de Haas</td>
+<td>06-11223344</td>
+<td>s.vollebregt@example.com</td>
+</tr><tr><td></td><td colspan=6>
+</td></tr>
+<tr><td>+</td>
 <td>Nexus</td>
 <td>Eerste relatie/contactpersoon</td>
 <td>Echtgenote</td>

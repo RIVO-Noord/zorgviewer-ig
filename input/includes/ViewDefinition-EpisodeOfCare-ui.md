@@ -5,9 +5,10 @@
 <tr><th>&gt;&lt;</th>
 <th>Bron</th>
 <th>Begin</th>
-<th>Eind</th>
+<th>Laatste</th>
 <th>Probleem</th>
-<th>Concern</th>
+<th>Naam</th>
+<th>Status</th>
 </tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -15,7 +16,8 @@
 <td></td>
 <td>Acute tonsillitis/peritonsillair abces</td>
 <td>Episode zonder contacten</td>
-</tr><tr><td></td><td colspan=5>
+<td>Actueel</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -23,15 +25,17 @@
 <td></td>
 <td>Furunkel/abces neus</td>
 <td>Episode met twee contacten </td>
-</tr><tr><td></td><td colspan=5>
+<td>Actueel</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
 <td>4-3-2026</td>
 <td>4-3-2026</td>
 <td>Gesprek levenseinde/behandelwensen</td>
-<td></td>
-</tr><tr><td></td><td colspan=5>
+<td>Gesprek levenseinde/behandelwensen</td>
+<td>Actueel</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -39,7 +43,8 @@
 <td></td>
 <td>Moeheid/zwakte</td>
 <td>Vermoeidheid</td>
-</tr><tr><td></td><td colspan=5>
+<td>Actueel</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -47,7 +52,8 @@
 <td></td>
 <td>Influenza [ex. R81]</td>
 <td>Influenze vaccinatie</td>
-</tr><tr><td></td><td colspan=5>
+<td>Actueel</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -55,7 +61,8 @@
 <td></td>
 <td>Lokale infectie vinger/teen/paronychia</td>
 <td>Heropende wond poging 2</td>
-</tr><tr><td></td><td colspan=5>
+<td>Actueel</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -63,7 +70,8 @@
 <td></td>
 <td>Hernia inguinalis</td>
 <td>Rughernia</td>
-</tr><tr><td></td><td colspan=5>
+<td>Actueel</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -71,7 +79,8 @@
 <td></td>
 <td>Keelpijn</td>
 <td>Keelpijn</td>
-</tr><tr><td></td><td colspan=5>
+<td>Actueel</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -79,31 +88,35 @@
 <td>14-10-2025</td>
 <td>Maagpijn</td>
 <td>Maagpijn</td>
-</tr><tr><td></td><td colspan=5>
+<td>Afgesloten</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
 <td>15-11-2012</td>
 <td>15-11-2012</td>
 <td>Kortademigheid</td>
-<td></td>
-</tr><tr><td></td><td colspan=5>
+<td>Kortademigheid</td>
+<td>Actueel</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
 <td>10-8-2012</td>
 <td>4-3-2026</td>
 <td>Oedeem</td>
-<td></td>
-</tr><tr><td></td><td colspan=5>
+<td>Oedeem</td>
+<td>Actueel</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
 <td>20-4-2011</td>
 <td>20-4-2011</td>
 <td>Polsfractuur</td>
-<td></td>
-</tr><tr><td></td><td colspan=5>
+<td>Polsfractuur</td>
+<td>Afgesloten</td>
+</tr><tr><td></td><td colspan=6>
 </td></tr>
 </tbody>
 </table>

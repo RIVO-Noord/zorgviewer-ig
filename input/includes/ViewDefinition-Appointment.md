@@ -16,29 +16,23 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
-<td>Begin</td>
-<td><samp>start</samp></td>
-<td><code>dateTime</code></td>
-<td>BeginDatumTijd</td>
-<td></td>
-</tr>
-<tr>
-<td>Eind</td>
-<td><samp>end</samp></td>
-<td><code>dateTime</code></td>
-<td>EindDatumTijd</td>
+<td>Datum</td>
+<td><samp>iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)</samp></td>
+<td><code>Period</code></td>
+<td>BeginDatumTijd - EindDatumTijd</td>
 <td></td>
 </tr>
 <tr>
 <td>Met</td>
-<td><samp>participant.where(actor.reference.contains('Practitioner/'))[0].actor.display</samp></td>
+<td><samp>participant.actor.where(reference.contains('Practitioner/')).select(display | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display).join('
+')</samp></td>
 <td><code>string</code></td>
-<td>ContactMet::Zorgverlener</td>
+<td>ContactMet::Zorgverlener, ContactMet::Zorgverlener/ZorgverlenersRol</td>
 <td></td>
 </tr>
 <tr>
 <td>Locatie</td>
-<td><samp>participant.where(actor.reference.contains('Location/'))[0].actor.display</samp></td>
+<td><samp>participant.actor.where(reference.contains('Location/'))[0].display</samp></td>
 <td><code>string</code></td>
 <td>Locatie::Zorgaanbieder</td>
 <td></td>
@@ -53,9 +47,16 @@
 <tr>
 <td>Type</td>
 <td><samp>appointmentType.coding.display</samp></td>
-<td><code>code</code></td>
+<td><code>string</code></td>
 <td>ContactType</td>
 <td></td>
+</tr>
+<tr>
+<td>Reden</td>
+<td><samp>reason.text | indication.display</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td>DeviatingResult or Problem or Condition<br/>n.b. dit is geen ZIB.</td>
 </tr>
 </tbody>
 </table>

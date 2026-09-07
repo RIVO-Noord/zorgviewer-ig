@@ -29,9 +29,8 @@ Setup:
 ### changelog.js
 
 ```
-@> cd script
 @> export GEMINI_API_KEY=...
-@> node changelog.js
+@> node script/changelog.js
 ```
 
 ### Other Scripts

@@ -1,0 +1,135 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Toedieningsafspraak",
+  "title": "Toedieningsafspraak",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "nvt"
+            }
+          ]
+        },
+        {
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period').valuePeriod.start",
+          "name": "Start",
+          "description": "",
+          "type": "dateTime",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Gebruiksperiode::TijdsInterval/startDatumTijd"
+            }
+          ]
+        },
+        {
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period').valuePeriod.end",
+          "name": "Eind",
+          "description": "",
+          "type": "dateTime",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Gebruiksperiode::TijdsInterval/eindDatumTijd"
+            }
+          ]
+        },
+        {
+          "path": "medication.display",
+          "name": "Medicatie",
+          "description": "",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Afgesprokengeneesmiddel::Product"
+            }
+          ]
+        },
+        {
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-RenderedDosageInstruction').valueString | dosageInstruction.text",
+          "name": "Dosering & instructies",
+          "description": "N.B. Als text niet beschikbaar dan samenstellen uit discrete informatie en markeren met een icoontje &#9432;",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Gebruiksinstructie/Omschrijving, Gebruiksinstructie/AanvullendeInstructie"
+            }
+          ]
+        },
+        {
+          "path": "iif(exists(dosageInstruction.route.text), dosageInstruction.route.text, dosageInstruction.route.coding.display)",
+          "name": "Toedieningsweg",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Gebruiksinstructie/Toedieningsweg"
+            }
+          ]
+        },
+        {
+          "path": "''",
+          "name": "Stop type",
+          "description": "niet beschikbaar",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "StopType"
+            }
+          ]
+        },
+        {
+          "path": "medication.resolve().form.coding.display",
+          "name": "+Medicatie vorm",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Afgesprokengeneesmiddel::FarmaceutischProduct/FarmaceutischeVorm"
+            }
+          ]
+        },
+        {
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-AdministrationAgreement.AdministrationAgreementDateTime').valueDateTime",
+          "name": "+Afspraakdatum",
+          "type": "dateTime",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "MedicatieafspraakDatumTijd"
+            }
+          ]
+        },
+        {
+          "path": "performer.actor.display",
+          "name": "+Verstrekker",
+          "description": "",
+          "type": "string",
+          "tag": [
+            {
+              "name": "Zib element",
+              "value": "Verstrekker::Zorgverlener"
+            }
+          ]
+        },
+        {
+          "path": "'toedieningsafspraak'",
+          "name": "+Type",
+          "type": "string"
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='MedicationDispense')"
+    }
+  ]
+}

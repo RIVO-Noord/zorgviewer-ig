@@ -18,6 +18,7 @@
 * NDC (Epic) - `system=http://hl7.org/fhir/sid/ndc`
 * CVX (Epic) - `system=http://hl7.org/fhir/sid/cvx`
 * G-Standaard Voorschrijfproducten (PRK) (Chipsoft) - `system=urn:oid:2.16.840.1.113883.2.4.4.10`
+* ATC (CGM) - `system=http://www.whocc.no/atc`
 
 ### Request
 

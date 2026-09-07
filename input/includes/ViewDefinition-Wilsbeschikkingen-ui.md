@@ -9,6 +9,13 @@
 <th>Toelichting</th>
 </tr>
 <tr><td>+</td>
+<td>CGM</td>
+<td>15-1-2026</td>
+<td>niet-reanimerenbeschikking</td>
+<td>Niet reanimeren conform vastgelegde wens patiënt.</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
 <td>Epic</td>
 <td>30-6-2022</td>
 <td>Niet reanimeren verklaring</td>

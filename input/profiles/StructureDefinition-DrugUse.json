@@ -1,0 +1,73 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DrugUse",
+    "name": "DrugUse",
+    "title": "DrugUse",
+    "status": "active",
+    "description": "Drugsgebruik",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition": "http://nictiz.nl/fhir/StructureDefinition/zib-DrugUse",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Observation.code",
+                "path": "Observation.code",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.code.coding",
+                "path": "Observation.code.coding",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.code.text",
+                "path": "Observation.code.text",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.effectivePeriod",
+                "path": "Observation.effective[x]",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.issued",
+                "path": "Observation.issued",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.value",
+                "path": "Observation.value[x]",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.comment",
+                "path": "Observation.comment",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:Type",
+                "path": "Observation.component",
+                "sliceName": "Type",
+                "short": "Soort middel"
+            },
+            {
+                "id": "Observation.component:Type.code",
+                "path": "Observation.component.code",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:Type.code.coding.code",
+                "path": "Observation.component.code.coding.code",
+                "patternCode": "410942007"
+            },
+            {
+                "id": "Observation.component:Type.value[x]",
+                "path": "Observation.component.value[x]",
+                "mustSupport": true
+            }
+        ]
+    }
+}

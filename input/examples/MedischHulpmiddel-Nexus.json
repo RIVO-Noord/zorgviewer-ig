@@ -1,0 +1,416 @@
+{
+    "resourceType": "Bundle",
+    "id": "50559e96-25b4-490e-b253-3f4deb610a10",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source",
+                "valueUri": "urn:oid:2.16.840.1.113883.2.4.3.148"
+            }
+        ],
+        "lastUpdated": "2024-04-17T10:07:02.903+02:00"
+    },
+    "type": "searchset",
+    "total": 2,
+    "link": [
+        {
+            "relation": "self",
+            "url": "DeviceUseStatement?_include=DeviceUseStatement%3Adevice"
+        }
+    ],
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "DeviceUseStatement",
+                "id": "101",
+                "meta": {
+                    "lastUpdated": "2024-04-17T10:07:02.397+02:00",
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice"
+                    ]
+                },
+                "text": {
+                    "status": "extensions",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>DeviceUseStatement. typeCode-SUBJ: Xxx-Helleman J. id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.21.101 (urn:ietf:rfc:3986), Status: status-active</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Apparaat niet zichtbaar (diep in de gehooringang)</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>Device</th>\n                           <td>Gehoorapparaat</td>\n                        </tr>\n                        <tr>\n                           <th>Body Site</th>\n                           <td>\n                              <span title=\"Oor (117590005 - SNOMED CT)\">Oor</span> \n                              <span title=\"rechts (24028007 - SNOMED CT)\">rechts</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Usage Period</th>\n                           <td>FromNoTo 2007</td>\n                        </tr>\n                        <tr>\n                           <th>Indication</th>\n                           <td>\n                              <div>presbyacusis</div>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+                },
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Practitioner",
+                        "valueReference": {
+                            "reference": "Practitioner/241",
+                            "display": "Folkerts"
+                        }
+                    },
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Organization",
+                        "valueReference": {
+                            "reference": "Organization/D38DDA2520C265EAAA03FE24ED0147320803690E",
+                            "display": "Test Medisch Centrum"
+                        }
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.21.101"
+                    }
+                ],
+                "status": "active",
+                "subject": {
+                    "reference": "Patient/330073",
+                    "display": "Xxx-Helleman J"
+                },
+                "whenUsed": {
+                    "start": "2007"
+                },
+                "device": {
+                    "reference": "Device/101",
+                    "display": "Gehoorapparaat"
+                },
+                "indication": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Problem",
+                                "valueReference": {
+                                    "reference": "Condition/950",
+                                    "display": "presbyacusis"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "bodySite": {
+                    "extension": [
+                        {
+                            "url": "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "24028007",
+                                        "display": "rechts"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "117590005",
+                            "display": "Oor"
+                        }
+                    ]
+                },
+                "note": [
+                    {
+                        "text": "Apparaat niet zichtbaar (diep in de gehooringang)"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Device",
+                "id": "101",
+                "meta": {
+                    "lastUpdated": "2024-04-17T10:07:02.398+02:00",
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDeviceProduct"
+                    ]
+                },
+                "text": {
+                    "status": "extensions",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Device. typeCode-RCT: Xxx-Helleman J. </caption>\n                     <tbody>\n                        <tr>\n                           <th>type</th>\n                           <td>\n                              <span title=\"Gehoorapparaat (6012004 - SNOMED CT)\">Gehoorapparaat</span>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+                },
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "6012004",
+                            "display": "Gehoorapparaat"
+                        }
+                    ]
+                },
+                "version": "5",
+                "patient": {
+                    "reference": "Patient/330073",
+                    "display": "Xxx-Helleman J"
+                }
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "DeviceUseStatement",
+                "id": "203",
+                "meta": {
+                    "lastUpdated": "2024-04-17T10:07:02.399+02:00",
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice"
+                    ]
+                },
+                "text": {
+                    "status": "extensions",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>DeviceUseStatement. typeCode-SUBJ: Xxx-Helleman J. id: urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.21.203 (urn:ietf:rfc:3986), Status: status-active</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Implantant, Gen 2 Tibia Insert 5/6-9mm</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>Device</th>\n                           <td>Kniegewrichtsprothese</td>\n                        </tr>\n                        <tr>\n                           <th>Body Site</th>\n                           <td>\n                              <span title=\"knie (72696002 - SNOMED CT)\">knie</span> \n                              <span title=\"links (7771000 - SNOMED CT)\">links</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>Indication</th>\n                           <td>\n                              <div>artropathie</div>\n                           </td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+                },
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.21.203"
+                    }
+                ],
+                "status": "active",
+                "subject": {
+                    "reference": "Patient/330073",
+                    "display": "Xxx-Helleman J"
+                },
+                "device": {
+                    "reference": "Device/203",
+                    "display": "Kniegewrichtsprothese"
+                },
+                "indication": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Problem",
+                                "valueReference": {
+                                    "reference": "Condition/830",
+                                    "display": "artropathie"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "bodySite": {
+                    "extension": [
+                        {
+                            "url": "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "7771000",
+                                        "display": "links"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "72696002",
+                            "display": "knie"
+                        }
+                    ]
+                },
+                "note": [
+                    {
+                        "text": "Implantant, Gen 2 Tibia Insert 5/6-9mm"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Device",
+                "id": "203",
+                "meta": {
+                    "lastUpdated": "2024-04-17T10:07:02.399+02:00",
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDeviceProduct"
+                    ]
+                },
+                "text": {
+                    "status": "extensions",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Device. typeCode-RCT: Xxx-Helleman J. id: 1148130801</caption>\n                     <tfoot>\n                        <tr>\n                           <td colspan=\"2\">Implantant, Gen 2 Tibia Insert 5/6-9mm</td>\n                        </tr>\n                     </tfoot>\n                     <tbody>\n                        <tr>\n                           <th>type</th>\n                           <td>\n                              <span title=\"Kniegewrichtsprothese (109228008 - SNOMED CT)\">Kniegewrichtsprothese</span>\n                           </td>\n                        </tr>\n                        <tr>\n                           <th>UDI</th>\n                           <td>UDI Barcode: (01)05050474530799(17)160131(21)1148130801</td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/identifier-type",
+                                    "code": "SNO",
+                                    "display": "Serial Number"
+                                }
+                            ]
+                        },
+                        "value": "1148130801"
+                    }
+                ],
+                "udi": {
+                    "carrierHRF": "(01)05050474530799(17)160131(21)1148130801"
+                },
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "109228008",
+                            "display": "Kniegewrichtsprothese"
+                        }
+                    ]
+                },
+                "version": "27",
+                "patient": {
+                    "reference": "Patient/330073",
+                    "display": "Xxx-Helleman J"
+                },
+                "note": [
+                    {
+                        "text": "Implantant, Gen 2 Tibia Insert 5/6-9mm"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "241",
+                "meta": {
+                    "lastUpdated": "2024-04-17T10:07:02.759+02:00",
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"
+                    ]
+                },
+                "text": {
+                    "status": "extensions",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <div>id 0100003259 (AGB-Z), id urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.37.241 (urn:ietf:rfc:3986), <span title=\"Name assembly order: HumanNameAssemblyOrder-NL1\">H. Folkerts</span>\n                  </div>\n               </div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "0100003259"
+                    },
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:oid:2.16.840.1.113883.2.4.3.148.1.1.6.37.241"
+                    }
+                ],
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "text": "H. Folkerts",
+                        "family": "Folkerts",
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Folkerts"
+                                }
+                            ]
+                        },
+                        "given": [
+                            "H."
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "IN"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "D38DDA2520C265EAAA03FE24ED0147320803690E",
+                "meta": {
+                    "lastUpdated": "2024-04-17T10:07:02.852+02:00",
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-organization"
+                    ]
+                },
+                "text": {
+                    "status": "extensions",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <table>\n                     <caption>Organization. </caption>\n                     <tbody>\n                        <tr>\n                           <th>name</th>\n                           <td>Test Medisch Centrum</td>\n                        </tr>\n                        <tr>\n                           <th>addr</th>\n                           <td>weverstede 35, NIEUWEGEIN, NL (WP)</td>\n                        </tr>\n                     </tbody>\n                  </table>\n               </div>"
+                },
+                "name": "Test Medisch Centrum",
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Werkadres"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "line": [
+                            "weverstede 35"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "weverstede"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "35"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "NIEUWEGEIN",
+                        "country": "NL",
+                        "_country": {
+                            "extension": [
+                                {
+                                    "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "urn:iso:std:iso:3166",
+                                                "code": "NL",
+                                                "display": "NEDERLAND"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        }
+    ]
+}

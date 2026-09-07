@@ -1,0 +1,48 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Toedieningsafspraak",
+    "name": "Toedieningsafspraak",
+    "title": "Toedieningsafspraak",
+    "status": "active",
+    "description": "Medicatie Toedingingsafspraak",
+    "kind": "resource",
+    "abstract": false,
+    "type": "MedicationDispense",
+    "baseDefinition" : "http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "MedicationDispense.category",
+                "path": "MedicationDispense.category",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.medicationReference",
+                "path": "MedicationDispense.medicationReference",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Medication"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.medicationReference.display",
+                "path": "MedicationDispense.medicationReference.display",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.dosageInstruction.text",
+                "path": "MedicationDispense.dosageInstruction.text",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.dosageInstruction.route.text",
+                "path": "MedicationDispense.dosageInstruction.route.text",
+                "mustSupport": true
+            }
+        ]
+    }
+}

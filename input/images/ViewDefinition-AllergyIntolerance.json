@@ -54,7 +54,7 @@
           "tag": [ { "name": "Zib element", "value": "Reactie/Ernst" } ]
         },
         {
-          "path": "reaction[0].manifestation[0].text",
+          "path": "reaction[0].manifestation[0].text | reaction[0].manifestation[0].coding[0].display",
           "name": "Reacties",
           "description": "",
           "type": "string",
@@ -68,7 +68,7 @@
           "tag": [ { "name": "Zib element", "value": "AllergieStatus" } ]
         },
         {
-          "path": "clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text",
+          "path": "clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.text | clinicalStatus.extension('http://nictiz.nl/fhir/StructureDefinition/code-specification').valueCodeableConcept.coding[0].display",
           "name": "StatusCS",
           "description": "Zie Status",
           "type": "code",

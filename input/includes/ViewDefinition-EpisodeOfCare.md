@@ -23,10 +23,10 @@
 <td></td>
 </tr>
 <tr>
-<td>Eind</td>
+<td>Laatste</td>
 <td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-DateLastEncounter').valueDateTime | period.end</samp></td>
 <td><code>dateTime</code></td>
-<td>EindDatumTijd</td>
+<td>EindDatum</td>
 <td></td>
 </tr>
 <tr>
@@ -37,11 +37,18 @@
 <td></td>
 </tr>
 <tr>
-<td>Concern</td>
-<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString</samp></td>
+<td>Naam</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString | extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-Title').valueString</samp></td>
 <td><code>string</code></td>
 <td>ZorgEpisodeNaam</td>
 <td></td>
+</tr>
+<tr>
+<td>Status</td>
+<td><samp>status.lookup('ProbleemStatus').display</samp></td>
+<td><code>string</code></td>
+<td><i>nvt</i></td>
+<td>Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a></td>
 </tr>
 </tbody>
 </table>

@@ -19,6 +19,6 @@
 
 1. Opvragen (search) woonsituatie
 
-    `GET <ontsluiten-bronsysteem-base>/Observation/$lastn?code=http://snomed.info/sct|365508006?patient=<fhir_patient_id>`
+    `GET <ontsluiten-bronsysteem-base>/Observation/$lastn?code=http://snomed.info/sct|365508006&patient=<fhir_patient_id>`
 
 {% include bronsysteem-herkennen.md %}

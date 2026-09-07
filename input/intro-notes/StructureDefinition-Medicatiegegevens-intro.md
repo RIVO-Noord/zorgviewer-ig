@@ -3,7 +3,8 @@
 ### Zorginformatiebouwsteen
 
 * [ZIB Medicatieafspraak](StructureDefinition-MedicationRequest.html#zorginformatiebouwsteen)
-* [ZIB Medicatie Gebruik2](StructureDefinition-MedicationStatement.html#zorginformatiebouwsteen) 
+* [ZIB Medicatie Gebruik2](StructureDefinition-MedicationStatement.html#zorginformatiebouwsteen)
+* [ZIB Toedieningsafspraak](StructureDefinition-Toedieningsafspraak.html#zorginformatiebouwsteen)
 
 ### View Definition
 
@@ -21,7 +22,7 @@ Er is geen request waarmee je beide resources in 1 keer kan opvragen. Je moet hi
 
 1. **[LSP](https://aorta-on-fhir.public.vzvz.nl/aorta-on-fhir-specificaties/latest/interfaces-resource-broker-za#id-(v20251218)InterfacesResourceBrokerZA-in-$get-aorta-dataFHIR-operation):** Opvragen (search) medicatiegegevens
 
-    `GET <ontsluiten-bronsysteem-base>/$get-aorta-data?context=MEDGEG`
+    `GET <ontsluiten-bronsysteem-base>/$get-aorta-data?context=MEDGEG[&effective-time=ge<12-maanden-geleden>]`
 
      <blockquote class="stu-note" markdown="1">
     N.B. In de response Bundle zitten naast MedicationRequest en MedicationStatement ook MedicationDispense (Toedieningsafspraak of MedicatieToediening2).

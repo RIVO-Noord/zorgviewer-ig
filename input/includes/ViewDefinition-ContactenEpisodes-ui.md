@@ -50,61 +50,6 @@
 <td>4-3-2026</td>
 <td>4-3-2026</td>
 <td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>4-3-2026</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>4-3-2026</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>4-3-2026</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>4-3-2026</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>4-3-2026</td>
-<td>4-3-2026</td>
-<td>Pharmeon acceptatie zorgverlener</td>
 <td></td>
 <td></td>
 <td></td>
@@ -142,6 +87,17 @@
 <td></td>
 <td></td>
 <td>Episode</td>
+</tr><tr><td></td><td colspan=8>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>30-9-2025</td>
+<td>30-9-2025</td>
+<td>Pharmeon acceptatie zorgverlener</td>
+<td>Huisartsen, niet apotheekhoudend</td>
+<td></td>
+<td>finished</td>
+<td>Ambulatory</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -212,24 +168,13 @@
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
-<td>4-7-2024</td>
+<td>5-7-2024</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td>finished</td>
 <td>Other</td>
-</tr><tr><td></td><td colspan=8>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td>3-6-2023</td>
-<td>3-6-2023</td>
-<td>Pharmeon acceptatie zorgverlener</td>
-<td>Huisartsen, niet apotheekhoudend</td>
-<td></td>
-<td>finished</td>
-<td>Ambulatory</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -267,7 +212,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
-<td>14-8-2012</td>
+<td>15-8-2012</td>
 <td>15-8-2012</td>
 <td>J.H.R Peters</td>
 <td>Onbekende functiecode.</td>
