@@ -192,6 +192,11 @@
               ]
             },
             {
+              "path": "period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
+              "name": "+Episode-datum",
+              "type": "Period"
+            },
+            {
               "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString | extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-Title').valueString",
               "name": "+Episode-naam",
               "description": "",
@@ -203,11 +208,6 @@
               "name": "+Episode-status",
               "description": "Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a>",
               "type": "string"
-            },
-            {
-              "path": "period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
-              "name": "+Episode-datum",
-              "type": "Period"
             },
             {
               "path": "diagnosis.condition.resolve().clinicalStatus",

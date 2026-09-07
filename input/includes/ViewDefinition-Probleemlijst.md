@@ -133,6 +133,13 @@
 <td></td>
 </tr>
 <tr style="background-color:#b4c7e7">
+<td>+Episode-datum</td>
+<td><samp>period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))</samp></td>
+<td><code>Period</code></td>
+<td><i>nvt</i></td>
+<td></td>
+</tr>
+<tr style="background-color:#b4c7e7">
 <td>+Episode-naam</td>
 <td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString | extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-Title').valueString</samp></td>
 <td><code>string</code></td>
@@ -145,13 +152,6 @@
 <td><code>string</code></td>
 <td><i>nvt</i></td>
 <td>Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a></td>
-</tr>
-<tr style="background-color:#b4c7e7">
-<td>+Episode-datum</td>
-<td><samp>period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))</samp></td>
-<td><code>Period</code></td>
-<td><i>nvt</i></td>
-<td></td>
 </tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
