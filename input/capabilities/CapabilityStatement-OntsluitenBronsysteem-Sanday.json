@@ -140,19 +140,20 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHALL"
+              "valueCode": "SHOULD-NOT"
             }
           ],
           "type": "Condition",
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Condition"
           },
+          "documentation": "Conditions worden geincludeerd via EpisodeOfCare.",
           "interaction": [
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
+                  "valueCode": "SHOULD-NOT"
                 }
               ],
               "code": "search-type"
