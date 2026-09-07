@@ -11,6 +11,7 @@ async function generateChangelog() {
     // const SINCE = '3 weeks ago';
     const SINCE = '2026-08-11';
     let changes = execSync(`git diff 'HEAD@{${SINCE}}'`).toString();
+    // let changes = execSync(`git diff 1.24.0`, { maxBuffer: 250000 }).toString();
 
     // Generate fo-diff using in the Zorgviewer.wiki git folder, which is a separate repository.
     // `git pull`
