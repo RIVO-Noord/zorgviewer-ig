@@ -14,7 +14,7 @@
   "software": {
     "name": "CGM Huisarts / portavita-health-hub-dvza-api-202001"
   },
-  "fhirVersion": "4.0.1",
+  "fhirVersion": "3.0.2",
   "acceptUnknown": "both",
   "format": [
     "json"
@@ -342,7 +342,7 @@
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DocumentReference"
           },
-          "documentation": "CGM gebruikt een eigen masterIdentifier systeem. Radiologieberichten (Medrad), specialistenbrieven (Medspe) en de verwijsbrieven die al vanuit de ziekenhuizen beschikbaar zijn.",
+          "documentation": "CGM gebruikt een eigen masterIdentifier systeem. Radiologieberichten (MEDRAD), specialistenbrieven (Medspe) en de verwijsbrieven die al vanuit de ziekenhuizen beschikbaar zijn.",
           "interaction": [
             {
               "extension": [
@@ -359,10 +359,13 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHALL"
+              "valueCode": "SHOULD-NOT"
             }
           ],
           "type": "Flag",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Flag"
+          },
           "documentation": "Huisarts Alert != BgZ Alert",
           "interaction": [
             {
