@@ -10,7 +10,6 @@
 <th>Status</th>
 <th>Middel</th>
 <th>Hoeveelheid/Antwoord</th>
-<th>(Groep)</th>
 </tr>
 <tr><td colspan=9><b>Alcohol related terms</b></td></tr>
 <tr><td>+</td>
@@ -21,7 +20,6 @@
 <td>Ja</td>
 <td></td>
 <td>1.43 alcoholic_units/day</td>
-<td>Alcohol related terms</td>
 </tr><tr><td></td><td colspan=8>
 <b>Toelichting</b><br/>alleen sterke drank<br/>
 </td></tr>
@@ -33,7 +31,6 @@
 <td></td>
 <td></td>
 <td>1 /d</td>
-<td>Alcohol related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -44,7 +41,6 @@
 <td>4 of meer keer per week (score 2)</td>
 <td></td>
 <td>4 of meer keer per week (score 2)</td>
-<td>Alcohol related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -55,7 +51,6 @@
 <td>10 of meer (score 2)</td>
 <td></td>
 <td>10 of meer (score 2)</td>
-<td>Alcohol related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -66,7 +61,6 @@
 <td>ja (score 1)</td>
 <td></td>
 <td>ja (score 1)</td>
-<td>Alcohol related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -77,7 +71,6 @@
 <td>ja (score 1)</td>
 <td></td>
 <td>ja (score 1)</td>
-<td>Alcohol related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -88,7 +81,6 @@
 <td>ja (score 1)</td>
 <td></td>
 <td>ja (score 1)</td>
-<td>Alcohol related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td colspan=9><b>Drug use related terms</b></td></tr>
@@ -100,7 +92,6 @@
 <td>nooit</td>
 <td></td>
 <td></td>
-<td>Drug use related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -111,7 +102,6 @@
 <td>Ja</td>
 <td>METHAMFETAMINE</td>
 <td></td>
-<td>Drug use related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td colspan=9><b>Smoking related terms</b></td></tr>
@@ -123,7 +113,6 @@
 <td>Soms</td>
 <td>Cigarette Smoker</td>
 <td></td>
-<td>Smoking related terms</td>
 </tr><tr><td></td><td colspan=8>
 <b>Toelichting</b><br/>Moeite met stoppen<br/>
 </td></tr>
@@ -135,7 +124,6 @@
 <td>ja</td>
 <td></td>
 <td></td>
-<td>Smoking related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 <tr><td>+</td>
@@ -146,7 +134,6 @@
 <td>nooit</td>
 <td></td>
 <td></td>
-<td>Smoking related terms</td>
 </tr><tr><td></td><td colspan=8>
 </td></tr>
 </tbody>

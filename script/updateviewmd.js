@@ -295,7 +295,7 @@ function doExampleRows(allExtractedRows, md_ui) {
     // Add column names for UI wireframe
     md_ui.push("<tr><th>&gt;&lt;</th>");
     allExtractedRows[0].forEach(column => {
-        if (column.name.charAt(0) != '+') {
+        if (column.name.charAt(0) != '+' && column.name != "(Groep)") {
             md_ui.push(`<th>${column.name}</th>`);
         }
     });
@@ -396,7 +396,7 @@ function doExampleRow(extractedData, md_ui) {
     md_ui.push("<tr><td>+</td>");
     // add column values
     extractedData.forEach((column, idx) => {
-        if (column.name.charAt(0) != '+') {
+        if (column.name.charAt(0) != '+' && column.name != "(Groep)") {
             let displayValue = extractedData[idx].value;
             if ((column.type == "date" || column.type == "dateTime") && displayValue) {
                 const date = new Date(displayValue);
