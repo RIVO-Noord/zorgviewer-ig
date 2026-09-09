@@ -143,18 +143,6 @@
 <b>Diagnose</b><br/>(ICPC) L72 <br/>
 </td></tr>
 <tr><td>+</td>
-<td>CGM</td>
-<td>20-4-2011</td>
-<td>Polsfractuur</td>
-<td>Afgesloten</td>
-<td>inactive</td>
-</tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) L72 <br/>
-<b>Episode-datum</b><br/>20-4-2011 - 7-6-2011, 23:59:59<br/>
-<b>Episode-naam</b><br/>Polsfractuur<br/>
-<b>Episode-status</b><br/>Afgesloten<br/>
-</td></tr>
-<tr><td>+</td>
 <td>EPS</td>
 <td>29-1-2002</td>
 <td>Chronic sinusitis</td>
@@ -191,17 +179,6 @@
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(ICPC) A20 <br/>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td></td>
-<td>Gesprek levenseinde/behandelwensen</td>
-<td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=5>
-<b>Diagnose</b><br/>(ICPC) A20 <br/>
-<b>Episode-naam</b><br/>Gesprek levenseinde/behandelwensen<br/>
-<b>Episode-status</b><br/>Actueel<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
@@ -297,6 +274,29 @@
 <b>Concern</b><br/>Episode met twee contacten <br/>
 <b>Episode-datum</b><br/>16-4-2026<br/>
 <b>Episode-naam</b><br/>Episode met twee contacten <br/>
+<b>Episode-status</b><br/>Actueel<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>20-4-2011</td>
+<td>Polsfractuur</td>
+<td>Afgesloten</td>
+<td>inactive</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) L72 <br/>
+<b>Episode-datum</b><br/>20-4-2011 - 7-6-2011, 23:59:59<br/>
+<b>Episode-naam</b><br/>Polsfractuur<br/>
+<b>Episode-status</b><br/>Afgesloten<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td></td>
+<td>Gesprek levenseinde/behandelwensen</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) A20 <br/>
+<b>Episode-naam</b><br/>Gesprek levenseinde/behandelwensen<br/>
 <b>Episode-status</b><br/>Actueel<br/>
 </td></tr>
 </tbody>
