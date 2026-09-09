@@ -35,7 +35,7 @@
           "description": "De intoxicaties groep (roken, alcohol, drugs)"
         },
         {
-          "path": "valueCodeableConcept.text | valueCodeableConcept.coding.display | valueString",
+          "path": "iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and code in ('2418' | '2419' | '2420' | '2421' | '2422')).exists(), '', valueCodeableConcept.text | valueCodeableConcept.coding.display | valueString)",
           "name": "Status",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "*Status" } ],

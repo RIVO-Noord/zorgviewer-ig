@@ -38,7 +38,7 @@
 </tr>
 <tr>
 <td>Status</td>
-<td><samp>valueCodeableConcept.text | valueCodeableConcept.coding.display | valueString</samp></td>
+<td><samp>iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and code in ('2418' | '2419' | '2420' | '2421' | '2422')).exists(), '', valueCodeableConcept.text | valueCodeableConcept.coding.display | valueString)</samp></td>
 <td><code>string</code></td>
 <td>*Status</td>
 <td>De status van het intoxicaties</td>

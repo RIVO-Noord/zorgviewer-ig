@@ -38,7 +38,7 @@
 <td>21-8-2025</td>
 <td>21-8-2025, 15:13:29</td>
 <td>hoe vaak drinken van alcohol (FiveShot1)</td>
-<td>4 of meer keer per week (score 2)</td>
+<td></td>
 <td></td>
 <td>4 of meer keer per week (score 2)</td>
 </tr><tr><td></td><td colspan=8>
@@ -48,7 +48,7 @@
 <td>21-8-2025</td>
 <td>21-8-2025, 15:13:29</td>
 <td>aantal alcoh. dranken op dag (FiveShot2)</td>
-<td>10 of meer (score 2)</td>
+<td></td>
 <td></td>
 <td>10 of meer (score 2)</td>
 </tr><tr><td></td><td colspan=8>
@@ -58,7 +58,7 @@
 <td>21-8-2025</td>
 <td>21-8-2025, 15:13:29</td>
 <td>geërgerd aan opm. drankgew. (FiveShot3)</td>
-<td>ja (score 1)</td>
+<td></td>
 <td></td>
 <td>ja (score 1)</td>
 </tr><tr><td></td><td colspan=8>
@@ -68,7 +68,7 @@
 <td>21-8-2025</td>
 <td>21-8-2025, 15:13:29</td>
 <td>schuldig over drankgewoonten (FiveShot4)</td>
-<td>ja (score 1)</td>
+<td></td>
 <td></td>
 <td>ja (score 1)</td>
 </tr><tr><td></td><td colspan=8>
@@ -78,7 +78,7 @@
 <td>21-8-2025</td>
 <td>21-8-2025, 15:13:29</td>
 <td>'s ochts drinken tegen kater (FiveShot5)</td>
-<td>ja (score 1)</td>
+<td></td>
 <td></td>
 <td>ja (score 1)</td>
 </tr><tr><td></td><td colspan=8>
