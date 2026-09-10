@@ -79,21 +79,6 @@
               ]
             },
             {
-              "path": "''",
-              "name": "+Episode-naam",
-              "type": "string"
-            },
-            {
-              "path": "''",
-              "name": "+Episode-status",
-              "type": "string"
-            },
-            {
-              "path": "''",
-              "name": "+Episode-datum",
-              "type": "Period"
-            },
-            {
               "path": "clinicalStatus",
               "name": "(regelkleur)",
               "description": "Actueel (<code>active,recurrence</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive,remission,resolved</code>) = grijze rijen",
@@ -146,25 +131,14 @@
               ]
             },
             {
-              "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString",
-              "name": "+Concern",
-              "type": "string",
-              "tag": [
-                {
-                  "name": "Zib element",
-                  "value": "ZorgEpisodeNaam"
-                }
-              ]
-            },
-            {
-              "path": "status.lookup('ProbleemStatus').display",
+              "path": "diagnosis.condition.resolve().clinicalStatus.lookup('ProbleemStatus').display",
               "name": "Status",
               "description": "Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a>",
               "type": "code",
               "tag": [
                 {
                   "name": "Zib element",
-                  "value": "nvt"
+                  "value": "ProbleemStatus"
                 }
               ]
             },

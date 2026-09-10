@@ -52,27 +52,6 @@
 <td>Toelichting</td>
 <td></td>
 </tr>
-<tr style="background-color:#b4c7e7">
-<td>+Episode-naam</td>
-<td><samp>''</samp></td>
-<td><code>string</code></td>
-<td><i>nvt</i></td>
-<td></td>
-</tr>
-<tr style="background-color:#b4c7e7">
-<td>+Episode-status</td>
-<td><samp>''</samp></td>
-<td><code>string</code></td>
-<td><i>nvt</i></td>
-<td></td>
-</tr>
-<tr style="background-color:#b4c7e7">
-<td>+Episode-datum</td>
-<td><samp>''</samp></td>
-<td><code>Period</code></td>
-<td><i>nvt</i></td>
-<td></td>
-</tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(regelkleur)</td>
@@ -105,19 +84,12 @@
 </tr>
 <tr>
 <td>Status</td>
-<td><samp>status.lookup('ProbleemStatus').display</samp></td>
+<td><samp>diagnosis.condition.resolve().clinicalStatus.lookup('ProbleemStatus').display</samp></td>
 <td><code>code</code></td>
-<td>nvt</td>
+<td>ProbleemStatus</td>
 <td>Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a></td>
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
-<tr style="background-color:#b4c7e7">
-<td>+Concern</td>
-<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString</samp></td>
-<td><code>string</code></td>
-<td>ZorgEpisodeNaam</td>
-<td></td>
-</tr>
 <tr style="background-color:#b4c7e7">
 <td>+Diagnose</td>
 <td><samp>diagnosis.condition.resolve().select('(' + code.coding[0].select(system.lookup('CodeSystems')[0].display + ') ' + code + ' ' + iif(exists(display),display,'')))</samp></td>

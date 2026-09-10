@@ -184,10 +184,9 @@
 <td>Sanday</td>
 <td></td>
 <td>Hernia inguinalis</td>
-<td>Actueel</td>
+<td></td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Rughernia<br/>
 <b>Episode-datum</b><br/>7-8-2025<br/>
 <b>Episode-naam</b><br/>Rughernia<br/>
 <b>Episode-status</b><br/>Actueel<br/>
@@ -196,10 +195,9 @@
 <td>Sanday</td>
 <td></td>
 <td>Keelpijn</td>
-<td>Actueel</td>
+<td></td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Keelpijn<br/>
 <b>Episode-datum</b><br/>1-4-2025<br/>
 <b>Episode-naam</b><br/>Keelpijn<br/>
 <b>Episode-status</b><br/>Actueel<br/>
@@ -208,10 +206,9 @@
 <td>Sanday</td>
 <td></td>
 <td>Lokale infectie vinger/teen/paronychia</td>
-<td>Actueel</td>
+<td></td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Heropende wond poging 2<br/>
 <b>Episode-datum</b><br/>21-8-2025<br/>
 <b>Episode-naam</b><br/>Heropende wond poging 2<br/>
 <b>Episode-status</b><br/>Actueel<br/>
@@ -220,10 +217,9 @@
 <td>Sanday</td>
 <td></td>
 <td>Maagpijn</td>
-<td>Afgesloten</td>
+<td></td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Maagpijn<br/>
 <b>Episode-datum</b><br/>13-2-2025 - 14-10-2025<br/>
 <b>Episode-naam</b><br/>Maagpijn<br/>
 <b>Episode-status</b><br/>Afgesloten<br/>
@@ -232,10 +228,9 @@
 <td>Sanday</td>
 <td></td>
 <td>Influenza [ex. R81]</td>
-<td>Actueel</td>
+<td></td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Influenze vaccinatie<br/>
 <b>Episode-datum</b><br/>4-11-2025<br/>
 <b>Episode-naam</b><br/>Influenze vaccinatie<br/>
 <b>Episode-status</b><br/>Actueel<br/>
@@ -244,10 +239,9 @@
 <td>Sanday</td>
 <td></td>
 <td>Moeheid/zwakte</td>
-<td>Actueel</td>
+<td></td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Vermoeidheid<br/>
 <b>Episode-datum</b><br/>15-12-2025<br/>
 <b>Episode-naam</b><br/>Vermoeidheid<br/>
 <b>Episode-status</b><br/>Actueel<br/>
@@ -256,10 +250,9 @@
 <td>Sanday</td>
 <td></td>
 <td>Acute tonsillitis/peritonsillair abces</td>
-<td>Actueel</td>
+<td></td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Episode zonder contacten<br/>
 <b>Episode-datum</b><br/>16-4-2026<br/>
 <b>Episode-naam</b><br/>Episode zonder contacten<br/>
 <b>Episode-status</b><br/>Actueel<br/>
@@ -268,10 +261,9 @@
 <td>Sanday</td>
 <td></td>
 <td>Furunkel/abces neus</td>
-<td>Actueel</td>
+<td></td>
 <td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Episode met twee contacten <br/>
 <b>Episode-datum</b><br/>16-4-2026<br/>
 <b>Episode-naam</b><br/>Episode met twee contacten <br/>
 <b>Episode-status</b><br/>Actueel<br/>
@@ -280,7 +272,7 @@
 <td>CGM</td>
 <td>20-4-2011</td>
 <td>Polsfractuur</td>
-<td>Afgesloten</td>
+<td>Niet actueel</td>
 <td>inactive</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(ICPC) L72 <br/>
