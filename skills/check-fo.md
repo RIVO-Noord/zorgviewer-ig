@@ -14,6 +14,7 @@ Vergelijk `_local/FO/<BESTANDSNAAM>.md` rechtstreeks met de gelezen inhoud van `
      - `# Disclaimer`
      - `# Schermontwerp`
      - `# Tijdlijn`
+     - `# Testcases`
 4. **Schermontwerp uitwerking**:
    - Controleer de koptabel (gesplitste rijen voor `Naam scherm` en `Naam menu item`, `Icoon` en `Gegevensherkomst schermontwerp`).
    - Verifieer de verplichte introductiezin en opsomming voor data-elementen conform het template.
