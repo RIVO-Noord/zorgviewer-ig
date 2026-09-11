@@ -99,12 +99,13 @@ N.B. Als je Powershell gebruikt let er dan op dat Docker Desktop draait!
     1. Description: generate release notes -> "{github changes link}"
     1. Vink aan: Set as the latest release
     1. Publish release
-1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
-    Edit file in your fork and create a PR.
-1. Wiki (met o.a. de bijbehorende FO's)
-    1. (eerste keer: git clone https://PAT@dev.azure.com/UMCG-MIT/Zorgviewer/_git/Zorgviewer.wiki)
+1. FO Wiki
+    1. `> cd _local`
+    1. eerste keer: `> git clone https://PAT@dev.azure.com/UMCG-MIT/Zorgviewer/_git/Zorgviewer.wiki`
     1. `> git pull`
     1. `> git tag ig-1.M.R`
+1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
+    Edit file in your fork and create a PR.
 
 ### Vrijgeven van de laatste Release
 
