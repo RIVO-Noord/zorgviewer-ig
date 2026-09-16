@@ -155,17 +155,6 @@
               ]
             },
             {
-              "path": "diagnosis.condition.resolve().note.text",
-              "name": "+Toelichting",
-              "type": "string",
-              "tag": [
-                {
-                  "name": "Zib element",
-                  "value": "Probleem/ Toelichting"
-                }
-              ]
-            },
-            {
               "path": "period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
               "name": "+Episode-datum",
               "type": "Period"
@@ -182,6 +171,17 @@
               "name": "+Episode-status",
               "description": "Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a>",
               "type": "string"
+            },
+            {
+              "path": "diagnosis.condition.resolve().note.text",
+              "name": "+Toelichting",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "Probleem/ Toelichting"
+                }
+              ]
             },
             {
               "path": "diagnosis.condition.resolve().clinicalStatus",

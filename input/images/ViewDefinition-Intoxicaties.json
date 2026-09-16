@@ -14,17 +14,10 @@
           "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>"
         },
         {
-          "path": "effectiveDateTime | issued",
+          "path": "effectivePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | effectiveDateTime | issued",
           "name": "Datum",
-          "type": "dateTime",
-          "tag": [ { "name": "Zib element", "value": "WaarnemingGebruik" } ],
-          "description": "Datum van de vaststelling van het gebruik."
-        },
-        {
-          "path": "effectivePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | effectiveDateTime",
-          "name": "Gebruiksperiode",
           "type": "Period",
-          "tag": [ { "name": "Zib element", "value": "StartDatum - StopDatum" } ],
+          "tag": [ { "name": "Zib element", "value": "WaarnemingGebruik, StartDatum - StopDatum" } ],
           "description": "EffectivePeriod is voorgeschreven in de ZIB, maar in veel gevallen zal de data geen periode bevatten. In die gevallen is de datum van vaststelling bepalend voor interpretatie."
         },
         {

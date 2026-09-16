@@ -98,13 +98,6 @@
 <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>.display</code><br/>Zie voor labels: <a href='ValueSet-CodeSystems.html'>ValueSet-CodeSystems</a></td>
 </tr>
 <tr style="background-color:#b4c7e7">
-<td>+Toelichting</td>
-<td><samp>diagnosis.condition.resolve().note.text</samp></td>
-<td><code>string</code></td>
-<td>Probleem/ Toelichting</td>
-<td></td>
-</tr>
-<tr style="background-color:#b4c7e7">
 <td>+Episode-datum</td>
 <td><samp>period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))</samp></td>
 <td><code>Period</code></td>
@@ -125,12 +118,19 @@
 <td><i>nvt</i></td>
 <td>Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a></td>
 </tr>
+<tr style="background-color:#b4c7e7">
+<td>+Toelichting</td>
+<td><samp>diagnosis.condition.resolve().note.text</samp></td>
+<td><code>string</code></td>
+<td>Probleem/ Toelichting</td>
+<td></td>
+</tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(regelkleur)</td>
 <td><samp>diagnosis.condition.resolve().clinicalStatus</samp></td>
 <td><code>code</code></td>
-<td>nvt</td>
+<td>ProbleemStatus</td>
 <td>Actueel (<code>active</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>finished</code>) = grijze rijen</td>
 </tr>
 </tbody>

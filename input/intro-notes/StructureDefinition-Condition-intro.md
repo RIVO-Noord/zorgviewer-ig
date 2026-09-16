@@ -1,6 +1,8 @@
 {% include profile-note.md %}
 
-{% include future-note.md %}
+<div class="dragon" markdown="1">
+**Deze gegevens zijn nu onderdeel van de [Samenstelling Probleemlijst](StructureDefinition-Probleemlijst.html).**
+</div>
 
 ### Zorginformatiebouwsteen
 
