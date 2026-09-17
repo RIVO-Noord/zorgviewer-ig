@@ -249,6 +249,7 @@
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationStatement"
           },
+          "documentation": "Wordt niet ondersteund door CGM.",
           "interaction": [
             {
               "extension": [
@@ -342,7 +343,7 @@
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DocumentReference"
           },
-          "documentation": "CGM gebruikt een eigen masterIdentifier systeem. Radiologieberichten (MEDRAD), specialistenbrieven (Medspe) en de verwijsbrieven die al vanuit de ziekenhuizen beschikbaar zijn.",
+          "documentation": "Er is bewust gekozen om geen correspondentie van CGM te ontsluiten omdat deze documenten al vanuit de ziekenhuizen beschikbaar zijn. Details: CGM gebruikt een eigen masterIdentifier systeem, radiologieverslagen (MEDRAD), specialistenbrieven (MEDSPE) en de verwijsbrieven vanuit de ziekenhuizen.",
           "interaction": [
             {
               "extension": [
@@ -366,7 +367,7 @@
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Flag"
           },
-          "documentation": "Huisarts Alert != BgZ Alert",
+          "documentation": "Huisartsen alerts zijn attentieflaggen voor problemen, dit zijn geen alerts in de zin van de BgZ Alert.",
           "interaction": [
             {
               "extension": [
