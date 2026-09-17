@@ -19,7 +19,7 @@
 <tr>
 <td>Datum</td>
 <td><samp>onsetPeriod.start | onsetDateTime</samp></td>
-<td><code>dateTime</code></td>
+<td><code>date</code></td>
 <td>ProbleemBeginDatum</td>
 <td>Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn</td>
 </tr>
@@ -71,7 +71,7 @@
 <tr>
 <td>Datum</td>
 <td><samp>diagnosis.condition.resolve().select(onsetPeriod.start | onsetDateTime)</samp></td>
-<td><code>dateTime</code></td>
+<td><code>date</code></td>
 <td>Probleem/ ProbleemBeginDatum</td>
 <td>Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn</td>
 </tr>
@@ -100,7 +100,7 @@
 <tr style="background-color:#b4c7e7">
 <td>+Episode-datum</td>
 <td><samp>period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))</samp></td>
-<td><code>Period</code></td>
+<td><code>Period:date</code></td>
 <td><i>nvt</i></td>
 <td></td>
 </tr>

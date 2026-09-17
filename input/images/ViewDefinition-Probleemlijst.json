@@ -24,7 +24,7 @@
               "path": "onsetPeriod.start | onsetDateTime",
               "name": "Datum",
               "description": "Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn",
-              "type": "dateTime",
+              "type": "date",
               "tag": [
                 {
                   "name": "Zib element",
@@ -111,7 +111,7 @@
               "path": "diagnosis.condition.resolve().select(onsetPeriod.start | onsetDateTime)",
               "name": "Datum",
               "description": "Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn",
-              "type": "dateTime",
+              "type": "date",
               "tag": [
                 {
                   "name": "Zib element",
@@ -157,7 +157,7 @@
             {
               "path": "period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
               "name": "+Episode-datum",
-              "type": "Period"
+              "type": "Period:date"
             },
             {
               "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString | extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-Title').valueString",
