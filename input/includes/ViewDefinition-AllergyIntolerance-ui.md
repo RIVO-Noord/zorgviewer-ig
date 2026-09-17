@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>Allergieen en intoleranties</b>
+<b>Allergieën en intoleranties</b>
 <table class="grid">
 <tbody>
 <tr><th>&gt;&lt;</th>
