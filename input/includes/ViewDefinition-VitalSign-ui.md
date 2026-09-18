@@ -351,7 +351,7 @@
 <b>Methode</b><br/>Niet-invasief<br/>
 <b>MeetLocatie</b><br/>Linker bovenarm<br/>
 <b>Meting</b><br/>LOINC#85354-9 Blood pressure panel with all children optional<br/>
-<b>Context</b><br/>Sitting position<br/>Sitting position<br/>
+<b>Context</b><br/>Zittende positie<br/>Zittende positie<br/>
 </td></tr>
 <tr><td colspan=14><b>Hartslag</b></td></tr>
 <tr><td>+</td>
@@ -711,7 +711,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
-<b>Context</b><br/>Minimal dressed<br/>
+<b>Context</b><br/>Lichte kleding/ondergoed [Kleding die niet significant het gewicht beïnvloedt.]<br/>
 </td></tr>
 <tr><td colspan=14><b>Temperatuur</b></td></tr>
 <tr><td>+</td>
