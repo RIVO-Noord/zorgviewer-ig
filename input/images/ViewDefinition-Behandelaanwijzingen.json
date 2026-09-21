@@ -62,6 +62,13 @@
           "name": "(status)",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.coding[0].code.lookup('ACPTreatmentCodelist').designation[0].value",
+          "name": "(Groep)",
+          "description": "Lookup behandeling adhv behandeling code <code>&lt;terminologie-base&gt;<a href='ValueSet-ACPTreatmentCodelist.html'>/ConceptMap/intoxicaties-groups</a>$lookup?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Behandeling" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Consent' and category.coding.last().code='11291000146105')"

@@ -1,7 +1,7 @@
 {
   "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
   "resource": "Bundle",
-  "id": "ViewDefinition-Vitalegegevens",
+  "id": "ViewDefinition-VitalSign",
   "title": "Vitale gegevens",
   "select": [
     {
@@ -76,7 +76,7 @@
           "tag": [ { "name": "Zib element", "value": "MetingNaam" } ]
         },
         {
-          "path": "component.valueCodeableConcept.coding.display.select(toString()).join('\n')",
+          "path": "component.valueCodeableConcept.text.join('\n') | component.valueCodeableConcept.coding.display.join('\n')",
           "name": "+Context",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "overige context" } ]
@@ -96,7 +96,7 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }
       ],
-      "forEach": "entry.resource.where(resourceType='Observation' and (category.coding.code='vital-signs' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult') or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/zib-Respiration')"
+      "forEach": "entry.resource.where(resourceType='Observation' and (category.coding.code='vital-signs' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult' or meta.profile = 'http://nictiz.nl/fhir/StructureDefinition/zib-Respiration'))"
     }
   ]
 }

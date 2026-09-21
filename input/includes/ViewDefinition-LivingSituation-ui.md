@@ -23,6 +23,13 @@
 </tr><tr><td></td><td colspan=4>
 </td></tr>
 <tr><td>+</td>
+<td>Nedap</td>
+<td></td>
+<td>Bovenwoning</td>
+<td>2 hoog - traplift aanwezig</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td>+</td>
 <td>Nictiz</td>
 <td></td>
 <td>Eengezinswoning</td>

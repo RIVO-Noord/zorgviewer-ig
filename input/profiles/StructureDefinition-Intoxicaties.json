@@ -1,11 +1,11 @@
 {
     "resourceType": "StructureDefinition",
-    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Middelengebruik",
-    "name": "Middelengebruik",
-    "title": "Middelengebruik",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Intoxicaties",
+    "name": "Intoxicaties",
+    "title": "Intoxicaties",
     "status": "active",
     "experimental": false,
-    "description": "Middelengebruik samenstelling voor het documenteren van de combinatie van Tabakgebruik, Alcoholgebruik en Drugsgebruik",
+    "description": "Intoxicaties samenstelling voor het documenteren van de combinatie van Tabakgebruik, Alcoholgebruik en Drugsgebruik",
     "kind": "resource",
     "abstract": true,
     "type": "Bundle",
@@ -35,7 +35,6 @@
                 "id": "Bundle.entry:TobaccoUse.resource",
                 "path": "Bundle.entry.resource",
                 "comment": "Tabakgebruik",
-                "min": 1,
                 "type": [
                     {
                         "code": "Observation",
@@ -52,7 +51,6 @@
                 "id": "Bundle.entry:AlcoholUse.resource",
                 "path": "Bundle.entry.resource",
                 "comment": "Alcoholgebruik",
-                "min": 1,
                 "type": [
                     {
                         "code": "Observation",
@@ -69,11 +67,26 @@
                 "id": "Bundle.entry:DrugUse.resource",
                 "path": "Bundle.entry.resource",
                 "comment": "Drugsgebruik",
-                "min": 1,
                 "type": [
                     {
                         "code": "Observation",
                         "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DrugUse"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:DiagnosticResult",
+                "path": "Bundle.entry",
+                "sliceName": "DiagnosticResult"
+            },
+            {
+                "id": "Bundle.entry:DiagnosticResult.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Huisartsen registreren intoxicaties in de vorm van een DiagnosticResult",
+                "type": [
+                    {
+                        "code": "Observation",
+                        "profile": "http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult"
                     }
                 ]
             }

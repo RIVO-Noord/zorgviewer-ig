@@ -168,7 +168,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
-<td>4-7-2024</td>
+<td>5-7-2024</td>
 <td></td>
 <td></td>
 <td></td>
@@ -212,7 +212,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
-<td>14-8-2012</td>
+<td>15-8-2012</td>
 <td>15-8-2012</td>
 <td>J.H.R Peters</td>
 <td>Onbekende functiecode.</td>

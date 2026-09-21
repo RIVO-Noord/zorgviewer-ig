@@ -17,16 +17,9 @@
 </tr>
 <tr>
 <td>Datum</td>
-<td><samp>effectiveDateTime | issued</samp></td>
-<td><code>dateTime</code></td>
-<td>WaarnemingGebruik</td>
-<td>Datum van de vaststelling van het gebruik.</td>
-</tr>
-<tr>
-<td>Gebruiksperiode</td>
-<td><samp>effectivePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | effectiveDateTime</samp></td>
-<td><code>Period</code></td>
-<td>StartDatum - StopDatum</td>
+<td><samp>effectivePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | effectiveDateTime | issued</samp></td>
+<td><code>Period:date</code></td>
+<td>WaarnemingGebruik, StartDatum - StopDatum</td>
 <td>EffectivePeriod is voorgeschreven in de ZIB, maar in veel gevallen zal de data geen periode bevatten. In die gevallen is de datum van vaststelling bepalend voor interpretatie.</td>
 </tr>
 <tr>
@@ -34,14 +27,14 @@
 <td><samp>code.text | code.coding.display</samp></td>
 <td><code>string</code></td>
 <td>WaarnemingGebruik</td>
-<td>De middelengebruik groep (roken, alcohol, drugs)</td>
+<td>De intoxicaties groep (roken, alcohol, drugs)</td>
 </tr>
 <tr>
 <td>Status</td>
-<td><samp>valueCodeableConcept.text | valueCodeableConcept.coding.display | valueString</samp></td>
+<td><samp>iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and code in ('2418' | '2419' | '2420' | '2421' | '2422')).exists(), '', valueCodeableConcept.text | valueCodeableConcept.coding.display | valueString)</samp></td>
 <td><code>string</code></td>
 <td>*Status</td>
-<td>De status van het middelengebruik</td>
+<td>De status van de intoxicatie</td>
 </tr>
 <tr>
 <td>Middel</td>
@@ -64,6 +57,14 @@
 <td><code>string</code></td>
 <td>Toelichting</td>
 <td></td>
+</tr>
+<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
+<tr style="background-color:#d6dce5">
+<td>(Groep)</td>
+<td><samp>code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' or system='http://snomed.info/sct').translate('intoxicaties-groups').target[0].display</samp></td>
+<td><code>code</code></td>
+<td>nvt</td>
+<td>Lookup LOINC 'groep' code middels <code>&lt;terminologie-base&gt;<a href='ConceptMap-intoxicaties-groups.html'>/ConceptMap/intoxicaties-groups</a>$translate?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br>Verberg regels die <b>GEEN</b> groep hebben.</td>
 </tr>
 </tbody>
 </table>

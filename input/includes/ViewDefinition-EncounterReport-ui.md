@@ -61,7 +61,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
-<td>6-8-2025</td>
+<td>7-8-2025</td>
 <td>Rughernia</td>
 <td>J van der Vecht</td>
 </tr><tr><td></td><td colspan=4>

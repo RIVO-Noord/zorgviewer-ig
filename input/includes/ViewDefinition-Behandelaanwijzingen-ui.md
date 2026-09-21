@@ -11,6 +11,7 @@
 <th>Geverifieerd bij</th>
 <th>(status)</th>
 </tr>
+<tr><td colspan=10><b>kunstmatige beademing</b></td></tr>
 <tr><td>+</td>
 <td>CGM</td>
 <td>20-2-2026</td>
@@ -19,7 +20,7 @@
 <td></td>
 <td></td>
 <td>active</td>
-</tr><tr><td></td><td colspan=7>
+</tr><tr><td></td><td colspan=8>
 <b>Toelichting</b><br/>Patiënt wenst geen kunstmatige beademing.<br/>
 <b>Categorie</b><br/>Behandelingsinstructies (artefact opnemen)<br/>
 </td></tr>
@@ -31,7 +32,7 @@
 <td></td>
 <td></td>
 <td>active</td>
-</tr><tr><td></td><td colspan=7>
+</tr><tr><td></td><td colspan=8>
 <b>Toelichting</b><br/>testje<br/>
 <b>Categorie</b><br/>Behandelingsinstructies (artefact opnemen)<br/>
 </td></tr>
@@ -43,7 +44,7 @@
 <td>Toelichting: Eerst overleg met echtgenote</td>
 <td></td>
 <td>active</td>
-</tr><tr><td></td><td colspan=7>
+</tr><tr><td></td><td colspan=8>
 <b>Categorie</b><br/>Treatment instructions<br/>
 </td></tr>
 <tr><td>+</td>
@@ -54,7 +55,7 @@
 <td>Eerst overleg met echtgenote</td>
 <td>patiënt (persoon)</td>
 <td>active</td>
-</tr><tr><td></td><td colspan=7>
+</tr><tr><td></td><td colspan=8>
 <b>Categorie</b><br/>Advance Directive & Vastgelegd<br/>
 </td></tr>
 </tbody>

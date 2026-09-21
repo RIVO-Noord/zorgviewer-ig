@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "url": "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem-CGM",
   "name": "OntsluitenBronsysteemCGM",
-  "title": "Ontsluiten Bronsysteem - CGM",
+  "title": "CGM Bronsysteem",
   "status": "active",
   "date": "2026-06-29",
   "description": "Deze CapabilityStatement beschrijft Ontsluiten Bronsysteem voor CGM Huisarts.",
@@ -12,46 +12,16 @@
     "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem"
   ],
   "software": {
-    "name": "CGM Huisarts"
+    "name": "CGM Huisarts via portavita-health-hub-dvza-api-202001"
   },
-  "fhirVersion": "4.0.1",
+  "fhirVersion": "3.0.2",
   "acceptUnknown": "both",
   "format": [
     "json"
   ],
-  "profile": [
-    {
-      "reference": "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
-      "display": "nl-core-patient"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Problem",
-      "display": "zib-Probleem"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance",
-      "display": "zib-AllergyIntolerance"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-GeneralMeasurement",
-      "display": "zib-GeneralMeasurement"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement",
-      "display": "zib-MedicationAgreement"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/gp-Encounter",
-      "display": "gp-Encounter"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination",
-      "display": "zib-Vaccination"
-    },
-    {
-      "reference": "http://nictiz.nl/fhir/StructureDefinition/eAfspraak-Appointment",
-      "display": "eAfspraak-Appointment"
-    }
+  "implementationGuide": [
+    "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_GP_Data",
+    "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_PDFA"
   ],
   "rest": [
     {
@@ -132,9 +102,9 @@
               "valueCode": "SHALL"
             }
           ],
-          "type": "Procedure",
+          "type": "EpisodeOfCare",
           "profile": {
-            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Procedure"
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/EpisodeOfCare"
           },
           "interaction": [
             {
@@ -146,7 +116,8 @@
               ],
               "code": "search-type"
             }
-          ]
+          ],
+          "searchInclude": [ "Condition:diagnosis" ]
         },
         {
           "extension": [
@@ -159,7 +130,7 @@
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AllergyIntolerance"
           },
-          "documentation": "Alleen medicatie allergieen.",
+          "documentation": "Alleen medicatie allergieën.",
           "interaction": [
             {
               "extension": [
@@ -183,7 +154,52 @@
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/LaboratoryTestResult"
           },
-          "documentation": "Dekt zowel labuitslagen (LaboratoryTestResult) als vitale gegevens en middelengebruik (VitalSign, category=vital-signs).",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Observation",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Intoxicaties"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Observation",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/VitalSign"
+          },
           "interaction": [
             {
               "extension": [
@@ -226,12 +242,36 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD-NOT"
+            }
+          ],
+          "type": "MedicationStatement",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationStatement"
+          },
+          "documentation": "Wordt niet ondersteund door CGM.",
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD-NOT"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
               "valueCode": "SHALL"
             }
           ],
           "type": "Encounter",
           "profile": {
-            "reference": "http://nictiz.nl/fhir/StructureDefinition/gp-Encounter"
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
           },
           "documentation": "CGM gebruikt het gp-Encounter profiel en codeert het type contact via NHG Tabel 14 (contactwijze). Ondersteunt class=AMB.",
           "interaction": [
@@ -253,11 +293,10 @@
               "valueCode": "SHALL"
             }
           ],
-          "type": "DocumentReference",
+          "type": "Immunization",
           "profile": {
-            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DocumentReference"
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Immunization"
           },
-          "documentation": "CGM gebruikt een eigen masterIdentifier systeem.",
           "interaction": [
             {
               "extension": [
@@ -277,11 +316,10 @@
               "valueCode": "SHALL"
             }
           ],
-          "type": "Flag",
+          "type": "Composition",
           "profile": {
-            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Flag"
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/EncounterReport"
           },
-          "documentation": "CGM levert geen period.start (BeginDatumTijd); het Datum veld blijft leeg in de Zorgviewer.",
           "interaction": [
             {
               "extension": [
@@ -298,17 +336,20 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHOULD"
+              "valueCode": "SHOULD-NOT"
             }
           ],
-          "type": "Consent",
-          "documentation": "Wilsverklaringen (AdvanceDirective) en behandelingsinstructies (TreatmentDirective).",
+          "type": "DocumentReference",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DocumentReference"
+          },
+          "documentation": "Er is bewust gekozen om geen correspondentie van CGM te ontsluiten omdat deze documenten al vanuit de ziekenhuizen beschikbaar zijn. Details: CGM gebruikt een eigen masterIdentifier systeem, radiologieverslagen (MEDRAD), specialistenbrieven (MEDSPE) en de verwijsbrieven vanuit de ziekenhuizen.",
           "interaction": [
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHOULD"
+                  "valueCode": "SHOULD-NOT"
                 }
               ],
               "code": "search-type"
@@ -319,42 +360,20 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHOULD"
+              "valueCode": "SHOULD-NOT"
             }
           ],
-          "type": "Immunization",
+          "type": "Flag",
           "profile": {
-            "reference": "http://nictiz.nl/fhir/StructureDefinition/zib-Vaccination"
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Flag"
           },
+          "documentation": "Huisartsen alerts zijn attentieflaggen voor problemen, dit zijn geen alerts in de zin van de BgZ Alert.",
           "interaction": [
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHOULD"
-                }
-              ],
-              "code": "search-type"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHOULD"
-            }
-          ],
-          "type": "Appointment",
-          "profile": {
-            "reference": "http://nictiz.nl/fhir/StructureDefinition/eAfspraak-Appointment"
-          },
-          "interaction": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHOULD"
+                  "valueCode": "SHOULD-NOT"
                 }
               ],
               "code": "search-type"

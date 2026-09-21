@@ -1,5 +1,9 @@
 {% include profile-note.md %}
 
+<div class="dragon" markdown="1">
+**Deze gegevens zijn nu onderdeel van de [Samenstelling Probleemlijst](StructureDefinition-Probleemlijst.html).**
+</div>
+
 ### Zorginformatiebouwsteen
 
 [ZIB Probleem](https://zibs.nl/wiki/Probleem-v4.1(2017NL))

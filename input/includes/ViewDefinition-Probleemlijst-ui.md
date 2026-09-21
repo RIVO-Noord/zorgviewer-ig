@@ -10,6 +10,16 @@
 <th>(regelkleur)</th>
 </tr>
 <tr><td>+</td>
+<td>Epic-note</td>
+<td>23-2-2023</td>
+<td>posttraumatische stressstoornis (incl. de posttraumatische-stressstoornis bij ki...</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICD-10) F43.1 <br/>
+<b>Toelichting</b><br/>2022-02: ziekte van Crohn<br/>2021-07: Complicatie ANPY infectie lokaal<br/>2021-03: z...<br/>
+</td></tr>
+<tr><td>+</td>
 <td>EPS</td>
 <td>20-4-2022</td>
 <td>Acute viral pharyngitis</td>
@@ -75,11 +85,41 @@
 <tr><td>+</td>
 <td>CGM</td>
 <td>15-11-2012</td>
+<td></td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) R02 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>15-11-2012</td>
 <td>Kortademigheid</td>
 <td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(ICPC) R02 <br/>
+<b>Episode-datum</b><br/>2012-11-15<br/>
+<b>Episode-naam</b><br/>Kortademigheid<br/>
+<b>Episode-status</b><br/>Actueel<br/>
+</td></tr>
+<tr><td>+</td>
+<td>Epic</td>
+<td>16-8-2012</td>
+<td>fractuur van onderste extremiteit</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICD-10) T12.0 <br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>10-8-2012</td>
+<td></td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) K07 <br/>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
@@ -89,13 +129,16 @@
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(ICPC) K07 <br/>
+<b>Episode-datum</b><br/>2012-08-10<br/>
+<b>Episode-naam</b><br/>Oedeem<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 </td></tr>
 <tr><td>+</td>
 <td>CGM</td>
 <td>20-4-2011</td>
-<td>Polsfractuur</td>
+<td></td>
 <td>Niet actueel</td>
-<td>finished</td>
+<td>inactive</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(ICPC) L72 <br/>
 </td></tr>
@@ -131,7 +174,7 @@
 <tr><td>+</td>
 <td>CGM</td>
 <td></td>
-<td>Gesprek levenseinde/behandelwensen</td>
+<td></td>
 <td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
@@ -141,73 +184,112 @@
 <td>Sanday</td>
 <td></td>
 <td>Hernia inguinalis</td>
-<td>Actueel</td>
-<td>active</td>
+<td></td>
+<td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Rughernia<br/>
+<b>Episode-datum</b><br/>2025-08-07<br/>
+<b>Episode-naam</b><br/>Rughernia<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
 <td></td>
 <td>Keelpijn</td>
-<td>Actueel</td>
-<td>active</td>
+<td></td>
+<td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Keelpijn<br/>
+<b>Episode-datum</b><br/>2025-04-01<br/>
+<b>Episode-naam</b><br/>Keelpijn<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
 <td></td>
 <td>Lokale infectie vinger/teen/paronychia</td>
-<td>Actueel</td>
-<td>active</td>
+<td></td>
+<td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Heropende wond poging 2<br/>
+<b>Episode-datum</b><br/>2025-08-21<br/>
+<b>Episode-naam</b><br/>Heropende wond poging 2<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
 <td></td>
 <td>Maagpijn</td>
-<td>Niet actueel</td>
-<td>finished</td>
+<td></td>
+<td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Maagpijn<br/>
+<b>Episode-datum</b><br/>2025-02-13 - 2025-10-14<br/>
+<b>Episode-naam</b><br/>Maagpijn<br/>
+<b>Episode-status</b><br/>Afgesloten<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
 <td></td>
 <td>Influenza [ex. R81]</td>
-<td>Actueel</td>
-<td>active</td>
+<td></td>
+<td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Influenze vaccinatie<br/>
+<b>Episode-datum</b><br/>2025-11-04<br/>
+<b>Episode-naam</b><br/>Influenze vaccinatie<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
 <td></td>
 <td>Moeheid/zwakte</td>
-<td>Actueel</td>
-<td>active</td>
+<td></td>
+<td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Vermoeidheid<br/>
+<b>Episode-datum</b><br/>2025-12-15<br/>
+<b>Episode-naam</b><br/>Vermoeidheid<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
 <td></td>
 <td>Acute tonsillitis/peritonsillair abces</td>
-<td>Actueel</td>
-<td>active</td>
+<td></td>
+<td></td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Episode zonder contacten<br/>
+<b>Episode-datum</b><br/>2026-04-16<br/>
+<b>Episode-naam</b><br/>Episode zonder contacten<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
 <td></td>
 <td>Furunkel/abces neus</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=5>
+<b>Episode-datum</b><br/>2026-04-16<br/>
+<b>Episode-naam</b><br/>Episode met twee contacten <br/>
+<b>Episode-status</b><br/>Actueel<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td>20-4-2011</td>
+<td>Polsfractuur</td>
+<td>Niet actueel</td>
+<td>inactive</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) L72 <br/>
+<b>Episode-datum</b><br/>2011-04-20 - 2011-06-07T21:59:59+00:00<br/>
+<b>Episode-naam</b><br/>Polsfractuur<br/>
+<b>Episode-status</b><br/>Afgesloten<br/>
+</td></tr>
+<tr><td>+</td>
+<td>CGM</td>
+<td></td>
+<td>Gesprek levenseinde/behandelwensen</td>
 <td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
-<b>Concern</b><br/>Episode met twee contacten <br/>
+<b>Diagnose</b><br/>(ICPC) A20 <br/>
+<b>Episode-naam</b><br/>Gesprek levenseinde/behandelwensen<br/>
+<b>Episode-status</b><br/>Actueel<br/>
 </td></tr>
 </tbody>
 </table>

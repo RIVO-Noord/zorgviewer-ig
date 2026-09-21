@@ -9,18 +9,18 @@
 
 ```mermaid
 flowchart BT
-    subgraph HL7 ci-build
+    subgraph HL7.org ci-build
         ci0[WIP]
         ci1[Snapshot Release]
         ci2[Releases]
-        ci3[Auto-IG Dashboard]
+        ci3(Dashboard)
     end
     subgraph GitHub
-        gh0[Source-main WIP]--release via merge-->gh1[Source-snapshot]
-        gh0--action-->gh2[WIP-pages]
-        gh4[VS Code]--edit-->gh0
+        gh0[main branch]--release via merge-->gh1[snapshot branch]
+        gh0--gh action-->gh2[WIP-pages]
+        gh4(Web VS Code)--edit-->gh0
     end
-    subgraph RIVO-noord.nl
+    subgraph RIVO-Noord
         rivo[Snapshot Release]
     end
     gh1--action-->rivo
@@ -87,7 +87,7 @@ N.B. Als je Powershell gebruikt let er dan op dat Docker Desktop draait!
     1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
 1. (optionally) Generate changelog using Gemini
     1. First update tags `> git pull`
-    1. Update AI generated changelog `> cd script; node changelog.js`
+    1. Update AI generated changelog `> node script/changelog.js`
 1. `> git commit -a -m "afhechten release 1.M.R"; git push`
 1. Create tag "1.M.R" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
     1. Tags
@@ -99,16 +99,13 @@ N.B. Als je Powershell gebruikt let er dan op dat Docker Desktop draait!
     1. Description: generate release notes -> "{github changes link}"
     1. Vink aan: Set as the latest release
     1. Publish release
-1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
-    Edit file in your fork and create a PR.
-1. Wiki (met o.a. de bijbehorende FO's)
-    1. (eerste keer: git clone https://PAT@dev.azure.com/UMCG-MIT/Zorgviewer/_git/Zorgviewer.wiki)
+1. FO Wiki
+    1. `> cd _local`
+    1. eerste keer: `> git clone https://PAT@dev.azure.com/UMCG-MIT/Zorgviewer/_git/Zorgviewer.wiki`
     1. `> git pull`
     1. `> git tag ig-1.M.R`
-    1. Optioneel FO changelog
-    1. `> git log -p ig-1.22.0..ig-1.23.0 -- Functionele-Ontwerpen-\(FO's\) > wiki-fo-diff.txt`
-    1. `> gemini`
-    1. Gemini CLI `Generate a summary of changes from @wiki-fo-diff.txt as a short bullet list in Dutch`
+1. update https://github.com/FHIR/ig-registry/blob/master/fhir-ig-list.json; nodig voor https://www.fhir.org/guides/registry/
+    Edit file in your fork and create a PR.
 
 ### Vrijgeven van de laatste Release
 

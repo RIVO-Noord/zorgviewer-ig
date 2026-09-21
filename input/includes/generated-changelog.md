@@ -1,44 +1,54 @@
 #### 🚀 Nieuw
 
-* **Combiprofiel & View 'Contacten en Afspraken'**:
-  * `input/profiles/StructureDefinition-ContactenAfspraken.json`: Nieuw combiprofiel toegevoegd waarin `Encounter` (contact) en `Appointment` (afspraak) worden gebundeld.
-  * `input/images/ViewDefinition-ContactenAfspraken.json`, `input/includes/ViewDefinition-ContactenAfspraken*.md`: ViewDefinition, UI-wireframe en kolomdefinities toegevoegd voor het gecombineerd tonen van contacten en geplande afspraken.
-  * `input/intro-notes/StructureDefinition-ContactenAfspraken-intro.md`: Introductiedocumentatie en FHIR-zoekinstructies toegevoegd.
-* **Nieuwe FHIR-voorbeelden**:
-  * `input/examples/Ademhaling-Nedap.json`: Voorbeeld-bundle toegevoegd met `zib-Respiration` observaties uit Nedap.
-  * `input/examples/Appointment-WZA.json`: Voorbeeld-bundle toegevoegd voor eAfspraak vanuit het Wilhelmina Ziekenhuis Assen.
-* **Documentatie & Testscenario's**:
-  * `input/pagecontent/testcases.md`: Nieuwe testcases toegevoegd voor Voedingsadvies, Woonsituatie, Contactpersonen en uitgebreid Middelengebruik.
-  * `input/pagecontent/datasets.md`: Documentatie uitgebreid met de Huisartsgegevensset en NUTS Zorgtoepassing (HA-VVT inzage dossier v1.1).
-* **AI Tooling & Skills**:
-  * `skills/fo-viewdef-generator/SKILL.md`: Nieuwe Claude/AI-skill toegevoegd voor het automatisch genereren van Functioneel Ontwerp (FO) documenten op basis van ViewDefinition JSON-bestanden.
+* **CapabilityStatements**:
+  * `CapabilityStatement-OntsluitenBronsysteem Epic.json`, `Nexus.json`, `Zorgplatform.json`, `NedapONS.json`: Nieuwe CapabilityStatements toegevoegd voor het specificeren van de FHIR-bevragingen op de bronsystemen Epic, Nexus, Zorgplatform en NedapONS.
+* **FHIR-voorbeelden & Datasets**:
+  * `input/examples/`: Nieuwe Nedap-voorbeelden toegevoegd (`AllergyIntolerance-Nedap.json`, `Flag-Nedap.json`, `LivingSituation-Nedap.json`, `Patient-Nedap.json`).
+  * `input/examples/`: Nieuwe voorbeeldbundels voor Medische Hulpmiddelen toegevoegd voor Chipsoft, Epic en Nexus (`MedischHulpmiddel-*.json`).
+* **ConceptMaps**:
+  * `ConceptMap-intoxicaties-groups.json`: Nieuwe ConceptMap toegevoegd voor het mappen van SNOMED CT- en NHG-tabel 45-codes naar LOINC-intoxicatiegroepen.
+* **Scripts & Tooling**:
+  * `script/convert_view_to_sd.js`: Nieuw script toegevoegd dat ViewDefinitions omzet naar minimale StructureDefinitions en deze valideert op `mustSupport`-dekking in profielen.
+  * `script/replaceHostnames.js`: Nieuw script toegevoegd om hostnames in FHIR-voorbeelden te uniformeren naar `example.org`.
 
 #### 🛠️ Gewijzigd
 
-* **ViewDefinitions & Schermontwerpen**:
-  * `input/images/ViewDefinition-Appointment.json` (`.md`, `-ui.md`): Kolommen bijgewerkt; zorgverlener en rol gebundeld in de kolom 'Met', en kolom 'Reden' (`reason.text | indication.display`) toegevoegd.
-  * `input/images/ViewDefinition-Encounter.json` (`.md`, `-ui.md`): Kolom 'Rol' samengevoegd in 'Met', type-weergave uitgebreid met `type.text`/`coding.display`, en kolom 'Reden' toegevoegd.
-  * `input/images/ViewDefinition-Middelengebruik.json` (`.md`, `-ui.md`): Logica voor periode, status, middel en hoeveelheid/antwoord herzien (inclusief ondersteuning voor NHG Tabel 45 5-shot vragenlijst en pack-years).
-  * `input/images/ViewDefinition-Vitalegegevens.json` (`.md`, `-ui.md`): `zib-Respiration` toegevoegd aan de selectie (`forEach`), extra componenten-kolom en context-kolom (`+Context`) toegevoegd, en SNOMED CT meegenomen in de groepsvertaling.
-* **FHIR Profielen & Slicing**:
-  * `input/profiles/StructureDefinition-AlcoholUse.json`, `DrugUse.json`, `TobaccoUse.json`: Slices toegevoegd voor specifieke componenten (hoeveelheid alcohol, soort drugs, soort tabaksproduct).
-  * `input/profiles/StructureDefinition-Middelengebruik.json`: Slicing op `Bundle.entry` toegevoegd voor `TobaccoUse`, `AlcoholUse` en `DrugUse`.
-  * `input/profiles/StructureDefinition-ContactenEpisodes.json`: Slicing op `Bundle.entry` toegevoegd voor `Encounter` en `EpisodeOfCare`.
-  * `input/profiles/StructureDefinition-Encounter.json`: Extensie `compliesWithProfile` voor `gp-Encounter` toegevoegd en elementbeperkingen verfijnd.
-* **ConceptMaps & Vocabulaire**:
-  * `input/vocabulary/ConceptMap-*.json`: Target-systeem voor rolcodes (`epic`, `sanday`, `rolcodenl`) gewijzigd naar SNOMED CT (`http://snomed.info/sct`). SNOMED CT ademhalingscode (422834003) toegevoegd aan `vital-signs-groups.json`.
-* **FHIR Voorbeelden**:
-  * `input/examples/Middelengebruik-Epic.json`: Observaties bijgewerkt met toelichtingen, actuele datums (2026), gebruiksperiodes en gedetailleerde tabak-/alcohol-componenten.
-* **Documentatie & Integratie**:
-  * `input/intro-notes/StructureDefinition-VitalSign-intro.md` & `Middelengebruik-intro.md`: FHIR-search queries verfijnd en opgesplitst per gegevensset/bron (BgZ, Huisarts, NUTS HA-VVT).
-  * `input/pagecontent/checklists.md`: Epic scope-checklist uitgebreid met `Observation.Read (Social History) (STU3)`.
+* **Hernamingen & Thema Intoxicaties**:
+  * Het thema *Middelengebruik* is hernoemd naar *Intoxicaties*. Dit is doorgevoerd in profielen (`StructureDefinition-Intoxicaties.json`), ViewDefinitions (`ViewDefinition-Intoxicaties.json`), voorbeelden en documentatie.
+  * `StructureDefinition-Intoxicaties.json`: `DiagnosticResult`-slice toegevoegd ter ondersteuning van intoxicaties-registraties uit huisartssystemen.
+  * `ValueSet-SubstanceUseTypeCodelist.json`: Verwijderd ter gunste van de nieuwe `ConceptMap-intoxicaties-groups.json`.
+* **CapabilityStatements Bronsystemen**:
+  * `CapabilityStatement-OntsluitenBronsysteem-CGM.json`, `Sanday.json`, `Medicom.json`, `OntsluitenBronsysteem.json`: Expliciete profiellijsten vervangen door `implementationGuide`-verwijzingen; `Procedure` vervangen door `EpisodeOfCare`; verfijningen aangebracht op `EncounterReport`, `VitalSign` en `Intoxicaties`.
+* **ViewDefinitions & Dataweergave**:
+  * `ViewDefinition-Appointment.json`, `ContactenAfspraken.json`, `MedischHulpmiddel.json`: `start`- en `end`-velden gecombineerd naar één `Datum` (`Period`) expressie.
+  * `ViewDefinition-Condition.json`, `Probleemlijst.json`: Filter `code.coding.display.exists()` verwijderd uit de `forEach` om ook condities zonder display-string te tonen. Zorgepisode-velden (`+Episode-naam`, `+Episode-status`, `+Episode-datum`) toegevoegd aan de Probleemlijst.
+  * `ViewDefinition-EpisodeOfCare.json`: Kolommen en mappen bijgewerkt (`Eind` -> `Laatste`, `Concern` -> `Naam`, toevoeging van `Status`).
+  * `ViewDefinition-LaboratoryTestResult.json`: Logica voor weergave van eenheden en referentiewaardegrenzen geoptimaliseerd.
+  * `ViewDefinition-Medicatiegegevens.json`: Titel aangepast naar *"Medicatiegebruik, afspraken en toedieningen"*.
+  * `ViewDefinition-Mobiliteit.json`: Componenten herzien conform de ZIB Mobiliteit (o.a. Traplopen, Houding veranderen/handhaven en Transfer).
+* **StructureDefinitions & Profielen**:
+  * `StructureDefinition-ContactenAfspraken.json`, `ContactenEpisodes.json`, `Correspondentie.json`, `Medicatiegegevens.json`, `Probleemlijst.json`: Verplichte minimum-cardinaliteit (`min: 1`) op entry-slices verwijderd.
+  * `StructureDefinition-Medicatiegegevens.json`: `MedicationDispense`-slice toegevoegd voor toedieningsafspraken.
+  * `StructureDefinition-DocumentReference.json`: `mustSupport: true` toegevoegd op `content`.
+  * `StructureDefinition-EncounterReport.json`: Status verhoogd van `draft` naar `active`.
+  * `StructureDefinition-VitalSign.json`: Extensie `compliesWithProfile` toegevoegd voor `gp-DiagnosticResult`.
+* **Documentatie & Ontwerp**:
+  * `design-usercontext.md`: Contexttabel uitgebreid met veldmappings voor Sanday, CGM en NedapONS.
+  * `testcases.md`: Testcase voor ademhalingsmetingen toegevoegd; 'Middelengebruik' hernoemd naar 'Intoxicaties'.
+  * `ValueSet-ProbleemStatus.json`: Weergavenaam van status `finished` aangepast naar *"Afgesloten"*.
+* **Build, Scripts & IG-configuratie**:
+  * `publication-request.json`, `zorgviewer-ig.json`: Versie verhoogd naar `1.25.0`, release-label ingesteld op `master` en Nedap-patient gekoppeld.
+  * `script/updateviewmd.js`: Formattering voor `Period`-datatypes en conversie naar CET-tijdzone toegevoegd.
+  * `script/changelog.js`: Ondersteuning toegevoegd voor het inlezen van wiki FO-diffs (`temp/fo-diff.log`).
 
 #### 🧹 Onderhoud
 
-* **Opschonen FHIR-voorbeelden & IG-structuur**:
-  * `input/examples/LaboratoryTestResult-Nexus.json`: Nexus lab-voorbeeld verwijderd en ontkoppeld uit `zorgviewer-ig.json`.
-  * `input/profiles/StructureDefinition-Correspondentie.json`, `Medicatiegegevens.json`, `EpisodeOfCare.json`, `MedischHulpmiddel.json`: Redundante differential-restricties en vaste waarden opgeruimd.
-* **Build scripts & Validatie**:
-  * `script/updateviewmd.js`: Foutmeldingen verrijkt met bestandsnamen bij FHIRPath-evaluatie en logica toegevoegd om vitale gegevens zonder toegewezen groep over te slaan.
-  * `script/changelog.js`: Model-update naar `gemini-3.6-flash` en diff-bereik aanpassing.
-  * `input/ignoreWarnings.txt`: Negeer-regels toegevoegd voor specifieke SNOMED CT validaties, OID-controles en R5 discriminator deprecation waarschuwingen.
+* **Schoonmaak Voorbeelden & URL-correcties**:
+  * Verwijdering van overbodige CGM-voorbeeldbestanden (`DocumentReference-CGM.json`, `Flag-CGM.json`).
+  * Invalide URL-prefixes met drievoudige schuine streep (`https:///`) gecorrigeerd naar `https://` in diverse Epic-voorbeelden (`AdvanceDirective2-Epic.json`, `DocumentReference-Epic.json`, `Flag-Epic.json`, `Patient-Epic.json`, `Procedure-Epic.json`, `TreatmentDirective-Epic.json`).
+  * Getalnotaties opgeschoond (bijv. `1.0` gewijzigd naar `1` in `LaboratoryTestResult-Sanday.json`, `VitalSign-Sanday.json` en `MedicationRequest-Nexus.json`).
+  * Code-inspringing en JSON-formattering uniform gemaakt over alle voorbeeldresourcedocumenten.
+* **Vocabulaire & Notities**:
+  * Niet-gebruikte `version`- en `jurisdiction`-metadata verwijderd uit ConceptMaps (`ConceptMap-behandelaanwijzing-2017-2020.json`, `epic-rolcode.json`, `sanday-rolcode.json`, `vital-signs-groups.json`, `rolcodenl.json`).
+  * `input/ignoreWarnings.txt`: Uitzonderingsregels toegevoegd voor specifieke IG-publisher validatiewaarschuwingen.
+  * `README.md`: Handmatige wiki-instructies voor changelog-generatie opgeruimd.

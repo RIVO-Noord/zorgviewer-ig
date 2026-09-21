@@ -18,25 +18,37 @@
           "path": "effectiveDateTime",
           "name": "Datum",
           "type": "dateTime",
-          "tag": [ { "name": "Zib element", "value": "ObservationDateTime" } ]
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
           "path": "component.where(code.coding.exists(code='282097004')).select(value.coding.display | value.text)",
           "name": "Lopen",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "Walking" } ]
+          "tag": [ { "name": "Zib element", "value": "Lopen" } ]
         },
         {
-          "path": "component.where(code.coding.exists(code='16581000146103')).select(value.coding.display | value.text)",
-          "name": "Rolstoelgebruik",
+          "path": "component.where(code.coding.exists(code='301587001')).select(value.coding.display | value.text)",
+          "name": "Traplopen",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "WheelchairUse" } ]
+          "tag": [ { "name": "Zib element", "value": "Traplopen" } ]
         },
         {
-          "path": "component.where(code.coding.exists(code='183135000')).select(value.coding.display | value.text)",
-          "name": "Hulpmiddelen",
+          "path": "component.where(code.coding.exists(code='282869009')).select(value.coding.display | value.text)",
+          "name": "Houding veranderen",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "MobilityAids" } ]
+          "tag": [ { "name": "Zib element", "value": "HoudingVeranderen" } ]
+        },
+        {
+          "path": "component.where(code.coding.exists(code='249868004')).select(value.coding.display | value.text)",
+          "name": "Houding handhaven",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "HoudingHandhaven" } ]
+        },
+        {
+          "path": "component.where(code.coding.exists(code='364666007')).select(value.coding.display | value.text)",
+          "name": "Uitvoeren transfer",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "UitvoerenTransfer" } ]
         },
         {
           "path": "comment | note[0].text",

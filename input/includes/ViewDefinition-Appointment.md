@@ -16,17 +16,10 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
-<td>Begin</td>
-<td><samp>start</samp></td>
-<td><code>dateTime</code></td>
-<td>BeginDatumTijd</td>
-<td></td>
-</tr>
-<tr>
-<td>Eind</td>
-<td><samp>end</samp></td>
-<td><code>dateTime</code></td>
-<td>EindDatumTijd</td>
+<td>Datum</td>
+<td><samp>iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)</samp></td>
+<td><code>Period</code></td>
+<td>BeginDatumTijd - EindDatumTijd</td>
 <td></td>
 </tr>
 <tr>

@@ -3,7 +3,7 @@
   "id": "hl7.fhir.nl.zorgviewer",
   "language": "en-US",
   "url": "http://fhir.hl7.nl/zorgviewer/ImplementationGuide/hl7.fhir.nl.zorgviewer",
-  "version": "1.25.0",
+  "version": "1.26.0",
   "name": "ZorgviewerIG",
   "title": "RIVO-Noord Zorgviewer Implementation Guide",
   "status": "active",
@@ -47,7 +47,7 @@
   "dependsOn": [
     {
       "id": "terminology",
-      "uri": "https://simplifier.net/packages/hl7.terminology.r3",
+      "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId": "hl7.terminology.r3",
       "version": "5.3.0"
     },
@@ -56,7 +56,12 @@
       "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017",
       "packageId": "nictiz.fhir.nl.stu3.zib2017",
       "version": "2.3.2"
-    }
+    },
+        {
+      "id": "uvextensionsr3",
+      "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions.r3",
+      "packageId": "hl7.fhir.uv.extensions.r3"
+    }    
   ],
   "definition": {
     "grouping": [
@@ -104,7 +109,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Middelengebruik"
+          "reference": "StructureDefinition/Intoxicaties"
         },
         "groupingId": "group-sam"
       },
@@ -125,19 +130,19 @@
       },
       {
         "reference": {
-          "reference": "Bundle/Middelengebruik-Epic"
+          "reference": "Bundle/Intoxicaties-Epic"
         },
-        "name": "Epic Middelengebruik Example",
-        "description": "Dit is een Middelengebruik voorbeeld uit Epic.",
-        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Middelengebruik"
+        "name": "Epic Intoxicaties Example",
+        "description": "Dit is een Intoxicaties voorbeeld uit Epic.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Intoxicaties"
       },
       {
         "reference": {
           "reference": "Bundle/2184d077-fe28-4b2c-a219-cceafc5b17f2"
         },
-        "name": "Sanday Middelengebruik Example",
-        "description": "Dit is een Middelengebruik voorbeeld uit Sanday.",
-        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Middelengebruik"
+        "name": "Sanday Intoxicaties Example",
+        "description": "Dit is een Intoxicaties voorbeeld uit Sanday.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Intoxicaties"
       },
       {
         "reference": {
@@ -796,27 +801,11 @@
       },
       {
         "reference": {
-          "reference": "DocumentReference/f9e40d47-b728-462e-8a33-1bd2911e2f22"
-        },
-        "name": "CGM DocumentReference Example",
-        "description": "Dit is een Document Verwijzing voorbeeld uit CGM.",
-        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DocumentReference"
-      },
-      {
-        "reference": {
           "reference": "Encounter/7e705c5d-d0a3-4af7-993a-12fdc77d9f67"
         },
         "name": "CGM Encounter Example",
         "description": "Dit is een Encounter voorbeeld van CGM.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
-      },
-      {
-        "reference": {
-          "reference": "Flag/71648039-9cc1-468d-99e4-33a987cefbc3"
-        },
-        "name": "CGM Alert Example",
-        "description": "Dit is een Alert voorbeeld uit CGM.",
-        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Flag"
       },
       {
         "reference": {
@@ -852,11 +841,11 @@
       },
       {
         "reference": {
-          "reference": "Bundle/substanceuse-cgm-bundle"
+          "reference": "Bundle/intoxicaties-cgm-bundle"
         },
-        "name": "CGM Middelengebruik Example",
-        "description": "Dit is een Middelengebruik voorbeeld uit CGM.",
-        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Middelengebruik"
+        "name": "CGM Intoxicaties Example",
+        "description": "Dit is een Intoxicaties voorbeeld uit CGM.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Intoxicaties"
       },
       {
         "reference": {
@@ -873,6 +862,14 @@
         "name": "CGM VitalSign Example",
         "description": "Dit is een VitalSign voorbeeld uit CGM.",
         "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/VitalSign"
+      },
+      {
+        "reference": {
+          "reference": "Patient/Client.1916ee4b-1a83-476b-a6ae-3c37ccf6dd1a"
+        },
+        "name": "Nedap Patient Example",
+        "description": "Dit is een Patient voorbeeld van Nedap.",
+        "exampleCanonical": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient"
       }
     ],
     "page": {
@@ -1038,7 +1035,7 @@
     "parameter": [
       {
         "code": "releaselabel",
-        "value": "387391"
+        "value": "master"
       },
       {
         "code": "copyrightyear",
@@ -1081,8 +1078,8 @@
         "value": "resources/Parameters-exp-params.json"
       },
       {
-        "code": "version-comparison-master",
-        "value": "1.24.0"
+        "code": "version-comparison",
+        "value": "n/a"
       }
     ]
   }

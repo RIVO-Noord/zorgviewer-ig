@@ -7,11 +7,22 @@ async function generateChangelog() {
   const model = genAI.getGenerativeModel({ model: "gemini-3.6-flash" });
 
   try {
-    // 1. Get logs and diff
-    const SINCE = '3 weeks ago';
-    // var changes = execSync(`git log --since='${SINCE}' --pretty=format:'- %s'`).toString();
-    var changes = execSync(`git diff 'HEAD@{${SINCE}}'`).toString();
+    // 1. Get diff
+    // const SINCE = '3 weeks ago';
+    const SINCE = '2026-08-11';
+    let changes = execSync(`git diff 'HEAD@{${SINCE}}'`).toString();
+    // let changes = execSync(`git diff 1.24.0`, { maxBuffer: 250000 }).toString();
 
+    // Generate fo-diff using in the Zorgviewer.wiki git folder, which is a separate repository.
+    // `cd _local/Zorgviewer.wiki`
+    // `git pull`
+    // `git diff 'HEAD@{2026-08-11}' -- Functionele-Ontwerpen-\(FO\'s\) > /app/temp/fo-diff.log`
+    if (fs.existsSync('temp/fo-diff.log')) {
+      console.log("Including FO diff.")
+      const foChanges = fs.readFileSync('temp/fo-diff.log', 'utf-8');
+      changes = foChanges + '\n' + changes;
+    }
+    
     if (!changes.trim()) {
       console.log("No commits found this week.");
       return;

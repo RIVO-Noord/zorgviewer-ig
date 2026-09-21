@@ -12,12 +12,32 @@
 <th>Status</th>
 </tr>
 <tr><td>+</td>
-<td>CGM</td>
+<td>Nedap</td>
+<td>18-12-2025</td>
 <td></td>
+<td>Agressieve hond</td>
 <td></td>
-<td>Jicht</td>
-<td>T92: Jicht</td>
-<td>waarschuwing</td>
+<td>Waarschuwing</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>18-12-2025</td>
+<td></td>
+<td>Agressie</td>
+<td></td>
+<td>Waarschuwing</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>18-12-2025</td>
+<td></td>
+<td>Agressieve hond</td>
+<td></td>
+<td>Waarschuwing</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
@@ -32,6 +52,16 @@
 </tr><tr><td></td><td colspan=7>
 </td></tr>
 <tr><td>+</td>
+<td>Nedap</td>
+<td>9-3-2023 - 17-12-2025</td>
+<td></td>
+<td>Agressie</td>
+<td></td>
+<td>Waarschuwing</td>
+<td>inactive</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
 <td>Nexus</td>
 <td>16-5-2022</td>
 <td></td>
@@ -43,11 +73,21 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
-<td>10-5-2022, 20:55:17</td>
+<td>10-5-2022, 22:55:17 - 22:55:43</td>
 <td></td>
 <td>TBC</td>
 <td></td>
 <td>Infection Flag</td>
+<td>inactive</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td>+</td>
+<td>Nedap</td>
+<td>1-2-2021 - 28-2-2021</td>
+<td></td>
+<td>Vuurwapengevaarlijk</td>
+<td></td>
+<td>Waarschuwing</td>
 <td>inactive</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
@@ -67,16 +107,6 @@
 <td></td>
 <td>Drager MRSA</td>
 <td></td>
-<td>waarschuwing</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td>+</td>
-<td>CGM</td>
-<td></td>
-<td></td>
-<td></td>
-<td>A20: Gesprek levenseinde/behandelwensen</td>
 <td>waarschuwing</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=7>

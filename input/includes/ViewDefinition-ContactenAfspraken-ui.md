@@ -13,7 +13,7 @@
 </tr>
 <tr><td>+</td>
 <td>CGM</td>
-<td>15-7-2026, 08:00:00</td>
+<td>15-7-2026, 10:00:00 - 10:15:00</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>booked</td>
@@ -23,7 +23,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>WZA</td>
-<td>13-7-2026, 13:00:00</td>
+<td>13-7-2026, 15:00:00 - 15:05:00</td>
 <td>M.C. Gordinou de Gouberville<br/>Onbekende functiecode.</td>
 <td>Wilhelmina Ziekenhuis</td>
 <td>pending</td>
@@ -63,7 +63,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
-<td>27-3-2025, 16:10:00</td>
+<td>27-3-2025, 17:10:00 - 19:23:00</td>
 <td>E. Sieders, Chirurg<br/>DJA. de Groot, Internist Oncoloog<br/>A. (van Donderen-) Vrieze<br/>...</td>
 <td>UMCG HC</td>
 <td>unknown</td>
@@ -83,7 +83,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Sanday</td>
-<td>4-7-2024, 22:00:00</td>
+<td>5-7-2024, 00:00:00</td>
 <td></td>
 <td></td>
 <td>finished</td>
@@ -93,7 +93,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
-<td>12-10-2022, 09:30:00</td>
+<td>12-10-2022, 11:30:00 - 11:40:00</td>
 <td></td>
 <td>Ziekenhuis Apotheek</td>
 <td>pending</td>
@@ -103,7 +103,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
-<td>20-4-2018, 09:10:00</td>
+<td>20-4-2018, 11:10:00 - 11:15:00</td>
 <td>G. Dijkstra, MDL arts</td>
 <td>Maag- Darm- Leverziekten</td>
 <td>pending</td>
@@ -123,7 +123,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Nexus</td>
-<td>16-8-2012, 10:22:00</td>
+<td>16-8-2012, 12:22:00 - 19-8-2012, 13:22:00</td>
 <td>Wit<br/>Orthopedie</td>
 <td></td>
 <td>finished</td>
@@ -133,7 +133,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
-<td>14-8-2012, 22:00:00</td>
+<td>15-8-2012, 00:00:00 - 15-8-2012, 15:04:00</td>
 <td>J.H.R Peters<br/>Onbekende functiecode.</td>
 <td></td>
 <td>finished</td>

@@ -36,7 +36,6 @@
                 "id": "Bundle.entry:MedicationRequest.resource",
                 "path": "Bundle.entry.resource",
                 "comment": "Medicationafspraak",
-                "min": 1,
                 "type":  [
                     {
                         "code": "MedicationRequest",
@@ -54,11 +53,27 @@
                 "id": "Bundle.entry:MedicationStatement.resource",
                 "path": "Bundle.entry.resource",
                 "comment": "Medicationgebruik",
-                "min": 1,
                 "type":  [
                     {
                         "code": "MedicationStatement",
                         "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedicationStatement"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:MedicationDispense",
+                "path": "Bundle.entry",
+                "sliceName": "MedicationDispense",
+                "short": "MedicationDispense"
+            },
+            {
+                "id": "Bundle.entry:MedicationDispense.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Toedieningsafspraak",
+                "type":  [
+                    {
+                        "code": "MedicationDispense",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Toedieningsafspraak"
                     }
                 ]
             }

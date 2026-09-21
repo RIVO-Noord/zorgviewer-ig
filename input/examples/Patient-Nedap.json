@@ -1,0 +1,588 @@
+{
+    "resourceType": "Patient",
+    "id": "Client.1916ee4b-1a83-476b-a6ae-3c37ccf6dd1a",
+    "meta": {
+        "profile": [
+            "http://fhir.nl/fhir/StructureDefinition/nl-core-patient"
+        ]
+    },
+    "extension": [
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-patient-legalstatus",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.2.4.3.11.22.232",
+                        "code": "11",
+                        "display": "Strafrechterlijke justitiële contacten: tbs"
+                    }
+                ]
+            }
+        }
+    ],
+    "identifier": [
+        {
+            "use": "official",
+            "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+            "value": "999995364"
+        },
+        {
+            "use": "official",
+            "system": "http://nedap.com/fhir/NamingSystem/local",
+            "value": "600"
+        }
+    ],
+    "name": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                    "valueCode": "NL4"
+                }
+            ],
+            "text": "Hannie Giezen-Bartels",
+            "family": "Giezen-Bartels",
+            "_family": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                        "valueString": "Giezen"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                        "valueString": "Bartels"
+                    }
+                ]
+            },
+            "given": [
+                "Hannie",
+                "H",
+                "Bannie"
+            ],
+            "_given": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                            "valueCode": "BR"
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                            "valueCode": "IN"
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                            "valueCode": "CL"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/v3/AddressUse",
+                                "code": "MC",
+                                "display": "Mobiel telefoonnummer"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "system": "phone",
+            "value": "0612345679",
+            "use": "home"
+        },
+        {
+            "system": "phone",
+            "value": "0612345699"
+        },
+        {
+            "system": "email",
+            "value": "h.bartels@test.nl",
+            "use": "home"
+        }
+    ],
+    "gender": "female",
+    "_gender": {
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "F",
+                            "display": "Vrouw"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "birthDate": "1959-02-12",
+    "deceasedBoolean": false,
+    "address": [
+        {
+            "extension": [
+                {
+                    "url": "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official",
+                    "valueBoolean": true
+                },
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/v3/AddressUse",
+                                "code": "HP",
+                                "display": "Officieel adres"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "use": "home",
+            "type": "both",
+            "line": [
+                "Parallelweg 2 (1)"
+            ],
+            "_line": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                            "valueString": "Parallelweg"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                            "valueString": "2"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                            "valueString": "1"
+                        }
+                    ]
+                }
+            ],
+            "city": "Groenlo",
+            "district": "Oost Gelre",
+            "postalCode": "7141DC",
+            "country": "NL",
+            "_country": {
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "urn:iso:std:iso:3166",
+                                    "code": "NL",
+                                    "display": "Netherlands"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "maritalStatus": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                "code": "W",
+                "display": "Weduwe/weduwnaar"
+            }
+        ]
+    },
+    "contact": [
+        {
+            "relationship": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/RoleCode",
+                            "code": "HUSB",
+                            "display": "Echtgenoot"
+                        }
+                    ],
+                    "text": "Echtgenoot"
+                },
+                {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.22.472",
+                            "code": "1",
+                            "display": "Eerste relatie / contactpersoon"
+                        }
+                    ],
+                    "text": "Eerste relatie / contactpersoon"
+                }
+            ],
+            "name": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                        "valueCode": "NL1"
+                    }
+                ],
+                "text": "Henk de Haas",
+                "family": "de Haas",
+                "_family": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                            "valueString": "de"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                            "valueString": "Haas"
+                        }
+                    ]
+                },
+                "given": [
+                    "Henk"
+                ],
+                "_given": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                "valueCode": "BR"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "telecom": [
+                {
+                    "system": "phone",
+                    "value": "0612345990"
+                },
+                {
+                    "system": "email",
+                    "value": "dehaas@work.com"
+                }
+            ],
+            "gender": "unknown"
+        },
+        {
+            "relationship": [
+                {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.22.472",
+                            "code": "1",
+                            "display": "Eerste relatie / contactpersoon"
+                        }
+                    ],
+                    "text": "Eerste relatie / contactpersoon"
+                }
+            ],
+            "name": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                        "valueCode": "NL4"
+                    }
+                ],
+                "text": "Hanneke de Haas-ter Boom",
+                "family": "de Haas-ter Boom",
+                "_family": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                            "valueString": "de"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                            "valueString": "Haas"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                            "valueString": "ter"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                            "valueString": "Boom"
+                        }
+                    ]
+                },
+                "given": [
+                    "Hanneke",
+                    "H.A.K."
+                ],
+                "_given": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                "valueCode": "BR"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                "valueCode": "IN"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "telecom": [
+                {
+                    "system": "phone",
+                    "value": "06-22222222"
+                },
+                {
+                    "system": "email",
+                    "value": "h.terboom@example.com"
+                }
+            ],
+            "gender": "unknown"
+        },
+        {
+            "relationship": [
+                {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.22.472",
+                            "code": "1",
+                            "display": "Eerste relatie / contactpersoon"
+                        }
+                    ],
+                    "text": "Eerste relatie / contactpersoon"
+                }
+            ],
+            "name": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                        "valueCode": "NL4"
+                    }
+                ],
+                "text": "Anne Jongeneel-",
+                "family": "Jongeneel-",
+                "_family": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                            "valueString": "Jongeneel"
+                        }
+                    ]
+                },
+                "given": [
+                    "Anne",
+                    "A.B.C."
+                ],
+                "_given": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                "valueCode": "BR"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                "valueCode": "IN"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "telecom": [
+                {
+                    "system": "phone",
+                    "value": "06-98765432"
+                },
+                {
+                    "system": "email",
+                    "value": "a.jongeneel@example.com"
+                }
+            ],
+            "gender": "unknown"
+        },
+        {
+            "relationship": [
+                {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.22.472",
+                            "code": "1",
+                            "display": "Eerste relatie / contactpersoon"
+                        }
+                    ],
+                    "text": "Eerste relatie / contactpersoon"
+                }
+            ],
+            "name": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                        "valueCode": "NL4"
+                    }
+                ],
+                "text": "Hans de Haas-",
+                "family": "de Haas-",
+                "_family": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                            "valueString": "de"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                            "valueString": "Haas"
+                        }
+                    ]
+                },
+                "given": [
+                    "Hans",
+                    "H.A.P."
+                ],
+                "_given": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                "valueCode": "BR"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                "valueCode": "IN"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "telecom": [
+                {
+                    "system": "phone",
+                    "value": "06-99887766"
+                },
+                {
+                    "system": "email",
+                    "value": "h.dehaas@example.com"
+                }
+            ],
+            "gender": "unknown"
+        },
+        {
+            "relationship": [
+                {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.22.472",
+                            "code": "1",
+                            "display": "Eerste relatie / contactpersoon"
+                        }
+                    ],
+                    "text": "Eerste relatie / contactpersoon"
+                }
+            ],
+            "name": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                        "valueCode": "NL4"
+                    }
+                ],
+                "text": "Sophie Vollebregt-de Haas",
+                "family": "Vollebregt-de Haas",
+                "_family": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                            "valueString": "Vollebregt"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                            "valueString": "de"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                            "valueString": "Haas"
+                        }
+                    ]
+                },
+                "given": [
+                    "Sophie",
+                    "S.H."
+                ],
+                "_given": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                "valueCode": "BR"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                "valueCode": "IN"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "telecom": [
+                {
+                    "system": "phone",
+                    "value": "06-11223344"
+                },
+                {
+                    "system": "email",
+                    "value": "s.vollebregt@example.com"
+                }
+            ],
+            "gender": "unknown"
+        }
+    ],
+    "communication": [
+        {
+            "language": {
+                "coding": [
+                    {
+                        "system": "urn:ietf:bcp:47",
+                        "code": "nl",
+                        "display": "Dutch"
+                    }
+                ]
+            }
+        }
+    ],
+    "generalPractitioner": [
+        {
+            "reference": "Organization/TE1002.CareProvider.503",
+            "display": "GJ Ben*"
+        }
+    ]
+}

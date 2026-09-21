@@ -1,0 +1,1274 @@
+{
+    "resourceType": "Bundle",
+    "id": "fe5d09b9-0e7b-400f-af3a-9da860c5bcc9",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Bundle"
+        ]
+    },
+    "type": "searchset",
+    "total": 2,
+    "entry": [
+        {
+            "fullUrl": "https://example.org/DeviceUseStatement/cc6ef694-12b5-4bd5-970a-97f14cc46e86",
+            "resource": {
+                "resourceType": "DeviceUseStatement",
+                "id": "cc6ef694-12b5-4bd5-970a-97f14cc46e86",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>DeviceUseStatement resource:</h3><ul><li><p><strong>Note:</strong> &#x27;Implantant, Gen 2 Tibia Insert 5/6-9mm&#x27;</p></li><li><p><strong>Source</strong> &#x27;Practitioner author with last name &#x27;van Cruijningen de Winter&#x27;.&#x27;</p></li><li><table><thead><tr><th>Healthcare provider</th><th>Name</th><th>Address</th><th>Identifications</th><th>Standard industry class code</th></tr></thead><tbody><tr><td>Healthcare provider 1</td><td>Drachten</td><td>Lavendelheide 6, 9202 PD Drachten</td><td> 2.16.528.1.1007.3.3, 00002729,  , </td><td>Other</td></tr></tbody></table></li><li><p><strong>When used start:</strong> &#x27;5-6-2012 00:00&#x2B;0200&#x27;</p></li><li><table><thead><tr><th>Health professional</th><th>Identifications</th><th>Names</th><th>Contact data</th><th>Address</th></tr></thead><tbody><tr><td>Health professional 1</td><td> 2.16.840.1.113883.2.4.6.1, 03123456</td><td>Anita (A.) Koelewijn</td><td>&#x2B;3120</td><td>Tt.Melissaweg 1033SP Amsterdam (AMSTERDAM)</td></tr></tbody></table></li><li><p><strong>Body site:</strong> &#x27;Knee region structure (body structure)&#x27;</p></li><li><p><strong>Laterality:</strong> &#x27;Left&#x27;</p></li><li><table><thead><tr><th>Devices</th><th>Note</th><th>Type</th></tr></thead><tbody><tr><td>Devices 1</td><td>Knie Femur C Links Knie Links ( Plank 2 Rij 4 )</td><td>Other</td></tr></tbody></table></li></ul></div>"
+                },
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Organization",
+                        "valueReference": {
+                            "reference": "Organization/2.16.528.1.1007.3.300002729",
+                            "display": "Drachten"
+                        }
+                    },
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Practitioner",
+                        "valueReference": {
+                            "extension": [
+                                {
+                                    "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                                    "valueReference": {
+                                        "reference": "PractitionerRole/773038221CAF6AE9D6A9233B759ADF41DB560B21C3F6AB0809283C44EE56E7B6",
+                                        "display": "Onbekende functiecode."
+                                    }
+                                }
+                            ],
+                            "reference": "Practitioner/2b3449d2-cbd4-4f8d-ad9f-fa868d6785cf",
+                            "display": "Anita Koelewijn"
+                        }
+                    }
+                ],
+                "status": "active",
+                "subject": {
+                    "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+                    "display": "Johan XXX_Helleman_Afblijven"
+                },
+                "whenUsed": {
+                    "start": "2012-06-05T00:00:00+02:00"
+                },
+                "source": {
+                    "extension": [
+                        {
+                            "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                            "valueReference": {
+                                "reference": "PractitionerRole/C5A9F324B010477A927A403F4C9A6CB5D74E804806435D89BFCFAD75995F7ECB",
+                                "display": "attending physician"
+                            }
+                        }
+                    ],
+                    "reference": "Practitioner/fe1615fd-2a9f-4adc-9c3b-e91758ef314c",
+                    "display": "Lisette van Cruijningen de Winter"
+                },
+                "device": {
+                    "reference": "Device/2b361f5a-7722-4d05-b6de-8035a38a5ff3",
+                    "display": "Onbekend serienummer."
+                },
+                "bodySite": {
+                    "extension": [
+                        {
+                            "url": "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "7771000",
+                                        "display": "Left"
+                                    }
+                                ],
+                                "text": "Links"
+                            }
+                        }
+                    ],
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "72696002",
+                            "display": "Knee region structure (body structure)"
+                        }
+                    ],
+                    "text": "Knee region structure (body structure)"
+                },
+                "note": [
+                    {
+                        "time": "2022-09-30",
+                        "text": "Implantant, Gen 2 Tibia Insert 5/6-9mm"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/DeviceUseStatement/73938d12-5e6f-48d7-862d-2beef7d8f3d2",
+            "resource": {
+                "resourceType": "DeviceUseStatement",
+                "id": "73938d12-5e6f-48d7-862d-2beef7d8f3d2",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>DeviceUseStatement resource:</h3><ul><li><p><strong>Note:</strong> &#x27;Presbyacusis. Apparaat niet zichtbaar (diep in de gehooringang)&#x27;</p></li><li><table><thead><tr><th>Healthcare provider</th><th>Name</th><th>Address</th><th>Identifications</th><th>Standard industry class code</th></tr></thead><tbody><tr><td>Healthcare provider 1</td><td>Amsterdam</td><td>Tt.Melissaweg 23, 1033 SP Amsterdam</td><td> 2.16.528.1.1007.3.3, 00002727,  , </td><td>Openbare apotheek</td></tr></tbody></table></li><li><p><strong>When used start:</strong> &#x27;1-1-2007 00:00&#x2B;0100&#x27;</p></li><li><table><thead><tr><th>Health professional</th><th>Identifications</th><th>Names</th></tr></thead><tbody><tr><td>Health professional 1</td><td> 2.16.840.1.113883.2.4.6.1, 123456</td><td>(A.) Groenenboom</td></tr></tbody></table></li><li><table><thead><tr><th>Devices</th><th>Note</th><th>Type</th></tr></thead><tbody><tr><td>Devices 1</td><td>Gehoorapparaat Oor Rechts</td><td>Other</td></tr></tbody></table></li></ul></div>"
+                },
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Organization",
+                        "valueReference": {
+                            "reference": "Organization/2.16.528.1.1007.3.300002727",
+                            "display": "Amsterdam"
+                        }
+                    },
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Practitioner",
+                        "valueReference": {
+                            "extension": [
+                                {
+                                    "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                                    "valueReference": {
+                                        "reference": "PractitionerRole/6D83E70955EAAC6E7D631FEA66D1D185C91B1B9D285C21FEDE63679DD0190137",
+                                        "display": "Onbekende functiecode."
+                                    }
+                                }
+                            ],
+                            "reference": "Practitioner/f8bd5145-2dd5-4182-98b5-d909e86b26c4",
+                            "display": "A. Groenenboom"
+                        }
+                    }
+                ],
+                "status": "active",
+                "subject": {
+                    "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+                    "display": "Johan XXX_Helleman_Afblijven"
+                },
+                "whenUsed": {
+                    "start": "2007-01-01T00:00:00+01:00"
+                },
+                "device": {
+                    "reference": "Device/5d859fc2-771f-4cd9-ae98-d6491731945b",
+                    "display": "Onbekend serienummer."
+                },
+                "note": [
+                    {
+                        "text": "Presbyacusis. Apparaat niet zichtbaar (diep in de gehooringang)"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/Device/2b361f5a-7722-4d05-b6de-8035a38a5ff3",
+            "resource": {
+                "resourceType": "Device",
+                "id": "2b361f5a-7722-4d05-b6de-8035a38a5ff3",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDeviceProduct"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Device resource:</h3><ul><li><p><strong>Note:</strong> &#x27;Knie Femur C Links Knie Links ( Plank 2 Rij 4 )&#x27;</p></li><li><p><strong>Type:</strong> &#x27;Other&#x27;</p></li></ul></div>"
+                },
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/NullFlavor",
+                            "code": "OTH",
+                            "display": "other"
+                        }
+                    ],
+                    "text": "Overig"
+                },
+                "note": [
+                    {
+                        "text": "Knie Femur C Links Knie Links ( Plank 2 Rij 4 )"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/Organization/2.16.528.1.1007.3.300002729",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "2.16.528.1.1007.3.300002729",
+                "meta": {
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-organization"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Organization resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/ura</td><td>00002729</td></tr></tbody></table></li><li><p><strong>Type:</strong></p><table><tbody><tr><td>Verzekeraar</td></tr></tbody></table></li><li><p><strong>Name:</strong> &#x27;Drachten&#x27;</p></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Lavendelheide 6, 9202PD Drachten</td><td>Work</td><td>Werkadres</td><td></td></tr></tbody></table></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "00002729"
+                    }
+                ],
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/v3/NullFlavor",
+                                "code": "OTH",
+                                "display": "other"
+                            }
+                        ],
+                        "text": "Verzekeraar"
+                    }
+                ],
+                "name": "Drachten",
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "line": [
+                            "Lavendelheide 6"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Lavendelheide"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "6"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Drachten",
+                        "postalCode": "9202PD"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/Practitioner/2b3449d2-cbd4-4f8d-ad9f-fa868d6785cf",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "2b3449d2-cbd4-4f8d-ad9f-fa868d6785cf",
+                "meta": {
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Practitioner resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/agb-z</td><td>03123456</td></tr></tbody></table></li><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>Anita (A.) Koelewijn</td><td></td><td>Eigen geslachtsnaam</td></tr></tbody></table></li><li><p><strong>Contact information:</strong></p><table><thead><tr><th>System</th><th>Use</th><th>Additional information</th><th>Value</th></tr></thead><tbody><tr><td>Phone</td><td>Work</td><td></td><td>&#x2B;3120</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Tt.Melissaweg, 1033SP Amsterdam (AMSTERDAM)</td><td>Work</td><td>Werkadres</td><td></td></tr></tbody></table></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "03123456"
+                    }
+                ],
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "text": "Anita A. Koelewijn",
+                        "family": "Koelewijn",
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Koelewijn"
+                                }
+                            ]
+                        },
+                        "given": [
+                            "Anita",
+                            "A."
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "IN"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "+3120",
+                        "use": "work"
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "line": [
+                            "Tt.Melissaweg"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Tt.Melissaweg"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Amsterdam",
+                        "district": "AMSTERDAM",
+                        "postalCode": "1033SP"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/Practitioner/f63c0b98-a81f-4bb7-b367-edc2d435c5ab",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "f63c0b98-a81f-4bb7-b367-edc2d435c5ab",
+                "meta": {
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Practitioner resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/agb-z</td><td>03123456</td></tr></tbody></table></li><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>Anita (A.) Koelewijn</td><td></td><td>Eigen geslachtsnaam</td></tr></tbody></table></li><li><p><strong>Contact information:</strong></p><table><thead><tr><th>System</th><th>Use</th><th>Additional information</th><th>Value</th></tr></thead><tbody><tr><td>Phone</td><td>Work</td><td></td><td>&#x2B;3120</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Tt.Melissaweg, 1033SP Amsterdam (AMSTERDAM)</td><td>Work</td><td>Werkadres</td><td></td></tr></tbody></table></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "03123456"
+                    }
+                ],
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "text": "Anita A. Koelewijn",
+                        "family": "Koelewijn",
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Koelewijn"
+                                }
+                            ]
+                        },
+                        "given": [
+                            "Anita",
+                            "A."
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "IN"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "+3120",
+                        "use": "work"
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "line": [
+                            "Tt.Melissaweg"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Tt.Melissaweg"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Amsterdam",
+                        "district": "AMSTERDAM",
+                        "postalCode": "1033SP"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/PractitionerRole/773038221CAF6AE9D6A9233B759ADF41DB560B21C3F6AB0809283C44EE56E7B6",
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "773038221CAF6AE9D6A9233B759ADF41DB560B21C3F6AB0809283C44EE56E7B6",
+                "meta": {
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>PractitionerRole resource:</h3><ul><li><p><strong>Practitioner:</strong></p><table><thead><tr><th>Identifier</th><th>Display</th><th>Reference</th></tr></thead><tbody><tr><td></td><td>Anita Koelewijn</td><td>f63c0b98-a81f-4bb7-b367-edc2d435c5ab</td></tr></tbody></table></li><li><p><strong>Specialism:</strong> &#x27;Medisch specialisten, orthopedie&#x27;</p></li></ul></div>"
+                },
+                "practitioner": {
+                    "reference": "Practitioner/f63c0b98-a81f-4bb7-b367-edc2d435c5ab",
+                    "display": "Anita Koelewijn"
+                },
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+                                "code": "0305",
+                                "display": "Medisch specialisten, orthopedie"
+                            }
+                        ],
+                        "text": "Medisch specialisten, orthopedie"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/Practitioner/fe1615fd-2a9f-4adc-9c3b-e91758ef314c",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "fe1615fd-2a9f-4adc-9c3b-e91758ef314c",
+                "meta": {
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Practitioner resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/agb-z</td><td>03123456</td></tr></tbody></table></li><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>Lisette (L.) van Cruijningen de Winter</td><td></td><td>Eigen geslachtsnaam gevolgd door geslachtsnaam partner</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Tt.Melissaweg, 1033SP Amsterdam (AMSTERDAM)</td><td>Work</td><td>Werkadres</td><td></td></tr></tbody></table></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "03123456"
+                    }
+                ],
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL4"
+                            }
+                        ],
+                        "text": "Lisette L. van Cruijningen de Winter",
+                        "family": "van Cruijningen de Winter",
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Cruijningen"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "de"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Winter"
+                                }
+                            ]
+                        },
+                        "given": [
+                            "Lisette",
+                            "L."
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "IN"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "line": [
+                            "Tt.Melissaweg"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Tt.Melissaweg"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Amsterdam",
+                        "district": "AMSTERDAM",
+                        "postalCode": "1033SP"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/Practitioner/183aa3b5-372e-42a7-8e9c-498b70f80a6f",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "183aa3b5-372e-42a7-8e9c-498b70f80a6f",
+                "meta": {
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Practitioner resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/agb-z</td><td>03123456</td></tr></tbody></table></li><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>Lisette (L.) van Cruijningen de Winter</td><td></td><td>Eigen geslachtsnaam gevolgd door geslachtsnaam partner</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Tt.Melissaweg, 1033SP Amsterdam (AMSTERDAM)</td><td>Work</td><td>Werkadres</td><td></td></tr></tbody></table></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "03123456"
+                    }
+                ],
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL4"
+                            }
+                        ],
+                        "text": "Lisette L. van Cruijningen de Winter",
+                        "family": "van Cruijningen de Winter",
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Cruijningen"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "de"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Winter"
+                                }
+                            ]
+                        },
+                        "given": [
+                            "Lisette",
+                            "L."
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "IN"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "line": [
+                            "Tt.Melissaweg"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Tt.Melissaweg"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Amsterdam",
+                        "district": "AMSTERDAM",
+                        "postalCode": "1033SP"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/PractitionerRole/C5A9F324B010477A927A403F4C9A6CB5D74E804806435D89BFCFAD75995F7ECB",
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "C5A9F324B010477A927A403F4C9A6CB5D74E804806435D89BFCFAD75995F7ECB",
+                "meta": {
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>PractitionerRole resource:</h3><ul><li><p><strong>Practitioner:</strong></p><table><thead><tr><th>Identifier</th><th>Display</th><th>Reference</th></tr></thead><tbody><tr><td></td><td>Lisette van Cruijningen de Winter</td><td>183aa3b5-372e-42a7-8e9c-498b70f80a6f</td></tr></tbody></table></li><li><p><strong>Function:</strong></p><table><tbody><tr><td>Behandelend arts</td></tr></tbody></table></li><li><p><strong>Specialism:</strong> &#x27;Medisch specialisten, niet nader gespecificeerd&#x27;</p></li></ul></div>"
+                },
+                "practitioner": {
+                    "reference": "Practitioner/183aa3b5-372e-42a7-8e9c-498b70f80a6f",
+                    "display": "Lisette van Cruijningen de Winter"
+                },
+                "code": [
+                    {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.1.11.10267",
+                                "code": "ATTPHYS",
+                                "display": "attending physician"
+                            }
+                        ],
+                        "text": "Behandelend arts"
+                    }
+                ],
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+                                "code": "0300",
+                                "display": "Medisch specialisten, niet nader gespecificeerd"
+                            }
+                        ],
+                        "text": "Medisch specialisten, niet nader gespecificeerd"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/Device/5d859fc2-771f-4cd9-ae98-d6491731945b",
+            "resource": {
+                "resourceType": "Device",
+                "id": "5d859fc2-771f-4cd9-ae98-d6491731945b",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDeviceProduct"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Device resource:</h3><ul><li><p><strong>Note:</strong> &#x27;Gehoorapparaat Oor Rechts&#x27;</p></li><li><p><strong>Type:</strong> &#x27;Other&#x27;</p></li></ul></div>"
+                },
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/NullFlavor",
+                            "code": "OTH",
+                            "display": "other"
+                        }
+                    ],
+                    "text": "Overig"
+                },
+                "note": [
+                    {
+                        "text": "Gehoorapparaat Oor Rechts"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/Organization/2.16.528.1.1007.3.300002727",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "2.16.528.1.1007.3.300002727",
+                "meta": {
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-organization"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Organization resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/ura</td><td>00002727</td></tr></tbody></table></li><li><p><strong>Type:</strong></p><table><tbody><tr><td>Openbare apotheek</td></tr></tbody></table></li><li><p><strong>Name:</strong> &#x27;Amsterdam&#x27;</p></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Tt.Melissaweg 23, 1033SP Amsterdam</td><td>Work</td><td>Werkadres</td><td></td></tr></tbody></table></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "00002727"
+                    }
+                ],
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.2.4.15.1060",
+                                "code": "J8",
+                                "display": "Openbare apotheek"
+                            }
+                        ],
+                        "text": "Openbare apotheek"
+                    }
+                ],
+                "name": "Amsterdam",
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "line": [
+                            "Tt.Melissaweg 23"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Tt.Melissaweg"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "23"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Amsterdam",
+                        "postalCode": "1033SP"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/Practitioner/f8bd5145-2dd5-4182-98b5-d909e86b26c4",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "f8bd5145-2dd5-4182-98b5-d909e86b26c4",
+                "meta": {
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Practitioner resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/agb-z</td><td>123456</td></tr></tbody></table></li><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>(A.) Groenenboom</td><td></td><td>Eigen geslachtsnaam</td></tr></tbody></table></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "123456"
+                    }
+                ],
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "text": "A. Groenenboom",
+                        "family": "Groenenboom",
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Groenenboom"
+                                }
+                            ]
+                        },
+                        "given": [
+                            "A."
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "IN"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/Practitioner/7f8fff37-b4d5-4a66-a54f-06541a096ab2",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "7f8fff37-b4d5-4a66-a54f-06541a096ab2",
+                "meta": {
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Practitioner resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/agb-z</td><td>123456</td></tr></tbody></table></li><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>(A.) Groenenboom</td><td></td><td>Eigen geslachtsnaam</td></tr></tbody></table></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "123456"
+                    }
+                ],
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "text": "A. Groenenboom",
+                        "family": "Groenenboom",
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Groenenboom"
+                                }
+                            ]
+                        },
+                        "given": [
+                            "A."
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "IN"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/PractitionerRole/6D83E70955EAAC6E7D631FEA66D1D185C91B1B9D285C21FEDE63679DD0190137",
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "6D83E70955EAAC6E7D631FEA66D1D185C91B1B9D285C21FEDE63679DD0190137",
+                "meta": {
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>PractitionerRole resource:</h3><ul><li><p><strong>Practitioner:</strong></p><table><thead><tr><th>Identifier</th><th>Display</th><th>Reference</th></tr></thead><tbody><tr><td></td><td>A. Groenenboom</td><td>7f8fff37-b4d5-4a66-a54f-06541a096ab2</td></tr></tbody></table></li><li><p><strong>Specialism:</strong> &#x27;Anesthesioloog&#x27;</p></li></ul></div>"
+                },
+                "practitioner": {
+                    "reference": "Practitioner/7f8fff37-b4d5-4a66-a54f-06541a096ab2",
+                    "display": "A. Groenenboom"
+                },
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://fhir.nl/fhir/NamingSystem/uzi-rolcode",
+                                "code": "01.003",
+                                "display": "Anesthesioloog"
+                            }
+                        ],
+                        "text": "Anesthesioloog"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "https://example.org/Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+                "meta": {
+                    "profile": [
+                        "http://fhir.nl/fhir/StructureDefinition/nl-core-patient"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Patient resource:</h3><ul><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>Johan Johan (J.) XXX_Helleman_Afblijven</td><td></td><td>Eigen geslachtsnaam</td></tr></tbody></table></li><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/bsn</td><td>999911120</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Knolweg 1000, 9999XA STITSWERD (HET HOGELAND, Netherlands (the))</td><td>Home</td><td>Officieel adres</td><td></td></tr></tbody></table></li><li><p><strong>Contact information:</strong></p><table><thead><tr><th>System</th><th>Use</th><th>Additional information</th><th>Value</th></tr></thead><tbody><tr><td>Phone</td><td>Mobile</td><td>Mobiel telefoonnummer</td><td>&#x2B;31612345678</td></tr><tr><td>Email</td><td></td><td></td><td>XXX_Helleman@hotmail.com</td></tr></tbody></table></li><li><p><strong>Gender:</strong> &#x27;Man&#x27;</p></li><li><p><strong>Birthdate:</strong> &#x27;1964-07-25&#x27;</p></li><li><p><strong>Deceased:</strong> &#x27;No&#x27;</p></li><li><p><strong>Marital status:</strong> &#x27;Gehuwd&#x27;</p></li><li><p><strong>Part of multiple birth:</strong> &#x27;No&#x27;</p></li></ul></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999911120"
+                    }
+                ],
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "text": "Johan Johan J. XXX_Helleman_Afblijven",
+                        "family": "XXX_Helleman_Afblijven",
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "XXX_Helleman_Afblijven"
+                                }
+                            ]
+                        },
+                        "given": [
+                            "Johan",
+                            "Johan",
+                            "J."
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "IN"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "MC",
+                                            "display": "Mobile Phone"
+                                        }
+                                    ],
+                                    "text": "Mobiel telefoonnummer"
+                                }
+                            }
+                        ],
+                        "system": "phone",
+                        "value": "+31612345678",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "XXX_Helleman@hotmail.com"
+                    }
+                ],
+                "gender": "male",
+                "_gender": {
+                    "extension": [
+                        {
+                            "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                                        "code": "M",
+                                        "display": "Male"
+                                    }
+                                ],
+                                "text": "Man"
+                            }
+                        }
+                    ]
+                },
+                "birthDate": "1964-07-25",
+                "deceasedBoolean": false,
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "HP",
+                                            "display": "Primary Home"
+                                        }
+                                    ],
+                                    "text": "Officieel adres"
+                                }
+                            },
+                            {
+                                "url": "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "use": "home",
+                        "line": [
+                            "Knolweg 1000"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Knolweg"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "1000"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "STITSWERD",
+                        "district": "HET HOGELAND",
+                        "postalCode": "9999XA",
+                        "country": "Netherlands (the)",
+                        "_country": {
+                            "extension": [
+                                {
+                                    "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "urn:iso:std:iso:3166",
+                                                "code": "NL",
+                                                "display": "Netherlands (the)"
+                                            }
+                                        ],
+                                        "text": "Netherlands (the)"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                            "code": "M",
+                            "display": "Married"
+                        }
+                    ],
+                    "text": "Gehuwd"
+                },
+                "multipleBirthBoolean": false
+            },
+            "search": {
+                "mode": "include"
+            }
+        }
+    ]
+}
