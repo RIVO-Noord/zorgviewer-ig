@@ -1,0 +1,672 @@
+{
+  "resourceType": "Bundle",
+  "id": "38213640-41f0-4713-a06d-1439e703f30e",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/Bundle"
+    ]
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://api.zorgplatform.online/fhir/ProcedureRequest?status=active"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://api.zorgplatform.online/ProcedureRequest/2.16.840.1.113883.2.4.3.124.7.47519.41230000001717",
+      "resource": {
+        "resourceType": "ProcedureRequest",
+        "id": "2.16.840.1.113883.2.4.3.124.7.47519.41230000001717",
+        "meta": {
+          "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-ProcedureRequest"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Procedure request resource:</h3><ul><li><p><strong>Patient:</strong> &#x27;Johan XXX_Helleman_Afblijven&#x27;</p></li><li><p><strong>Status:</strong> &#x27;Active&#x27;</p></li><li><p><strong>Intent: </strong> &#x27;Plan&#x27;</p></li><li><p><strong>Code:</strong> &#x27;excisie met biopt van huid&#x27;</p></li><li><p><strong>Category:</strong> &#x27;Surgical procedure&#x27;</p></li><li><p><strong>Status:</strong> &#x27;InProgress&#x27;</p></li><li><p><strong>Body site:</strong> &#x27;Cheek structure (body structure)&#x27;</p></li><li><table><thead><tr><th>Performer</th><th>Name</th><th>Address</th><th>Identifications</th><th>Standard industry class code</th></tr></thead><tbody><tr><td>Performer 1</td><td>Amsterdam</td><td>Tt.Melissaweg 23, 1033 SP Amsterdam</td><td> 2.16.528.1.1007.3.3, 00002727,  , </td><td>Openbare apotheek</td></tr></tbody></table></li><li><p><strong>Author</strong> &#x27;Practitioner author with last name &#x27;van Cruijningen de Winter&#x27;.&#x27;</p></li></ul></div>"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.124.7.47519.4",
+            "value": "1230000001717"
+          }
+        ],
+        "status": "active",
+        "_status": {
+          "extension": [
+            {
+              "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/v3/ActStatus",
+                    "code": "active",
+                    "display": "Pending"
+                  }
+                ],
+                "text": "In afwachting van uitvoering"
+              }
+            }
+          ]
+        },
+        "intent": "plan",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "71388002",
+                "display": "Verrichting"
+              }
+            ],
+            "text": "Verrichting"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.2.4.3.120.5.3",
+              "code": "00068258",
+              "display": "excisie met biopt van huid"
+            }
+          ],
+          "text": "excisie met biopt van huid"
+        },
+        "subject": {
+          "reference": "Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+          "display": "Johan XXX_Helleman_Afblijven"
+        },
+        "occurrencePeriod": {
+          "start": "2022-10-12T00:00:00+02:00"
+        },
+        "requester": {
+          "agent": {
+            "extension": [
+              {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                "valueReference": {
+                  "reference": "PractitionerRole/9C88E9A5A974C3300853305D9E29C9D810F17F3214F962D013F82A57AB437063",
+                  "display": "attending physician"
+                }
+              }
+            ],
+            "reference": "Practitioner/0243a40b-bcd4-44c0-95dc-6b7717f3cb85",
+            "display": "Lisette van Cruijningen de Winter"
+          }
+        },
+        "performer": {
+          "reference": "Organization/2.16.528.1.1007.3.300002727",
+          "display": "Amsterdam"
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "60819002",
+                "display": "Cheek structure (body structure)"
+              }
+            ],
+            "text": "Cheek structure (body structure)"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://api.zorgplatform.online/Organization/2.16.528.1.1007.3.300002727",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "2.16.528.1.1007.3.300002727",
+        "meta": {
+          "profile": [
+            "http://fhir.nl/fhir/StructureDefinition/nl-core-organization"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Organization resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/ura</td><td>00002727</td></tr></tbody></table></li><li><p><strong>Type:</strong></p><table><tbody><tr><td>Openbare apotheek</td></tr></tbody></table></li><li><p><strong>Name:</strong> &#x27;Amsterdam&#x27;</p></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Tt.Melissaweg 23, 1033SP Amsterdam</td><td>Work</td><td>Werkadres</td><td></td></tr></tbody></table></li></ul></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.nl/fhir/NamingSystem/ura",
+            "value": "00002727"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.2.4.15.1060",
+                "code": "J8",
+                "display": "Openbare apotheek"
+              }
+            ],
+            "text": "Openbare apotheek"
+          }
+        ],
+        "name": "Amsterdam",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/v3/AddressUse",
+                      "code": "WP",
+                      "display": "Work Place"
+                    }
+                  ],
+                  "text": "Werkadres"
+                }
+              }
+            ],
+            "use": "work",
+            "line": [
+              "Tt.Melissaweg 23"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                    "valueString": "Tt.Melissaweg"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                    "valueString": "23"
+                  }
+                ]
+              }
+            ],
+            "city": "Amsterdam",
+            "postalCode": "1033SP"
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://api.zorgplatform.online/Practitioner/0243a40b-bcd4-44c0-95dc-6b7717f3cb85",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "0243a40b-bcd4-44c0-95dc-6b7717f3cb85",
+        "meta": {
+          "profile": [
+            "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Practitioner resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/agb-z</td><td>03123456</td></tr></tbody></table></li><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>Lisette (L.) van Cruijningen de Winter</td><td></td><td>Eigen geslachtsnaam gevolgd door geslachtsnaam partner</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Tt.Melissaweg, 1033SP Amsterdam (AMSTERDAM)</td><td>Work</td><td>Werkadres</td><td></td></tr></tbody></table></li></ul></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+            "value": "03123456"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                "valueCode": "NL4"
+              }
+            ],
+            "text": "Lisette L. van Cruijningen de Winter",
+            "family": "van Cruijningen de Winter",
+            "_family": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                  "valueString": "van"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                  "valueString": "Cruijningen"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                  "valueString": "de"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                  "valueString": "Winter"
+                }
+              ]
+            },
+            "given": [
+              "Lisette",
+              "L."
+            ],
+            "_given": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                    "valueCode": "CL"
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                    "valueCode": "IN"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/v3/AddressUse",
+                      "code": "WP",
+                      "display": "Work Place"
+                    }
+                  ],
+                  "text": "Werkadres"
+                }
+              }
+            ],
+            "use": "work",
+            "line": [
+              "Tt.Melissaweg"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                    "valueString": "Tt.Melissaweg"
+                  }
+                ]
+              }
+            ],
+            "city": "Amsterdam",
+            "district": "AMSTERDAM",
+            "postalCode": "1033SP"
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://api.zorgplatform.online/Practitioner/da026219-9732-40c4-a2b5-a1a15e821c82",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "da026219-9732-40c4-a2b5-a1a15e821c82",
+        "meta": {
+          "profile": [
+            "http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Practitioner resource:</h3><ul><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/agb-z</td><td>03123456</td></tr></tbody></table></li><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>Lisette (L.) van Cruijningen de Winter</td><td></td><td>Eigen geslachtsnaam gevolgd door geslachtsnaam partner</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Tt.Melissaweg, 1033SP Amsterdam (AMSTERDAM)</td><td>Work</td><td>Werkadres</td><td></td></tr></tbody></table></li></ul></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+            "value": "03123456"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                "valueCode": "NL4"
+              }
+            ],
+            "text": "Lisette L. van Cruijningen de Winter",
+            "family": "van Cruijningen de Winter",
+            "_family": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                  "valueString": "van"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                  "valueString": "Cruijningen"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                  "valueString": "de"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                  "valueString": "Winter"
+                }
+              ]
+            },
+            "given": [
+              "Lisette",
+              "L."
+            ],
+            "_given": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                    "valueCode": "CL"
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                    "valueCode": "IN"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/v3/AddressUse",
+                      "code": "WP",
+                      "display": "Work Place"
+                    }
+                  ],
+                  "text": "Werkadres"
+                }
+              }
+            ],
+            "use": "work",
+            "line": [
+              "Tt.Melissaweg"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                    "valueString": "Tt.Melissaweg"
+                  }
+                ]
+              }
+            ],
+            "city": "Amsterdam",
+            "district": "AMSTERDAM",
+            "postalCode": "1033SP"
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://api.zorgplatform.online/PractitionerRole/9C88E9A5A974C3300853305D9E29C9D810F17F3214F962D013F82A57AB437063",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "9C88E9A5A974C3300853305D9E29C9D810F17F3214F962D013F82A57AB437063",
+        "meta": {
+          "profile": [
+            "http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>PractitionerRole resource:</h3><ul><li><p><strong>Practitioner:</strong></p><table><thead><tr><th>Identifier</th><th>Display</th><th>Reference</th></tr></thead><tbody><tr><td></td><td>Lisette van Cruijningen de Winter</td><td>da026219-9732-40c4-a2b5-a1a15e821c82</td></tr></tbody></table></li><li><p><strong>Function:</strong></p><table><tbody><tr><td>Behandelend arts</td></tr></tbody></table></li><li><p><strong>Specialism:</strong> &#x27;Medisch specialisten, niet nader gespecificeerd&#x27;</p></li></ul></div>"
+        },
+        "practitioner": {
+          "reference": "Practitioner/da026219-9732-40c4-a2b5-a1a15e821c82",
+          "display": "Lisette van Cruijningen de Winter"
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.1.11.10267",
+                "code": "ATTPHYS",
+                "display": "attending physician"
+              }
+            ],
+            "text": "Behandelend arts"
+          }
+        ],
+        "specialty": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+                "code": "0300",
+                "display": "Medisch specialisten, niet nader gespecificeerd"
+              }
+            ],
+            "text": "Medisch specialisten, niet nader gespecificeerd"
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "https://api.zorgplatform.online/Patient/9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "9819C39260647B5DE61609CDF1FA1C434552D65014AFDEA2EB877A576B055DF1",
+        "meta": {
+          "profile": [
+            "http://fhir.nl/fhir/StructureDefinition/nl-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Patient resource:</h3><ul><li><p><strong>Names:</strong></p><table><thead><tr><th>Name</th><th>Period</th><th>Preferred display order</th></tr></thead><tbody><tr><td>Johan Johan (J.) XXX_Helleman_Afblijven</td><td></td><td>Eigen geslachtsnaam</td></tr></tbody></table></li><li><p><strong>Identification:</strong></p><table><thead><tr><th>System</th><th>Value</th></tr></thead><tbody><tr><td>http://fhir.nl/fhir/NamingSystem/bsn</td><td>999911120</td></tr></tbody></table></li><li><p><strong>Address:</strong></p><table><thead><tr><th>Address</th><th>Address type</th><th>Additional information</th><th>Period</th></tr></thead><tbody><tr><td>Knolweg 1000, 9999XA STITSWERD (HET HOGELAND, Netherlands (the))</td><td>Home</td><td>Officieel adres</td><td></td></tr></tbody></table></li><li><p><strong>Contact information:</strong></p><table><thead><tr><th>System</th><th>Use</th><th>Additional information</th><th>Value</th></tr></thead><tbody><tr><td>Phone</td><td>Mobile</td><td>Mobiel telefoonnummer</td><td>&#x2B;31612345678</td></tr><tr><td>Email</td><td></td><td></td><td>XXX_Helleman@hotmail.com</td></tr></tbody></table></li><li><p><strong>Gender:</strong> &#x27;Man&#x27;</p></li><li><p><strong>Birthdate:</strong> &#x27;1964-07-25&#x27;</p></li><li><p><strong>Deceased:</strong> &#x27;No&#x27;</p></li><li><p><strong>Marital status:</strong> &#x27;Gehuwd&#x27;</p></li><li><p><strong>Part of multiple birth:</strong> &#x27;No&#x27;</p></li></ul></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+            "value": "999911120"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                "valueCode": "NL1"
+              }
+            ],
+            "text": "Johan Johan J. XXX_Helleman_Afblijven",
+            "family": "XXX_Helleman_Afblijven",
+            "_family": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                  "valueString": "XXX_Helleman_Afblijven"
+                }
+              ]
+            },
+            "given": [
+              "Johan",
+              "Johan",
+              "J."
+            ],
+            "_given": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                    "valueCode": "BR"
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                    "valueCode": "CL"
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                    "valueCode": "IN"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "extension": [
+              {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/v3/AddressUse",
+                      "code": "MC",
+                      "display": "Mobile Phone"
+                    }
+                  ],
+                  "text": "Mobiel telefoonnummer"
+                }
+              }
+            ],
+            "system": "phone",
+            "value": "+31612345678",
+            "use": "mobile"
+          },
+          {
+            "system": "email",
+            "value": "XXX_Helleman@hotmail.com"
+          }
+        ],
+        "gender": "male",
+        "_gender": {
+          "extension": [
+            {
+              "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                    "code": "M",
+                    "display": "Male"
+                  }
+                ],
+                "text": "Man"
+              }
+            }
+          ]
+        },
+        "birthDate": "1964-07-25",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/v3/AddressUse",
+                      "code": "HP",
+                      "display": "Primary Home"
+                    }
+                  ],
+                  "text": "Officieel adres"
+                }
+              },
+              {
+                "url": "http://fhir.nl/fhir/StructureDefinition/nl-core-address-official",
+                "valueBoolean": true
+              }
+            ],
+            "use": "home",
+            "line": [
+              "Knolweg 1000"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                    "valueString": "Knolweg"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                    "valueString": "1000"
+                  }
+                ]
+              }
+            ],
+            "city": "STITSWERD",
+            "district": "HET HOGELAND",
+            "postalCode": "9999XA",
+            "country": "Netherlands (the)",
+            "_country": {
+              "extension": [
+                {
+                  "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "urn:iso:std:iso:3166",
+                        "code": "NL",
+                        "display": "Netherlands (the)"
+                      }
+                    ],
+                    "text": "Netherlands (the)"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v3/MaritalStatus",
+              "code": "M",
+              "display": "Married"
+            }
+          ],
+          "text": "Gehuwd"
+        },
+        "multipleBirthBoolean": false
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}
