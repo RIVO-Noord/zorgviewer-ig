@@ -9,7 +9,7 @@
 | Feedback verwerkt (Ja/Nee) |  | 
 
 
-Wijzigingenbeheer[](https://dev.azure.com/UMCG-MIT/Zorgviewer/_wiki/wikis/Zorgviewer.wiki/7051/Template-Functioneel-Ontwerp?anchor=versiebeheer)
+Wijzigingenbeheer
 ===========================================================================================================================================
 
 Meest recente wijziging bovenaan

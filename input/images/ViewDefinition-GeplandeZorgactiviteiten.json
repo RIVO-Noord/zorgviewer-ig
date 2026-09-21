@@ -165,18 +165,6 @@
               "value": "Toelichting"
             }
           ]
-        },
-        {
-          "path": "status",
-          "name": "(regelkleur)",
-          "description": "Actueel (active, requested, draft) = groene/actieve statuspil, Gepland (planned, accepted, received, in-progress) = geplande statuspil.",
-          "type": "code",
-          "tag": [
-            {
-              "name": "Zib element",
-              "value": "nvt"
-            }
-          ]
         }
       ],
       "forEach": "entry.resource.where((resourceType='ProcedureRequest' or resourceType='ServiceRequest') and (status='active' or status='draft' or status='requested' or status='received' or status='accepted' or status='in-progress' or status='planned'))"

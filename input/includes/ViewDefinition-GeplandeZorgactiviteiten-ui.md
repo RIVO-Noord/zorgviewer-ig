@@ -8,7 +8,6 @@
 <th>Activiteit</th>
 <th>Beoogde uitvoerder</th>
 <th>Status</th>
-<th>(regelkleur)</th>
 </tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
@@ -16,8 +15,7 @@
 <td>excisie met biopt van huid</td>
 <td>Amsterdam</td>
 <td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 <b>Anatomische locatie</b><br/>Cheek structure (body structure)<br/>
 <b>Aanvrager</b><br/>Lisette van Cruijningen de Winter<br/>
 <b>Ontvangende organisatie</b><br/>Amsterdam<br/>
@@ -29,8 +27,7 @@
 <td>Afspraak Dermatologie</td>
 <td></td>
 <td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 <b>Frequentie & instructies</b><br/>Naevus wang<br/>
 <b>Aanvrager</b><br/>Wit, G.Z.M. de, Chirurg<br/>
 <b>Toelichting</b><br/>Naevus wang<br/>
@@ -41,8 +38,7 @@
 <td>Phenolphthalein, stool</td>
 <td></td>
 <td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 <b>Indicatie</b><br/>Non-ST elevation (NSTEMI) myocardial infarction (CMS/HCC)<br/>
 <b>Aanvrager</b><br/>Physician Family Medicine, MD<br/>
 </td></tr>
@@ -52,8 +48,7 @@
 <td>MyChart BP Flowsheet</td>
 <td></td>
 <td>Actueel</td>
-<td>active</td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 <b>Aanvrager</b><br/>Physician Family Medicine, MD<br/>
 </td></tr>
 </tbody>

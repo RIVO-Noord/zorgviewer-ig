@@ -102,13 +102,5 @@
 <td>Toelichting</td>
 <td>Aanvullende opmerkingen of toelichting.</td>
 </tr>
-<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
-<tr style="background-color:#d6dce5">
-<td>(regelkleur)</td>
-<td><samp>status</samp></td>
-<td><code>code</code></td>
-<td>nvt</td>
-<td>Actueel (active, requested, draft) = groene/actieve statuspil, Gepland (planned, accepted, received, in-progress) = geplande statuspil.</td>
-</tr>
 </tbody>
 </table>
