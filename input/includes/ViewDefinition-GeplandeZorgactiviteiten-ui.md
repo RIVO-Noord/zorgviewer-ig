@@ -12,7 +12,7 @@
 </tr>
 <tr><td>+</td>
 <td>Chipsoft</td>
-<td>11-10-2022, 22:00:00</td>
+<td>12-10-2022, 00:00:00</td>
 <td>excisie met biopt van huid</td>
 <td>Amsterdam</td>
 <td>Actueel</td>
@@ -25,7 +25,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic2</td>
-<td>24-3-2022, 23:00:00</td>
+<td>25-3-2022, 00:00:00</td>
 <td>Afspraak Dermatologie</td>
 <td></td>
 <td>Actueel</td>
@@ -37,7 +37,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
-<td>21-4-2020, 05:00:00</td>
+<td>21-4-2020, 07:00:00</td>
 <td>Phenolphthalein, stool</td>
 <td></td>
 <td>Actueel</td>
@@ -48,7 +48,7 @@
 </td></tr>
 <tr><td>+</td>
 <td>Epic</td>
-<td>3-3-2019, 06:00:00</td>
+<td>3-3-2019, 07:00:00</td>
 <td>MyChart BP Flowsheet</td>
 <td></td>
 <td>Actueel</td>
