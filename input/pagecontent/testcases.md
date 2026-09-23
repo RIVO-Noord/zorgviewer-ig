@@ -318,9 +318,9 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 | Afwijkend ademhalingspatroon   | Nee              |
 {: .grid .table-striped}
 
-#### Voedingsadvies
+#### Voeding en vocht
 
-| Testpatiënt 1 | Voedingsadvies |
+| Testpatiënt 1 | Voeding en vocht |
 | ------------- | ----------------------- |
 | Datum         | 11-07-2026              |
 | Dieettype     | Energie verrijkt        |
@@ -375,6 +375,19 @@ Gebruik de normale workflow voor het genereren van laboratoriumuitslagen.
 | Status        | Rookt dagelijks         | 
 | Hoeveelheid/Antwoord | 350 g per week   | 
 | Toelichting   | Probeert te stoppen. Thuis wordt ook door partner gerookt. | 
+{: .grid .table-striped}
+
+#### Mobiliteit
+
+| Testpatiënt 1 | Mobiliteit |
+| ------------- | ----------------------- |
+| Datum         | {Vandaag}               |
+| Lopen         | Hulp nodig              | 
+| Traplopen     | Volledig afhankelijk    | 
+| Houding veranderen | Onafhankelijk      | 
+| Houding handhaven | Onafhankelijk       | 
+| Uitvoeren transfer | Hulp nodig         | 
+| Toelichting   | Rollator is eigen bezit. | 
 {: .grid .table-striped}
 
 ### Testpatiënt 2
