@@ -2,7 +2,7 @@
 <b>Alerts / Waarschuwingen</b>
 <table class="grid">
 <tbody>
-<tr><th>&gt;&lt;</th>
+<tr><th></th>
 <th>Bron</th>
 <th>Datum</th>
 <th>Voor(1)</th>
@@ -11,7 +11,7 @@
 <th>Categorie</th>
 <th>Status</th>
 </tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Nedap</td>
 <td>18-12-2025</td>
 <td></td>
@@ -21,7 +21,7 @@
 <td>active</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Nedap</td>
 <td>18-12-2025</td>
 <td></td>
@@ -31,7 +31,7 @@
 <td>active</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Nedap</td>
 <td>18-12-2025</td>
 <td></td>
@@ -41,7 +41,7 @@
 <td>active</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft-OTH</td>
 <td>19-7-2024</td>
 <td>MRSA: Bewezen dragerschap</td>
@@ -51,7 +51,7 @@
 <td>active</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Nedap</td>
 <td>9-3-2023 - 17-12-2025</td>
 <td></td>
@@ -61,7 +61,7 @@
 <td>inactive</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Nexus</td>
 <td>16-5-2022</td>
 <td></td>
@@ -71,7 +71,7 @@
 <td>active</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Epic</td>
 <td>10-5-2022, 22:55:17 - 22:55:43</td>
 <td></td>
@@ -81,7 +81,7 @@
 <td>inactive</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Nedap</td>
 <td>1-2-2021 - 28-2-2021</td>
 <td></td>
@@ -91,7 +91,7 @@
 <td>inactive</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft-OTH</td>
 <td>15-4-2019</td>
 <td>BRMO: Bewezen dragerschap</td>
@@ -101,7 +101,7 @@
 <td>active</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>1-6-2010</td>
 <td></td>

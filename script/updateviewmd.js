@@ -293,7 +293,7 @@ function extractExampleRows(select, allExtractedRows) {
 
 function doExampleRows(allExtractedRows, md_ui) {
     // Add column names for UI wireframe
-    md_ui.push("<tr><th>&gt;&lt;</th>");
+    md_ui.push("<tr><th></th>");
     allExtractedRows[0].forEach(column => {
         if (column.name.charAt(0) != '+' && column.name != "(Groep)") {
             md_ui.push(`<th>${column.name}</th>`);
@@ -394,7 +394,7 @@ function doExampleRow(extractedData, md_ui) {
     }
 
     const detailcolcount = extractedData.filter(column => column.name.charAt(0) == '+').length;
-    md_ui.push(`<tr><td>${detailcolcount>0?'&#8964;':'&#8250;'}</td>`);
+    md_ui.push(`<tr><td>${detailcolcount>0?'&#9660;':''}</td>`);
     // add column values
     extractedData.forEach((column, idx) => {
         if (column.name.charAt(0) != '+' && column.name != "(Groep)") {

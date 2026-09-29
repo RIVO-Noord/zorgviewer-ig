@@ -2,7 +2,7 @@
 <b>Correspondentie</b>
 <table class="grid">
 <tbody>
-<tr><th>&gt;&lt;</th>
+<tr><th></th>
 <th>Bron</th>
 <th>Datum</th>
 <th>Beschrijving</th>
@@ -11,7 +11,7 @@
 <th>(MimeType)</th>
 <th>(Type)</th>
 </tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>20-8-2025</td>
 <td>Ourmind .docx</td>
@@ -21,7 +21,7 @@
 <td>51852-2</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>20-8-2025</td>
 <td>Ourmind </td>
@@ -31,7 +31,7 @@
 <td>51852-2</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>20-8-2025</td>
 <td>Ourmind </td>
@@ -41,7 +41,7 @@
 <td>51852-2</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>20-8-2025</td>
 <td>Ourmind </td>
@@ -51,7 +51,7 @@
 <td>51852-2</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>20-8-2025</td>
 <td>Ourmind </td>
@@ -61,7 +61,7 @@
 <td>51852-2</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>4-8-2025</td>
 <td>Blanco brief WZA</td>
@@ -71,7 +71,7 @@
 <td>51852-2</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>28-7-2025</td>
 <td>Medisch beeldvormende techniek per onderzoek</td>
@@ -81,7 +81,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Epic-PZP</td>
 <td>23-7-2025</td>
 <td>Artsenbrief, Proactieve zorgplanning</td>
@@ -91,7 +91,7 @@
 <td>Artsenbrief</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>21-7-2025</td>
 <td>Poliklinische consultbrief (OK+Brief) UMCU</td>
@@ -101,7 +101,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>17-7-2025</td>
 <td>Medisch beeldvormende techniek per onderzoek</td>
@@ -111,7 +111,7 @@
 <td>51852-2</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>5-6-2025</td>
 <td>Blanco brief WZA</td>
@@ -121,7 +121,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>5-6-2025</td>
 <td>Blanco brief</td>
@@ -131,7 +131,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>23-4-2025</td>
 <td>Verwijsbrief</td>
@@ -141,7 +141,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>23-4-2025</td>
 <td>Letter</td>
@@ -151,7 +151,7 @@
 <td>51852-2</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>18-12-2024</td>
 <td>Radiologie</td>
@@ -161,7 +161,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>18-12-2024</td>
 <td>Verwijsbrief</td>
@@ -171,7 +171,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>11-11-2024</td>
 <td>Verwijsbrief</td>
@@ -181,7 +181,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>24-4-2024</td>
 <td>Verwijsbrief</td>
@@ -191,7 +191,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>24-4-2024</td>
 <td>Verwijsbrief</td>
@@ -201,7 +201,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>24-4-2024</td>
 <td>Verwijsbrief</td>
@@ -211,7 +211,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>24-4-2024</td>
 <td>Verwijsbrief</td>
@@ -221,7 +221,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>23-4-2024</td>
 <td>Verwijsbrief</td>
@@ -231,7 +231,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>22-8-2022</td>
 <td>Letter</td>
@@ -241,7 +241,7 @@
 <td>51852-2</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>22-8-2022</td>
 <td>Brief zorginstelling</td>
@@ -251,7 +251,7 @@
 <td>68609-7</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>12-5-2022</td>
 <td>test</td>
@@ -261,7 +261,7 @@
 <td>51852-2</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>&#8250;</td>
+<tr><td></td>
 <td>Epic</td>
 <td>15-12-2021</td>
 <td>Patiëntenbrief, Brief (uit)</td>
