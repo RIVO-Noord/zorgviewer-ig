@@ -10,7 +10,7 @@
 <th>Naam</th>
 <th>Status</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Sanday</td>
 <td>16-4-2026</td>
 <td></td>
@@ -19,7 +19,7 @@
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Sanday</td>
 <td>16-4-2026</td>
 <td></td>
@@ -28,7 +28,7 @@
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>4-3-2026</td>
 <td>4-3-2026</td>
@@ -37,7 +37,7 @@
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Sanday</td>
 <td>15-12-2025</td>
 <td></td>
@@ -46,7 +46,7 @@
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Sanday</td>
 <td>4-11-2025</td>
 <td></td>
@@ -55,7 +55,7 @@
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Sanday</td>
 <td>21-8-2025</td>
 <td></td>
@@ -64,7 +64,7 @@
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Sanday</td>
 <td>7-8-2025</td>
 <td></td>
@@ -73,7 +73,7 @@
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Sanday</td>
 <td>1-4-2025</td>
 <td></td>
@@ -82,7 +82,7 @@
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Sanday</td>
 <td>13-2-2025</td>
 <td>14-10-2025</td>
@@ -91,7 +91,7 @@
 <td>Afgesloten</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>15-11-2012</td>
 <td>15-11-2012</td>
@@ -100,7 +100,7 @@
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>10-8-2012</td>
 <td>4-3-2026</td>
@@ -109,7 +109,7 @@
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>20-4-2011</td>
 <td>20-4-2011</td>

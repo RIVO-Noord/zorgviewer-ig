@@ -12,7 +12,7 @@
 <th>(status)</th>
 </tr>
 <tr><td colspan=10><b>kunstmatige beademing</b></td></tr>
-<tr><td>+</td>
+<tr><td>&#8964;</td>
 <td>CGM</td>
 <td>20-2-2026</td>
 <td>Kunstmatige beademing</td>
@@ -24,7 +24,7 @@
 <b>Toelichting</b><br/>Patiënt wenst geen kunstmatige beademing.<br/>
 <b>Categorie</b><br/>Behandelingsinstructies (artefact opnemen)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8964;</td>
 <td>Nexus</td>
 <td>5-5-2023</td>
 <td>Kunstmatige beademing</td>
@@ -36,7 +36,7 @@
 <b>Toelichting</b><br/>testje<br/>
 <b>Categorie</b><br/>Behandelingsinstructies (artefact opnemen)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8964;</td>
 <td>Chipsoft</td>
 <td>30-9-2022</td>
 <td>Artificial respiration (procedure)</td>
@@ -47,7 +47,7 @@
 </tr><tr><td></td><td colspan=8>
 <b>Categorie</b><br/>Treatment instructions<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8964;</td>
 <td>Epic</td>
 <td>22-3-2022</td>
 <td>kunstmatige beademing (verrichting)</td>

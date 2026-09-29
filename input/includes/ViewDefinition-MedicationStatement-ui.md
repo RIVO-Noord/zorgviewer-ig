@@ -10,7 +10,7 @@
 <th>Dosering & instructies</th>
 <th>Toedieningsweg</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#8964;</td>
 <td>EPS</td>
 <td></td>
 <td></td>
@@ -19,7 +19,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8964;</td>
 <td>Epic</td>
 <td></td>
 <td></td>
@@ -29,7 +29,7 @@
 </tr><tr><td></td><td colspan=6>
 <b>Registratiedatum</b><br/>15-3-2018<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8964;</td>
 <td>MP9</td>
 <td>11-11-2022</td>
 <td></td>

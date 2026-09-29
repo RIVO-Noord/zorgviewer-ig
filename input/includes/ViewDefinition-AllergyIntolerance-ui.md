@@ -15,7 +15,7 @@
 <th>StatusCS</th>
 <th>(VStatus)</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>3-3-2026</td>
 <td>VERAPAMIL</td>
@@ -29,7 +29,7 @@
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Sanday</td>
 <td>7-8-2025</td>
 <td>HUISSTOFMIJTENALLERGEEN</td>
@@ -43,7 +43,7 @@
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Chipsoft</td>
 <td>12-11-2019</td>
 <td>ALLE NSAID'S (INCL. SALICYLATEN)</td>
@@ -57,7 +57,7 @@
 <td>unconfirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Epic</td>
 <td>3-12-2017</td>
 <td>PINDA</td>
@@ -71,7 +71,7 @@
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Nedap</td>
 <td>8-11-2008</td>
 <td>Bee venom - text</td>
@@ -85,7 +85,7 @@
 <td>unconfirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Nedap</td>
 <td>8-11-2008</td>
 <td>Bee venom</td>
@@ -99,7 +99,7 @@
 <td>unconfirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Nedap</td>
 <td>8-11-2008</td>
 <td>Bee venom</td>
@@ -113,7 +113,7 @@
 <td>unconfirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>2-6-1998</td>
 <td>PENICILLINES</td>
@@ -127,7 +127,7 @@
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Nedap</td>
 <td>4-3-1932</td>
 <td>Haar/schilfers van dieren</td>
@@ -141,7 +141,7 @@
 <td>unconfirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Nedap</td>
 <td></td>
 <td>Lactose</td>
@@ -155,7 +155,7 @@
 <td>unconfirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Nedap</td>
 <td></td>
 <td>Amoxicilline</td>
@@ -169,7 +169,7 @@
 <td>unconfirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Nexus</td>
 <td>8-11-2008</td>
 <td>Bijengif</td>
@@ -183,7 +183,7 @@
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>8-11-2008</td>
 <td>INSECTENALLERGEEN</td>
@@ -197,7 +197,7 @@
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>EPS</td>
 <td>9-8-1977</td>
 <td>Allergy to substance</td>
@@ -211,7 +211,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>EPS</td>
 <td>9-8-1977</td>
 <td>Shellfish</td>

@@ -11,7 +11,7 @@
 <th>Type</th>
 <th>Reden</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>15-7-2026, 10:00:00 - 10:15:00</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
@@ -21,7 +21,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>WZA</td>
 <td>13-7-2026, 15:00:00 - 15:05:00</td>
 <td>M.C. Gordinou de Gouberville<br/>Onbekende functiecode.</td>
@@ -31,7 +31,7 @@
 <td>Niet beschikbaar</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>4-3-2026</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
@@ -41,7 +41,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>26-2-2026</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
@@ -51,7 +51,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>30-9-2025</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
@@ -61,7 +61,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Epic</td>
 <td>27-3-2025, 17:10:00 - 19:23:00</td>
 <td>E. Sieders, Chirurg<br/>DJA. de Groot, Internist Oncoloog<br/>A. (van Donderen-) Vrieze<br/>...</td>
@@ -71,7 +71,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>11-3-2025</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
@@ -81,7 +81,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Sanday</td>
 <td>5-7-2024, 00:00:00</td>
 <td></td>
@@ -91,7 +91,7 @@
 <td>Keelpijn</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Chipsoft</td>
 <td>12-10-2022, 11:30:00 - 11:40:00</td>
 <td></td>
@@ -101,7 +101,7 @@
 <td>Niet beschikbaar</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Epic</td>
 <td>20-4-2018, 11:10:00 - 11:15:00</td>
 <td>G. Dijkstra, MDL arts</td>
@@ -111,7 +111,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>15-11-2012</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
@@ -121,7 +121,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Nexus</td>
 <td>16-8-2012, 12:22:00 - 19-8-2012, 13:22:00</td>
 <td>Wit<br/>Orthopedie</td>
@@ -131,7 +131,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Chipsoft</td>
 <td>15-8-2012, 00:00:00 - 15-8-2012, 15:04:00</td>
 <td>J.H.R Peters<br/>Onbekende functiecode.</td>
@@ -141,7 +141,7 @@
 <td>other</td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>10-8-2012</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
@@ -151,7 +151,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>20-4-2011</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
@@ -161,7 +161,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>CGM</td>
 <td>20-4-2011</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>

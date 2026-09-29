@@ -9,7 +9,7 @@
 <th>Consistentie</th>
 <th>Toelichting</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Chipsoft</td>
 <td>30-9-2022</td>
 <td>Energieverrijkt</td>
@@ -17,7 +17,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=5>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Nictiz</td>
 <td>1-1-2018</td>
 <td>Energie verrijkt</td>

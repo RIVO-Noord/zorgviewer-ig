@@ -393,7 +393,8 @@ function doExampleRow(extractedData, md_ui) {
         return;
     }
 
-    md_ui.push("<tr><td>+</td>");
+    const detailcolcount = extractedData.filter(column => column.name.charAt(0) == '+').length;
+    md_ui.push(`<tr><td>${detailcolcount>0?'&#8964;':'&#8250;'}</td>`);
     // add column values
     extractedData.forEach((column, idx) => {
         if (column.name.charAt(0) != '+' && column.name != "(Groep)") {

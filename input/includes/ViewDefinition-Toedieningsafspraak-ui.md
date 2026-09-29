@@ -11,7 +11,7 @@
 <th>Toedieningsweg</th>
 <th>Stop type</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#8964;</td>
 <td>MP9</td>
 <td>11-11-2022</td>
 <td></td>

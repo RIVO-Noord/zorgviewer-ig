@@ -8,28 +8,28 @@
 <th>Woningtype</th>
 <th>Toelichting</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Chipsoft</td>
 <td>30-9-2022</td>
 <td>Eengezinswoning</td>
 <td></td>
 </tr><tr><td></td><td colspan=4>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Epic</td>
 <td></td>
 <td>eengezinswoning</td>
 <td></td>
 </tr><tr><td></td><td colspan=4>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Nedap</td>
 <td></td>
 <td>Bovenwoning</td>
 <td>2 hoog - traplift aanwezig</td>
 </tr><tr><td></td><td colspan=4>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Nictiz</td>
 <td></td>
 <td>Eengezinswoning</td>

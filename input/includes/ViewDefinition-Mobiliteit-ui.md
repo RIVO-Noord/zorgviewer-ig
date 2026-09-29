@@ -12,7 +12,7 @@
 <th>Uitvoeren transfer</th>
 <th>Toelichting</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#8250;</td>
 <td>Nictiz</td>
 <td></td>
 <td>Needs help with walking</td>
