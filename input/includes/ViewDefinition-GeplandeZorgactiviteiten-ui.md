@@ -68,5 +68,24 @@
 <b>Aanvrager</b><br/>Wit, G.Z.M. de, Chirurg<br/>
 <b>Toelichting</b><br/>Naevus wang<br/>
 </td></tr>
+<tr><td>&#9660;</td>
+<td>Epic</td>
+<td>21-4-2020, 07:00:00</td>
+<td>Phenolphthalein, stool</td>
+<td></td>
+<td>Actueel</td>
+</tr><tr><td></td><td colspan=5>
+<b>Indicatie</b><br/>Non-ST elevation (NSTEMI) myocardial infarction (CMS/HCC)<br/>
+<b>Aanvrager</b><br/>Physician Family Medicine, MD<br/>
+</td></tr>
+<tr><td>&#9660;</td>
+<td>Epic</td>
+<td>3-3-2019, 07:00:00</td>
+<td>MyChart BP Flowsheet</td>
+<td></td>
+<td>Actueel</td>
+</tr><tr><td></td><td colspan=5>
+<b>Aanvrager</b><br/>Physician Family Medicine, MD<br/>
+</td></tr>
 </tbody>
 </table>
