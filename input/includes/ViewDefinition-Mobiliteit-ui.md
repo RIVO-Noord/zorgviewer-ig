@@ -2,7 +2,7 @@
 <b>Mobiliteit</b>
 <table class="grid">
 <tbody>
-<tr><th>&gt;&lt;</th>
+<tr><th></th>
 <th>Bron</th>
 <th>Datum</th>
 <th>Lopen</th>
@@ -12,7 +12,7 @@
 <th>Uitvoeren transfer</th>
 <th>Toelichting</th>
 </tr>
-<tr><td>+</td>
+<tr><td></td>
 <td>Nictiz</td>
 <td></td>
 <td>Needs help with walking</td>

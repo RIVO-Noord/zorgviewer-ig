@@ -293,9 +293,9 @@ function extractExampleRows(select, allExtractedRows) {
 
 function doExampleRows(allExtractedRows, md_ui) {
     // Add column names for UI wireframe
-    md_ui.push("<tr><th>&gt;&lt;</th>");
+    md_ui.push("<tr><th></th>");
     allExtractedRows[0].forEach(column => {
-        if (column.name.charAt(0) != '+') {
+        if (column.name.charAt(0) != '+' && column.name != "(Groep)") {
             md_ui.push(`<th>${column.name}</th>`);
         }
     });
@@ -393,16 +393,17 @@ function doExampleRow(extractedData, md_ui) {
         return;
     }
 
-    md_ui.push("<tr><td>+</td>");
+    const detailcolcount = extractedData.filter(column => column.name.charAt(0) == '+').length;
+    md_ui.push(`<tr><td>${detailcolcount>0?'&#9660;':''}</td>`);
     // add column values
     extractedData.forEach((column, idx) => {
-        if (column.name.charAt(0) != '+') {
+        if (column.name.charAt(0) != '+' && column.name != "(Groep)") {
             let displayValue = extractedData[idx].value;
             if ((column.type == "date" || column.type == "dateTime") && displayValue) {
                 const date = new Date(displayValue);
                 displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'CET' });
             }
-            else if (column.type == "Period" && displayValue) { // special case for Period; display as start - end
+            else if ((column.type == "Period" || column.type == "Period:date") && displayValue) { // special case for Period; display as start - end
                 const period = displayValue.split(' - ');
                 const dateStart = new Date(period[0]);
                 const dateEnd = period[1] ? new Date(period[1]) : null;
@@ -412,9 +413,10 @@ function doExampleRow(extractedData, md_ui) {
                     dateStart.getUTCMonth() === dateEnd.getUTCMonth() &&
                     dateStart.getUTCDate() === dateEnd.getUTCDate();
 
-                // Check if dates are set to midnight (no time set)
-                const startIsMidnight = dateStart.getUTCHours() === 0 && dateStart.getUTCMinutes() === 0 && dateStart.getUTCSeconds() === 0;
-                const endIsMidnight = dateEnd && dateEnd.getUTCHours() === 0 && dateEnd.getUTCMinutes() === 0 && dateEnd.getUTCSeconds() === 0;
+                // Check if dates are set to midnight (don't show time)
+                // Also hide time if we are dealing with a Period:date type, which is always date-only
+                const startIsMidnight = column.type == "Period:date" || dateStart.getUTCHours() === 0 && dateStart.getUTCMinutes() === 0 && dateStart.getUTCSeconds() === 0;
+                const endIsMidnight = column.type == "Period:date" || dateEnd && dateEnd.getUTCHours() === 0 && dateEnd.getUTCMinutes() === 0 && dateEnd.getUTCSeconds() === 0;
 
                 // Format start display
                 const displayStart = startIsMidnight

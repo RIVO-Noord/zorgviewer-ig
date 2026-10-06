@@ -24,7 +24,7 @@
               "path": "onsetPeriod.start | onsetDateTime",
               "name": "Datum",
               "description": "Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn",
-              "type": "dateTime",
+              "type": "date",
               "tag": [
                 {
                   "name": "Zib element",
@@ -79,21 +79,6 @@
               ]
             },
             {
-              "path": "''",
-              "name": "+Episode-naam",
-              "type": "string"
-            },
-            {
-              "path": "''",
-              "name": "+Episode-status",
-              "type": "string"
-            },
-            {
-              "path": "''",
-              "name": "+Episode-datum",
-              "type": "Period"
-            },
-            {
               "path": "clinicalStatus",
               "name": "(regelkleur)",
               "description": "Actueel (<code>active,recurrence</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>inactive,remission,resolved</code>) = grijze rijen",
@@ -126,7 +111,7 @@
               "path": "diagnosis.condition.resolve().select(onsetPeriod.start | onsetDateTime)",
               "name": "Datum",
               "description": "Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn",
-              "type": "dateTime",
+              "type": "date",
               "tag": [
                 {
                   "name": "Zib element",
@@ -146,25 +131,14 @@
               ]
             },
             {
-              "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString",
-              "name": "+Concern",
-              "type": "string",
-              "tag": [
-                {
-                  "name": "Zib element",
-                  "value": "ZorgEpisodeNaam"
-                }
-              ]
-            },
-            {
-              "path": "status.lookup('ProbleemStatus').display",
+              "path": "diagnosis.condition.resolve().clinicalStatus.lookup('ProbleemStatus').display",
               "name": "Status",
               "description": "Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a>",
               "type": "code",
               "tag": [
                 {
                   "name": "Zib element",
-                  "value": "nvt"
+                  "value": "ProbleemStatus"
                 }
               ]
             },
@@ -181,15 +155,9 @@
               ]
             },
             {
-              "path": "diagnosis.condition.resolve().note.text",
-              "name": "+Toelichting",
-              "type": "string",
-              "tag": [
-                {
-                  "name": "Zib element",
-                  "value": "Probleem/ Toelichting"
-                }
-              ]
+              "path": "period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
+              "name": "+Episode-datum",
+              "type": "Period:date"
             },
             {
               "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString | extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-Title').valueString",
@@ -205,9 +173,15 @@
               "type": "string"
             },
             {
-              "path": "period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
-              "name": "+Episode-datum",
-              "type": "Period"
+              "path": "diagnosis.condition.resolve().note.text",
+              "name": "+Toelichting",
+              "type": "string",
+              "tag": [
+                {
+                  "name": "Zib element",
+                  "value": "Probleem/ Toelichting"
+                }
+              ]
             },
             {
               "path": "diagnosis.condition.resolve().clinicalStatus",
@@ -217,7 +191,7 @@
               "tag": [
                 {
                   "name": "Zib element",
-                  "value": "nvt"
+                  "value": "ProbleemStatus"
                 }
               ]
             }

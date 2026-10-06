@@ -7,7 +7,7 @@
 |Versie|Datum|Changes|
 |---|---|---|
 |1.26.0|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.25.0...HEAD)|
-|1.25.0|current|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.24.0...1.25.0)|
+|1.25.0|7-sep-2026|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.24.0...1.25.0)|
 |1.24.0|27-mei-2026|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.23.0...1.24.0)|
 |1.23.0|30-mar-2026|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.22.0...1.23.0)|
 |1.22.0|12-jan-2026|[Detail wijzigingen](https://github.com/RIVO-Noord/zorgviewer-ig/compare/1.21.0-sprint70...1.22.0)|

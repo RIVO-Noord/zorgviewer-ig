@@ -2,7 +2,7 @@
 <b>Toedieningsafspraak</b>
 <table class="grid">
 <tbody>
-<tr><th>&gt;&lt;</th>
+<tr><th></th>
 <th>Bron</th>
 <th>Start</th>
 <th>Eind</th>
@@ -11,7 +11,7 @@
 <th>Toedieningsweg</th>
 <th>Stop type</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>MP9</td>
 <td>11-11-2022</td>
 <td></td>

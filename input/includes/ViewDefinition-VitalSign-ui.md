@@ -2,7 +2,7 @@
 <b>Vitale gegevens</b>
 <table class="grid">
 <tbody>
-<tr><th>&gt;&lt;</th>
+<tr><th></th>
 <th>Bron</th>
 <th>Datum</th>
 <th>Meting</th>
@@ -10,10 +10,9 @@
 <th>Waarde componenten</th>
 <th>Waarde componenten1</th>
 <th>Uitvoerder</th>
-<th>(Groep)</th>
 </tr>
 <tr><td colspan=14><b>Ademhaling</b></td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Nedap</td>
 <td>18-3-2026</td>
 <td>respiratoire evaluatie</td>
@@ -21,12 +20,11 @@
 <td></td>
 <td>40 /min</td>
 <td></td>
-<td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Context</b><br/>normaal ademhalingspatroon<br/>oppervlakkige ademhaling (bevinding)<br/>
 <b>Toelichting</b><br/>De ademhaling lijkt oppervlakkiger dan de vorige meting.<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>20-8-2025</td>
 <td>zuurstofsaturatie (pulsoximeter)</td>
@@ -34,11 +32,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#2680 zuurstofsaturatie (pulsoximeter)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>13-8-2025</td>
 <td>SpO2</td>
@@ -46,11 +43,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#2708-6 Oxygen saturation in Arterial blood<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>25-7-2025</td>
 <td>Ademfreq.</td>
@@ -58,11 +54,10 @@
 <td></td>
 <td></td>
 <td>P Havelaar</td>
-<td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>25-7-2025</td>
 <td>SpO2</td>
@@ -70,11 +65,10 @@
 <td></td>
 <td></td>
 <td>P Havelaar</td>
-<td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#2708-6 Oxygen saturation in Arterial blood<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>24-7-2025</td>
 <td>Ademfreq.</td>
@@ -82,11 +76,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>24-7-2025</td>
 <td>SpO2</td>
@@ -94,11 +87,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#2708-6 Oxygen saturation in Arterial blood<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Nedap</td>
 <td>17-7-2025</td>
 <td>respiratoire evaluatie</td>
@@ -106,11 +98,10 @@
 <td></td>
 <td>20 /min</td>
 <td></td>
-<td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Context</b><br/>normaal ademhalingspatroon<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Nedap</td>
 <td>20-6-2025</td>
 <td>respiratoire evaluatie</td>
@@ -118,12 +109,11 @@
 <td></td>
 <td>123 /min</td>
 <td></td>
-<td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Context</b><br/>normaal ademhalingspatroon<br/>
 <b>Toelichting</b><br/>zonder performer<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Nedap</td>
 <td>30-3-2025</td>
 <td>respiratoire evaluatie</td>
@@ -131,12 +121,11 @@
 <td></td>
 <td>12 /min</td>
 <td></td>
-<td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Context</b><br/>normaal ademhalingspatroon<br/>
 <b>Toelichting</b><br/>erer<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>10-11-2024</td>
 <td>Respiratory rate</td>
@@ -144,11 +133,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#9279-1 Respiratory rate<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>5-11-2023</td>
 <td>Respiratory rate</td>
@@ -156,12 +144,11 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Ademhaling</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#9279-1 Respiratory rate<br/>
 </td></tr>
 <tr><td colspan=14><b>Bloeddruk</b></td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>CGM</td>
 <td>4-3-2026</td>
 <td>diastolische bloeddruk</td>
@@ -169,12 +156,11 @@
 <td></td>
 <td></td>
 <td>Pharmeon acceptatie zorgverlener</td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8462-4 Diastolic blood pressure<br/>
 <b>Meting</b><br/>NHG45#1740 diastolische bloeddruk<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>CGM</td>
 <td>4-3-2026</td>
 <td>systolische bloeddruk</td>
@@ -182,12 +168,11 @@
 <td></td>
 <td></td>
 <td>Pharmeon acceptatie zorgverlener</td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8480-6 Systolic blood pressure<br/>
 <b>Meting</b><br/>NHG45#1744 systolische bloeddruk<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>20-8-2025</td>
 <td>diastolische bloeddruk</td>
@@ -195,11 +180,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#1740 diastolische bloeddruk<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>20-8-2025</td>
 <td>systolische bloeddruk</td>
@@ -207,11 +191,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#1744 systolische bloeddruk<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>14-8-2025</td>
 <td>RR</td>
@@ -219,14 +202,13 @@
 <td>116/67 mm[Hg]</td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Methode</b><br/>Non-invasive<br/>
 <b>MeetLocatie</b><br/>structuur van linker bovenbeen (lichaamsstructuur)<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 <b>Context</b><br/>staande positie (bevinding)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>13-8-2025</td>
 <td>RR</td>
@@ -234,14 +216,13 @@
 <td>114/65 mm[Hg]</td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Methode</b><br/>Non-invasive<br/>
 <b>MeetLocatie</b><br/>gehele rechter onderste extremiteit (lichaamsstructuur)<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 <b>Context</b><br/>zittende positie (bevinding)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>12-8-2025</td>
 <td>RR</td>
@@ -249,14 +230,13 @@
 <td>113/64 mm[Hg]</td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Methode</b><br/>Non-invasive<br/>
 <b>MeetLocatie</b><br/>gehele linker bovenarm (lichaamsstructuur)<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 <b>Context</b><br/>liggende positie (bevinding)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>7-8-2025</td>
 <td>diastolische bloeddruk</td>
@@ -264,11 +244,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#1740 diastolische bloeddruk<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>7-8-2025</td>
 <td>systolische bloeddruk</td>
@@ -276,11 +255,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#1744 systolische bloeddruk<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>25-7-2025</td>
 <td>RR</td>
@@ -288,12 +266,11 @@
 <td>112/63 mm[Hg]</td>
 <td></td>
 <td>P Havelaar</td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Methode</b><br/>Non-invasive<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>24-7-2025</td>
 <td>RR</td>
@@ -301,14 +278,13 @@
 <td>110/60 mm[Hg]</td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Methode</b><br/>Non-invasive<br/>
 <b>MeetLocatie</b><br/>gehele rechter bovenarm (lichaamsstructuur)<br/>
 <b>Meting</b><br/>LOINC#55284-4 Blood pressure systolic and diastolic<br/>
 <b>Context</b><br/>gekantelde positie (bevinding)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>10-11-2024</td>
 <td>Diastolic Blood Pressure</td>
@@ -316,11 +292,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8462-4 Diastolic Blood Pressure<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>10-11-2024</td>
 <td>Systolic Blood Pressure</td>
@@ -328,11 +303,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8480-6 Systolic Blood Pressure<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>5-11-2023</td>
 <td>Diastolic Blood Pressure</td>
@@ -340,11 +314,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8462-4 Diastolic Blood Pressure<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>5-11-2023</td>
 <td>Systolic Blood Pressure</td>
@@ -352,11 +325,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8480-6 Systolic Blood Pressure<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>3-8-2020</td>
 <td>Bloeddruk</td>
@@ -364,11 +336,10 @@
 <td>100/60 mm[Hg]</td>
 <td></td>
 <td>C Ooms</td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#85354-9 Blood pressure panel with all children optional<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Chipsoft</td>
 <td>7-2-2013</td>
 <td>Blood pressure panel with all children optional</td>
@@ -376,15 +347,14 @@
 <td>108/56/73/73 mm[Hg]</td>
 <td></td>
 <td></td>
-<td>Bloeddruk</td>
 </tr><tr><td></td><td colspan=8>
 <b>Methode</b><br/>Niet-invasief<br/>
 <b>MeetLocatie</b><br/>Linker bovenarm<br/>
 <b>Meting</b><br/>LOINC#85354-9 Blood pressure panel with all children optional<br/>
-<b>Context</b><br/>Sitting position<br/>Sitting position<br/>
+<b>Context</b><br/>Zittende positie<br/>Zittende positie<br/>
 </td></tr>
 <tr><td colspan=14><b>Hartslag</b></td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>26-8-2025</td>
 <td>Polsfrequentie</td>
@@ -392,12 +362,11 @@
 <td></td>
 <td></td>
 <td>Arts. Interne Geneeskunde, Internist Oncoloog</td>
-<td>Hartslag</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 <b>Toelichting</b><br/>Opmerking Zorgviewer<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>20-8-2025</td>
 <td>polsfrequentie</td>
@@ -405,12 +374,11 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Hartslag</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#1875 polsfrequentie<br/>
 <b>Toelichting</b><br/>Dit is een opmerking<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>14-8-2025</td>
 <td>Polsfrequentie</td>
@@ -418,11 +386,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Hartslag</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>13-8-2025</td>
 <td>Polsfrequentie</td>
@@ -430,11 +397,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Hartslag</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>12-8-2025</td>
 <td>Polsfrequentie</td>
@@ -442,11 +408,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Hartslag</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>25-7-2025</td>
 <td>Polsfrequentie</td>
@@ -454,11 +419,10 @@
 <td></td>
 <td></td>
 <td>P Havelaar</td>
-<td>Hartslag</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>24-7-2025</td>
 <td>Polsfrequentie</td>
@@ -466,11 +430,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Hartslag</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8716-3 Vital signs<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>10-11-2024</td>
 <td>Heart rate</td>
@@ -478,11 +441,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Hartslag</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8867-4 Heart rate<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>21-3-2024</td>
 <td>hartfrequentie (thuismeting)</td>
@@ -490,11 +452,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Hartslag</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#3963 hartfrequentie (thuismeting)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>5-11-2023</td>
 <td>Heart rate</td>
@@ -502,12 +463,11 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Hartslag</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8867-4 Heart rate<br/>
 </td></tr>
 <tr><td colspan=14><b>Lichaamsmaten</b></td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>CGM</td>
 <td>2-6-2026</td>
 <td>gewicht patiënt</td>
@@ -515,13 +475,12 @@
 <td></td>
 <td></td>
 <td>Pharmeon acceptatie zorgverlener</td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 <b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
 <b>Toelichting</b><br/>dit is de opmerking voor de patient bij het gewicht<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>20-8-2025</td>
 <td>Quetelet-index (BMI) patiënt</td>
@@ -529,11 +488,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#1272 Quetelet-index (BMI) patiënt<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>13-8-2025</td>
 <td>Lengte</td>
@@ -541,11 +499,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8302-2 Body height<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>13-8-2025</td>
 <td>Gewicht</td>
@@ -553,11 +510,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>7-8-2025</td>
 <td>gewicht patiënt</td>
@@ -565,11 +521,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>7-8-2025</td>
 <td>lengte patiënt</td>
@@ -577,11 +532,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#560 lengte patiënt<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>7-8-2025</td>
 <td>Quetelet-index (BMI) patiënt</td>
@@ -589,11 +543,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#1272 Quetelet-index (BMI) patiënt<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>7-8-2025</td>
 <td>lichaamsoppervlakte</td>
@@ -601,11 +554,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#3017 lichaamsoppervlakte<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>25-7-2025</td>
 <td>Lengte</td>
@@ -613,11 +565,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8302-2 Body height<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>25-7-2025</td>
 <td>Gewicht</td>
@@ -625,11 +576,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>25-7-2025</td>
 <td>Lengte</td>
@@ -637,11 +587,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8302-2 Body height<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>25-7-2025</td>
 <td>Gewicht</td>
@@ -649,11 +598,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>24-7-2025</td>
 <td>Lengte</td>
@@ -661,11 +609,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8302-2 Body height<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>24-7-2025</td>
 <td>Gewicht</td>
@@ -673,11 +620,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>CGM</td>
 <td>11-3-2025</td>
 <td>lengte patiënt</td>
@@ -685,11 +631,10 @@
 <td></td>
 <td></td>
 <td>Pharmeon acceptatie zorgverlener</td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#560 lengte patiënt<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>CGM</td>
 <td>11-3-2025</td>
 <td>gewicht patiënt</td>
@@ -697,12 +642,11 @@
 <td></td>
 <td></td>
 <td>Pharmeon acceptatie zorgverlener</td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 <b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>10-11-2024</td>
 <td>Body Height</td>
@@ -710,11 +654,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8302-2 Body Height<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>10-11-2024</td>
 <td>Body Weight</td>
@@ -722,11 +665,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#29463-7 Body Weight<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>5-11-2023</td>
 <td>Body Height</td>
@@ -734,11 +676,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8302-2 Body Height<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>5-11-2023</td>
 <td>Body Weight</td>
@@ -746,11 +687,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#29463-7 Body Weight<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Chipsoft</td>
 <td>8-2-2013</td>
 <td>Body height</td>
@@ -758,11 +698,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8302-2 Body height<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Chipsoft</td>
 <td>8-2-2013</td>
 <td>Body weight</td>
@@ -770,13 +709,12 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Lichaamsmaten</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
-<b>Context</b><br/>Minimal dressed<br/>
+<b>Context</b><br/>Lichte kleding/ondergoed [Kleding die niet significant het gewicht beïnvloedt.]<br/>
 </td></tr>
 <tr><td colspan=14><b>Temperatuur</b></td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>20-8-2025</td>
 <td>temperatuur patiënt</td>
@@ -784,12 +722,11 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Temperatuur</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#1357 temperatuur patiënt<br/>
 <b>Toelichting</b><br/>Waarde aangepast van heel veel naar 23<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>13-8-2025</td>
 <td>Temperatuur</td>
@@ -797,11 +734,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Temperatuur</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8310-5 Body temperature<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Sanday</td>
 <td>7-8-2025</td>
 <td>temperatuur patiënt</td>
@@ -809,11 +745,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>Temperatuur</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>NHG45#1357 temperatuur patiënt<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>25-7-2025</td>
 <td>Temperatuur</td>
@@ -821,11 +756,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Temperatuur</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8310-5 Body temperature<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>24-7-2025</td>
 <td>Temperatuur</td>
@@ -833,11 +767,10 @@
 <td></td>
 <td></td>
 <td>User. Inpatient, Verpleegkundige</td>
-<td>Temperatuur</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8310-5 Body temperature<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>23-8-2019</td>
 <td>Temperatuur</td>
@@ -845,7 +778,6 @@
 <td></td>
 <td></td>
 <td>S Brouwer</td>
-<td>Temperatuur</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8310-5 Body temperature<br/>
 </td></tr>

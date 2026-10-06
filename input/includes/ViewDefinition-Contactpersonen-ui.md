@@ -2,7 +2,7 @@
 <b>Contactpersonen</b>
 <table class="grid">
 <tbody>
-<tr><th>&gt;&lt;</th>
+<tr><th></th>
 <th>Bron</th>
 <th>Rol</th>
 <th>Relatie</th>
@@ -10,7 +10,7 @@
 <th>Telefoonnummer</th>
 <th>E-mail</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Chipsoft</td>
 <td>Eerste relatie/contactpersoon</td>
 <td>Echtgenote</td>
@@ -20,7 +20,7 @@
 </tr><tr><td></td><td colspan=6>
 <b>Adres</b><br/>Knolweg 1000 9999XA STITSWERD<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic-CP</td>
 <td>Contactpersoon bij nood</td>
 <td>Husband</td>
@@ -29,7 +29,7 @@
 <td>noodcontact@joost.nl</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic-CP</td>
 <td>Wettelijke verzorger</td>
 <td>Daughter</td>
@@ -38,7 +38,7 @@
 <td>Wettelijk@heleen.nl</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td></td>
 <td>Wife</td>
@@ -48,7 +48,7 @@
 </tr><tr><td></td><td colspan=6>
 <b>Adres</b><br/>Knolweg 1000 9999 XA Stitswerd<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Nedap</td>
 <td>Eerste relatie / contactpersoon</td>
 <td>Echtgenoot</td>
@@ -57,7 +57,7 @@
 <td>dehaas@work.com</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Nedap</td>
 <td>Eerste relatie / contactpersoon</td>
 <td></td>
@@ -66,7 +66,7 @@
 <td>h.terboom@example.com</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Nedap</td>
 <td>Eerste relatie / contactpersoon</td>
 <td></td>
@@ -75,7 +75,7 @@
 <td>a.jongeneel@example.com</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Nedap</td>
 <td>Eerste relatie / contactpersoon</td>
 <td></td>
@@ -84,7 +84,7 @@
 <td>h.dehaas@example.com</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Nedap</td>
 <td>Eerste relatie / contactpersoon</td>
 <td></td>
@@ -93,7 +93,7 @@
 <td>s.vollebregt@example.com</td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Nexus</td>
 <td>Eerste relatie/contactpersoon</td>
 <td>Echtgenote</td>

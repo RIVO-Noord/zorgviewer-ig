@@ -19,7 +19,7 @@
 <tr>
 <td>Datum</td>
 <td><samp>onsetPeriod.start | onsetDateTime</samp></td>
-<td><code>dateTime</code></td>
+<td><code>date</code></td>
 <td>ProbleemBeginDatum</td>
 <td>Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn</td>
 </tr>
@@ -52,27 +52,6 @@
 <td>Toelichting</td>
 <td></td>
 </tr>
-<tr style="background-color:#b4c7e7">
-<td>+Episode-naam</td>
-<td><samp>''</samp></td>
-<td><code>string</code></td>
-<td><i>nvt</i></td>
-<td></td>
-</tr>
-<tr style="background-color:#b4c7e7">
-<td>+Episode-status</td>
-<td><samp>''</samp></td>
-<td><code>string</code></td>
-<td><i>nvt</i></td>
-<td></td>
-</tr>
-<tr style="background-color:#b4c7e7">
-<td>+Episode-datum</td>
-<td><samp>''</samp></td>
-<td><code>Period</code></td>
-<td><i>nvt</i></td>
-<td></td>
-</tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(regelkleur)</td>
@@ -92,7 +71,7 @@
 <tr>
 <td>Datum</td>
 <td><samp>diagnosis.condition.resolve().select(onsetPeriod.start | onsetDateTime)</samp></td>
-<td><code>dateTime</code></td>
+<td><code>date</code></td>
 <td>Probleem/ ProbleemBeginDatum</td>
 <td>Laat één datum zien als de <code>.onsetDateTime</code> en <code>.onsetPeriod</code> hetzelfde zijn</td>
 </tr>
@@ -105,19 +84,12 @@
 </tr>
 <tr>
 <td>Status</td>
-<td><samp>status.lookup('ProbleemStatus').display</samp></td>
+<td><samp>diagnosis.condition.resolve().clinicalStatus.lookup('ProbleemStatus').display</samp></td>
 <td><code>code</code></td>
-<td>nvt</td>
+<td>ProbleemStatus</td>
 <td>Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a></td>
 </tr>
 <tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
-<tr style="background-color:#b4c7e7">
-<td>+Concern</td>
-<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString</samp></td>
-<td><code>string</code></td>
-<td>ZorgEpisodeNaam</td>
-<td></td>
-</tr>
 <tr style="background-color:#b4c7e7">
 <td>+Diagnose</td>
 <td><samp>diagnosis.condition.resolve().select('(' + code.coding[0].select(system.lookup('CodeSystems')[0].display + ') ' + code + ' ' + iif(exists(display),display,'')))</samp></td>
@@ -126,10 +98,10 @@
 <td>Meerdere codes mogelijk.<br/>Ignore NullFlavor.<br/>Lookup system label middels <code>&lt;terminologie-base&gt;/CodeSystem?url=&lt;.system&gt;</code> en gebruik dan <code>.display</code><br/>Zie voor labels: <a href='ValueSet-CodeSystems.html'>ValueSet-CodeSystems</a></td>
 </tr>
 <tr style="background-color:#b4c7e7">
-<td>+Toelichting</td>
-<td><samp>diagnosis.condition.resolve().note.text</samp></td>
-<td><code>string</code></td>
-<td>Probleem/ Toelichting</td>
+<td>+Episode-datum</td>
+<td><samp>period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))</samp></td>
+<td><code>Period:date</code></td>
+<td><i>nvt</i></td>
 <td></td>
 </tr>
 <tr style="background-color:#b4c7e7">
@@ -147,10 +119,10 @@
 <td>Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a></td>
 </tr>
 <tr style="background-color:#b4c7e7">
-<td>+Episode-datum</td>
-<td><samp>period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))</samp></td>
-<td><code>Period</code></td>
-<td><i>nvt</i></td>
+<td>+Toelichting</td>
+<td><samp>diagnosis.condition.resolve().note.text</samp></td>
+<td><code>string</code></td>
+<td>Probleem/ Toelichting</td>
 <td></td>
 </tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
@@ -158,7 +130,7 @@
 <td>(regelkleur)</td>
 <td><samp>diagnosis.condition.resolve().clinicalStatus</samp></td>
 <td><code>code</code></td>
-<td>nvt</td>
+<td>ProbleemStatus</td>
 <td>Actueel (<code>active</code>) = groene rijen, dikgedrukt<br/>Niet actueel (<code>finished</code>) = grijze rijen</td>
 </tr>
 </tbody>

@@ -17,16 +17,9 @@
 </tr>
 <tr>
 <td>Datum</td>
-<td><samp>effectiveDateTime | issued</samp></td>
-<td><code>dateTime</code></td>
-<td>WaarnemingGebruik</td>
-<td>Datum van de vaststelling van het gebruik.</td>
-</tr>
-<tr>
-<td>Gebruiksperiode</td>
-<td><samp>effectivePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | effectiveDateTime</samp></td>
-<td><code>Period</code></td>
-<td>StartDatum - StopDatum</td>
+<td><samp>effectivePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end)) | effectiveDateTime | issued</samp></td>
+<td><code>Period:date</code></td>
+<td>WaarnemingGebruik, StartDatum - StopDatum</td>
 <td>EffectivePeriod is voorgeschreven in de ZIB, maar in veel gevallen zal de data geen periode bevatten. In die gevallen is de datum van vaststelling bepalend voor interpretatie.</td>
 </tr>
 <tr>
@@ -38,10 +31,10 @@
 </tr>
 <tr>
 <td>Status</td>
-<td><samp>valueCodeableConcept.text | valueCodeableConcept.coding.display | valueString</samp></td>
+<td><samp>iif(code.coding.where(system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' and code in ('2418' | '2419' | '2420' | '2421' | '2422')).exists(), '', valueCodeableConcept.text | valueCodeableConcept.coding.display | valueString)</samp></td>
 <td><code>string</code></td>
 <td>*Status</td>
-<td>De status van het intoxicaties</td>
+<td>De status van de intoxicatie</td>
 </tr>
 <tr>
 <td>Middel</td>

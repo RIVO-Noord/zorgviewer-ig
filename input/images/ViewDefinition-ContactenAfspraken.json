@@ -35,7 +35,7 @@
             {
               "path": "participant.individual.select(display | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display).join('\n')",
               "name": "Met",
-              "description": "",
+              "description": "Rol zit soms verwerkt in de naam van de zorgverlener.",
               "type": "string",
               "tag": [
                 {
@@ -124,7 +124,7 @@
             {
               "path": "participant.actor.where(reference.contains('Practitioner/')).select(display | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display).join('\n')",
               "name": "Met",
-              "description": "",
+              "description": "Rol zit soms verwerkt in de naam van de zorgverlener.",
               "type": "string",
               "tag": [
                 {

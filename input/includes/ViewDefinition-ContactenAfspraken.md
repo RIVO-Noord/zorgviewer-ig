@@ -29,7 +29,7 @@
 ')</samp></td>
 <td><code>string</code></td>
 <td>ContactMet::Zorgverlener, ContactMet::Zorgverlener/ZorgverlenersRol</td>
-<td></td>
+<td>Rol zit soms verwerkt in de naam van de zorgverlener.</td>
 </tr>
 <tr>
 <td>Locatie</td>
@@ -80,7 +80,7 @@
 ')</samp></td>
 <td><code>string</code></td>
 <td>ContactMet::Zorgverlener, ContactMet::Zorgverlener/ZorgverlenersRol</td>
-<td></td>
+<td>Rol zit soms verwerkt in de naam van de zorgverlener.</td>
 </tr>
 <tr>
 <td>Locatie</td>
