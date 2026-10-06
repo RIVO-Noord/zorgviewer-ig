@@ -87,6 +87,7 @@ N.B. Als je Powershell gebruikt let er dan op dat Docker Desktop draait!
     1. ``publication-request.json`` (versie, sequence, description=beknopt changes); nodig voor go-publish
 1. (optionally) Generate changelog using Gemini
     1. First update tags `> git pull`
+    1. Set GEMINI_API_KEY `export GEMINI_API_KEY=xxx`
     1. Update AI generated changelog `> node script/changelog.js`
 1. `> git commit -a -m "afhechten release 1.M.R"; git push`
 1. Create tag "1.M.R" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
