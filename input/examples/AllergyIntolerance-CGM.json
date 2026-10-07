@@ -1,0 +1,102 @@
+{
+    "id": "f103e96b-718d-4c7c-82a2-fe14aa8a75b5",
+    "code": {
+        "coding": [
+            {
+                "code": "49662",
+                "system": "urn:oid:2.16.840.1.113883.2.4.4.1.750",
+                "display": "VERAPAMIL"
+            }
+        ]
+    },
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance"
+        ],
+        "versionId": "1.0.1"
+    },
+    "text": {
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Allergie.<br/>Patiënt: Dhr. P. Patient-4.<br/>Categorie: <span title=\"neiging tot ongewenste reactie op geneesmiddel (419511003 - SNOMED CT)\">neiging tot ongewenste reactie op geneesmiddel</span></caption><tbody><tr><th>Code</th><td><span title=\"VERAPAMIL (49662 - G-Standaard GPK)\">VERAPAMIL</span></td></tr><tr><th>Eerste symptomen</th><td>3 maart 2026</td></tr><tr><th>Reactie</th><td><div>Onbekend</div></td></tr></tbody></table></div>",
+        "status": "generated"
+    },
+    "type": "allergy",
+    "patient": {
+        "display": "Dhr. P. Patient-4",
+        "reference": "Patient/40bbb218-2bcf-4851-a104-dfb910408587"
+    },
+    "asserter": {
+        "display": "Dhr. P. Patient-4",
+        "reference": "Patient/40bbb218-2bcf-4851-a104-dfb910408587"
+    },
+    "category": [
+        "medication"
+    ],
+    "reaction": [
+        {
+            "onset": "2026-03-02T23:00:00+00:00",
+            "manifestation": [
+                {
+                    "coding": [
+                        {
+                            "code": "OTH",
+                            "system": "http://hl7.org/fhir/v3/NullFlavor",
+                            "display": "Overig"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "recorder": {
+        "display": "Pharmeon acceptatie zorgverlener",
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                "valueReference": {
+                    "display": "Huisartsen, niet apotheekhoudend",
+                    "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410"
+                }
+            }
+        ],
+        "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767"
+    },
+    "_category": [
+        {
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "code": "419511003",
+                                "system": "http://snomed.info/sct",
+                                "display": "neiging tot ongewenste reactie op geneesmiddel"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "assertedDate": "2026-03-03",
+    "resourceType": "AllergyIntolerance",
+    "onsetDateTime": "2026-03-03",
+    "clinicalStatus": "active",
+    "_clinicalStatus": {
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "active",
+                            "system": "http://hl7.org/fhir/v3/ActStatus",
+                            "display": "Actief"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "verificationStatus": "confirmed"
+}

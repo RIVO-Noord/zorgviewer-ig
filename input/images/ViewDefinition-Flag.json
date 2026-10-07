@@ -15,10 +15,10 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "period.start",
+          "path": "period.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
           "name": "Datum",
-          "type": "dateTime",
-          "tag": [ { "name": "Zib element", "value": "BeginDatumTijd" } ]
+          "type": "Period",
+          "tag": [ { "name": "Zib element", "value": "BeginDatumTijd - nvt" } ]
         },
         {
           "path": "extension.where('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.resolve().code.text",
@@ -46,18 +46,11 @@
           "tag": [ { "name": "Zib element", "value": "AlertType" } ]
         },
         {
-          "path": "extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.resolve().clinicalStatus",
-          "name": "Status(1)",
-          "description": "Logica: als geen Status(1), dan Status(2)<br/>Mapping: <code>active,recurrence</code> naar <code>Actueel</code>; <code>inactive,remission</code> naar <code>Niet actueel</code>",
+          "path": "extension('http://hl7.org/fhir/StructureDefinition/flag-detail').valueReference.resolve().clinicalStatus | status",
+          "name": "Status",
+          "description": "Mapping: <code>active,recurrence</code> naar <code>Actueel</code>; <code>inactive,remission</code> naar <code>Niet actueel</code>",
           "type": "code",
           "tag": [ { "name": "Zib element", "value": "Conditie::Probleem/ProbleemStatus" } ]
-        },
-        {
-          "path": "status",
-          "name": "Status(2)",
-          "description": "Mapping: <code>active</code> naar <code>Actueel</code>; <code>inactive</code> naar <code>Niet actueel</code> Uitgefilterd: <code>entered-in-error</code> wordt niet getoond in de Zorgviewer, omdat het om foutief ingevoerde data gaat.",
-          "type": "code",
-          "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Flag' and status!='entered-in-error')"

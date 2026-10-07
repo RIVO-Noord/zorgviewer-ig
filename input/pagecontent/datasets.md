@@ -126,6 +126,14 @@ Zie [PlanDefinition pancreas-resectabiliteit-en-behandelpad](PlanDefinition-panc
 
 ...
 
+### Huisartsgegevensset
+
+[Huisartsgegevensset](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_GP_Data)
+
+### NUTS Zorgtoepassing: HA-VVT inzage dossier v1.1
+
+[HA-VVT inzage dossier v1.1](https://wiki.nuts.nl/books/samenwerken-huisarts-en-thuiszorg/page/zorgtoepassing-ha-vvt-inzage-dossier-v11)
+
 ### EHDS EPS
 
 Als voorbereiding op de EHDS hebben we naast de voorbeelden uit de aangesloten systemen een voorbeeld EPS uit het [Syndrai Project - Synthetic Data Examples - Realistic - using AI](https://synderai.net/index.php?menu=examples/EPS) gebruikt bij het genereren van de wireframes voor ieder profiel. Herkenbaar aan "EPS" in de bron kolom.

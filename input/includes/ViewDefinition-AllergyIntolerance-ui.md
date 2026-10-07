@@ -1,8 +1,8 @@
 ### UI Wireframe
-<b>Allergieen en intoleranties</b>
+<b>Allergieën en intoleranties</b>
 <table class="grid">
 <tbody>
-<tr><th>&gt;&lt;</th>
+<tr><th></th>
 <th>Bron</th>
 <th>Datum</th>
 <th>Stof</th>
@@ -15,9 +15,23 @@
 <th>StatusCS</th>
 <th>(VStatus)</th>
 </tr>
-<tr><td>+</td>
+<tr><td></td>
+<td>CGM</td>
+<td>3-3-2026</td>
+<td>VERAPAMIL</td>
+<td></td>
+<td>medication</td>
+<td></td>
+<td></td>
+<td>Overig</td>
+<td>active</td>
+<td>Actief</td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
 <td>Sanday</td>
-<td>6-8-2025</td>
+<td>7-8-2025</td>
 <td>HUISSTOFMIJTENALLERGEEN</td>
 <td>opmerking bij overgevoeligheid</td>
 <td>medication</td>
@@ -29,7 +43,7 @@
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>12-11-2019</td>
 <td>ALLE NSAID'S (INCL. SALICYLATEN)</td>
@@ -43,7 +57,7 @@
 <td>unconfirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td></td>
 <td>Epic</td>
 <td>3-12-2017</td>
 <td>PINDA</td>
@@ -57,35 +71,49 @@
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
-<td>Nexus</td>
+<tr><td></td>
+<td>Nedap</td>
 <td>8-11-2008</td>
-<td>Bijengif</td>
+<td>Bee venom - text</td>
+<td>Allergie</td>
 <td></td>
+<td>unable-to-assess</td>
+<td></td>
+<td>Nausea and vomiting - text</td>
+<td>active</td>
+<td>Actief</td>
+<td>unconfirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
+<td>Nedap</td>
+<td>8-11-2008</td>
+<td>Bee venom</td>
+<td>Allergie</td>
 <td></td>
 <td>high</td>
-<td>severe</td>
 <td></td>
+<td>Nausea and vomiting</td>
 <td>active</td>
-<td></td>
-<td>confirmed</td>
+<td>Actief</td>
+<td>unconfirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
-<td>CGM</td>
+<tr><td></td>
+<td>Nedap</td>
 <td>8-11-2008</td>
-<td>INSECTENALLERGEEN</td>
-<td>misselijk en braken</td>
-<td>medication</td>
+<td>Bee venom</td>
+<td>Allergie: Notitie(s): <br/>Categorie: Allergy to substance<br/>Laatste reactie: Sun Nov ...</td>
 <td></td>
-<td>severe</td>
+<td>high</td>
 <td></td>
+<td>Nausea and vomiting</td>
 <td>active</td>
-<td></td>
-<td>confirmed</td>
+<td>Actief</td>
+<td>unconfirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td></td>
 <td>CGM</td>
 <td>2-6-1998</td>
 <td>PENICILLINES</td>
@@ -93,13 +121,83 @@
 <td>medication</td>
 <td></td>
 <td>mild</td>
-<td></td>
+<td>Overig</td>
 <td>inactive</td>
-<td></td>
+<td>Niet meer aanwezig</td>
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td></td>
+<td>Nedap</td>
+<td>4-3-1932</td>
+<td>Haar/schilfers van dieren</td>
+<td>Allergie</td>
+<td></td>
+<td>high</td>
+<td></td>
+<td>Uitslag</td>
+<td>active</td>
+<td>Actief</td>
+<td>unconfirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
+<td>Nedap</td>
+<td></td>
+<td>Lactose</td>
+<td>Allergie</td>
+<td></td>
+<td>unable-to-assess</td>
+<td></td>
+<td></td>
+<td>active</td>
+<td>Actief</td>
+<td>unconfirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
+<td>Nedap</td>
+<td></td>
+<td>Amoxicilline</td>
+<td>Overgevoeligheid</td>
+<td></td>
+<td>unable-to-assess</td>
+<td></td>
+<td></td>
+<td>resolved</td>
+<td>Niet meer aanwezig</td>
+<td>unconfirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
+<td>Nexus</td>
+<td>8-11-2008</td>
+<td>Bijengif</td>
+<td></td>
+<td></td>
+<td>high</td>
+<td>severe</td>
+<td>Misselijk en braken</td>
+<td>active</td>
+<td>Actief</td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
+<td>CGM</td>
+<td>8-11-2008</td>
+<td>INSECTENALLERGEEN</td>
+<td>misselijk en braken</td>
+<td>medication</td>
+<td></td>
+<td>severe</td>
+<td>Overig</td>
+<td>active</td>
+<td>Actief</td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
 <td>EPS</td>
 <td>9-8-1977</td>
 <td>Allergy to substance</td>
@@ -113,7 +211,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
-<tr><td>+</td>
+<tr><td></td>
 <td>EPS</td>
 <td>9-8-1977</td>
 <td>Shellfish</td>
@@ -121,7 +219,7 @@
 <td>food</td>
 <td></td>
 <td>severe</td>
-<td></td>
+<td>Anaphylaxis (disorder)</td>
 <td></td>
 <td></td>
 <td></td>

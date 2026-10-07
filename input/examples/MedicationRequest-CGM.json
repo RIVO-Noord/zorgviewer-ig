@@ -1,0 +1,94 @@
+{
+    "id": "1db457e3-8720-4d3d-a596-d92d3a356567",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationAgreement"
+        ]
+    },
+    "text": {
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Medicatieafspraak.<br/>Patiënt: Mevr. TEST Zorgviewer.<br/>Categorie: <span title=\"voorschrijven (16076005 - SNOMED CT)\">voorschrijven</span><br/><span style=\"display: block;\">Intentie: aanvraag</span><br/><span style=\"display: block;\">Aangevraagd door: Pharmeon acceptatie zorgverlener</span></caption><tbody><tr><th>Context</th><td>Herhaalrecept op 3 juni 2023 met Pharmeon acceptatie zorgverlener</td></tr><tr><th>Medicatie</th><td>HEPATITIS-A-VACCIN VAQTA JR WWSP 0,5ML (50E/ML)</td></tr><tr><th>Gemaakt</th><td>3 juni 2023</td></tr><tr><th>Gebruiksduur</th><td>Vanaf 3 juni 2023 00:00 t/m 1 september 2023 23:59</td></tr><tr><th>Doseerinstructie</th><td><div>Volgnummer: 1</div><div>Tekst: gebruik bekend<br/>Omschudden vlak voor gebruik<br/>In koelkast bewaren (niet in vriesvak)</div></td></tr></tbody></table></div>",
+        "status": "generated"
+    },
+    "intent": "order",
+    "context": {
+        "display": "Herhaalrecept op 3 juni 2023 met Pharmeon acceptatie zorgverlener",
+        "reference": "Encounter/c884d1dc-67f3-4072-a957-6ec75bb3b8d3"
+    },
+    "subject": {
+        "display": "Mevr. TEST Zorgviewer",
+        "reference": "Patient/5dbca76d-8ca1-4192-b0f4-5e27ac1f0606"
+    },
+    "category": {
+        "text": "Medicatieafspraak",
+        "coding": [
+            {
+                "code": "16076005",
+                "system": "http://snomed.info/sct",
+                "display": "voorschrijven"
+            }
+        ]
+    },
+    "recorder": {
+        "display": "Pharmeon acceptatie zorgverlener",
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                "valueReference": {
+                    "display": "Huisartsen, niet apotheekhoudend",
+                    "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410"
+                }
+            }
+        ],
+        "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767"
+    },
+    "extension": [
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse",
+            "valuePeriod": {
+                "end": "2023-09-01T21:59:59+00:00",
+                "start": "2023-06-02T22:00:00+00:00"
+            }
+        },
+        {
+            "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration",
+            "valueDuration": {
+                "code": "d",
+                "unit": "dag",
+                "value": 90,
+                "system": "http://unitsofmeasure.org"
+            }
+        }
+    ],
+    "requester": {
+        "agent": {
+            "display": "Pharmeon acceptatie zorgverlener",
+            "extension": [
+                {
+                    "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                    "valueReference": {
+                        "display": "Huisartsen, niet apotheekhoudend",
+                        "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410"
+                    }
+                }
+            ],
+            "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767"
+        }
+    },
+    "authoredOn": "2023-06-02T22:00:00+00:00",
+    "resourceType": "MedicationRequest",
+    "reasonReference": [
+        {
+            "display": "bezoek aan guatamala"
+        }
+    ],
+    "dosageInstruction": [
+        {
+            "text": "gebruik bekend\r\nOmschudden vlak voor gebruik\r\nIn koelkast bewaren (niet in vriesvak)",
+            "sequence": 1
+        }
+    ],
+    "medicationReference": {
+        "display": "HEPATITIS-A-VACCIN VAQTA JR WWSP 0,5ML (50E/ML)",
+        "reference": "Medication/PRKODE-62049"
+    }
+}

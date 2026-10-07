@@ -6,11 +6,11 @@
 
 ### View Definition
 
-[ViewDefinition voor labuitslagen](ViewDefinition-Labuitslagen.json)
+[ViewDefinition voor labuitslagen](ViewDefinition-LaboratoryTestResult.json)
 
-{% include ViewDefinition-Labuitslagen-ui.md %}
+{% include ViewDefinition-LaboratoryTestResult-ui.md %}
 
-{% include ViewDefinition-Labuitslagen.md %}
+{% include ViewDefinition-LaboratoryTestResult.md %}
 
 ### Zoeken naar codes
 

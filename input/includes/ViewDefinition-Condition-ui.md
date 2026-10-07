@@ -2,14 +2,24 @@
 <b>Problemen (incl. diagnosen)</b>
 <table class="grid">
 <tbody>
-<tr><th>&gt;&lt;</th>
+<tr><th></th>
 <th>Bron</th>
 <th>Datum</th>
 <th>Diagnose</th>
 <th>Status</th>
 <th>(regelkleur)</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
+<td>Epic-note</td>
+<td>23-2-2023</td>
+<td>posttraumatische stressstoornis (incl. de posttraumatische-stressstoornis bij ki...</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICD-10) F43.1 <br/>
+<b>Toelichting</b><br/>2022-02: ziekte van Crohn<br/>2021-07: Complicatie ANPY infectie lokaal<br/>2021-03: z...<br/>
+</td></tr>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>20-4-2022</td>
 <td>Acute viral pharyngitis</td>
@@ -18,7 +28,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(SNOMED CT) 195662009 Acute viral pharyngitis (disorder)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>21-2-2020</td>
 <td>Viral sinusitis</td>
@@ -27,7 +37,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(SNOMED CT) 444814009 Viral sinusitis (disorder)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>21-1-2020</td>
 <td>Osteoarthritis of knee</td>
@@ -36,7 +46,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(SNOMED CT) 239873007 Osteoarthritis of knee (disorder)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>9-6-2019</td>
 <td>Miscarriage in first trimester</td>
@@ -45,7 +55,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(SNOMED CT) 19169002 Miscarriage in first trimester (disorder)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>9-6-2019</td>
 <td>Complete miscarriage</td>
@@ -54,7 +64,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(SNOMED CT) 156073000 Complete miscarriage (disorder)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>4-2-2014</td>
 <td>Fibromyalgia</td>
@@ -63,7 +73,52 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(SNOMED CT) 203082005 Fibromyalgia (disorder)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
+<td>CGM</td>
+<td>15-11-2012</td>
+<td>Dyspnoe/benauwdheid toegeschreven aan luchtwegen [ex. K02]</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) R02 Dyspnoe/benauwdheid toegeschreven aan luchtwegen [ex. K02]<br/>
+</td></tr>
+<tr><td>&#9660;</td>
+<td>CGM</td>
+<td>15-11-2012</td>
+<td></td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) R02 <br/>
+</td></tr>
+<tr><td>&#9660;</td>
+<td>Epic</td>
+<td>16-8-2012</td>
+<td>fractuur van onderste extremiteit</td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICD-10) T12.0 <br/>
+</td></tr>
+<tr><td>&#9660;</td>
+<td>CGM</td>
+<td>10-8-2012</td>
+<td></td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) K07 <br/>
+</td></tr>
+<tr><td>&#9660;</td>
+<td>CGM</td>
+<td>20-4-2011</td>
+<td></td>
+<td>Niet actueel</td>
+<td>inactive</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) L72 <br/>
+</td></tr>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td>29-1-2002</td>
 <td>Chronic sinusitis</td>
@@ -72,7 +127,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(SNOMED CT) 40055000 Chronic sinusitis (disorder)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Chipsoft</td>
 <td>1-1-2001</td>
 <td>fractuur van pols</td>
@@ -82,7 +137,7 @@
 <b>Diagnose</b><br/>(NullFlavor) OTH other<br/>
 <b>Toelichting</b><br/>Gevallen op kunstijsbaan.<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Nexus</td>
 <td>1-1-2001</td>
 <td>fractuur van pols</td>
@@ -91,6 +146,15 @@
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(SNOMED CT) 31641000146105 fractuur van pols<br/>
 <b>Toelichting</b><br/>Gevallen op kunstijsbaan<br/>
+</td></tr>
+<tr><td>&#9660;</td>
+<td>CGM</td>
+<td></td>
+<td></td>
+<td>Actueel</td>
+<td>active</td>
+</tr><tr><td></td><td colspan=5>
+<b>Diagnose</b><br/>(ICPC) A20 <br/>
 </td></tr>
 </tbody>
 </table>

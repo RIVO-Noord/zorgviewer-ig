@@ -2,7 +2,7 @@
 <b>Toedieningsafspraak</b>
 <table class="grid">
 <tbody>
-<tr><th>&gt;&lt;</th>
+<tr><th></th>
 <th>Bron</th>
 <th>Start</th>
 <th>Eind</th>
@@ -11,9 +11,9 @@
 <th>Toedieningsweg</th>
 <th>Stop type</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>MP9</td>
-<td>10-11-2022</td>
+<td>11-11-2022</td>
 <td></td>
 <td>IBUPROFEN TABLET 600MG</td>
 <td>Vanaf 11 nov 2022, gedurende 3 weken, 1 maal per dag 1 stuk, oraal</td>

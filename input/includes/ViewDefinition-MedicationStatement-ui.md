@@ -2,7 +2,7 @@
 <b>Medicatie Gebruik</b>
 <table class="grid">
 <tbody>
-<tr><th>&gt;&lt;</th>
+<tr><th></th>
 <th>Bron</th>
 <th>Start</th>
 <th>Eind</th>
@@ -10,7 +10,7 @@
 <th>Dosering & instructies</th>
 <th>Toedieningsweg</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td></td>
 <td></td>
@@ -19,7 +19,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=6>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td></td>
 <td></td>
@@ -29,9 +29,9 @@
 </tr><tr><td></td><td colspan=6>
 <b>Registratiedatum</b><br/>15-3-2018<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>MP9</td>
-<td>10-11-2022</td>
+<td>11-11-2022</td>
 <td></td>
 <td>IBUPROFEN TABLET 600MG</td>
 <td></td>

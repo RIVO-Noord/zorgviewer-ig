@@ -22,10 +22,10 @@
         },
         {
           "path": "extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-DateLastEncounter').valueDateTime | period.end",
-          "name": "Eind",
+          "name": "Laatste",
           "description": "",
           "type": "dateTime",
-          "tag": [ { "name": "Zib element", "value": "EindDatumTijd" } ]
+          "tag": [ { "name": "Zib element", "value": "EindDatum" } ]
         },
         {
           "path": "diagnosis.condition.display",
@@ -35,11 +35,17 @@
           "tag": [ { "name": "Zib element", "value": "FocusZorgEpisode::Probleem/ ProbleemNaam" } ]
         },
         {
-          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString",
-          "name": "Concern",
+          "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName').valueString | extension('http://nictiz.nl/fhir/StructureDefinition/EpisodeOfCare-Title').valueString",
+          "name": "Naam",
           "description": "",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "ZorgEpisodeNaam" } ]
+        },
+        {
+          "path": "status.lookup('ProbleemStatus').display",
+          "name": "Status",
+          "description": "Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a>",
+          "type": "string"
         }
       ],
       "forEach": "entry.resource.where(resourceType='EpisodeOfCare')"

@@ -19,28 +19,42 @@
 <td>Datum</td>
 <td><samp>effectiveDateTime</samp></td>
 <td><code>dateTime</code></td>
-<td>ObservationDateTime</td>
+<td>nvt</td>
 <td></td>
 </tr>
 <tr>
 <td>Lopen</td>
 <td><samp>component.where(code.coding.exists(code='282097004')).select(value.coding.display | value.text)</samp></td>
 <td><code>string</code></td>
-<td>Walking</td>
+<td>Lopen</td>
 <td></td>
 </tr>
 <tr>
-<td>Rolstoelgebruik</td>
-<td><samp>component.where(code.coding.exists(code='16581000146103')).select(value.coding.display | value.text)</samp></td>
+<td>Traplopen</td>
+<td><samp>component.where(code.coding.exists(code='301587001')).select(value.coding.display | value.text)</samp></td>
 <td><code>string</code></td>
-<td>WheelchairUse</td>
+<td>Traplopen</td>
 <td></td>
 </tr>
 <tr>
-<td>Hulpmiddelen</td>
-<td><samp>component.where(code.coding.exists(code='183135000')).select(value.coding.display | value.text)</samp></td>
+<td>Houding veranderen</td>
+<td><samp>component.where(code.coding.exists(code='282869009')).select(value.coding.display | value.text)</samp></td>
 <td><code>string</code></td>
-<td>MobilityAids</td>
+<td>HoudingVeranderen</td>
+<td></td>
+</tr>
+<tr>
+<td>Houding handhaven</td>
+<td><samp>component.where(code.coding.exists(code='249868004')).select(value.coding.display | value.text)</samp></td>
+<td><code>string</code></td>
+<td>HoudingHandhaven</td>
+<td></td>
+</tr>
+<tr>
+<td>Uitvoeren transfer</td>
+<td><samp>component.where(code.coding.exists(code='364666007')).select(value.coding.display | value.text)</samp></td>
+<td><code>string</code></td>
+<td>UitvoerenTransfer</td>
 <td></td>
 </tr>
 <tr>

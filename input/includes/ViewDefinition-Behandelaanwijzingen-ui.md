@@ -2,7 +2,7 @@
 <b>Behandelaanwijzingen</b>
 <table class="grid">
 <tbody>
-<tr><th>&gt;&lt;</th>
+<tr><th></th>
 <th>Bron</th>
 <th>Datum</th>
 <th>Behandeling</th>
@@ -11,7 +11,20 @@
 <th>Geverifieerd bij</th>
 <th>(status)</th>
 </tr>
-<tr><td>+</td>
+<tr><td colspan=10><b>kunstmatige beademing</b></td></tr>
+<tr><td>&#9660;</td>
+<td>CGM</td>
+<td>20-2-2026</td>
+<td>Kunstmatige beademing</td>
+<td>Behandeling niet toegestaan en/of wenselijk</td>
+<td></td>
+<td></td>
+<td>active</td>
+</tr><tr><td></td><td colspan=8>
+<b>Toelichting</b><br/>Patiënt wenst geen kunstmatige beademing.<br/>
+<b>Categorie</b><br/>Behandelingsinstructies (artefact opnemen)<br/>
+</td></tr>
+<tr><td>&#9660;</td>
 <td>Nexus</td>
 <td>5-5-2023</td>
 <td>Kunstmatige beademing</td>
@@ -19,11 +32,11 @@
 <td></td>
 <td></td>
 <td>active</td>
-</tr><tr><td></td><td colspan=7>
+</tr><tr><td></td><td colspan=8>
 <b>Toelichting</b><br/>testje<br/>
 <b>Categorie</b><br/>Behandelingsinstructies (artefact opnemen)<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Chipsoft</td>
 <td>30-9-2022</td>
 <td>Artificial respiration (procedure)</td>
@@ -31,10 +44,10 @@
 <td>Toelichting: Eerst overleg met echtgenote</td>
 <td></td>
 <td>active</td>
-</tr><tr><td></td><td colspan=7>
+</tr><tr><td></td><td colspan=8>
 <b>Categorie</b><br/>Treatment instructions<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>22-3-2022</td>
 <td>kunstmatige beademing (verrichting)</td>
@@ -42,7 +55,7 @@
 <td>Eerst overleg met echtgenote</td>
 <td>patiënt (persoon)</td>
 <td>active</td>
-</tr><tr><td></td><td colspan=7>
+</tr><tr><td></td><td colspan=8>
 <b>Categorie</b><br/>Advance Directive & Vastgelegd<br/>
 </td></tr>
 </tbody>

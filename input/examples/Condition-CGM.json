@@ -1,0 +1,70 @@
+{
+    "id": "16d3eb72-6c59-4307-a557-b6182a52f362",
+    "code": {
+        "coding": [
+            {
+                "code": "R02",
+                "system": "http://hl7.org/fhir/sid/icpc-1-nl",
+                "display": "Dyspnoe/benauwdheid toegeschreven aan luchtwegen [ex. K02]"
+            }
+        ]
+    },
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-Problem"
+        ],
+        "versionId": "1.0.1"
+    },
+    "text": {
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Aandoening.<br/>Patiënt: Mevr. TEST Zorgviewer<br/>Status: actief</caption><tbody><tr><th>Code</th><td><span title=\"Dyspnoe/benauwdheid toegeschreven aan luchtwegen [ex. K02] (R02 - http://hl7.org/fhir/sid/icpc-1-nl)\">Dyspnoe/benauwdheid toegeschreven aan luchtwegen [ex. K02]</span></td></tr><tr><th>Categorie</th><td><span title=\"interpretatie van diagnose (282291009 - SNOMED CT)\">interpretatie van diagnose</span></td></tr><tr><th>Eerste symptomen</th><td>15 november 2012</td></tr></tbody></table></div>",
+        "status": "generated"
+    },
+    "subject": {
+        "display": "Mevr. TEST Zorgviewer",
+        "reference": "Patient/5dbca76d-8ca1-4192-b0f4-5e27ac1f0606"
+    },
+    "asserter": {
+        "display": "Pharmeon acceptatie zorgverlener",
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference",
+                "valueReference": {
+                    "display": "Huisartsen, niet apotheekhoudend",
+                    "reference": "PractitionerRole/173d48ff-5af6-46fb-9914-75708b83b410"
+                }
+            }
+        ],
+        "reference": "Practitioner/be0d6489-a9fd-4b65-a1ba-e412cdcd7767"
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "code": "282291009",
+                    "system": "http://snomed.info/sct",
+                    "display": "interpretatie van diagnose",
+                    "userSelected": false
+                }
+            ]
+        }
+    ],
+    "resourceType": "Condition",
+    "onsetDateTime": "2012-11-15",
+    "clinicalStatus": "active",
+    "_clinicalStatus": {
+        "extension": [
+            {
+                "url": "http://nictiz.nl/fhir/StructureDefinition/code-specification",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "55561003",
+                            "system": "http://snomed.info/sct",
+                            "display": "Actief"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

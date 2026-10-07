@@ -1,5 +1,9 @@
 {% include profile-note.md %}
 
+<div class="dragon" markdown="1">
+**Deze gegevens zijn nu onderdeel van de [Samenstelling Probleemlijst](StructureDefinition-Probleemlijst.html).**
+</div>
+
 ### Zorginformatiebouwsteen
 
 [ZIB Probleem](https://zibs.nl/wiki/Probleem-v4.1(2017NL))
@@ -30,6 +34,10 @@ Als bron voor de must-support flags en de UI guidance is gebruikt: [Fit-gap anal
 
     <blockquote class="stu-note" markdown="1">
     N.B. De clinical-status parameter is niet meer nodig als de Epic Feb '23 is geinstalleerd.
+    </blockquote>
+
+    <blockquote class="stu-note" markdown="1">
+    N.B. De 'or' op het clinical-status filter (clinical-status=active,resolved) wordt niet ondersteund door CGM. Het enkele clinical-status filter (clinical-status=active) werkt wel.
     </blockquote>
 
 ### Uitzondering onsetDateTime, onsetPeriod, abatementDateTime en abatementPeriod

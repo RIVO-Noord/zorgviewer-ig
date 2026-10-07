@@ -45,6 +45,7 @@
 1. Epic Hyperspace
 1. Chipsoft HiX
 1. Topicus VIPlive
+1. CGM Huisarts
 1. *TOEKOMST* Zorgviewer Launcher - Los voor gebruikers zonder EPD/ECD
 
 #### Zorgviewer
@@ -164,6 +165,7 @@ Er zijn meerdere niveau's van autorisatie, namelijk:
 * [Chipsoft Zorgplatform](https://developer.zorgplatform.online) 
 * [Topicus VIPlive](https://viplive.nl/over-ons/viplive-koppelen-met-systemen)
 * Nexus Cloud-Connect
+* CGM Huisarts via Pharmeon FHIR API
 * XDS-NN met een FHIR API volgens de IG (e.g. Documenten)
 * Een "Docker" voor een bron die geheel of gedeeltelijk nog niet conform zorgviewer-ig kan ontsluiten
 

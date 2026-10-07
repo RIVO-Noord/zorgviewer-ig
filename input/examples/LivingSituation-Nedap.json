@@ -1,0 +1,56 @@
+{
+    "resourceType": "Bundle",
+    "id": "413b3128-cd44-47b6-9a6f-d066253f4333",
+    "meta": {
+        "lastUpdated": "2026-07-09T11:07:08.842+02:00"
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "https://nuts-development.ons.io/fhir/t/fhir/Observation?_profile=http%3A%2F%2Fnictiz.nl%2Ffhir%2FStructureDefinition%2Fzib-LivingSituation&patient=Client.1916ee4b-1a83-476b-a6ae-3c37ccf6dd1a"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "https://nuts-development.ons.io/fhir/t/fhir/Observation/TE1002.ClientAddress.21058",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "TE1002.ClientAddress.21058",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation"
+                    ]
+                },
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "365508006",
+                            "display": "bevinding betreffende woon- en huisvestingssituatie (bevinding)"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/Client.1916ee4b-1a83-476b-a6ae-3c37ccf6dd1a",
+                    "display": "mevr. H Giezen - Bartels"
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1",
+                            "code": "BOVENW",
+                            "display": "Bovenwoning"
+                        }
+                    ]
+                },
+                "comment": "2 hoog - traplift aanwezig"
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

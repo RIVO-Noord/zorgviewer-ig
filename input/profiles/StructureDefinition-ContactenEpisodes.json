@@ -13,6 +13,52 @@
     "derivation": "constraint",
     "differential": {
         "element":  [
+            {
+                "id": "Bundle.entry",
+                "path": "Bundle.entry",
+                "slicing": {
+                    "discriminator":  [
+                        {
+                            "type": "type",
+                            "path": "resource"
+                        }
+                    ],
+                    "rules": "open"
+                }
+            },
+            {
+                "id": "Bundle.entry:Encounter",
+                "path": "Bundle.entry",
+                "sliceName": "Encounter",
+                "short": "Encounter"
+            },
+            {
+                "id": "Bundle.entry:Encounter.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Contact",
+                "type":  [
+                    {
+                        "code": "Encounter",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:EpisodeOfCare",
+                "path": "Bundle.entry",
+                "sliceName": "EpisodeOfCare",
+                "short": "EpisodeOfCare"
+            },
+            {
+                "id": "Bundle.entry:EpisodeOfCare.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Episode",
+                "type":  [
+                    {
+                        "code": "EpisodeOfCare",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/EpisodeOfCare"
+                    }
+                ]
+            }
         ]
-    }
-}
+    }}

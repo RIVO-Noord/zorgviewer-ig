@@ -2,14 +2,14 @@
 <b>Verrichtingen</b>
 <table class="grid">
 <tbody>
-<tr><th>&gt;&lt;</th>
+<tr><th></th>
 <th>Bron</th>
 <th>Datum</th>
 <th>Verrichting</th>
 <th>Locatie</th>
 <th>Uitgevoerd door</th>
 </tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td></td>
 <td>Epidural anesthesia</td>
@@ -18,7 +18,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Verrichtingcode</b><br/>(SNOMED CT) 18946005 Epidural anesthesia<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td></td>
 <td>Parturition</td>
@@ -27,7 +27,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Verrichtingcode</b><br/>(SNOMED CT) 66348005 Childbirth<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Epic</td>
 <td>7-11-2021</td>
 <td>Gesloten repositie supra- of transcondylaire femur fractuur.</td>
@@ -37,7 +37,7 @@
 <b>Verrichtingcode</b><br/>(SNOMED CT) 46866001 Gesloten repositie supra- of transcondylaire femur fractuur...<br/>
 <b>Lateraliteit</b><br/>Rechts<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Chipsoft</td>
 <td>5-6-2012</td>
 <td>implantatie van totale knieprothese</td>
@@ -47,7 +47,7 @@
 <b>Verrichtingcode</b><br/>(CBV) 00090991 implantatie van totale knieprothese<br/>
 <b>Lateraliteit</b><br/>Links<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>Nexus</td>
 <td>6-5-2012</td>
 <td>Prothese implantatie kniegewricht.</td>
@@ -56,7 +56,7 @@
 </tr><tr><td></td><td colspan=5>
 <b>Verrichtingcode</b><br/>(NZa) 038663 Prothese implantatie kniegewricht.<br/>
 </td></tr>
-<tr><td>+</td>
+<tr><td>&#9660;</td>
 <td>VG-Epic</td>
 <td>1-1-2001</td>
 <td>SELECTIEVE FASCIECTOMIE</td>

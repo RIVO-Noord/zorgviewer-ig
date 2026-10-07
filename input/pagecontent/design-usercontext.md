@@ -7,16 +7,16 @@ In onderstaande tabel hebben we voor alle methoden de verschillende definities v
 
 | Item | FHIR Path | Ideaal (SAML+FHIR) | Sanday (SAML) | Nexus (SAML) | Chipsoft Zorgplaform (SAML+FHIR) | VIPLive (SAML) | Epic (SMART-on-FHIR) | Example |
 |--|--|--|--|--|--|--|--|--|
-| Workflow ID nvt | | nvt | nvt | nvt | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` |
-| Practitioner ID | Practitioner.identifier | `Subject/NameID` | `Subject/NameID` | `Subject/NameID` | `Subject/NameID` | `Subject/NameID` | Practitioner read adhv `token.practitioner` | `177578` |
+| Workflow ID | nvt | nvt | nvt | nvt | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` |
+| Practitioner ID* | Practitioner.identifier | `Subject/NameID` | `Subject/NameID` | `Subject/NameID` | `Subject/NameID` | `Subject/NameID` | Practitioner read adhv `token.practitioner` | `177578` |
 | Practitioner Name Initials | Practitioner.name.given[extension=IN] | - | - | `professional.initials` | - | `professional.initials` | *zie FHIR Path* | `L.` |
 | Practitioner Family Name | Practitioner.name.family | - | - | `professional.family_name` | - | `professional.family_name` | *zie FHIR Path* | `Arts` |
 | Practitioner Name | Practitioner.name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | `zorgverlener.volledigenaam` | concat initials + family_name | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | - | *zie FHIR Path* | `L. Arts` |
-| Practitioner Role | PractitionerRole.code[system=http://snomed.info/sct] | urn:oasis:names:tc:xacml:2.0:subject:role | *translate Functie omschrijving*[^1] | urn:oasis:names:tc:xacml:2.0:subject:role<br/>*translate RolCodeNL*[^5] | urn:oasis:names:tc:xacml:2.0:subject:role<br/>*translate RolCodeNL*[^5]  | urn:oasis:names:tc:xacml:2.0:subject:role<br/>SNOMED CT | *translate Epic Provider Type*[^4]<br/>PractitionerRole read adhv `token.practitioner` | `code=62247001 display=huisarts system=http://snomed.info/sct` of `urn:oid:2.16.840.1.113883.2.4.15.111.01.000` voor rolcode `01.000` |
+| Practitioner Role* | PractitionerRole.code[system=http://snomed.info/sct] | urn:oasis:names:tc:xacml:2.0:subject:role | *translate Functie omschrijving*[^1] | urn:oasis:names:tc:xacml:2.0:subject:role<br/>*translate RolCodeNL*[^5] | urn:oasis:names:tc:xacml:2.0:subject:role<br/>*translate RolCodeNL*[^5]  | urn:oasis:names:tc:xacml:2.0:subject:role<br/>SNOMED CT | *translate Epic Provider Type*[^4]<br/>PractitionerRole read adhv `token.practitioner` | `code=62247001 display=huisarts system=http://snomed.info/sct` of `urn:oid:2.16.840.1.113883.2.4.15.111.01.000` voor rolcode `01.000` |
 | Organization OID | Practitioner.meta[extension=source] | urn:oasis:names:tc:xspa:1.0:subject:organization-id | *lookup*[^2] | urn:oasis:names:tc:xspa:1.0:subject:organization-id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | `organization-id` | *zie FHIR Path* | `2.16.840.1.113883.2.4.3.8` |
 | Organization URA | Practitioner.meta[extension=source][system=http://fhir.nl/fhir/NamingSystem/ura] | - | `zorgverlener.praktijkURA` | - | - | `professional.org.ura` | - | `http://fhir.nl/fhir/NamingSystem/ura\|12345678` |
-| Patient BSN | Patient.identifier[system=bsn] | urn:oasis:names:tc:xacml:1.0:resource:resource-id | `patient.BSN` | `client.bsn` | urn:oasis:names:tc:xacml:1.0:resource:resource-id | `client.bsn` | Patient read adhv `token.patient`<br/>*zie FHIR Path* | `999911120` |
-| Patient FHIR ID | Patient.id | Patient search w/ identifier={BSN}<br/>*zie FHIR Path* | *request*[^3] |  - |`patient-fhir-id` uit Task.reference read adhv `workflow-id` | - | `token.patient` | `9819C39260647B5DE61609CDF1FA1C` |
+| Patient BSN* | Patient.identifier[system=bsn] | urn:oasis:names:tc:xacml:1.0:resource:resource-id | `patient.BSN` | `client.bsn` | urn:oasis:names:tc:xacml:1.0:resource:resource-id | `client.bsn` | Patient read adhv `token.patient`<br/>*zie FHIR Path* | `999911120` |
+| Patient FHIR ID? | Patient.id | Patient search w/ identifier={BSN}<br/>*zie FHIR Path* | *request*[^3] |  - |`patient-fhir-id` uit Task.reference read adhv `workflow-id` | - | `token.patient` | `9819C39260647B5DE61609CDF1FA1C` |
 | Patient Name Initials | Patient.name.given[extension=IN] | *zie FHIR Path* | - | `client.initials` | Patient.read adhv `patient-fhir-id` / *zie FHIR Path* | `client.initials` | *zie FHIR Path* | `J.` |
 | Patient Family Name | Patient.name.family | *zie FHIR Path* | - | `client.family_name` | *zie FHIR Path* | `client.family_name` | *zie FHIR Path* | `Fictief` |
 | Patient Name | Patient.name | *zie FHIR Path* | `patient.volledigenaam` | - | *zie FHIR Path* | - | *zie FHIR Path* | `J. Fictief` |
@@ -59,19 +59,24 @@ Daarnaast ivm NEN 7513 logging requirement moet het bronsysteem de vragende orga
 
 In onderstaande tabel hebben we voor alle methoden de verschillende definities van attributen naast elkaar gezet en waar ze te vinden zijn in de verschillende standaarden (OAuth, SMART-on-FHIR, TA Notified Pull).
 
-| Item | Generiek (HTTP-Header) | **TA Notified Pull** | [Sanday (OAuth)](CapabilityStatement-OntsluitenBronsysteem-Sanday.html) | Nexus (OAuth) | Chipsoft Zorgplaform (OAuth) | VIPLive (OAuth) | Epic (SMART-on-FHIR) | Example | FHIR Path |
-|--|--|--|--|--|--|--|--|--|--|
-| PurposeOfUse |   | *FHIR Task.code* | nvt | nvt | urn:oasis:names:tc:xspa:1.0:subject:purposeofuse | nvt | nvt | `TREATMENT` | nvt |
-| Workflow ID |   | *FHIR Task.identifier* | nvt | nvt | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
-| Patient BSN |   | auth_token.patient | *via $match* | auth_token.patient | urn:oasis:names:tc:xacml:1.0:resource:resource-id | client.bsn | auth_token.patient | `999911120` | Patient.identifier[system=BSN] |
-| Practitioner ID | X-ZV-Subject-Id | auth_token.user_id | ?? | auth_token.user_id | Subject/NameID | Subject/NameID | auth_token.subject_id en HTTP-Header AORTA-ID usr | `177578` | Practitioner.identifier |
-| Practitioner Role | X-ZV-Subject-Role | auth_token.user_role | ?? | auth_token.user_role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | auth_token.subject_role en HTTP-Header AORTA-ID rol | `code=62247001 display=huisarts system=http://snomed.info/sct` | Practitioner.qualification[system=http://snomed.info/sct] |
-| Practitioner Name |   |   | ?? |  | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials + professional.family_name | auth_token.subject_name | `L. Arts` | Practitioner.name |
-| Requesting Organization (OID) | X-ZV-Subject-Organization-Id | auth_token.sub | context-requester-org-id |  |  urn:oasis:names:tc:xspa:1.0:subject:organization-id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | auth_token.subject_organization_id en HTTP-Header AORTA-ID org | `2.16.528.1.1007.3.3.15123` | Practitioner.meta[extension=source] |
-| Requesting Organization (URA) | X-ZV-Subject-Organization-Ura |  |  | auth_token.sub |  |  | auth_token.subject_organization_ura | `12345678` | Practitioner.meta[extension=source] system=http://fhir.nl/fhir/NamingSystem/ura |
-| Requesting Organization (Role) |  |  |  | auth_token.sub_role |  |  |  | `H1` huisartsinstelling | system=[http://nictiz.nl/fhir/NamingSystem/organization-type](https://simplifier.net/nictiz-r4-zib2020/organization-type) |
-| Target Organization (AGB) | | | context-target-org-id | | | | | system=http://fhir.nl/fhir/NamingSystem/agb-z<br/>[`01010813`](https://www.vektis.nl/agb-register/onderneming-01010813) |
-| Correlation ID | X-Correlation-Id |   | &#8656; | &#8656; | &#8656; | &#8656; | HTTP-Header AORTA-ID cid | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `H54f_8b9d6bC` | nvt |
-| Request ID | X-Request-Id |   | &#8656; | &#8656; | &#8656; | &#8656; | HTTP-Header AORTA-ID rid | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `1b9d6bCd-bBf` | nvt |
-| Context | X-ZV-Context |   | &#8656; | &#8656; | &#8656; | &#8656; | &#8656; | zie boven |   |
+* [ideaal systeem](CapabilityStatement-OntsluitenBronsysteem.html)
+* [CGM](CapabilityStatement-OntsluitenBronsysteem-CGM.html)
+* [NedapONS](CapabilityStatement-OntsluitenBronsysteem-NedapONS.html)
+* [Sanday](CapabilityStatement-OntsluitenBronsysteem-Sanday.html)
+
+| Item | Generiek (HTTP-Header) | TA Notified Pull _(ter referentie)_ | Sanday (OAuth) | CGM (OAuth) | Nexus (OAuth) | Chipsoft Zorgplaform (OAuth) | VIPLive (OAuth) | Epic (SMART-on-FHIR) | Example | FHIR Path |
+|--|--|--|--|--|--|--|--|--|--|--|
+| PurposeOfUse |   | *FHIR Task.code* | nvt | nvt | nvt | urn:oasis:names:tc:xspa:1.0:subject:purposeofuse | nvt | nvt | `TREATMENT` | nvt |
+| Workflow ID |   | *FHIR Task.identifier* | nvt | nvt | nvt | http://sts.zorgplatform.online/ws/claims/2017/07/workflow/workflow-id | nvt | nvt | `a84f5229-c804-4627-8b80-489ae3ed6a51` | nvt |
+| Patient BSN* |   | auth_token.patient | *via $match* | *via $match* | auth_token.patient | urn:oasis:names:tc:xacml:1.0:resource:resource-id | client.bsn | auth_token.patient | `999911120` | Patient.identifier[system=BSN] |
+| Practitioner ID* | X-ZV-Subject-Id | auth_token.user_id | ?? | ?? | auth_token.user_id | Subject/NameID | Subject/NameID | auth_token.subject_id en HTTP-Header AORTA-ID usr | `177578` | Practitioner.identifier |
+| Practitioner Role* | X-ZV-Subject-Role | auth_token.user_role | ?? | ?? | auth_token.user_role | urn:oasis:names:tc:xacml:2.0:subject:role | urn:oasis:names:tc:xacml:2.0:subject:role | auth_token.subject_role en HTTP-Header AORTA-ID rol | `code=62247001 display=huisarts system=http://snomed.info/sct` | Practitioner.qualification[system=http://snomed.info/sct] |
+| Practitioner Name |   |   | ?? | ?? |  | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name | professional.initials + professional.family_name | auth_token.subject_name | `L. Arts` | Practitioner.name |
+| Requesting Organization (OID) | X-ZV-Subject-Organization-Id | auth_token.sub | context-requester-org-id | context-requester-org-id |  |  urn:oasis:names:tc:xspa:1.0:subject:organization-id | urn:oasis:names:tc:xspa:1.0:subject:organization-id | auth_token.subject_organization_id en HTTP-Header AORTA-ID org | `2.16.528.1.1007.3.3.15123` | Practitioner.meta[extension=source] |
+| Requesting Organization (URA) | X-ZV-Subject-Organization-Ura |  |  |  | auth_token.sub |  |  | auth_token.subject_organization_ura | `12345678` | Practitioner.meta[extension=source] system=http://fhir.nl/fhir/NamingSystem/ura |
+| Requesting Organization (Role) |  |  |  |  | auth_token.sub_role |  |  |  | `H1` huisartsinstelling | system=[http://nictiz.nl/fhir/NamingSystem/organization-type](https://simplifier.net/nictiz-r4-zib2020/organization-type) |
+| Target Organization (AGB) | | | context-target-org-id | context-target-org-id | | | | | system=http://fhir.nl/fhir/NamingSystem/agb-z<br/>[`01010813`](https://www.vektis.nl/agb-register/onderneming-01010813) |
+| Correlation ID | X-Correlation-Id |   | &#8656; | &#8656; | &#8656; | &#8656; | &#8656; | HTTP-Header AORTA-ID cid | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `H54f_8b9d6bC` | nvt |
+| Request ID | X-Request-Id |   | &#8656; | &#8656; | &#8656; | &#8656; | &#8656; | HTTP-Header AORTA-ID rid | [NaN0-1D-12](https://zelark.github.io/nano-id-cc/) `1b9d6bCd-bBf` | nvt |
+| Context | X-ZV-Context |   | &#8656; | &#8656; | &#8656; | &#8656; | &#8656; | &#8656; | zie boven |   |
 {: .grid .table-striped}
