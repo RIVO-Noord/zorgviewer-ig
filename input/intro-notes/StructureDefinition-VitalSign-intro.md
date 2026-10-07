@@ -4,9 +4,9 @@
 
 De volgende zibs vallen min of meer onder het thema vitale gegevens.
 
-| Gegevensset | zib | Zib element met de hoofd waarde |
+| Gegevensset | zib | Zib element met de hoofdwaarde |
 | ----------- | --- | ------------------------------- |
-| BgZ[^2], eOverdracht, NUTS HA-VVT UC1[^1] | [ZIB Bloeddruk](https://zibs.nl/wiki/Bloeddruk-v3.1(2017NL)) | |
+| BgZ[^2], eOverdracht, NUTS HA-VVT UC1[^1] | [ZIB Bloeddruk](https://zibs.nl/wiki/Bloeddruk-v3.1(2017NL)) | SystolischeBloeddruk/DiastolischeBloeddruk |
 | BgZ[^2], eOverdracht, NUTS HA-VVT UC1[^1] | [ZIB Gewicht](https://zibs.nl/wiki/Lichaamsgewicht-v3.1(2017NL)) | GewichtWaarde |
 | BgZ[^2], eOverdracht, NUTS HA-VVT UC1[^1] | [ZIB Lengte](https://zibs.nl/wiki/Lichaamslengte-v3.1(2017NL)) | LengteWaarde |
 | eOverdracht, NUTS HA-VVT UC1[^1] | [ZIB Temperatuur](https://zibs.nl/wiki/Lichaamstemperatuur-v3.1(2017NL)) | TemperatuurWaarde |
