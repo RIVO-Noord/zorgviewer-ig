@@ -24,6 +24,6 @@
 
     `GET <ontsluiten-bronsysteem-base>/Encounter`
 
-**CGM:** Ondersteunt de generieke query (`class=AMB`). CGM gebruikt het `gp-Encounter` profiel en codeert het type contact via NHG Tabel 14 (contactwijze).
+**CGM:** gebruikt het `gp-Encounter` profiel, die compatibel is met de Zib Encounter en codeert het type contact via NHG Tabel 14 (contactwijze).
 
 {% include bronsysteem-herkennen.md %}
