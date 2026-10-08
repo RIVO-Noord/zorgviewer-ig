@@ -20,6 +20,10 @@
 
     `GET <ontsluiten-bronsysteem-base>/Encounter?class=http://hl7.org/fhir/v3/ActCode|IMP,http://hl7.org/fhir/v3/ActCode|ACUTE,http://hl7.org/fhir/v3/ActCode|NONAC,http://hl7.org/fhir/v3/ActCode|AMB`
 
-1. **CGM:** Ondersteunt de generieke query (`class=AMB`). CGM gebruikt het `gp-Encounter` profiel en codeert het type contact via NHG Tabel 14 (contactwijze).
+1. Opvragen (search) afspraken (Sanday)
+
+    `GET <ontsluiten-bronsysteem-base>/Encounter`
+
+**CGM:** Ondersteunt de generieke query (`class=AMB`). CGM gebruikt het `gp-Encounter` profiel en codeert het type contact via NHG Tabel 14 (contactwijze).
 
 {% include bronsysteem-herkennen.md %}

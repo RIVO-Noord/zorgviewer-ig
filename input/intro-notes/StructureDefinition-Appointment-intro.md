@@ -21,8 +21,4 @@
 
     `GET <ontsluiten-bronsysteem-base>/Appointment?status=booked,pending,proposed`
 
-1. Opvragen (search) afspraken (eAfspraak)
-
-    `GET <ontsluiten-bronsysteem-base>/Appointment[?date=gtyyyy-mm-dd]`
-
 {% include bronsysteem-herkennen.md %}

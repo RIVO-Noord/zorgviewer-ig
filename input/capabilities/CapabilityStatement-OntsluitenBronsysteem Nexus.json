@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "url": "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem-Nexus",
   "name": "OntsluitenBronsysteemNexus",
-  "title": "Nexus Bronsysteem",
+  "title": "Bronsysteem: Nexus",
   "status": "active",
   "date": "2023-09-04",
   "description": "Deze CapabilityStatement beschrijft Ontsluiten Bronsysteem voor Nexus.",
@@ -376,7 +376,18 @@
           "type": "Observation",
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/VitalSign"
-          }
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
         },
         {
           "extension": [
@@ -388,7 +399,18 @@
           "type": "Observation",
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AlcoholUse"
-          }
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
         },
         {
           "extension": [
@@ -400,7 +422,18 @@
           "type": "Observation",
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DrugUse"
-          }
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
         },
         {
           "extension": [
@@ -412,7 +445,18 @@
           "type": "Observation",
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/TabaccoUse"
-          }
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
         },
         {
           "extension": [
@@ -518,6 +562,7 @@
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Appointment"
           },
+          "documentation": "HTTP 403 Forbidden",
           "interaction": [
             {
               "extension": [
@@ -541,6 +586,7 @@
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
           },
+          "documentation": "HTTP 403 Forbidden",
           "interaction": [
             {
               "extension": [

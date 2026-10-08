@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "url": "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem-Epic",
   "name": "OntsluitenBronsysteemEpic",
-  "title": "Epic Bronsysteem",
+  "title": "Bronsysteem: Epic",
   "status": "active",
   "date": "2023-09-04",
   "description": "Deze CapabilityStatement beschrijft Ontsluiten Bronsysteem voor Epic.",
@@ -12,7 +12,7 @@
     "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem"
   ],
   "software": {
-    "name": "Epic"
+    "name": "Epic Interconnect"
   },
   "fhirVersion": "3.0.2",
   "acceptUnknown": "both",
@@ -377,7 +377,18 @@
           "type": "Observation",
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/VitalSign"
-          }
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
         },
         {
           "extension": [
@@ -389,7 +400,18 @@
           "type": "Observation",
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Intoxicaties"
-          }
+          },
+                    "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
         },
         {
           "extension": [
@@ -495,6 +517,7 @@
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Appointment"
           },
+          "documentation": "status pending is not supported",
           "interaction": [
             {
               "extension": [
