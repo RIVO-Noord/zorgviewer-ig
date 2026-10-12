@@ -365,7 +365,20 @@
               "code": "search-type"
             }
           ],
-          "searchInclude": [ "Observation:specimen" ]
+          "searchInclude": [ "Observation:specimen" ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "category",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-category",
+              "type": "token"
+            }
+          ]
         },
         {
           "extension": [
@@ -387,6 +400,55 @@
                 }
               ],
               "code": "search-type"
+            }
+          ],
+                    "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "category",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-category",
+              "type": "token"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Observation",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/LivingSituation"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "category",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-category",
+              "type": "token"
             }
           ]
         },
@@ -455,7 +517,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read"
+              "code": "search-type"
             }
           ],
           "searchInclude": [ "MedicationRequest:medication" ]
@@ -479,7 +541,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read"
+              "code": "search-type"
             }
           ]
         },
@@ -502,7 +564,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read"
+              "code": "search-type"
             }
           ]
         },
@@ -517,7 +579,7 @@
           "profile": {
             "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Appointment"
           },
-          "documentation": "status pending is not supported",
+          "documentation": "status `pending` is not supported",
           "interaction": [
             {
               "extension": [
@@ -526,7 +588,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read"
+              "code": "search-type"
             }
           ]
         },
@@ -549,7 +611,53 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read"
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "NutritionOrder",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/NutritionAdvice"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "DeviceUseStatement",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/MedischHulpmiddel"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
             }
           ]
         }
