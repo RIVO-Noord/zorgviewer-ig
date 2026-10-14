@@ -48,7 +48,7 @@
 <td>Status</td>
 <td><samp>status</samp></td>
 <td><code>code</code></td>
-<td>nvt</td>
+<td>Impliciet verwacht de zib status altijd finished, oftewel 'Historisch'.</td>
 <td></td>
 </tr>
 <tr>

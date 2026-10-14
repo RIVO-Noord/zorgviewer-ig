@@ -407,16 +407,16 @@ function doExampleRow(extractedData, md_ui) {
                 const period = displayValue.split(' - ');
                 const dateStart = new Date(period[0]);
                 const dateEnd = period[1] ? new Date(period[1]) : null;
-                // Check if dateEnd falls on the exact same UTC calendar day as dateStart
+                // Check if dateEnd falls on the exact same calendar day as dateStart
                 const isSameDay = dateEnd &&
-                    dateStart.getUTCFullYear() === dateEnd.getUTCFullYear() &&
-                    dateStart.getUTCMonth() === dateEnd.getUTCMonth() &&
-                    dateStart.getUTCDate() === dateEnd.getUTCDate();
+                    dateStart.getFullYear() === dateEnd.getFullYear() &&
+                    dateStart.getMonth() === dateEnd.getMonth() &&
+                    dateStart.getDate() === dateEnd.getDate();
 
                 // Check if dates are set to midnight (don't show time)
                 // Also hide time if we are dealing with a Period:date type, which is always date-only
-                const startIsMidnight = column.type == "Period:date" || dateStart.getUTCHours() === 0 && dateStart.getUTCMinutes() === 0 && dateStart.getUTCSeconds() === 0;
-                const endIsMidnight = column.type == "Period:date" || dateEnd && dateEnd.getUTCHours() === 0 && dateEnd.getUTCMinutes() === 0 && dateEnd.getUTCSeconds() === 0;
+                const startIsMidnight = column.type == "Period:date" || "00:00:00" == dateStart.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                const endIsMidnight = column.type == "Period:date" || dateEnd && "00:00:00" == dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit', second: '2-digit' });
 
                 // Format start display
                 const displayStart = startIsMidnight
@@ -443,6 +443,7 @@ function doExampleRow(extractedData, md_ui) {
                 if (displayEnd) {
                     displayValue += ' - ' + displayEnd;
                 }
+                displayValue = displayValue.replace(',','');
             }
             md_ui.push(`<td>${displayValue}</td>`);
         }
@@ -461,15 +462,15 @@ function doExampleRow(extractedData, md_ui) {
                 const period = displayValue.split(' - ');
                 const dateStart = new Date(period[0]);
                 const dateEnd = period[1] ? new Date(period[1]) : null;
-                // Check if dateEnd falls on the exact same UTC calendar day as dateStart
+                // Check if dateEnd falls on the exact same calendar day as dateStart
                 const isSameDay = dateEnd &&
-                    dateStart.getUTCFullYear() === dateEnd.getUTCFullYear() &&
-                    dateStart.getUTCMonth() === dateEnd.getUTCMonth() &&
-                    dateStart.getUTCDate() === dateEnd.getUTCDate();
+                    dateStart.getFullYear() === dateEnd.getFullYear() &&
+                    dateStart.getMonth() === dateEnd.getMonth() &&
+                    dateStart.getDate() === dateEnd.getDate();
 
                 // Check if dates are set to midnight (no time set)
-                const startIsMidnight = dateStart.getUTCHours() === 0 && dateStart.getUTCMinutes() === 0 && dateStart.getUTCSeconds() === 0;
-                const endIsMidnight = dateEnd && dateEnd.getUTCHours() === 0 && dateEnd.getUTCMinutes() === 0 && dateEnd.getUTCSeconds() === 0;
+                const startIsMidnight = "00:00:00" == dateStart.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                const endIsMidnight = dateEnd && "00:00:00" == dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit', second: '2-digit' });
 
                 // Format start display
                 const displayStart = startIsMidnight
@@ -496,6 +497,7 @@ function doExampleRow(extractedData, md_ui) {
                 if (displayEnd) {
                     displayValue += ' - ' + displayEnd;
                 }
+                displayValue = displayValue.replace(',','');
             }
             md_ui.push(`<b>${column.name.slice(1)}</b><br/>${displayValue}<br/>`);
         }

@@ -11,7 +11,7 @@
 </tr>
 <tr><td>&#9660;</td>
 <td>UMCG</td>
-<td>29-9-2026, 00:00:00</td>
+<td>29-9-2026</td>
 <td>CMV PCR biopt</td>
 <td></td>
 <td>Actueel</td>
@@ -20,7 +20,7 @@
 </td></tr>
 <tr><td>&#9660;</td>
 <td>UMCG</td>
-<td>29-1-2026, 00:00:00</td>
+<td>29-1-2026</td>
 <td>ECG door afdeling ECG diagnostiek</td>
 <td></td>
 <td>Actueel</td>
@@ -29,7 +29,7 @@
 </td></tr>
 <tr><td>&#9660;</td>
 <td>UMCG</td>
-<td>29-1-2026, 00:00:00</td>
+<td>29-1-2026</td>
 <td>CARD Poli Afspraak + ECG</td>
 <td></td>
 <td>Actueel</td>
@@ -38,7 +38,7 @@
 </td></tr>
 <tr><td>&#9660;</td>
 <td>UMCG</td>
-<td>29-1-2026, 00:00:00</td>
+<td>29-1-2026</td>
 <td>ECG kind</td>
 <td></td>
 <td>Actueel</td>
@@ -47,7 +47,7 @@
 </td></tr>
 <tr><td>&#9660;</td>
 <td>Chipsoft</td>
-<td>12-10-2022, 00:00:00</td>
+<td>12-10-2022</td>
 <td>excisie met biopt van huid</td>
 <td>Amsterdam</td>
 <td>Actueel</td>
@@ -59,7 +59,7 @@
 </td></tr>
 <tr><td>&#9660;</td>
 <td>Epic2</td>
-<td>25-3-2022, 00:00:00</td>
+<td>25-3-2022</td>
 <td>Afspraak Dermatologie</td>
 <td></td>
 <td>Actueel</td>
@@ -70,7 +70,7 @@
 </td></tr>
 <tr><td>&#9660;</td>
 <td>Epic</td>
-<td>21-4-2020, 07:00:00</td>
+<td>21-4-2020 07:00:00</td>
 <td>Phenolphthalein, stool</td>
 <td></td>
 <td>Actueel</td>
@@ -80,7 +80,7 @@
 </td></tr>
 <tr><td>&#9660;</td>
 <td>Epic</td>
-<td>3-3-2019, 07:00:00</td>
+<td>3-3-2019 07:00:00</td>
 <td>MyChart BP Flowsheet</td>
 <td></td>
 <td>Actueel</td>

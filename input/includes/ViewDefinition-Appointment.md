@@ -41,7 +41,7 @@
 <td>Status</td>
 <td><samp>status</samp></td>
 <td><code>code</code></td>
-<td>nvt</td>
+<td>GeplandeZorgActiviteit::OrderStatus</td>
 <td></td>
 </tr>
 <tr>

@@ -78,7 +78,7 @@
 <td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.coding[0].code.lookup('ACPTreatmentCodelist').designation[0].value</samp></td>
 <td><code>string</code></td>
 <td>Behandeling</td>
-<td>Lookup behandeling adhv behandeling code <code>&lt;terminologie-base&gt;<a href='ValueSet-ACPTreatmentCodelist.html'>/ConceptMap/intoxicaties-groups</a>$lookup?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.</td>
+<td>Lookup behandeling adhv behandeling code <code>&lt;terminologie-base&gt;<a href='ValueSet-ACPTreatmentCodelist.html'>/ValueSet/ACPTreatmentCodelist</a>$lookup?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br/>Zie voor labels: <a href='ValueSet-ACPTreatmentCodelist.html'>ValueSet-ACPTreatmentCodelist</a></td>
 </tr>
 </tbody>
 </table>

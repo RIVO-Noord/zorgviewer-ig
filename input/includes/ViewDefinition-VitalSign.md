@@ -33,22 +33,22 @@
 <td>Waarde</td>
 <td><samp>valueQuantity.value.toString()+' '+valueQuantity.unit | valueString | valueCodeableConcept.coding.display</samp></td>
 <td><code>string</code></td>
-<td>Uitslag/Waarde</td>
-<td></td>
+<td>Uitslag/*Waarde</td>
+<td>* zie voor Zib element naam de hoofdwaarde kolom in tabel bovenaan</td>
 </tr>
 <tr>
 <td>Waarde componenten</td>
 <td><samp>component.valueQuantity.value.select(toString()).join('/')+' '+component[0].valueQuantity.unit</samp></td>
 <td><code>string</code></td>
 <td>*Waarde</td>
-<td></td>
+<td>* zie voor Zib element naam de hoofdwaarde kolom in tabel bovenaan</td>
 </tr>
 <tr>
 <td>Waarde componenten1</td>
 <td><samp>component.valueQuantity.value.toString() + ' ' + component.valueQuantity.unit</samp></td>
 <td><code>string</code></td>
 <td>*Waarde</td>
-<td></td>
+<td>* zie voor Zib element naam de hoofdwaarde kolom in tabel bovenaan</td>
 </tr>
 <tr>
 <td>Uitvoerder</td>
