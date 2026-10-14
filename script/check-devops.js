@@ -106,11 +106,6 @@ async function main() {
   const baseUrl = `https://dev.azure.com/${organization}/${project}`;
   const endpoints = [];
 
-  endpoints.push({
-    label: 'Azure DevOps review checklist',
-    url: `${baseUrl}/_apis/wiki/wikis/${project}.wiki/pages?path=%2FChecklist-reviews-analyseteam&api-version=${apiVersion}`,
-  });
-
   if (workItemId) {
     endpoints.push({
       label: `Azure DevOps work item #${workItemId}`,
