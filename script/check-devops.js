@@ -1,8 +1,27 @@
 #!/usr/bin/env node
 
+const fs = require('fs');
+const path = require('path');
+
 const organization = 'UMCG-MIT';
 const project = 'Zorgviewer';
 const apiVersion = '7.1';
+
+function loadDotEnv() {
+  const envPath = path.resolve(process.cwd(), '.env');
+  if (!fs.existsSync(envPath)) return;
+
+  const content = fs.readFileSync(envPath, 'utf8');
+  for (const line of content.split(/\r?\n/)) {
+    const match = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*?)\s*$/);
+    if (!match) continue;
+    const [, key, value] = match;
+    const normalized = value.replace(/^['"]|['"]$/g, '');
+    if (!Object.prototype.hasOwnProperty.call(process.env, key)) {
+      process.env[key] = normalized;
+    }
+  }
+}
 
 function plainText(value) {
   return String(value ?? '')
@@ -19,30 +38,96 @@ function plainText(value) {
     .trim();
 }
 
+function parseWikiPagePath(rawValue) {
+  if (/^https?:\/\//i.test(rawValue)) {
+    const url = new URL(rawValue);
+    const segments = url.pathname.replace(/^\/+/, '').split('/');
+    const wikiIndex = segments.indexOf('_wiki');
+
+    if (wikiIndex !== -1 && segments[wikiIndex + 1] === 'wikis') {
+      const wikiName = decodeURIComponent(segments[wikiIndex + 2] || `${project}.wiki`);
+      const pageSegments = segments.slice(wikiIndex + 3);
+
+      if (pageSegments.length && /^\d+$/.test(pageSegments[0])) {
+        const pageId = pageSegments[0];
+        return {
+          wikiName,
+          path: pageSegments.slice(1).join('/') || '/',
+          apiUrl: `https://dev.azure.com/${organization}/${project}/_apis/wiki/wikis/${wikiName}/pages/${pageId}?api-version=${apiVersion}`,
+          url: rawValue,
+        };
+      }
+
+      const pagePath = '/' + pageSegments.join('/');
+      return {
+        wikiName,
+        path: pagePath || '/',
+        apiUrl: `https://dev.azure.com/${organization}/${project}/_apis/wiki/wikis/${wikiName}/pages?path=${encodeURIComponent(pagePath || '/')}&api-version=${apiVersion}`,
+        url: rawValue,
+      };
+    }
+
+    const wikiName = `${project}.wiki`;
+    return {
+      wikiName,
+      path: url.pathname || '/',
+      apiUrl: `https://dev.azure.com/${organization}/${project}/_apis/wiki/wikis/${wikiName}/pages?path=${encodeURIComponent(url.pathname || '/')}&api-version=${apiVersion}`,
+      url: rawValue,
+    };
+  }
+
+  const wikiName = `${project}.wiki`;
+  const pagePath = rawValue.startsWith('/') ? rawValue : `/${rawValue}`;
+  return {
+    wikiName,
+    path: pagePath,
+    apiUrl: `https://dev.azure.com/${organization}/${project}/_apis/wiki/wikis/${wikiName}/pages?path=${encodeURIComponent(pagePath)}&api-version=${apiVersion}`,
+    url: `https://dev.azure.com/${organization}/${project}/_wiki/wikis/${wikiName}${pagePath}`,
+  };
+}
+
 async function main() {
-  const workItemId = process.argv[2];
-  if (!workItemId || process.argv.length !== 3 || !/^[1-9]\d*$/.test(workItemId)) {
-    throw new Error('Gebruik: stel PAT in als omgevingsvariabele en voer node script/check-devops.js <workitem-id> uit.');
+  loadDotEnv();
+
+  const args = process.argv.slice(2);
+  const workItemId = args.find((arg) => /^\d+$/.test(arg));
+  const wikiTargets = args.filter((arg) => !/^\d+$/.test(arg));
+
+  if (!workItemId && wikiTargets.length === 0) {
+    throw new Error('Gebruik: stel PAT in .env of als omgevingsvariabele en voer node script/check-devops.js <workitem-id> [wiki-url|wiki-path] uit.');
   }
 
   const pat = process.env.PAT;
-  if (!pat) throw new Error('Er is geen PAT ingesteld in de omgevingsvariabele PAT.');
+  if (!pat) throw new Error('Er is geen PAT ingesteld in de omgevingsvariabele PAT of in .env.');
 
   const authorization = `Basic ${Buffer.from(`:${pat}`).toString('base64')}`;
   delete process.env.PAT;
 
   const baseUrl = `https://dev.azure.com/${organization}/${project}`;
-  const endpoints = [
-    {
-      label: 'Azure DevOps review checklist',
-      url: `${baseUrl}/_apis/wiki/wikis/${project}.wiki/pages?path=%2FChecklist-reviews-analyseteam&api-version=${apiVersion}`,
-    },
-    {
+  const endpoints = [];
+
+  endpoints.push({
+    label: 'Azure DevOps review checklist',
+    url: `${baseUrl}/_apis/wiki/wikis/${project}.wiki/pages?path=%2FChecklist-reviews-analyseteam&api-version=${apiVersion}`,
+  });
+
+  if (workItemId) {
+    endpoints.push({
       label: `Azure DevOps work item #${workItemId}`,
       url: `${baseUrl}/_apis/wit/workitems/${workItemId}?%24expand=relations&api-version=${apiVersion}`,
       workItem: true,
-    },
-  ];
+    });
+  }
+
+  for (const rawTarget of wikiTargets) {
+    const page = parseWikiPagePath(rawTarget);
+    endpoints.push({
+      label: `Azure DevOps wiki page ${page.path}`,
+      url: page.apiUrl,
+      wikiPage: true,
+      rawTarget,
+    });
+  }
 
   let failed = false;
   for (const endpoint of endpoints) {
@@ -58,6 +143,7 @@ async function main() {
 
       if (response.ok) {
         console.log(`OK (${response.status}): ${endpoint.label} is toegankelijk.`);
+
         if (endpoint.workItem) {
           const item = await response.json();
           const fields = item.fields ?? {};
@@ -78,6 +164,20 @@ async function main() {
           console.log(`  Parent work item(s): ${parentIds.join(', ') || '(geen)'}`);
           console.log(`  Omschrijving: ${description ? `${description.slice(0, 1200)}${description.length > 1200 ? '…' : ''}` : '(niet ingevuld)'}`);
           console.log(`  Acceptatiecriteria: ${acceptanceCriteria ? `${acceptanceCriteria.slice(0, 1200)}${acceptanceCriteria.length > 1200 ? '…' : ''}` : '(niet ingevuld)'}`);
+        }
+
+        if (endpoint.wikiPage) {
+          const data = await response.json();
+          const page = data.page ?? data;
+          const title = plainText(page.title || page.path || endpoint.rawTarget || '(onbekend)');
+          const remoteUrl = page.remoteUrl || page.url || endpoint.rawTarget || '(geen URL beschikbaar)';
+          const pagePath = page.path || page.gitItemPath || endpoint.rawTarget || '(niet ingevuld)';
+
+          console.log('Wiki page details:');
+          console.log(`  Bron: ${endpoint.rawTarget}`);
+          console.log(`  Titel: ${title || '(niet ingevuld)'}`);
+          console.log(`  Pad: ${plainText(pagePath)}`);
+          console.log(`  Remote URL: ${plainText(remoteUrl)}`);
         }
       } else {
         failed = true;

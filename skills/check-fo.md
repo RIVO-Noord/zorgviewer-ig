@@ -30,17 +30,27 @@ Controleer alle (interne en externe) hyperlinks in het te controleren FO:
 - **UI Wireframe- / Ankerlinks**: Klopt het anker (bijv. `#ui-wireframe` of `#kolomdefinities`) en is de profielnaam in de URL correct?
 - **Kolomnamen**: Komen alle kolomnamen die het FO voor het gegevensscherm gebruikt overeen met kolomkoppen in de bijbehorende IG-wireframe, met dezelfde naam? Vermeld ontbrekende, afwijkende of niet verifieerbare kolomnamen.
 - **Iconen- & Asset-links**: Verwijzen Google Fonts- links en SharePoint-links naar de juiste locaties?
-- **Azure DevOps work items**: Controleer voor iedere genoemde feature/user story of het work item inhoudelijk bij het FO hoort:
+- **Azure DevOps work items en wiki-pagina's**: Controleer voor iedere genoemde feature/user story en voor iedere verwijzing naar een Azure DevOps wiki-pagina of -pagina-URL of `pagePath` of `wiki-id` of `page-id` of het script om de koppeling inhoudelijk te beoordelen:
   1. Haal elk numeriek work item-ID op uit de metadata (bijv. `#123456`).
-  2. Laad eerst de PAT uit het werkruimtebestand `.env` in de shell, zodat `PAT` beschikbaar is voor de scripts, bijvoorbeeld:
+  2. Haal ook alle Azure DevOps wiki-links op uit het FO (bijv. `https://dev.azure.com/.../_wiki/...`, `.../wiki/.../12345/...`, of een pagina-pad zoals `/Functionele-Ontwerpen-(FO's)/Intoxicaties`).
+  3. Laad eerst de PAT uit het werkruimtebestand `.env` in de shell, zodat `PAT` beschikbaar is voor de scripts, bijvoorbeeld:
      ```bash
      cd /app
      set -a && . ./.env && set +a
      ```
-     Gebruik daarna per ID het repositoryscript `script/check-devops.js`, bijvoorbeeld `node script/check-devops.js 123456`.
-  3. Het script verwacht de PAT uitsluitend in de omgevingsvariabele `PAT`; zet de token nooit handmatig in het commando, de uitvoer of het rapport.
-  4. Gebruik de door de Azure DevOps API opgehaalde titel, type, status, area, omschrijving, acceptatiecriteria en eventuele parent-ID om de relatie met het FO te beoordelen. Vergelijk het onderwerp en de beschreven functionaliteit concreet met de scope van het FO; alleen een bereikbare ID of parentrelatie bewijst geen inhoudelijke koppeling.
-  5. Meld per ID of deze inhoudelijk passend, niet passend of niet verifieerbaar is. Onderbouw dit met relevante work item-details. Als het work item niet kan worden opgehaald, rapporteer de fout/status en trek geen conclusie over de inhoudelijke relatie.
+  4. Gebruik daarna het repositoryscript `script/check-devops.js` voor beide checks, bij voorbeeld:
+     ```bash
+     node script/check-devops.js 123456
+     node script/check-devops.js 123456 https://dev.azure.com/UMCG-MIT/Zorgviewer/_wiki/wikis/Zorgviewer.wiki/11026/Intoxicaties
+     ```
+     of, wanneer er geen volledige wiki-URL aanwezig is, een page-path zoals:
+     ```bash
+     node script/check-devops.js 123456 "/Functionele-Ontwerpen-(FO's)/Intoxicaties"
+     ```
+  5. Het script verwacht de PAT uitsluitend in de omgevingsvariabele `PAT`; zet de token nooit handmatig in het commando, de uitvoer of het rapport.
+  6. Gebruik de door de Azure DevOps API opgehaalde titel, type, status, area, omschrijving, acceptatiecriteria en eventuele parent-ID van het work item om de relatie met het FO te beoordelen. Vergelijk het onderwerp en de beschreven functionaliteit concreet met de scope van het FO; alleen een bereikbare ID of parentrelatie bewijst geen inhoudelijke koppeling.
+  7. Controleer daarnaast met hetzelfde script of de wiki-pagina toegankelijk is en of de pagina-URL / page-path overeenkomt met de bedoelde pagina in Azure DevOps. Rapporteer of de pagina bestaat, bereikbaar is en inhoudelijk relevant is voor het FO.
+  8. Meld per work item en per wiki-pagina of deze inhoudelijk passend, niet passend of niet verifieerbaar is. Onderbouw dit met relevante details. Als een item niet kan worden opgehaald, rapporteer de fout/status en trek geen conclusie over de inhoudelijke relatie.
 
 ### 3. Gewenste Uitvoer
 Lever een overzichtelijk analyserapport op in het Nederlands met:
