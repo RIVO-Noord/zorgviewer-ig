@@ -15,7 +15,7 @@ Zie in de FHIR specificaties: [Testing FHIR](https://hl7.org/fhir/STU3/testing.h
 
 * [Touchstone](https://touchstone.aegis.net/touchstone/) - REDELIJK Standaard FHIR TestScript - ook gebruikt voor MedMij kwalificatie
 * [Interoplab](https://interoplab.nl/platform/)
-* [Inferno](https://inferno-framework.github.io/inferno-core/) - MOEILIJK Custom Ruby
+* [Inferno](https://inferno-framework.github.io/docs/) - MOEILIJK Custom Ruby
 * [Crucible](https://github.com/fhir-crucible/) - API testen obv Implementatie Gids - MOEILIJK Custom Ruby
 
 ### Test Data
