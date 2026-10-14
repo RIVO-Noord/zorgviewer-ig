@@ -30,6 +30,17 @@ Controleer alle (interne en externe) hyperlinks in het te controleren FO:
 - **UI Wireframe- / Ankerlinks**: Klopt het anker (bijv. `#ui-wireframe` of `#kolomdefinities`) en is de profielnaam in de URL correct?
 - **Kolomnamen**: Komen alle kolomnamen die het FO voor het gegevensscherm gebruikt overeen met kolomkoppen in de bijbehorende IG-wireframe, met dezelfde naam? Vermeld ontbrekende, afwijkende of niet verifieerbare kolomnamen.
 - **Iconen- & Asset-links**: Verwijzen Google Fonts- links en SharePoint-links naar de juiste locaties?
+- **Azure DevOps work items**: Controleer voor iedere genoemde feature/user story of het work item inhoudelijk bij het FO hoort:
+  1. Haal elk numeriek work item-ID op uit de metadata (bijv. `#123456`).
+  2. Laad eerst de PAT uit het werkruimtebestand `.env` in de shell, zodat `PAT` beschikbaar is voor de scripts, bijvoorbeeld:
+     ```bash
+     cd /app
+     set -a && . ./.env && set +a
+     ```
+     Gebruik daarna per ID het repositoryscript `script/check-devops.js`, bijvoorbeeld `node script/check-devops.js 123456`.
+  3. Het script verwacht de PAT uitsluitend in de omgevingsvariabele `PAT`; zet de token nooit handmatig in het commando, de uitvoer of het rapport.
+  4. Gebruik de door de Azure DevOps API opgehaalde titel, type, status, area, omschrijving, acceptatiecriteria en eventuele parent-ID om de relatie met het FO te beoordelen. Vergelijk het onderwerp en de beschreven functionaliteit concreet met de scope van het FO; alleen een bereikbare ID of parentrelatie bewijst geen inhoudelijke koppeling.
+  5. Meld per ID of deze inhoudelijk passend, niet passend of niet verifieerbaar is. Onderbouw dit met relevante work item-details. Als het work item niet kan worden opgehaald, rapporteer de fout/status en trek geen conclusie over de inhoudelijke relatie.
 
 ### 3. Gewenste Uitvoer
 Lever een overzichtelijk analyserapport op in het Nederlands met:
@@ -37,4 +48,5 @@ Lever een overzichtelijk analyserapport op in het Nederlands met:
 - **Conformiteitstabel**: Een overzicht van de eisen uit het template bestand met status (✅ / ⚠️ / ❌) en bevinding per onderdeel.
 - Neem in de conformiteitstabel een afzonderlijke rij op voor de vergelijking van FO-kolomnamen met de bijbehorende IG-wireframe.
 - **Linkcontrole-tabel**: Alle gecontroleerde links met url, status en eventuele correctie.
+- **DevOps-workitemcontrole**: Een afzonderlijk overzicht per genoemd work item met ID, API-status, relevante details en conclusie of het inhoudelijk bij dit FO hoort.
 - **Concrete Verbeterpunten**: Een genummerde actielijst met precies wat er gewijzigd of aangevuld moet worden.
