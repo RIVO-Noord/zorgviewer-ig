@@ -25,7 +25,7 @@ Vergelijk `_local/Zorgviewer.wiki/Functionele-Ontwerpen-(FO's)/<BESTANDSNAAM>.md
 
 ### 2. Linkcontrole
 Controleer alle (interne en externe) hyperlinks in het te controleren FO:
-- **ZIB-links**: Verwijzen ze naar de juiste ZIB-wikipagina en versie?
+- **ZIB-links**: Controleer per gelinkte ZIB of de pagina bestaat, de in het FO genoemde ZIB en versie overeenkomen met de link, én of het concept en de gegevenselementen van de ZIB inhoudelijk passen bij het onderwerp en de gegevens die het FO beschrijft. Een geldige link of juiste versienaam is op zichzelf geen bewijs dat de ZIB inhoudelijk passend is. Benoem ZIBs die slechts een deel van het FO-deelonderwerp dekken en relevante ZIBs die voor beschreven onderdelen ontbreken. Negeer nieuwere major versies van de ZIB: adviseer geen versie-upgrade en markeer de gebruikte versie niet als verouderd uitsluitend omdat er een nieuwere major versie bestaat. Beoordeel de link en versie zoals het FO ze zelf presenteert.
 - **FHIR-profiel / IG-links**: Verwijzen de links naar geldige FHIR-profielpagina's op `https://build.fhir.org/ig/RIVO-Noord/zorgviewer-ig/`?
 - **UI Wireframe- / Ankerlinks**: Klopt het anker (bijv. `#ui-wireframe` of `#kolomdefinities`) en is de profielnaam in de URL correct?
 - **Kolomnamen**: Komen alle kolomnamen die het FO voor het gegevensscherm gebruikt overeen met kolomkoppen in de bijbehorende IG-wireframe, met dezelfde naam? Vermeld ontbrekende, afwijkende of niet verifieerbare kolomnamen.
