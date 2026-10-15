@@ -8,7 +8,7 @@ const project = 'Zorgviewer';
 const apiVersion = '7.1';
 
 function loadDotEnv() {
-  const envPath = path.resolve(process.cwd(), '.env');
+  const envPath = path.resolve(__dirname, '..', '.env');
   if (!fs.existsSync(envPath)) return;
 
   const content = fs.readFileSync(envPath, 'utf8');
@@ -94,7 +94,7 @@ async function main() {
   const wikiTargets = args.filter((arg) => !/^\d+$/.test(arg));
 
   if (!workItemId && wikiTargets.length === 0) {
-    throw new Error('Gebruik: stel PAT in .env of als omgevingsvariabele en voer node script/check-devops.js <workitem-id> [wiki-url|wiki-path] uit.');
+    throw new Error('Gebruik: stel PAT in .env of als omgevingsvariabele en voer node skills/check-devops.js <workitem-id> [wiki-url|wiki-path] uit.');
   }
 
   const pat = process.env.PAT;
