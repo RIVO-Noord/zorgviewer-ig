@@ -33,7 +33,7 @@
 </td></tr>
 <tr><td></td>
 <td>CGM</td>
-<td>4-3-2026 01:00:00 - 01:00:00</td>
+<td>4-3-2026</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
@@ -43,7 +43,7 @@
 </td></tr>
 <tr><td></td>
 <td>CGM</td>
-<td>26-2-2026 01:00:00 - 01:00:00</td>
+<td>26-2-2026</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
@@ -53,7 +53,7 @@
 </td></tr>
 <tr><td></td>
 <td>CGM</td>
-<td>30-9-2025 02:00:00 - 02:00:00</td>
+<td>30-9-2025</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
@@ -73,7 +73,7 @@
 </td></tr>
 <tr><td></td>
 <td>CGM</td>
-<td>11-3-2025 01:00:00 - 01:00:00</td>
+<td>11-3-2025</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
@@ -113,7 +113,7 @@
 </td></tr>
 <tr><td></td>
 <td>CGM</td>
-<td>15-11-2012 01:00:00 - 01:00:00</td>
+<td>15-11-2012</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
@@ -123,7 +123,7 @@
 </td></tr>
 <tr><td></td>
 <td>Nexus</td>
-<td>16-8-2012 12:22:00 - 19-8-2012, 13:22:00</td>
+<td>16-8-2012 12:22:00 - 19-8-2012 13:22:00</td>
 <td>Wit<br/>Orthopedie</td>
 <td></td>
 <td>finished</td>
@@ -133,7 +133,7 @@
 </td></tr>
 <tr><td></td>
 <td>Chipsoft</td>
-<td>15-8-2012 - 15-8-2012 15:04:00</td>
+<td>15-8-2012 00:00:00 - 15:04:00</td>
 <td>J.H.R Peters<br/>Onbekende functiecode.</td>
 <td></td>
 <td>finished</td>
@@ -143,7 +143,7 @@
 </td></tr>
 <tr><td></td>
 <td>CGM</td>
-<td>10-8-2012 02:00:00 - 02:00:00</td>
+<td>10-8-2012</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
@@ -153,7 +153,7 @@
 </td></tr>
 <tr><td></td>
 <td>CGM</td>
-<td>20-4-2011 02:00:00 - 02:00:00</td>
+<td>20-4-2011</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
@@ -163,7 +163,7 @@
 </td></tr>
 <tr><td></td>
 <td>CGM</td>
-<td>20-4-2011 02:00:00 - 02:00:00</td>
+<td>20-4-2011</td>
 <td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>

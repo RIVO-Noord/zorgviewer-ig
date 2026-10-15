@@ -33,7 +33,7 @@
 </td></tr>
 <tr><td></td>
 <td>Nictiz</td>
-<td>1-9-2021 02:00:00</td>
+<td>1-9-2021</td>
 <td>Cardiac Stent - Model X123</td>
 <td>Atherosclerose</td>
 <td>Right coronary artery</td>
@@ -43,7 +43,7 @@
 </td></tr>
 <tr><td></td>
 <td>Epic</td>
-<td>5-6-2012 02:00:00</td>
+<td>5-6-2012</td>
 <td>GMRS TIBIAL INSERT SMALL 10MM - S1148130801</td>
 <td></td>
 <td>Knie</td>
@@ -63,7 +63,7 @@
 </td></tr>
 <tr><td></td>
 <td>Epic</td>
-<td>1-1-2007 01:00:00</td>
+<td>1-1-2007</td>
 <td>Gehoorimplantaten - Actief Middenoor Implantaat-1-1-2007</td>
 <td></td>
 <td>Oor</td>
@@ -73,7 +73,7 @@
 </td></tr>
 <tr><td></td>
 <td>Nexus</td>
-<td>1-1-2007 01:00:00</td>
+<td>1-1-2007</td>
 <td>Gehoorapparaat</td>
 <td></td>
 <td>Oor</td>
