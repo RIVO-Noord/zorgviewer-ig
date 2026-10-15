@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>Correspondentie en SOEP verslagen</b>
+<b>Correspondentie en Verslagen</b>
 <table class="grid">
 <tbody>
 <tr><th></th>
