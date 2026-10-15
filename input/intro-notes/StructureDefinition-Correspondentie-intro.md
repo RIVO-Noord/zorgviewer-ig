@@ -2,6 +2,7 @@
 
 ### Zorginformatiebouwsteen
 
+* [PDF/A](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpPDFA) - n.b. is geen zib, maar een informatiestandaard.
 * [ZIB SOEPVerslag](https://zibs.nl/wiki/SOEPVerslag-v1.0(2020NL))
 
 ### View Definition
