@@ -84,6 +84,12 @@ function replaceInObject(obj, path = []) {
         obj[key] = replaceHostname(value);
         continue;
       }
+      // check id length Epic id's are sometimes longer than 64 characters which is not allowed; truncate
+      if (key === 'id' && (parentKey === null || parentKey === 'resource') && typeof value === 'string' && value.length > 64) {
+        console.log(`Truncating id at ${[...path, key].join('.')} from ${value.length} to 64 characters.`);
+        obj[key] = value.substring(0, 64);
+        continue;
+      }
       // Recurse deeper for objects/arrays
       if (typeof value === 'object' && value !== null) {
         replaceInObject(value, [...path, key]);

@@ -20,7 +20,7 @@ Er is geen request waarmee je de resources in 1 keer kan opvragen. Je moet hierv
 
 1. Zie [DocumentReference](StructureDefinition-DocumentReference.html#request) en [EncounterReport](StructureDefinition-EncounterReport.html#request)
 
-1. Opvragen (search) alle tekst rapportages (alleen NUTS gebasseerde bronnen)
+1. Opvragen (search) alle verpleegkundige rapportages (alleen NUTS gebasseerde bronnen)
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&_profile=https://nuts.nl/fhir/StructureDefinition/nl-core-nursingreport&_sort=-date&_count=10`
 
