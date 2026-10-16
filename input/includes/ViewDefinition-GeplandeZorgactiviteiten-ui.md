@@ -70,7 +70,7 @@
 </td></tr>
 <tr><td>&#9660;</td>
 <td>Epic</td>
-<td>21-4-2020 07:00:00</td>
+<td>21-4-2020 07:00</td>
 <td>Phenolphthalein, stool</td>
 <td></td>
 <td>Actueel</td>
@@ -80,7 +80,7 @@
 </td></tr>
 <tr><td>&#9660;</td>
 <td>Epic</td>
-<td>3-3-2019 07:00:00</td>
+<td>3-3-2019 07:00</td>
 <td>MyChart BP Flowsheet</td>
 <td></td>
 <td>Actueel</td>

@@ -427,8 +427,8 @@ function formatDisplayValue(column, displayValue) {
         const isSameDay = dateEnd && dateStart.toLocaleDateString('nl-NL', { timeZone: 'CET' }) === dateEnd.toLocaleDateString('nl-NL', { timeZone: 'CET' });
 
         // Check if dates are set to midnight (or no time specified for Period:date)
-        let startIsMidnight = column.type == "Period:date" || !period[0].includes('T') || "00:00:00" == dateStart.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit', second: '2-digit' });
-        const endIsMidnight = column.type == "Period:date" || period[1] && !period[1].includes('T') || dateEnd && "00:00:00" == dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        let startIsMidnight = column.type == "Period:date" || !period[0].includes('T') || "00:00" == dateStart.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit' });
+        const endIsMidnight = column.type == "Period:date" || period[1] && !period[1].includes('T') || dateEnd && "00:00" == dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit' });
         if (dateEnd && startIsMidnight && !endIsMidnight) {
             startIsMidnight = false; // if start is midnight but end is not, treat start as having a time for display purposes
         }
@@ -436,7 +436,7 @@ function formatDisplayValue(column, displayValue) {
         // Format start display
         const displayStart = startIsMidnight
             ? dateStart.toLocaleDateString('nl-NL', { timeZone: 'CET' })
-            : dateStart.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            : dateStart.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 
         // Format end display based on same-day status
         let displayEnd = null;
@@ -446,12 +446,12 @@ function formatDisplayValue(column, displayValue) {
                 // Hide end date: show time if present, or omit if midnight
                 displayEnd = endIsMidnight
                     ? null
-                    : dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                    : dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit' });
             } else {
                 // Different day: standard date or full date+time
                 displayEnd = endIsMidnight
                     ? dateEnd.toLocaleDateString('nl-NL', { timeZone: 'CET' })
-                    : dateEnd.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                    : dateEnd.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
             }
         }
         displayValue = displayStart;
