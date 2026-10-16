@@ -3,6 +3,7 @@
 De volgende APIs moeten geselecteerd zijn bij Zorgviewer client registratie.
 
 * AllergyIntolerance.Search (STU3)
+* Appointment.Search (Appointments) (STU3)
 * Binary.Read (Correspondences) (STU3)
 * Binary.Read (Radiology Results) (STU3)
 * Condition.Search (Encounter Diagnosis, Problems) (STU3)
@@ -10,6 +11,7 @@ De volgende APIs moeten geselecteerd zijn bij Zorgviewer client registratie.
 * Consent.Search (Document) (STU3)
 * DocumentReference.Search (Correspondences) (STU3)
 * DocumentReference.Search (Radiology Results) (STU3)
+* Encounter.Search (Patient Chart) (STU3)
 * Flag.Search (Health Concern) (STU3)
 * Flag.Search (Infection) (STU3)
 * Flag.Search (Patient FYI) (STU3)
