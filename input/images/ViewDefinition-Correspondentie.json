@@ -93,7 +93,7 @@
               "tag": [ { "name": "Zib element", "value": "nvt" } ]
             },
             {
-              "path": "''",
+              "path": "'plain/text'",
               "name": "(MimeType)",
               "type": "string",
               "tag": [ { "name": "Zib element", "value": "nvt" } ]
@@ -112,6 +112,60 @@
             }
           ],
           "forEach": "entry.resource.where(resourceType='Composition' and type.coding.code='67781-5')"
+        },
+                {
+          "column": [
+            {
+              "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+              "name": "Bron",
+              "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "effectiveDateTime",
+              "name": "Datum",
+              "type": "dateTime",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "extension('https://nuts.nl/fhir/StructureDefinition/nl-core-nursingreport/title').valueString",
+              "name": "Beschrijving",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "performer.display",
+              "name": "Auteur",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "'VVT'",
+              "name": "Specialisme",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "'plain/text'",
+              "name": "(MimeType)",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "code.text",
+              "name": "(Type)",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "valueString",
+              "name": "+Verslag",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            }
+          ],
+          "forEach": "entry.resource.where(resourceType='Observation' and meta.profile='https://nuts.nl/fhir/StructureDefinition/nl-core-nursingreport')"
         }
       ]
     }

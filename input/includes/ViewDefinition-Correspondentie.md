@@ -107,7 +107,7 @@
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(MimeType)</td>
-<td><samp>''</samp></td>
+<td><samp>'plain/text'</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td></td>
@@ -117,6 +117,65 @@
 <td><samp>type.coding[0].code</samp></td>
 <td><code>string</code></td>
 <td>Auteur</td>
+<td></td>
+</tr>
+<tr style="background-color:#000000; color:white"><td colspan=5><i>Observation' and meta.profile='https://nuts.nl/fhir/StructureDefinition/nl-core-nursingreport</i></td></tr>
+<tr>
+<td>Bron</td>
+<td><samp>meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
+</tr>
+<tr>
+<td>Datum</td>
+<td><samp>effectiveDateTime</samp></td>
+<td><code>dateTime</code></td>
+<td>nvt</td>
+<td></td>
+</tr>
+<tr>
+<td>Beschrijving</td>
+<td><samp>extension('https://nuts.nl/fhir/StructureDefinition/nl-core-nursingreport/title').valueString</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td></td>
+</tr>
+<tr>
+<td>Auteur</td>
+<td><samp>performer.display</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td></td>
+</tr>
+<tr>
+<td>Specialisme</td>
+<td><samp>'VVT'</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td></td>
+</tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#b4c7e7">
+<td>+Verslag</td>
+<td><samp>valueString</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td></td>
+</tr>
+<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
+<tr style="background-color:#d6dce5">
+<td>(MimeType)</td>
+<td><samp>'plain/text'</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td></td>
+</tr>
+<tr style="background-color:#d6dce5">
+<td>(Type)</td>
+<td><samp>code.text</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
 <td></td>
 </tr>
 </tbody>
