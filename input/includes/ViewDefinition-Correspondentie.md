@@ -102,7 +102,7 @@
 ')</samp></td>
 <td><code>string</code></td>
 <td>SOEPRegel</td>
-<td></td>
+<td>Tussen haakjes de SOEP-regel type, gevolgd door de tekst van de regel. De tekst wordt ontdaan van HTML tags.</td>
 </tr>
 <tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
 <tr style="background-color:#d6dce5">
