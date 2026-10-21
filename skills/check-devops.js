@@ -157,7 +157,7 @@ async function main() {
           console.log(`  Iteration: ${plainText(fields['System.IterationPath']) || '(niet ingevuld)'}`);
           console.log(`  Tags: ${plainText(fields['System.Tags']) || '(geen)'}`);
           console.log(`  Parent work item(s): ${parentIds.join(', ') || '(geen)'}`);
-          console.log(`  Omschrijving: ${description ? `${description.slice(0, 1200)}${description.length > 1200 ? '…' : ''}` : '(niet ingevuld)'}`);
+          console.log(`  Omschrijving: ${description || '(niet ingevuld)'}`);
           console.log(`  Acceptatiecriteria: ${acceptanceCriteria ? `${acceptanceCriteria.slice(0, 1200)}${acceptanceCriteria.length > 1200 ? '…' : ''}` : '(niet ingevuld)'}`);
         }
 
