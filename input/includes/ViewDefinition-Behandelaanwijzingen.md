@@ -1,7 +1,7 @@
-### Kolomdefinities
+### Gegevensherkomst
 <table class="grid">
 <thead>
-<th>Kolom label</th>
+<th>Label</th>
 <th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
@@ -50,7 +50,7 @@
 <td>GeverifieerdBij</td>
 <td></td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Toelichting</td>
 <td><samp>extension.where(url='http://nictiz.nl/fhir/StructureDefinition/Comment').valueString</samp></td>
@@ -65,13 +65,20 @@
 <td>nvt</td>
 <td></td>
 </tr>
-<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
+<tr style="background-color:#adb9ca; color:white"><th colspan="5">CONTROL</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(status)</td>
 <td><samp>status</samp></td>
 <td><code>code</code></td>
 <td>nvt</td>
 <td></td>
+</tr>
+<tr style="background-color:#d6dce5">
+<td>(Groep)</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentDirective-Treatment').valueCodeableConcept.coding[0].code.lookup('ACPTreatmentCodelist').designation[0].value</samp></td>
+<td><code>string</code></td>
+<td>Behandeling</td>
+<td>Lookup behandeling adhv behandeling code <code>&lt;terminologie-base&gt;<a href='ValueSet-ACPTreatmentCodelist.html'>/ValueSet/ACPTreatmentCodelist</a>$lookup?code=&lt;code&gt;</code><br/>Gebruik deze om de regels te groeperen.<br/>Zie voor labels: <a href='ValueSet-ACPTreatmentCodelist.html'>ValueSet-ACPTreatmentCodelist</a></td>
 </tr>
 </tbody>
 </table>

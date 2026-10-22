@@ -1,0 +1,249 @@
+{
+    "resourceType": "Bundle",
+    "id": "4db99441-0f18-455f-ad42-1027042cf564",
+    "meta": {
+        "lastUpdated": "2022-05-11T15:07:51.917+02:00"
+    },
+    "type": "searchset",
+    "total": 4,
+    "link": [
+        {
+            "relation": "self",
+            "url": "https://example.org/fhir/DeviceUseStatement?_include=DeviceUseStatement%3Adevice"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "https://example.org/fhir/DeviceUseStatement/eN.xeE42awrOtxLKiY2Nr7A3",
+            "resource": {
+                "resourceType": "DeviceUseStatement",
+                "id": "eN.xeE42awrOtxLKiY2Nr7A3",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice"
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Practitioner",
+                        "valueReference": {
+                            "reference": "Practitioner/exT5v9tqJVV163d1EkiYONQ3"
+                        }
+                    }
+                ],
+                "status": "active",
+                "subject": {
+                    "reference": "Patient/eXxP1o8ZlOz21F6HXS9puLA3",
+                    "display": "Helleman, Johan"
+                },
+                "whenUsed": {
+                    "start": "2007-01-01"
+                },
+                "device": {
+                    "reference": "Device/eMC9wB-9SDpLQ9BE-XLxooQ3",
+                    "display": "Gehoorimplantaten - Actief Middenoor Implantaat-1-1-2007"
+                },
+                "bodySite": {
+                    "extension": [
+                        {
+                            "url": "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "urn:oid:1.2.840.114350.1.13.485.3.7.10.737780.505",
+                                        "code": "2",
+                                        "display": "Rechts"
+                                    }
+                                ],
+                                "text": "Rechts"
+                            }
+                        }
+                    ],
+                    "coding": [
+                        {
+                            "system": "urn:oid:1.2.840.114350.1.13.485.3.7.10.737780.500",
+                            "code": "350",
+                            "display": "Oor"
+                        }
+                    ],
+                    "text": "Oor"
+                },
+                "note": [
+                    {
+                        "text": "Apparaat niet zichtbaar (diep in de gehooringang)"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "https://example.org/fhir/DeviceUseStatement/eftv3Bhd.PjGOdC3UernbTw3",
+            "resource": {
+                "resourceType": "DeviceUseStatement",
+                "id": "eftv3Bhd.PjGOdC3UernbTw3",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice"
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Organization",
+                        "valueReference": {
+                            "reference": "Organization/eLs3rvSHyM6SvhLHe2Q6qSw3",
+                            "display": "Umcg Groningen"
+                        }
+                    },
+                    {
+                        "url": "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice-Practitioner",
+                        "valueReference": {
+                            "reference": "Practitioner/emyz1sSUBzGkic7YzM70E85J8WUeZ10r.DUEXqRCHxow3",
+                            "display": "P Jutte"
+                        }
+                    }
+                ],
+                "status": "active",
+                "subject": {
+                    "reference": "Patient/eXxP1o8ZlOz21F6HXS9puLA3",
+                    "display": "Helleman, Johan"
+                },
+                "whenUsed": {
+                    "start": "2012-06-05"
+                },
+                "device": {
+                    "reference": "Device/ey1KV4jLfecupp0WEvPUqXg3",
+                    "display": "GMRS TIBIAL INSERT SMALL 10MM - S1148130801"
+                },
+                "bodySite": {
+                    "extension": [
+                        {
+                            "url": "http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "urn:oid:1.2.840.114350.1.13.485.3.7.10.737780.505",
+                                        "code": "1",
+                                        "display": "Links"
+                                    }
+                                ],
+                                "text": "Links"
+                            }
+                        }
+                    ],
+                    "coding": [
+                        {
+                            "system": "urn:oid:1.2.840.114350.1.13.485.3.7.10.737780.500",
+                            "code": "650",
+                            "display": "Knie"
+                        }
+                    ],
+                    "text": "Knie"
+                },
+                "note": [
+                    {
+                        "text": "Implantant, Gen 2 Tibia Insert 5 / 6-9mm"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "https://example.org/fhir/Device/eMC9wB-9SDpLQ9BE-XLxooQ3",
+            "resource": {
+                "resourceType": "Device",
+                "id": "eMC9wB-9SDpLQ9BE-XLxooQ3",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDeviceProduct"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "use": "usual",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/identifier-type",
+                                    "code": "SNO",
+                                    "display": "Serial Number"
+                                }
+                            ],
+                            "text": "Serial Number"
+                        },
+                        "value": "123545"
+                    }
+                ],
+                "udi": {
+                    "name": "Gehoorimplantaten - Actief Middenoor Implantaat-1-1-2007",
+                    "entryType": "unknown"
+                },
+                "status": "active",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:1.2.840.114350.1.13.485.3.7.10.737780.70",
+                            "code": "1078200001",
+                            "display": "Gehoorimplantaten - Actief Middenoor Implantaat"
+                        }
+                    ],
+                    "text": "Gehoorimplantaten - Actief Middenoor Implantaat"
+                },
+                "patient": {
+                    "reference": "Patient/eXxP1o8ZlOz21F6HXS9puLA3",
+                    "display": "Helleman, Johan"
+                }
+            }
+        },
+        {
+            "fullUrl": "https://example.org/fhir/Device/ey1KV4jLfecupp0WEvPUqXg3",
+            "resource": {
+                "resourceType": "Device",
+                "id": "ey1KV4jLfecupp0WEvPUqXg3",
+                "meta": {
+                    "profile": [
+                        "http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDeviceProduct"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "use": "usual",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/identifier-type",
+                                    "code": "SNO",
+                                    "display": "Serial Number"
+                                }
+                            ],
+                            "text": "Serial Number"
+                        },
+                        "value": "1148130801"
+                    }
+                ],
+                "udi": {
+                    "deviceIdentifier": "05050474530799",
+                    "name": "GMRS TIBIAL INSERT SMALL 10MM - S1148130801",
+                    "carrierHRF": "(01)05050474530799(17)310116(10)123(21)1148130801",
+                    "entryType": "unknown"
+                },
+                "status": "active",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:1.2.840.114350.1.13.485.3.7.10.737780.70",
+                            "code": "1071200003",
+                            "display": "Knieprothese - Insert"
+                        }
+                    ],
+                    "text": "Knieprothese - Insert"
+                },
+                "lotNumber": "123",
+                "manufacturer": "Stryker Nederland BV",
+                "expirationDate": "2031-01-16",
+                "model": "64953010",
+                "patient": {
+                    "reference": "Patient/eXxP1o8ZlOz21F6HXS9puLA3",
+                    "display": "Helleman, Johan"
+                }
+            }
+        }
+    ]
+}

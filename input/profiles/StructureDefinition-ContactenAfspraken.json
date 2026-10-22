@@ -1,0 +1,65 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/ContactenAfspraken",
+    "name": "ContactenAfspraken",
+    "title": "Contacten en Afspraken",
+    "status": "active",
+    "experimental": false,
+    "description": "Contacten en Afspraken samenstelling voor het documenteren van de combinatie van Contact en Afspraak",
+    "kind": "resource",
+    "abstract": true,
+    "type": "Bundle",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Bundle.entry",
+                "path": "Bundle.entry",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "type",
+                            "path": "resource"
+                        }
+                    ],
+                    "rules": "open"
+                }
+            },
+            {
+                "id": "Bundle.entry:Encounter",
+                "path": "Bundle.entry",
+                "sliceName": "Encounter",
+                "short": "Encounter"
+            },
+            {
+                "id": "Bundle.entry:Encounter.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Contact",
+                "type": [
+                    {
+                        "code": "Encounter",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:Appointment",
+                "path": "Bundle.entry",
+                "sliceName": "Appointment",
+                "short": "Appointment"
+            },
+            {
+                "id": "Bundle.entry:Appointment.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Afspraak",
+                "type": [
+                    {
+                        "code": "Appointment",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Appointment"
+                    }
+                ]
+            }
+        ]
+    }
+}

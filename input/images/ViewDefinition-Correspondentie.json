@@ -2,7 +2,7 @@
   "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
   "resource": "Bundle",
   "id": "ViewDefinition-Correspondentie",
-  "title": "Correspondentie en SOEP verslagen",
+  "title": "Correspondentie en Verslagen",
   "select": [
     {
       "unionAll": [
@@ -18,7 +18,7 @@
             {
               "path": "iif(exists(context.period.start), context.period.start, indexed)",
               "name": "Datum",
-              "description": "N.B. tijd is GMT, dus omzetten naar CET.",
+              "description": "Datum en tijd van het document. Indien niet aanwezig, dan datum en tijd van de indexering.",
               "type": "dateTime",
               "tag": [ { "name": "Zib element", "value": "nvt" } ]
             },
@@ -93,7 +93,7 @@
               "tag": [ { "name": "Zib element", "value": "nvt" } ]
             },
             {
-              "path": "''",
+              "path": "'plain/text'",
               "name": "(MimeType)",
               "type": "string",
               "tag": [ { "name": "Zib element", "value": "nvt" } ]
@@ -107,11 +107,66 @@
             {
               "path": "section.select('(' + code.coding.code + ') ' + text.`div`.replaceMatches('<[^>]*>', '')).join('\n')",
               "name": "+Regels",
+              "description": "Tussen haakjes de SOEP-regel type, gevolgd door de tekst van de regel. De tekst wordt ontdaan van HTML tags.",
               "type": "string",
               "tag": [ { "name": "Zib element", "value": "SOEPRegel" } ]
             }
           ],
           "forEach": "entry.resource.where(resourceType='Composition' and type.coding.code='67781-5')"
+        },
+                {
+          "column": [
+            {
+              "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+              "name": "Bron",
+              "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "effectiveDateTime",
+              "name": "Datum",
+              "type": "dateTime",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "extension('https://nuts.nl/fhir/StructureDefinition/nl-core-nursingreport/title').valueString",
+              "name": "Beschrijving",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "performer.display",
+              "name": "Auteur",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "'VVT'",
+              "name": "Specialisme",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "'plain/text'",
+              "name": "(MimeType)",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "code.text",
+              "name": "(Type)",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            },
+            {
+              "path": "valueString",
+              "name": "+Verslag",
+              "type": "string",
+              "tag": [ { "name": "Zib element", "value": "nvt" } ]
+            }
+          ],
+          "forEach": "entry.resource.where(resourceType='Observation' and meta.profile='https://nuts.nl/fhir/StructureDefinition/nl-core-nursingreport')"
         }
       ]
     }

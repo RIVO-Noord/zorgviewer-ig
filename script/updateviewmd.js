@@ -99,8 +99,8 @@ function lookupFn(inputs, valueSetId) {
 }
 const userInvocationTable = {
     resolve: { fn: resolveFn },
-    translate: { fn: translateFn, arity: { 1: ['String']}},
-    lookup: { fn: lookupFn, arity: { 1: ['String']}}
+    translate: { fn: translateFn, arity: { 1: ['String'] } },
+    lookup: { fn: lookupFn, arity: { 1: ['String'] } }
 };
 
 fs.readdirSync(viewDefPath).forEach(file => {
@@ -110,10 +110,10 @@ fs.readdirSync(viewDefPath).forEach(file => {
         const viewDef = JSON.parse(fs.readFileSync(viewDef_filePath, 'utf8'));
 
         const md_def = [
-            "### Kolomdefinities",
+            "### Gegevensherkomst",
             "<table class=\"grid\">",
             "<thead>",
-            "<th>Kolom label</th>",
+            "<th>Label</th>",
             "<th>FHIR Path Expression</th>",
             "<th>FHIR Type</th>",
             "<th>Zib element</th>",
@@ -126,7 +126,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
             `<b>${viewDef.title}</b>`,
             "<table class=\"grid\">",
             "<tbody>"
-         ];
+        ];
 
         // add column names for select
         const allExtractedRows = [];
@@ -137,7 +137,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
         if (viewDef.select[0].unionAll) {
             // assume first unions columns is the final list of columns
             viewDef.select[0].unionAll.forEach(union => {
-                const match = union.forEach.match("resourceType='(.+)'");
+                const match = union.forEach.match("resourceType='([^\']+)'");
                 if (match) {
                     const resourceType = match[1];
                     md_def.push(`<tr style="background-color:#000000; color:white"><td colspan=5><i>${resourceType}</i></td></tr>`);
@@ -152,7 +152,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
 
         md_ui.push("</tbody>",
             "</table>");
-    
+
         const md_def_filePath = path.join(mdPath, `${viewDef.id}.md`);
         fs.writeFileSync(md_def_filePath, md_def.join('\n'));
 
@@ -163,17 +163,17 @@ fs.readdirSync(viewDefPath).forEach(file => {
 
 function doColumnDefs(columns, md_def) {
     // Add column definitions
-    columns.forEach(column => { 
+    columns.forEach(column => {
         if (column.name.charAt(0) != '+' && column.name.charAt(0) != '(') {
             md_def.push("<tr>");
             doColumn(column, md_def);
             md_def.push("</tr>");
         }
     });
-    // Add uitklap columns
+    // Add detail columns
     if (columns.find(column => column.name.charAt(0) == '+')) {
-        md_def.push('<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>');
-        columns.forEach(column => { 
+        md_def.push('<tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>');
+        columns.forEach(column => {
             if (column.name.charAt(0) == '+') {
                 md_def.push("<tr style=\"background-color:#b4c7e7\">");
                 doColumn(column, md_def);
@@ -181,25 +181,25 @@ function doColumnDefs(columns, md_def) {
             }
         });
     }
-    // Add markering columns
+    // Add control columns
     if (columns.find(column => column.name.charAt(0) == '(')) {
-        md_def.push('<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>');
-        columns.forEach(column => { 
+        md_def.push('<tr style="background-color:#adb9ca; color:white"><th colspan="5">CONTROL</th></tr>');
+        columns.forEach(column => {
             if (column.name.charAt(0) == '(') {
                 md_def.push("<tr style=\"background-color:#d6dce5\">");
                 doColumn(column, md_def);
                 md_def.push("</tr>");
             }
-        });    
+        });
     }
 }
 
 function doColumn(column, md) {
     md.push(`<td>${column.name}</td>`)
-    md.push(`<td><samp>${column.path}</samp></td>`)            
+    md.push(`<td><samp>${column.path}</samp></td>`)
     md.push(`<td><code>${column.type && column.type.split('/').join("</code> of <code>")}</code></td>`)
-    md.push(`<td>${column.tag?column.tag[0].value:"<i>nvt</i>"}</td>`)
-    md.push(`<td>${column.description||""}</td>`);
+    md.push(`<td>${column.tag ? column.tag[0].value : "<i>nvt</i>"}</td>`)
+    md.push(`<td>${column.description || ""}</td>`);
 }
 
 function getExamples() {
@@ -220,7 +220,7 @@ function getExamples() {
                     if (q == -1) q = example.link[0].url.length;
                     var urlNoQ = example.link[0].url.substring(0, q);
                     var o = urlNoQ.indexOf('$');
-                    if (o != -1) urlNoQ = urlNoQ.substring(0, o-1); // remove $ operation and last '/'
+                    if (o != -1) urlNoQ = urlNoQ.substring(0, o - 1); // remove $ operation and last '/'
                     const queriedType = urlNoQ.substring(urlNoQ.lastIndexOf('/') + 1);
                     example.entry.filter(entry => entry.resource.resourceType == queriedType).forEach(entry => {
                         entry.resource.exampleFileName = exampleFileName; // keep track of source file for reference in UI
@@ -229,9 +229,9 @@ function getExamples() {
                 }
                 else {
                     // cannot determine queriedType, so keep all
-                    example.entry.forEach(entry => { 
+                    example.entry.forEach(entry => {
                         entry.resource.exampleFileName = exampleFileName; // keep track of source file for reference in UI
-                        examplesCache.push(entry.resource) 
+                        examplesCache.push(entry.resource)
                     });
                 }
             }
@@ -266,10 +266,10 @@ function extractExampleRows(select, allExtractedRows) {
             if (match3) {
                 let whereResult;
                 try { whereResult = fhirpath.evaluate(example, match3[1]); }
-                catch (err) { console.error ("ERROR: Error evaluating where clause", match3[1], err.message); }
+                catch (err) { console.error(`ERROR: Error evaluating where clause in ${example.exampleFileName}`, match3[1], err.message); }
 
                 // does example match where clause?
-                if (whereResult[0]) {
+                if (whereResult && whereResult[0]) {
                     // is there a further path to follow?
                     if (match3[3]) {
                         const columnResults = fhirpath.evaluate(example, match3[3], null, fhirpath_stu3_model);
@@ -293,29 +293,59 @@ function extractExampleRows(select, allExtractedRows) {
 
 function doExampleRows(allExtractedRows, md_ui) {
     // Add column names for UI wireframe
-    md_ui.push("<tr><th>&gt;&lt;</th>");
-    allExtractedRows[0].forEach(column => { 
-        if (column.name.charAt(0) != '+') {
+    md_ui.push("<tr><th></th>");
+    allExtractedRows[0].forEach(column => {
+        if (column.name.charAt(0) != '+' && column.name != "(Groep)") {
             md_ui.push(`<th>${column.name}</th>`);
         }
     });
     md_ui.push("</tr>");
 
     // Find the index of the first date or dateTime column for sorting
-    const sortColumnIndex = allExtractedRows.length > 0 ? allExtractedRows[0].findIndex(column => column.type === "date" || column.type === "dateTime") : -1;
+    const sortColumnIndex = allExtractedRows.length > 0 ? allExtractedRows[0].findIndex(column => column.type === "date" || column.type === "dateTime" || column.type === "Period") : -1;
 
     // Sort allExtractedRows by the first date column if found, otherwise no specific sorting
     if (sortColumnIndex !== -1) {
         allExtractedRows.sort((a, b) => {
-            const dateA = new Date(a[sortColumnIndex].value);
-            const dateB = new Date(b[sortColumnIndex].value);
+            // if there is a (Groep) column, sort by that first, then by date
+            const groupColumnIndex = a.findIndex(column => column.name === "(Groep)");
+            if (groupColumnIndex !== -1) {
+                const groupA = a[groupColumnIndex].value || "";
+                const groupB = b[groupColumnIndex].value || "";
+                if (groupA !== groupB) {
+                    return groupA.localeCompare(groupB);
+                }
+            }
+            // Handle Period type by using the start date for sorting
+            let aKey = a[sortColumnIndex].value;
+            let bKey = b[sortColumnIndex].value;
+            if (a[sortColumnIndex].type === "Period") {
+                const periodA = a[sortColumnIndex].value.split(' - ');
+                aKey = periodA[0]; // Use start date for sorting
+            }
+            if (b[sortColumnIndex].type === "Period") {
+                const periodB = b[sortColumnIndex].value.split(' - ');
+                bKey = periodB[0]; // Use start date for sorting
+            }
+            const dateA = new Date(aKey);
+            const dateB = new Date(bKey);
             // Sort in descending order (newest first)
             return dateB.getTime() - dateA.getTime();
         });
     }
 
     // Now, iterate through the sorted data and generate markdown
+    let lastGroupValue = null;
     allExtractedRows.forEach(extractedData => {
+        // If there is a (Groep) column, check if the value has changed and insert a header
+        const groupColumnIndex = extractedData.findIndex(column => column.name === "(Groep)");
+        if (groupColumnIndex !== -1) {
+            const currentGroupValue = extractedData[groupColumnIndex].value;
+            if (currentGroupValue && currentGroupValue !== lastGroupValue) {
+                md_ui.push(`<tr><td colspan=${extractedData.length}><b>${currentGroupValue}</b></td></tr>`);
+                lastGroupValue = currentGroupValue;
+            }
+        }
         doExampleRow(extractedData, md_ui);
     });
 }
@@ -323,15 +353,15 @@ function doExampleRows(allExtractedRows, md_ui) {
 function extractExampleData(select, example, exampleFileName) {
     const extractedValues = select.column.map(column => {
         let evalResult;
-        try { 
-            evalResult = fhirpath.evaluate(example, column.path, null, fhirpath_stu3_model, { userInvocationTable }); 
-        } catch (err) { 
-            console.error("ERROR:", column.name, err.message, column.path); 
+        try {
+            evalResult = fhirpath.evaluate(example, column.path, null, fhirpath_stu3_model, { userInvocationTable });
+        } catch (err) {
+            console.error("ERROR:", column.name, err.message, column.path);
         }
-        
+
         let value = "";
         if (evalResult && evalResult.length > 0) {
-            if (column.type == "date" || column.type == "dateTime") {
+            if (column.type == "date" || column.type == "dateTime" || column.type == "Period") {
                 value = evalResult[0]; // Store raw date value
             } else if (column.type == "code") {
                 value = evalResult[0];
@@ -353,20 +383,22 @@ function extractExampleData(select, example, exampleFileName) {
     if (extractedValues.length > 0) {
         extractedValues[0].value = exampleFileName.substring(exampleFileName.indexOf('-') + 1, exampleFileName.length - 5);
     }
-    
+
     return extractedValues;
 }
 
 function doExampleRow(extractedData, md_ui) {
-    md_ui.push("<tr><td>+</td>");
+    // special case for (Groep) column; if no value, skip this row; used in vital-signs to hide rows without a group
+    if (extractedData.find(column => column.name == '(Groep)')?.value == "") {
+        return;
+    }
+
+    const detailcolcount = extractedData.filter(column => column.name.charAt(0) == '+').length;
+    md_ui.push(`<tr><td>${detailcolcount>0?'&#9660;':''}</td>`);
     // add column values
     extractedData.forEach((column, idx) => {
-        if (column.name.charAt(0) != '+') {
-            let displayValue = extractedData[idx].value;
-            if ((column.type == "date" || column.type == "dateTime") && displayValue) {
-                const date = new Date(displayValue);
-                displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'UTC' });
-            }
+        if (column.name.charAt(0) != '+' && column.name != "(Groep)") {
+            const displayValue = formatDisplayValue(column, extractedData[idx].value);
             md_ui.push(`<td>${displayValue}</td>`);
         }
     });
@@ -375,13 +407,58 @@ function doExampleRow(extractedData, md_ui) {
     md_ui.push(`</tr><tr><td></td><td colspan=${colcount}>`);
     extractedData.forEach((column, idx) => {
         if (column.name.charAt(0) == '+' && extractedData[idx].value != "") {
-            let displayValue = extractedData[idx].value;
-            if ((column.type == "date" || column.type == "dateTime") && displayValue) {
-                const date = new Date(displayValue);
-                displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'UTC' });
-            }
+            const displayValue = formatDisplayValue(column, extractedData[idx].value);
             md_ui.push(`<b>${column.name.slice(1)}</b><br/>${displayValue}<br/>`);
         }
     });
     md_ui.push("</td></tr>");
+}
+
+function formatDisplayValue(column, displayValue) {
+    if ((column.type == "date" || column.type == "dateTime") && displayValue) {
+        const date = new Date(displayValue);
+        displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'CET' });
+    }
+    else if ((column.type == "Period" || column.type == "Period:date") && displayValue) { // special case for Period; display as start - end
+        const period = displayValue.split(' - ');
+        const dateStart = new Date(period[0]);
+        const dateEnd = period[1] ? new Date(period[1]) : null;
+        // Check if dateEnd falls on the exact same calendar day as dateStart
+        const isSameDay = dateEnd && dateStart.toLocaleDateString('nl-NL', { timeZone: 'CET' }) === dateEnd.toLocaleDateString('nl-NL', { timeZone: 'CET' });
+
+        // Check if dates are set to midnight (or no time specified for Period:date)
+        let startIsMidnight = column.type == "Period:date" || !period[0].includes('T') || "00:00" == dateStart.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit' });
+        const endIsMidnight = column.type == "Period:date" || period[1] && !period[1].includes('T') || dateEnd && "00:00" == dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit' });
+        if (dateEnd && startIsMidnight && !endIsMidnight) {
+            startIsMidnight = false; // if start is midnight but end is not, treat start as having a time for display purposes
+        }
+
+        // Format start display
+        const displayStart = startIsMidnight
+            ? dateStart.toLocaleDateString('nl-NL', { timeZone: 'CET' })
+            : dateStart.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+        // Format end display based on same-day status
+        let displayEnd = null;
+
+        if (dateEnd) {
+            if (isSameDay) {
+                // Hide end date: show time if present, or omit if midnight
+                displayEnd = endIsMidnight
+                    ? null
+                    : dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit' });
+            } else {
+                // Different day: standard date or full date+time
+                displayEnd = endIsMidnight
+                    ? dateEnd.toLocaleDateString('nl-NL', { timeZone: 'CET' })
+                    : dateEnd.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+            }
+        }
+        displayValue = displayStart;
+        if (displayEnd) {
+            displayValue += ' - ' + displayEnd;
+        }
+        displayValue = displayValue.replaceAll(',','');
+    }
+    return displayValue;
 }

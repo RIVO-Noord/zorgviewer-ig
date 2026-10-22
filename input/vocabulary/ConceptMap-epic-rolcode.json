@@ -2,27 +2,16 @@
   "resourceType": "ConceptMap",
   "id": "epic-rolcode",
   "url": "http://fhir.hl7.nl/zorgviewer/ConceptMap/epic-rolcode",
-  "version": "0.1.0",
   "name": "epictorolcode",
   "title": "Epic Provider Type naar SNOMED-CT Mapping",
   "status": "active",
   "experimental": false,
   "description": "Deze ConceptMap representeert de mapping tussen Epic Provider Type (SER#1040) naar een SNOMED-CT code.",
-  "jurisdiction": [
-    {
-      "coding": [
-        {
-          "system": "urn:iso:std:iso:3166",
-          "code": "NL"
-        }
-      ]
-    }
-  ],
   "group": [
     {
       "source": "urn:oid:1.2.840.114350.1.13.485.3.7.10.836982.1040",
       "sourceVersion": "UMCG Epic Non Prod",
-      "target": "http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodelist",
+      "target": "http://snomed.info/sct",
       "element": [
         {
           "code": "1",
@@ -810,7 +799,7 @@
     {
       "source": "urn:oid:1.2.840.114350.1.13.485.2.7.10.836982.1040",
       "sourceVersion": "UMCG Epic Prod",
-      "target": "http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodelist",
+      "target": "http://snomed.info/sct",
       "element": [
         {
           "code": "1",
@@ -1598,7 +1587,7 @@
     {
       "source": "urn:oid:1.2.840.114350.1.13.432.2.7.10.836982.1040",
       "sourceVersion": "MCL Epic Prod",
-      "target": "http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodelist",
+      "target": "http://snomed.info/sct",
       "element": [
         {
           "code": "1",
@@ -1722,6 +1711,17 @@
           ]
         },
         {
+          "code": "130",
+          "display": "Co-assistent",
+          "target": [
+            {
+              "code": "1255517001",
+              "display": "coassistent",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
           "code": "2515",
           "display": "Poli-assistent",
           "target": [
@@ -1748,7 +1748,7 @@
     {
       "source": "urn:oid:1.2.840.114350.1.13.432.3.7.10.836982.1040",
       "sourceVersion": "MCL Epic Non Prod",
-      "target": "http://fhir.hl7.nl/zorgviewer/ValueSet/RoleCodelist",
+      "target": "http://snomed.info/sct",
       "element": [
         {
           "code": "1",
@@ -1806,6 +1806,39 @@
           ]
         },
         {
+          "code": "100",
+          "display": "Ergotherapeut",
+          "target": [
+            {
+              "code": "80546007",
+              "display": "Ergotherapeut",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "104",
+          "display": "Diëtist",
+          "target": [
+            {
+              "code": "159033005",
+              "display": "Diëtist",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "106",
+          "display": "Fysiotherapeut",
+          "target": [
+            {
+              "code": "36682004",
+              "display": "Fysiotherapeut",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
           "code": "110",
           "display": "Verpleegkundig consulent",
           "target": [
@@ -1834,6 +1867,17 @@
             {
               "code": "159282002",
               "display": "Laboratoriumtechnicus",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "130",
+          "display": "Co-assistent",
+          "target": [
+            {
+              "code": "1255517001",
+              "display": "coassistent",
               "equivalence": "equal"
             }
           ]

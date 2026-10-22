@@ -15,9 +15,9 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "whenUsed.start",
-          "name": "Begin datum",
-          "type": "dateTime",
+          "path": "whenUsed.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
+          "name": "Datum",
+          "type": "Period",
           "tag": [ { "name": "Zib element", "value": "BeginDatum" } ]
         },
         {

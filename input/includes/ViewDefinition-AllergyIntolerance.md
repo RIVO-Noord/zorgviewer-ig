@@ -1,7 +1,7 @@
-### Kolomdefinities
+### Gegevensherkomst
 <table class="grid">
 <thead>
-<th>Kolom label</th>
+<th>Label</th>
 <th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
@@ -78,7 +78,7 @@
 <td>AllergieStatus</td>
 <td>Zie Status</td>
 </tr>
-<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
+<tr style="background-color:#adb9ca; color:white"><th colspan="5">CONTROL</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(VStatus)</td>
 <td><samp>verificationStatus</samp></td>

@@ -1,7 +1,7 @@
-### Kolomdefinities
+### Gegevensherkomst
 <table class="grid">
 <thead>
-<th>Kolom label</th>
+<th>Label</th>
 <th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
@@ -16,9 +16,9 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
-<td>Begin datum</td>
-<td><samp>whenUsed.start</samp></td>
-<td><code>dateTime</code></td>
+<td>Datum</td>
+<td><samp>whenUsed.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))</samp></td>
+<td><code>Period</code></td>
 <td>BeginDatum</td>
 <td></td>
 </tr>

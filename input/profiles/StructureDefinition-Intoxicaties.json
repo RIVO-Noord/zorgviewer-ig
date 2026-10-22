@@ -1,0 +1,95 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Intoxicaties",
+    "name": "Intoxicaties",
+    "title": "Intoxicaties",
+    "status": "active",
+    "experimental": false,
+    "description": "Intoxicaties samenstelling voor het documenteren van de combinatie van Tabakgebruik, Alcoholgebruik en Drugsgebruik",
+    "kind": "resource",
+    "abstract": true,
+    "type": "Bundle",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Bundle.entry",
+                "path": "Bundle.entry",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "type",
+                            "path": "resource"
+                        }
+                    ],
+                    "rules": "open"
+                }
+            },
+            {
+                "id": "Bundle.entry:TobaccoUse",
+                "path": "Bundle.entry",
+                "sliceName": "TobaccoUse"
+            },
+            {
+                "id": "Bundle.entry:TobaccoUse.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Tabakgebruik",
+                "type": [
+                    {
+                        "code": "Observation",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/TobaccoUse"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:AlcoholUse",
+                "path": "Bundle.entry",
+                "sliceName": "AlcoholUse"
+            },
+            {
+                "id": "Bundle.entry:AlcoholUse.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Alcoholgebruik",
+                "type": [
+                    {
+                        "code": "Observation",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/AlcoholUse"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:DrugUse",
+                "path": "Bundle.entry",
+                "sliceName": "DrugUse"
+            },
+            {
+                "id": "Bundle.entry:DrugUse.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Drugsgebruik",
+                "type": [
+                    {
+                        "code": "Observation",
+                        "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/DrugUse"
+                    }
+                ]
+            },
+            {
+                "id": "Bundle.entry:DiagnosticResult",
+                "path": "Bundle.entry",
+                "sliceName": "DiagnosticResult"
+            },
+            {
+                "id": "Bundle.entry:DiagnosticResult.resource",
+                "path": "Bundle.entry.resource",
+                "comment": "Huisartsen registreren intoxicaties in de vorm van een DiagnosticResult",
+                "type": [
+                    {
+                        "code": "Observation",
+                        "profile": "http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,7 +1,7 @@
-### Kolomdefinities
+### Gegevensherkomst
 <table class="grid">
 <thead>
-<th>Kolom label</th>
+<th>Label</th>
 <th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
@@ -58,7 +58,7 @@
 <td>StopType</td>
 <td></td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Medicatie vorm</td>
 <td><samp>medication.resolve().form.coding.display</samp></td>
@@ -137,7 +137,7 @@
 <td><i>nvt</i></td>
 <td>Niet van toepassing bij MedicationStatement</td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Medicatie vorm</td>
 <td><samp>medication.resolve().form.coding.display</samp></td>
@@ -216,7 +216,7 @@
 <td>StopType</td>
 <td>niet beschikbaar</td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Medicatie vorm</td>
 <td><samp>medication.resolve().form.coding.display</samp></td>

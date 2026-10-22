@@ -1,5 +1,7 @@
 {% include profile-note.md %}
 
+{% include future-note.md %}
+
 ### Zorginformatiebouwsteen
 
 [ZIB Toedieningsafspraak](https://zibs.nl/wiki/Toedieningsafspraak-v1.0.1(2017NL))

@@ -1,0 +1,63 @@
+{
+  "resourceType": "CapabilityStatement",
+  "url": "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem-VIPlive",
+  "name": "OntsluitenBronsysteemVIPlive",
+  "title": "Bronsysteem: VIPlive",
+  "status": "active",
+  "date": "2025-12-24",
+  "description": "Deze CapabilityStatement beschrijft Ontsluiten Bronsysteem voor VIPlive.",
+  "copyright": "CC0",
+  "kind": "capability",
+  "instantiates": [
+    "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem"
+  ],
+  "fhirVersion": "3.0.2",
+  "acceptUnknown": "both",
+  "format": [
+    "json"
+  ],
+  "implementationGuide": [],
+  "rest": [
+    {
+      "mode": "client",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Consent",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/TreatmentDirective"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "category",
+              "definition": "http://hl7.org/fhir/SearchParameter/Consent-category",
+              "type": "token"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

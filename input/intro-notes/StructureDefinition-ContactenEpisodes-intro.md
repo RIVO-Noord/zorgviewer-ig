@@ -1,5 +1,7 @@
 {% include profile-note.md %}
 
+{% include future-note.md %}
+
 ### Zorginformatiebouwsteen
 
 ...

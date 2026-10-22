@@ -1,0 +1,142 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ProcedureStatus",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+        ]
+    },
+    "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/ProcedureStatus",
+    "name": "ProcedureStatus",
+    "title": "ProcedureStatus Labels",
+    "status": "active",
+    "experimental": false,
+    "description": "Deze waardelijst bevat de Zorgviewer weergavelabels voor de status van (geplande) verrichtingen en zorgactiviteiten (request-status, event-status en care-plan-activity-status)",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/request-status",
+                "concept": [
+                    {
+                        "code": "draft",
+                        "display": "Aangevraagd"
+                    },
+                    {
+                        "code": "active",
+                        "display": "Actueel"
+                    },
+                    {
+                        "code": "on-hold",
+                        "display": "Opgeschort"
+                    },
+                    {
+                        "code": "suspended",
+                        "display": "Opgeschort"
+                    },
+                    {
+                        "code": "revoked",
+                        "display": "Geannuleerd"
+                    },
+                    {
+                        "code": "cancelled",
+                        "display": "Geannuleerd"
+                    },
+                    {
+                        "code": "completed",
+                        "display": "Voltooid"
+                    },
+                    {
+                        "code": "entered-in-error",
+                        "display": "Foutieve invoer"
+                    },
+                    {
+                        "code": "unknown",
+                        "display": "Onbekend"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/event-status",
+                "concept": [
+                    {
+                        "code": "preparation",
+                        "display": "In voorbereiding"
+                    },
+                    {
+                        "code": "in-progress",
+                        "display": "Actueel"
+                    },
+                    {
+                        "code": "not-done",
+                        "display": "Niet uitgevoerd"
+                    },
+                    {
+                        "code": "on-hold",
+                        "display": "Opgeschort"
+                    },
+                    {
+                        "code": "suspended",
+                        "display": "Opgeschort"
+                    },
+                    {
+                        "code": "stopped",
+                        "display": "Gestopt"
+                    },
+                    {
+                        "code": "aborted",
+                        "display": "Afgebroken"
+                    },
+                    {
+                        "code": "completed",
+                        "display": "Voltooid"
+                    },
+                    {
+                        "code": "entered-in-error",
+                        "display": "Foutieve invoer"
+                    },
+                    {
+                        "code": "unknown",
+                        "display": "Onbekend"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/care-plan-activity-status",
+                "concept": [
+                    {
+                        "code": "not-started",
+                        "display": "Gepland"
+                    },
+                    {
+                        "code": "scheduled",
+                        "display": "Gepland"
+                    },
+                    {
+                        "code": "in-progress",
+                        "display": "Actueel"
+                    },
+                    {
+                        "code": "on-hold",
+                        "display": "Opgeschort"
+                    },
+                    {
+                        "code": "completed",
+                        "display": "Voltooid"
+                    },
+                    {
+                        "code": "cancelled",
+                        "display": "Geannuleerd"
+                    },
+                    {
+                        "code": "stopped",
+                        "display": "Gestopt"
+                    },
+                    {
+                        "code": "unknown",
+                        "display": "Onbekend"
+                    }
+                ]
+            }
+        ]
+    }
+}

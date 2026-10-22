@@ -1,7 +1,7 @@
-### Kolomdefinities
+### Gegevensherkomst
 <table class="grid">
 <thead>
-<th>Kolom label</th>
+<th>Label</th>
 <th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
@@ -31,16 +31,10 @@
 </tr>
 <tr>
 <td>Met</td>
-<td><samp>participant.individual.display</samp></td>
+<td><samp>participant.individual.select(display | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display).join('
+')</samp></td>
 <td><code>string</code></td>
-<td>ContactMet::Zorgverlener</td>
-<td></td>
-</tr>
-<tr>
-<td>Rol</td>
-<td><samp>participant.individual.extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display</samp></td>
-<td><code>string</code></td>
-<td>nvt</td>
+<td>ContactMet::Zorgverlener, ContactMet::Zorgverlener/ZorgverlenersRol</td>
 <td></td>
 </tr>
 <tr>
@@ -54,15 +48,22 @@
 <td>Status</td>
 <td><samp>status</samp></td>
 <td><code>code</code></td>
-<td>nvt</td>
+<td>Impliciet verwacht de zib status altijd finished, oftewel 'Historisch'.</td>
 <td></td>
 </tr>
 <tr>
 <td>Type</td>
-<td><samp>class.display</samp></td>
+<td><samp>class.display + iif(exists(type), ' ' + (type.text | type.coding.display), '')</samp></td>
 <td><code>code</code></td>
 <td>ContactType</td>
 <td></td>
+</tr>
+<tr>
+<td>Reden</td>
+<td><samp>episodeOfCare.display | reason.text | diagnosis.condition.display</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td>Uit huisarts gekoppelde Episode or DeviatingResult or Problem or Condition</td>
 </tr>
 </tbody>
 </table>
