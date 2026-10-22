@@ -1,7 +1,7 @@
-### Kolomdefinities
+### Gegevensherkomst
 <table class="grid">
 <thead>
-<th>Kolom label</th>
+<th>Label</th>
 <th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
@@ -20,7 +20,7 @@
 <td><samp>specimen.resolve().collection.collectedDateTime | effectiveDateTime</samp></td>
 <td><code>dateTime</code></td>
 <td>Monster/ AfnameDatumTijd, LaboratoriumTest/ TestDatumTijd</td>
-<td></td>
+<td>Datum en tijd van afname van het materiaal. Indien niet aanwezig, dan datum en tijd van de testuitslag.</td>
 </tr>
 <tr>
 <td>Test</td>
@@ -64,7 +64,7 @@
 <td>ResultaatStatus</td>
 <td><b>Epic:</b> Indien lab-order geannuleerd, dan krijgt dit alsnog de status <code>Definitief</code> met een Testuitslag van <code>GEANNULEERD</code>. Dit is voor nu akkoord bevonden door stuurgroep Zorgviewer.</td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Commentaar</td>
 <td><samp>comment | note.text</samp></td>

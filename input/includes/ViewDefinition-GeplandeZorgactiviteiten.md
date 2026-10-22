@@ -1,7 +1,7 @@
-### Kolomdefinities
+### Gegevensherkomst
 <table class="grid">
 <thead>
-<th>Kolom label</th>
+<th>Label</th>
 <th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
@@ -43,7 +43,7 @@
 <td>nvt</td>
 <td>Status van de geplande activiteit (bijv. Actueel / Gepland / Aangevraagd).</td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Indicatie</td>
 <td><samp>reasonCode[0].text | reasonCode[0].coding[0].display | reasonReference.display | reasonReference.resolve().select(code.text | code.coding[0].display)</samp></td>

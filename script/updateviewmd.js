@@ -110,10 +110,10 @@ fs.readdirSync(viewDefPath).forEach(file => {
         const viewDef = JSON.parse(fs.readFileSync(viewDef_filePath, 'utf8'));
 
         const md_def = [
-            "### Kolomdefinities",
+            "### Gegevensherkomst",
             "<table class=\"grid\">",
             "<thead>",
-            "<th>Kolom label</th>",
+            "<th>Label</th>",
             "<th>FHIR Path Expression</th>",
             "<th>FHIR Type</th>",
             "<th>Zib element</th>",
@@ -170,9 +170,9 @@ function doColumnDefs(columns, md_def) {
             md_def.push("</tr>");
         }
     });
-    // Add uitklap columns
+    // Add detail columns
     if (columns.find(column => column.name.charAt(0) == '+')) {
-        md_def.push('<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>');
+        md_def.push('<tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>');
         columns.forEach(column => {
             if (column.name.charAt(0) == '+') {
                 md_def.push("<tr style=\"background-color:#b4c7e7\">");
@@ -181,9 +181,9 @@ function doColumnDefs(columns, md_def) {
             }
         });
     }
-    // Add markering columns
+    // Add control columns
     if (columns.find(column => column.name.charAt(0) == '(')) {
-        md_def.push('<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>');
+        md_def.push('<tr style="background-color:#adb9ca; color:white"><th colspan="5">CONTROL</th></tr>');
         columns.forEach(column => {
             if (column.name.charAt(0) == '(') {
                 md_def.push("<tr style=\"background-color:#d6dce5\">");

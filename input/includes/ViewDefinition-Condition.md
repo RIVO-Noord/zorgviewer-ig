@@ -1,7 +1,7 @@
-### Kolomdefinities
+### Gegevensherkomst
 <table class="grid">
 <thead>
-<th>Kolom label</th>
+<th>Label</th>
 <th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
@@ -36,7 +36,7 @@
 <td>ProbleemStatus</td>
 <td>Zie voor labels: <a href='ValueSet-ProbleemStatus.html'>ValueSet-ProbleemStatus</a></td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Diagnose</td>
 <td><samp>code.coding[0].select('(' + system.lookup('CodeSystems')[0].display + ') ' + code + ' ' + iif(exists(display),display,''))</samp></td>
@@ -51,7 +51,7 @@
 <td>Toelichting</td>
 <td></td>
 </tr>
-<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
+<tr style="background-color:#adb9ca; color:white"><th colspan="5">CONTROL</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(regelkleur)</td>
 <td><samp>clinicalStatus</samp></td>
