@@ -20,6 +20,10 @@ function resolveFn(inputs) {
         return null;
     }
     const reference = inputs[0].reference;
+    if (!reference) {
+        console.log(`Reference not found in inputs: ${JSON.stringify(inputs)}`);
+        return false;
+    }
     const id = reference.split('/').pop();
     var resolved = examplesById[id];
     if (!resolved) {
