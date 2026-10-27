@@ -44,6 +44,34 @@
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td></td>
+<td>IPS-Epic</td>
+<td>24-1-2025</td>
+<td>LACTOSE</td>
+<td></td>
+<td>medication</td>
+<td>low</td>
+<td></td>
+<td>Nausea</td>
+<td>active</td>
+<td></td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
+<td>IPS-Epic</td>
+<td>13-9-2024</td>
+<td>NICKEL</td>
+<td></td>
+<td>medication</td>
+<td>high</td>
+<td></td>
+<td>Hives</td>
+<td>active</td>
+<td></td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
 <td>Chipsoft</td>
 <td>12-11-2019</td>
 <td>ALLE NSAID'S (INCL. SALICYLATEN)</td>
@@ -206,9 +234,9 @@
 <td></td>
 <td></td>
 <td></td>
+<td>active</td>
 <td></td>
-<td></td>
-<td></td>
+<td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td></td>
@@ -220,9 +248,9 @@
 <td></td>
 <td>severe</td>
 <td>Anaphylaxis (disorder)</td>
+<td>active</td>
 <td></td>
-<td></td>
-<td></td>
+<td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 </tbody>

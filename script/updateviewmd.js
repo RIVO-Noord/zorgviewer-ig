@@ -81,7 +81,11 @@ function lookupFn(inputs, valueSetId) {
         // console.error("translate() called on undefined path");
         return null;
     }
-    const code = inputs[0]; // expect system as first input
+    let code = inputs[0]; // expect code as first input
+    // for FHIR R4 input can be CodeableConcept
+    if (typeof(code) === 'object' && code.coding && code.coding.length > 0) {
+        code = code.coding[0].code;
+    }
 
     var valueSet = valueSetCache[valueSetId];
     if (!valueSet) {
@@ -366,7 +370,7 @@ function extractExampleData(select, example, exampleFileName) {
             } else if (column.type == "code") {
                 value = evalResult[0];
                 if (typeof (evalResult[0]) == "object" && evalResult[0].coding && evalResult[0].coding[0]) {
-                    value = evalResult[0].coding[0].display;
+                    value = evalResult[0].coding[0].code;
                     if (!value) value = "";
                 }
             } else {

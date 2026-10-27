@@ -10,6 +10,14 @@
 <th>(regelkleur)</th>
 </tr>
 <tr><td>&#9660;</td>
+<td>IPS-Epic</td>
+<td>17-2-2025</td>
+<td>Moderate persistent asthma (HHS/HCC) (HHS)</td>
+<td>Niet actueel</td>
+<td>resolved</td>
+</tr><tr><td></td><td colspan=5>
+</td></tr>
+<tr><td>&#9660;</td>
 <td>Epic-note</td>
 <td>23-2-2023</td>
 <td>posttraumatische stressstoornis (incl. de posttraumatische-stressstoornis bij ki...</td>
@@ -63,6 +71,15 @@
 <td></td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(SNOMED CT) 156073000 Complete miscarriage (disorder)<br/>
+</td></tr>
+<tr><td>&#9660;</td>
+<td>IPS-Epic</td>
+<td>18-2-2018</td>
+<td>Struck by alligator</td>
+<td>Niet actueel</td>
+<td>resolved</td>
+</tr><tr><td></td><td colspan=5>
+<b>Toelichting</b><br/>It was a real big gator.<br/><br/>
 </td></tr>
 <tr><td>&#9660;</td>
 <td>EPS</td>
