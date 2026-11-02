@@ -19,7 +19,7 @@ async function generateChangelog() {
     // `cd _local/Zorgviewer.wiki`
     // `git pull`
     // `git diff 'HEAD@{${SINCE}}' -- Functionele-Ontwerpen-\(FO\'s\) > /app/temp/fo-diff.log`
-    // `git diff ig-1.25.0 -- Functionele-Ontwerpen-\(FO\'s\) > /app/temp/fo-diff.log`
+    // `git diff ig-1.26.0 -- Functionele-Ontwerpen-\(FO\'s\) > /app/temp/fo-diff.log`
     if (fs.existsSync('temp/fo-diff.log')) {
       console.log("Including FO diff.")
       const foChanges = fs.readFileSync('temp/fo-diff.log', 'utf-8');

@@ -1,49 +1,43 @@
 #### 🚀 Nieuw
 
-* `.vscode/launch.json`: VS Code debugconfiguratie toegevoegd voor het uitvoeren van Node.js scripts vanuit submappen.
-* `input/capabilities/CapabilityStatement-OntsluitenBronsysteem-VIPlive.json`: Nieuw CapabilityStatement toegevoegd voor VIPlive (ondersteuning voor Consent / TreatmentDirective).
-* `input/capabilities/CapabilityStatement-OntsluitenBronsysteem-VersneldVerbinden.json`: Nieuw CapabilityStatement toegevoegd voor het Versneld Verbinden bronsysteem.
-* `input/intro-notes/CapabilityStatement-OntsluitenBronsysteem-*-intro.md`: Introductiedocumenten en specificaties voor de bronsystemen Epic, Nexus, VIPlive, Versneld Verbinden en Zorgplatform toegevoegd.
-* `skills/check-devops.js` & `skills/check-devops.ps1`: Nieuw Node.js- en PowerShell-script toegevoegd voor het geautomatiseerd valideren van Azure DevOps work items en wiki-pagina's via de REST API.
+* **Functionele Ontwerpen & Analyses**:
+  * `Functionele-Ontwerpen-(FO's)/Analyse-Bricks-Huisarts-(Tetra).md`: Nieuwe analyse voor het aansluiten van het bronsysteem Bricks Huisarts (Tetra HIS).
+  * `Functionele-Ontwerpen-(FO's)/Analyse-NedapONS.md`: Nieuw analysedocument voor het aansluiten van Nedap ONS (VVT).
+* **CapabilityStatements & Introductienotities**:
+  * `input/capabilities/CapabilityStatement-OntsluitenBronsysteem-VIPlive.json`: Nieuw CapabilityStatement voor VIPlive (ondersteuning voor `Consent` / `TreatmentDirective`).
+  * `input/capabilities/CapabilityStatement-OntsluitenBronsysteem-VersneldVerbinden.json`: Nieuw CapabilityStatement voor het bronsysteem Versneld Verbinden.
+  * `input/intro-notes/CapabilityStatement-OntsluitenBronsysteem-*-intro.md`: Introductienotities en specificaties toegevoegd voor Epic, Nexus, VIPlive, Versneld Verbinden en Zorgplatform.
+* **DevOps Integratie & Tooling**:
+  * `skills/check-devops.js` & `skills/check-devops.ps1`: Scripts toegevoegd voor geautomatiseerde validatie van Azure DevOps work items en wiki-pagina's via de REST API.
+  * `.vscode/launch.json`: VS Code launch-configuratie toegevoegd voor het debuggen van Node.js scripts vanuit submappen.
 
 #### 🛠️ Gewijzigd
 
-* `fhir.hl7.nl/package-list.json`, `input/zorgviewer-ig.json` & `publication-request.json`: IG-versie opgehoogd naar `1.27.0` (releasedatum 2 november 2026).
-* `input/capabilities/CapabilityStatement-OntsluitenBronsysteem Epic.json`:
-  * Titel gewijzigd naar "Bronsysteem: Epic" en softwarenaam naar "Epic Interconnect".
-  * `searchParam` (`category`) en `search-type` interacties toegevoegd voor diverse profielen (o.a. VitalSign, LivingSituation, Intoxicaties, MedicationRequest, MedicationStatement, MedicationDispensation, Appointment, Procedure).
-  * Ondersteuning toegevoegd voor `NutritionOrder` (NutritionAdvice) en `DeviceUseStatement` (MedischHulpmiddel).
-* `input/capabilities/CapabilityStatement-OntsluitenBronsysteem Nexus.json`:
-  * Titel gewijzigd naar "Bronsysteem: Nexus".
-  * `search-type` interactie toegevoegd aan observationele profielen en documentatienotities ("HTTP 403 Forbidden") toegevoegd voor Appointment en Encounter.
-* `input/capabilities/CapabilityStatement-OntsluitenBronsysteem Zorgplatform.json`: Titel gewijzigd naar "Bronsysteem: Zorgplatform" en `search-type` interacties toegevoegd aan vitale en intoxicaties observations.
-* `input/capabilities/CapabilityStatement-OntsluitenBronsysteem-CGM.json`: Titel bijgewerkt naar "Bronsysteem: CGM".
-* `input/capabilities/CapabilityStatement-OntsluitenBronsysteem-MediKIT.json` & `-Medicom.json`: Titels gestandaardiseerd en status aangepast naar `draft`.
-* `input/capabilities/CapabilityStatement-OntsluitenBronsysteem-NedapONS.json`: Titel gestandaardiseerd en beschrijving opgeschoond.
-* `input/capabilities/CapabilityStatement-OntsluitenBronsysteem-Sanday.json`: Ondersteuning voor `Encounter` resource toegevoegd (via `read`).
-* `input/profiles/StructureDefinition-Correspondentie.json` & `input/images/ViewDefinition-Correspondentie.json`: Titel gewijzigd in "Correspondentie en Verslagen" en functionaliteit uitgebreid met verpleegkundige rapportages (`Observation` / `nl-core-nursingreport`).
-* `input/images/ViewDefinition-*.json` & `input/includes/ViewDefinition-*.md`:
-  * Tabellen en UI wireframes hergegenereerd met vernieuwde kolomtitels (`Gegevensherkomst` i.p.v. `Kolomdefinities`, `DETAILS` i.p.v. `UITKLAPVELD`, `CONTROL` i.p.v. `MARKERING`).
-  * Voorbeelden uitgebreid met onder andere IPS-Epic en NedapONS data.
-  * Zib element mapping voor `Appointment` status bijgewerkt naar `GeplandeZorgActiviteit::OrderStatus`.
-* `input/intro-notes/CapabilityStatement-OntsluitenBronsysteem-Sanday-intro.md`: `Patient/$match` payload specificatie en BSN identifier system URL verduidelijkt.
-* `input/intro-notes/StructureDefinition-Correspondentie-intro.md`: Documentatie aangevuld voor PDF/A en NUTS verpleegkundige rapportages.
-* `input/intro-notes/StructureDefinition-Encounter-intro.md`: Query-handleiding aangevuld voor Sanday encounters.
-* `input/vocabulary/ConceptMap-epic-rolcode.json`: Rolcodes toegevoegd voor Co-assistent (130), Ergotherapeut (100), Diëtist (104) en Fysiotherapeut (106).
-* `input/vocabulary/ValueSet-ACPTreatmentCodelist.json`: Sortering van behandelingsconcepten expliciet vastgelegd via `valueset-conceptOrder` extensies.
-* `skills/check-fo.md`: FO-controlescriptie uitgebreid met checks op overeenkomende kolomnamen tegen IG-wireframes en Azure DevOps koppelingen.
+* **Functionele Ontwerpen (FO's)**:
+  * `Behandelvoorkeuren-(werktitel,-misschien-behandelgrenzen).md`: Hernoemd en Behandelaanwijzingen geïntegreerd met Wilsverklaringen; tabbladstructuur, sorteerregels en iconen verfijnd.
+  * `Contacten-en-Afspraken-(pilot).md`: Hernoemd (aangeduid als pilot), ZIB-mappings geüpdatet en weergave van periode/datums verfijnd.
+  * `Correspondentie-en-verslagen.md`: Hernoemd vanuit Correspondentie, uitgebreid met verpleegkundige rapportages (`NursingReport` uit VVT/NUTS) en SOEP-verslagen.
+  * `Gezondheidstoestand/Zelfzorg-(pilot).md`: Verplaatst naar de map `Gezondheidstoestand/` en aangeduid als pilot.
+  * `Vitale-gegevens.md`: Gegevensbronnen uitgebreid (o.a. `O2Saturatie`, `AlgemeneMeting`, `Polsfrequentie`) en indeling/conceptmaps verfijnd.
+  * `Laboratoriumuitslagen.md`, `Medische-hulpmiddelen.md`, `Zorgactiviteiten.md`, `PZP-ACP.md`: Reviewdata bijgewerkt, sorteer-/filtergedrag gestandaardiseerd en werkitems gekoppeld.
+* **CapabilityStatements & Profielen**:
+  * `CapabilityStatement-OntsluitenBronsysteem Epic.json`: Zoekparameter `category` toegevoegd aan Observation-profielen en ondersteuning toegevoegd voor `NutritionOrder` (Voedingsadvies) en `DeviceUseStatement` (Medisch hulpmiddel).
+  * `CapabilityStatement-OntsluitenBronsysteem Nexus.json`: `search-type` interacties toegevoegd en documentatienotities (HTTP 403 Forbidden) toegevoegd bij Appointment en Encounter.
+  * `CapabilityStatement-OntsluitenBronsysteem Sanday.json`: Leesondersteuning (`read`) voor `Encounter` toegevoegd.
+  * `CapabilityStatement-OntsluitenBronsysteem MediKIT.json` & `Medicom.json`: Status ingesteld op `draft` en titels gestandaardiseerd.
+  * `StructureDefinition-Correspondentie.json` & `ViewDefinition-Correspondentie.json`: Titel gewijzigd naar "Correspondentie en Verslagen" en uitgebreid met verpleegkundige rapportages (`Observation` / `nl-core-nursingreport`).
+* **ViewDefinitions & Documentatie-generatie**:
+  * `ViewDefinition-*.md` / `*-ui.md`: Kolomkoppen gestandaardiseerd (`Gegevensherkomst` i.p.v. `Kolomdefinities`, `DETAILS` i.p.v. `UITKLAPVELD`, `CONTROL` i.p.v. `MARKERING`) en UI-voorbeelden aangevuld met IPS-Epic en NedapONS data.
+  * `ValueSet-ACPTreatmentCodelist.json`: Sortering van behandelgrenzen expliciet vastgelegd via `valueset-conceptOrder` extensies.
+  * `ConceptMap-epic-rolcode.json`: Rolcodes toegevoegd voor Co-assistent (130), Ergotherapeut (100), Diëtist (104) en Fysiotherapeut (106).
+  * `script/updateviewmd.js`: Datum-/tijd-formattering geoptimaliseerd en afhandeling van CodeableConcepts verbeterd.
+  * `skills/check-fo.md`: Checklist uitgebreid met validatie van kolomnamen tegen IG-wireframes en DevOps-workitemcontroles.
 
 #### 🧹 Onderhoud
 
-* `.gitignore`: `.env` bestand toegevoegd aan de gitignore.
-* `README.md`: Indentatie van codeblokken opgeschoond.
-* `input/examples/*`: Endpoints in voorbeeldbronnen geanonimiseerd naar `example.org` en te lange resource ID's (>64 tekens) ingekort.
-* `input/ignoreWarnings.txt`: Uitzonderingsregel toegevoegd voor OID-toewijzingswaarschuwingen.
-* `input/images/package-feed.xml`: Feed bijgewerkt voor release 1.27.0.
-* `input/pagecontent/changes.md`: Historiebijwerkingen voor versie 1.27.0 toegevoegd.
-* `input/pagecontent/design.md`: Koptekst "Bepalen zorgaanbieders" verduidelijkt naar "(Localisatie)".
-* `input/pagecontent/downloads.md`: TTL-downloadlinks verwijderd uit de documentatie.
-* `input/pagecontent/testing.md`: Documentatie bijgewerkt met een overzicht van alle beschikbare ViewDefinition testbestanden.
-* `script/changelog.js`: Git diff logica aangepast om automatisch te vergelijken met de meest recente git tag.
-* `script/replaceHostnames.js`: Hostname replacement-script uitgebreid met automatische truncatie van resource ID's boven 64 tekens.
-* `script/updateviewmd.js`: Generator script voor ViewDefinition markdown aangepast met verbeterde datum/tijd-formattering en verwerking van FHIR R4 CodeableConcepts.
+* `fhir.hl7.nl/package-list.json`, `input/zorgviewer-ig.json` & `publication-request.json`: IG-versie opgehoogd naar `1.27.0` (releasedatum 2 november 2026).
+* `input/examples/*`: Endpoints in voorbeeldbronnen geanonimiseerd naar `example.org` en te lange resource ID's (>64 tekens) automatisch ingekort.
+* `README.md`: Codeblok-indentatie opgeschoond en instructies voor het opschonen van `temp/fo-diff.log` toegevoegd.
+* `.gitignore`: `.env` bestand toegevoegd om lokaal aanwezige geheimen/tokens niet mee te plegen.
+* `script/replaceHostnames.js`: Truncatie van resource ID's boven de 64 tekens toegevoegd.
+* `input/pagecontent/testing.md` & `changes.md`: Documentatie en overzicht van beschikbare ViewDefinition testbestanden bijgewerkt.
