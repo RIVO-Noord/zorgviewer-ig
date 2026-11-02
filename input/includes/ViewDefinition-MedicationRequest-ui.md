@@ -128,5 +128,18 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
+<tr><td>&#9660;</td>
+<td>IPS-Epic</td>
+<td></td>
+<td></td>
+<td>aspirin-acetaminophen-caffeine (EXCEDRIN MIGRAINE) 250-250-65 MG per tablet</td>
+<td>1 tablet, Oral, EVERY 6 HOURS PRN Starting Tue 9/17/2024, Disp-30 tablet, R-0, N...</td>
+<td>Oral</td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+<b>Medicatie vorm</b><br/>Tablet<br/>
+<b>Afspraakdatum</b><br/>17-9-2024<br/>
+<b>Voorschrijver</b><br/>Emile Underwood, MD<br/>
+</td></tr>
 </tbody>
 </table>

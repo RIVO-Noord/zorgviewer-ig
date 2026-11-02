@@ -44,7 +44,7 @@ N.B. BgZ gebruikt de categorie 'social-history' en HIS'en gebruiken 'vital-signs
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|1591,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2418,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2419,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2420,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2421,https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|2422`
 
-1. **CGM:** Opvragen (search) alcoholgebruik. CGM slaat alcoholgebruik op zonder SNOMED-CT code; gebruik NHG Tabel 45 code 1591.
+1. Opvragen (search) alcoholgebruik (CGM). CGM slaat alcoholgebruik op zonder SNOMED-CT code; gebruik NHG Tabel 45 code 1591.
 
     `GET <ontsluiten-bronsysteem-base>/Observation?patient=<fhir_patient_id>&code=https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen|1591`
 

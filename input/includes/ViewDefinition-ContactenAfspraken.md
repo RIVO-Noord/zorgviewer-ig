@@ -1,7 +1,7 @@
-### Kolomdefinities
+### Gegevensherkomst
 <table class="grid">
 <thead>
-<th>Kolom label</th>
+<th>Label</th>
 <th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
@@ -59,7 +59,7 @@
 <td>nvt</td>
 <td>Uit huisarts gekoppelde Episode or DeviatingResult or Problem or Condition</td>
 </tr>
-<tr style="background-color:#000000; color:white"><td colspan=5><i>Appointment' and (status='proposed' or status='pending' or status='booked</i></td></tr>
+<tr style="background-color:#000000; color:white"><td colspan=5><i>Appointment</i></td></tr>
 <tr>
 <td>Bron</td>
 <td><samp>meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri</samp></td>

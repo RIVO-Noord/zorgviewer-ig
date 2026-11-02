@@ -88,6 +88,7 @@ N.B. Als je Powershell gebruikt let er dan op dat Docker Desktop draait!
 1. (optionally) Generate changelog using Gemini
     1. First update tags `> git pull`
     1. Set GEMINI_API_KEY `export GEMINI_API_KEY=xxx`
+    1. Remove FO changes `rm temp/fo-diff.log`, only for internal use
     1. Update AI generated changelog `> node script/changelog.js`
 1. `> git commit -a -m "afhechten release 1.M.R"; git push`
 1. Create tag "1.M.R" - op https://github.com/RIVO-Noord/zorgviewer-ig klik op: 
@@ -111,23 +112,23 @@ N.B. Als je Powershell gebruikt let er dan op dat Docker Desktop draait!
 ### Vrijgeven van de laatste Release
 
 1. Publish naar implementatiegids.zorgviewer.nl via snapshot branch
-```
-> cd {temp-folder}
-(eerste keer: git clone https://github.com/RIVO-Noord/zorgviewer-ig.git ; git checkout snapshot)
-> git pull
-> git merge 1.M.R
-```
+    ```
+    > cd {temp-folder}
+    (eerste keer: git clone https://github.com/RIVO-Noord/zorgviewer-ig.git ; git checkout snapshot)
+    > git pull
+    > git merge 1.M.R
+    ```
 1. Zet release label in zorgviewer-ig.json op "release"
-```
-> vi input/zorgviewer-ig.json
-> git commit -a -m "publication 1.M.R"
-> git push
-```
+    ```
+    > vi input/zorgviewer-ig.json
+    > git commit -a -m "publication 1.M.R"
+    > git push
+    ```
 1. En werk verder in de master branch
 1. Update input/zorgviewer-ig.json 
-  * version naar volgende minor "1.M+1.0" 
-  * parameter/version-comparison-master naar (vorige versie) "1.M.0"
-    * ook in input/pagecontent/changes.md
+    * version naar volgende minor "1.M+1.0" 
+    * parameter/version-comparison-master naar (vorige versie) "1.M.0"
+        * ook in input/pagecontent/changes.md
 
 ### Handmatig publish implementatiegids.zorgviewer.nl
 
@@ -135,10 +136,10 @@ N.B. Alleen nodig als de [GitHub Snapshot Publish Workflow](.github/workflows/pu
 
 1. Maak nieuwe publicatie - zie "To build the IG"
 1. Upload
-```
-> docker run --name azure-cli -it -v "$(pwd)":/app  mcr.microsoft.com/azure-cli
-@> az storage blob upload-batch --overwrite -s /app/output -d '$web' --connection-string "..."
-```
+    ```
+    > docker run --name azure-cli -it -v "$(pwd)":/app  mcr.microsoft.com/azure-cli
+    @> az storage blob upload-batch --overwrite -s /app/output -d '$web' --connection-string "..."
+    ```
 
 ## Toevoegen publicatie aan de internationale Implementation Guide Registry
 

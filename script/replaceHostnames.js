@@ -67,7 +67,8 @@ function replaceInObject(obj, path = []) {
   if (obj && typeof obj === 'object') {
     for (const key of Object.keys(obj)) {
       const value = obj[key];
-      const parentKey = path.length > 0 ? path[path.length - 1] : null;
+      // account for array index in the path
+      const parentKey = path.length > 0 ? typeof(path[path.length - 1]) === "number" ? path[path.length - 2] : path[path.length - 1] : null;
       // link.url (parentKey === 'link')
       if (key === 'url' && parentKey === 'link' && typeof value === 'string' && /^(http|https):\/\//i.test(value)) {
         obj[key] = replaceHostname(value);
@@ -81,6 +82,12 @@ function replaceInObject(obj, path = []) {
       // reference fields anywhere
       if (key === 'reference' && typeof value === 'string' && /^(http|https):\/\//i.test(value)) {
         obj[key] = replaceHostname(value);
+        continue;
+      }
+      // check id length Epic id's are sometimes longer than 64 characters which is not allowed; truncate
+      if (key === 'id' && (parentKey === null || parentKey === 'resource') && typeof value === 'string' && value.length > 64) {
+        console.log(`Truncating id at ${[...path, key].join('.')} from ${value.length} to 64 characters.`);
+        obj[key] = value.substring(0, 64);
         continue;
       }
       // Recurse deeper for objects/arrays

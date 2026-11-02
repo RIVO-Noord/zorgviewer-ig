@@ -1,7 +1,7 @@
-### Kolomdefinities
+### Gegevensherkomst
 <table class="grid">
 <thead>
-<th>Kolom label</th>
+<th>Label</th>
 <th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
@@ -48,7 +48,7 @@
 <td>Status</td>
 <td><samp>status</samp></td>
 <td><code>code</code></td>
-<td>nvt</td>
+<td>Impliciet verwacht de zib status altijd finished, oftewel 'Historisch'.</td>
 <td></td>
 </tr>
 <tr>

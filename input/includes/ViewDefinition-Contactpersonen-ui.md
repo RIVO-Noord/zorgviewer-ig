@@ -103,5 +103,33 @@
 </tr><tr><td></td><td colspan=6>
 <b>Adres</b><br/>Knolweg 1000 9999XA STITSWERD<br/>
 </td></tr>
+<tr><td>&#9660;</td>
+<td>IPS-Epic</td>
+<td>Emergency Contact</td>
+<td></td>
+<td>Smith,Sally</td>
+<td>+1 608-222-2392</td>
+<td></td>
+</tr><tr><td></td><td colspan=6>
+</td></tr>
+<tr><td>&#9660;</td>
+<td>IPS-Epic</td>
+<td>Legal Guardian</td>
+<td></td>
+<td>Brown,Ryan</td>
+<td>+1 608-777-7777</td>
+<td></td>
+</tr><tr><td></td><td colspan=6>
+</td></tr>
+<tr><td>&#9660;</td>
+<td>IPS-Epic</td>
+<td>Employer</td>
+<td></td>
+<td></td>
+<td>608-271-9000</td>
+<td></td>
+</tr><tr><td></td><td colspan=6>
+<b>Adres</b><br/>TOKAY BLVD 53719 MADISON<br/>
+</td></tr>
 </tbody>
 </table>

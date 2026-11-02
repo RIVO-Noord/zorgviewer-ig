@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "url": "http://fhir.hl7.nl/zorgviewer/CapabilityStatement/OntsluitenBronsysteem-Sanday",
   "name": "OntsluitenBronsysteemSanday",
-  "title": "Sanday Bronsysteem",
+  "title": "Bronsysteem: Sanday",
   "status": "active",
   "date": "2025-12-24",
   "description": "Deze CapabilityStatement beschrijft Ontsluiten Bronsysteem voor Sanday.",
@@ -183,6 +183,29 @@
             }
           ],
           "searchInclude": [ "Condition:diagnosis" ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "Encounter",
+          "profile": {
+            "reference": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Encounter"
+          },
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read"
+            }
+          ]
         },
         {
           "extension": [

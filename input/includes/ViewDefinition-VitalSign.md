@@ -1,7 +1,7 @@
-### Kolomdefinities
+### Gegevensherkomst
 <table class="grid">
 <thead>
-<th>Kolom label</th>
+<th>Label</th>
 <th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
@@ -33,22 +33,22 @@
 <td>Waarde</td>
 <td><samp>valueQuantity.value.toString()+' '+valueQuantity.unit | valueString | valueCodeableConcept.coding.display</samp></td>
 <td><code>string</code></td>
-<td>Uitslag/Waarde</td>
-<td></td>
+<td>Uitslag/*Waarde</td>
+<td>* zie voor Zib element naam de hoofdwaarde kolom in tabel bovenaan</td>
 </tr>
 <tr>
 <td>Waarde componenten</td>
 <td><samp>component.valueQuantity.value.select(toString()).join('/')+' '+component[0].valueQuantity.unit</samp></td>
 <td><code>string</code></td>
 <td>*Waarde</td>
-<td></td>
+<td>* zie voor Zib element naam de hoofdwaarde kolom in tabel bovenaan</td>
 </tr>
 <tr>
 <td>Waarde componenten1</td>
 <td><samp>component.valueQuantity.value.toString() + ' ' + component.valueQuantity.unit</samp></td>
 <td><code>string</code></td>
 <td>*Waarde</td>
-<td></td>
+<td>* zie voor Zib element naam de hoofdwaarde kolom in tabel bovenaan</td>
 </tr>
 <tr>
 <td>Uitvoerder</td>
@@ -57,7 +57,7 @@
 <td>Auteur</td>
 <td></td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Methode</td>
 <td><samp>method.text</samp></td>
@@ -102,7 +102,7 @@
 <td>Toelichting</td>
 <td><b>LET OP:</b> <code>note.text</code> is een FHIR R4 veld</td>
 </tr>
-<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>
+<tr style="background-color:#adb9ca; color:white"><th colspan="5">CONTROL</th></tr>
 <tr style="background-color:#d6dce5">
 <td>(Groep)</td>
 <td><samp>code.coding.where((system='http://loinc.org' and code!='8716-3') or system='https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen' or system='http://snomed.info/sct').translate('vital-signs-groups').target[0].display</samp></td>

@@ -28,18 +28,21 @@
         {
           "path": "valueQuantity.value.toString()+' '+valueQuantity.unit | valueString | valueCodeableConcept.coding.display",
           "name": "Waarde",
+          "description": "* zie voor Zib element naam de hoofdwaarde kolom in tabel bovenaan",
           "type": "string",
-          "tag": [ { "name": "Zib element", "value": "Uitslag/Waarde" } ]
+          "tag": [ { "name": "Zib element", "value": "Uitslag/*Waarde" } ]
         },
         {
           "path": "component.valueQuantity.value.select(toString()).join('/')+' '+component[0].valueQuantity.unit",
           "name": "Waarde componenten",
+          "description": "* zie voor Zib element naam de hoofdwaarde kolom in tabel bovenaan",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
         },
         {
           "path": "component.valueQuantity.value.toString() + ' ' + component.valueQuantity.unit",
           "name": "Waarde componenten1",
+          "description": "* zie voor Zib element naam de hoofdwaarde kolom in tabel bovenaan",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "*Waarde" } ]
         },

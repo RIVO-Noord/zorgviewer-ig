@@ -119,7 +119,7 @@ Eerst opstarten Zorgviewer Host, inloggen en patiënt selectie en vervolgens ops
 | Patient BSN | client.bsn | `999911120` | Patient.identifier[system=bsn] |
 {: .grid .table-striped}
 
-### Bepalen zorgaanbieders
+### Bepalen zorgaanbieders (Localisatie)
 
 Bepalen zorgaanbieders en endpoints zonder toestemming check
 <div>

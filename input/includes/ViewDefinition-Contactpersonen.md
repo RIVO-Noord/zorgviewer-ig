@@ -1,7 +1,7 @@
-### Kolomdefinities
+### Gegevensherkomst
 <table class="grid">
 <thead>
-<th>Kolom label</th>
+<th>Label</th>
 <th>FHIR Path Expression</th>
 <th>FHIR Type</th>
 <th>Zib element</th>
@@ -50,7 +50,7 @@
 <td>Contactgegevens.EmailAdressen.EmailAdres</td>
 <td></td>
 </tr>
-<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>
+<tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Adres</td>
 <td><samp>address.line.select(iif(getValue().exists(), getValue(), extension.value.join(' '))) + ' ' +  address.postalCode + ' ' + address.city</samp></td>

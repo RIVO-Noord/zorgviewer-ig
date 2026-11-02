@@ -20,6 +20,10 @@ function resolveFn(inputs) {
         return null;
     }
     const reference = inputs[0].reference;
+    if (!reference) {
+        console.log(`Reference not found in inputs: ${JSON.stringify(inputs)}`);
+        return false;
+    }
     const id = reference.split('/').pop();
     var resolved = examplesById[id];
     if (!resolved) {
@@ -81,7 +85,11 @@ function lookupFn(inputs, valueSetId) {
         // console.error("translate() called on undefined path");
         return null;
     }
-    const code = inputs[0]; // expect system as first input
+    let code = inputs[0]; // expect code as first input
+    // for FHIR R4 input can be CodeableConcept
+    if (typeof(code) === 'object' && code.coding && code.coding.length > 0) {
+        code = code.coding[0].code;
+    }
 
     var valueSet = valueSetCache[valueSetId];
     if (!valueSet) {
@@ -110,10 +118,10 @@ fs.readdirSync(viewDefPath).forEach(file => {
         const viewDef = JSON.parse(fs.readFileSync(viewDef_filePath, 'utf8'));
 
         const md_def = [
-            "### Kolomdefinities",
+            "### Gegevensherkomst",
             "<table class=\"grid\">",
             "<thead>",
-            "<th>Kolom label</th>",
+            "<th>Label</th>",
             "<th>FHIR Path Expression</th>",
             "<th>FHIR Type</th>",
             "<th>Zib element</th>",
@@ -137,7 +145,7 @@ fs.readdirSync(viewDefPath).forEach(file => {
         if (viewDef.select[0].unionAll) {
             // assume first unions columns is the final list of columns
             viewDef.select[0].unionAll.forEach(union => {
-                const match = union.forEach.match("resourceType='(.+)'");
+                const match = union.forEach.match("resourceType='([^\']+)'");
                 if (match) {
                     const resourceType = match[1];
                     md_def.push(`<tr style="background-color:#000000; color:white"><td colspan=5><i>${resourceType}</i></td></tr>`);
@@ -170,9 +178,9 @@ function doColumnDefs(columns, md_def) {
             md_def.push("</tr>");
         }
     });
-    // Add uitklap columns
+    // Add detail columns
     if (columns.find(column => column.name.charAt(0) == '+')) {
-        md_def.push('<tr style="background-color:#8faadc; color:white"><th colspan="5">UITKLAPVELD</th></tr>');
+        md_def.push('<tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>');
         columns.forEach(column => {
             if (column.name.charAt(0) == '+') {
                 md_def.push("<tr style=\"background-color:#b4c7e7\">");
@@ -181,9 +189,9 @@ function doColumnDefs(columns, md_def) {
             }
         });
     }
-    // Add markering columns
+    // Add control columns
     if (columns.find(column => column.name.charAt(0) == '(')) {
-        md_def.push('<tr style="background-color:#adb9ca; color:white"><th colspan="5">MARKERING</th></tr>');
+        md_def.push('<tr style="background-color:#adb9ca; color:white"><th colspan="5">CONTROL</th></tr>');
         columns.forEach(column => {
             if (column.name.charAt(0) == '(') {
                 md_def.push("<tr style=\"background-color:#d6dce5\">");
@@ -366,7 +374,7 @@ function extractExampleData(select, example, exampleFileName) {
             } else if (column.type == "code") {
                 value = evalResult[0];
                 if (typeof (evalResult[0]) == "object" && evalResult[0].coding && evalResult[0].coding[0]) {
-                    value = evalResult[0].coding[0].display;
+                    value = evalResult[0].coding[0].code;
                     if (!value) value = "";
                 }
             } else {
@@ -398,52 +406,7 @@ function doExampleRow(extractedData, md_ui) {
     // add column values
     extractedData.forEach((column, idx) => {
         if (column.name.charAt(0) != '+' && column.name != "(Groep)") {
-            let displayValue = extractedData[idx].value;
-            if ((column.type == "date" || column.type == "dateTime") && displayValue) {
-                const date = new Date(displayValue);
-                displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'CET' });
-            }
-            else if ((column.type == "Period" || column.type == "Period:date") && displayValue) { // special case for Period; display as start - end
-                const period = displayValue.split(' - ');
-                const dateStart = new Date(period[0]);
-                const dateEnd = period[1] ? new Date(period[1]) : null;
-                // Check if dateEnd falls on the exact same UTC calendar day as dateStart
-                const isSameDay = dateEnd &&
-                    dateStart.getUTCFullYear() === dateEnd.getUTCFullYear() &&
-                    dateStart.getUTCMonth() === dateEnd.getUTCMonth() &&
-                    dateStart.getUTCDate() === dateEnd.getUTCDate();
-
-                // Check if dates are set to midnight (don't show time)
-                // Also hide time if we are dealing with a Period:date type, which is always date-only
-                const startIsMidnight = column.type == "Period:date" || dateStart.getUTCHours() === 0 && dateStart.getUTCMinutes() === 0 && dateStart.getUTCSeconds() === 0;
-                const endIsMidnight = column.type == "Period:date" || dateEnd && dateEnd.getUTCHours() === 0 && dateEnd.getUTCMinutes() === 0 && dateEnd.getUTCSeconds() === 0;
-
-                // Format start display
-                const displayStart = startIsMidnight
-                    ? dateStart.toLocaleDateString('nl-NL', { timeZone: 'CET' })
-                    : dateStart.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
-
-                // Format end display based on same-day status
-                let displayEnd = null;
-
-                if (dateEnd) {
-                    if (isSameDay) {
-                        // Hide end date: show time if present, or omit if midnight
-                        displayEnd = endIsMidnight
-                            ? null
-                            : dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit', second: '2-digit' });
-                    } else {
-                        // Different day: standard date or full date+time
-                        displayEnd = endIsMidnight
-                            ? dateEnd.toLocaleDateString('nl-NL', { timeZone: 'CET' })
-                            : dateEnd.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
-                    }
-                }
-                displayValue = displayStart;
-                if (displayEnd) {
-                    displayValue += ' - ' + displayEnd;
-                }
-            }
+            const displayValue = formatDisplayValue(column, extractedData[idx].value);
             md_ui.push(`<td>${displayValue}</td>`);
         }
     });
@@ -452,53 +415,58 @@ function doExampleRow(extractedData, md_ui) {
     md_ui.push(`</tr><tr><td></td><td colspan=${colcount}>`);
     extractedData.forEach((column, idx) => {
         if (column.name.charAt(0) == '+' && extractedData[idx].value != "") {
-            let displayValue = extractedData[idx].value;
-            if ((column.type == "date" || column.type == "dateTime") && displayValue) {
-                const date = new Date(displayValue);
-                displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'CET' });
-            }
-            else if (column.type == "Period" && displayValue) { // special case for Period; display as start - end
-                const period = displayValue.split(' - ');
-                const dateStart = new Date(period[0]);
-                const dateEnd = period[1] ? new Date(period[1]) : null;
-                // Check if dateEnd falls on the exact same UTC calendar day as dateStart
-                const isSameDay = dateEnd &&
-                    dateStart.getUTCFullYear() === dateEnd.getUTCFullYear() &&
-                    dateStart.getUTCMonth() === dateEnd.getUTCMonth() &&
-                    dateStart.getUTCDate() === dateEnd.getUTCDate();
-
-                // Check if dates are set to midnight (no time set)
-                const startIsMidnight = dateStart.getUTCHours() === 0 && dateStart.getUTCMinutes() === 0 && dateStart.getUTCSeconds() === 0;
-                const endIsMidnight = dateEnd && dateEnd.getUTCHours() === 0 && dateEnd.getUTCMinutes() === 0 && dateEnd.getUTCSeconds() === 0;
-
-                // Format start display
-                const displayStart = startIsMidnight
-                    ? dateStart.toLocaleDateString('nl-NL', { timeZone: 'CET' })
-                    : dateStart.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
-
-                // Format end display based on same-day status
-                let displayEnd = null;
-
-                if (dateEnd) {
-                    if (isSameDay) {
-                        // Hide end date: show time if present, or omit if midnight
-                        displayEnd = endIsMidnight
-                            ? null
-                            : dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit', second: '2-digit' });
-                    } else {
-                        // Different day: standard date or full date+time
-                        displayEnd = endIsMidnight
-                            ? dateEnd.toLocaleDateString('nl-NL', { timeZone: 'CET' })
-                            : dateEnd.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
-                    }
-                }
-                displayValue = displayStart;
-                if (displayEnd) {
-                    displayValue += ' - ' + displayEnd;
-                }
-            }
+            const displayValue = formatDisplayValue(column, extractedData[idx].value);
             md_ui.push(`<b>${column.name.slice(1)}</b><br/>${displayValue}<br/>`);
         }
     });
     md_ui.push("</td></tr>");
+}
+
+function formatDisplayValue(column, displayValue) {
+    if ((column.type == "date" || column.type == "dateTime") && displayValue) {
+        const date = new Date(displayValue);
+        displayValue = date.toLocaleDateString('nl-NL', { timeZone: 'CET' });
+    }
+    else if ((column.type == "Period" || column.type == "Period:date") && displayValue) { // special case for Period; display as start - end
+        const period = displayValue.split(' - ');
+        const dateStart = new Date(period[0]);
+        const dateEnd = period[1] ? new Date(period[1]) : null;
+        // Check if dateEnd falls on the exact same calendar day as dateStart
+        const isSameDay = dateEnd && dateStart.toLocaleDateString('nl-NL', { timeZone: 'CET' }) === dateEnd.toLocaleDateString('nl-NL', { timeZone: 'CET' });
+
+        // Check if dates are set to midnight (or no time specified for Period:date)
+        let startIsMidnight = column.type == "Period:date" || !period[0].includes('T') || "00:00" == dateStart.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit' });
+        const endIsMidnight = column.type == "Period:date" || period[1] && !period[1].includes('T') || dateEnd && "00:00" == dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit' });
+        if (dateEnd && startIsMidnight && !endIsMidnight) {
+            startIsMidnight = false; // if start is midnight but end is not, treat start as having a time for display purposes
+        }
+
+        // Format start display
+        const displayStart = startIsMidnight
+            ? dateStart.toLocaleDateString('nl-NL', { timeZone: 'CET' })
+            : dateStart.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+        // Format end display based on same-day status
+        let displayEnd = null;
+
+        if (dateEnd) {
+            if (isSameDay) {
+                // Hide end date: show time if present, or omit if midnight
+                displayEnd = endIsMidnight
+                    ? null
+                    : dateEnd.toLocaleTimeString('nl-NL', { timeZone: 'CET', hour: '2-digit', minute: '2-digit' });
+            } else {
+                // Different day: standard date or full date+time
+                displayEnd = endIsMidnight
+                    ? dateEnd.toLocaleDateString('nl-NL', { timeZone: 'CET' })
+                    : dateEnd.toLocaleString('nl-NL', { timeZone: 'CET', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+            }
+        }
+        displayValue = displayStart;
+        if (displayEnd) {
+            displayValue += ' - ' + displayEnd;
+        }
+        displayValue = displayValue.replaceAll(',','');
+    }
+    return displayValue;
 }
