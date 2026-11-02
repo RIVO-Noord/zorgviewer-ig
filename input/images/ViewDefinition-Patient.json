@@ -1,0 +1,51 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-Patient",
+  "title": "Patient Banner",
+  "profile": "http://fhir.hl7.nl/zorgviewer/StructureDefinition/Patient",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "name.text",
+          "name": "Naam",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Naamgegevens" } ]
+        },
+        {
+          "path": "birthDate",
+          "name": "Geboortedatum",
+          "type": "date",
+          "tag": [ { "name": "Zib element", "value": "Geboortedatum" } ]
+        },
+        {
+          "path": "birthDate.toDate().yearsPassedBy()",
+          "name": "Leeftijd (jaar)",
+          "type": "integer",
+          "tag": [ { "name": "Zib element", "value": "Geboortedatum" } ]
+        },
+        {
+          "path": "identifier.where(system='http://fhir.nl/fhir/NamingSystem/bsn').value",
+          "name": "BSN",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "Identificatienummer" } ]
+        },
+        {
+          "path": "maritalStatus.text | maritalStatus.coding.display",
+          "name": "Burgerlijke staat",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "BurgerlijkeStaat" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='Patient')"
+    }
+  ]
+}

@@ -105,10 +105,24 @@ function lookupFn(inputs, valueSetId) {
     console.log(`Lookup concept ${code} using ValueSet ${valueSetId} to ${result.length} concepts`);
     return result; // array of ConceptMap.group.element
 }
+function yearsPassedByFn(inputs) {
+    if (!inputs || inputs.length === 0) {
+        return null;
+    }
+    const date = new Date(inputs[0].asStr);
+    const today = new Date();
+    let years = today.getFullYear() - date.getFullYear();
+    const m = today.getMonth() - date.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < date.getDate())) {
+        years--;
+    }
+    return years;
+}
 const userInvocationTable = {
     resolve: { fn: resolveFn },
     translate: { fn: translateFn, arity: { 1: ['String'] } },
-    lookup: { fn: lookupFn, arity: { 1: ['String'] } }
+    lookup: { fn: lookupFn, arity: { 1: ['String'] } },
+    yearsPassedBy: { fn: yearsPassedByFn }
 };
 
 fs.readdirSync(viewDefPath).forEach(file => {

@@ -4,10 +4,19 @@
 
 * [ZIB Patient](https://zibs.nl/wiki/Patient-v3.1(2017NL))
 * [ZIB Contactpersoon](https://zibs.nl/wiki/Contactpersoon-v3.1(2017NL))
+* [ZIB Burgelijke Staat](https://www.zibs.nl/wiki/BurgerlijkeStaat-v3.0(2017NL))
 
-### View Definition
+### View Definitions
 
-**N.B. Er is alleen een View gedefinieerd voor het onderdeel <u>contactpersonen</u> van Patient.**
+### View Definition - Patient Banner
+
+* [ViewDefinition voor Patient Banner](ViewDefinition-Patient.json)
+
+{% include ViewDefinition-Patient-ui.md %}
+
+{% include ViewDefinition-Patient.md %}
+
+### View Definition - Contactpersonen
 
 * [ViewDefinition voor Contactpersonen](ViewDefinition-Contactpersonen.json)
 
