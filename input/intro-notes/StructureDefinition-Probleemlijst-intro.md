@@ -4,8 +4,8 @@
 
 De volgende zibs vallen onder het thema probleemlijst. LET OP: Deze samenstelling heeft als focus het Probleem (Condition) in tegenstelling tot het [profiel EpisodeOfCare](StructureDefinition-EpisodeOfCare.html) die heeft als focus de Episode.
 
-- [ZIB Probleem](https://zibs.nl/wiki/Probleem-v4.1(2017NL)) - BgZ[^1]
-- [ZIB ZorgEpisode](https://zibs.nl/wiki/ZorgEpisode-v1.0(2020NL)) Huisartsgegevens[^2]
+- zie [Probleem](StructureDefinition-Condition.html#zorginformatiebouwsteen) - BgZ[^1]
+- zie [ZorgEpisode](StructureDefinition-EpisodeOfCare.html#zorginformatiebouwsteen) Huisartsgegevens[^2]
 
 [^1]: [BgZ 2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
 [^2]: [Huisartsgegevens](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_GP_Data)

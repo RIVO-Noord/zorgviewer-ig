@@ -4,7 +4,8 @@
 
 ### Zorginformatiebouwsteen
 
-...
+* zie [Contact](StructureDefinition-Contact.html#zorginformatiebouwsteen)
+* zie [ZorgEpisode](StructureDefinition-EpisodeOfCare.html#zorginformatiebouwsteen)
 
 ### View Definition
 

@@ -7,6 +7,8 @@
 * [ZIB OverdrachtGeplandeZorgActiviteit/Afspraak:Contact](https://www.zibs.nl/wiki/OverdrachtGeplandeZorgActiviteit-v3.1(2017NL))
 * [eAfspraak Appointment](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_eAfspraak)
 
+_N.B. In tegenstelling tot wat bij de zib OverdrachtGeplandeZorgActiviteit is gedocumenteerd is de Afspraak niet een zib Contact, maar een eAfspraak Appointment._
+
 ### View Definition
 
 [ViewDefinition voor Appointment](ViewDefinition-Appointment.json)

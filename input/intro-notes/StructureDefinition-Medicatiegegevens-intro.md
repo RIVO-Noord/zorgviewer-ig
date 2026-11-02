@@ -2,9 +2,9 @@
 
 ### Zorginformatiebouwsteen
 
-* [ZIB Medicatieafspraak](StructureDefinition-MedicationRequest.html#zorginformatiebouwsteen)
-* [ZIB Medicatie Gebruik2](StructureDefinition-MedicationStatement.html#zorginformatiebouwsteen)
-* [ZIB Toedieningsafspraak](StructureDefinition-Toedieningsafspraak.html#zorginformatiebouwsteen)
+* zie [Medicatieafspraak](StructureDefinition-MedicationRequest.html#zorginformatiebouwsteen)
+* zie [Medicatie Gebruik2](StructureDefinition-MedicationStatement.html#zorginformatiebouwsteen)
+* zie [Toedieningsafspraak](StructureDefinition-Toedieningsafspraak.html#zorginformatiebouwsteen)
 
 ### View Definition
 
