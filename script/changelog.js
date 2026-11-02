@@ -12,7 +12,8 @@ async function generateChangelog() {
     // const SINCE = '2026-08-11';
     // let changes = execSync(`git diff 'HEAD@{${SINCE}}'`).toString();
     // let changes = execSync(`git diff 1.25.0`, { maxBuffer: 250000 }).toString();
-    let changes = execSync(`git diff 1.25.0`).toString();
+    const branch = execSync('git describe --tags --abbrev=0').toString('utf8').trim();
+    let changes = execSync(`git diff ${branch}`).toString();
 
     // Generate fo-diff using in the Zorgviewer.wiki git folder, which is a separate repository.
     // `cd _local/Zorgviewer.wiki`
