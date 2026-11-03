@@ -105,24 +105,39 @@ function lookupFn(inputs, valueSetId) {
     console.log(`Lookup concept ${code} using ValueSet ${valueSetId} to ${result.length} concepts`);
     return result; // array of ConceptMap.group.element
 }
-function yearsPassedByFn(inputs) {
+function leeftijdFn(inputs) {
     if (!inputs || inputs.length === 0) {
         return null;
     }
     const date = new Date(inputs[0].asStr);
     const today = new Date();
-    let years = today.getFullYear() - date.getFullYear();
-    const m = today.getMonth() - date.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < date.getDate())) {
-        years--;
+    const elapsedMonths = (today.getUTCFullYear() - date.getUTCFullYear()) * 12
+        + today.getUTCMonth() - date.getUTCMonth();
+    const monthEndDay = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth() + 1, 0)).getUTCDate();
+    const months = elapsedMonths - (today.getUTCDate() < Math.min(date.getUTCDate(), monthEndDay) ? 1 : 0);
+
+    if (months < 1) {
+        const todayUtc = Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate());
+        const dateUtc = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate());
+        const days = Math.floor((todayUtc - dateUtc) / 86400000);
+        return `${days} ${days === 1 ? "dag" : "dagen"}`;
     }
-    return years;
+    if (months < 12) {
+        return `${months} ${months === 1 ? "maand" : "maanden"}`;
+    }
+
+    const years = Math.floor(months / 12);
+    const remainingMonths = months % 12;
+    if (years < 2) {
+        return `${years} jaar en ${remainingMonths} ${remainingMonths === 1 ? "maand" : "maanden"}`;
+    }
+    return `${years} jaar`;
 }
 const userInvocationTable = {
     resolve: { fn: resolveFn },
     translate: { fn: translateFn, arity: { 1: ['String'] } },
     lookup: { fn: lookupFn, arity: { 1: ['String'] } },
-    yearsPassedBy: { fn: yearsPassedByFn }
+    leeftijd: { fn: leeftijdFn }
 };
 
 fs.readdirSync(viewDefPath).forEach(file => {

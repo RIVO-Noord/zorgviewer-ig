@@ -30,11 +30,11 @@
 <td></td>
 </tr>
 <tr>
-<td>Leeftijd (jaar)</td>
-<td><samp>birthDate.toDate().yearsPassedBy()</samp></td>
-<td><code>integer</code></td>
+<td>Leeftijd</td>
+<td><samp>birthDate.toDate().leeftijd()</samp></td>
+<td><code>string</code></td>
 <td>Geboortedatum</td>
-<td></td>
+<td>Leeftijd berekend vanaf geboortedatum middels Zorgviewer algorithme.</td>
 </tr>
 <tr>
 <td>BSN</td>
