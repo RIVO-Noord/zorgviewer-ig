@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>Patient Banner</b>
+<b>Patient</b>
 <table class="grid">
 <tbody>
 <tr><th></th>
