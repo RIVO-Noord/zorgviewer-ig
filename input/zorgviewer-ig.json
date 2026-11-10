@@ -67,17 +67,64 @@
   "definition": {
     "grouping": [
       {
+        "id": "group-sam",
+        "name": "Samenstellingen",
+        "description": "Samenstelingen van profielen/zibs."
+      },
+      {
         "id": "group-zs",
         "name": "Zorgviewer Services Content",
         "description": "Zie [Zorgviewer Services pagina](zorgviewer-services.html) voor details."
       },
       {
-        "id": "group-sam",
-        "name": "Samenstellingen",
-        "description": "Samenstelingen van zibs."
+        "id": "group-misc",
+        "name": "Miscellaneous",
+        "description": "Bevat allemaal half producten artifacten."
       }
     ],
     "resource": [
+      {
+        "reference": {
+          "reference": "CapabilityStatement/Adressering"
+        },
+        "groupingId": "group-misc"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/Behandelplan"
+        },
+        "groupingId": "group-misc"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/Logging"
+        },
+        "groupingId": "group-misc"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/Terminologie"
+        },
+        "groupingId": "group-misc"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/ZorgverlenerDirectory"
+        },
+        "groupingId": "group-misc"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/Toestemming"
+        },
+        "groupingId": "group-misc"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AuditEvent"
+        },
+        "groupingId": "group-misc"
+      },
       {
         "reference": {
           "reference": "StructureDefinition/Correspondentie"
@@ -1019,11 +1066,6 @@
         {
           "nameUrl": "copyrights.html",
           "title": "Copyrights",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "searchform.html",
-          "title": "Search Form",
           "generation": "markdown"
         },
         {
