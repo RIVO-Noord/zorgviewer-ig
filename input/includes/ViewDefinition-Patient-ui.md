@@ -8,7 +8,6 @@
 <th>Geboortedatum</th>
 <th>Leeftijd</th>
 <th>BSN</th>
-<th>Burgerlijke staat</th>
 </tr>
 <tr><td></td>
 <td>CGM</td>
@@ -16,8 +15,7 @@
 <td>1-1-2010</td>
 <td>16 jaar</td>
 <td></td>
-<td></td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>IPS-Epic</td>
@@ -25,8 +23,7 @@
 <td>23-8-1991</td>
 <td>35 jaar</td>
 <td></td>
-<td>Married</td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>Epic-CP</td>
@@ -34,8 +31,7 @@
 <td>1-1-1980</td>
 <td>46 jaar</td>
 <td></td>
-<td></td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>EPS</td>
@@ -43,8 +39,7 @@
 <td>7-2-1978</td>
 <td>48 jaar</td>
 <td></td>
-<td></td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>CGM</td>
@@ -52,8 +47,7 @@
 <td>1-2-1973</td>
 <td>53 jaar</td>
 <td>000004881</td>
-<td></td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>Chipsoft</td>
@@ -61,8 +55,7 @@
 <td>25-7-1964</td>
 <td>62 jaar</td>
 <td>999911120</td>
-<td>Gehuwd</td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>Chipsoft</td>
@@ -70,8 +63,7 @@
 <td>25-7-1964</td>
 <td>62 jaar</td>
 <td>999911120</td>
-<td>Married</td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>Epic</td>
@@ -79,8 +71,7 @@
 <td>25-7-1964</td>
 <td>62 jaar</td>
 <td>999911120</td>
-<td>Gehuwd</td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>Nexus</td>
@@ -88,8 +79,7 @@
 <td>25-7-1964</td>
 <td>62 jaar</td>
 <td></td>
-<td>Gehuwd</td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>Sanday</td>
@@ -97,8 +87,7 @@
 <td>25-7-1964</td>
 <td>62 jaar</td>
 <td>999911132</td>
-<td></td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>Chipsoft</td>
@@ -106,8 +95,7 @@
 <td>25-7-1964</td>
 <td>62 jaar</td>
 <td>999911120</td>
-<td>Gehuwd</td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>Nedap</td>
@@ -115,8 +103,7 @@
 <td>12-2-1959</td>
 <td>67 jaar</td>
 <td>999995364</td>
-<td>Weduwe/weduwnaar</td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>AORTA</td>
@@ -124,8 +111,7 @@
 <td></td>
 <td></td>
 <td>123456789</td>
-<td></td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 <tr><td></td>
 <td>AORTA</td>
@@ -133,8 +119,7 @@
 <td></td>
 <td></td>
 <td>123456789</td>
-<td></td>
-</tr><tr><td></td><td colspan=6>
+</tr><tr><td></td><td colspan=5>
 </td></tr>
 </tbody>
 </table>

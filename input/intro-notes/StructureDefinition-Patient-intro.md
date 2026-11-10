@@ -3,18 +3,26 @@
 ### Zorginformatiebouwstenen
 
 * [ZIB Patient](https://zibs.nl/wiki/Patient-v3.1(2017NL))
-* [ZIB Contactpersoon](https://zibs.nl/wiki/Contactpersoon-v3.1(2017NL))
 * [ZIB Burgelijke Staat](https://www.zibs.nl/wiki/BurgerlijkeStaat-v3.0(2017NL))
+* [ZIB Contactpersoon](https://zibs.nl/wiki/Contactpersoon-v3.1(2017NL))
 
 ### View Definitions
 
-### View Definition - Patient Banner
+### View Definition - Patient
 
-* [ViewDefinition voor Patient Banner](ViewDefinition-Patient.json)
+* [ViewDefinition voor Patient](ViewDefinition-Patient.json)
 
 {% include ViewDefinition-Patient-ui.md %}
 
 {% include ViewDefinition-Patient.md %}
+
+### View Definition - Burgelijke Staat
+
+* [ViewDefinition voor Burgelijke Staat](ViewDefinition-BurgelijkeStaat.json)
+
+{% include ViewDefinition-BurgelijkeStaat-ui.md %}
+
+{% include ViewDefinition-BurgelijkeStaat.md %}
 
 ### View Definition - Contactpersonen
 

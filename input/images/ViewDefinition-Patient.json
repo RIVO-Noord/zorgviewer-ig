@@ -38,12 +38,6 @@
           "name": "BSN",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "Identificatienummer" } ]
-        },
-        {
-          "path": "maritalStatus.text | maritalStatus.coding.display",
-          "name": "Burgerlijke staat",
-          "type": "string",
-          "tag": [ { "name": "Zib element", "value": "BurgerlijkeStaat" } ]
         }
       ],
       "forEach": "entry.resource.where(resourceType='Patient')"

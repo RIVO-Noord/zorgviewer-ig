@@ -43,12 +43,5 @@
 <td>Identificatienummer</td>
 <td></td>
 </tr>
-<tr>
-<td>Burgerlijke staat</td>
-<td><samp>maritalStatus.text | maritalStatus.coding.display</samp></td>
-<td><code>string</code></td>
-<td>BurgerlijkeStaat</td>
-<td></td>
-</tr>
 </tbody>
 </table>
