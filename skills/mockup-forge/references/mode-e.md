@@ -15,7 +15,11 @@ Gebruik deze modus om `ViewDefinition-*.ui.md` wireframe-bestanden automatisch o
   - Topbar (patiëntgegevens, gebruiker)
   - Sidebar (navigatiemenu)
   - Content panel met tabel uit wireframe
+  - Output naar `/app/output/mockups/ViewDefinition-*.html`
 - **PNG mockup** (optioneel): Gerenderde high-res afbeelding (1280px breed, 2x DPI)
+  - Output naar `/app/output/mockups/ViewDefinition-*.png`
+  - Vereist: Node.js, Puppeteer
+  - Renderingsnelheid: ~5-8 seconden per mockup
 
 ## Workflow
 

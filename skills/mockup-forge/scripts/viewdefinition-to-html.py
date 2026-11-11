@@ -119,21 +119,60 @@ def get_visible_column_indices(headers):
     return visible_indices
 
 
-def is_detail_row(row):
-    """Controleer of deze rij een detail/verslag rij is (geen expand-icon in eerste kolom)."""
+def is_detail_row(row, num_header_cols):
+    """Controleer of deze rij een detail/verslag rij is (minder cellen dan headers)."""
     if len(row) == 0:
         return False
+    # Detail rijen hebben MINDER cellen dan de header (vanwege colspan)
+    if len(row) < num_header_cols:
+        return True
+    # Of ze hebben lege eerste kolom
     first_cell = row[0]['content'].strip()
-    # Detail rijen hebben GEEN expand-icon in eerste kolom
-    return first_cell not in ['▼', '▲', '●'] and '▼' not in first_cell and '▲' not in first_cell
+    return first_cell == ''
 
 
-def is_main_row(row):
-    """Controleer of deze rij een hoofdregel is (met expand-icon of leeg in eerste kolom)."""
+def is_main_row(row, num_header_cols):
+    """Controleer of deze rij een hoofdregel is (volledige aantal cellen)."""
     if len(row) == 0:
         return False
+    # Main rijen hebben meestal hetzelfde aantal cellen als headers (of meer met colspan)
+    if len(row) >= num_header_cols:
+        return True
+    # Of ze hebben expand-icon
     first_cell = row[0]['content'].strip()
-    return first_cell in ['▼', '▲', ''] or '▼' in first_cell or '▲' in first_cell
+    return first_cell in ['▼', '▲']
+
+
+def has_content(row, visible_indices):
+    """Controleer of een detail row daadwerkelijk content heeft (niet leeg)."""
+    for cell_idx, cell in enumerate(row):
+        # Skip verborgen kolommen
+        if cell_idx not in visible_indices:
+            continue
+        content = cell['content'].strip()
+        if content:
+            return True
+    return False
+
+
+def get_detail_content(row, visible_indices):
+    """Extraheer en format de content van een detail row. Return None als leeg."""
+    detail_content = []
+    for cell_idx, cell in enumerate(row):
+        # Skip verborgen kolommen
+        if cell_idx not in visible_indices:
+            continue
+        content = cell['content'].strip()
+        if content:
+            # Bold voor labels zoals "Verslag"
+            if content in ['Verslag', 'Regels', 'Details'] or ':' in content and content.isupper():
+                detail_content.append(f'<b>{content}</b>')
+            else:
+                detail_content.append(content)
+    
+    if not detail_content:
+        return None
+    return '<br/>'.join(detail_content)
 
 
 def create_html_mockup(title, tables, icon='📄'):
@@ -159,12 +198,22 @@ def create_html_mockup(title, tables, icon='📄'):
     html_table += '</tr>\n</thead>\n<tbody>\n'
     
     # Rows verwerken - groepeer hoofd- en detailrijen
+    num_header_cols = len(headers)
     i = 0
     while i < len(rows):
         row = rows[i]
         
         # Check of dit een hoofdrij is
-        if is_main_row(row):
+        if is_main_row(row, num_header_cols):
+            # Check of volgende rij een detail row is met content
+            has_detail = False
+            detail_html = None
+            if i + 1 < len(rows) and is_detail_row(rows[i + 1], num_header_cols):
+                next_row = rows[i + 1]
+                if has_content(next_row, visible_indices):
+                    has_detail = True
+                    detail_html = get_detail_content(next_row, visible_indices)
+            
             # Render hoofdrij
             html_table += '<tr>\n'
             for j, header_idx in enumerate(visible_indices):
@@ -174,7 +223,11 @@ def create_html_mockup(title, tables, icon='📄'):
                     
                     # Speciale behandeling voor eerste kolom (expandable icon)
                     if header_idx == 0:
-                        html_table += f'  <td style="text-align: center; color: #00838F;">●</td>\n'
+                        # Toon ▼ als er details zijn, anders >
+                        if has_detail:
+                            html_table += f'  <td style="text-align: center; color: #00838F;">▼</td>\n'
+                        else:
+                            html_table += f'  <td style="text-align: center; color: #00838F;">&gt;</td>\n'
                     # Bron monogram voor kolom met index 1
                     elif j == 1 and content and not content.startswith('('):
                         bron_color = get_bron_color(content)
@@ -186,37 +239,22 @@ def create_html_mockup(title, tables, icon='📄'):
                         html_table += f'  <td>{content}</td>\n'
             html_table += '</tr>\n'
             
-            # Check op volgende rij voor detail content (groepering!)
-            if i + 1 < len(rows) and is_detail_row(rows[i + 1]):
-                next_row = rows[i + 1]
-                # Dit is een detail/verslag rij die bij de hoofdrij hoort
+            # Render detail row ALLEEN als het content heeft
+            if has_detail and detail_html:
                 num_visible_cols = len(visible_indices)
-                
-                # Detail rij in grijze background
                 html_table += '<tr style="background: #F9FAFB;">\n'
                 html_table += f'  <td colspan="{num_visible_cols}"><div style="padding: 12px; background: #F9FAFB; border-radius: 4px;">'
-                
-                # Content van detail rij verzamelen
-                detail_content = []
-                for cell_idx, cell in enumerate(next_row):
-                    # Skip verborgen kolommen
-                    if cell_idx > 0 and cell_idx not in visible_indices:
-                        continue
-                    content = cell['content'].strip()
-                    if content and not content.startswith('('):
-                        # Bold voor labels zoals "Verslag"
-                        if content in ['Verslag', 'Regels', 'Details'] or ':' in content and content.isupper():
-                            detail_content.append(f'<b>{content}</b>')
-                        else:
-                            detail_content.append(content)
-                
-                html_table += '<br/>'.join(detail_content)
+                html_table += detail_html
                 html_table += '</div></td>\n'
                 html_table += '</tr>\n'
-                i += 2
-                continue
-        
-        i += 1
+                i += 2  # Skip detail row dat we net verwerkt hebben
+            else:
+                i += 1  # Alleen hoofd-rij, geen detail
+        elif is_detail_row(row, num_header_cols):
+            # Dit is een verwaasde detail row zonder hoofd-rij (skip)
+            i += 1
+        else:
+            i += 1
     
     html_table += '</tbody>\n</table>'
     

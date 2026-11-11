@@ -35,7 +35,7 @@ python3 skills/mockup-forge/scripts/generate-mockup.py \
 
 **Output**: `/tmp/mockup.png` — High-res PNG mockup
 
-### Voorbeeld 3: Batch verwerking (alle 32 bestanden)
+### Voorbeeld 3: Batch verwerking (alle 32 bestanden + PNGs)
 
 ```bash
 python3 skills/mockup-forge/scripts/batch-viewdefinition-mockups.py \
@@ -45,9 +45,9 @@ python3 skills/mockup-forge/scripts/batch-viewdefinition-mockups.py \
 ```
 
 **Output**: 
-- 32× HTML mockups
-- 32× PNG mockups
-- `index.html` met overzicht
+- `/app/output/mockups/ViewDefinition-*.html` — 32× HTML mockups
+- `/app/output/mockups/ViewDefinition-*.png` — 32× PNG mockups (optioneel)
+- `/app/output/mockups/index.html` — Overzicht met links naar alle mockups
 
 ## 🎯 Hoe werkt het?
 
