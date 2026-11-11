@@ -104,6 +104,21 @@ def get_bron_color(bron_naam):
     return '#4A5568'  # default
 
 
+def is_hidden_column(header_text):
+    """Controleer of kolom verborgen is (naam tussen haakjes)."""
+    return header_text.strip().startswith('(') and header_text.strip().endswith(')')
+
+
+def get_visible_column_indices(headers):
+    """Geeft indices van zichtbare kolommen (niet tussen haakjes)."""
+    visible_indices = []
+    for i, header_cell in enumerate(headers):
+        header_text = header_cell['content'].strip()
+        if not is_hidden_column(header_text):
+            visible_indices.append(i)
+    return visible_indices
+
+
 def create_html_mockup(title, tables, icon='📄'):
     """Genereert HTML mockup van ViewDefinition tabel."""
     
@@ -114,13 +129,14 @@ def create_html_mockup(title, tables, icon='📄'):
     headers = table.get('headers', [])
     rows = table.get('rows', [])
     
-    # Extract kolomnamen
-    col_names = [cell['content'] for cell in headers]
+    # Filter verborgen kolommen (tussen haakjes)
+    visible_indices = get_visible_column_indices(headers)
+    visible_headers = [headers[i] for i in visible_indices]
     
     # HTML tabel genereren
     html_table = '<table>\n<thead>\n<tr>\n'
     
-    for header_cell in headers:
+    for header_cell in visible_headers:
         html_table += f'  <th>{header_cell["content"]}</th>\n'
     
     html_table += '</tr>\n</thead>\n<tbody>\n'
@@ -135,16 +151,18 @@ def create_html_mockup(title, tables, icon='📄'):
                         (row[0]['content'].strip() in ['▼', '▲', ''] or 
                          '▼' in row[0]['content'] or '▲' in row[0]['content']))
         
-        # Normale data-rij
+        # Normale data-rij - alleen zichtbare kolommen
         html_table += '<tr>\n'
-        for j, cell in enumerate(row):
-            content = cell['content'].strip()
-            if j == 0 and is_expandable:
-                # Icon kolom
-                html_table += f'  <td style="text-align: center; color: #00838F;">●</td>\n'
-            else:
-                # Bron monogram verwerken
-                if j == 1 and content and not content.startswith('('):
+        for j, header_idx in enumerate(visible_indices):
+            if header_idx < len(row):
+                cell = row[header_idx]
+                content = cell['content'].strip()
+                
+                # Speciale behandeling voor eerste kolom (expandable icon)
+                if header_idx == 0 and is_expandable:
+                    html_table += f'  <td style="text-align: center; color: #00838F;">●</td>\n'
+                # Bron monogram voor kolom met index 1 (of eerste zichtbare na icon)
+                elif j == 1 and content and not content.startswith('('):
                     bron_color = get_bron_color(content)
                     bron_abbrev = ''.join([c for c in content if c.isupper()])[:2]
                     if not bron_abbrev:
@@ -161,14 +179,18 @@ def create_html_mockup(title, tables, icon='📄'):
             if (len(next_row) > 0 and next_row[0].get('colspan', 1) > 1) or \
                (len(next_row) >= 2 and next_row[1]['content'].strip().startswith('Verslag')):
                 # Dit is een detail/verslag rij
+                num_visible_cols = len(visible_indices)
                 html_table += '<tr style="background: #F9FAFB;">\n'
-                html_table += f'  <td colspan="{len(row)}"></td>\n'
+                html_table += f'  <td colspan="{num_visible_cols}"></td>\n'
                 html_table += '</tr>\n'
                 html_table += '<tr>\n'
-                html_table += '<td colspan="{}"><div style="padding: 12px; background: #F9FAFB; border-radius: 4px;">'.format(len(row))
+                html_table += '<td colspan="{}"><div style="padding: 12px; background: #F9FAFB; border-radius: 4px;">'.format(num_visible_cols)
                 
-                # Content van expanded row verzamelen
-                for cell in next_row[1:]:
+                # Content van expanded row verzamelen (skip verborgen kolommen)
+                for cell_idx, cell in enumerate(next_row):
+                    # Skip verborgen kolommen
+                    if cell_idx > 0 and cell_idx not in visible_indices:
+                        continue
                     content = cell['content'].strip()
                     if content and not content.startswith('('):
                         if content.startswith('Verslag'):
