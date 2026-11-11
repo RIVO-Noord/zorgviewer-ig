@@ -96,46 +96,41 @@ Gebruikerschip rechtsboven heeft dezelfde stijl met badge-icoon.
 - Padding: 16px 20px
 - Onderrand: 1px solid `#E2E8F0`
 - Links: paneel-icoon (40×40px, border-radius 10px, border 2px solid `#00838F`, witte achtergrond, icoon in teal `#00838F`, grootte 22px) + paneeltitel-h2
-- Rechts: filter (trechter) + refresh (circulaire pijl), beide outline-style, kleur `#00838F`, 20px
+- Rechts: **ONLY** refresh-icoon (circulaire pijl), outline-style, kleur `#00838F`, 20px
+  - Info-icoon is VERWIJDERD
 
 ## Componenten
 
 ### Kolomheaders (PrimeVue DataTable)
-- Achtergrond: `#F1F5F9` (lichtgrijs — niet wit, niet mint)
+- Achtergrond: `#EFF6F7` (mintgroen — consistent met paneelheader)
 - Tekst: teal `#00838F`, 13px, font-weight 600
-- Padding: 12px 16px
-- Onderrand: 1px solid `#E2E8F0`
+- Padding: 14px 16px
+- Bovenrand: 1px solid `#D6E5E7`
+- Onderrand: 2px solid `#D6E5E7`
 - Structuur per header (inline-flex, `gap: 8px`):
   1. Kolomnaam
-  2. **Sort-pair** (inline-flex, `gap: 1px`):
-     - `pi-arrow-up` (omhoog-pijl, 11×13px, stroke `currentColor`, opacity 0.55)
-     - `pi-arrow-down` (omlaag-pijl, 11×13px, opacity 0.55)
-  3. `pi-filter` (trechter, 12×12px, opacity 0.55, `margin-left: 4px` extra ruimte)
+  2. **Sort-pair** (inline-flex, `gap: 2px`):
+     - `↑` (pijl-omhoog, grijs `#999`, font-size 12px)
+     - `↓` (pijl-omlaag, grijs `#999`, font-size 12px)
+  3. **Filter-icon** (trechter `⧩`, grijs `#999`, font-size 12px, `margin-left: 4px`)
 
-```svg
-<!-- pi-arrow-up -->
-<svg width="11" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2V12M3 6L7 2L11 6"/></svg>
-
-<!-- pi-arrow-down -->
-<svg width="11" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12V2M3 8L7 12L11 8"/></svg>
-
-<!-- pi-filter -->
-<svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 2H12.5L8 7.5V11L6 12V7.5Z"/></svg>
-```
-
-Belangrijk: de up en down arrows staan vrijwel tegen elkaar (1px gap), dan komt een grotere ruimte, dan de funnel.
+**BELANGRIJK**: Sort- en filter-iconen verschijnen NIET in de eerste kolom (expand/collapse chevron).
 
 ### Expand/collapse chevron (linkerkolom rijen)
-- Ingeklapt: chevron-right `<polyline points="9 6 15 12 9 18"/>` (>)
-- Uitgeklapt: chevron-down `<polyline points="6 9 12 15 18 9"/>` (∨)
+- **Ingeklapt** (geen details): chevron-right `▶` (13×13px, stroke-width 1.5)
+- **Uitgeklapt** (met details): chevron-down `▼` (13×13px, stroke-width 1.5)
 - Kleur: `#00838F`
-- Grootte: 18px, stroke-width 2.4
+- Stijl: centered, monospace alignment
 
 ### Tabelrijen
 - Achtergrond: `#FFFFFF` (geen zebra-striping)
 - Padding cell: 14px 16px
-- Onderrand: 1px solid `#E2E8F0`
+- Onderrand: 1px solid `#E8ECF0` (subtiel, iets lichter)
 - Vertical-align: middle
+- **Detail-rijen** (met gekleurde achtergrond): 
+  - Achtergrond: `#F5F8FA` (licht blauw)
+  - Padding: 16px 20px
+  - Newlines in content worden behouden als `<br/>` tags
 
 ### LEGE CELLEN — KRITISCH
 - **GEEN liggend streepje (—) of placeholder bij ontbrekende waarden.**

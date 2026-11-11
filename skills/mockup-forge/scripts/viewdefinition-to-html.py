@@ -30,7 +30,7 @@ class TableExtractor(HTMLParser):
         self.current_table = None
         self.current_row = None
         self.current_cell = None
-        self.current_cell_data = []
+        self.current_cell_html = []  # Changed: collect HTML, not just text
         self.cell_is_header = False
         
     def handle_starttag(self, tag, attrs):
@@ -44,17 +44,27 @@ class TableExtractor(HTMLParser):
             for attr, value in attrs:
                 if attr == 'colspan':
                     self.current_cell['colspan'] = int(value)
+        elif self.current_cell is not None:
+            # Preserve HTML tags inside cells (like <b>, <br/>)
+            if tag == 'b':
+                self.current_cell_html.append('<b>')
+            elif tag == 'br':
+                self.current_cell_html.append('<br/>')
                     
     def handle_data(self, data):
         if self.current_cell is not None:
-            self.current_cell_data.append(data.strip())
+            stripped = data.strip()
+            if stripped:
+                self.current_cell_html.append(stripped)
             
     def handle_endtag(self, tag):
         if tag in ('th', 'td') and self.current_cell is not None:
-            self.current_cell['content'] = ' '.join(self.current_cell_data)
-            self.current_cell_data = []
+            self.current_cell['content'] = ''.join(self.current_cell_html)
+            self.current_cell_html = []
             self.current_row.append(self.current_cell)
             self.current_cell = None
+        elif tag == 'b' and self.current_cell is not None:
+            self.current_cell_html.append('</b>')
         elif tag == 'tr' and self.current_row is not None:
             if len(self.current_row) > 0:
                 if self.cell_is_header or not self.current_table['headers']:
@@ -156,7 +166,7 @@ def has_content(row, visible_indices):
 
 
 def get_detail_content(row, visible_indices):
-    """Extraheer en format de content van een detail row. Return None als leeg."""
+    """Extraheer en format de content van een detail row. Behoud HTML opmaak."""
     detail_content = []
     for cell_idx, cell in enumerate(row):
         # Skip verborgen kolommen
@@ -164,11 +174,9 @@ def get_detail_content(row, visible_indices):
             continue
         content = cell['content'].strip()
         if content:
-            # Bold voor labels zoals "Verslag"
-            if content in ['Verslag', 'Regels', 'Details'] or ':' in content and content.isupper():
-                detail_content.append(f'<b>{content}</b>')
-            else:
-                detail_content.append(content)
+            # Content bevat al <b> en <br/> tags uit de wireframe
+            # Voeg gewoon toe aan detail_content
+            detail_content.append(content)
     
     if not detail_content:
         return None
@@ -233,9 +241,11 @@ def create_html_mockup(title, tables, icon='📄'):
                     if header_idx == 0:
                         # Toon ▼ als er details zijn, anders >
                         if has_detail:
-                            html_table += f'  <td style="text-align: center; color: #00838F;">▼</td>\n'
+                            # Open/expand icon (▼ pointing down)
+                            html_table += f'  <td style="text-align: center; color: #00838F; font-size: 14px;">▼</td>\n'
                         else:
-                            html_table += f'  <td style="text-align: center; color: #00838F;">&gt;</td>\n'
+                            # Closed icon (▶ pointing right)
+                            html_table += f'  <td style="text-align: center; color: #00838F; font-size: 14px;">▶</td>\n'
                     # Bron monogram voor kolom met index 1
                     elif j == 1 and content and not content.startswith('('):
                         bron_color = get_bron_color(content)
@@ -250,8 +260,8 @@ def create_html_mockup(title, tables, icon='📄'):
             # Render detail row ALLEEN als het content heeft
             if has_detail and detail_html:
                 num_visible_cols = len(visible_indices)
-                html_table += '<tr style="background: #F9FAFB;">\n'
-                html_table += f'  <td colspan="{num_visible_cols}"><div style="padding: 12px; background: #F9FAFB; border-radius: 4px;">'
+                html_table += '<tr data-detail-row="true">\n'
+                html_table += f'  <td colspan="{num_visible_cols}"><div style="padding: 16px 20px; background: #F5F8FA;">'
                 html_table += detail_html
                 html_table += '</div></td>\n'
                 html_table += '</tr>\n'
@@ -509,43 +519,54 @@ def generate_full_mockup_html(title, tables, icon='📄'):
         }}
         
         thead {{
-            background: #F1F5F9;
+            background: #EFF6F7;
+            border-top: 1px solid #D6E5E7;
+            border-bottom: 2px solid #D6E5E7;
         }}
         
         th {{
-            padding: 12px 16px;
+            padding: 14px 16px;
             text-align: left;
             font-size: 13px;
             font-weight: 600;
             color: #00838F;
-            border-bottom: 1px solid #E2E8F0;
+            white-space: nowrap;
         }}
         
         td {{
             padding: 14px 16px;
             font-size: 14px;
             color: #2D3748;
-            border-bottom: 1px solid #E2E8F0;
+            border-bottom: 1px solid #E8ECF0;
         }}
         
-        tbody tr:last-child td {{
-            border-bottom: none;
+        tbody tr {{
+            background: #ffffff;
+            transition: background 0.1s;
         }}
         
         tbody tr:hover {{
             background: #F9FAFB;
         }}
         
+        tbody tr[data-detail-row="true"] {{
+            background: #F5F8FA;
+        }}
+        
+        tbody tr:last-child td {{
+            border-bottom: none;
+        }}
+        
         .bron-circle {{
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: 700;
-            font-size: 11px;
+            font-size: 12px;
             flex-shrink: 0;
         }}
         
@@ -652,11 +673,6 @@ def generate_full_mockup_html(title, tables, icon='📄'):
                         <div class="panel-title">{title}</div>
                     </div>
                     <div class="panel-header-right">
-                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="1"></circle>
-                            <path d="M12 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14z"></path>
-                            <path d="M12 9v6"></path>
-                        </svg>
                         <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="23 4 23 10 17 10"></polyline>
                             <path d="M20.49 15a9 9 0 1 1-2-8.83"></path>
