@@ -1,7 +1,8 @@
 # Zorgviewer Design System
 
-Dit document beschrijft het exacte visuele ontwerpsysteem van de Zorgviewer applicatie.
-Elke mockup moet dit systeem pixel-exact volgen.
+Dit document beschrijft de ontwerpuitgangspunten voor Zorgviewer-mockups. De
+ViewDefinition-converter (modus E) heeft op onderdelen een eigen implementatie;
+die is hieronder expliciet aangegeven en niet overal pixel-exact.
 
 ## Technologie stack
 - **Framework**: Vue 3
@@ -25,27 +26,28 @@ Elke mockup moet dit systeem pixel-exact volgen.
 - **Tekst muted** (alleen voor uitgeschakelde/grijze status): `#A0AEC0`
 - **Tekst disabled** (uitgeschakelde menu-items): `#B0B7C3`
 - **Rijscheiding / kader**: `#E2E8F0` (1px subtiele lijn)
-- **Sub-rij achtergrond** (Lateraliteit, extra info onder hoofdrij): `#FFFFFF` (wit — net als de hoofdrijen)
-- **Kolomheaders-rij achtergrond** (de strip met "Bron", "Datum" etc.): `#F1F5F9` (lichtgrijs — duidelijk onderscheidbaar van de witte hoofdrijen)
+- **Detailrij-achtergrond in modus E**: `#F5F8FA`
+- **Kolomheaders-rij achtergrond in modus E**: `#EFF6F7`
 
 ### Alert-iconen (zijbalk)
 - **Alerts / Waarschuwingen** (waarschuwingsdriehoek): `#E69500` (oranje)
 - **Allergieën / intoleranties** (hart met streep door): `#E53E3E` (rood)
 
 ### Bron-kolom — monogram-cirkels
-Bron wordt **niet als badge of tekst** weergegeven, maar als gekleurde cirkel met afkorting van de bronnaam (28×28px, border-radius 50%, witte tekst, font-weight 700, font-size 11px).
+Bron wordt **niet als badge of tekst** weergegeven, maar als gekleurde cirkel met afkorting van de bronnaam. In modus E is deze 32×32px, met border-radius 50%, witte tekst, font-weight 700 en font-size 12px. De afkorting bestaat uit maximaal twee hoofdletters uit de bronnaam, of de eerste twee tekens als er geen hoofdletters zijn.
 
 | Bron      | Cirkelkleur | Tekst        |
 |-----------|-------------|--------------|
-| EPS       | `#4A5568`   | `EPS`        |
+| EPS       | `#4A5568`   | `EP`         |
 | Nictiz    | `#0E7490`   | `N`          |
 | Epic      | `#C2410C`   | `E`          |
 | Chipsoft  | `#1565C0`   | `CS`         |
 | Nexus     | `#6D28D9`   | `N`          |
-| CGM       | `#1565C0`   | `CGM`        |
-| LSP       | `#0F766E`   | `LSP`        |
+| CGM       | `#1565C0`   | `CG`         |
+| LSP       | `#0F766E`   | `LS`         |
+| NedapONS  | `#1565C0`   | `NO`         |
 
-Voor onbekende bronnen: kies een passende kleurvariant uit dit palet.
+Voor onbekende bronnen gebruikt modus E `#4A5568`.
 
 ### Status-pills (Actueel/Niet actueel)
 - **Actueel**: achtergrond `#E0F7E9`, tekst `#1F7A3A`, border `#A6E0B8`, border-radius 14px
@@ -90,54 +92,78 @@ Gebruikerschip rechtsboven heeft dezelfde stijl met badge-icoon.
 - Border-radius: 8px
 - Box-shadow: 0 1px 3px rgba(0,0,0,0.04)
 - `overflow: hidden`
+- In modus E scrollt de tabel binnen `.panel-body` (maximaal `calc(100vh - 250px)`);
+  de paneeltitel blijft buiten dit scrollgebied staan en de kolomheaders zijn sticky.
 
 ### Paneelheader
 - Achtergrond: **uniform `#EFF6F7`** (géén gradient naar wit)
 - Padding: 16px 20px
 - Onderrand: 1px solid `#E2E8F0`
 - Links: paneel-icoon (40×40px, border-radius 10px, border 2px solid `#00838F`, witte achtergrond, icoon in teal `#00838F`, grootte 22px) + paneeltitel-h2
-- Rechts: **ONLY** refresh-icoon (circulaire pijl), outline-style, kleur `#00838F`, 20px
-  - Info-icoon is VERWIJDERD
+- Rechts: alleen het refresh-icoon (circulaire pijl), outline-style, kleur `#00838F`, 20px.
 
 ## Componenten
 
-### Kolomheaders (PrimeVue DataTable)
+### Kolomheaders
 - Achtergrond: `#EFF6F7` (mintgroen — consistent met paneelheader)
 - Tekst: teal `#00838F`, 13px, font-weight 600
 - Padding: 14px 16px
 - Bovenrand: 1px solid `#D6E5E7`
 - Onderrand: 2px solid `#D6E5E7`
-- Structuur per header (inline-flex, `gap: 8px`):
+- In modus E staat bij iedere zichtbare datakolom:
   1. Kolomnaam
-  2. **Sort-pair** (inline-flex, `gap: 2px`):
+  2. **Sort-pair**:
      - `↑` (pijl-omhoog, grijs `#999`, font-size 12px)
      - `↓` (pijl-omlaag, grijs `#999`, font-size 12px)
-  3. **Filter-icon** (trechter `⧩`, grijs `#999`, font-size 12px, `margin-left: 4px`)
+  3. **Filteraanduiding**: momenteel het teken `⧩` in grijs `#999`, font-size 12px.
+     Dit teken is geen trechter; een echte trechter is de gewenste vorm.
 
-**BELANGRIJK**: Sort- en filter-iconen verschijnen NIET in de eerste kolom (expand/collapse chevron).
+De optionele icoonkolom krijgt geen sorteer- of filteraanduiding. De eerste
+datakolom krijgt deze wel, ook wanneer de icoonkolom ontbreekt. Kolommen waarvan
+de volledige naam tussen haakjes staat, worden niet getoond.
 
-### Expand/collapse chevron (linkerkolom rijen)
-- **Ingeklapt** (geen details): chevron-right `▶` (13×13px, stroke-width 1.5)
-- **Uitgeklapt** (met details): chevron-down `▼` (13×13px, stroke-width 1.5)
-- Kleur: `#00838F`
-- Stijl: centered, monospace alignment
+### Detailicoon en detailrijen in modus E
+- Een hoofdrij toont alleen een icoon als de direct volgende detailrij zichtbare
+  inhoud bevat. Lege detailrijen worden niet weergegeven.
+- De gegenereerde mockup toont inhoudelijke details standaard open met `▼`
+  (gecentreerd, kleur `#00838F`, 14px). Rijen zonder details hebben een lege
+  icooncel; de generator biedt momenteel geen interactieve in- of uitklapfunctie.
+- De icoonkolom ontbreekt helemaal als geen enkele rij inhoudelijke details heeft.
+- Hoofd- en detailrij blijven bij elkaar. De detailrij beslaat alle zichtbare
+  kolommen, heeft achtergrond `#F5F8FA` en behoudt `<b>`-opmaak en `<br/>`-regels
+  uit het wireframe.
+- Correspondentie heeft altijd een andere weergave: geen icoonkolom of inline
+  detailrij, maar een detailpaneel rechts.
 
 ### Tabelrijen
 - Achtergrond: `#FFFFFF` (geen zebra-striping)
 - Padding cell: 14px 16px
 - Onderrand: 1px solid `#E8ECF0` (subtiel, iets lichter)
 - Vertical-align: middle
-- **Detail-rijen** (met gekleurde achtergrond): 
-  - Achtergrond: `#F5F8FA` (licht blauw)
-  - Padding: 16px 20px
-  - Newlines in content worden behouden als `<br/>` tags
+- **Detailrijen in modus E**: achtergrond `#F5F8FA`; binnenruimte 16px 20px;
+  vetgedrukte tekst en `<br/>`-regelafbrekingen uit de wireframe blijven behouden.
+
+### Correspondentie: detailpaneel rechts (modus E)
+- Alleen `ViewDefinition-Correspondentie-ui.md` gebruikt dit paneel naast de tabel.
+  Het paneel is minimaal 200px breed en neemt anders 30% van de beschikbare breedte.
+- Alleen de details van de geselecteerde rij worden getoond; de eerste rij is
+  standaard geselecteerd. Selectie met de muis of Enter/spatie werkt de inhoud
+  en de titel bij. De geselecteerde rij heeft achtergrond `#ECF6F7`.
+- De titel bestaat uit **bron · datum · beschrijving** van de geselecteerde rij.
+  Lege velden worden weggelaten; als alle velden leeg zijn, is de titel `Details`.
+  Als de geselecteerde rij geen details heeft, toont het paneel een melding.
+- Tabel en detailpaneel scrollen afzonderlijk; de paneeltitel en kolomheaders
+  blijven tijdens het scrollen van de tabel zichtbaar.
 
 ### LEGE CELLEN — KRITISCH
 - **GEEN liggend streepje (—) of placeholder bij ontbrekende waarden.**
 - Lege cel = leeg `<td></td>` — niets weergeven.
 - Géén `class="muted"` met dash, géén "N.v.t.", géén "-".
 
-### Sub-rijen (Lateraliteit, extra info onder hoofdrij)
+### Sub-rijen in andere mockupmodi (Lateraliteit, extra info onder hoofdrij)
+Deze richtlijnen beschrijven niet de detailrijen die de ViewDefinition-converter
+in modus E genereert; zie hiervoor **Detailicoon en detailrijen in modus E**.
+
 Bij een uitgeklapte hoofdrij komen één of meer sub-rijen `<tr class="sub">`:
 - Achtergrond: `#FFFFFF` (wit — net als de hoofdrijen, GEEN aparte kleur)
 - Eerste cel leeg (uitgelijnd onder de chevron)
@@ -242,4 +268,5 @@ Handvat boven, kruis (+) in het midden. Gebruik exact deze SVG:
 12. ❌ Schermnaam met onnodige hoofdletters ("Hulpmiddelen") → ✅ "hulpmiddelen" lowercase (alleen eerste woord met hoofdletter)
 13. ❌ Border-bottom op elke sub-rij waardoor lijntjes in het uitklapveld verschijnen → ✅ Alleen op `sub-last` met `!important` om generieke td-border te overrulen
 14. ❌ Sub-rij "Bron: X" tonen als "Bron <icoon>" → ✅ Alleen het monogram-cirkeltje (de cirkelkleur geeft al aan dat het bron is)
-15. ❌ Kolomheaders-rij wit + sub-rijen mintkleurig → ✅ Andersom: kolomheaders lichtgrijs `#F1F5F9`, hoofdrijen + sub-rijen beide wit `#FFFFFF` (visuele scheiding via padding en `sub-last` border)
+15. ❌ In modus E lege details als inhoudelijke detailrij tonen → ✅ Lege details en, indien geen enkele rij details heeft, de icoonkolom weglaten.
+16. ❌ In modus E correspondentie-details onder iedere rij plaatsen → ✅ Alleen details van de geselecteerde rij in het rechterpaneel tonen.

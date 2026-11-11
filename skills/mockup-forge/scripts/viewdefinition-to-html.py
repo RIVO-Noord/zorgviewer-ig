@@ -18,6 +18,7 @@ import re
 import json
 import argparse
 from pathlib import Path
+from html import escape, unescape
 from html.parser import HTMLParser
 
 
@@ -159,10 +160,20 @@ def has_content(row, visible_indices):
         # Skip verborgen kolommen
         if cell_idx not in visible_indices:
             continue
-        content = cell['content'].strip()
+        content = unescape(re.sub(r'<[^>]+>', '', cell['content'])).strip()
         if content:
             return True
     return False
+
+
+def following_detail_row(rows, index, num_header_cols):
+    """Geef alleen een echte detailrij terug, niet een volgende volledige hoofdrij."""
+    if index + 1 >= len(rows):
+        return None
+    row = rows[index + 1]
+    if is_detail_row(row, num_header_cols) and not is_main_row(row, num_header_cols):
+        return row
+    return None
 
 
 def get_detail_content(row, visible_indices):
@@ -183,11 +194,27 @@ def get_detail_content(row, visible_indices):
     return '<br/>'.join(detail_content)
 
 
-def create_html_mockup(title, tables, icon='📄'):
+def get_correspondence_detail_title(headers, row):
+    """Stel de titel samen uit de bron, datum en beschrijving van de rij."""
+    header_indices = {
+        header['content'].strip().casefold(): i for i, header in enumerate(headers)
+    }
+    parts = []
+    for name in ('bron', 'datum', 'beschrijving'):
+        index = header_indices.get(name)
+        if index is not None and index < len(row):
+            content = re.sub(r'</?b\s*>|<br\s*/?>', ' ', row[index]['content'], flags=re.I)
+            content = ' '.join(content.split())
+            if content:
+                parts.append(content)
+    return ' · '.join(parts) or 'Details'
+
+
+def create_html_mockup(title, tables, icon='📄', side_details=False):
     """Genereert HTML mockup van ViewDefinition tabel."""
     
     if not tables or len(tables) == 0:
-        return "<p>Geen gegevens gevonden</p>"
+        return "<p>Geen gegevens gevonden</p>", None, None
     
     table = tables[0]  # Eerste tabel gebruiken
     headers = table.get('headers', [])
@@ -195,15 +222,24 @@ def create_html_mockup(title, tables, icon='📄'):
     
     # Filter verborgen kolommen (tussen haakjes)
     visible_indices = get_visible_column_indices(headers)
-    visible_headers = [headers[i] for i in visible_indices]
+    num_header_cols = len(headers)
+    has_any_details = any(
+        has_content(detail, visible_indices)
+        for i, row in enumerate(rows)
+        if is_main_row(row, num_header_cols)
+        for detail in [following_detail_row(rows, i, num_header_cols)]
+        if detail is not None
+    )
+    show_icon_column = not side_details and has_any_details
+    displayed_indices = [i for i in visible_indices if i != 0 or show_icon_column]
     
     # HTML tabel genereren
     html_table = '<table>\n<thead>\n<tr>\n'
     
-    for idx, header_cell in enumerate(visible_headers):
-        header_text = header_cell["content"]
+    for header_idx in displayed_indices:
+        header_text = headers[header_idx]["content"]
         # Skip sort/filter icons voor de eerste kolom (expand/collapse icon)
-        if idx == 0:
+        if header_idx == 0:
             html_table += f'  <th>{header_text}</th>\n'
         else:
             # Add sort and filter icons to each header (except first column)
@@ -214,60 +250,71 @@ def create_html_mockup(title, tables, icon='📄'):
     html_table += '</tr>\n</thead>\n<tbody>\n'
     
     # Rows verwerken - groepeer hoofd- en detailrijen
-    num_header_cols = len(headers)
     i = 0
+    first_detail = None
+    first_detail_title = None
+    first_row = True
     while i < len(rows):
         row = rows[i]
         
         # Check of dit een hoofdrij is
         if is_main_row(row, num_header_cols):
             # Check of volgende rij een detail row is met content
-            has_detail = False
-            detail_html = None
-            if i + 1 < len(rows) and is_detail_row(rows[i + 1], num_header_cols):
-                next_row = rows[i + 1]
-                if has_content(next_row, visible_indices):
-                    has_detail = True
-                    detail_html = get_detail_content(next_row, visible_indices)
+            next_row = following_detail_row(rows, i, num_header_cols)
+            has_detail = next_row is not None and has_content(next_row, visible_indices)
+            detail_html = get_detail_content(next_row, visible_indices) if has_detail else None
             
             # Render hoofdrij
-            html_table += '<tr>\n'
+            if side_details:
+                selected = 'true' if first_row else 'false'
+                detail_title = get_correspondence_detail_title(headers, row)
+                html_table += (
+                    f'<tr class="selectable-row" tabindex="0" aria-selected="{selected}"'
+                    f' data-detail-title="{escape(detail_title, quote=True)}">\n'
+                )
+                if first_row:
+                    first_detail = detail_html
+                    first_detail_title = detail_title
+                first_row = False
+            else:
+                html_table += '<tr>\n'
             for j, header_idx in enumerate(visible_indices):
+                if header_idx == 0 and not show_icon_column:
+                    continue
                 if header_idx < len(row):
                     cell = row[header_idx]
                     content = cell['content'].strip()
+                    detail_template = (
+                        f'<template>{detail_html or ""}</template>'
+                        if side_details and header_idx == displayed_indices[0] else ''
+                    )
                     
                     # Speciale behandeling voor eerste kolom (expandable icon)
                     if header_idx == 0:
-                        # Toon ▼ als er details zijn, anders >
                         if has_detail:
-                            # Open/expand icon (▼ pointing down)
                             html_table += f'  <td style="text-align: center; color: #00838F; font-size: 14px;">▼</td>\n'
                         else:
-                            # Closed icon (▶ pointing right)
-                            html_table += f'  <td style="text-align: center; color: #00838F; font-size: 14px;">▶</td>\n'
+                            html_table += '  <td></td>\n'
                     # Bron monogram voor kolom met index 1
                     elif j == 1 and content and not content.startswith('('):
                         bron_color = get_bron_color(content)
                         bron_abbrev = ''.join([c for c in content if c.isupper()])[:2]
                         if not bron_abbrev:
                             bron_abbrev = content[:2].upper()
-                        html_table += f'  <td><div class="bron-circle" style="background: {bron_color};">{bron_abbrev}</div></td>\n'
+                        html_table += f'  <td>{detail_template}<div class="bron-circle" style="background: {bron_color};">{bron_abbrev}</div></td>\n'
                     else:
-                        html_table += f'  <td>{content}</td>\n'
+                        html_table += f'  <td>{detail_template}{content}</td>\n'
             html_table += '</tr>\n'
             
             # Render detail row ALLEEN als het content heeft
-            if has_detail and detail_html:
-                num_visible_cols = len(visible_indices)
+            if not side_details and has_detail and detail_html:
+                num_visible_cols = len(displayed_indices)
                 html_table += '<tr data-detail-row="true">\n'
                 html_table += f'  <td colspan="{num_visible_cols}"><div style="padding: 16px 20px; background: #F5F8FA;">'
                 html_table += detail_html
                 html_table += '</div></td>\n'
                 html_table += '</tr>\n'
-                i += 2  # Skip detail row dat we net verwerkt hebben
-            else:
-                i += 1  # Alleen hoofd-rij, geen detail
+            i += 2 if next_row is not None else 1
         elif is_detail_row(row, num_header_cols):
             # Dit is een verwaasde detail row zonder hoofd-rij (skip)
             i += 1
@@ -276,13 +323,52 @@ def create_html_mockup(title, tables, icon='📄'):
     
     html_table += '</tbody>\n</table>'
     
-    return html_table
+    return html_table, first_detail, first_detail_title
 
 
-def generate_full_mockup_html(title, tables, icon='📄'):
+def generate_full_mockup_html(title, tables, icon='📄', side_details=False):
     """Genereert volledige Zorgviewer mockup HTML."""
     
-    table_html = create_html_mockup(title, tables, icon)
+    table_html, first_detail, first_detail_title = create_html_mockup(title, tables, icon, side_details)
+    if side_details:
+        detail_content = first_detail or 'Geen details beschikbaar voor deze regel.'
+        panel_content = f"""
+                <div class="correspondence-layout">
+                    <div class="panel-body">{table_html}</div>
+                    <aside class="correspondence-details" aria-labelledby="detail-title">
+                        <h2 id="detail-title">{escape(first_detail_title or 'Details')}</h2>
+                        <div id="detail-content" aria-live="polite">{detail_content}</div>
+                    </aside>
+                </div>"""
+        selection_script = """
+    <script>
+        const detailContent = document.getElementById('detail-content');
+        const detailTitle = document.getElementById('detail-title');
+        const rows = document.querySelectorAll('.selectable-row');
+        function selectRow(row) {
+            rows.forEach(item => item.setAttribute('aria-selected', String(item === row)));
+            detailTitle.textContent = row.dataset.detailTitle;
+            const template = row.querySelector('template');
+            detailContent.replaceChildren();
+            if (template && template.content.textContent.trim()) {
+                detailContent.append(template.content.cloneNode(true));
+            } else {
+                detailContent.textContent = 'Geen details beschikbaar voor deze regel.';
+            }
+        }
+        rows.forEach(row => {
+            row.addEventListener('click', () => selectRow(row));
+            row.addEventListener('keydown', event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    selectRow(row);
+                }
+            });
+        });
+    </script>"""
+    else:
+        panel_content = f'<div class="panel-body">{table_html}</div>'
+        selection_script = ''
     
     html_content = f"""<!DOCTYPE html>
 <html lang="nl">
@@ -514,6 +600,35 @@ def generate_full_mockup_html(title, tables, icon='📄'):
             overflow-y: auto;
             overflow-x: auto;
         }}
+
+        .correspondence-layout {{
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(200px, 30%);
+        }}
+
+        .correspondence-details {{
+            padding: 20px;
+            border-left: 1px solid #E2E8F0;
+            max-height: calc(100vh - 250px);
+            overflow-y: auto;
+            overflow-wrap: anywhere;
+        }}
+
+        .correspondence-details h2 {{
+            margin-bottom: 16px;
+            font-size: 15px;
+            color: #00838F;
+        }}
+
+        .correspondence-details #detail-content {{
+            font-size: 14px;
+            line-height: 1.5;
+        }}
+
+        .selectable-row {{ cursor: pointer; }}
+        .selectable-row[aria-selected="true"],
+        .selectable-row[aria-selected="true"]:hover {{ background: #ECF6F7; }}
+        .selectable-row:focus-visible {{ outline: 2px solid #00838F; outline-offset: -2px; }}
         
         /* Table */
         table {{
@@ -686,12 +801,11 @@ def generate_full_mockup_html(title, tables, icon='📄'):
                     </div>
                 </div>
                 
-                <div class="panel-body">
-                    {table_html}
-                </div>
+                {panel_content}
             </div>
         </div>
     </div>
+{selection_script}
 </body>
 </html>"""
     
@@ -727,7 +841,8 @@ def main():
         html_content = f"<p>Geen gegevens gevonden in {input_path}</p>"
     else:
         # Genereer HTML mockup
-        html_content = generate_full_mockup_html(title, tables)
+        side_details = input_path.name == 'ViewDefinition-Correspondentie-ui.md'
+        html_content = generate_full_mockup_html(title, tables, side_details=side_details)
     
     # Schrijf HTML
     output_path.parent.mkdir(parents=True, exist_ok=True)

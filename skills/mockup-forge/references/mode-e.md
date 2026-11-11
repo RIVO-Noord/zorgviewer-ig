@@ -64,8 +64,15 @@ Het script:
 
 ### Data-transformatie
 - **Bron-kolom**: Omgezet naar monogram-cirkels (bijv. "NedapONS" → "NO" cirkel met #1565C0)
-- **Expandable rijen**: Gedetecteerd op basis van eerste kolom (`▼`, `▲`, of leeg)
-- **Detail-rows**: Verslagen/extra info onder expandable rijen ingebed met grijze achtergrond
+- **Expandable rijen**: Alleen hoofdrijen met inhoudelijke details tonen een
+  uitklapicoon. Als geen enkele rij details heeft, wordt de icoonkolom weggelaten.
+- **Detail-rows**: Verslagen/extra info onder expandable rijen ingebed met grijze achtergrond.
+  Alleen voor `ViewDefinition-Correspondentie-ui.md` staan de details rechts naast de
+  tabel en ontbreekt de expandkolom. De paneeltitel bevat de bron, datum en beschrijving
+  van de geselecteerde rij; lege waarden worden weggelaten. De eerste rij is
+  geselecteerd; selecteer een andere rij met de muis of met Enter/spatie om de
+  bijbehorende details te zien. Een rij zonder details
+  toont een melding. Het detailpaneel en de tabel scrollen afzonderlijk.
 
 ### HTML generatie
 Genereert een volledige `<html>` met:
