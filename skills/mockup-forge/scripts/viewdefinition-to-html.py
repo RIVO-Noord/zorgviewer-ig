@@ -192,8 +192,16 @@ def create_html_mockup(title, tables, icon='📄'):
     # HTML tabel genereren
     html_table = '<table>\n<thead>\n<tr>\n'
     
-    for header_cell in visible_headers:
-        html_table += f'  <th>{header_cell["content"]}</th>\n'
+    for idx, header_cell in enumerate(visible_headers):
+        header_text = header_cell["content"]
+        # Skip sort/filter icons voor de eerste kolom (expand/collapse icon)
+        if idx == 0:
+            html_table += f'  <th>{header_text}</th>\n'
+        else:
+            # Add sort and filter icons to each header (except first column)
+            # Using proper funnel icon (inverted triangle) for filter
+            header_html = f'{header_text} <span style="margin-left: 4px; color: #999; font-size: 12px;">↑↓ ⧩</span>'
+            html_table += f'  <th>{header_html}</th>\n'
     
     html_table += '</tr>\n</thead>\n<tbody>\n'
     
