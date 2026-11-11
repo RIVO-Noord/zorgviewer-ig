@@ -12,26 +12,6 @@
 <th>Toelichting</th>
 </tr>
 <tr><td></td>
-<td>EPS</td>
-<td></td>
-<td>Walker (physical object)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td></td>
-<td>EPS</td>
-<td></td>
-<td>Home nebulizer (physical object)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=7>
-</td></tr>
-<tr><td></td>
 <td>Nictiz</td>
 <td>1-9-2021</td>
 <td>Cardiac Stent - Model X123</td>
@@ -89,6 +69,26 @@
 <td></td>
 <td></td>
 <td>Presbyacusis. Apparaat niet zichtbaar (diep in de gehooringang)</td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td></td>
+<td>EPS</td>
+<td></td>
+<td>Walker (physical object)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=7>
+</td></tr>
+<tr><td></td>
+<td>EPS</td>
+<td></td>
+<td>Home nebulizer (physical object)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr><tr><td></td><td colspan=7>
 </td></tr>
 <tr><td></td>

@@ -364,10 +364,12 @@ function doExampleRows(allExtractedRows, md_ui) {
                 const periodB = b[sortColumnIndex].value.split(' - ');
                 bKey = periodB[0]; // Use start date for sorting
             }
-            const dateA = new Date(aKey);
-            const dateB = new Date(bKey);
+            let timeA = new Date(aKey).getTime();
+            let timeB = new Date(bKey).getTime();
+            if (isNaN(timeA)) timeA = -Infinity;
+            if (isNaN(timeB)) timeB = -Infinity;
             // Sort in descending order (newest first)
-            return dateB.getTime() - dateA.getTime();
+            return timeB - timeA;
         });
     }
 

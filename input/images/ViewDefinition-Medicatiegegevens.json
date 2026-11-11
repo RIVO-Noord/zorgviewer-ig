@@ -21,26 +21,14 @@
                             ]
                         },
                         {
-                            "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.start",
-                            "name": "Start",
+                            "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
+                            "name": "Datum",
                             "description": "",
-                            "type": "dateTime",
+                            "type": "Period:date",
                             "tag": [
                                 {
                                     "name": "Zib element",
-                                    "value": "Gebruiksperiode::TijdsInterval/startDatumTijd"
-                                }
-                            ]
-                        },
-                        {
-                            "path": "extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.end",
-                            "name": "Eind",
-                            "description": "",
-                            "type": "dateTime",
-                            "tag": [
-                                {
-                                    "name": "Zib element",
-                                    "value": "Gebruiksperiode::TijdsInterval/eindDatumTijd"
+                                    "value": "Gebruiksperiode::TijdsInterval/startDatumTijd - eindDatumTijd"
                                 }
                             ]
                         },
@@ -147,26 +135,14 @@
                             ]
                         },
                         {
-                            "path": "effectivePeriod.start",
-                            "name": "Start",
+                            "path": "effectivePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
+                            "name": "Datum",
                             "description": "",
-                            "type": "dateTime",
+                            "type": "Period:date",
                             "tag": [
                                 {
                                     "name": "Zib element",
-                                    "value": "Gebruiksperiode::TijdsInterval/startDatumTijd"
-                                }
-                            ]
-                        },
-                        {
-                            "path": "effectivePeriod.end",
-                            "name": "Eind",
-                            "description": "",
-                            "type": "dateTime",
-                            "tag": [
-                                {
-                                    "name": "Zib element",
-                                    "value": "Gebruiksperiode::TijdsInterval/eindDatumTijd"
+                                    "value": "Gebruiksperiode::TijdsInterval/startDatumTijd - eindDatumTijd"
                                 }
                             ]
                         },
@@ -266,26 +242,14 @@
                             ]
                         },
                         {
-                            "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period').valuePeriod.start",
-                            "name": "Start",
+                            "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period').valuePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))",
+                            "name": "Datum",
                             "description": "",
-                            "type": "dateTime",
+                            "type": "Period:date",
                             "tag": [
                                 {
                                     "name": "Zib element",
-                                    "value": "Gebruiksperiode::TijdsInterval/startDatumTijd"
-                                }
-                            ]
-                        },
-                        {
-                            "path": "extension('http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period').valuePeriod.end",
-                            "name": "Eind",
-                            "description": "",
-                            "type": "dateTime",
-                            "tag": [
-                                {
-                                    "name": "Zib element",
-                                    "value": "Gebruiksperiode::TijdsInterval/eindDatumTijd"
+                                    "value": "Gebruiksperiode::TijdsInterval/startDatumTijd - eindDatumTijd"
                                 }
                             ]
                         },

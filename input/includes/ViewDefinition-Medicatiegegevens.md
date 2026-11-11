@@ -17,17 +17,10 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
-<td>Start</td>
-<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.start</samp></td>
-<td><code>dateTime</code></td>
-<td>Gebruiksperiode::TijdsInterval/startDatumTijd</td>
-<td></td>
-</tr>
-<tr>
-<td>Eind</td>
-<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.end</samp></td>
-<td><code>dateTime</code></td>
-<td>Gebruiksperiode::TijdsInterval/eindDatumTijd</td>
+<td>Datum</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse').valuePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))</samp></td>
+<td><code>Period:date</code></td>
+<td>Gebruiksperiode::TijdsInterval/startDatumTijd - eindDatumTijd</td>
 <td></td>
 </tr>
 <tr>
@@ -96,17 +89,10 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
-<td>Start</td>
-<td><samp>effectivePeriod.start</samp></td>
-<td><code>dateTime</code></td>
-<td>Gebruiksperiode::TijdsInterval/startDatumTijd</td>
-<td></td>
-</tr>
-<tr>
-<td>Eind</td>
-<td><samp>effectivePeriod.end</samp></td>
-<td><code>dateTime</code></td>
-<td>Gebruiksperiode::TijdsInterval/eindDatumTijd</td>
+<td>Datum</td>
+<td><samp>effectivePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))</samp></td>
+<td><code>Period:date</code></td>
+<td>Gebruiksperiode::TijdsInterval/startDatumTijd - eindDatumTijd</td>
 <td></td>
 </tr>
 <tr>
@@ -175,17 +161,10 @@
 <td>Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code></td>
 </tr>
 <tr>
-<td>Start</td>
-<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period').valuePeriod.start</samp></td>
-<td><code>dateTime</code></td>
-<td>Gebruiksperiode::TijdsInterval/startDatumTijd</td>
-<td></td>
-</tr>
-<tr>
-<td>Eind</td>
-<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period').valuePeriod.end</samp></td>
-<td><code>dateTime</code></td>
-<td>Gebruiksperiode::TijdsInterval/eindDatumTijd</td>
+<td>Datum</td>
+<td><samp>extension('http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval.Period').valuePeriod.select(iif(start.exists() and end.exists(), start.toString() + ' - ' + end.toString(), start | end))</samp></td>
+<td><code>Period:date</code></td>
+<td>Gebruiksperiode::TijdsInterval/startDatumTijd - eindDatumTijd</td>
 <td></td>
 </tr>
 <tr>

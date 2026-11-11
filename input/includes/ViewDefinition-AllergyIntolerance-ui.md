@@ -142,6 +142,34 @@
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 <tr><td></td>
+<td>Nexus</td>
+<td>8-11-2008</td>
+<td>Bijengif</td>
+<td></td>
+<td></td>
+<td>high</td>
+<td>severe</td>
+<td>Misselijk en braken</td>
+<td>active</td>
+<td>Actief</td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
+<td>CGM</td>
+<td>8-11-2008</td>
+<td>INSECTENALLERGEEN</td>
+<td>misselijk en braken</td>
+<td>medication</td>
+<td></td>
+<td>severe</td>
+<td>Overig</td>
+<td>active</td>
+<td>Actief</td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
 <td>CGM</td>
 <td>2-6-1998</td>
 <td>PENICILLINES</td>
@@ -152,6 +180,34 @@
 <td>Overig</td>
 <td>inactive</td>
 <td>Niet meer aanwezig</td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
+<td>EPS</td>
+<td>9-8-1977</td>
+<td>Allergy to substance</td>
+<td></td>
+<td>environment</td>
+<td></td>
+<td></td>
+<td></td>
+<td>active</td>
+<td></td>
+<td>confirmed</td>
+</tr><tr><td></td><td colspan=11>
+</td></tr>
+<tr><td></td>
+<td>EPS</td>
+<td>9-8-1977</td>
+<td>Shellfish</td>
+<td></td>
+<td>food</td>
+<td></td>
+<td>severe</td>
+<td>Anaphylaxis (disorder)</td>
+<td>active</td>
+<td></td>
 <td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
@@ -195,62 +251,6 @@
 <td>resolved</td>
 <td>Niet meer aanwezig</td>
 <td>unconfirmed</td>
-</tr><tr><td></td><td colspan=11>
-</td></tr>
-<tr><td></td>
-<td>Nexus</td>
-<td>8-11-2008</td>
-<td>Bijengif</td>
-<td></td>
-<td></td>
-<td>high</td>
-<td>severe</td>
-<td>Misselijk en braken</td>
-<td>active</td>
-<td>Actief</td>
-<td>confirmed</td>
-</tr><tr><td></td><td colspan=11>
-</td></tr>
-<tr><td></td>
-<td>CGM</td>
-<td>8-11-2008</td>
-<td>INSECTENALLERGEEN</td>
-<td>misselijk en braken</td>
-<td>medication</td>
-<td></td>
-<td>severe</td>
-<td>Overig</td>
-<td>active</td>
-<td>Actief</td>
-<td>confirmed</td>
-</tr><tr><td></td><td colspan=11>
-</td></tr>
-<tr><td></td>
-<td>EPS</td>
-<td>9-8-1977</td>
-<td>Allergy to substance</td>
-<td></td>
-<td>environment</td>
-<td></td>
-<td></td>
-<td></td>
-<td>active</td>
-<td></td>
-<td>confirmed</td>
-</tr><tr><td></td><td colspan=11>
-</td></tr>
-<tr><td></td>
-<td>EPS</td>
-<td>9-8-1977</td>
-<td>Shellfish</td>
-<td></td>
-<td>food</td>
-<td></td>
-<td>severe</td>
-<td>Anaphylaxis (disorder)</td>
-<td>active</td>
-<td></td>
-<td>confirmed</td>
 </tr><tr><td></td><td colspan=11>
 </td></tr>
 </tbody>

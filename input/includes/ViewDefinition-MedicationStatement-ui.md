@@ -11,6 +11,16 @@
 <th>Toedieningsweg</th>
 </tr>
 <tr><td>&#9660;</td>
+<td>MP9</td>
+<td>11-11-2022</td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=6>
+<b>Registratiedatum</b><br/>26-11-2022<br/>
+</td></tr>
+<tr><td>&#9660;</td>
 <td>EPS</td>
 <td></td>
 <td></td>
@@ -28,16 +38,6 @@
 <td>Oraal</td>
 </tr><tr><td></td><td colspan=6>
 <b>Registratiedatum</b><br/>15-3-2018<br/>
-</td></tr>
-<tr><td>&#9660;</td>
-<td>MP9</td>
-<td>11-11-2022</td>
-<td></td>
-<td>IBUPROFEN TABLET 600MG</td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=6>
-<b>Registratiedatum</b><br/>26-11-2022<br/>
 </td></tr>
 </tbody>
 </table>

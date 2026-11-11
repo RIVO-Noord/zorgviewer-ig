@@ -9,34 +9,6 @@
 <th>Toelichting</th>
 </tr>
 <tr><td></td>
-<td>EPS</td>
-<td></td>
-<td>Influenza virus antigen only vaccine product</td>
-<td></td>
-</tr><tr><td></td><td colspan=4>
-</td></tr>
-<tr><td></td>
-<td>EPS</td>
-<td></td>
-<td>SARS-CoV-2 mRNA vaccine</td>
-<td></td>
-</tr><tr><td></td><td colspan=4>
-</td></tr>
-<tr><td></td>
-<td>EPS</td>
-<td></td>
-<td>Hepatitis A virus antigen only vaccine product</td>
-<td></td>
-</tr><tr><td></td><td colspan=4>
-</td></tr>
-<tr><td></td>
-<td>EPS</td>
-<td></td>
-<td>Clostridium tetani toxoid antigen adsorbed only vaccine product</td>
-<td></td>
-</tr><tr><td></td><td colspan=4>
-</td></tr>
-<tr><td></td>
 <td>CGM</td>
 <td>10-3-2026</td>
 <td>influenzavaccin</td>
@@ -76,6 +48,34 @@
 <td>5-3-1999</td>
 <td>hepatitis-a-vaccin</td>
 <td>Bezoek aan Guatemala.</td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td></td>
+<td>EPS</td>
+<td></td>
+<td>Influenza virus antigen only vaccine product</td>
+<td></td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td></td>
+<td>EPS</td>
+<td></td>
+<td>SARS-CoV-2 mRNA vaccine</td>
+<td></td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td></td>
+<td>EPS</td>
+<td></td>
+<td>Hepatitis A virus antigen only vaccine product</td>
+<td></td>
+</tr><tr><td></td><td colspan=4>
+</td></tr>
+<tr><td></td>
+<td>EPS</td>
+<td></td>
+<td>Clostridium tetani toxoid antigen adsorbed only vaccine product</td>
+<td></td>
 </tr><tr><td></td><td colspan=4>
 </td></tr>
 <tr><td></td>
