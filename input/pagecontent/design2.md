@@ -4,10 +4,6 @@
 Deze pagina beschrijft, voor Nexus en Nedap ONS, de interacties tussen de bouwblokken voor het opstarten van de zorgviewer en het ontsluiten 
 </div>
 
-### Actors
-
-Scope MVP2024 (MVP3) is Nexus (Treant, OZG), Nedap.
-
 ### Sequence Diagrams
 
 ### Opstarten zorgviewer: Nexus

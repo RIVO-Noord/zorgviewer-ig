@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>Medicatie Gebruik</b>
+<b>Medicatie gebruik</b>
 <table class="grid">
 <tbody>
 <tr><th></th>

@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>Medische Hulpmiddelen</b>
+<b>Medische hulpmiddelen</b>
 <table class="grid">
 <tbody>
 <tr><th></th>

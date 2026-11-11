@@ -35,13 +35,9 @@ Hierna volgt een schema met functionaliteiten per bouwblok.
 {% include Functionaliteiten.svg width="60%" %}
 </div>
 
-### Actors
+### Actoren
 
-Scope MVP2 is Epic (UMCG, MCL), Chipsoft (Antonius Sneek, Tjongerschans, Wilhelmina, Martini, Nij Smellinge), en Topicus VIPlive (bij Dokter Drenthe aangesloten partijen).
-
-### IHE System Actors
-
-Note: Relatie tussen bouwblokken en definities uit [IHE Actors](https://gazelle.ihe.net/GMM/tf/actor/listActors.seam), b.v. de [IHE Mobile Profiles IHE_PCC_Suppl_QEDm](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_QEDm.pdf)
+Note: Relatie tussen bouwblokken en definities uit [IHE System Actors](https://gazelle.ihe.net/GMM/tf/actor/listActors.seam), b.v. de [IHE Mobile Profiles IHE_PCC_Suppl_QEDm](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_QEDm.pdf)
 
 * Authorization Client, Result Aggregator - Zorgviewer bouwblok
 * Authorization Server - Authenticatie bouwblok

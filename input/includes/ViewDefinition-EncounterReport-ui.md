@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>Huisarts SOEP Verslagen</b>
+<b>Huisarts SOEP verslagen</b>
 <table class="grid">
 <tbody>
 <tr><th></th>
