@@ -16,13 +16,13 @@
 
 {% include ViewDefinition-Patient.md %}
 
-### View Definition - Burgelijke Staat
+### View Definition - Burgerlijke Staat
 
-* [ViewDefinition voor Burgelijke Staat](ViewDefinition-BurgelijkeStaat.json)
+* [ViewDefinition voor Burgerlijke Staat](ViewDefinition-BurgerlijkeStaat.json)
 
-{% include ViewDefinition-BurgelijkeStaat-ui.md %}
+{% include ViewDefinition-BurgerlijkeStaat-ui.md %}
 
-{% include ViewDefinition-BurgelijkeStaat.md %}
+{% include ViewDefinition-BurgerlijkeStaat.md %}
 
 ### View Definition - Contactpersonen
 
