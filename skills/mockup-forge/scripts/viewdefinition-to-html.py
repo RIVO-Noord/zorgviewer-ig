@@ -210,7 +210,7 @@ def get_correspondence_detail_title(headers, row):
     return ' · '.join(parts) or 'Details'
 
 
-def create_html_mockup(title, tables, icon='📄', side_details=False):
+def create_html_mockup(title, tables, icon='description', side_details=False):
     """Genereert HTML mockup van ViewDefinition tabel."""
     
     if not tables or len(tables) == 0:
@@ -242,9 +242,13 @@ def create_html_mockup(title, tables, icon='📄', side_details=False):
         if header_idx == 0:
             html_table += f'  <th>{header_text}</th>\n'
         else:
-            # Add sort and filter icons to each header (except first column)
-            # Using proper funnel icon (inverted triangle) for filter
-            header_html = f'{header_text} <span style="margin-left: 4px; color: #999; font-size: 12px;">↑↓ ⧩</span>'
+            header_html = (
+                f'{header_text} <span class="header-icons" aria-hidden="true">'
+                '<span class="material-icons-outlined">arrow_upward</span>'
+                '<span class="material-icons-outlined">arrow_downward</span>'
+                '<span class="material-icons-outlined filter-icon">filter_alt</span>'
+                '</span>'
+            )
             html_table += f'  <th>{header_html}</th>\n'
     
     html_table += '</tr>\n</thead>\n<tbody>\n'
@@ -292,7 +296,7 @@ def create_html_mockup(title, tables, icon='📄', side_details=False):
                     # Speciale behandeling voor eerste kolom (expandable icon)
                     if header_idx == 0:
                         if has_detail:
-                            html_table += f'  <td style="text-align: center; color: #00838F; font-size: 14px;">▼</td>\n'
+                            html_table += '  <td class="detail-icon"><span class="material-icons-outlined" aria-hidden="true">expand_more</span></td>\n'
                         else:
                             html_table += '  <td></td>\n'
                     # Bron monogram voor kolom met index 1
@@ -326,7 +330,7 @@ def create_html_mockup(title, tables, icon='📄', side_details=False):
     return html_table, first_detail, first_detail_title
 
 
-def generate_full_mockup_html(title, tables, icon='📄', side_details=False):
+def generate_full_mockup_html(title, tables, icon='description', side_details=False):
     """Genereert volledige Zorgviewer mockup HTML."""
     
     table_html, first_detail, first_detail_title = create_html_mockup(title, tables, icon, side_details)
@@ -377,6 +381,7 @@ def generate_full_mockup_html(title, tables, icon='📄', side_details=False):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zorgviewer - {title}</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <style>
         *, *::before, *::after {{
             margin: 0;
@@ -393,6 +398,30 @@ def generate_full_mockup_html(title, tables, icon='📄', side_details=False):
             background: #ffffff;
             color: #2D3748;
         }}
+
+        .material-icons-outlined {{
+            font-weight: normal;
+            font-style: normal;
+            font-size: 20px;
+            line-height: 1;
+            display: inline-block;
+            white-space: nowrap;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }}
+
+        .header-icons {{
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+            margin-left: 4px;
+            color: #999;
+        }}
+
+        .header-icons .material-icons-outlined {{ font-size: 14px; }}
+        .header-icons .filter-icon {{ margin-left: 4px; font-size: 16px; }}
+        .detail-icon {{ text-align: center; color: #00838F; }}
         
         /* Topbar */
         .topbar {{
@@ -724,15 +753,15 @@ def generate_full_mockup_html(title, tables, icon='📄', side_details=False):
     <div class="topbar">
         <div class="topbar-left">
             <div class="logo">
-                ⚕️ Zorgviewer
+                <span class="material-icons-outlined" aria-hidden="true">medical_services</span> Zorgviewer
             </div>
             <div class="pills-container">
                 <div class="pill">
-                    <span style="color: #00838F;">👤</span>
+                    <span class="material-icons-outlined pill-icon" aria-hidden="true">person_outline</span>
                     <span>H.P. Hendriks</span>
                 </div>
                 <div class="pill">
-                    <span style="color: #00838F;">📅</span>
+                    <span class="material-icons-outlined pill-icon" aria-hidden="true">calendar_today</span>
                     <span>1-1-1950 (75 jaar)</span>
                 </div>
                 <div class="pill">
@@ -743,7 +772,7 @@ def generate_full_mockup_html(title, tables, icon='📄', side_details=False):
         </div>
         <div class="topbar-right">
             <div class="user-pill">
-                <span style="color: #00838F;">👥</span>
+                <span class="material-icons-outlined pill-icon" aria-hidden="true">badge</span>
                 <span>T.R. Visser</span>
             </div>
         </div>
@@ -757,7 +786,7 @@ def generate_full_mockup_html(title, tables, icon='📄', side_details=False):
                 <div class="sidebar-section">
                     <div class="sidebar-section-title">Overzicht</div>
                     <div class="sidebar-item">
-                        <span style="font-size: 16px;">⏱️</span>
+                        <span class="material-icons-outlined sidebar-icon" aria-hidden="true">timeline</span>
                         <span>Tijdlijn</span>
                     </div>
                 </div>
@@ -765,19 +794,19 @@ def generate_full_mockup_html(title, tables, icon='📄', side_details=False):
                 <div class="sidebar-section">
                     <div class="sidebar-section-title">Gegevens</div>
                     <div class="sidebar-item active">
-                        <span style="font-size: 16px;">📄</span>
+                        <span class="material-icons-outlined sidebar-icon" aria-hidden="true">{escape(icon)}</span>
                         <span>{title}</span>
                     </div>
                     <div class="sidebar-item">
-                        <span style="font-size: 16px;">⚠️</span>
+                        <span class="material-icons-outlined sidebar-icon" aria-hidden="true">assignment</span>
                         <span>Problemen (incl. diagnoses)</span>
                     </div>
                     <div class="sidebar-item">
-                        <span style="font-size: 16px;">✂️</span>
+                        <span class="material-icons-outlined sidebar-icon" aria-hidden="true">healing</span>
                         <span>Verrichtingen</span>
                     </div>
                     <div class="sidebar-item">
-                        <span style="font-size: 16px;">📋</span>
+                        <span class="material-icons-outlined sidebar-icon" aria-hidden="true">fact_check</span>
                         <span>Behandelaanwijzingen</span>
                     </div>
                 </div>
@@ -790,14 +819,11 @@ def generate_full_mockup_html(title, tables, icon='📄', side_details=False):
             <div class="panel" style="max-width: 1280px;">
                 <div class="panel-header">
                     <div class="panel-header-left">
-                        <div class="panel-icon">{icon}</div>
+                        <div class="panel-icon"><span class="material-icons-outlined" aria-hidden="true">{escape(icon)}</span></div>
                         <div class="panel-title">{title}</div>
                     </div>
                     <div class="panel-header-right">
-                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="23 4 23 10 17 10"></polyline>
-                            <path d="M20.49 15a9 9 0 1 1-2-8.83"></path>
-                        </svg>
+                        <span class="material-icons-outlined btn-icon" aria-hidden="true">refresh</span>
                     </div>
                 </div>
                 

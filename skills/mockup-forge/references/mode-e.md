@@ -87,6 +87,9 @@ Genereert een volledige `<html>` met:
 Het script past automatisch toe:
 - **Kleuren**: Teal (#00838F), grijstinten, bron-kleuren
 - **Typografie**: Open Sans, juiste font-sizes
+- **Iconen**: Google Material Icons Outlined voor navigatie, paneel en tabel;
+  het laden van de iconen vereist toegang tot Google Fonts. Sorteren, filteren
+  en verversen zijn visuele aanduidingen in deze mockup.
 - **Components**: 
   - Bron-monogrammen (28×28px cirkels)
   - Pills (patiënt, gebruiker)

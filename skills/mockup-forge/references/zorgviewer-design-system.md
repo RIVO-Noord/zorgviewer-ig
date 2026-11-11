@@ -7,7 +7,8 @@ die is hieronder expliciet aangegeven en niet overal pixel-exact.
 ## Technologie stack
 - **Framework**: Vue 3
 - **Component library**: PrimeVue (DataTable, Column, Button, etc.)
-- **Icon library**: PrimeIcons (pi-arrow-up, pi-arrow-down, pi-filter, pi-refresh, pi-plus, etc.)
+- **Icon library in modus E**: Google Material Icons Outlined, geladen via Google Fonts.
+  De oudere beschrijvingen voor andere modi gebruiken nog PrimeIcons of SVG.
 - **Font**: Google Fonts "Open Sans"
 - **Layout**: CSS Grid + Flexbox
 
@@ -112,11 +113,10 @@ Gebruikerschip rechtsboven heeft dezelfde stijl met badge-icoon.
 - Onderrand: 2px solid `#D6E5E7`
 - In modus E staat bij iedere zichtbare datakolom:
   1. Kolomnaam
-  2. **Sort-pair**:
-     - `↑` (pijl-omhoog, grijs `#999`, font-size 12px)
-     - `↓` (pijl-omlaag, grijs `#999`, font-size 12px)
-  3. **Filteraanduiding**: momenteel het teken `⧩` in grijs `#999`, font-size 12px.
-     Dit teken is geen trechter; een echte trechter is de gewenste vorm.
+  2. **Sort-pair**: Material Icons `arrow_upward` en `arrow_downward`, grijs
+     `#999`, 14px.
+  3. **Filtericoon**: Material Icons `filter_alt` (trechter), grijs `#999`,
+     16px, met `margin-left: 4px`.
 
 De optionele icoonkolom krijgt geen sorteer- of filteraanduiding. De eerste
 datakolom krijgt deze wel, ook wanneer de icoonkolom ontbreekt. Kolommen waarvan
@@ -125,8 +125,8 @@ de volledige naam tussen haakjes staat, worden niet getoond.
 ### Detailicoon en detailrijen in modus E
 - Een hoofdrij toont alleen een icoon als de direct volgende detailrij zichtbare
   inhoud bevat. Lege detailrijen worden niet weergegeven.
-- De gegenereerde mockup toont inhoudelijke details standaard open met `▼`
-  (gecentreerd, kleur `#00838F`, 14px). Rijen zonder details hebben een lege
+- De gegenereerde mockup toont inhoudelijke details standaard open met het
+  Material Icons-icoon `expand_more` (gecentreerd, kleur `#00838F`). Rijen zonder details hebben een lege
   icooncel; de generator biedt momenteel geen interactieve in- of uitklapfunctie.
 - De icoonkolom ontbreekt helemaal als geen enkele rij inhoudelijke details heeft.
 - Hoofd- en detailrij blijven bij elkaar. De detailrij beslaat alle zichtbare
@@ -211,7 +211,15 @@ Bij een uitgeklapte hoofdrij komen één of meer sub-rijen `<tr class="sub">`:
 - Links: "Help & Info" als menu-item met (i)-cirkel-icoon
 - Rechts: collapse-knop in teal `#00838F` met dubbele chevron-left `«` icoon
 
-## Iconenset (zijbalk-iconen, allemaal line-art SVG, kleur `currentColor`, stroke-width 2)
+## Iconenset
+
+In modus E worden Google Material Icons Outlined gebruikt voor de topbar,
+zijbalk, paneelheader en tabel. Voorbeelden: `timeline`, `description`,
+`refresh`, `expand_more` en `filter_alt`. De iconen zijn visueel en de
+sorteer-, filter- en refreshiconen zijn in de mockup niet interactief.
+Het laden van de iconen vereist toegang tot Google Fonts.
+
+De onderstaande SVG-concepten beschrijven de oudere mockupmodi.
 
 | Menu-item | SVG-concept |
 |---|---|
@@ -254,8 +262,8 @@ Handvat boven, kruis (+) in het midden. Gebruik exact deze SVG:
 - Open Sans laden via Google Fonts `<link>` tag (preconnect aanbevolen)
 
 ## Veelgemaakte fouten (vermijd deze!)
-1. ❌ Gevulde driehoekjes of Unicode-pijlen (↑↓▽) → ✅ Inline SVG met pi-arrow-up + pi-arrow-down + pi-filter
-2. ❌ `gap: 6px` of meer tussen sort-arrows → ✅ `gap: 1px` voor sort-pair, extra `margin-left: 4px` voor filter
+1. ❌ Verkeerde Unicode-symbolen als filtericoon → ✅ In modus E Material Icons `filter_alt` gebruiken.
+2. ❌ Sorteren en filteren in de icoonkolom tonen → ✅ Alleen in headers van zichtbare datakolommen.
 3. ❌ Em-dash (—) in lege cellen → ✅ Volledig lege `<td></td>`
 4. ❌ Teal `#008C95` (te groen) → ✅ Teal `#00838F` (juiste cyan-tint)
 5. ❌ Gradient in paneelheader → ✅ Uniform `#EFF6F7`

@@ -44,7 +44,7 @@ class CorrespondenceDetailsTest(unittest.TestCase):
         self.assertIn('<tr data-detail-row="true">', html)
         self.assertIn('<b>Verslag</b><br/>Eerste tekst', html)
         self.assertIn('<th></th>', html)
-        self.assertIn('▼', html)
+        self.assertIn('>expand_more</span>', html)
 
     def test_empty_table_shows_no_details_message(self):
         tables = converter.extract_tables("<table><tr><th></th><th>Bron</th></tr></table>")
@@ -85,7 +85,7 @@ class InlineDetailsIconTest(unittest.TestCase):
             '<tr><td></td><td>Nexus</td><td>Derde</td><td>geheim</td></tr>'
         )
         self.assertIn('<th></th>', html)
-        self.assertEqual(html.count('>▼</td>'), 1)
+        self.assertEqual(html.count('>expand_more</span>'), 1)
         self.assertNotIn('▶', html)
         self.assertEqual(html.count('<tr>\n  <td></td>'), 2)
         self.assertEqual(html.count('data-detail-row="true"'), 1)
@@ -101,13 +101,21 @@ class InlineDetailsIconTest(unittest.TestCase):
             '<tr><td></td><td colspan="3"><br/><b> </b>&nbsp;</td></tr>'
         )
         self.assertNotIn('<th></th>', html)
-        self.assertNotIn('>▼</td>', html)
+        self.assertNotIn('>expand_more</span>', html)
         self.assertNotIn('▶', html)
         self.assertNotIn('data-detail-row="true"', html)
         self.assertEqual(html.count('class="bron-circle"'), 2)
         self.assertIn('Eerste', html)
         self.assertIn('Tweede', html)
         self.assertIn('<th>Bron <span', html)
+
+    def test_google_icons_for_data_headers_only(self):
+        source = '<tr><td>▼</td><td>Epic</td><td>Eerste</td><td>geheim</td></tr><tr><td></td><td colspan="3">Details</td></tr>'
+        html = self.render(source)
+        self.assertIn('<th></th>', html)
+        self.assertEqual(html.count('>arrow_upward</span>'), 2)
+        self.assertEqual(html.count('>arrow_downward</span>'), 2)
+        self.assertEqual(html.count('>filter_alt</span>'), 2)
 
 
 if __name__ == "__main__":
