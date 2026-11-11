@@ -119,6 +119,23 @@ def get_visible_column_indices(headers):
     return visible_indices
 
 
+def is_detail_row(row):
+    """Controleer of deze rij een detail/verslag rij is (geen expand-icon in eerste kolom)."""
+    if len(row) == 0:
+        return False
+    first_cell = row[0]['content'].strip()
+    # Detail rijen hebben GEEN expand-icon in eerste kolom
+    return first_cell not in ['▼', '▲', '●'] and '▼' not in first_cell and '▲' not in first_cell
+
+
+def is_main_row(row):
+    """Controleer of deze rij een hoofdregel is (met expand-icon of leeg in eerste kolom)."""
+    if len(row) == 0:
+        return False
+    first_cell = row[0]['content'].strip()
+    return first_cell in ['▼', '▲', ''] or '▼' in first_cell or '▲' in first_cell
+
+
 def create_html_mockup(title, tables, icon='📄'):
     """Genereert HTML mockup van ViewDefinition tabel."""
     
@@ -141,63 +158,59 @@ def create_html_mockup(title, tables, icon='📄'):
     
     html_table += '</tr>\n</thead>\n<tbody>\n'
     
-    # Rows verwerken
+    # Rows verwerken - groepeer hoofd- en detailrijen
     i = 0
     while i < len(rows):
         row = rows[i]
         
-        # Check of dit een expandable rij is (eerste kolom is leeg of bevat dropdown icon)
-        is_expandable = (len(row) > 0 and 
-                        (row[0]['content'].strip() in ['▼', '▲', ''] or 
-                         '▼' in row[0]['content'] or '▲' in row[0]['content']))
-        
-        # Normale data-rij - alleen zichtbare kolommen
-        html_table += '<tr>\n'
-        for j, header_idx in enumerate(visible_indices):
-            if header_idx < len(row):
-                cell = row[header_idx]
-                content = cell['content'].strip()
-                
-                # Speciale behandeling voor eerste kolom (expandable icon)
-                if header_idx == 0 and is_expandable:
-                    html_table += f'  <td style="text-align: center; color: #00838F;">●</td>\n'
-                # Bron monogram voor kolom met index 1 (of eerste zichtbare na icon)
-                elif j == 1 and content and not content.startswith('('):
-                    bron_color = get_bron_color(content)
-                    bron_abbrev = ''.join([c for c in content if c.isupper()])[:2]
-                    if not bron_abbrev:
-                        bron_abbrev = content[:2].upper()
-                    html_table += f'  <td><div class="bron-circle" style="background: {bron_color};">{bron_abbrev}</div></td>\n'
-                else:
-                    html_table += f'  <td>{content}</td>\n'
-        html_table += '</tr>\n'
-        
-        # Check op volgende rij voor expanded content (bijv. Verslag)
-        if is_expandable and i + 1 < len(rows):
-            next_row = rows[i + 1]
-            # Als volgende rij eerste kolom colspan heeft of begint met speciale marker
-            if (len(next_row) > 0 and next_row[0].get('colspan', 1) > 1) or \
-               (len(next_row) >= 2 and next_row[1]['content'].strip().startswith('Verslag')):
-                # Dit is een detail/verslag rij
+        # Check of dit een hoofdrij is
+        if is_main_row(row):
+            # Render hoofdrij
+            html_table += '<tr>\n'
+            for j, header_idx in enumerate(visible_indices):
+                if header_idx < len(row):
+                    cell = row[header_idx]
+                    content = cell['content'].strip()
+                    
+                    # Speciale behandeling voor eerste kolom (expandable icon)
+                    if header_idx == 0:
+                        html_table += f'  <td style="text-align: center; color: #00838F;">●</td>\n'
+                    # Bron monogram voor kolom met index 1
+                    elif j == 1 and content and not content.startswith('('):
+                        bron_color = get_bron_color(content)
+                        bron_abbrev = ''.join([c for c in content if c.isupper()])[:2]
+                        if not bron_abbrev:
+                            bron_abbrev = content[:2].upper()
+                        html_table += f'  <td><div class="bron-circle" style="background: {bron_color};">{bron_abbrev}</div></td>\n'
+                    else:
+                        html_table += f'  <td>{content}</td>\n'
+            html_table += '</tr>\n'
+            
+            # Check op volgende rij voor detail content (groepering!)
+            if i + 1 < len(rows) and is_detail_row(rows[i + 1]):
+                next_row = rows[i + 1]
+                # Dit is een detail/verslag rij die bij de hoofdrij hoort
                 num_visible_cols = len(visible_indices)
-                html_table += '<tr style="background: #F9FAFB;">\n'
-                html_table += f'  <td colspan="{num_visible_cols}"></td>\n'
-                html_table += '</tr>\n'
-                html_table += '<tr>\n'
-                html_table += '<td colspan="{}"><div style="padding: 12px; background: #F9FAFB; border-radius: 4px;">'.format(num_visible_cols)
                 
-                # Content van expanded row verzamelen (skip verborgen kolommen)
+                # Detail rij in grijze background
+                html_table += '<tr style="background: #F9FAFB;">\n'
+                html_table += f'  <td colspan="{num_visible_cols}"><div style="padding: 12px; background: #F9FAFB; border-radius: 4px;">'
+                
+                # Content van detail rij verzamelen
+                detail_content = []
                 for cell_idx, cell in enumerate(next_row):
                     # Skip verborgen kolommen
                     if cell_idx > 0 and cell_idx not in visible_indices:
                         continue
                     content = cell['content'].strip()
                     if content and not content.startswith('('):
-                        if content.startswith('Verslag'):
-                            html_table += f'<b>{content}</b><br/>'
+                        # Bold voor labels zoals "Verslag"
+                        if content in ['Verslag', 'Regels', 'Details'] or ':' in content and content.isupper():
+                            detail_content.append(f'<b>{content}</b>')
                         else:
-                            html_table += f'{content}<br/>'
+                            detail_content.append(content)
                 
+                html_table += '<br/>'.join(detail_content)
                 html_table += '</div></td>\n'
                 html_table += '</tr>\n'
                 i += 2
