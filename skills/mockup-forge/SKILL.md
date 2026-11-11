@@ -7,7 +7,7 @@ description: Genereer professionele UI mockups als PNG-afbeeldingen op basis van
 
 Genereer pixel-perfecte UI mockups als PNG door wireframes, schermontwerpen of Excel-tabellen te combineren via de Claude API, gerenderd met Playwright/Weasyprint voor exacte browser-kwaliteit.
 
-## Vier modi
+## Vijf modi
 
 ### Modus A: Wireframe → Mockup
 - **Input 1**: Schermontwerp (stijl + navigatie/menu/chrome)
@@ -29,11 +29,21 @@ Genereer pixel-perfecte UI mockups als PNG door wireframes, schermontwerpen of E
 - **Output**: Volledige Zorgviewer-mockup gegenereerd uit de tabeldata, met alle design-systeemregels automatisch toegepast
 - **Bijzonder**: geen API-call nodig, alles wordt door `scripts/excel-to-mockup.py` afgehandeld
 
+### Modus E: ViewDefinition-ui.md → Mockup (NIEUW)
+- **Input**: Een `ViewDefinition-*.ui.md` bestand met wireframe-tabel (bijv. `ViewDefinition-Correspondentie-ui.md`)
+- **Output**: Volledig Zorgviewer-mockup gegenereerd uit de wireframe-gegevens, met automatisch:
+  - Juiste kolommen en data uit de wireframe
+  - Bron-monogrammen met juiste kleuren
+  - Expandable rijen voor verslagen/details
+  - Volledige Zorgviewer interface (topbar, sidebar, panel)
+- **Bijzonder**: automatische data-extractie en layout, geen extra bestanden nodig
+
 ## Workflow
 
 ### Stap 1: Bepaal de modus
 Vraag de gebruiker welke modus, of leid dit af uit de beschrijving en bestandstype:
 - `.xlsx` bestand geüpload → Modus D
+- `ViewDefinition-*-ui.md` bestand geüpload → Modus E
 - "wireframe omzetten" → Modus A
 - "mockup professionaliseren" / "mockup upgraden" → Modus B
 - "samengestelde mockup" / "knipsel" / "hover toevoegen" / "uitbreiding" → Modus C
@@ -60,8 +70,23 @@ python3 scripts/excel-to-mockup.py \
     --render-png
 ```
 
-### Stap 5: Render naar PNG (alleen modi A/B/C)
-Voor modi A/B/C, gebruik het script `scripts/generate-mockup.py` dat:
+### Stap 4c: Voor Modus E — gebruik ViewDefinition-extractor script (NIEUW)
+Lees ViewDefinition-ui.md bestanden en genereer HTML:
+```bash
+python3 scripts/viewdefinition-to-html.py \
+    --input <ViewDefinition-*-ui.md pad> \
+    --output <html-pad>
+```
+
+Dit script:
+1. Leest de `ViewDefinition-*.ui.md` wireframe-tabel
+2. Extraheert alle kolommen en rijen met echte gegevens
+3. Genereert HTML mockup met volledige Zorgviewer interface
+4. Past bron-kleuren en -monogrammen automatisch toe
+5. Handelt expandable rijen af (bijv. verslagen)
+
+### Stap 5: Render naar PNG (Modi A/B/C/E)
+Voor modi A/B/C/E, gebruik het script `scripts/generate-mockup.py` dat:
 1. De HTML opslaat als tijdelijk bestand
 2. Playwright opstart met een 1280px viewport
 3. De pagina rendert met 2x device scale factor (retina)
@@ -80,12 +105,13 @@ Toon het resultaat aan de gebruiker. Vraag of er aanpassingen nodig zijn. Zo ja,
 ## Belangrijk
 - Schermontwerp is ALTIJD IMAGE 1 in de API-call (modi A/B/C)
 - Lees ALTIJD het design system reference document vóór het genereren
-- Gebruik ALTIJD Playwright (A/B/C) of Weasyprint (D) voor PNG-rendering, nooit html2canvas of vergelijkbare client-side libraries
+- Gebruik ALTIJD Playwright (A/B/C/E) of Weasyprint (D) voor PNG-rendering, nooit html2canvas of vergelijkbare client-side libraries
 - Extra instructies van de gebruiker worden toegevoegd aan het prompt
 - Modus D vereist `openpyxl` (en `weasyprint` + `pdftoppm` voor PNG)
+- Modus E vereist geen externe afhankelijkheden, alleen ingebouwde Python libraries (html.parser, re)
 
 ## Toekomstige uitbreidingen (placeholder)
 
 Volgende geplande modi worden hier toegevoegd zodra ze beschikbaar zijn:
-- **Modus E** — Prompt-based modificatie van bestaande mockup (bv. "voeg een uitklap toe aan rij 3 in de bestaande mockup met dit label en deze waarde"). Vereist een bestaande mockup-HTML + prompt → aangepaste HTML met behoud van alle styling.
-- **Modus F** — Hybride: xlsx-tabel + wireframe-screenshot voor schermen met mix van tabular en non-tabular content.
+- **Modus F** — Prompt-based modificatie van bestaande mockup (bv. "voeg een uitklap toe aan rij 3 in de bestaande mockup met dit label en deze waarde"). Vereist een bestaande mockup-HTML + prompt → aangepaste HTML met behoud van alle styling.
+- **Modus G** — Hybride: xlsx-tabel + wireframe-screenshot voor schermen met mix van tabular en non-tabular content.

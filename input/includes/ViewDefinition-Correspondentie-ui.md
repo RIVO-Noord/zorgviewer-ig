@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>Correspondentie en Verslagen</b>
+<b>Correspondentie en verslagen</b>
 <table class="grid">
 <tbody>
 <tr><th></th>
