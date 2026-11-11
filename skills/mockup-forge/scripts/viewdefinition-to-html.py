@@ -509,7 +509,10 @@ def generate_full_mockup_html(title, tables, icon='📄'):
         }}
         
         .panel-body {{
-            padding: 20px;
+            padding: 0;
+            max-height: calc(100vh - 250px);
+            overflow-y: auto;
+            overflow-x: auto;
         }}
         
         /* Table */
@@ -522,6 +525,9 @@ def generate_full_mockup_html(title, tables, icon='📄'):
             background: #EFF6F7;
             border-top: 1px solid #D6E5E7;
             border-bottom: 2px solid #D6E5E7;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }}
         
         th {{
