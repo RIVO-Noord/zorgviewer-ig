@@ -1,0 +1,3639 @@
+{
+    "resourceType": "Bundle",
+    "id": "pseudonymize-people",
+    "type": "collection",
+    "entry": [
+        {
+            "fullUrl": "http://example.org/fhir/Patient/fake-patient-01",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "fake-patient-01",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Jan Testmans",
+                        "family": "Testmans",
+                        "given": [
+                            "Jan",
+                            "Pieter"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Testmans"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Proefsma"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Dhr."
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1950-01-01",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Teststraat 10 A, 9910 AB Testdorp",
+                        "line": [
+                            "Teststraat 10 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Teststraat"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "10"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Testdorp",
+                        "district": "Proefgemeente",
+                        "postalCode": "9910 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550200",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612340000",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "jan.testmans@example.nl"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999930011",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                                "valueString": "999930011"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Patient/fake-patient-02",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "fake-patient-02",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Anna Fictiefsma",
+                        "family": "Fictiefsma",
+                        "given": [
+                            "Anna",
+                            "Maria"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Fictiefsma"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "de"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Nepman"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Mevr."
+                        ]
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1955-08-12",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Proeflaan 13 A, 9911 AB Fictiefstad",
+                        "line": [
+                            "Proeflaan 13 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Proeflaan"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "13"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Fictiefstad",
+                        "district": "Nepgemeente",
+                        "postalCode": "9911 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550201",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612340113",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "anna.fictiefsma@example.nl"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999930060",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                                "valueString": "999930060"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Patient/fake-patient-03",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "fake-patient-03",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Kees Proefhuis",
+                        "family": "Proefhuis",
+                        "given": [
+                            "Kees",
+                            "Willem"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Proefhuis"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van der"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Testwijk"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Dhr."
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1960-03-23",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Voorbeeldweg 16 A, 9912 AB Proefwijk",
+                        "line": [
+                            "Voorbeeldweg 16 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Voorbeeldweg"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "16"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Proefwijk",
+                        "district": "Testgemeente",
+                        "postalCode": "9912 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550202",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612340226",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "kees.proefhuis@example.nl"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999930102",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                                "valueString": "999930102"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Patient/fake-patient-04",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "fake-patient-04",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Sanne Voorbeeldink",
+                        "family": "Voorbeeldink",
+                        "given": [
+                            "Sanne",
+                            "Lotte"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Voorbeeldink"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "ten"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Dummyveld"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Mevr."
+                        ]
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1965-10-06",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Nepsingel 19 A, 9913 AB Testdorp",
+                        "line": [
+                            "Nepsingel 19 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Nepsingel"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "19"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Testdorp",
+                        "district": "Proefgemeente",
+                        "postalCode": "9913 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550203",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612340339",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "sanne.voorbeeldink@example.nl"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999930151",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                                "valueString": "999930151"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Patient/fake-patient-05",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "fake-patient-05",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Henk Schijnbergen",
+                        "family": "Schijnbergen",
+                        "given": [
+                            "Henk",
+                            "Jacobus"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Schijnbergen"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Fictiefdal"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Dhr."
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1970-05-17",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Fictiefplein 22 A, 9914 AB Fictiefstad",
+                        "line": [
+                            "Fictiefplein 22 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Fictiefplein"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "22"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Fictiefstad",
+                        "district": "Nepgemeente",
+                        "postalCode": "9914 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550204",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612340452",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "henk.schijnbergen@example.nl"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999930242",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                                "valueString": "999930242"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Patient/fake-patient-06",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "fake-patient-06",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Ellen Nepmans",
+                        "family": "Nepmans",
+                        "given": [
+                            "Ellen",
+                            "Johanna"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Nepmans"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "de"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Proefberg"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Mevr."
+                        ]
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1975-12-28",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Dummykade 25 A, 9915 AB Proefwijk",
+                        "line": [
+                            "Dummykade 25 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Dummykade"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "25"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Proefwijk",
+                        "district": "Testgemeente",
+                        "postalCode": "9915 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550205",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612340565",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "ellen.nepmans@example.nl"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999930291",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                                "valueString": "999930291"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Patient/fake-patient-07",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "fake-patient-07",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Bram Dummeling",
+                        "family": "Dummeling",
+                        "given": [
+                            "Bram",
+                            "Hendrik"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Dummeling"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van den"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Testwaard"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Dhr."
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1980-07-11",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Teststraat 28 A, 9916 AB Testdorp",
+                        "line": [
+                            "Teststraat 28 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Teststraat"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "28"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Testdorp",
+                        "district": "Proefgemeente",
+                        "postalCode": "9916 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550206",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612340678",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "bram.dummeling@example.nl"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999930333",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                                "valueString": "999930333"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Patient/fake-patient-08",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "fake-patient-08",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Marloes Fantasiaan",
+                        "family": "Fantasiaan",
+                        "given": [
+                            "Marloes",
+                            "Petra"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Fantasiaan"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Nepstra"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Mevr."
+                        ]
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1985-02-22",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Proeflaan 31 A, 9917 AB Fictiefstad",
+                        "line": [
+                            "Proeflaan 31 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Proeflaan"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "31"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Fictiefstad",
+                        "district": "Nepgemeente",
+                        "postalCode": "9917 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550207",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612340791",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "marloes.fantasiaan@example.nl"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999930382",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                                "valueString": "999930382"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Patient/fake-patient-09",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "fake-patient-09",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Joost Verzinselaar",
+                        "family": "Verzinselaar",
+                        "given": [
+                            "Joost",
+                            "Gerard"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Verzinselaar"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "de"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Proefvliet"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Dhr."
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1990-09-05",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Voorbeeldweg 34 A, 9918 AB Proefwijk",
+                        "line": [
+                            "Voorbeeldweg 34 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Voorbeeldweg"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "34"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Proefwijk",
+                        "district": "Testgemeente",
+                        "postalCode": "9918 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550208",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612340904",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "joost.verzinselaar@example.nl"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999930424",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                                "valueString": "999930424"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Patient/fake-patient-10",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "fake-patient-10",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Fenna Bedachtsma",
+                        "family": "Bedachtsma",
+                        "given": [
+                            "Fenna",
+                            "Wilhelmina"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Bedachtsma"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Testlaar"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Mevr."
+                        ]
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1950-04-16",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Nepsingel 37 A, 9919 AB Testdorp",
+                        "line": [
+                            "Nepsingel 37 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Nepsingel"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "37"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Testdorp",
+                        "district": "Proefgemeente",
+                        "postalCode": "9919 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550209",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612341017",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "fenna.bedachtsma@example.nl"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999930473",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                                "valueString": "999930473"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Patient/fake-patient-11",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "fake-patient-11",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Rob Pseudomans",
+                        "family": "Pseudomans",
+                        "given": [
+                            "Rob",
+                            "Dirk"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Pseudomans"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "ter"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Fictiefhorst"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Dhr."
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1955-11-27",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Fictiefplein 40 A, 9920 AB Fictiefstad",
+                        "line": [
+                            "Fictiefplein 40 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Fictiefplein"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "40"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Fictiefstad",
+                        "district": "Nepgemeente",
+                        "postalCode": "9920 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550210",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612341130",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "rob.pseudomans@example.nl"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999930515",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                                "valueString": "999930515"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Patient/fake-patient-12",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "fake-patient-12",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Ingrid Namaakstra",
+                        "family": "Namaakstra",
+                        "given": [
+                            "Ingrid",
+                            "Cornelia"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Namaakstra"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Dummybroek"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Mevr."
+                        ]
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1960-06-10",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Dummykade 43 A, 9921 AB Proefwijk",
+                        "line": [
+                            "Dummykade 43 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Dummykade"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "43"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Proefwijk",
+                        "district": "Testgemeente",
+                        "postalCode": "9921 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550211",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612341243",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "ingrid.namaakstra@example.nl"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+                        "value": "999930564",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                                "valueString": "999930564"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Practitioner/fake-practitioner-01",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "fake-practitioner-01",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Lisette Testartsma",
+                        "family": "Testartsma",
+                        "given": [
+                            "Lisette",
+                            "Marianne"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Testartsma"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Proefdal"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1965-10-06",
+                "address": [
+                    {
+                        "use": "work",
+                        "type": "both",
+                        "text": "Nepsingel 19 A, 9913 AB Testdorp",
+                        "line": [
+                            "Nepsingel 19 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Nepsingel"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "19"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Testdorp",
+                        "district": "Proefgemeente",
+                        "postalCode": "9913 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550103",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "lisette.testartsma@example.nl",
+                        "use": "work"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99001001"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/uzi-nr-pers",
+                        "value": "999010001"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/big",
+                        "value": "99901000001"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Practitioner/fake-practitioner-02",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "fake-practitioner-02",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Pieter Proefdoktor",
+                        "family": "Proefdoktor",
+                        "given": [
+                            "Pieter",
+                            "Jozef"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Proefdoktor"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "de"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Nepwijk"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1970-05-17",
+                "address": [
+                    {
+                        "use": "work",
+                        "type": "both",
+                        "text": "Fictiefplein 22 A, 9914 AB Fictiefstad",
+                        "line": [
+                            "Fictiefplein 22 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Fictiefplein"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "22"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Fictiefstad",
+                        "district": "Nepgemeente",
+                        "postalCode": "9914 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550104",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "pieter.proefdoktor@example.nl",
+                        "use": "work"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99001008"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/uzi-nr-pers",
+                        "value": "999010014"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/big",
+                        "value": "99901000018"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Practitioner/fake-practitioner-03",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "fake-practitioner-03",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Karin Schijnarts",
+                        "family": "Schijnarts",
+                        "given": [
+                            "Karin",
+                            "Elisabeth"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Schijnarts"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Fictiefveld"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1975-12-28",
+                "address": [
+                    {
+                        "use": "work",
+                        "type": "both",
+                        "text": "Dummykade 25 A, 9915 AB Proefwijk",
+                        "line": [
+                            "Dummykade 25 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Dummykade"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "25"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Proefwijk",
+                        "district": "Testgemeente",
+                        "postalCode": "9915 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550105",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "karin.schijnarts@example.nl",
+                        "use": "work"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99001015"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/uzi-nr-pers",
+                        "value": "999010027"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/big",
+                        "value": "99901000035"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Practitioner/fake-practitioner-04",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "fake-practitioner-04",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Maarten Zorgfictief",
+                        "family": "Zorgfictief",
+                        "given": [
+                            "Maarten",
+                            "Cornelis"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Zorgfictief"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van der"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Testbroek"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1980-07-11",
+                "address": [
+                    {
+                        "use": "work",
+                        "type": "both",
+                        "text": "Teststraat 28 A, 9916 AB Testdorp",
+                        "line": [
+                            "Teststraat 28 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Teststraat"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "28"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Testdorp",
+                        "district": "Proefgemeente",
+                        "postalCode": "9916 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550106",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "maarten.zorgfictief@example.nl",
+                        "use": "work"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99001022"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/uzi-nr-pers",
+                        "value": "999010040"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/big",
+                        "value": "99901000052"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Practitioner/fake-practitioner-05",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "fake-practitioner-05",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Esther Dummydokter",
+                        "family": "Dummydokter",
+                        "given": [
+                            "Esther",
+                            "Lidia"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Dummydokter"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Proefhoek"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1985-02-22",
+                "address": [
+                    {
+                        "use": "work",
+                        "type": "both",
+                        "text": "Proeflaan 31 A, 9917 AB Fictiefstad",
+                        "line": [
+                            "Proeflaan 31 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Proeflaan"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "31"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Fictiefstad",
+                        "district": "Nepgemeente",
+                        "postalCode": "9917 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550107",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "esther.dummydokter@example.nl",
+                        "use": "work"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99001029"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/uzi-nr-pers",
+                        "value": "999010053"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/big",
+                        "value": "99901000069"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Practitioner/fake-practitioner-06",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "fake-practitioner-06",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Thomas Namaakdokter",
+                        "family": "Namaakdokter",
+                        "given": [
+                            "Thomas",
+                            "Adriaan"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Namaakdokter"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "de"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Nepdijk"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1990-09-05",
+                "address": [
+                    {
+                        "use": "work",
+                        "type": "both",
+                        "text": "Voorbeeldweg 34 A, 9918 AB Proefwijk",
+                        "line": [
+                            "Voorbeeldweg 34 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Voorbeeldweg"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "34"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Proefwijk",
+                        "district": "Testgemeente",
+                        "postalCode": "9918 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550108",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "thomas.namaakdokter@example.nl",
+                        "use": "work"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99001036"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/uzi-nr-pers",
+                        "value": "999010066"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/big",
+                        "value": "99901000086"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Practitioner/fake-practitioner-07",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "fake-practitioner-07",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Hanneke Verzinveld",
+                        "family": "Verzinveld",
+                        "given": [
+                            "Hanneke",
+                            "Sophia"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Verzinveld"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "ten"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Testmeer"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1950-04-16",
+                "address": [
+                    {
+                        "use": "work",
+                        "type": "both",
+                        "text": "Nepsingel 37 A, 9919 AB Testdorp",
+                        "line": [
+                            "Nepsingel 37 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Nepsingel"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "37"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Testdorp",
+                        "district": "Proefgemeente",
+                        "postalCode": "9919 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550109",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "hanneke.verzinveld@example.nl",
+                        "use": "work"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99001043"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/uzi-nr-pers",
+                        "value": "999010079"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/big",
+                        "value": "99901000103"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Practitioner/fake-practitioner-08",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "fake-practitioner-08",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Wouter Pseudoarts",
+                        "family": "Pseudoarts",
+                        "given": [
+                            "Wouter",
+                            "Frederik"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Pseudoarts"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Fictiefzand"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1955-11-27",
+                "address": [
+                    {
+                        "use": "work",
+                        "type": "both",
+                        "text": "Fictiefplein 40 A, 9920 AB Fictiefstad",
+                        "line": [
+                            "Fictiefplein 40 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Fictiefplein"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "40"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Fictiefstad",
+                        "district": "Nepgemeente",
+                        "postalCode": "9920 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550110",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "wouter.pseudoarts@example.nl",
+                        "use": "work"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99001050"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/uzi-nr-pers",
+                        "value": "999010092"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/big",
+                        "value": "99901000120"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/RelatedPerson/fake-relatedperson-01",
+            "resource": {
+                "resourceType": "RelatedPerson",
+                "id": "fake-relatedperson-01",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Henriette Mantelzorgsma",
+                        "family": "Mantelzorgsma",
+                        "given": [
+                            "Henriette",
+                            "Louise"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Mantelzorgsma"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Proefpartner"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Mevr."
+                        ]
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1985-02-22",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Proeflaan 31 A, 9917 AB Fictiefstad",
+                        "line": [
+                            "Proeflaan 31 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Proeflaan"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "31"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Fictiefstad",
+                        "district": "Nepgemeente",
+                        "postalCode": "9917 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550207",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612340791",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "henriette.mantelzorgsma@example.nl"
+                    }
+                ],
+                "patient": {
+                    "reference": "Patient/fake-patient-01"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/RelatedPerson/fake-relatedperson-02",
+            "resource": {
+                "resourceType": "RelatedPerson",
+                "id": "fake-relatedperson-02",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Gerrit Fictiefkind",
+                        "family": "Fictiefkind",
+                        "given": [
+                            "Gerrit",
+                            "Anton"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Fictiefkind"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "de"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Nepouder"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Dhr."
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1990-09-05",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Voorbeeldweg 34 A, 9918 AB Proefwijk",
+                        "line": [
+                            "Voorbeeldweg 34 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Voorbeeldweg"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "34"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Proefwijk",
+                        "district": "Testgemeente",
+                        "postalCode": "9918 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550208",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612340904",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "gerrit.fictiefkind@example.nl"
+                    }
+                ],
+                "patient": {
+                    "reference": "Patient/fake-patient-02"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/RelatedPerson/fake-relatedperson-03",
+            "resource": {
+                "resourceType": "RelatedPerson",
+                "id": "fake-relatedperson-03",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Marjolein Schijnbroer",
+                        "family": "Schijnbroer",
+                        "given": [
+                            "Marjolein",
+                            "Beatrix"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Schijnbroer"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Testzus"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Mevr."
+                        ]
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1950-04-16",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Nepsingel 37 A, 9919 AB Testdorp",
+                        "line": [
+                            "Nepsingel 37 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Nepsingel"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "37"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Testdorp",
+                        "district": "Proefgemeente",
+                        "postalCode": "9919 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550209",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612341017",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "marjolein.schijnbroer@example.nl"
+                    }
+                ],
+                "patient": {
+                    "reference": "Patient/fake-patient-03"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/RelatedPerson/fake-relatedperson-04",
+            "resource": {
+                "resourceType": "RelatedPerson",
+                "id": "fake-relatedperson-04",
+                "active": true,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+                                "valueCode": "NL1"
+                            }
+                        ],
+                        "use": "official",
+                        "text": "Dennis Proefvriend",
+                        "family": "Proefvriend",
+                        "given": [
+                            "Dennis",
+                            "Maurits"
+                        ],
+                        "_given": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "CL"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                                        "valueCode": "BR"
+                                    }
+                                ]
+                            }
+                        ],
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                    "valueString": "van"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                    "valueString": "Proefvriend"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+                                    "valueString": "van der"
+                                },
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+                                    "valueString": "Dummyvriend"
+                                }
+                            ]
+                        },
+                        "prefix": [
+                            "Dhr."
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1955-11-27",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "Fictiefplein 40 A, 9920 AB Fictiefstad",
+                        "line": [
+                            "Fictiefplein 40 A"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Fictiefplein"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "40"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix",
+                                        "valueString": "A"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
+                                        "valueString": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Fictiefstad",
+                        "district": "Nepgemeente",
+                        "postalCode": "9920 AB",
+                        "country": "NL"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550210",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "0612341130",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "dennis.proefvriend@example.nl"
+                    }
+                ],
+                "patient": {
+                    "reference": "Patient/fake-patient-04"
+                }
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Organization/fake-organization-01",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "fake-organization-01",
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "urn:oid:2.16.840.1.113883.2.4.6.1",
+                        "value": "99100001"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99100001"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "990010"
+                    }
+                ],
+                "active": true,
+                "name": "Ziekenhuis Proefstad",
+                "alias": [
+                    "ZPS"
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550100",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "info@proefstad.example.nl",
+                        "use": "work"
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "type": "both",
+                        "text": "Proefsingel 10, 9950 ZZ Proefstad",
+                        "line": [
+                            "Proefsingel 10"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Proefsingel"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "10"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Proefstad",
+                        "district": "Proefgemeente",
+                        "postalCode": "9950 ZZ",
+                        "country": "Nederland"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Organization/fake-organization-02",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "fake-organization-02",
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "urn:oid:2.16.840.1.113883.2.4.6.1",
+                        "value": "99100002"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99100002"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "990020"
+                    }
+                ],
+                "active": true,
+                "name": "Academisch Medisch Centrum Testland",
+                "alias": [
+                    "AMCT"
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550200",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "info@testland.example.nl",
+                        "use": "work"
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "type": "both",
+                        "text": "Testlaan 17, 9951 ZZ Testland",
+                        "line": [
+                            "Testlaan 17"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Testlaan"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "17"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Testland",
+                        "district": "Testgemeente",
+                        "postalCode": "9951 ZZ",
+                        "country": "Nederland"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Organization/fake-organization-03",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "fake-organization-03",
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "urn:oid:2.16.840.1.113883.2.4.6.1",
+                        "value": "99100003"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99100003"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "990030"
+                    }
+                ],
+                "active": true,
+                "name": "Huisartsenpraktijk Voorbeeldveld",
+                "alias": [
+                    "HPV"
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550300",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "info@voorbeeldveld.example.nl",
+                        "use": "work"
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "type": "both",
+                        "text": "Voorbeeldstraat 24, 9952 ZZ Voorbeeldveld",
+                        "line": [
+                            "Voorbeeldstraat 24"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Voorbeeldstraat"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "24"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Voorbeeldveld",
+                        "district": "Nepgemeente",
+                        "postalCode": "9952 ZZ",
+                        "country": "Nederland"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Organization/fake-organization-04",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "fake-organization-04",
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "urn:oid:2.16.840.1.113883.2.4.6.1",
+                        "value": "99100004"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99100004"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "990040"
+                    }
+                ],
+                "active": true,
+                "name": "Apotheek Fictiefhof",
+                "alias": [
+                    "AFH"
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550400",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "info@fictiefhof.example.nl",
+                        "use": "work"
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "type": "both",
+                        "text": "Fictiefplein 31, 9953 ZZ Fictiefhof",
+                        "line": [
+                            "Fictiefplein 31"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Fictiefplein"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "31"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Fictiefhof",
+                        "district": "Fictiefgemeente",
+                        "postalCode": "9953 ZZ",
+                        "country": "Nederland"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Organization/fake-organization-05",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "fake-organization-05",
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "urn:oid:2.16.840.1.113883.2.4.6.1",
+                        "value": "99100005"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99100005"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "990050"
+                    }
+                ],
+                "active": true,
+                "name": "Gezondheidscentrum Nepdorp",
+                "alias": [
+                    "GCN"
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550500",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "info@nepdorp.example.nl",
+                        "use": "work"
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "type": "both",
+                        "text": "Nepweg 38, 9954 ZZ Nepdorp",
+                        "line": [
+                            "Nepweg 38"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Nepweg"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "38"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Nepdorp",
+                        "district": "Nepgemeente",
+                        "postalCode": "9954 ZZ",
+                        "country": "Nederland"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://example.org/fhir/Organization/fake-organization-06",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "fake-organization-06",
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "urn:oid:2.16.840.1.113883.2.4.6.1",
+                        "value": "99100006"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+                        "value": "99100006"
+                    },
+                    {
+                        "use": "official",
+                        "system": "http://fhir.nl/fhir/NamingSystem/ura",
+                        "value": "990060"
+                    }
+                ],
+                "active": true,
+                "name": "Regionaal Ziekenhuis Dummystad",
+                "alias": [
+                    "RZD"
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "0205550600",
+                        "use": "work"
+                    },
+                    {
+                        "system": "email",
+                        "value": "info@dummystad.example.nl",
+                        "use": "work"
+                    }
+                ],
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation-AddressType",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://hl7.org/fhir/v3/AddressUse",
+                                            "code": "WP",
+                                            "display": "Work Place"
+                                        }
+                                    ],
+                                    "text": "Werkadres"
+                                }
+                            }
+                        ],
+                        "use": "work",
+                        "type": "both",
+                        "text": "Dummykade 45, 9955 ZZ Dummystad",
+                        "line": [
+                            "Dummykade 45"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                        "valueString": "Dummykade"
+                                    },
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "45"
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Dummystad",
+                        "district": "Dummygemeente",
+                        "postalCode": "9955 ZZ",
+                        "country": "Nederland"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "persons": {
+        "Patient": ["name", "identifier", "telecom", "address", "birthDate", "deceasedDateTime", "photo"],
+        "Practitioner": ["name", "identifier", "telecom", "address", "birthDate", "photo"],
+        "RelatedPerson": ["name", "identifier", "telecom", "address", "birthDate", "photo"],
+        "Person": ["name", "identifier", "telecom", "address", "birthDate", "photo"]
+    },
+    "contacts": {
+        "Patient.contact": {
+            "type": "RelatedPerson",
+            "elements": ["name", "telecom", "address"]
+        }
+    },
+    "organizations": {
+        "elements": ["name", "alias", "identifier", "telecom", "address"],
+        "replaceNames": ["UMCG", "Umcg Groningen", "Wilhelmina Ziekenhuis", "ADRZ", "Tjongerschans"],
+        "keep": [
+            "(^|[^a-z])epic([^a-z]|$)",
+            "chipsoft",
+            "(^|[^a-z])hix([^a-z]|$)",
+            "(^|[^a-z])cgm([^a-z]|$)",
+            "nexus",
+            "nedap",
+            "sanday",
+            "pharmeon",
+            "topicus",
+            "medicom",
+            "glims",
+            "^test medisch centrum$",
+            "^general hospital$",
+            "apotheek de gulle gaper",
+            "^ziekenhuis apotheek$",
+            "maag- darm- leverziekten",
+            "^openbare apotheek$",
+            "^algemeen ziekenhuis$"
+        ]
+    },
+    "keepDisplays": ["verzekering"],
+    "mentions": [
+        { "path": "Condition.subject", "type": "Patient" },
+        { "path": "Procedure.subject", "type": "Patient" },
+        { "path": "Encounter.subject", "type": "Patient" },
+        { "path": "Immunization.patient", "type": "Patient" },
+        { "path": "Immunization.practitioner.actor", "type": "Practitioner" },
+        { "path": "MedicationRequest.subject", "type": "Patient" },
+        { "path": "MedicationStatement.subject", "type": "Patient" },
+        { "path": "AllergyIntolerance.patient", "type": "Patient" },
+        { "path": "Consent.patient", "type": "Patient" },
+        { "path": "CarePlan.subject", "type": "Patient" },
+        { "path": "DeviceUseStatement.subject", "type": "Patient" },
+        { "path": "Device.patient", "type": "Patient" },
+        { "path": "AuditEvent.agent", "type": "Practitioner", "name": "name", "identifier": "userId" },
+        { "path": "AuditEvent.entity.where(identifier.system='http://fhir.nl/fhir/NamingSystem/bsn')", "type": "Patient", "name": "name", "identifier": "identifier" }
+    ]
+}
