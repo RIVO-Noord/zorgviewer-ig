@@ -17,9 +17,87 @@ VOORBEELD:
 import re
 import json
 import argparse
+import sys
 from pathlib import Path
 from html import escape, unescape
 from html.parser import HTMLParser
+from urllib.parse import parse_qs, urlsplit
+
+
+FO_DIR = Path(__file__).resolve().parents[3] / "_local/Zorgviewer.wiki/Functionele-Ontwerpen-(FO's)"
+FO_SCREENS = {
+    'AllergyIntolerance': ('Allergieën-en-intoleranties.md', ()),
+    'Appointment': ('Contacten-en-Afspraken-(pilot).md', ()),
+    'Behandelaanwijzingen': ('Behandelvoorkeuren-(werktitel,-misschien-behandelgrenzen).md', ()),
+    'Condition': ('Problemen-(incl.-diagnoses).md', ()),
+    'ContactenAfspraken': ('Contacten-en-Afspraken-(pilot).md', ()),
+    'Contactpersonen': ('Patiëntcontext.md', ('Contactpersoon',)),
+    'Correspondentie': ('Correspondentie-en-verslagen.md', ()),
+    'Encounter': ('Contacten-en-Afspraken-(pilot).md', ()),
+    'Flag': ('Alerts-of-waarschuwingen.md', ()),
+    'GeplandeZorgactiviteiten': ('Zorgactiviteiten.md', ()),
+    'Immunization': ('Vaccinaties.md', ()),
+    'Intoxicaties': ('Intoxicaties.md', ('Wine bar', 'Smoking Rooms')),
+    'LaboratoryTestResult': ('Laboratoriumuitslagen.md', ()),
+    'LivingSituation': ('Patiëntcontext.md', ('Woonsituatie',)),
+    'Medicatiegegevens': ('Medicatiegegevens.md', ()),
+    'MedicationRequest': ('Medicatiegegevens.md', ()),
+    'MedicationStatement': ('Medicatiegegevens.md', ()),
+    'MedischHulpmiddel': ('Medische-hulpmiddelen.md', ()),
+    'Mobiliteit': ('Gezondheidstoestand.md', ('mobiliteit',)),
+    'NutritionAdvice': ('Gezondheidstoestand.md', ('voeding en vocht',)),
+    'Probleemlijst': ('Problemen-(incl.-diagnoses).md', ()),
+    'Procedure': ('Verrichtingen.md', ()),
+    'Toedieningsafspraak': ('Medicatiegegevens.md', ()),
+    'VitalSign': ('Vitale-gegevens.md', ()),
+    'Wilsbeschikkingen': ('Behandelvoorkeuren-(werktitel,-misschien-behandelgrenzen).md', ()),
+}
+
+
+def get_screen_icons(input_path, fo_dir=FO_DIR):
+    """Lees de titeliconen uit de icoonregel van het bijbehorende FO."""
+    screen = input_path.stem.removeprefix('ViewDefinition-').removesuffix('-ui')
+    mapping = FO_SCREENS.get(screen)
+    if mapping is None:
+        print(f"Waarschuwing: geen FO-icoon gekoppeld aan {input_path.name}; standaardicoon gebruikt.", file=sys.stderr)
+        return ()
+    filename, labels = mapping
+    fo_path = fo_dir / filename
+    if not fo_path.is_file():
+        print(f"Waarschuwing: FO niet gevonden: {fo_path}; standaardicoon gebruikt.", file=sys.stderr)
+        return ()
+    text = fo_path.read_text(encoding='utf-8')
+    section = re.search(r'^#\s+Schermontwerp\s*$', text, re.MULTILINE | re.IGNORECASE)
+    if section is None:
+        print(f"Waarschuwing: geen Schermontwerp gevonden in {fo_path}; standaardicoon gebruikt.", file=sys.stderr)
+        return ()
+    section_text = re.split(r'^#\s+', text[section.end():], maxsplit=1, flags=re.MULTILINE)[0]
+    icon_row = re.search(r'^\|\s*Ico(?:on|nen)\s*\|([^\n]*)', section_text, re.MULTILINE | re.IGNORECASE)
+    if icon_row is None:
+        print(f"Waarschuwing: geen icoonregel gevonden in {fo_path}; standaardicoon gebruikt.", file=sys.stderr)
+        return ()
+    links = re.findall(r'\[([^\]]+)\]\((https?://[^)\s]+)\)', icon_row.group(1))
+    icons = {}
+    for label, url in links:
+        parsed = urlsplit(url)
+        if parsed.netloc not in ('fonts.google.com', 'fonts.googleapis.com'):
+            continue
+        query = parse_qs(parsed.query)
+        selected = query.get('selected', [''])[0]
+        match = re.fullmatch(r'Material Symbols Outlined:([a-z0-9_]+):.*', selected)
+        name = match.group(1) if match else query.get('icon_names', [''])[0]
+        if re.fullmatch(r'[a-z0-9_]+', name):
+            icons[label.strip().casefold()] = name
+    if labels:
+        names = [icons.get(label.casefold()) for label in labels]
+    else:
+        names = list(icons.values())[:1]
+    if not names or any(name is None for name in names):
+        print(f"Waarschuwing: FO-icoon niet gevonden in {fo_path}; standaardicoon gebruikt.", file=sys.stderr)
+        return ()
+    if screen == 'Intoxicaties':
+        print("Waarschuwing: voor het SharePoint-maatwerkicoon van Intoxicaties worden de twee FO-symbolen als benadering gebruikt.", file=sys.stderr)
+    return tuple(names)
 
 
 class TableExtractor(HTMLParser):
@@ -342,10 +420,23 @@ def create_html_mockup(title, tables, icon='description', side_details=False):
     return html_table, first_detail, first_detail_title
 
 
-def generate_full_mockup_html(title, tables, icon='description', side_details=False):
+def generate_full_mockup_html(title, tables, icon='description', side_details=False, title_icons=()):
     """Genereert volledige Zorgviewer mockup HTML."""
     
     table_html, first_detail, first_detail_title = create_html_mockup(title, tables, icon, side_details)
+    if title_icons:
+        names = ','.join(sorted(set(title_icons)))
+        symbols_css = (
+            '<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined'
+            f':opsz,wght,FILL,GRAD@24,400,0,0&amp;icon_names={escape(names)}" rel="stylesheet">'
+        )
+        title_icon_html = ''.join(
+            f'<span class="material-symbols-outlined" aria-hidden="true">{escape(name)}</span>'
+            for name in title_icons
+        )
+    else:
+        symbols_css = ''
+        title_icon_html = f'<span class="material-icons-outlined" aria-hidden="true">{escape(icon)}</span>'
     if side_details:
         detail_content = first_detail or 'Geen details beschikbaar voor deze regel.'
         panel_content = f"""
@@ -394,6 +485,7 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
     <title>Zorgviewer - {title}</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    {symbols_css}
     <style>
         *, *::before, *::after {{
             margin: 0;
@@ -623,6 +715,9 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
             color: #00838F;
             font-size: 20px;
         }}
+
+        .panel-icon .material-symbols-outlined {{ font-size: 20px; }}
+        .panel-icon .material-symbols-outlined:not(:only-child) {{ font-size: 16px; }}
         
         .panel-title {{
             font-size: 15.3px;
@@ -850,7 +945,7 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
             <div class="panel" style="max-width: 1280px;">
                 <div class="panel-header">
                     <div class="panel-header-left">
-                        <div class="panel-icon"><span class="material-icons-outlined" aria-hidden="true">{escape(icon)}</span></div>
+                        <div class="panel-icon">{title_icon_html}</div>
                         <div class="panel-title">{title}</div>
                     </div>
                     <div class="panel-header-right">
@@ -899,7 +994,8 @@ def main():
     else:
         # Genereer HTML mockup
         side_details = input_path.name == 'ViewDefinition-Correspondentie-ui.md'
-        html_content = generate_full_mockup_html(title, tables, side_details=side_details)
+        title_icons = get_screen_icons(input_path)
+        html_content = generate_full_mockup_html(title, tables, side_details=side_details, title_icons=title_icons)
     
     # Schrijf HTML
     output_path.parent.mkdir(parents=True, exist_ok=True)

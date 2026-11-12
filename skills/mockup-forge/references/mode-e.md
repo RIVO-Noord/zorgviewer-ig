@@ -92,9 +92,15 @@ Het script past automatisch toe:
 - **Kleuren**: Teal (#00838F), grijstinten, bron-kleuren
 - **Typografie**: Open Sans, tekstgroottes op 90% van de eerdere grootte;
   iconen en layoutafmetingen blijven ongewijzigd.
-- **Iconen**: Google Material Icons Outlined voor navigatie, paneel en tabel;
-  het laden van de iconen vereist toegang tot Google Fonts. Sorteren, filteren
-  en verversen zijn visuele aanduidingen in deze mockup.
+- **Iconen**: het titelicoon wordt voor gekoppelde schermen uit de icoonregel van
+  het FO in `_local/Zorgviewer.wiki/Functionele-Ontwerpen-(FO's)/` gelezen.
+  Een expliciete mapping in de converter koppelt wireframes aan FO's en, bij
+  meerdere iconen, aan de juiste component. Titeliconen gebruiken Google Material
+  Symbols Outlined; navigatie en tabel gebruiken Material Icons Outlined. Zonder
+  koppeling, FO of icoonregel volgt een waarschuwing en het standaardicoon
+  `description`. Het SharePoint-maatwerkicoon voor Intoxicaties wordt benaderd
+  met de twee in het FO genoemde symbolen. Google Fonts moet bereikbaar zijn.
+  Sorteren, filteren en verversen zijn visuele aanduidingen in deze mockup.
 - **Components**: 
   - Bron-monogrammen (28×28px cirkels)
   - Pills (patiënt, gebruiker)

@@ -7,7 +7,8 @@ die is hieronder expliciet aangegeven en niet overal pixel-exact.
 ## Technologie stack
 - **Framework**: Vue 3
 - **Component library**: PrimeVue (DataTable, Column, Button, etc.)
-- **Icon library in modus E**: Google Material Icons Outlined, geladen via Google Fonts.
+- **Icon library in modus E**: Google Material Symbols Outlined voor FO-titeliconen
+  en Material Icons Outlined voor de overige iconen, geladen via Google Fonts.
   De oudere beschrijvingen voor andere modi gebruiken nog PrimeIcons of SVG.
 - **Font**: Google Fonts "Open Sans"
 - **Layout**: CSS Grid + Flexbox
@@ -219,8 +220,13 @@ Bij een uitgeklapte hoofdrij komen één of meer sub-rijen `<tr class="sub">`:
 
 ## Iconenset
 
-In modus E worden Google Material Icons Outlined gebruikt voor de topbar,
-zijbalk, paneelheader en tabel. Voorbeelden: `timeline`, `description`,
+In modus E worden de titeliconen van gekoppelde schermen uit de icoonregel van
+het betreffende lokale functioneel ontwerp gelezen en als Google Material Symbols
+Outlined getoond. Als een koppeling, FO of icoon ontbreekt, waarschuwt de
+generator en gebruikt deze `description`. Voor het SharePoint-maatwerkicoon van
+Intoxicaties gebruikt de mockup de twee genoemde symbolen als benadering.
+Voor de topbar, zijbalk, overige paneelheadericonen en tabel worden Material
+Icons Outlined gebruikt. Voorbeelden: `timeline`, `description`,
 `refresh`, `expand_more` en `filter_alt`. De iconen zijn visueel en de
 sorteer-, filter- en refreshiconen zijn in de mockup niet interactief.
 Het laden van de iconen vereist toegang tot Google Fonts.

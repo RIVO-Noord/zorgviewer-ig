@@ -1,4 +1,7 @@
 import importlib.util
+import contextlib
+import io
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -7,6 +10,66 @@ SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "viewdefinition-to-ht
 spec = importlib.util.spec_from_file_location("viewdefinition_to_html", SCRIPT)
 converter = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(converter)
+
+
+class ScreenIconTest(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.fo_dir = Path(self.temp.name)
+
+    def write_fo(self, screen, contents):
+        (self.fo_dir / converter.FO_SCREENS[screen][0]).write_text(contents, encoding='utf-8')
+
+    def icons(self, screen):
+        with contextlib.redirect_stderr(io.StringIO()):
+            return converter.get_screen_icons(Path(f'ViewDefinition-{screen}-ui.md'), self.fo_dir)
+
+    def test_selected_icon_and_alias_are_read_from_screen_section(self):
+        self.write_fo('Condition', """# Schermontwerp
+| Icoon | [diagnose](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:diagnosis:FILL@0;wght@400) |
+# Kaart
+| Icoon | [ander](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:home:FILL@0) |
+""")
+        self.assertEqual(self.icons('Condition'), ('diagnosis',))
+        self.assertEqual(self.icons('Probleemlijst'), ('diagnosis',))
+        self.write_fo('Condition', '# Schermontwerp\n# Kaart\n| Icoon | [ander](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:home:FILL@0) |\n')
+        self.assertEqual(self.icons('Condition'), ())
+
+    def test_css_url_and_labeled_icons(self):
+        self.write_fo('Procedure', '# Schermontwerp\n| Icoon | [scalpel](https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=surgical) |\n')
+        self.assertEqual(self.icons('Procedure'), ('surgical',))
+        self.write_fo('Mobiliteit', """# Schermontwerp
+| Iconen | [gezondheidstoestand](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:list_alt_add:FILL@0) <br> [mobiliteit](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:assist_walker:FILL@0) |
+""")
+        self.assertEqual(self.icons('Mobiliteit'), ('assist_walker',))
+        self.assertEqual(self.icons('NutritionAdvice'), ())
+
+    def test_composite_icon_and_missing_metadata_are_reported(self):
+        self.write_fo('Intoxicaties', """# Schermontwerp
+| Icoon | [Wine bar](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:wine_bar:FILL@0) en [Smoking Rooms](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:smoking_rooms:FILL@0) |
+""")
+        stderr = io.StringIO()
+        with contextlib.redirect_stderr(stderr):
+            icons = converter.get_screen_icons(Path('ViewDefinition-Intoxicaties-ui.md'), self.fo_dir)
+            missing = converter.get_screen_icons(Path('ViewDefinition-Correspondentie-ui.md'), self.fo_dir)
+            unknown = converter.get_screen_icons(Path('ViewDefinition-Unknown-ui.md'), self.fo_dir)
+        self.assertEqual(icons, ('wine_bar', 'smoking_rooms'))
+        self.assertEqual(missing, ())
+        self.assertEqual(unknown, ())
+        self.assertIn('benadering', stderr.getvalue())
+        self.assertIn('FO niet gevonden', stderr.getvalue())
+        self.assertIn('geen FO-icoon gekoppeld', stderr.getvalue())
+
+    def test_symbols_are_loaded_only_for_title_and_default_is_preserved(self):
+        tables = converter.extract_tables('<table><tr><th></th><th>Naam</th></tr><tr><td></td><td>Test</td></tr></table>')
+        html = converter.generate_full_mockup_html('Test', tables, title_icons=('labs',))
+        self.assertIn('icon_names=labs', html)
+        self.assertIn('<div class="panel-icon"><span class="material-symbols-outlined" aria-hidden="true">labs</span></div>', html)
+        self.assertIn('class="material-icons-outlined sidebar-icon" aria-hidden="true">description</span>', html)
+        default = converter.generate_full_mockup_html('Test', tables)
+        self.assertNotIn('icon_names=', default)
+        self.assertIn('<div class="panel-icon"><span class="material-icons-outlined" aria-hidden="true">description</span></div>', default)
 
 
 class CorrespondenceDetailsTest(unittest.TestCase):

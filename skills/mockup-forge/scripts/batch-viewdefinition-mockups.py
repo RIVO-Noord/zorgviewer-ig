@@ -42,9 +42,10 @@ def generate_html_mockup(input_file, output_file, script_dir):
     ]
     
     result = subprocess.run(cmd, capture_output=True, text=True)
+    if result.stderr:
+        print(result.stderr, file=sys.stderr, end="")
     if result.returncode != 0:
         print(f"❌ Error processing {input_file.name}:")
-        print(result.stderr)
         return False
     
     print(f"✓ {input_file.name} → {output_file.name}")
