@@ -89,7 +89,12 @@ class InlineDetailsIconTest(unittest.TestCase):
         self.assertNotIn('▶', html)
         self.assertEqual(html.count('<tr>\n  <td></td>'), 2)
         self.assertEqual(html.count('data-detail-row="true"'), 1)
-        self.assertIn('colspan="3"', html)
+        self.assertIn(
+            '<tr data-detail-row="true">\n  <td></td>\n'
+            '  <td colspan="2"><div style="padding: 16px 0; background: #F5F8FA;">'
+            '<b>Details</b><br/>Inhoud</div></td>',
+            html,
+        )
         self.assertIn('Tweede', html)
         self.assertIn('Derde', html)
         self.assertNotIn('geheim', html)
@@ -116,6 +121,24 @@ class InlineDetailsIconTest(unittest.TestCase):
         self.assertEqual(html.count('>arrow_upward</span>'), 2)
         self.assertEqual(html.count('>arrow_downward</span>'), 2)
         self.assertEqual(html.count('>filter_alt</span>'), 2)
+
+    def test_group_headings_are_preserved_and_not_treated_as_details(self):
+        html = self.render(
+            '<tr><td colspan="5"><b>Alcohol</b></td></tr>'
+            '<tr><td>▼</td><td>Epic</td><td>Eerste</td><td>geheim</td></tr>'
+            '<tr><td colspan="5"><b>Roken</b></td></tr>'
+            '<tr><td>▼</td><td>CGM</td><td>Tweede</td><td>geheim</td></tr>'
+            '<tr><td></td><td colspan="3"><b>Toelichting</b><br/>Inhoud</td></tr>'
+        )
+        alcohol = '<tr class="group-row"><td colspan="3"><b>Alcohol</b></td></tr>'
+        roken = '<tr class="group-row"><td colspan="3"><b>Roken</b></td></tr>'
+        self.assertIn(alcohol, html)
+        self.assertIn(roken, html)
+        self.assertLess(html.index(alcohol), html.index('Eerste'))
+        self.assertLess(html.index('Eerste'), html.index(roken))
+        self.assertLess(html.index(roken), html.index('Tweede'))
+        self.assertEqual(html.count('>expand_more</span>'), 1)
+        self.assertEqual(html.count('data-detail-row="true"'), 1)
 
 
 if __name__ == "__main__":

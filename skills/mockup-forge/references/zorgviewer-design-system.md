@@ -35,7 +35,7 @@ die is hieronder expliciet aangegeven en niet overal pixel-exact.
 - **Allergieën / intoleranties** (hart met streep door): `#E53E3E` (rood)
 
 ### Bron-kolom — monogram-cirkels
-Bron wordt **niet als badge of tekst** weergegeven, maar als gekleurde cirkel met afkorting van de bronnaam. In modus E is deze 32×32px, met border-radius 50%, witte tekst, font-weight 700 en font-size 12px. De afkorting bestaat uit maximaal twee hoofdletters uit de bronnaam, of de eerste twee tekens als er geen hoofdletters zijn.
+Bron wordt **niet als badge of tekst** weergegeven, maar als gekleurde cirkel met afkorting van de bronnaam. In modus E is deze 32×32px, met border-radius 50%, witte tekst, font-weight 700 en font-size 10.8px. De afkorting bestaat uit maximaal twee hoofdletters uit de bronnaam, of de eerste twee tekens als er geen hoofdletters zijn.
 
 | Bron      | Cirkelkleur | Tekst        |
 |-----------|-------------|--------------|
@@ -55,21 +55,24 @@ Voor onbekende bronnen gebruikt modus E `#4A5568`.
 - **Niet actueel**: achtergrond `#F1F5F9`, tekst `#64748B`, border `#CBD5E1`, border-radius 14px
 
 ## Typografie
+- Alle tekstgroottes zijn 90% van de eerdere waarden. Schaal iconen en
+  layoutafmetingen niet mee; de hieronder genoemde tekstgroottes zijn al aangepast.
 - **Familie**: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif
-- **Body**: 14px / line-height 1.4 / color `#2D3748`
-- **Componenttitel** (paneel-h2): 17px, font-weight 600, color `#2D3748`
-- **Kolomheaders**: 13px, font-weight 600, color `#00838F`
-- **Tabeldata**: 14px, font-weight 400, color `#2D3748`
-- **Sectielabel zijbalk**: 14px, font-weight 700, color `#006B73`
-- **Sub-rij label** ("Lateraliteit"): 13px, font-weight 700, color `#2D3748`
-- **Pill-label** ("BSN"): 13px, font-weight 600, color `#00838F`
+- **Body**: modus D 12.6px; modus E 90% van de standaardbrowsergrootte.
+- **Componenttitel**: 15.3px, font-weight 600, color `#2D3748`
+- **Kolomheaders**: 11.7px, font-weight 600, color `#00838F`
+- **Tabeldata**: 12.6px, font-weight 400, color `#2D3748`
+- **Sectielabel zijbalk**: modus D 12.6px; modus E 11.7px, font-weight 700, color `#006B73`
+- **Sub-rij label** ("Lateraliteit"): 11.7px, font-weight 700, color `#2D3748`
+- **Pill-label** ("BSN"): 11.7px, font-weight 600, color `#00838F`
+- **Titel correspondentie-detailpaneel**: 13.5px; inhoud: 12.6px.
 
 ## Layout
 
 ### Globale structuur
-- **Topbar** (hoofdbalk met logo + patiënt-pills + gebruiker, hoogte ~64px, witte achtergrond, onderrand 1px `#E2E8F0`)
+- **Topbar** (hoofdbalk met logo + patiënt-pills + gebruiker, in modus E 56px hoog met 16px horizontale padding; witte achtergrond, onderrand 1px `#E2E8F0`). In modus D is de padding 8px 16px.
 - **Sidebar** (260px breed, wit, rechter rand 1px `#E2E8F0`)
-- **Content-area** (rest van breedte, achtergrond `#EFF6F7`, padding 24px)
+- **Content-area** (rest van breedte, achtergrond `#EFF6F7`; padding in modus E 16px, in modus D 24px)
 
 ### Sidebar-structuur
 De zijbalk heeft twee delen:
@@ -93,12 +96,13 @@ Gebruikerschip rechtsboven heeft dezelfde stijl met badge-icoon.
 - Border-radius: 8px
 - Box-shadow: 0 1px 3px rgba(0,0,0,0.04)
 - `overflow: hidden`
-- In modus E scrollt de tabel binnen `.panel-body` (maximaal `calc(100vh - 250px)`);
-  de paneeltitel blijft buiten dit scrollgebied staan en de kolomheaders zijn sticky.
+- In modus E vullen het paneel en het tabelscrollgebied de beschikbare
+  viewporthoogte tussen de topbar en de onderste contentmarge. De paneeltitel
+  blijft buiten het scrollgebied staan en de kolomheaders zijn sticky.
 
 ### Paneelheader
 - Achtergrond: **uniform `#EFF6F7`** (géén gradient naar wit)
-- Padding: 16px 20px
+- Padding: 12px 16px; ruimte tussen icoon en titel: 8px in modus E, 10px in modus D.
 - Onderrand: 1px solid `#E2E8F0`
 - Links: paneel-icoon (40×40px, border-radius 10px, border 2px solid `#00838F`, witte achtergrond, icoon in teal `#00838F`, grootte 22px) + paneeltitel-h2
 - Rechts: alleen het refresh-icoon (circulaire pijl), outline-style, kleur `#00838F`, 20px.
@@ -107,7 +111,7 @@ Gebruikerschip rechtsboven heeft dezelfde stijl met badge-icoon.
 
 ### Kolomheaders
 - Achtergrond: `#EFF6F7` (mintgroen — consistent met paneelheader)
-- Tekst: teal `#00838F`, 13px, font-weight 600
+- Tekst: teal `#00838F`, 11.7px, font-weight 600
 - Padding: 14px 16px
 - Bovenrand: 1px solid `#D6E5E7`
 - Onderrand: 2px solid `#D6E5E7`
@@ -129,9 +133,10 @@ de volledige naam tussen haakjes staat, worden niet getoond.
   Material Icons-icoon `expand_more` (gecentreerd, kleur `#00838F`). Rijen zonder details hebben een lege
   icooncel; de generator biedt momenteel geen interactieve in- of uitklapfunctie.
 - De icoonkolom ontbreekt helemaal als geen enkele rij inhoudelijke details heeft.
-- Hoofd- en detailrij blijven bij elkaar. De detailrij beslaat alle zichtbare
-  kolommen, heeft achtergrond `#F5F8FA` en behoudt `<b>`-opmaak en `<br/>`-regels
-  uit het wireframe.
+- Hoofd- en detailrij blijven bij elkaar. De detailrij heeft een lege cel onder
+  de icoonkolom en de inhoud begint op dezelfde horizontale positie als de eerste
+  datakolom. De inhoud beslaat de overige zichtbare kolommen, heeft achtergrond
+  `#F5F8FA` en behoudt `<b>`-opmaak en `<br/>`-regels uit het wireframe.
 - Correspondentie heeft altijd een andere weergave: geen icoonkolom of inline
   detailrij, maar een detailpaneel rechts.
 
@@ -140,7 +145,8 @@ de volledige naam tussen haakjes staat, worden niet getoond.
 - Padding cell: 14px 16px
 - Onderrand: 1px solid `#E8ECF0` (subtiel, iets lichter)
 - Vertical-align: middle
-- **Detailrijen in modus E**: achtergrond `#F5F8FA`; binnenruimte 16px 20px;
+- **Detailrijen in modus E**: achtergrond `#F5F8FA`; binnenruimte 16px verticaal;
+  horizontaal dezelfde celpadding als de datakolom;
   vetgedrukte tekst en `<br/>`-regelafbrekingen uit de wireframe blijven behouden.
 
 ### Correspondentie: detailpaneel rechts (modus E)
@@ -168,8 +174,8 @@ Bij een uitgeklapte hoofdrij komen één of meer sub-rijen `<tr class="sub">`:
 - Achtergrond: `#FFFFFF` (wit — net als de hoofdrijen, GEEN aparte kleur)
 - Eerste cel leeg (uitgelijnd onder de chevron)
 - Tweede cel met `colspan="N"`: `<span class="sub-label">Label</span><span class="sub-value">Value</span>`
-- Sub-label: font-weight 700, kleur `#2D3748`, 13px
-- Sub-value: kleur `#2D3748`, 13px
+- Sub-label: font-weight 700, kleur `#2D3748`, 11.7px
+- Sub-value: kleur `#2D3748`, 11.7px
 
 **KRITISCH — sub-rijen vormen één visueel blok:**
 - **GEEN border-bottom op interne sub-rijen** (anders krijg je hinderlijke lijntjes in het uitklapveld)
@@ -190,7 +196,7 @@ Bij een uitgeklapte hoofdrij komen één of meer sub-rijen `<tr class="sub">`:
 - Padding: 10px 20px
 - Gap tussen icoon en label: 12px
 - Icoon: 18px, kleur `#4A5568`
-- Tekst: 14px, kleur `#2D3748`
+- Tekst: 12.6px, kleur `#2D3748`
 - **Actief item** (`is-active`):
   - Achtergrond: `#ECF6F7`
   - Tekst: `#2D3748` (donkergrijs, niet teal)
@@ -201,8 +207,8 @@ Bij een uitgeklapte hoofdrij komen één of meer sub-rijen `<tr class="sub">`:
 
 ### Sectielabels in zijbalk
 - "Overzicht", "Gegevens" etc.
-- Padding: 16px 20px 6px
-- Font-size: 14px, font-weight: 700
+- Padding: 12px 20px 4px in modus D; in modus E 0 16px met 6px ondermarge.
+- Font-size: 12.6px (modus D) of 11.7px (modus E), font-weight: 700
 - Kleur: `#006B73`
 
 ### Help & Info footer

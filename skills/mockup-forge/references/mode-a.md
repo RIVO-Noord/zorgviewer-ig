@@ -41,7 +41,8 @@ ingekort tot de secties "Kleurenpalet", "Typografie", "Componenten", en "Veelgem
 - Tables: use <table> with border-collapse:collapse.
 - Desktop: max-width:1280px, centered with margin:0 auto.
 - Google Fonts via <link> tag.
-- Minimum font-size: 12px.
+- Use the text sizes in the design system, scaled to 90% of the previous sizes.
+  Keep icon and layout dimensions unchanged.
 
 ═══ TABLE CELL STYLING ═══
 - Table cell values are PLAIN TEXT by default. No badges/tags unless the cell in IMAGE 1 clearly has a colored background.

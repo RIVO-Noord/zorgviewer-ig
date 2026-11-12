@@ -7,6 +7,10 @@ description: Genereer professionele UI mockups als PNG-afbeeldingen op basis van
 
 Genereer pixel-perfecte UI mockups als PNG door wireframes, schermontwerpen of Excel-tabellen te combineren via de Claude API, gerenderd met Playwright/Weasyprint voor exacte browser-kwaliteit.
 
+Gebruik voor alle modi tekstgroottes op 90% van de eerdere grootte; pas de
+tekstgroottes uit het design system toe zonder ze opnieuw te schalen. Schaal
+bij deze typografische aanpassing iconen en layoutafmetingen niet mee.
+
 ## Vijf modi
 
 ### Modus A: Wireframe → Mockup

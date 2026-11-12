@@ -166,12 +166,17 @@ def has_content(row, visible_indices):
     return False
 
 
+def is_group_row(row):
+    """Herken een rij met een groepskop die over de tabelkolommen loopt."""
+    return len(row) == 1 and row[0]['colspan'] > 1
+
+
 def following_detail_row(rows, index, num_header_cols):
     """Geef alleen een echte detailrij terug, niet een volgende volledige hoofdrij."""
     if index + 1 >= len(rows):
         return None
     row = rows[index + 1]
-    if is_detail_row(row, num_header_cols) and not is_main_row(row, num_header_cols):
+    if not is_group_row(row) and is_detail_row(row, num_header_cols) and not is_main_row(row, num_header_cols):
         return row
     return None
 
@@ -260,7 +265,11 @@ def create_html_mockup(title, tables, icon='description', side_details=False):
     first_row = True
     while i < len(rows):
         row = rows[i]
-        
+        if is_group_row(row):
+            html_table += f'<tr class="group-row"><td colspan="{len(displayed_indices)}">{row[0]["content"]}</td></tr>\n'
+            i += 1
+            continue
+
         # Check of dit een hoofdrij is
         if is_main_row(row, num_header_cols):
             # Check of volgende rij een detail row is met content
@@ -314,7 +323,10 @@ def create_html_mockup(title, tables, icon='description', side_details=False):
             if not side_details and has_detail and detail_html:
                 num_visible_cols = len(displayed_indices)
                 html_table += '<tr data-detail-row="true">\n'
-                html_table += f'  <td colspan="{num_visible_cols}"><div style="padding: 16px 20px; background: #F5F8FA;">'
+                if show_icon_column and num_visible_cols > 1:
+                    html_table += '  <td></td>\n'
+                    num_visible_cols -= 1
+                html_table += f'  <td colspan="{num_visible_cols}"><div style="padding: 16px 0; background: #F5F8FA;">'
                 html_table += detail_html
                 html_table += '</div></td>\n'
                 html_table += '</tr>\n'
@@ -395,6 +407,7 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
         
         body {{
             font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 90%;
             background: #ffffff;
             color: #2D3748;
         }}
@@ -428,10 +441,10 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 64px;
+            height: 56px;
             background: #ffffff;
             border-bottom: 1px solid #E2E8F0;
-            padding: 0 24px;
+            padding: 0 16px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.04);
         }}
         
@@ -442,7 +455,7 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
         }}
         
         .logo {{
-            font-size: 18px;
+            font-size: 16.2px;
             font-weight: 700;
             color: #00838F;
             display: flex;
@@ -464,7 +477,7 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
             background: #ffffff;
             border: 1px solid #D6E5E7;
             border-radius: 8px;
-            font-size: 13px;
+            font-size: 11.7px;
             color: #2D3748;
         }}
         
@@ -493,13 +506,13 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
             background: #ffffff;
             border: 1px solid #D6E5E7;
             border-radius: 8px;
-            font-size: 13px;
+            font-size: 11.7px;
             color: #2D3748;
         }}
         
         .layout-container {{
             display: flex;
-            height: calc(100vh - 64px);
+            height: calc(100vh - 56px);
         }}
         
         /* Sidebar */
@@ -523,18 +536,18 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
         }}
         
         .sidebar-section-title {{
-            font-size: 13px;
+            font-size: 11.7px;
             font-weight: 700;
             color: #006B73;
             padding: 0 16px;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }}
         
         .sidebar-item {{
             padding: 12px 16px;
-            font-size: 14px;
+            font-size: 12.6px;
             color: #2D3748;
             cursor: pointer;
             display: flex;
@@ -562,8 +575,11 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
         .content-area {{
             flex: 1;
             background: #EFF6F7;
-            padding: 24px;
-            overflow-y: auto;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            min-height: 0;
         }}
         
         /* Panel */
@@ -573,21 +589,26 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
             border-radius: 8px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.04);
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-height: 0;
         }}
         
         .panel-header {{
             background: #EFF6F7;
-            padding: 16px 20px;
+            padding: 12px 16px;
             border-bottom: 1px solid #E2E8F0;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-shrink: 0;
         }}
         
         .panel-header-left {{
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
         }}
         
         .panel-icon {{
@@ -604,7 +625,7 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
         }}
         
         .panel-title {{
-            font-size: 17px;
+            font-size: 15.3px;
             font-weight: 600;
             color: #2D3748;
         }}
@@ -625,7 +646,9 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
         
         .panel-body {{
             padding: 0;
-            max-height: calc(100vh - 250px);
+            flex: 1;
+            min-width: 0;
+            min-height: 0;
             overflow-y: auto;
             overflow-x: auto;
         }}
@@ -633,24 +656,27 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
         .correspondence-layout {{
             display: grid;
             grid-template-columns: minmax(0, 1fr) minmax(200px, 30%);
+            grid-template-rows: minmax(0, 1fr);
+            flex: 1;
+            min-height: 0;
         }}
 
         .correspondence-details {{
             padding: 20px;
             border-left: 1px solid #E2E8F0;
-            max-height: calc(100vh - 250px);
+            min-height: 0;
             overflow-y: auto;
             overflow-wrap: anywhere;
         }}
 
         .correspondence-details h2 {{
-            margin-bottom: 16px;
-            font-size: 15px;
+            margin-bottom: 12px;
+            font-size: 13.5px;
             color: #00838F;
         }}
 
         .correspondence-details #detail-content {{
-            font-size: 14px;
+            font-size: 12.6px;
             line-height: 1.5;
         }}
 
@@ -677,7 +703,7 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
         th {{
             padding: 14px 16px;
             text-align: left;
-            font-size: 13px;
+            font-size: 11.7px;
             font-weight: 600;
             color: #00838F;
             white-space: nowrap;
@@ -685,7 +711,7 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
         
         td {{
             padding: 14px 16px;
-            font-size: 14px;
+            font-size: 12.6px;
             color: #2D3748;
             border-bottom: 1px solid #E8ECF0;
         }}
@@ -697,6 +723,11 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
         
         tbody tr:hover {{
             background: #F9FAFB;
+        }}
+
+        tbody tr.group-row,
+        tbody tr.group-row:hover {{
+            background: #EFF6F7;
         }}
         
         tbody tr[data-detail-row="true"] {{
@@ -716,7 +747,7 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
             justify-content: center;
             color: white;
             font-weight: 700;
-            font-size: 12px;
+            font-size: 10.8px;
             flex-shrink: 0;
         }}
         
@@ -736,7 +767,7 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
             background: #ffffff;
             border: 1px solid #D6E5E7;
             border-radius: 6px;
-            font-size: 13px;
+            font-size: 11.7px;
             color: #2D3748;
             cursor: pointer;
             transition: all 0.2s;

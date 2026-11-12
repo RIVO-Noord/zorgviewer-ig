@@ -339,7 +339,7 @@ function doExampleRows(allExtractedRows, md_ui) {
     md_ui.push("</tr>");
 
     // Find the index of the first date or dateTime column for sorting
-    const sortColumnIndex = allExtractedRows.length > 0 ? allExtractedRows[0].findIndex(column => column.type === "date" || column.type === "dateTime" || column.type === "Period") : -1;
+    const sortColumnIndex = allExtractedRows.length > 0 ? allExtractedRows[0].findIndex(column => column.type === "date" || column.type === "dateTime" || column.type === "Period"|| column.type === "Period:date") : -1;
 
     // Sort allExtractedRows by the first date column if found, otherwise no specific sorting
     if (sortColumnIndex !== -1) {
@@ -356,11 +356,11 @@ function doExampleRows(allExtractedRows, md_ui) {
             // Handle Period type by using the start date for sorting
             let aKey = a[sortColumnIndex].value;
             let bKey = b[sortColumnIndex].value;
-            if (a[sortColumnIndex].type === "Period") {
+            if (a[sortColumnIndex].type === "Period" || a[sortColumnIndex].type === "Period:date") {
                 const periodA = a[sortColumnIndex].value.split(' - ');
                 aKey = periodA[0]; // Use start date for sorting
             }
-            if (b[sortColumnIndex].type === "Period") {
+            if (b[sortColumnIndex].type === "Period" || b[sortColumnIndex].type === "Period:date") {
                 const periodB = b[sortColumnIndex].value.split(' - ');
                 bKey = periodB[0]; // Use start date for sorting
             }
@@ -400,7 +400,7 @@ function extractExampleData(select, example, exampleFileName) {
 
         let value = "";
         if (evalResult && evalResult.length > 0) {
-            if (column.type == "date" || column.type == "dateTime" || column.type == "Period") {
+            if (column.type == "date" || column.type == "dateTime" || column.type == "Period"|| column.type === "Period:date") {
                 value = evalResult[0]; // Store raw date value
             } else if (column.type == "code") {
                 value = evalResult[0];

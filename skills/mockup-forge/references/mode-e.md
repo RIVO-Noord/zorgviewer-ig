@@ -64,15 +64,19 @@ Het script:
 
 ### Data-transformatie
 - **Bron-kolom**: Omgezet naar monogram-cirkels (bijv. "NedapONS" → "NO" cirkel met #1565C0)
+- **Groepskoppen**: Volledige tabelbrede koppen uit de wireframe blijven boven
+  de bijbehorende rijen staan, met alleen de zichtbare kolommen in de span.
 - **Expandable rijen**: Alleen hoofdrijen met inhoudelijke details tonen een
   uitklapicoon. Als geen enkele rij details heeft, wordt de icoonkolom weggelaten.
 - **Detail-rows**: Verslagen/extra info onder expandable rijen ingebed met grijze achtergrond.
+  Een lege cel onder de icoonkolom lijnt de inhoud uit met de eerste datakolom.
   Alleen voor `ViewDefinition-Correspondentie-ui.md` staan de details rechts naast de
   tabel en ontbreekt de expandkolom. De paneeltitel bevat de bron, datum en beschrijving
   van de geselecteerde rij; lege waarden worden weggelaten. De eerste rij is
   geselecteerd; selecteer een andere rij met de muis of met Enter/spatie om de
   bijbehorende details te zien. Een rij zonder details
-  toont een melding. Het detailpaneel en de tabel scrollen afzonderlijk.
+  toont een melding. Het detailpaneel en de tabel vullen de beschikbare
+  paneelhoogte en scrollen afzonderlijk.
 
 ### HTML generatie
 Genereert een volledige `<html>` met:
@@ -86,7 +90,8 @@ Genereert een volledige `<html>` met:
 
 Het script past automatisch toe:
 - **Kleuren**: Teal (#00838F), grijstinten, bron-kleuren
-- **Typografie**: Open Sans, juiste font-sizes
+- **Typografie**: Open Sans, tekstgroottes op 90% van de eerdere grootte;
+  iconen en layoutafmetingen blijven ongewijzigd.
 - **Iconen**: Google Material Icons Outlined voor navigatie, paneel en tabel;
   het laden van de iconen vereist toegang tot Google Fonts. Sorteren, filteren
   en verversen zijn visuele aanduidingen in deze mockup.
@@ -95,6 +100,10 @@ Het script past automatisch toe:
   - Pills (patiënt, gebruiker)
   - Panel headers met icoon
 - **Spacing**: 16-24px padding/margins
+- **Headers**: compacte topbar van 56px hoog en paneelheader met 12px 16px
+  padding; sectie- en detailtitels hebben beperkte ondermarge.
+- **Tabelhoogte**: het paneel vult de beschikbare viewporthoogte met een
+  contentmarge van 16px; alleen de tabelinhoud scrollt onder de sticky kolomkoppen.
 - **Borders**: 1px #E2E8F0
 - **Shadows**: 0 1px 3px rgba(0,0,0,0.04)
 

@@ -23,31 +23,6 @@
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
-<td>Sanday</td>
-<td></td>
-<td>PANTOPRAZOL TABLET MSR 40MG</td>
-<td>2 maal per dag 1 tablet;1 TABLET 1 UUR VOOR DE MAALTIJD</td>
-<td></td>
-<td></td>
-</tr><tr><td></td><td colspan=6>
-<b>Afspraakdatum</b><br/>7-8-2025<br/>
-<b>Voorschrijver</b><br/>Jenneke van der Vecht<br/>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><td>&#9660;</td>
-<td>IPS-Epic</td>
-<td></td>
-<td>aspirin-acetaminophen-caffeine (EXCEDRIN MIGRAINE) 250-250-65 MG per tablet</td>
-<td>1 tablet, Oral, EVERY 6 HOURS PRN Starting Tue 9/17/2024, Disp-30 tablet, R-0, N...</td>
-<td>Oral</td>
-<td></td>
-</tr><tr><td></td><td colspan=6>
-<b>Medicatie vorm</b><br/>Tablet<br/>
-<b>Afspraakdatum</b><br/>17-9-2024<br/>
-<b>Voorschrijver</b><br/>Emile Underwood, MD<br/>
-<b>Type</b><br/>afspraak<br/>
-</td></tr>
-<tr><td>&#9660;</td>
 <td>Nexus</td>
 <td>3-10-2023</td>
 <td>GLYCEROFOSFORZ. INFCONC 1MMOL/ML(FOSFAAT) AMP 20ML</td>
@@ -107,15 +82,16 @@
 <b>Type</b><br/>toedieningsafspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
-<td>MP9</td>
-<td></td>
-<td>IBUPROFEN TABLET 600MG</td>
-<td>1 stuk 2x elke 1 dag &#9432;</td>
-<td>oraal</td>
+<td>Epic</td>
+<td>27-11-2020</td>
+<td>metoPROLOL 50mg tablet</td>
+<td>1x per dag 50 mg innemen.</td>
+<td>Oraal</td>
 <td></td>
 </tr><tr><td></td><td colspan=6>
-<b>Afspraakdatum</b><br/>11-11-2022<br/>
-<b>Voorschrijver</b><br/>Healthcare professional (role), Peter van Pulver, Huisartsen, niet nader gespeci...<br/>
+<b>Medicatie vorm</b><br/>tablet<br/>
+<b>Afspraakdatum</b><br/>27-11-2020<br/>
+<b>Voorschrijver</b><br/>M Crop<br/>
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
@@ -131,28 +107,38 @@
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
-<td>Epic</td>
-<td>27-11-2020</td>
-<td>metoPROLOL 50mg tablet</td>
-<td>1x per dag 50 mg innemen.</td>
-<td>Oraal</td>
+<td>MP9</td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td>1 stuk 2x elke 1 dag &#9432;</td>
+<td>oraal</td>
 <td></td>
 </tr><tr><td></td><td colspan=6>
-<b>Medicatie vorm</b><br/>tablet<br/>
-<b>Afspraakdatum</b><br/>27-11-2020<br/>
-<b>Voorschrijver</b><br/>M Crop<br/>
+<b>Afspraakdatum</b><br/>11-11-2022<br/>
+<b>Voorschrijver</b><br/>Healthcare professional (role), Peter van Pulver, Huisartsen, niet nader gespeci...<br/>
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
-<td>Epic</td>
+<td>Sanday</td>
 <td></td>
-<td>simvastatine 20mg tablet</td>
-<td>innemen. s Avonds innemen; Bij dit middel GEEN grapefruit(sap) gebruiken</td>
-<td>Oraal</td>
+<td>PANTOPRAZOL TABLET MSR 40MG</td>
+<td>2 maal per dag 1 tablet;1 TABLET 1 UUR VOOR DE MAALTIJD</td>
+<td></td>
 <td></td>
 </tr><tr><td></td><td colspan=6>
-<b>Registratiedatum</b><br/>15-3-2018<br/>
-<b>Type</b><br/>huidig<br/>
+<b>Afspraakdatum</b><br/>7-8-2025<br/>
+<b>Voorschrijver</b><br/>Jenneke van der Vecht<br/>
+<b>Type</b><br/>afspraak<br/>
+</td></tr>
+<tr><td>&#9660;</td>
+<td>AORTA</td>
+<td></td>
+<td>IBUPROFEN TABLET 600MG</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td></td><td colspan=6>
+<b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
 <td>AORTA</td>
@@ -165,13 +151,16 @@
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
-<td>AORTA</td>
+<td>IPS-Epic</td>
 <td></td>
-<td>IBUPROFEN TABLET 600MG</td>
-<td></td>
-<td></td>
+<td>aspirin-acetaminophen-caffeine (EXCEDRIN MIGRAINE) 250-250-65 MG per tablet</td>
+<td>1 tablet, Oral, EVERY 6 HOURS PRN Starting Tue 9/17/2024, Disp-30 tablet, R-0, N...</td>
+<td>Oral</td>
 <td></td>
 </tr><tr><td></td><td colspan=6>
+<b>Medicatie vorm</b><br/>Tablet<br/>
+<b>Afspraakdatum</b><br/>17-9-2024<br/>
+<b>Voorschrijver</b><br/>Emile Underwood, MD<br/>
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
@@ -182,6 +171,17 @@
 <td></td>
 <td></td>
 </tr><tr><td></td><td colspan=6>
+<b>Type</b><br/>huidig<br/>
+</td></tr>
+<tr><td>&#9660;</td>
+<td>Epic</td>
+<td></td>
+<td>simvastatine 20mg tablet</td>
+<td>innemen. s Avonds innemen; Bij dit middel GEEN grapefruit(sap) gebruiken</td>
+<td>Oraal</td>
+<td></td>
+</tr><tr><td></td><td colspan=6>
+<b>Registratiedatum</b><br/>15-3-2018<br/>
 <b>Type</b><br/>huidig<br/>
 </td></tr>
 </tbody>

@@ -315,20 +315,20 @@ def render_html(title: str, headers: list, rows: list) -> str:
 <style>
 *, *::before, *::after {{ margin: 0; padding: 0; box-sizing: border-box; }}
 html {{ direction: ltr; }}
-body {{ font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #FFFFFF; color: #2D3748; font-size: 14px; line-height: 1.4; }}
+body {{ font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #FFFFFF; color: #2D3748; font-size: 12.6px; line-height: 1.4; }}
 
-.topbar {{ display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; border-bottom: 1px solid #E2E8F0; background: #FFFFFF; gap: 24px; }}
+.topbar {{ display: flex; align-items: center; justify-content: space-between; padding: 8px 16px; border-bottom: 1px solid #E2E8F0; background: #FFFFFF; gap: 24px; }}
 .topbar-left {{ display: flex; align-items: center; gap: 32px; flex: 1; }}
-.brand {{ display: flex; align-items: center; gap: 8px; color: #00838F; font-size: 20px; font-weight: 600; white-space: nowrap; }}
+.brand {{ display: flex; align-items: center; gap: 8px; color: #00838F; font-size: 18px; font-weight: 600; white-space: nowrap; }}
 .brand svg {{ width: 26px; height: 26px; }}
 .patient-pills {{ display: flex; align-items: center; gap: 16px; }}
-.pill {{ display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; border: 1px solid #D6E5E7; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #2D3748; white-space: nowrap; }}
+.pill {{ display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; border: 1px solid #D6E5E7; border-radius: 8px; padding: 8px 14px; font-size: 12.6px; color: #2D3748; white-space: nowrap; }}
 .pill svg {{ width: 16px; height: 16px; color: #00838F; flex-shrink: 0; }}
-.pill .label {{ color: #00838F; font-size: 13px; font-weight: 600; }}
+.pill .label {{ color: #00838F; font-size: 11.7px; font-weight: 600; }}
 .user-chip {{ display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; border: 1px solid #D6E5E7; border-radius: 8px; padding: 8px 14px; color: #2D3748; white-space: nowrap; }}
 .user-chip svg {{ width: 16px; height: 16px; color: #00838F; }}
 
-.layout {{ display: grid; grid-template-columns: 260px 1fr; min-height: calc(100vh - 64px); }}
+.layout {{ display: grid; grid-template-columns: 260px 1fr; min-height: calc(100vh - 56px); }}
 
 .sidebar {{ background: #FFFFFF; border-right: 1px solid #E2E8F0; padding: 12px 0 0 0; display: flex; flex-direction: column; }}
 .sidebar-nav {{ flex: 1; }}
@@ -336,26 +336,26 @@ body {{ font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI",
 .sidebar-footer .nav-item {{ flex: 1; }}
 .sidebar-footer .collapse-btn {{ color: #00838F; padding: 8px 14px; display: inline-flex; align-items: center; }}
 .sidebar-footer .collapse-btn svg {{ width: 16px; height: 16px; }}
-.nav-item {{ display: flex; align-items: center; gap: 12px; padding: 10px 20px; color: #2D3748; font-size: 14px; }}
+.nav-item {{ display: flex; align-items: center; gap: 12px; padding: 10px 20px; color: #2D3748; font-size: 12.6px; }}
 .nav-item.is-disabled {{ color: #B0B7C3; }}
 .nav-item.is-disabled svg {{ color: #B0B7C3; }}
 .nav-item svg {{ width: 18px; height: 18px; color: #4A5568; flex-shrink: 0; }}
 .nav-item.is-active {{ background: #ECF6F7; color: #2D3748; font-weight: 500; }}
 .nav-item.is-active svg {{ color: #00838F; }}
-.nav-section {{ padding: 16px 20px 6px; font-size: 14px; font-weight: 700; color: #006B73; }}
+.nav-section {{ padding: 12px 20px 4px; font-size: 12.6px; font-weight: 700; color: #006B73; }}
 
 .content {{ background: #EFF6F7; padding: 24px; }}
 .panel {{ background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); overflow: hidden; }}
-.panel-header {{ display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: #EFF6F7; border-bottom: 1px solid #E2E8F0; }}
-.panel-title {{ display: flex; align-items: center; gap: 14px; }}
+.panel-header {{ display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: #EFF6F7; border-bottom: 1px solid #E2E8F0; }}
+.panel-title {{ display: flex; align-items: center; gap: 10px; }}
 .panel-icon {{ width: 40px; height: 40px; border-radius: 10px; border: 2px solid #00838F; display: inline-flex; align-items: center; justify-content: center; color: #00838F; background: #FFFFFF; }}
 .panel-icon svg {{ width: 22px; height: 22px; }}
-.panel-title h2 {{ font-size: 17px; font-weight: 600; color: #2D3748; }}
+.panel-title h2 {{ font-size: 15.3px; font-weight: 600; color: #2D3748; }}
 .panel-actions {{ display: inline-flex; align-items: center; gap: 14px; color: #00838F; }}
 .panel-actions svg {{ width: 20px; height: 20px; }}
 
-table.dt {{ width: 100%; border-collapse: collapse; font-size: 14px; }}
-table.dt thead th {{ background: #F1F5F9; color: #00838F; font-size: 13px; font-weight: 600; text-align: left; padding: 12px 16px; border-bottom: 1px solid #E2E8F0; white-space: nowrap; }}
+table.dt {{ width: 100%; border-collapse: collapse; font-size: 12.6px; }}
+table.dt thead th {{ background: #F1F5F9; color: #00838F; font-size: 11.7px; font-weight: 600; text-align: left; padding: 12px 16px; border-bottom: 1px solid #E2E8F0; white-space: nowrap; }}
 table.dt thead th .hc {{ display: inline-flex; align-items: center; gap: 8px; }}
 table.dt thead th .sort-pair {{ display: inline-flex; align-items: center; gap: 1px; }}
 table.dt thead th .ic {{ opacity: 0.55; }}
@@ -366,7 +366,7 @@ table.dt tbody td {{ padding: 14px 16px; border-bottom: 1px solid #E2E8F0; color
 .col-toggle {{ width: 36px; padding-left: 16px !important; padding-right: 0 !important; }}
 
 .src {{ padding-left: 16px; }}
-.src-ic {{ width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #FFFFFF; }}
+.src-ic {{ width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 9.9px; font-weight: 700; color: #FFFFFF; }}
 .src-eps {{ background: #4A5568; }}
 .src-nictiz {{ background: #0E7490; }}
 .src-epic {{ background: #C2410C; }}
@@ -378,8 +378,8 @@ table.dt tbody td {{ padding: 14px 16px; border-bottom: 1px solid #E2E8F0; color
 table.dt tbody tr.sub td {{ background: #FFFFFF; border-bottom: none !important; padding: 6px 16px; }}
 table.dt tbody tr.sub.sub-first td {{ padding-top: 12px; }}
 table.dt tbody tr.sub.sub-last td {{ border-bottom: 1px solid #E2E8F0 !important; padding-bottom: 12px; }}
-.sub-label {{ font-weight: 700; color: #2D3748; font-size: 13px; margin-right: 8px; }}
-.sub-value {{ color: #2D3748; font-size: 13px; }}
+.sub-label {{ font-weight: 700; color: #2D3748; font-size: 11.7px; margin-right: 8px; }}
+.sub-value {{ color: #2D3748; font-size: 11.7px; }}
 </style>
 </head>
 <body>
