@@ -404,7 +404,7 @@ def create_html_mockup(title, tables, icon='description', side_details=False):
                 if show_icon_column and num_visible_cols > 1:
                     html_table += '  <td></td>\n'
                     num_visible_cols -= 1
-                html_table += f'  <td colspan="{num_visible_cols}"><div style="padding: 16px 0; background: #F5F8FA;">'
+                html_table += f'  <td colspan="{num_visible_cols}"><div>'
                 html_table += detail_html
                 html_table += '</div></td>\n'
                 html_table += '</tr>\n'
@@ -772,7 +772,7 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
 
         .correspondence-details #detail-content {{
             font-size: 12.6px;
-            line-height: 1.5;
+            line-height: 1.3;
         }}
 
         .selectable-row {{ cursor: pointer; }}
@@ -827,6 +827,11 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
         
         tbody tr[data-detail-row="true"] {{
             background: #F5F8FA;
+        }}
+
+        tbody tr[data-detail-row="true"] td {{
+            padding-top: 4px;
+            padding-bottom: 4px;
         }}
         
         tbody tr:last-child td {{

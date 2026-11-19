@@ -146,13 +146,14 @@ de volledige naam tussen haakjes staat, worden niet getoond.
 - Padding cell: 14px 16px
 - Onderrand: 1px solid `#E8ECF0` (subtiel, iets lichter)
 - Vertical-align: middle
-- **Detailrijen in modus E**: achtergrond `#F5F8FA`; binnenruimte 16px verticaal;
+- **Detailrijen in modus E**: achtergrond `#F5F8FA`; celpadding 4px verticaal;
   horizontaal dezelfde celpadding als de datakolom;
   vetgedrukte tekst en `<br/>`-regelafbrekingen uit de wireframe blijven behouden.
 
 ### Correspondentie: detailpaneel rechts (modus E)
 - Alleen `ViewDefinition-Correspondentie-ui.md` gebruikt dit paneel naast de tabel.
   Het paneel is minimaal 200px breed en neemt anders 30% van de beschikbare breedte.
+- Detailtekst heeft een regelhoogte van 1,3; oorspronkelijke regelafbrekingen blijven behouden.
 - Alleen de details van de geselecteerde rij worden getoond; de eerste rij is
   standaard geselecteerd. Selectie met de muis of Enter/spatie werkt de inhoud
   en de titel bij. De geselecteerde rij heeft achtergrond `#ECF6F7`.

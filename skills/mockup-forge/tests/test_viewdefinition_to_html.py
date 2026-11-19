@@ -1,6 +1,7 @@
 import importlib.util
 import contextlib
 import io
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -10,6 +11,33 @@ SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "viewdefinition-to-ht
 spec = importlib.util.spec_from_file_location("viewdefinition_to_html", SCRIPT)
 converter = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(converter)
+
+class IndexTitleTest(unittest.TestCase):
+    def test_batch_index_uses_wireframe_titles_and_preserves_links(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            input_dir = root / 'input'
+            output_dir = root / 'output'
+            input_dir.mkdir()
+            source = input_dir / 'ViewDefinition-Example-ui.md'
+            source.write_text(
+                '### UI Wireframe\n<b>Zorg &amp; verslagen</b>\n'
+                '<table><tr><th>Naam</th></tr><tr><td>Test</td></tr></table>',
+                encoding='utf-8',
+            )
+            output_dir.mkdir()
+            (output_dir / 'ViewDefinition-Example.png').touch()
+            result = subprocess.run(
+                ['python3', str(SCRIPT.with_name('batch-viewdefinition-mockups.py')),
+                 '--input-dir', str(input_dir), '--output-dir', str(output_dir)],
+                capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            index = (output_dir / 'index.html').read_text(encoding='utf-8')
+            self.assertIn('<h3>Zorg &amp; verslagen</h3>', index)
+            self.assertIn('href="ViewDefinition-Example.html"', index)
+            self.assertIn('href="ViewDefinition-Example.png"', index)
+            self.assertNotIn('<h3>Example</h3>', index)
 
 
 class ScreenIconTest(unittest.TestCase):
@@ -154,7 +182,7 @@ class InlineDetailsIconTest(unittest.TestCase):
         self.assertEqual(html.count('data-detail-row="true"'), 1)
         self.assertIn(
             '<tr data-detail-row="true">\n  <td></td>\n'
-            '  <td colspan="2"><div style="padding: 16px 0; background: #F5F8FA;">'
+            '  <td colspan="2"><div>'
             '<b>Details</b><br/>Inhoud</div></td>',
             html,
         )

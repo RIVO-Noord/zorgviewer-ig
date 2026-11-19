@@ -21,7 +21,15 @@ import subprocess
 import sys
 from pathlib import Path
 import argparse
-import json
+import importlib.util
+from html import escape, unescape
+
+
+converter_spec = importlib.util.spec_from_file_location(
+    "viewdefinition_to_html", Path(__file__).with_name("viewdefinition-to-html.py")
+)
+converter = importlib.util.module_from_spec(converter_spec)
+converter_spec.loader.exec_module(converter)
 
 
 def find_viewdefinition_files(input_dir):
@@ -105,6 +113,7 @@ def main():
     # Verwerk elk bestand
     success_count = 0
     html_files = []
+    index_entries = []
     
     for input_file in viewdef_files:
         # Genereer output filename
@@ -115,6 +124,8 @@ def main():
         if generate_html_mockup(input_file, html_file, script_dir):
             success_count += 1
             html_files.append(html_file)
+            title = converter.extract_title(input_file.read_text(encoding="utf-8"))
+            index_entries.append((html_file, title))
             
             # Optioneel: render PNG
             if args.render_png:
@@ -133,10 +144,10 @@ def main():
     
     # Genereer index
     if html_files:
-        generate_index(output_dir, html_files)
+        generate_index(output_dir, index_entries)
 
 
-def generate_index(output_dir, html_files):
+def generate_index(output_dir, index_entries):
     """Genereer een index HTML van alle gegenereerde mockups."""
     index_html = """<!DOCTYPE html>
 <html lang="nl">
@@ -209,13 +220,12 @@ def generate_index(output_dir, html_files):
         <div class="mockup-grid">
 """
     
-    for html_file in sorted(html_files):
-        title = html_file.stem.replace('ViewDefinition-', '').replace('-', ' ')
+    for html_file, title in sorted(index_entries):
         png_file = html_file.with_suffix('.png')
         
         index_html += f"""
             <div class="mockup-card">
-                <h3>{title}</h3>
+                <h3>{escape(unescape(title))}</h3>
                 <div class="links">
                     <a href="{html_file.name}" target="_blank">📄 HTML</a>
 """
