@@ -1,5 +1,26 @@
 # SKILLs
 
+## Azure DevOps wijzigingsoverzicht
+
+Vraag de work-itemupdates en wiki-paginarevisies van Project Zorgviewer op met:
+
+```bash
+node skills/get-devops-changes.js
+```
+
+Standaard loopt de periode vanaf 20 november van dit jaar (of het vorige jaar) tot nu. Gebruik `--from YYYY-MM-DD` en `--to YYYY-MM-DD` voor een eigen periode; de einddatum is inclusief. Per work item wordt ook de huidige area vermeld. `--json` geeft JSON-uitvoer. De PAT wordt gelezen uit `PAT` of uit `.env` in de repository-root; geef de token nooit als argument mee.
+
+### Personal access token aanmaken
+
+1. Meld je aan bij [Azure DevOps UMCG-MIT](https://dev.azure.com/UMCG-MIT/) met een account dat toegang heeft tot de work items en wiki van Zorgviewer.
+2. Open **User settings** en kies **Personal access tokens**. Kies **+ New Token**.
+3. Geef de token een naam, kies organisatie **UMCG-MIT** en stel een zo kort mogelijke geldigheidsduur in.
+4. Kies **Custom defined** en selecteer alleen **Work Items: Read** en **Wiki: Read**. Volledige toegang en schrijfrechten zijn niet nodig.
+5. Kies **Create** en kopieer de token direct; deze wordt daarna niet opnieuw getoond. Bewaar hem veilig.
+6. Zet de token lokaal in het bestand `.env` in de repository-root, op een regel met `PAT=<token>`. Een bestaande omgevingsvariabele `PAT` heeft voorrang op `.env`.
+
+Behandel de PAT als een wachtwoord: deel hem niet in chat, commando's of uitvoer en commit hem nooit. `.env` wordt door Git genegeerd. Trek een gelekte token direct in. Voor meer informatie, zie de [Microsoft-documentatie over PAT's](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops).
+
 ## zib-fhir-generator
 
 Prompt:
