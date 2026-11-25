@@ -4,11 +4,11 @@ const crypto = require('crypto');
 const fhirpath = require('fhirpath');
 const fhirpath_stu3_model = require('fhirpath/fhir-context/stu3');
 
-const pathsFile = path.join(__dirname, 'pseudonymize-paths.json');
+const pathsFile = path.join(__dirname, 'anonymize-paths.json');
 const examplesDir = path.join(__dirname, '..', 'input', 'examples');
 const peopleFile = process.env.PSEUDONYMIZE_FAKES
     ? path.resolve(process.env.PSEUDONYMIZE_FAKES)
-    : path.join(__dirname, 'pseudonymize-fakes.json');
+    : path.join(__dirname, 'anonymize-fakes.json');
 const peopleFileLabel = path.relative(path.join(__dirname, '..'), peopleFile).replace(/\\/g, '/');
 
 const USED_IN_SYSTEM = 'https://zorgviewer.nl/fhir/pseudonymize/used-in';
@@ -33,7 +33,7 @@ const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
 const files = args.filter(a => !a.startsWith('--'));
 if (files.length === 0) {
-    console.error('Usage: node pseudonymize.js [--dry-run] <example-file> [<example-file> ...]');
+    console.error('Usage: node anonymize.js [--dry-run] <example-file> [<example-file> ...]');
     process.exit(1);
 }
 
@@ -1214,6 +1214,49 @@ function replaceInSections(ctx, sections) {
     }
 }
 
+// --- Host names and ids ---
+
+const ABSOLUTE_URL = /^https?:\/\//i;
+
+/** Replace the host of an absolute URL by example.org (scheme, path, query and hash are kept); other strings stay as they are. */
+function replaceHostname(url) {
+    try {
+        const parsed = new URL(url);
+        return `${parsed.protocol}//example.org${parsed.pathname}${parsed.search}${parsed.hash}`;
+    } catch (e) {
+        return url;
+    }
+}
+
+/** Replace host names in link.url, entry.fullUrl and every reference, and truncate resource ids over 64 characters (Epic). */
+function replaceHostnamesAndIds(ctx, node, parentKey = null, where = '') {
+    if (Array.isArray(node)) {
+        node.forEach((n, i) => replaceHostnamesAndIds(ctx, n, parentKey, `${where}[${i}]`));
+        return;
+    }
+    if (!isObject(node)) {
+        return;
+    }
+    for (const [key, value] of Object.entries(node)) {
+        const at = where ? `${where}.${key}` : key;
+        if (typeof value === 'string') {
+            let replacement = value;
+            if (ABSOLUTE_URL.test(value) && (key === 'reference' || (key === 'url' && parentKey === 'link') || (key === 'fullUrl' && parentKey === 'entry'))) {
+                replacement = replaceHostname(value);
+            } else if (key === 'id' && (parentKey === null || parentKey === 'resource') && value.length > 64) {
+                replacement = value.substring(0, 64);
+                console.log(`Truncating id at ${at} from ${value.length} to 64 characters.`);
+            }
+            if (replacement !== value) {
+                node[key] = replacement;
+                recordChange(ctx, at, value, replacement);
+            }
+        } else if (value !== null && typeof value === 'object') {
+            replaceHostnamesAndIds(ctx, value, key, at);
+        }
+    }
+}
+
 // --- Main processing of one file ---
 
 function processFile(file) {
@@ -1243,6 +1286,8 @@ function processFile(file) {
             ctx.presentFakes.add(fake);
         }
     }
+    // Before indexing, so references, fullUrls and locators all use the new host names and ids
+    replaceHostnamesAndIds(ctx, root);
     const index = collectResources(root);
 
     // Persons, contacts and organizations
