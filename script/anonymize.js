@@ -6,12 +6,12 @@ const fhirpath_stu3_model = require('fhirpath/fhir-context/stu3');
 
 const pathsFile = path.join(__dirname, 'anonymize-paths.json');
 const examplesDir = path.join(__dirname, '..', 'input', 'examples');
-const peopleFile = process.env.PSEUDONYMIZE_FAKES
-    ? path.resolve(process.env.PSEUDONYMIZE_FAKES)
+const peopleFile = process.env.ANONYMIZE_FAKES
+    ? path.resolve(process.env.ANONYMIZE_FAKES)
     : path.join(__dirname, 'anonymize-fakes.json');
 const peopleFileLabel = path.relative(path.join(__dirname, '..'), peopleFile).replace(/\\/g, '/');
 
-const USED_IN_SYSTEM = 'https://zorgviewer.nl/fhir/pseudonymize/used-in';
+const USED_IN_SYSTEM = 'https://zorgviewer.nl/fhir/anonymize/used-in';
 const BSN_SYSTEM = 'http://fhir.nl/fhir/NamingSystem/bsn';
 const INITIALS = /^([A-Za-z]\.)+$/;
 const DUTCH_MONTHS = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
@@ -619,14 +619,14 @@ function overlayElements(ctx, target, elements, fakeView, fakePaths) {
             if (target.photo !== undefined || target._photo !== undefined) {
                 delete target.photo;
                 delete target._photo;
-                ctx.warnings.push(`${ctx.label}: photo removed (cannot be pseudonymized)`);
+                ctx.warnings.push(`${ctx.label}: photo removed (cannot be anonymized)`);
                 recordChange(ctx, 'photo', '(photo)', '(removed)');
             }
             continue;
         }
         if (element === 'deceasedDateTime') {
             if (target.deceasedDateTime !== undefined) {
-                ctx.warnings.push(`${ctx.label}: deceasedDateTime ${target.deceasedDateTime} kept as-is (cannot be pseudonymized)`);
+                ctx.warnings.push(`${ctx.label}: deceasedDateTime ${target.deceasedDateTime} kept as-is (cannot be anonymized)`);
             }
             continue;
         }
@@ -656,13 +656,13 @@ function resourceLocator(item) {
     return item.contained ? `${resourceLabel(item.container)}.contained(${item.res.id})` : resourceLabel(item.res);
 }
 
-function pseudonymizePerson(ctx, res, fake) {
+function anonymizePerson(ctx, res, fake) {
     ctx.fake = fake;
     ctx.label = resourceLabel(res);
     overlayElements(ctx, res, config.persons[res.resourceType], fake, null);
 }
 
-function pseudonymizeContact(ctx, res, contact, contactConfig, fake) {
+function anonymizeContact(ctx, res, contact, contactConfig, fake) {
     ctx.fake = fake;
     ctx.label = `${resourceLabel(res)} contact`;
     const view = {
@@ -877,7 +877,7 @@ function addOrgTokens(ctx, realName, fake) {
     }
 }
 
-function pseudonymizeOrganization(ctx, res, fake) {
+function anonymizeOrganization(ctx, res, fake) {
     ctx.fake = fake;
     ctx.label = resourceLabel(res);
     const origName = res.name;
@@ -1265,13 +1265,13 @@ function processFile(file) {
         console.error(`ERROR: File not found: ${filePath}`);
         return false;
     }
-    // Only examples are pseudonymized; organizations elsewhere (input/resources, input/vocabulary) are public data
+    // Only examples are anonymized; organizations elsewhere (input/resources, input/vocabulary) are public data
     const relativeToExamples = path.relative(examplesDir, filePath);
     if (relativeToExamples.startsWith('..') || path.isAbsolute(relativeToExamples)) {
-        console.error(`ERROR: Not an example file (only input/examples is pseudonymized): ${filePath}`);
+        console.error(`ERROR: Not an example file (only input/examples is anonymized): ${filePath}`);
         return false;
     }
-    // Files starting with an underscore are gitignored (local only) and are not pseudonymized
+    // Files starting with an underscore are gitignored (local only) and are not anonymized
     if (path.basename(filePath).startsWith('_')) {
         console.log(`Skipped (starts with _): ${file}`);
         return true;
@@ -1306,7 +1306,7 @@ function processFile(file) {
                     const fake = allocate(ctx, ORG, locator);
                     ctx.fakeOf.set(res, fake);
                     if (!fake.missing) {
-                        pseudonymizeOrganization(ctx, res, fake);
+                        anonymizeOrganization(ctx, res, fake);
                         ctx.orgs++;
                     }
                 }
@@ -1321,7 +1321,7 @@ function processFile(file) {
                 const fake = allocate(ctx, res.resourceType, locator);
                 ctx.fakeOf.set(res, fake);
                 if (!fake.missing) {
-                    pseudonymizePerson(ctx, res, fake);
+                    anonymizePerson(ctx, res, fake);
                     ctx.persons++;
                 }
             }
@@ -1342,7 +1342,7 @@ function processFile(file) {
                 }
                 const fake = allocate(ctx, contactConfig.type, contactLocator);
                 if (!fake.missing) {
-                    pseudonymizeContact(ctx, res, contact, contactConfig, fake);
+                    anonymizeContact(ctx, res, contact, contactConfig, fake);
                     ctx.persons++;
                 }
             });
@@ -1464,15 +1464,15 @@ function processFile(file) {
             console.log(`  ${c.where}: ${c.orig} → ${c.replacement}`);
         }
         console.log(changed
-            ? `Would pseudonymize: ${file} (${ctx.persons} persons, ${ctx.orgs} organizations, ${ctx.mentions} mentions)`
-            : `Already pseudonymized: ${file}`);
+            ? `Would anonymize: ${file} (${ctx.persons} persons, ${ctx.orgs} organizations, ${ctx.mentions} mentions)`
+            : `Already anonymized: ${file}`);
     } else if (changed) {
         fs.writeFileSync(filePath, JSON.stringify(root, null, 4), 'utf8');
-        console.log(`Pseudonymized: ${file} (${ctx.persons} persons, ${ctx.orgs} organizations, ${ctx.mentions} mentions)`);
+        console.log(`Anonymized: ${file} (${ctx.persons} persons, ${ctx.orgs} organizations, ${ctx.mentions} mentions)`);
     } else {
-        console.log(`Already pseudonymized: ${file}`);
+        console.log(`Already anonymized: ${file}`);
     }
-    // Also for an already pseudonymized file, so its fakes get linked to their places. Only fakes that ended up
+    // Also for an already anonymized file, so its fakes get linked to their places. Only fakes that ended up
     // in the file: a known organization name that only occurred in a replaced element got a fake that is not used.
     if (!dryRun) {
         const output = JSON.stringify(root);
