@@ -1228,6 +1228,11 @@ function processFile(file) {
         console.error(`ERROR: Not an example file (only input/examples is pseudonymized): ${filePath}`);
         return false;
     }
+    // Files starting with an underscore are gitignored (local only) and are not pseudonymized
+    if (path.basename(filePath).startsWith('_')) {
+        console.log(`Skipped (starts with _): ${file}`);
+        return true;
+    }
     const raw = fs.readFileSync(filePath, 'utf8');
     const original = JSON.parse(raw);
     const root = JSON.parse(raw);
