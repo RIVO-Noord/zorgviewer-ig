@@ -7,6 +7,7 @@ const roleCodeNLlistPath = path.join(vocabDir, 'ValueSet-RoleCodeNLlist.json');
 
 const epicConceptMapPath = path.join(vocabDir, 'ConceptMap-epic-rolcode.json');
 const nlConceptMapPath = path.join(vocabDir, 'ConceptMap-rolcodenl.json');
+const sandayConceptMapPath = path.join(vocabDir, 'ConceptMap-sanday-rolcode.json');
 
 function loadJSON(filePath) {
     if (!fs.existsSync(filePath)) return null;
@@ -22,6 +23,7 @@ const roleVS = loadJSON(roleCodelistPath);
 const roleNLVS = loadJSON(roleCodeNLlistPath);
 const epicCM = loadJSON(epicConceptMapPath);
 const nlCM = loadJSON(nlConceptMapPath);
+const sandayCM = loadJSON(sandayConceptMapPath);
 
 if (!roleVS) {
     console.error("Master RoleCodelist not found!");
@@ -63,8 +65,10 @@ function checkConceptMap(cm, sourceName, sourceConcepts, targetVS, targetConcept
     cm.group.forEach((group, gIdx) => {
         const groupName = group.sourceVersion || `Group ${gIdx}`;
         
-        if (group.target !== targetVS.url) {
-            errors.push(`[${groupName}] Target ValueSet URL mismatch: expected ${targetVS.url}, found ${group.target}`);
+        // group.target is a code system (R4), so compare it to the systems the ValueSet includes
+        const targetSystems = targetVS.compose.include.map(inc => inc.system);
+        if (!targetSystems.includes(group.target)) {
+            errors.push(`[${groupName}] Target system mismatch: expected one of ${targetSystems.join(', ')}, found ${group.target}`);
         }
 
         group.element.forEach((elem, eIdx) => {
@@ -127,10 +131,11 @@ function checkConceptMap(cm, sourceName, sourceConcepts, targetVS, targetConcept
 
 const epicMappedTargets = checkConceptMap(epicCM, "Epic", null, roleVS, roleConcepts);
 const nlMappedTargets = checkConceptMap(nlCM, "RoleCodeNL", roleNLConcepts, roleVS, roleConcepts);
+const sandayMappedTargets = checkConceptMap(sandayCM, "Sanday", null, roleVS, roleConcepts);
 
 // Global completeness check for RoleCodelist
 console.log(`\nChecking overall completeness for ${roleVS.id}...`);
-const allMappedTargets = new Set([...(epicMappedTargets || []), ...(nlMappedTargets || [])]);
+const allMappedTargets = new Set([...(epicMappedTargets || []), ...(nlMappedTargets || []), ...(sandayMappedTargets || [])]);
 const missingInAll = Object.keys(roleConcepts).filter(code => !allMappedTargets.has(code));
 
 if (missingInAll.length > 0) {
