@@ -5,6 +5,8 @@ description: Checks role codes in a ZIB FHIR profile. Use this when asked to val
 
 The result of this skill is a validation report (table) about the non-conforming rol codes in the project, by file and location within each file (provide link)
 
+Run the project's automated role-code and ConceptMap checks with `cd script && npm run check-rolcode` from the repository root. The npm script is defined in `script/package.json` and runs `script/check-rolcode.js`. Include its output in the report, but do not treat it as a substitute for checking code validity and official descriptions against their code systems.
+
 Sources for searching codes in a particular code system:
 - SNOMED CT: Use the official SNOMED CT browser (https://snomedbrowser.org) or API.
 - RoleCodeNL: terminologieserver.nl (ask for Nictiz account credentials if necessary)
