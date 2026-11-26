@@ -36,6 +36,7 @@ if (files.length === 0) {
     console.error('Usage: node anonymize.js [--dry-run] <example-file> [<example-file> ...]');
     process.exit(1);
 }
+console.log(dryRun?"Dry run!":"Running anonymization...");
 
 // --- Generic helpers ---
 

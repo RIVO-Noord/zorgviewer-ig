@@ -1,5 +1,5 @@
 ### UI Wireframe
-<b>Problemen (incl. diagnosen)</b>
+<b>Problemen (incl. diagnoses)</b>
 <table class="grid">
 <tbody>
 <tr><th></th>

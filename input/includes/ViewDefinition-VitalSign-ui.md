@@ -335,7 +335,7 @@
 <td></td>
 <td>100/60 mm[Hg]</td>
 <td></td>
-<td>C Ooms</td>
+<td>Lisette Testartsma</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#85354-9 Blood pressure panel with all children optional<br/>
 </td></tr>
@@ -474,7 +474,7 @@
 <td>75 kg</td>
 <td></td>
 <td></td>
-<td>Pharmeon acceptatie zorgverlener</td>
+<td>Lisette Testartsma</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#29463-7 Body weight<br/>
 <b>Meting</b><br/>NHG45#357 gewicht patiënt<br/>
@@ -777,7 +777,7 @@
 <td>38 Cel</td>
 <td></td>
 <td></td>
-<td>S Brouwer</td>
+<td>Lisette Testartsma</td>
 </tr><tr><td></td><td colspan=8>
 <b>Meting</b><br/>LOINC#8310-5 Body temperature<br/>
 </td></tr>

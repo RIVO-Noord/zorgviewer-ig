@@ -479,7 +479,7 @@
 <td>Epic</td>
 <td>15-12-2021</td>
 <td>Patiëntenbrief, Brief (uit)</td>
-<td>G Boer</td>
+<td>Lisette Testartsma</td>
 <td>KGA - Genetica</td>
 <td>application/pdf</td>
 <td>Patiëntenbrief</td>

@@ -16,7 +16,7 @@
 <td></td>
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=5>
-<b>Aanvrager</b><br/>Arts. Interne Geneeskunde, Internist Oncoloog<br/>
+<b>Aanvrager</b><br/>LM. Testartsma, Internist Oncoloog<br/>
 </td></tr>
 <tr><td>&#9660;</td>
 <td>UMCG</td>
@@ -25,7 +25,7 @@
 <td></td>
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=5>
-<b>Aanvrager</b><br/>B. Zwart, Cardioloog<br/>
+<b>Aanvrager</b><br/>P. Proefdoktor, Cardioloog<br/>
 </td></tr>
 <tr><td>&#9660;</td>
 <td>UMCG</td>
@@ -34,7 +34,7 @@
 <td></td>
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=5>
-<b>Aanvrager</b><br/>ARTS. Mka, Kaakchirurg<br/>
+<b>Aanvrager</b><br/>KE. Schijnarts, Kaakchirurg<br/>
 </td></tr>
 <tr><td>&#9660;</td>
 <td>UMCG</td>
@@ -43,18 +43,18 @@
 <td></td>
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=5>
-<b>Aanvrager</b><br/>ARTS. Mka, Kaakchirurg<br/>
+<b>Aanvrager</b><br/>KE. Schijnarts, Kaakchirurg<br/>
 </td></tr>
 <tr><td>&#9660;</td>
 <td>Chipsoft</td>
 <td>12-10-2022</td>
 <td>excisie met biopt van huid</td>
-<td>Amsterdam</td>
+<td>Ziekenhuis Proefstad</td>
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=5>
 <b>Anatomische locatie</b><br/>Cheek structure (body structure)<br/>
-<b>Aanvrager</b><br/>Lisette van Cruijningen de Winter<br/>
-<b>Ontvangende organisatie</b><br/>Amsterdam<br/>
+<b>Aanvrager</b><br/>Pieter Testartsma<br/>
+<b>Ontvangende organisatie</b><br/>Ziekenhuis Proefstad<br/>
 <b>Activiteitcode</b><br/>(CBV) 00068258 excisie met biopt van huid<br/>
 </td></tr>
 <tr><td>&#9660;</td>
@@ -65,7 +65,7 @@
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=5>
 <b>Frequentie & instructies</b><br/>Naevus wang<br/>
-<b>Aanvrager</b><br/>Wit, G.Z.M. de, Chirurg<br/>
+<b>Aanvrager</b><br/>Testartsma, L.M., Chirurg<br/>
 <b>Toelichting</b><br/>Naevus wang<br/>
 </td></tr>
 <tr><td>&#9660;</td>
@@ -76,7 +76,7 @@
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=5>
 <b>Indicatie</b><br/>Non-ST elevation (NSTEMI) myocardial infarction (CMS/HCC)<br/>
-<b>Aanvrager</b><br/>Physician Family Medicine, MD<br/>
+<b>Aanvrager</b><br/>Testartsma, LM<br/>
 </td></tr>
 <tr><td>&#9660;</td>
 <td>Epic</td>
@@ -85,7 +85,7 @@
 <td></td>
 <td>Actueel</td>
 </tr><tr><td></td><td colspan=5>
-<b>Aanvrager</b><br/>Physician Family Medicine, MD<br/>
+<b>Aanvrager</b><br/>Testartsma, LM<br/>
 </td></tr>
 </tbody>
 </table>

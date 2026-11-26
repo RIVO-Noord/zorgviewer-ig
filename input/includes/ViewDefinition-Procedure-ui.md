@@ -13,8 +13,8 @@
 <td>Epic</td>
 <td>7-11-2021</td>
 <td>Gesloten repositie supra- of transcondylaire femur fractuur.</td>
-<td>UMCG</td>
-<td>MedMij Orthopedie, MD</td>
+<td>ZPS</td>
+<td>Testartsma, LM</td>
 </tr><tr><td></td><td colspan=5>
 <b>Verrichtingcode</b><br/>(SNOMED CT) 46866001 Gesloten repositie supra- of transcondylaire femur fractuur...<br/>
 <b>Lateraliteit</b><br/>Rechts<br/>
@@ -24,7 +24,7 @@
 <td>5-6-2012</td>
 <td>implantatie van totale knieprothese</td>
 <td>Drachten</td>
-<td>Lisette van Cruijningen de Winter</td>
+<td>Lisette Testartsma</td>
 </tr><tr><td></td><td colspan=5>
 <b>Verrichtingcode</b><br/>(CBV) 00090991 implantatie van totale knieprothese<br/>
 <b>Lateraliteit</b><br/>Links<br/>
@@ -34,7 +34,7 @@
 <td>6-5-2012</td>
 <td>Prothese implantatie kniegewricht.</td>
 <td></td>
-<td>Boonstra<br/>VIPP NEXUS Ziekenhuis</td>
+<td>Lisette Testartsma<br/>VIPP NEXUS Ziekenhuis</td>
 </tr><tr><td></td><td colspan=5>
 <b>Verrichtingcode</b><br/>(NZa) 038663 Prothese implantatie kniegewricht.<br/>
 </td></tr>

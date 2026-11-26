@@ -14,7 +14,7 @@
 <tr><td></td>
 <td>CGM</td>
 <td>15-7-2026 10:00 - 10:15</td>
-<td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
+<td>Lisette Testartsma<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>booked</td>
 <td>e-consult</td>
@@ -24,8 +24,8 @@
 <tr><td></td>
 <td>WZA</td>
 <td>13-7-2026 15:00 - 15:05</td>
-<td>M.C. Gordinou de Gouberville<br/>Onbekende functiecode.</td>
-<td>Wilhelmina Ziekenhuis</td>
+<td>Lisette Testartsma</td>
+<td>Ziekenhuis Proefstad</td>
 <td>pending</td>
 <td>Ambulatory</td>
 <td>Niet beschikbaar</td>
@@ -54,7 +54,7 @@
 <tr><td></td>
 <td>CGM</td>
 <td>30-9-2025</td>
-<td>Pharmeon acceptatie zorgverlener<br/>Huisartsen, niet apotheekhoudend</td>
+<td>Lisette Testartsma<br/>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
 <td>Ambulatory e-consult</td>
@@ -64,8 +64,8 @@
 <tr><td></td>
 <td>Epic</td>
 <td>27-3-2025 17:10 - 19:23</td>
-<td>E. Sieders, Chirurg<br/>DJA. de Groot, Internist Oncoloog<br/>A. (van Donderen-) Vrieze<br/>...</td>
-<td>UMCG HC</td>
+<td>L. Testartsma, Chirurg<br/>PJ. Proefdoktor, Internist Oncoloog<br/>K. Schijnarts<br/>ODV. Am...</td>
+<td>ZPS HC</td>
 <td>unknown</td>
 <td>Inpatient Encounter Chirurgie</td>
 <td></td>
@@ -104,7 +104,7 @@
 <tr><td></td>
 <td>Epic</td>
 <td>20-4-2018 11:10 - 11:15</td>
-<td>G. Dijkstra, MDL arts</td>
+<td>L. Testartsma, MDL arts</td>
 <td>Maag- Darm- Leverziekten</td>
 <td>pending</td>
 <td>Ambulatory</td>
@@ -124,7 +124,7 @@
 <tr><td></td>
 <td>Nexus</td>
 <td>16-8-2012 12:22 - 19-8-2012 13:22</td>
-<td>Wit<br/>Orthopedie</td>
+<td>Lisette Testartsma<br/>Orthopedie</td>
 <td></td>
 <td>finished</td>
 <td>Klinisch</td>
@@ -134,7 +134,7 @@
 <tr><td></td>
 <td>Chipsoft</td>
 <td>15-8-2012 00:00 - 15:04</td>
-<td>J.H.R Peters<br/>Onbekende functiecode.</td>
+<td>Lisette Testartsma<br/>Onbekende functiecode.</td>
 <td></td>
 <td>finished</td>
 <td>inpatient</td>

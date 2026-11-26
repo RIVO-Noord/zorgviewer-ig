@@ -93,7 +93,7 @@
 <td>CGM</td>
 <td>30-9-2025</td>
 <td>30-9-2025</td>
-<td>Pharmeon acceptatie zorgverlener</td>
+<td>Lisette Testartsma</td>
 <td>Huisartsen, niet apotheekhoudend</td>
 <td></td>
 <td>finished</td>
@@ -137,9 +137,9 @@
 <td>Epic</td>
 <td>27-3-2025</td>
 <td>27-3-2025</td>
-<td>E. Sieders, Chirurg<br/>DJA. de Groot, Internist Oncoloog<br/>A. (van Donderen-) Vrieze<br/>...</td>
+<td>L. Testartsma, Chirurg<br/>PJ. Proefdoktor, Internist Oncoloog<br/>K. Schijnarts<br/>ODV. Am...</td>
 <td></td>
-<td>UMCG HC</td>
+<td>ZPS HC</td>
 <td>unknown</td>
 <td>Inpatient Encounter</td>
 </tr><tr><td></td><td colspan=8>
@@ -203,7 +203,7 @@
 <td>Nexus</td>
 <td>16-8-2012</td>
 <td>19-8-2012</td>
-<td>Wit</td>
+<td>Lisette Testartsma</td>
 <td>Orthopedie</td>
 <td></td>
 <td>finished</td>
@@ -214,7 +214,7 @@
 <td>Chipsoft</td>
 <td>15-8-2012</td>
 <td>15-8-2012</td>
-<td>J.H.R Peters</td>
+<td>Lisette Testartsma</td>
 <td>Onbekende functiecode.</td>
 <td></td>
 <td>finished</td>

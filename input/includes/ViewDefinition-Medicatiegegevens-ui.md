@@ -31,7 +31,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=6>
 <b>Afspraakdatum</b><br/>3-10-2023<br/>
-<b>Voorschrijver</b><br/>Aalders, JCA (CAR)<br/>
+<b>Voorschrijver</b><br/>Testartsma, LM (CAR)<br/>
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
@@ -43,7 +43,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=6>
 <b>Afspraakdatum</b><br/>3-6-2023<br/>
-<b>Voorschrijver</b><br/>Pharmeon acceptatie zorgverlener<br/>
+<b>Voorschrijver</b><br/>Lisette Testartsma<br/>
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
@@ -91,7 +91,7 @@
 </tr><tr><td></td><td colspan=6>
 <b>Medicatie vorm</b><br/>tablet<br/>
 <b>Afspraakdatum</b><br/>27-11-2020<br/>
-<b>Voorschrijver</b><br/>M Crop<br/>
+<b>Voorschrijver</b><br/>Lisette Testartsma<br/>
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
@@ -103,7 +103,7 @@
 <td>Definitief</td>
 </tr><tr><td></td><td colspan=6>
 <b>Afspraakdatum</b><br/>30-9-2022<br/>
-<b>Voorschrijver</b><br/>Peter van Pulver<br/>
+<b>Voorschrijver</b><br/>Lisette Testartsma<br/>
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
@@ -115,7 +115,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=6>
 <b>Afspraakdatum</b><br/>11-11-2022<br/>
-<b>Voorschrijver</b><br/>Healthcare professional (role), Peter van Pulver, Huisartsen, niet nader gespeci...<br/>
+<b>Voorschrijver</b><br/>Healthcare professional (role), Lisette Testartsma, Huisartsen, niet nader gespe...<br/>
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
@@ -127,7 +127,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=6>
 <b>Afspraakdatum</b><br/>7-8-2025<br/>
-<b>Voorschrijver</b><br/>Jenneke van der Vecht<br/>
+<b>Voorschrijver</b><br/>Lisette Testartsma<br/>
 <b>Type</b><br/>afspraak<br/>
 </td></tr>
 <tr><td>&#9660;</td>
