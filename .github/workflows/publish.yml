@@ -30,7 +30,7 @@ jobs:
         # run: curl -L https://github.com/HL7/fhir-ig-publisher/releases/download/1.6.24/publisher.jar -o publisher.jar
 
       - name: Run the IG Builder
-        run: java -jar publisher.jar -ig ig.ini
+        run: java -jar publisher.jar -ig ig.ini -trust-template fhir.base.template
 
       - name: Publish to Azure Website implementatiegids.zorgviewer.nl
         uses: bacongobbler/azure-blob-storage-upload@main
