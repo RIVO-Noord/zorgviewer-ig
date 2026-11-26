@@ -49,7 +49,7 @@ flowchart BT
 ```
 (initial) (Bash) > curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o input-cache/publisher.jar
 (initial) (Powershell) > Invoke-WebRequest -Uri "https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar" -OutFile "input-cache/publisher.jar"
-> java -jar input-cache/publisher.jar -ig ig.ini -trust-template fhir.base.template
+> java -jar input-cache/publisher.jar -ig ig.ini
 ```
 
 ### Trigger FHIR auto-ig builder voor branch snapshot
