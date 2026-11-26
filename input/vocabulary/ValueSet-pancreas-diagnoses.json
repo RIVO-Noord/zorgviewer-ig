@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pancreas-diagnoses",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-diagnoses",
+  "version": "1.0.0",
+  "name": "PancreasDiagnoses",
+  "title": "Pancreas - Diagnoses (pancreastumoren en biliaire obstructie)",
+  "status": "draft",
+  "description": "Diagnosecodes (SNOMED CT en ICD-10-NL) voor pancreasmaligniteit, pancreascysten en galwegobstructie, opgezocht in de DHD T-Rex diagnosethesaurus. Bedoeld voor filteren van Condition/Problem-resources; de set zegt niet welke diagnose bij welke verrichting hoort.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          { "code": "363418001", "display": "Malignant neoplasm of pancreas (disorder)" },
+          { "code": "363419009", "display": "Malignant neoplasm of head of pancreas (disorder)" },
+          { "code": "187791002", "display": "Malignant neoplasm of body of pancreas (disorder)" },
+          { "code": "187792009", "display": "Malignant neoplasm of tail of pancreas (disorder)" },
+          { "code": "31258000", "display": "Cyst of pancreas (disorder)" },
+          { "code": "111374002", "display": "Pancreatic pseudocyst (disorder)" },
+          { "code": "30144000", "display": "Obstruction of bile duct (disorder)" },
+          { "code": "363416002", "display": "Malignant neoplasm of extrahepatic bile duct (disorder)" },
+          { "code": "307132003", "display": "Choledocholithiasis (disorder)" }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-nl",
+        "concept": [
+          { "code": "C25.9", "display": "Maligne neoplasma van pancreas, niet gespecificeerd" },
+          { "code": "C25.0", "display": "Maligne neoplasma van pancreaskop" },
+          { "code": "C25.1", "display": "Maligne neoplasma van lichaam van pancreas" },
+          { "code": "C25.2", "display": "Maligne neoplasma van staart van pancreas" },
+          { "code": "K86.2", "display": "Cyste van pancreas" },
+          { "code": "K86.3", "display": "Pseudocyste van pancreas" },
+          { "code": "K83.1", "display": "Obstructie van galweg" },
+          { "code": "C24.0", "display": "Maligne neoplasma van extrahepatische galwegen" },
+          { "code": "K80.5", "display": "Choledocholithiase" }
+        ]
+      }
+    ]
+  }
+}

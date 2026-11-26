@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pancreas-verrichtingen-operatief",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-verrichtingen-operatief",
+  "version": "1.0.0",
+  "name": "PancreasVerrichtingenOperatief",
+  "title": "Pancreas - Operatieve en interventionele verrichtingen",
+  "status": "draft",
+  "description": "Samenstelling van de ValueSets voor ERCP, PTCD (gedeeltelijk, alleen cholangiografie) en operatieve resectie uit het Regionaal Zorgpad Pancreastumoren. EUS-geleide galwegdrainage is niet opgenomen: hiervoor is geen passende code gevonden in DHD T-Rex.",
+  "compose": {
+    "include": [
+      { "valueSet": [ "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-ercp" ] },
+      { "valueSet": [ "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-ptcd" ] },
+      { "valueSet": [ "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-resectie" ] }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pancreas-mri",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-mri",
+  "version": "1.0.0",
+  "name": "PancreasMri",
+  "title": "Pancreas - MRI-bovenbuik/pancreas",
+  "status": "draft",
+  "description": "Verrichtingscodes (SNOMED CT, NZa zorgactiviteit en CBV) voor MRI-bovenbuik/pancreas, bedoeld voor filteren van FHIR-resources bij het MRI-pancreasprotocol. Het specifieke pancreasprotocol (MRCP, DWI) is niet apart gecodeerd.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          { "code": "1356793007", "display": "Magnetic resonance imaging of upper abdomen (procedure)" },
+          { "code": "98671000146101", "display": "Magnetic resonance imaging of upper abdomen with contrast (procedure)" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.27.15.5",
+        "concept": [
+          { "code": "087097", "display": "MRI abdomen (excl. rectum)" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.120.5.3",
+        "concept": [
+          { "code": "387890A", "display": "MRI pancreas" },
+          { "code": "387890", "display": "MRI pancreas en milt" },
+          { "code": "387893", "display": "MRI pancreas en milt zonder en met contrast" }
+        ]
+      }
+    ]
+  }
+}

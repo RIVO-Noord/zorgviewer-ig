@@ -1,0 +1,44 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pancreas-resectie",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-resectie",
+  "version": "1.0.0",
+  "name": "PancreasResectie",
+  "title": "Pancreas - Operatieve resectie",
+  "status": "draft",
+  "description": "Verrichtingscodes (SNOMED CT, NZa zorgactiviteit en CBV) voor pancreatoduodenectomie (Whipple, ook pylorussparend en laparoscopisch) en resectie van de pancreasstaart (open en laparoscopisch), bedoeld voor filteren van FHIR-resources bij de operatieve resectie van een pancreastumor.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          { "code": "116241004", "display": "Pancreaticoduodenectomy (procedure)" },
+          { "code": "116242006", "display": "Pylorus-sparing pancreaticoduodenectomy (procedure)" },
+          { "code": "1344964008", "display": "Laparoscopic pancreaticoduodenectomy (procedure)" },
+          { "code": "89631000146108", "display": "Open excision of tail of pancreas (procedure)" },
+          { "code": "90541000146109", "display": "Laparoscopic excision of tail of pancreas (procedure)" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.27.15.5",
+        "concept": [
+          { "code": "035430", "display": "Pancreatico-duodenectomie volgens Whipple" },
+          { "code": "035496", "display": "Pancreas operatie, open procedure" },
+          { "code": "035497", "display": "Pancreas operatie, laparoscopisch" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.120.5.3",
+        "concept": [
+          { "code": "335417", "display": "Pancreas - resectie totaal incl. duodenum" },
+          { "code": "335417A", "display": "Pancreas - pylorussparende pancreatoduodenectomie" },
+          { "code": "335430", "display": "Pancreas - pancreatoduodenectomie volgens Whipple" },
+          { "code": "335430A", "display": "Pancreas - pancreatoduodenectomie d.m.v. laparoscopie" },
+          { "code": "335414", "display": "Pancreas - resectie caudaal partieel" },
+          { "code": "335414A", "display": "Pancreas - resectie caudaal d.m.v. laparoscoop" },
+          { "code": "335497B", "display": "Pancreas - operatie laparoscopisch" }
+        ]
+      }
+    ]
+  }
+}

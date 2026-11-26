@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pancreas-ptcd",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-ptcd",
+  "version": "1.0.0",
+  "name": "PancreasPtcd",
+  "title": "Pancreas - PTCD (percutane cholangiografie)",
+  "status": "draft",
+  "description": "Gedeeltelijke koppeling: T-Rex bevat geen code voor het plaatsen van een percutane transhepatische galwegdrain. Deze set bevat alleen de dichtstbijzijnde code voor de percutane cholangiografie (SNOMED CT, NZa zorgactiviteit en CBV).",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          { "code": "1351773003", "display": "Percutaneous fluoroscopic cholangiography with contrast (procedure)" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.27.15.5",
+        "concept": [
+          { "code": "087613", "display": "Percutane cholangiografie" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.120.5.3",
+        "concept": [
+          { "code": "387613", "display": "Cholangiografie - percutaan via punctie" }
+        ]
+      }
+    ]
+  }
+}

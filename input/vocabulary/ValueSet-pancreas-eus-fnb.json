@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pancreas-eus-fnb",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-eus-fnb",
+  "version": "1.0.0",
+  "name": "PancreasEusFnb",
+  "title": "Pancreas - EUS met fijne-naaldbiopsie",
+  "status": "draft",
+  "description": "Verrichtingscodes (SNOMED CT, NZa zorgactiviteit en CBV) voor endo-echografie met fijne-naaldaspiratie/biopsie van het pancreas, bedoeld voor filteren van FHIR-resources bij de EUS-FNB.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          { "code": "240221000146100", "display": "Fine needle biopsy of pancreas using endoscopic ultrasonography guidance (procedure)" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.27.15.5",
+        "concept": [
+          { "code": "034388", "display": "Endo-echografie ter beoordeling bovenbuikorganen, inclusief eventuele biopten" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.120.5.3",
+        "concept": [
+          { "code": "339148", "display": "Pancreas - endo-echografie (EUS)" },
+          { "code": "335424", "display": "Pancreas - echo-endoscopie met fijne naaldaspiratie (EUS-FNA)" }
+        ]
+      }
+    ]
+  }
+}

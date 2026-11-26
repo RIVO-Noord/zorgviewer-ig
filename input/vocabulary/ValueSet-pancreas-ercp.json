@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pancreas-ercp",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-ercp",
+  "version": "1.0.0",
+  "name": "PancreasErcp",
+  "title": "Pancreas - ERCP met biliaire drainage",
+  "status": "draft",
+  "description": "Verrichtingscodes (SNOMED CT, NZa zorgactiviteit en CBV) voor ERCP, inclusief plaatsing van een metalen of plastic stent in de ductus choledochus, bedoeld voor filteren van FHIR-resources bij biliaire drainage via ERCP.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          { "code": "712470002", "display": "Endoscopic retrograde cholangiopancreatography using fluoroscopic guidance with contrast (procedure)" },
+          { "code": "85201000146103", "display": "ERCP with insertion of biliary metal stent in common bile duct using fluoroscopic guidance (procedure)" },
+          { "code": "85191000146100", "display": "ERCP with insertion of biliary plastic stent in common bile duct using fluoroscopic guidance (procedure)" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.27.15.5",
+        "concept": [
+          { "code": "034694", "display": "Endoscopische retrograde cholangiopancreaticografie (ERCP)" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.120.5.3",
+        "concept": [
+          { "code": "339340", "display": "Duodenum - ERCP met papillotomie" },
+          { "code": "339340C", "display": "Duodenum - ERCP met inbrengen endoprothese" },
+          { "code": "339343", "display": "Duodenum - ERCP met papillotomie en inbrengen endoprothese" },
+          { "code": "339349", "display": "Galwegen - ERCP diagnostisch" },
+          { "code": "339349C", "display": "Galwegen - ERCP therapeutisch" }
+        ]
+      }
+    ]
+  }
+}

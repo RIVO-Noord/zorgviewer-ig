@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pancreas-ct-abdomen",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-ct-abdomen",
+  "version": "1.0.0",
+  "name": "PancreasCtAbdomen",
+  "title": "Pancreas - CT-abdomen (pancreasprotocol)",
+  "status": "draft",
+  "description": "Verrichtingscodes (SNOMED CT, NZa zorgactiviteit en CBV) voor CT-bovenbuik/abdomen, bedoeld voor filteren van Procedure/ServiceRequest/DiagnosticReport bij het CT-pancreasprotocol. De codes zijn opgezocht in DHD T-Rex en beschrijven niet alle kenmerken van het pancreasprotocol (fasering).",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          { "code": "420102002", "display": "Computed tomography of upper abdomen (procedure)" },
+          { "code": "97521000146102", "display": "Computed tomography of upper abdomen with intravenous contrast (procedure)" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.27.15.5",
+        "concept": [
+          { "code": "087042", "display": "CT onderzoek van het abdomen, retroperitoneum" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.120.5.3",
+        "concept": [
+          { "code": "387841", "display": "CT pancreas en milt zonder contrast" },
+          { "code": "387842", "display": "CT pancreas en milt met contrast" },
+          { "code": "387842A", "display": "CT pancreas-galwegen met contrast" },
+          { "code": "387843", "display": "CT pancreas en milt zonder en met contrast" }
+        ]
+      }
+    ]
+  }
+}

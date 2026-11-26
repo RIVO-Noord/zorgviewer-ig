@@ -1,0 +1,18 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pancreas-verrichtingen-diagnostisch",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-verrichtingen-diagnostisch",
+  "version": "1.0.0",
+  "name": "PancreasVerrichtingenDiagnostisch",
+  "title": "Pancreas - Diagnostische verrichtingen en follow-up",
+  "status": "draft",
+  "description": "Samenstelling van de ValueSets voor CT-abdomen, MRI, EUS-FNB en postoperatieve follow-up uit het Regionaal Zorgpad Pancreastumoren.",
+  "compose": {
+    "include": [
+      { "valueSet": [ "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-ct-abdomen" ] },
+      { "valueSet": [ "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-mri" ] },
+      { "valueSet": [ "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-eus-fnb" ] },
+      { "valueSet": [ "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-postoperatieve-follow-up" ] }
+    ]
+  }
+}

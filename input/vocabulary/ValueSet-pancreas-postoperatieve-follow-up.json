@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pancreas-postoperatieve-follow-up",
+  "url": "http://fhir.hl7.nl/zorgviewer/ValueSet/pancreas-postoperatieve-follow-up",
+  "version": "1.0.0",
+  "name": "PancreasPostoperatieveFollowUp",
+  "title": "Pancreas - Postoperatieve follow-up (polikliniekbezoek)",
+  "status": "draft",
+  "description": "Generieke codes voor herhaal-polikliniekbezoek/vervolgconsult chirurgie (SNOMED CT, NZa zorgactiviteit en CBV). T-Rex bevat geen specifieke code voor postoperatieve follow-up; filter daarom altijd ook op context (bijvoorbeeld de voorafgaande resectie).",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          { "code": "93881000146109", "display": "Follow-up consultation with outpatient (procedure)" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.27.15.5",
+        "concept": [
+          { "code": "190013", "display": "Herhaal-polikliniekbezoek" }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.120.5.3",
+        "concept": [
+          { "code": "411003N", "display": "Vervolgconsult chirurgie" }
+        ]
+      }
+    ]
+  }
+}
