@@ -52,7 +52,7 @@
 <td>3-6-2023</td>
 <td>1-9-2023</td>
 <td>HEPATITIS-A-VACCIN VAQTA JR WWSP 0,5ML (50E/ML)</td>
-<td>gebruik bekend<br/>Omschudden vlak voor gebruik<br/>In koelkast bewaren (niet in vriesvak)...</td>
+<td>gebruik bekend<br/>Omschudden vlak voor gebruik<br/>In koelkast bewaren (niet in vriesvak)</td>
 <td></td>
 <td></td>
 </tr><tr><td></td><td colspan=7>
@@ -64,7 +64,7 @@
 <td>3-6-2023</td>
 <td>1-9-2023</td>
 <td>HEPATITIS-A-VACCIN VAQTA JR WWSP 0,5ML (50E/ML)</td>
-<td>gebruik bekend<br/>Omschudden vlak voor gebruik<br/>In koelkast bewaren (niet in vriesvak)...</td>
+<td>gebruik bekend<br/>Omschudden vlak voor gebruik<br/>In koelkast bewaren (niet in vriesvak)</td>
 <td></td>
 <td></td>
 </tr><tr><td></td><td colspan=7>
@@ -81,7 +81,7 @@
 <td></td>
 </tr><tr><td></td><td colspan=7>
 <b>Afspraakdatum</b><br/>11-11-2022<br/>
-<b>Voorschrijver</b><br/>Healthcare professional (role), Lisette Testartsma, Huisartsen, niet nader gespecificeerd, Huisartsenpraktijk Testartsma & Partners...<br/>
+<b>Voorschrijver</b><br/>Healthcare professional (role), Lisette Testartsma, Huisartsen, niet nader gespecificeerd, Huisartsenpraktijk Testartsma & Partners<br/>
 </td></tr>
 <tr><td>&#9660;</td>
 <td>Epic</td>
@@ -101,7 +101,7 @@
 <td>15-8-2016</td>
 <td>14-9-2016</td>
 <td>METOCLOPRAMIDE ZETPIL 10MG</td>
-<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alcohol<br/>Kan het reactievermogen verminderen<br/>Niet langer dan 5 dagen achtereen gebr..  &#9432;...</td>
+<td> 1x elke 1 dag, indien nodig (Zo nodig)<br/>Aanvullende instructie 1: Pas op met alcohol<br/>Kan het reactievermogen verminderen<br/>Niet langer dan 5 dagen achtereen gebr..  &#9432;</td>
 <td>RECTAAL</td>
 <td>Definitief</td>
 </tr><tr><td></td><td colspan=7>
@@ -133,7 +133,7 @@
 <td></td>
 <td></td>
 <td>aspirin-acetaminophen-caffeine (EXCEDRIN MIGRAINE) 250-250-65 MG per tablet</td>
-<td>1 tablet, Oral, EVERY 6 HOURS PRN Starting Tue 9/17/2024, Disp-30 tablet, R-0, Normal...</td>
+<td>1 tablet, Oral, EVERY 6 HOURS PRN Starting Tue 9/17/2024, Disp-30 tablet, R-0, Normal</td>
 <td>Oral</td>
 <td></td>
 </tr><tr><td></td><td colspan=7>

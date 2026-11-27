@@ -65,7 +65,7 @@
 <td>Nexus</td>
 <td>16-5-2022</td>
 <td></td>
-<td>LET OP!!!!!<br/>Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5. Graag GEEN wijzigingen doorvoeren!!!<br/>Alvast dank namens squad12...</td>
+<td>LET OP!!!!!<br/>Deze patient wordt gebruikt voor de (her)kwalificatie voor VIPP 5. Graag GEEN wijzigingen doorvoeren!!!<br/>Alvast dank namens squad12</td>
 <td></td>
 <td>Waarschuwing</td>
 <td>active</td>

@@ -20,7 +20,7 @@
 <tr><td>&#9660;</td>
 <td>Epic-note</td>
 <td>23-2-2023</td>
-<td>posttraumatische stressstoornis (incl. de posttraumatische-stressstoornis bij kinderen van 6 jaar en jonger)...</td>
+<td>posttraumatische stressstoornis (incl. de posttraumatische-stressstoornis bij kinderen van 6 jaar en jonger)</td>
 <td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>

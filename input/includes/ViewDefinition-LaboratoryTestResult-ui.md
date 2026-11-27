@@ -345,7 +345,7 @@
 <td>0a411880-1aca-4b1f-84e1-11ab2845fd69</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
-<b>Commentaar</b><br/>Toelichting: Serologisch GEEN aanwijzingen voor een in het verleden opgedane infectie met herpes simplex virus ;...<br/>
+<b>Commentaar</b><br/>Toelichting: Serologisch GEEN aanwijzingen voor een in het verleden opgedane infectie met herpes simplex virus ;<br/>
 </td></tr>
 <tr><td>&#9660;</td>
 <td>Chipsoft</td>
@@ -440,7 +440,7 @@
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
-<b>Commentaar</b><br/>Toelichting: Niet te beoordelen.<br/>Volgens KDIGO-richtlijn niet te berekenen<br/>want geen plasma creatinine baseline beschikbaar in de afgelopen 365 dagen ; Test order voor Zorgplatform en XDS ;...<br/>
+<b>Commentaar</b><br/>Toelichting: Niet te beoordelen.<br/>Volgens KDIGO-richtlijn niet te berekenen<br/>want geen plasma creatinine baseline beschikbaar in de afgelopen 365 dagen ; Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>&#9660;</td>
 <td>Chipsoft</td>
@@ -524,7 +524,7 @@
 <td>Bloed</td>
 <td>final</td>
 </tr><tr><td></td><td colspan=8>
-<b>Commentaar</b><br/>Toelichting: Ochtend                  0.25 - 0.83   µmol/L<br/>Middag                   0.13 - 0.45   µmol/L ; Test order voor Zorgplatform en XDS ;...<br/>
+<b>Commentaar</b><br/>Toelichting: Ochtend                  0.25 - 0.83   µmol/L<br/>Middag                   0.13 - 0.45   µmol/L ; Test order voor Zorgplatform en XDS ;<br/>
 </td></tr>
 <tr><td>&#9660;</td>
 <td>Chipsoft</td>

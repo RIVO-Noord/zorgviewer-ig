@@ -53,9 +53,8 @@
 <tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Componenten</td>
-<td><samp>result.select('== ' + display.substring(15) + ' ==
-' + resolve().valueString.toString()).join('
-')</samp></td>
+<td><samp>'<table>' + result.select('<tr valign="top"><td style="white-space: nowrap">' + display.substring(15) + '</td><td>' + resolve().valueString.toString() + '</td></tr>').join('
+') + '</table>'</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td></td>

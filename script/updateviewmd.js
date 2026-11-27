@@ -410,8 +410,10 @@ function extractExampleData(select, example, exampleFileName) {
                 }
             } else {
                 value = evalResult[0].toString();
-                if (value.length > 80) value = `${value.substring(0, 200)}...`;
-                value = value.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\r?\n/g, "<br/>");
+                if (!value.startsWith("<table>")) { // if html on purpose don't replace or truncate
+                    if (value.length > 200) value = `${value.substring(0, 200)}...`;
+                    value = value.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\r?\n/g, "<br/>");
+                }
             }
         }
         return { name: column.name, type: column.type, value: value };

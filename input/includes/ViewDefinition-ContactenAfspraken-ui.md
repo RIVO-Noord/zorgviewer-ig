@@ -64,7 +64,7 @@
 <tr><td></td>
 <td>Epic</td>
 <td>27-3-2025 17:10 - 19:23</td>
-<td>L. Testartsma, Chirurg<br/>PJ. Proefdoktor, Internist Oncoloog<br/>K. Schijnarts<br/>ODV. Amersfoortse Alg Verzekeringsmaatschappy...</td>
+<td>L. Testartsma, Chirurg<br/>PJ. Proefdoktor, Internist Oncoloog<br/>K. Schijnarts<br/>ODV. Amersfoortse Alg Verzekeringsmaatschappy</td>
 <td>ZPS HC</td>
 <td>unknown</td>
 <td>Inpatient Encounter Chirurgie</td>
