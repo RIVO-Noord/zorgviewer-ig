@@ -67,7 +67,7 @@
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+Frequentie & instructies</td>
-<td><samp>occurrenceTiming.repeat.frequency.select($this.toString() + 'x per ' + %context.occurrenceTiming.repeat.periodUnit) | occurrenceTiming.code.text | patientInstruction | note.text.join('\\n')</samp></td>
+<td><samp>occurrenceTiming.repeat.frequency.select($this.toString() + 'x per ' + %context.occurrenceTiming.repeat.periodUnit) | occurrenceTiming.code.text | patientInstruction | note.text.join('\n')</samp></td>
 <td><code>string</code></td>
 <td>Instructie</td>
 <td>Frequentie, herhaling en specifieke instructies voor verpleegkundige zorg conform eOverdracht 3.1.</td>
@@ -95,7 +95,7 @@
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+Toelichting</td>
-<td><samp>note.text.join('\\n')</samp></td>
+<td><samp>note.text.join('\n')</samp></td>
 <td><code>string</code></td>
 <td>Toelichting</td>
 <td>Aanvullende opmerkingen of toelichting.</td>

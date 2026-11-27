@@ -38,7 +38,7 @@
 </tr>
 <tr>
 <td>Uitgevoerd door</td>
-<td><samp>performer.actor.display.join('\\n')</samp></td>
+<td><samp>performer.actor.display.join('\n')</samp></td>
 <td><code>string</code></td>
 <td>Uitvoerder</td>
 <td>Meestal alleen specialisme</td>

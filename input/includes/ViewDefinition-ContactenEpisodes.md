@@ -32,7 +32,7 @@
 </tr>
 <tr>
 <td>Met</td>
-<td><samp>participant.individual.display.join('\\n')</samp></td>
+<td><samp>participant.individual.display.join('\n')</samp></td>
 <td><code>string</code></td>
 <td>ContactMet::Zorgverlener</td>
 <td></td>

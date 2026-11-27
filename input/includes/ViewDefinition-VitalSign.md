@@ -88,7 +88,7 @@
 </tr>
 <tr style="background-color:#b4c7e7">
 <td>+Context</td>
-<td><samp>component.valueCodeableConcept.text.join('\\n') | component.valueCodeableConcept.coding.display.join('\\n')</samp></td>
+<td><samp>component.valueCodeableConcept.text.join('\n') | component.valueCodeableConcept.coding.display.join('\n')</samp></td>
 <td><code>string</code></td>
 <td>overige context</td>
 <td></td>

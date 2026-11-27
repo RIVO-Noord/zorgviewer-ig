@@ -24,7 +24,7 @@
 </tr>
 <tr>
 <td>Met</td>
-<td><samp>participant.actor.where(reference.contains('Practitioner/')).select(display | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display).join('\\n')</samp></td>
+<td><samp>participant.actor.where(reference.contains('Practitioner/')).select(display | extension('http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference').valueReference.display).join('\n')</samp></td>
 <td><code>string</code></td>
 <td>ContactMet::Zorgverlener, ContactMet::Zorgverlener/ZorgverlenersRol</td>
 <td></td>

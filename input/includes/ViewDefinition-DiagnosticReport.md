@@ -53,7 +53,7 @@
 <tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Componenten</td>
-<td><samp>'&lt;table&gt;' + result.select('&lt;tr valign="top"&gt;&lt;td style="white-space: nowrap"&gt;' + display.substring(15) + '&lt;/td&gt;&lt;td&gt;' + resolve().valueString.toString() + '&lt;/td&gt;&lt;/tr&gt;').join('\\n') + '&lt;/table&gt;'</samp></td>
+<td><samp>'&lt;table&gt;' + result.select('&lt;tr valign="top"&gt;&lt;td style="white-space: nowrap"&gt;' + display.substring(15) + '&lt;/td&gt;&lt;td&gt;' + resolve().valueString + '&lt;/td&gt;&lt;/tr&gt;').join('\n') + '&lt;/table&gt;'</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td></td>
