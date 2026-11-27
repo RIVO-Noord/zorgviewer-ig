@@ -1,0 +1,57 @@
+{
+  "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
+  "resource": "Bundle",
+  "id": "ViewDefinition-DiagnosticReport",
+  "title": "Pathologie verslagen",
+  "select": [
+    {
+      "column": [
+        {
+          "path": "meta.extension('http://hl7.org/fhir/4.0/StructureDefinition/extension-Meta.source').valueUri",
+          "name": "Bron",
+          "description": "Lookup adhv uri (AGB-Z of OID) <code>&lt;adressering-base&gt;/Organization?identifier=&lt;.meta.tag.code&gt;</code> en gebruik dan <code>Organization.name</code>",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "effectiveDateTime",
+          "name": "Datum",
+          "type": "dateTime",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "identifier.where(type.text='Filler Identifier').value",
+          "name": "PA nummer",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "category.text",
+          "name": "Categorie",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "code.text",
+          "name": "Code",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "performer.actor.display",
+          "name": "Uitvoerder",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        },
+        {
+          "path": "result.select(display).join('\n')",
+          "name": "+Componenten",
+          "description": "Tussen haakjes de component header, gevolgd door de tekst van het component.",
+          "type": "string",
+          "tag": [ { "name": "Zib element", "value": "nvt" } ]
+        }
+      ],
+      "forEach": "entry.resource.where(resourceType='DiagnosticReport')"
+    }
+  ]
+}
