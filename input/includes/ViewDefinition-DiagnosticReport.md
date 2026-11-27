@@ -23,6 +23,20 @@
 <td></td>
 </tr>
 <tr>
+<td>Code</td>
+<td><samp>code.text</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td></td>
+</tr>
+<tr>
+<td>Uitvoerder</td>
+<td><samp>performer.actor.display</samp></td>
+<td><code>string</code></td>
+<td>nvt</td>
+<td></td>
+</tr>
+<tr>
 <td>PA nummer</td>
 <td><samp>identifier.where(type.text='Filler Identifier').value</samp></td>
 <td><code>string</code></td>
@@ -37,15 +51,8 @@
 <td></td>
 </tr>
 <tr>
-<td>Code</td>
-<td><samp>code.text</samp></td>
-<td><code>string</code></td>
-<td>nvt</td>
-<td></td>
-</tr>
-<tr>
-<td>Uitvoerder</td>
-<td><samp>performer.actor.display</samp></td>
+<td>Status</td>
+<td><samp>status</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
 <td></td>
