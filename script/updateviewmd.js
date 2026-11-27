@@ -233,7 +233,7 @@ function doColumnDefs(columns, md_def) {
 
 function doColumn(column, md) {
     md.push(`<td>${column.name}</td>`)
-    md.push(`<td><samp>${column.path}</samp></td>`)
+    md.push(`<td><samp>${column.path.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\r?\n/g, "\\n")}</samp></td>`)
     md.push(`<td><code>${column.type && column.type.split('/').join("</code> of <code>")}</code></td>`)
     md.push(`<td>${column.tag ? column.tag[0].value : "<i>nvt</i>"}</td>`)
     md.push(`<td>${column.description || ""}</td>`);

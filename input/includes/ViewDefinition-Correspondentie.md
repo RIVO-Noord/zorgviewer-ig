@@ -98,8 +98,7 @@
 <tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Regels</td>
-<td><samp>section.select('(' + code.coding.code + ') ' + text.`div`.replaceMatches('<[^>]*>', '')).join('
-')</samp></td>
+<td><samp>section.select('(' + code.coding.code + ') ' + text.`div`.replaceMatches('&lt;[^&gt;]*&gt;', '')).join('\\n')</samp></td>
 <td><code>string</code></td>
 <td>SOEPRegel</td>
 <td>Tussen haakjes de SOEP-regel type, gevolgd door de tekst van de regel. De tekst wordt ontdaan van HTML tags.</td>
