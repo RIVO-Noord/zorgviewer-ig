@@ -20,12 +20,12 @@
 <tr><td>&#9660;</td>
 <td>Epic-note</td>
 <td>23-2-2023</td>
-<td>posttraumatische stressstoornis (incl. de posttraumatische-stressstoornis bij ki...</td>
+<td>posttraumatische stressstoornis (incl. de posttraumatische-stressstoornis bij kinderen van 6 jaar en jonger)...</td>
 <td>Actueel</td>
 <td>active</td>
 </tr><tr><td></td><td colspan=5>
 <b>Diagnose</b><br/>(ICD-10) F43.1 <br/>
-<b>Toelichting</b><br/>2022-02: ziekte van Crohn<br/>2021-07: Complicatie ANPY infectie lokaal<br/>2021-03: z...<br/>
+<b>Toelichting</b><br/>2022-02: ziekte van Crohn<br/>2021-07: Complicatie ANPY infectie lokaal<br/>2021-03: zwanger<br/>  Bezoekinformatie is niet beschikbaar. <br/>  <br/>  Beleid <br/>  <br/>  test test test refreshable<br/>2021-01: relatieprobl...<br/>
 </td></tr>
 <tr><td>&#9660;</td>
 <td>EPS</td>

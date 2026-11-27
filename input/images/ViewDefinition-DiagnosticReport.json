@@ -2,7 +2,7 @@
   "resourceType": "http://hl7.org/fhir/uv/sql-on-fhir/StructureDefinition/ViewDefinition",
   "resource": "Bundle",
   "id": "ViewDefinition-DiagnosticReport",
-  "title": "Pathologie verslagen",
+  "title": "Pathologie en cytologie, Lab en Microbiologie verslagen",
   "select": [
     {
       "column": [
@@ -44,9 +44,9 @@
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         },
         {
-          "path": "result.select(display).join('\n')",
+          "path": "result.select('== ' + display.substring(15) + ' ==\n' + resolve().valueString.toString()).join('\n')",
           "name": "+Componenten",
-          "description": "Tussen haakjes de component header, gevolgd door de tekst van het component.",
+          "description": "",
           "type": "string",
           "tag": [ { "name": "Zib element", "value": "nvt" } ]
         }

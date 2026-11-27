@@ -53,11 +53,12 @@
 <tr style="background-color:#8faadc; color:white"><th colspan="5">DETAILS</th></tr>
 <tr style="background-color:#b4c7e7">
 <td>+Componenten</td>
-<td><samp>result.select(display).join('
+<td><samp>result.select('== ' + display.substring(15) + ' ==
+' + resolve().valueString.toString()).join('
 ')</samp></td>
 <td><code>string</code></td>
 <td>nvt</td>
-<td>Tussen haakjes de component header, gevolgd door de tekst van het component.</td>
+<td></td>
 </tr>
 </tbody>
 </table>

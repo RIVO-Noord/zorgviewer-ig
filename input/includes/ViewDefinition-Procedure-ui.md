@@ -16,7 +16,7 @@
 <td>ZPS</td>
 <td>Testartsma, LM</td>
 </tr><tr><td></td><td colspan=5>
-<b>Verrichtingcode</b><br/>(SNOMED CT) 46866001 Gesloten repositie supra- of transcondylaire femur fractuur...<br/>
+<b>Verrichtingcode</b><br/>(SNOMED CT) 46866001 Gesloten repositie supra- of transcondylaire femur fractuur....<br/>
 <b>Lateraliteit</b><br/>Rechts<br/>
 </td></tr>
 <tr><td>&#9660;</td>

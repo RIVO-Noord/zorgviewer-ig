@@ -131,7 +131,7 @@
 <td>Nedap</td>
 <td>8-11-2008</td>
 <td>Bee venom</td>
-<td>Allergie: Notitie(s): <br/>Categorie: Allergy to substance<br/>Laatste reactie: Sun Nov ...</td>
+<td>Allergie: Notitie(s): <br/>Categorie: Allergy to substance<br/>Laatste reactie: Sun Nov 15 00:00:00 CET 2009<br/>Reactie(s):<br/> [Specifieke stof null:<br/>Symptoom(en): Nausea and vomiting<br/>Ernst: Severe<br/>Wijze van bloot...</td>
 <td></td>
 <td>high</td>
 <td></td>

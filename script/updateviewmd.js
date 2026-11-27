@@ -410,7 +410,7 @@ function extractExampleData(select, example, exampleFileName) {
                 }
             } else {
                 value = evalResult[0].toString();
-                if (value.length > 80) value = `${value.substring(0, 80)}...`;
+                if (value.length > 80) value = `${value.substring(0, 200)}...`;
                 value = value.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\r?\n/g, "<br/>");
             }
         }
