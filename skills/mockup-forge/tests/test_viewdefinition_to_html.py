@@ -232,5 +232,39 @@ class InlineDetailsIconTest(unittest.TestCase):
         self.assertEqual(html.count('data-detail-row="true"'), 1)
 
 
+class NestedTableTest(unittest.TestCase):
+    def test_nested_tables_stay_in_their_outer_cells_and_rows(self):
+        source = """<table><tr><th></th><th>Bron</th><th>Code</th></tr>
+        <tr><td>▼</td><td>Epic</td><td>Eerste</td></tr>
+        <tr><td></td><td colspan="2"><b>Componenten</b><br/>
+        <table><tr valign="top"><td style="white-space: nowrap">KALIUM</td><td>A &amp; B <br/> Afgenomen</td></tr>
+        <tr><td>HB</td><td>Gemeten</td></tr></table><br/>Na de tabel</td></tr>
+        <tr><td>▼</td><td>Epic</td><td>Tweede</td></tr>
+        <tr><td></td><td colspan="2"><table><tr><td>Laatste</td><td>Waarde</td></tr></table></td></tr>
+        <tr><td></td><td>CGM</td><td>Derde</td></tr>
+        </table><table><tr><th>Andere tabel</th></tr><tr><td>Inhoud</td></tr></table>"""
+        tables = converter.extract_tables(source)
+        self.assertEqual(len(tables), 2)
+        self.assertEqual([cell['content'] for cell in tables[0]['headers']], ['', 'Bron', 'Code'])
+        self.assertEqual(len(tables[0]['rows']), 5)
+        html = converter.create_html_mockup('Verslagen', tables)[0]
+        self.assertEqual(html.count('data-detail-row="true"'), 2)
+        self.assertEqual(html.count('>expand_more</span>'), 2)
+        self.assertIn('<b>Componenten</b><br/><table class="nested-wireframe-table">', html)
+        self.assertIn('<td style="white-space: nowrap">KALIUM</td><td>A &amp; B <br/> Afgenomen</td>', html)
+        self.assertIn('<tr><td>HB</td><td>Gemeten</td></tr></table><br/>Na de tabel', html)
+        self.assertLess(html.index('Na de tabel'), html.index('Tweede'))
+        self.assertLess(html.index('Waarde'), html.index('Derde'))
+        self.assertEqual(tables[1]['headers'][0]['content'], 'Andere tabel')
+
+    def test_empty_nested_table_does_not_create_details(self):
+        source = ('<table><tr><th></th><th>Bron</th></tr>'
+                  '<tr><td>▼</td><td>Epic</td></tr>'
+                  '<tr><td></td><td><table><tr><td><br/></td></tr></table></td></tr></table>')
+        html = converter.create_html_mockup('Verslagen', converter.extract_tables(source))[0]
+        self.assertNotIn('data-detail-row="true"', html)
+        self.assertNotIn('>expand_more</span>', html)
+
+
 if __name__ == "__main__":
     unittest.main()

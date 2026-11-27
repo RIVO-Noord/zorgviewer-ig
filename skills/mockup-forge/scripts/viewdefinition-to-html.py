@@ -111,8 +111,29 @@ class TableExtractor(HTMLParser):
         self.current_cell = None
         self.current_cell_html = []  # Changed: collect HTML, not just text
         self.cell_is_header = False
+        self.nested_table_depth = 0
         
     def handle_starttag(self, tag, attrs):
+        if self.nested_table_depth or (tag == 'table' and self.current_cell is not None):
+            if tag == 'table':
+                self.nested_table_depth += 1
+                self.current_cell_html.append('<table class="nested-wireframe-table">')
+            elif tag in ('tr', 'tbody', 'thead', 'tfoot'):
+                self.current_cell_html.append(f'<{tag}>')
+            elif tag in ('td', 'th'):
+                attributes = dict(attrs)
+                colspan = attributes.get('colspan', '')
+                span = f' colspan="{colspan}"' if colspan and colspan.isdecimal() else ''
+                style = attributes.get('style', '') or ''
+                nowrap = ' style="white-space: nowrap"' if re.search(
+                    r'(?:^|;)\s*white-space\s*:\s*nowrap\s*(?:;|$)', style, re.I
+                ) else ''
+                self.current_cell_html.append(f'<{tag}{span}{nowrap}>')
+            elif tag == 'b':
+                self.current_cell_html.append('<b>')
+            elif tag == 'br':
+                self.current_cell_html.append('<br/>')
+            return
         if tag == 'table':
             self.current_table = {'headers': [], 'rows': []}
         elif tag == 'tr' and self.current_table is not None:
@@ -132,11 +153,20 @@ class TableExtractor(HTMLParser):
                     
     def handle_data(self, data):
         if self.current_cell is not None:
+            if self.nested_table_depth:
+                self.current_cell_html.append(escape(data))
+                return
             stripped = data.strip()
             if stripped:
                 self.current_cell_html.append(stripped)
             
     def handle_endtag(self, tag):
+        if self.nested_table_depth:
+            if tag in ('table', 'tr', 'td', 'th', 'tbody', 'thead', 'tfoot', 'b'):
+                self.current_cell_html.append(f'</{tag}>')
+            if tag == 'table':
+                self.nested_table_depth -= 1
+            return
         if tag in ('th', 'td') and self.current_cell is not None:
             self.current_cell['content'] = ''.join(self.current_cell_html)
             self.current_cell_html = []
@@ -168,10 +198,7 @@ def extract_title(content):
 def extract_tables(content):
     """Extraheert alle tabellen uit de MD content."""
     parser = TableExtractor()
-    try:
-        parser.feed(content)
-    except Exception:
-        pass
+    parser.feed(content)
     return parser.tables
 
 
@@ -829,13 +856,29 @@ def generate_full_mockup_html(title, tables, icon='description', side_details=Fa
             background: #F5F8FA;
         }}
 
-        tbody tr[data-detail-row="true"] td {{
+        tbody tr[data-detail-row="true"] > td {{
             padding-top: 4px;
             padding-bottom: 4px;
         }}
         
         tbody tr:last-child td {{
             border-bottom: none;
+        }}
+
+        table.nested-wireframe-table {{
+            width: auto;
+            max-width: 100%;
+        }}
+        table.nested-wireframe-table tr,
+        table.nested-wireframe-table tr:hover {{
+            background: transparent;
+        }}
+        table.nested-wireframe-table td,
+        table.nested-wireframe-table th {{
+            padding: 2px 8px 2px 0;
+            border: 0;
+            vertical-align: top;
+            white-space: normal;
         }}
         
         .bron-circle {{

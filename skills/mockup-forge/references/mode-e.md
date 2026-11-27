@@ -70,7 +70,8 @@ Het script:
   uitklapicoon. Als geen enkele rij details heeft, wordt de icoonkolom weggelaten.
 - **Detail-rows**: Verslagen/extra info onder expandable rijen ingebed met grijze achtergrond.
   Detailcellen hebben 4px verticale padding; vetgedrukte tekst en regelafbrekingen
-  uit het wireframe blijven behouden.
+  uit het wireframe blijven behouden. Geneste tabellen in een cel blijven als
+  compacte tabel binnen de bijbehorende rij behouden.
   Een lege cel onder de icoonkolom lijnt de inhoud uit met de eerste datakolom.
   Alleen voor `ViewDefinition-Correspondentie-ui.md` staan de details rechts naast de
   tabel en ontbreekt de expandkolom. De paneeltitel bevat de bron, datum en beschrijving
